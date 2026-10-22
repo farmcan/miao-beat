@@ -3,7 +3,7 @@
 A small browser instrument playground. Follow a metronome, play your own music, keep a tiny event file. No falling-note game, score, account, microphone, or upload.
 
 - Play: https://miao-beat.pages.dev/
-- Research & decisions: [local research](docs/research/product-and-keyboard.md)
+- Research & decisions: [research index](docs/README.md)
 - Public products never link back to the owner’s personal website or research hub.
 
 ## Status · 2026-10-22
