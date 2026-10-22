@@ -1,100 +1,119 @@
-// Original four-part cat; artwork and instrument contact geometry are independent.
-const SVG='http://www.w3.org/2000/svg';
-const ATLAS=new URL('./character/indie-atlas-v2.png',import.meta.url).href;
+// Original orange musician. Fixed bone lengths, independent wrists, continuous strokes.
+const SVG='http://www.w3.org/2000/svg',DRAW_SIZE=1280;
+const ART=new URL('./character/orange-components-v3.png',import.meta.url).href;
+const PROPS=new URL('./character/orange-instruments-v3.png',import.meta.url).href;
+const GUITAR=new URL('./labs/orange-guitar/atlas-v1.png',import.meta.url).href;
 const STYLES=new URL('./character/rig.css',import.meta.url).href;
-const SIZE=1254,TILE=SIZE/2,mounted=new WeakMap();
+const mounted=new WeakMap();
 export const CHARACTER_LAYOUT=Object.freeze({
- head:{tile:[0,0,TILE,TILE],box:[207,-14,232,232]},
- body:{tile:[TILE,0,TILE,TILE],box:[228,106,182,182]},
- leftPaw:{tile:[0,TILE,TILE,TILE],root:[.39*TILE,.19*TILE],tip:[.69*TILE,.83*TILE],shoulder:[258,184]},
- rightPaw:{tile:[TILE,TILE,TILE,TILE],root:[.63*TILE,.19*TILE],tip:[.29*TILE,.83*TILE],shoulder:[385,184]},
+ left:{upper:{crop:[125,450,245,380],root:[275,515],end:[211,760]},fore:{crop:[545,530,205,300],root:[620,585],end:[670,770]},paw:{crop:[930,545,220,270],root:[1040,595],end:[1040,777]}},
+ right:{upper:{crop:[120,840,250,370],root:[200,900],end:[280,1150]},fore:{crop:[535,900,210,310],root:[655,965],end:[604,1160]},paw:{crop:[935,925,225,290],root:[1060,990],end:[1035,1168]}},
+ upperLength:68,foreLength:60,pawLength:32,stickLength:54,
 });
-const NOTES={KeyA:[194,264],KeyS:[221,264],KeyD:[249,264],KeyF:[276,264],KeyG:[304,264],KeyH:[331,264],KeyJ:[359,264],KeyK:[388,264],KeyW:[208,252],KeyE:[235,252],KeyT:[290,252],KeyY:[317,252],KeyU:[344,252]};
-const DRUMS={kick:{side:'foot',point:[320,278]},snare:{side:'right',point:[320,239]},'closed-hat':{side:'left',point:[181,223]},'open-hat':{side:'left',point:[181,223]},'tom-low':{side:'left',point:[278,221]},'tom-high':{side:'right',point:[362,221]},crash:{side:'left',point:[139,201]},ride:{side:'right',point:[451,222]}};
+const WHITE=['KeyA','KeyS','KeyD','KeyF','KeyG','KeyH','KeyJ','KeyK'];
+const BLACK=['KeyW','KeyE','KeyT','KeyY','KeyU'];
+const PIANO=Object.fromEntries([...WHITE.map((c,i)=>[c,[187+i*36,443]]),...BLACK.map((c,i)=>[c,[[211,250,319,357,395][i],398]])]);
+const MARIMBA=Object.fromEntries([...WHITE.map((c,i)=>[c,[[193,226,258,289,320,351,383,416][i],428]]),...BLACK.map((c,i)=>[c,[[221,264,308,349,394][i],370]])]);
+const DRUMS={kick:{side:'foot',point:[312,450]},snare:{side:'right',point:[427,385],angle:18},'closed-hat':{side:'left',point:[197,367],angle:-12},'open-hat':{side:'left',point:[197,367],angle:-12},'tom-low':{side:'left',point:[277,325],angle:12},'tom-high':{side:'right',point:[357,325],angle:35},crash:{side:'left',point:[210,285],angle:-30},ride:{side:'right',point:[427,300],angle:28}};
 const VOICES=Object.keys(DRUMS);
-export function contactFor(key,instrument='piano'){
+const deg=r=>r*180/Math.PI,rad=d=>d*Math.PI/180;
+export function shoulderFor(side,mode){return side==='left'?[245,310]:[395,310];}
+function rotate([x,y],a){const c=Math.cos(rad(a)),s=Math.sin(rad(a));return [x*c-y*s,x*s+y*c];}
+export function contactFor(key,mode='piano'){
  if(key.kind==='drum'){
-  if(instrument==='drums')return {...DRUMS[key.voice],surface:key.voice};
-  const i=Math.max(0,VOICES.indexOf(key.voice));
-  return {side:'right',point:[440+(i%4)*21,246+Math.floor(i/4)*18],surface:'pad-'+key.voice};
+  if(mode==='drums')return {...DRUMS[key.voice],surface:key.voice,stick:true};
+  const i=Math.max(0,VOICES.indexOf(key.voice));return {side:'right',point:[437+(i%4)*17,368+Math.floor(i/4)*17],angle:0,...(mode==='marimba'?{tool:'mallet',toolLength:42}:{}),surface:'pad-'+key.voice};
  }
- if(instrument==='guitar')return {side:'left',point:[236,259],surface:'strings',fret:[354+(key.kind==='chord'?Number(key.key)*5:Math.max(0,(key.midi??60)-60)*2),233]};
- return {side:key.paw,point:NOTES[key.code]??[key.paw==='left'?235:365,264],surface:key.code};
+ if(mode==='guitar')return {side:'left',point:[304,364],angle:22,surface:'strings',fret:[458+(key.kind==='chord'?Number(key.key)*4:Math.max(0,(key.midi??60)-60)*1.5),283]};
+ return {side:key.paw,point:(mode==='marimba'?MARIMBA:PIANO)[key.code],angle:0,...(mode==='marimba'?{tool:'mallet',toolLength:42}:{}),surface:key.code};
 }
-// Maps a fixed source shoulder and toe to their corresponding stage points.
-export function pawTransform(side,point){
- const spec=CHARACTER_LAYOUT[side==='left'?'leftPaw':'rightPaw'];
- const [rx,ry]=spec.root,[tx,ty]=spec.tip,[sx,sy]=spec.shoulder;
- const ux=tx-rx,uy=ty-ry,vx=point[0]-sx,vy=point[1]-sy,d=ux*ux+uy*uy;
- const a=(ux*vx+uy*vy)/d,b=(ux*vy-uy*vx)/d;
- return `matrix(${a},${b},${-b},${a},${sx-a*rx+b*ry},${sy-b*rx-a*ry})`;
+export function wristFor(contact){const offset=rotate([0,contact.toolLength??(contact.stick?CHARACTER_LAYOUT.stickLength:CHARACTER_LAYOUT.pawLength)],contact.angle??0);return [contact.point[0]-offset[0],contact.point[1]-offset[1]];}
+export function solveArm(side,wrist,mode='piano'){
+ const shoulder=shoulderFor(side,mode),[sx,sy]=shoulder,dx=wrist[0]-sx,dy=wrist[1]-sy,d=Math.hypot(dx,dy),l1=CHARACTER_LAYOUT.upperLength,l2=CHARACTER_LAYOUT.foreLength;
+ if(!Number.isFinite(d)||d<Math.abs(l1-l2)+.01||d>l1+l2-.01)throw new RangeError('Instrument target is outside fixed arm reach');
+ const bend=side==='left'||mode==='guitar'?1:-1;
+ const a=Math.atan2(dy,dx)+bend*Math.acos(Math.max(-1,Math.min(1,(d*d+l1*l1-l2*l2)/(2*d*l1))));
+ const elbow=[sx+Math.cos(a)*l1,sy+Math.sin(a)*l1];
+ return {shoulder,elbow,wrist:[...wrist],upperAngle:deg(a),foreAngle:deg(Math.atan2(wrist[1]-elbow[1],wrist[0]-elbow[0]))};
 }
+function sourceTransform(spec,start,angle,length){const v=[spec.end[0]-spec.root[0],spec.end[1]-spec.root[1]],scale=length/Math.hypot(...v);return `translate(${start[0]}px,${start[1]}px) rotate(${angle-deg(Math.atan2(v[1],v[0]))}deg) scale(${scale}) translate(${-spec.root[0]}px,${-spec.root[1]}px)`;}
+// Cubic interpolation carries the current velocity across retriggers instead of restarting a pose.
+function tween(from,to,velocity,t,duration){const u=Math.max(0,Math.min(1,t/duration)),u2=u*u,u3=u2*u;return (2*u3-3*u2+1)*from+(u3-2*u2+u)*duration*velocity+(-2*u3+3*u2)*to;}
 export function mountCharacter(scene){
- if(!scene?.querySelector)throw new TypeError('A scene element is required');
- if(mounted.has(scene))return mounted.get(scene);
- const svg=scene.querySelector('svg.cat-scene');if(!svg)throw new Error('Character needs the scene SVG');
- const doc=scene.ownerDocument,win=doc.defaultView;
- const el=(name,attrs={})=>{const n=doc.createElementNS(SVG,name);for(const [k,v]of Object.entries(attrs))n.setAttribute(k,String(v));return n;};
- const style=doc.createElement('link');style.rel='stylesheet';style.href=STYLES;
- const cssReady=new Promise((resolve,reject)=>{style.onload=()=>resolve(true);style.onerror=()=>reject(new Error('Character styles unavailable'));});doc.head.append(style);
- const part=(name,classes)=>{
-  const spec=CHARACTER_LAYOUT[name],g=el('g',{class:'plush-character-part '+classes,'data-character-part':name,'aria-hidden':'true',visibility:'hidden'});
-  const [x,y,w,h]=spec.box??[0,0,TILE,TILE],crop=el('svg',{x,y,width:w,height:h,viewBox:spec.tile.join(' '),overflow:'hidden'});
-  crop.append(el('image',{href:ATLAS,width:SIZE,height:SIZE}));g.append(crop);return g;
- };
- const body=part('body','plush-body-motion'),head=part('head','plush-head-gaze'),nod=el('g',{class:'plush-head-nod'});
- while(head.firstChild)nod.append(head.firstChild);head.append(nod);
- const paws={left:part('leftPaw','plush-paw-left'),right:part('rightPaw','plush-paw-right')};
- svg.insertBefore(body,svg.querySelector('.scene-keyboard'));
- const drums=svg.querySelector('.scene-drums'),additions=el('g',{'data-character-props':'contact-kit'});
- additions.append(el('path',{d:'M139 203v72',stroke:'#525a62','stroke-width':3}),el('ellipse',{cx:139,cy:201,rx:30,ry:6,fill:'#d1ac67',stroke:'#333b47','stroke-width':2}),el('path',{d:'M294 239v16q26 14 52 0v-16',fill:'#566987',stroke:'#333b47','stroke-width':2}),el('ellipse',{cx:320,cy:239,rx:26,ry:8,fill:'#f1eee4',stroke:'#333b47','stroke-width':2}));
- const hatTop=drums.querySelector('ellipse[cx="181"]');hatTop.classList.add('hi-hat-top');const hatBottom=el('ellipse',{cx:181,cy:227,rx:44,ry:5,fill:'#b39252',stroke:'#333b47','stroke-width':2});drums.insertBefore(hatBottom,hatTop);
- const pedal=el('g',{class:'kick-pedal'});pedal.append(el('path',{d:'M320 296v-18m-11 19h22',stroke:'#333b47','stroke-width':4,'stroke-linecap':'round'}),el('circle',{cx:320,cy:278,r:5,fill:'#d96340'}));additions.append(pedal);drums.append(additions);
- const bank=el('g',{class:'scene-rhythm-bank','aria-hidden':'true'});
- bank.append(el('rect',{x:426,y:233,width:92,height:47,rx:7,fill:'#343d50',stroke:'#242a37','stroke-width':2}));
- VOICES.forEach((voice,i)=>bank.append(el('rect',{'data-rhythm-pad':voice,x:432+(i%4)*21,y:239+Math.floor(i/4)*18,width:16,height:14,rx:3,fill:i<4?'#b8c9c4':'#d2b37a'})));
- svg.append(bank);for(const p of Object.values(paws))svg.append(p);
- const sticks={};for(const side of ['left','right']){const g=el('g',{class:'cat-drumstick','data-stick':side,display:'none'});g.append(el('path',{d:'M0 0 17 32',stroke:'#e7bc80','stroke-width':5,'stroke-linecap':'round'}));sticks[side]=g;svg.append(g);}
- const contact=el('circle',{class:'cat-contact',opacity:0,r:7,fill:'none',stroke:'#d96340','stroke-width':2});svg.append(contact,head);
- let destroyed=false,instrument=scene.dataset.instrument??'piano',held=[],raf=0,look={x:0,y:0},contactTimer=0;
- const animations={left:null,right:null},stickAnimations={left:null,right:null},reduced=win.matchMedia?.('(prefers-reduced-motion: reduce)');
- const resting=()=>instrument==='guitar'?{left:[232,247],right:[373,231]}:instrument==='drums'?{left:[253,201],right:[370,201]}:{left:[236,254],right:[360,254]};
- const setPaw=(side,point)=>{paws[side].style.transform=pawTransform(side,point);paws[side].dataset.contact=point.join(',');};
- const placeStick=(side,point)=>{sticks[side].style.transform=`translate(${point[0]-17}px,${point[1]-32}px)`;};
- const cancel=()=>{for(const side of ['left','right']){animations[side]?.cancel();animations[side]=null;stickAnimations[side]?.cancel();stickAnimations[side]=null;}};
- function update(mode=instrument,keys=held){
-  if(destroyed)return;const changed=mode!==instrument;instrument=mode;held=keys;
-  if(changed){cancel();scene.classList.remove('cat-kick');delete scene.dataset.hat;}
-  const targets=resting();
-  for(const key of keys){const c=contactFor(key,instrument);if(c.side!=='foot')targets[c.side]=instrument==='drums'?[c.point[0]-17,c.point[1]-32]:c.point;if(c.fret)targets.right=c.fret;}
-  for(const side of ['left','right']){setPaw(side,targets[side]);placeStick(side,instrument==='drums'?[targets[side][0]+17,targets[side][1]+32]:targets[side]);}
+ if(!scene?.querySelector)throw new TypeError('A scene element is required');if(mounted.has(scene))return mounted.get(scene);
+ const svg=scene.querySelector('svg.cat-scene');if(!svg)throw new Error('Character needs scene SVG');
+ const doc=scene.ownerDocument,win=doc.defaultView,el=(tag,attrs={})=>{const n=doc.createElementNS(SVG,tag);for(const[k,v]of Object.entries(attrs))n.setAttribute(k,String(v));return n;};
+ const legacy=el('g',{class:'legacy-art'});for(const n of [...svg.children])if(n.tagName.toLowerCase()!=='defs')legacy.append(n);svg.append(legacy);svg.setAttribute('viewBox','0 0 640 550');svg.setAttribute('aria-label','橘猫乐手，跟着你的输入演奏');
+ const root=el('g',{class:'orange-stage','data-character-props':'orange-stage',visibility:'hidden'});svg.append(root);
+ const sprite=(url,crop,part)=>{const g=el('g',{'data-character-part':part}),v=el('svg',{x:crop[0],y:crop[1],width:crop[2],height:crop[3],viewBox:crop.join(' '),overflow:'hidden'});v.append(el('image',{href:url,width:DRAW_SIZE,height:DRAW_SIZE}));g.append(v);return g;};
+ const place=(node,crop,box)=>node.setAttribute('transform',`translate(${box[0]} ${box[1]}) scale(${box[2]/crop[2]} ${box[3]/crop[3]}) translate(${-crop[0]} ${-crop[1]})`);
+ root.append(el('ellipse',{cx:325,cy:511,rx:180,ry:10,fill:'#cfb596',opacity:.15}));
+ const body=sprite(ART,[835,40,410,410],'body');place(body,[835,40,410,410],[165,175,310,310]);root.append(body);
+ const arms={};for(const side of ['left','right']){const spec=CHARACTER_LAYOUT[side];arms[side]={upper:sprite(ART,spec.upper.crop,side+'Upper'),fore:sprite(ART,spec.fore.crop,side+'Fore'),paw:sprite(ART,spec.paw.crop,side+'Paw'),hand:el('g',{'data-joint':side+'Wrist'}),motion:null,state:null};root.insertBefore(arms[side].upper,body);}
+ const props={piano:sprite(PROPS,[20,190,600,320],'keyboard'),marimba:sprite(PROPS,[640,110,610,420],'marimba'),guitar:sprite(GUITAR,[635,170,630,515],'guitar'),drums:sprite(PROPS,[5,600,700,560],'kit')};
+ place(props.piano,[20,190,600,320],[130,332,360,192]);place(props.marimba,[640,110,610,420],[135,300,340,234]);place(props.guitar,[635,170,630,515],[175,195,378,309]);place(props.drums,[5,600,700,560],[140,250,350,280]);for(const p of Object.values(props))root.append(p);
+ const bank=sprite(PROPS,[704,774,550,330],'rhythmBank');place(bank,[704,774,550,330],[421,350,90,54]);const bankStand=el('g',{class:'orange-bank-stand'});bankStand.append(el('path',{d:'M431 400v76m68-76v76m-74 0h15m52 0h14',stroke:'#b08a60','stroke-width':5,'stroke-linecap':'round'}));root.append(bankStand,bank);
+ const pedal=el('g',{class:'orange-pedal'});pedal.append(el('path',{d:'M313 493v-43m-12 46h24',stroke:'#7d5539','stroke-width':5,'stroke-linecap':'round'}),el('circle',{cx:313,cy:450,r:6,fill:'#b6794b'}));root.append(pedal);
+ for(const side of ['left','right']){const arm=arms[side];root.append(arm.fore);arm.hand.append(arm.paw);arm.stick=el('path',{class:'orange-stick',d:'M0 8V54',stroke:'#c59459','stroke-width':4,'stroke-linecap':'round'});arm.hand.append(arm.stick);arm.mallet=el('g',{class:'orange-mallet'});arm.mallet.append(el('path',{d:'M0 8V42',stroke:'#b78750','stroke-width':3.5,'stroke-linecap':'round'}),el('circle',{cx:0,cy:42,r:6,fill:'#e6c79c',stroke:'#bd905b','stroke-width':1}));arm.hand.append(arm.mallet);root.append(arm.hand);arm.paw.style.transform=sourceTransform(CHARACTER_LAYOUT[side].paw,[0,0],90,CHARACTER_LAYOUT.pawLength);}
+ const head=el('g',{class:'orange-head'}),open=sprite(ART,[55,110,365,290],'openHead'),closed=sprite(ART,[470,110,365,290],'closedHead');place(open,[55,110,365,290],[240,81,170,135]);place(closed,[470,110,365,290],[240,81,170,135]);const nod=el('g',{class:'orange-head-nod'});nod.append(open,closed);head.append(nod);root.append(head);
+ const contact=el('ellipse',{class:'orange-contact',rx:10,ry:3,fill:'#c27336',opacity:0});root.append(contact);
+ const style=doc.createElement('link');style.rel='stylesheet';style.href=STYLES;const cssReady=new Promise((r,j)=>{style.onload=r;style.onerror=()=>j(new Error('Character styles unavailable'));});doc.head.append(style);
+ const reduced=win.matchMedia?.('(prefers-reduced-motion: reduce)');let destroyed=false,loaded=false,mode=scene.dataset.instrument??'guitar',held=[],raf=0,lastTime=0,lastHit=-1e9,lastContact=null,gaze={x:0,y:0},kickUntil=0;
+ const now=()=>win.performance.now();
+ const rest=side=>mode==='guitar'?(side==='left'?{x:316,y:327,a:10}:{x:436,y:263,a:-55}):mode==='drums'?(side==='left'?{x:220,y:320,a:-18}:{x:405,y:315,a:18}):(side==='left'?{x:236,y:386,a:0}:{x:385,y:386,a:0});
+ const poseFor=c=>{const p=wristFor(c);return{x:p[0],y:p[1],a:c.angle??0};};
+ function sample(arm,time){
+  const m=arm.motion;if(!m)return {...arm.state,vx:0,vy:0,va:0};
+  const age=time-m.start;
+  let from,to,v,part,duration;
+  if(age<68){from=m.from;to=m.to;v=m.velocity;part=age;duration=68;}
+  else if(age<115){return {...m.to,vx:0,vy:0,va:0};}
+  else{from=m.to;to=m.end;v={x:0,y:0,a:0};part=age-115;duration=150;}
+  const p={x:tween(from.x,to.x,v.x,part,duration),y:tween(from.y,to.y,v.y,part,duration),a:tween(from.a,to.a,v.a,part,duration)};
+  const u=Math.max(0,Math.min(1,part/duration)),velocity=(a,b,s)=>(6*u*u-6*u)*(a-b)/duration+(3*u*u-4*u+1)*s;
+  p.vx=velocity(from.x,to.x,v.x);p.vy=velocity(from.y,to.y,v.y);p.va=velocity(from.a,to.a,v.a);
+  if(age>=265){arm.motion=null;p.vx=p.vy=p.va=0;}return p;
  }
- function strike(key,mode=instrument){
-  if(destroyed||!scene.classList.contains('plush-ready'))return false;
-  update(mode,held);const c=contactFor(key,mode);scene.dataset.contactSurface=c.surface;if(key.voice==='open-hat')scene.dataset.hat='open';if(key.voice==='closed-hat')scene.dataset.hat='closed';
-  contact.setAttribute('cx',c.point[0]);contact.setAttribute('cy',c.point[1]);contact.classList.add('visible');
-  win.clearTimeout(contactTimer);contactTimer=win.setTimeout(()=>contact.classList.remove('visible'),130);
-  if(c.side==='foot'){scene.classList.remove('cat-kick');void pedal.getBoundingClientRect();scene.classList.add('cat-kick');return true;}
-  const side=c.side,node=paws[side],drumming=mode==='drums',touch=drumming?[c.point[0]-17,c.point[1]-32]:c.point;
-  const contactPose=pawTransform(side,touch),rebound=pawTransform(side,[touch[0]+(mode==='guitar'?3:0),touch[1]-(mode==='guitar'?12:10)]);
-  animations[side]?.cancel();stickAnimations[side]?.cancel();if(c.fret)setPaw('right',c.fret);
-  if(reduced?.matches||typeof node.animate!=='function'){setPaw(side,touch);if(drumming)placeStick(side,c.point);return true;}
-  // Contact first: sound never waits for an anticipation pose. Endpoint follows live held input.
-  const animation=node.animate([{transform:contactPose,offset:0},{transform:contactPose,offset:.12},{transform:rebound,offset:.55},{offset:1}],{duration:150,easing:'linear',fill:'none'});
-  animations[side]=animation;
-  if(drumming&&typeof sticks[side].animate==='function')stickAnimations[side]=sticks[side].animate([{transform:`translate(${touch[0]}px,${touch[1]}px)`,offset:0},{transform:`translate(${touch[0]}px,${touch[1]}px)`,offset:.12},{transform:`translate(${touch[0]}px,${touch[1]-10}px)`,offset:.55},{offset:1}],{duration:150,easing:'linear',fill:'none'});
-  animation.onfinish=()=>{if(animations[side]===animation){animations[side]=null;stickAnimations[side]=null;update();}};return true;
+ function drawArm(side,time){const arm=arms[side],p=sample(arm,time);arm.state=p;let solved;try{solved=solveArm(side,[p.x,p.y],mode);}catch{scene.dataset.characterWarning='unreachable target';return;}
+  arm.upper.style.transform=sourceTransform(CHARACTER_LAYOUT[side].upper,solved.shoulder,solved.upperAngle,CHARACTER_LAYOUT.upperLength);arm.fore.style.transform=sourceTransform(CHARACTER_LAYOUT[side].fore,solved.elbow,solved.foreAngle,CHARACTER_LAYOUT.foreLength);arm.hand.style.transform=`translate(${p.x}px,${p.y}px) rotate(${p.a}deg)`;arm.hand.dataset.wrist=`${p.x.toFixed(2)},${p.y.toFixed(2)}`;arm.hand.dataset.elbow=solved.elbow.map(n=>n.toFixed(2)).join(',');arm.stick.style.display=mode==='drums'?'':'none';arm.mallet.style.display=mode==='marimba'?'':'none';
  }
- const renderLook=()=>{raf=0;if(destroyed)return;head.style.setProperty('--plush-look-x',(look.x*1.4)+'px');head.style.setProperty('--plush-look-y',(look.y*.7)+'px');head.style.setProperty('--plush-look-turn',(look.x*.7)+'deg');};
- const queueLook=()=>{if(!raf)raf=win.requestAnimationFrame(renderLook);};
- const follow=e=>{if(reduced?.matches||e.pointerType==='touch')return;const r=scene.getBoundingClientRect();if(!r.width||!r.height)return;look={x:Math.max(-1,Math.min(1,(e.clientX-r.left)/r.width*2-1)),y:Math.max(-1,Math.min(1,(e.clientY-r.top)/r.height*2-1))};queueLook();};
- const resetLook=()=>{look={x:0,y:0};queueLook();};
- const reset=()=>{cancel();held=[];update();resetLook();scene.classList.remove('cat-kick');};
- const preference=()=>{if(reduced?.matches){cancel();look={x:0,y:0};if(raf)win.cancelAnimationFrame(raf);renderLook();update();}};
- reduced?.addEventListener?.('change',preference);scene.addEventListener('pointermove',follow);scene.addEventListener('pointerleave',resetLook);win.addEventListener('blur',reset);
- const visibility=()=>{if(doc.hidden)reset();};doc.addEventListener('visibilitychange',visibility);
- const preload=new win.Image();const imageReady=new Promise((resolve,reject)=>{preload.onload=()=>preload.naturalWidth===SIZE&&preload.naturalHeight===SIZE?resolve(true):reject(new Error('Unexpected atlas dimensions'));preload.onerror=()=>reject(new Error('Character image unavailable'));preload.src=ATLAS;});
- let cancelLoad;const ready=Promise.race([Promise.all([cssReady,imageReady]).then(()=>{if(destroyed)return false;scene.classList.add('plush-ready');scene.dataset.character='indie-atlas-v2';update();return true;}),new Promise(resolve=>{cancelLoad=()=>resolve(false);})]);ready.catch(()=>{});
- const controller={ready,atlas:ATLAS,strike,update,destroy(){if(destroyed)return;destroyed=true;cancelLoad();cancel();win.clearTimeout(contactTimer);if(raf)win.cancelAnimationFrame(raf);reduced?.removeEventListener?.('change',preference);scene.removeEventListener('pointermove',follow);scene.removeEventListener('pointerleave',resetLook);win.removeEventListener('blur',reset);doc.removeEventListener('visibilitychange',visibility);for(const n of [body,head,...Object.values(paws),...Object.values(sticks),contact,additions,hatBottom,bank,style])n.remove();scene.classList.remove('plush-ready','cat-kick');hatTop.classList.remove('hi-hat-top');delete scene.dataset.character;delete scene.dataset.hat;mounted.delete(scene);}};
- mounted.set(scene,controller);return controller;
+ function render(time){raf=0;if(destroyed||!loaded)return;for(const side of ['left','right'])drawArm(side,time);
+  const playing=time-lastHit<900;closed.style.opacity=mode==='guitar'&&playing?'1':'0';open.style.opacity=mode==='guitar'&&playing?'0':'1';
+  const reaction=reduced?.matches?0:Math.max(0,1-(time-lastHit)/300);head.style.transform=`rotate(${gaze.x*1.5-reaction*.9}deg) translate(${gaze.x*1.2}px,${gaze.y*.7+reaction*.7}px)`;head.style.transformOrigin='325px 205px';
+  pedal.style.display=mode==='drums'?'':'none';pedal.style.transform=mode==='drums'&&time<kickUntil?'rotate(-13deg)':'';pedal.style.transformOrigin='313px 496px';
+  let touching=false;if(lastContact&&time-lastHit<130&&lastContact.side!=='foot'){const a=arms[lastContact.side].state,tip=rotate([0,lastContact.toolLength??(lastContact.stick?54:32)],a.a);touching=Math.hypot(a.x+tip[0]-lastContact.point[0],a.y+tip[1]-lastContact.point[1])<5;}
+  contact.setAttribute('opacity',touching ? .25 : 0);scene.dataset.characterContact=touching?'true':'false';
+  if(Object.values(arms).some(a=>a.motion)||playing||time<kickUntil)raf=win.requestAnimationFrame(render);lastTime=time;
+ }
+ const request=()=>{if(loaded&&!raf)raf=win.requestAnimationFrame(render);};
+ function travel(side,to,end=to){const arm=arms[side],time=now(),from=sample(arm,time);if(reduced?.matches){arm.motion=null;arm.state={...to};request();return;}
+  arm.motion={start:time,from,to,end,velocity:{x:Math.max(-.8,Math.min(.8,from.vx??0)),y:Math.max(-.8,Math.min(.8,from.vy??0)),a:Math.max(-.15,Math.min(.15,from.va??0))}};request();
+ }
+ function update(next=mode,keys=held){if(destroyed)return;const changed=next!==mode,previous=held;mode=next;held=keys;
+  if(changed||!arms.left.state){for(const side of ['left','right']){arms[side].motion=null;arms[side].state={...rest(side)};}lastContact=null;delete scene.dataset.characterWarning;}
+  for(const [name,p]of Object.entries(props))p.style.display=name===(mode==='marimba'?'marimba':mode)?'':'none';bank.style.display=mode==='drums'?'none':'';bankStand.style.display=mode==='drums'?'none':'';
+  if(!changed&&(mode==='piano'||mode==='marimba'))for(const side of ['left','right']){
+   const was=previous.filter(k=>contactFor(k,mode).side===side),current=keys.filter(k=>contactFor(k,mode).side===side);
+   if(was.some(k=>!current.some(n=>n.code===k.code))){const arm=arms[side],nextPose=current.length?poseFor(contactFor(current.at(-1),mode)):rest(side);
+    if(arm.motion&&now()-arm.motion.start<115)arm.motion.end=nextPose;else travel(side,nextPose,nextPose);
+   }
+  }
+  request();
+ }
+ function strike(key,next=mode){if(destroyed||!loaded)return false;update(next,held);const c=contactFor(key,mode);lastHit=now();lastContact=c;scene.dataset.contactSurface=c.surface;contact.setAttribute('cx',c.point[0]);contact.setAttribute('cy',c.point[1]);if(c.side==='foot'){kickUntil=lastHit+160;request();return true;}
+  const target=poseFor(c);let end=rest(c.side);
+  if(mode==='drums')end={x:target.x,y:target.y-15,a:target.a-12};
+  else if(mode==='guitar'&&key.kind!=='drum')end={x:target.x+4,y:target.y-17,a:target.a-12};
+  else if(held.some(k=>k.code===key.code))end=target;
+  travel(c.side,target,end);
+  if(c.fret){const targetFret=poseFor({point:c.fret,angle:-55});travel('right',targetFret,targetFret);}
+  request();return true;
+ }
+ const follow=e=>{if(reduced?.matches||e.pointerType==='touch')return;const r=scene.getBoundingClientRect();if(r.width&&r.height){gaze={x:Math.max(-1,Math.min(1,(e.clientX-r.left)/r.width*2-1)),y:Math.max(-1,Math.min(1,(e.clientY-r.top)/r.height*2-1))};request();}};
+ const neutralLook=()=>{gaze={x:0,y:0};request();};
+ const reset=()=>{held=[];lastContact=null;lastHit=-1e9;kickUntil=0;for(const side of ['left','right']){arms[side].motion=null;arms[side].state={...rest(side)};}neutralLook();if(raf)win.cancelAnimationFrame(raf);raf=0;if(loaded)render(now());};
+ const visibility=()=>{if(doc.hidden)reset();};scene.addEventListener('pointermove',follow);scene.addEventListener('pointerleave',neutralLook);win.addEventListener('blur',reset);doc.addEventListener('visibilitychange',visibility);reduced?.addEventListener?.('change',reset);
+ const loadImage=url=>new Promise((resolve,reject)=>{const im=new win.Image();im.onload=()=>im.naturalWidth>0?resolve():reject(new Error('Invalid character image'));im.onerror=()=>reject(new Error('Character image unavailable'));im.src=url;});
+ let cancelLoad;const ready=Promise.race([Promise.all([cssReady,...[ART,PROPS,GUITAR].map(loadImage)]).then(()=>{if(destroyed)return false;loaded=true;scene.classList.add('orange-ready');root.setAttribute('visibility','visible');scene.dataset.character='orange-articulated-v3';update();render(now());return true;}),new Promise(r=>{cancelLoad=()=>r(false);})]);ready.catch(()=>{});
+ const controller={ready,atlas:ART,strike,update,destroy(){if(destroyed)return;destroyed=true;cancelLoad();if(raf)win.cancelAnimationFrame(raf);scene.removeEventListener('pointermove',follow);scene.removeEventListener('pointerleave',neutralLook);win.removeEventListener('blur',reset);doc.removeEventListener('visibilitychange',visibility);reduced?.removeEventListener?.('change',reset);root.remove();style.remove();while(legacy.firstChild)svg.append(legacy.firstChild);legacy.remove();scene.classList.remove('orange-ready');delete scene.dataset.character;delete scene.dataset.characterWarning;mounted.delete(scene);}};mounted.set(scene,controller);return controller;
 }

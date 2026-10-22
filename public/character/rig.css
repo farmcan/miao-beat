@@ -1,15 +1,1 @@
-.plush-character-part{pointer-events:none;visibility:hidden}
-.scene.plush-ready #cat-body,.scene.plush-ready #cat-head,.scene.plush-ready #paw-left,.scene.plush-ready #paw-right,.scene.plush-ready .cat-tail{visibility:hidden}
-.scene.plush-ready .plush-character-part{visibility:visible}
-.plush-head-gaze{transform-origin:320px 177px;transform:translate(var(--plush-look-x,0px),var(--plush-look-y,0px)) rotate(var(--plush-look-turn,0deg));transition:transform 110ms ease-out}
-.plush-head-nod{transform-origin:320px 180px}.plush-paw-left,.plush-paw-right{transform-origin:0 0}
-.scene.beat-pulse .plush-head-nod{animation:plush-nod 170ms ease-out}
-.scene-rhythm-bank{display:block}.scene[data-instrument=drums] .scene-rhythm-bank{display:none}
-.cat-drumstick{display:none;pointer-events:none}.scene.plush-ready[data-instrument=drums] .cat-drumstick{display:block}
-.cat-contact{opacity:0;pointer-events:none}.cat-contact.visible{opacity:.75}
-.kick-pedal{transform-origin:320px 296px}.cat-kick .kick-pedal{animation:kick-contact 150ms ease-out}
-@keyframes kick-contact{0%,25%{transform:rotate(-16deg)}100%{transform:rotate(0)}}
-@keyframes plush-nod{0%,100%{transform:translateY(0)}42%{transform:translateY(2px) rotate(-.6deg)}}
-@media(prefers-reduced-motion:reduce){.plush-head-nod,.kick-pedal{animation:none!important}.plush-head-gaze{transition:none;transform:none}}
-
-.hi-hat-top{transform-origin:181px 223px}.scene[data-hat=open] .hi-hat-top{transform:translateY(-3px)}
+.orange-stage{pointer-events:none}.scene.orange-ready .legacy-art{visibility:hidden}.orange-head{will-change:transform}.orange-stage [data-joint],.orange-stage [data-character-part$="Upper"],.orange-stage [data-character-part$="Fore"]{transform-origin:0 0;will-change:transform}.orange-stage [data-character-part="closedHead"]{opacity:0}.orange-pedal{transform-origin:313px 496px}.orange-head-nod{transform-origin:325px 205px}.scene.beat-pulse .orange-head-nod{animation:orange-nod 160ms ease-out}@keyframes orange-nod{0%,100%{transform:translateY(0)}45%{transform:translateY(1.5px) rotate(.4deg)}}@media(prefers-reduced-motion:reduce){.orange-stage *{will-change:auto;animation:none!important}}

@@ -9,7 +9,7 @@ await fs.mkdir(path.join(root,'public/vendor'),{recursive:true});
 const vendor=(await fs.readFile(path.join(root,'node_modules/smplr/dist/index.mjs'),'utf8')).replace(/\/\/# sourceMappingURL=.*$/m,'');
 await fs.writeFile(path.join(root,'public/vendor/smplr.mjs'),vendor);
 await fs.copyFile(path.join(root,'scripts/smplr-LICENSE.txt'),path.join(root,'public/vendor/smplr-LICENSE.txt'));
-const allowed=['index.html','style.css','icon.svg','support-alipay-qr.jpg','app.js','audio.js','sampled-audio.js','bindings.js','clock.js','recording.js','scores.js','UPSTREAM-LICENSE.txt','_headers','vendor/smplr.mjs','vendor/smplr-LICENSE.txt','samples/manifest.json','samples/LICENSES.txt','samples/CC0-1.0.txt','character.js','performance.js','guidance.js','character/plush-atlas-v1.png','character/indie-atlas-v2.png','character/rig.css','character/manifest.json','character/README.md','labs/orange-guitar/index.html','labs/orange-guitar/pilot.js','labs/orange-guitar/style.css','labs/orange-guitar/atlas-v1.png'];
+const allowed=['index.html','style.css','icon.svg','support-alipay-qr.jpg','app.js','audio.js','sampled-audio.js','bindings.js','clock.js','recording.js','scores.js','UPSTREAM-LICENSE.txt','_headers','vendor/smplr.mjs','vendor/smplr-LICENSE.txt','samples/manifest.json','samples/LICENSES.txt','samples/CC0-1.0.txt','character.js','performance.js','guidance.js','character/plush-atlas-v1.png','character/indie-atlas-v2.png','character/orange-components-v3.png','character/orange-instruments-v3.png','character/rig.css','character/manifest.json','character/README.md','labs/orange-guitar/index.html','labs/orange-guitar/pilot.js','labs/orange-guitar/style.css','labs/orange-guitar/atlas-v1.png'];
 const art=JSON.parse(await fs.readFile(path.join(root,'public/character/manifest.json')));
 for(const asset of art.assets){if(!allowed.includes(asset.filename))throw Error('Unreviewed character file');const bytes=await fs.readFile(path.join(root,'public',asset.filename));if(createHash('sha256').update(bytes).digest('hex')!==asset.sha256)throw Error('Character provenance differs: '+asset.filename);}
 const manifest=JSON.parse(await fs.readFile(path.join(root,'public/samples/manifest.json')));
@@ -28,5 +28,5 @@ const files={};for(const name of allowed){
  await fs.mkdir(path.dirname(path.join(root,'dist',name)),{recursive:true});await fs.writeFile(path.join(root,'dist',name),content);files[name]=createHash('sha256').update(content).digest('hex');
 }
 let commit='local';try{commit=execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8',stdio:['ignore','pipe','ignore']}).trim();}catch{}
-await fs.writeFile(path.join(root,'dist/release.json'),JSON.stringify({project:'miao-beat',version:'0.6.1-family',commit,files},null,2)+'\n');
-console.log('Built '+allowed.length+' explicit public files; four sampled instruments and a component-based plush character.');
+await fs.writeFile(path.join(root,'dist/release.json'),JSON.stringify({project:'miao-beat',version:'0.7.0-orange',commit,files},null,2)+'\n');
+console.log('Built '+allowed.length+' explicit public files; four sampled instruments and an articulated orange musician.');

@@ -1,0 +1,14 @@
+Use case: identity-preserve.
+Asset type: one transparent production component sheet for an animated browser cat musician.
+Image 1 is the exact character and style reference. Preserve the ORIGINAL CHUNKY ORANGE CAT: small squared head, broad pear-shaped rust orange body, cream muzzle and belly, navy nose and eyebrows, short legs and hooked tail. Matte softly textured illustrated/clay material, never glossy or furry. Do not redesign into a generic round baby kitten.
+Create a square transparent RGBA canvas arranged as a precise invisible 3 by 3 grid of NINE equally sized cells. One isolated part per cell, complete contour and 12 percent clear transparent margin; no part may cross a cell boundary. No lines or labels. Same front slightly three-quarter camera and soft light for every part.
+TOP ROW left: detached full HEAD including ears/whiskers, relaxed open eyes looking slightly down at an instrument, warm friendly attentive face, short square muzzle and same shape as reference. No neck or torso.
+TOP ROW middle: identical head, same scale and angle, eyes gently closed and small satisfied smile while enjoying music. Only expression changes. No neck or torso.
+TOP ROW right: full pear-shaped TORSO plus short feet and hooked tail as a single piece, headless and entirely armless. Broad rounded shoulders, cream belly, no sharp neck stump; complete feet and tail fully inside cell.
+MIDDLE ROW left: viewer-left UPPER ARM only, short thick orange tapered capsule, shoulder rounded root at TOP and elbow rounded end at BOTTOM. Minimal stripes, clean overlapping joint ends, no paw, no forearm.
+MIDDLE ROW middle: viewer-left FOREARM only, short orange rounded tapered capsule, elbow root at TOP and wrist end at BOTTOM. No paw or fingers, no upper arm. Must overlap the matching elbow cleanly.
+MIDDLE ROW right: viewer-left CAT PAW only, a compact rounded unsegmented orange mitten, wrist attachment at TOP and round toe edge at BOTTOM. Two tiny curved toe marks, no human thumb, fingers, claws or glove cuff.
+BOTTOM ROW left: viewer-right UPPER ARM only, matching the left upper arm in size and material, shoulder TOP elbow BOTTOM.
+BOTTOM ROW middle: viewer-right FOREARM only, matching left forearm, elbow TOP wrist BOTTOM.
+BOTTOM ROW right: viewer-right CAT PAW only, matching left paw, wrist TOP round toe edge BOTTOM.
+This is an articulated puppet kit: shoulder, elbow and wrist will rotate independently at fixed lengths, NEVER stretch fingers or rubbery arms. All segments rendered pointing vertically down so they can be rigged deterministically; keep joints rounded for overlap. Detached head must preserve the reference's relatively SMALL head, not giant sparkly eyes. No instruments, background, cast shadow, text, watermark, clothes, duplicate parts, full cats, fake checkerboard or opaque backdrop.

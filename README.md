@@ -6,11 +6,11 @@ A small browser instrument playground. Follow a metronome, play your own music, 
 - Research & decisions: [research index](docs/README.md)
 - Public products never link back to the owner’s personal website or research hub.
 
-## Status · 2026-10-22 · 0.6.1
+## Implementation · 2026-10-22 · 0.7.0
 
 Independent extraction from MiaoTI's keyboard-cat experiment. Four **self-hosted sampled instruments**: upright piano, marimba, nylon guitar, and an eight-piece drum kit. Guitar adds simplified C / Am / F / G six-note strums on 1–4; melodic notes use A–K plus W E T Y U, and drums use Z X C V / B N M L. Simultaneous key presses and pointer input share one path.
 
-50–180 BPM metronome, 3/4 and 4/4, tap tempo, small reference scores, local timestamp/key-code recording/export/import/replay. New files use v2/sample-v1; old v1/ui-synth-v1 files retain their original synthesized sound. No multi-track editor or audio capture. The generated plush-cat PNG under `design/` remains a static concept; the current ink-blue indie cat uses four independently transformed bitmap parts, a folded ear, natural cream toes, and instrument-specific shoulder/toe contact geometry. Piano follows individual keys, guitar crosses the soundhole, and the drum kit uses sticks plus a kick pedal. Mixed melodic/percussion input reaches a visible electronic pad bank. This is a 2.5D rig, not a 3D mesh or generated video.
+50–180 BPM metronome, 3/4 and 4/4, tap tempo, small reference scores, local timestamp/key-code recording/export/import/replay. New files use v2/sample-v1; old v1/ui-synth-v1 files retain their original synthesized sound. No multi-track editor or audio capture. The original orange musician now has separate head, torso, upper arms, forearms and paws with fixed-length shoulder/elbow/wrist control. Guitar uses a short soundhole stroke and simplified neck grip; piano presses keys, marimba uses mallets, and the drum kit uses wrist-parented sticks plus a kick pedal. Mixed percussion reaches a small pad stand. Fast strokes continue from the current pose; released piano keys return smoothly. This is a 2.5D image rig, not a 3D mesh, anatomical guitar fingering or human naturalness validation.
 
 Mobile screens get larger scrollable piano keys and bigger chord/drum pads. **全屏演奏** requests native fullscreen when available and falls back to a page-filling performance view; a pinned exit control remains available. Short landscape layouts prioritize the selected instrument. Real iPhone/Android touch and native fullscreen remain device acceptance items.
 
@@ -46,3 +46,5 @@ Version 0.5 added optional audio-clock practice guidance, a larger pocket-score 
 Version 0.6 improves the first-screen sound entry, puts free-play keys before scores, and introduces the original indie-cat contact rig. See [release notes](docs/character-ui-release-2026-10-22.md). The more friendly character remains an aesthetic hypothesis; no human preference validation is claimed.
 
 Version 0.6.1 links the MiaoTI and MiaoTarot public products and reuses the existing optional Alipay support image. All music features remain free; the app does not execute payments.
+
+Version 0.7 brings the orange musician into the full product and unifies the instrument artwork and warm, quieter interface. Desktop places the player next to the character; mobile keeps the full cat and primary inputs accessible. Practice guidance stays above the keys, with both visible in short landscape performance mode. See [orange release evidence](docs/orange-product-release-2026-10-22.md).

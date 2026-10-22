@@ -2,6 +2,11 @@
 
 更新：2026-10-22。当前读物按“决策 → 证据 → 实现与验收 → 早期归档”组织。网页阅读包由 `scripts/export-review.py` 导出到所有者配置的站点；产品与公开 README 不回链个人入口。
 
+## 橘猫完整产品迭代
+
+- [实现、纠正与验收](orange-product-release-2026-10-22.md)
+- [关节与乐器素材提示词](../design/orange-product-v3/character-prompt.txt)
+
 ## 角色与首屏迭代
 
 - [交付与验收](character-ui-release-2026-10-22.md)

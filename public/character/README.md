@@ -1,7 +1,7 @@
-# Original Miao indie cat, v2
+# Original orange musician, v3
 
-Four original bitmap parts in `indie-atlas-v2.png`: head, seated torso/tail, left and right forearm/paw. Generated with built-in imagegen; exact prompt and raw output provenance are in `manifest.json` and the repository's design folder. No Bongo Cat art was used. The previous plush atlas remains available as a historical asset.
+The active 2.5D character uses two AI-generated original PNG sheets: nine character components and four instrument groups. Guitar artwork comes from the earlier original orange-guitar sheet. Complete prompts, source hashes and limitations are in manifest.json and the repository design/orange-product-v3 directory. PNG pixels were not edited. Previous plush/indie sheets remain historical assets.
 
-The runtime clips four equal quadrants; maps each paw's shoulder and toe to instrument contacts; and uses short, interruptible Web Animations for recoil. Piano contacts follow individual keys. Guitar uses a soundhole stroke plus simplified neck grip. The kit has separate snare/toms/cymbals and a kick pedal. In melodic modes, percussion reaches an electronic pad bank. This is a fixed-camera 2.5D puppet, not true 3D or anatomical finger simulation.
+Fixed-length upper arms and forearms use shoulder/elbow geometry; paw size stays constant. Piano presses and releases, marimba uses wrist-parented mallets, guitar combines a short strum with a simplified neck grip, and kit sticks share the wrist transform. Unreachable targets are rejected. Continuous strokes retain current position and velocity; blur, mode changes and reduced-motion preference reset safely. Mixed percussion has a nearby pad stand.
 
-Reduced motion preserves static contact feedback. The original vector remains the resource-error fallback. Automated geometry checks and desktop-browser interaction do not establish human aesthetic preference, physical touch latency or speaker sound quality.
+This is neither a 3D model nor anatomical fingering or full directional eye tracking. Original vector artwork is the resource-error fallback. Desktop interaction and geometry checks do not establish human aesthetic preference, physical touch latency, phone frame rate or speaker sound quality.
