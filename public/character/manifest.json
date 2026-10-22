@@ -29,8 +29,8 @@
     },
     {
       "filename": "character.js",
-      "bytes": 5900,
-      "sha256": "ab9dd427dfcc23d8802d7d431874f1533ad4d724e121a80b30276941549800e4"
+      "bytes": 6565,
+      "sha256": "42c435ea6e1fbcc0cce2e48933644814b5755aed81d1645063bfeebbca49d671"
     }
   ],
   "atlas": {
@@ -168,8 +168,8 @@
     "motion": {
       "body": "1.2% scale breathing",
       "head": "pointer: <=1.7 SVG units x, <=0.9 y, <=0.85deg turn; beat: <=2 units nod",
-      "paws": "separate 190ms Web Animations; rapid same-side hits cancel/restart only that paw; fill:none restores held CSS",
-      "reducedMotion": "no breathing/nod/strike animation and no pointer head shift",
+      "paws": "separate 190ms Web Animations; retriggers sample displayed transform before cancelling only that paw; implicit final transform follows live held/instrument CSS; fill:none",
+      "reducedMotion": "no breathing/nod/strike animation or pointer head shift; live preference changes cancel active strikes and reset gaze",
       "eyes": "pupils are baked into the head image; no independently animated pupil layer or true 3D mesh is claimed"
     }
   },
@@ -189,7 +189,10 @@
       "same-side strike cancels and restarts its own animation",
       "opposite paw animation unaffected",
       "190ms/no-fill animation restores held CSS",
-      "destroy cancels animations and restores legacy scene"
+      "destroy cancels animations and restores legacy scene",
+      "v2 retrigger begins at displayed transform",
+      "v2 implicit endpoint follows live CSS instead of captured held transform",
+      "v2 live reduced-motion cancels WAAPI and destroy removes preference listener"
     ],
     "notVerified": [
       "mobile physical-device frame rate",

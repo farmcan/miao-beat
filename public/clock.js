@@ -2,13 +2,17 @@
 // Independent implementation; manual key hits never wait for this scheduler.
 export class BeatClock {
   constructor(audio,onBeat){this.audio=audio;this.onBeat=onBeat;this.running=false;this.nodes=new Set();this.queue=[];this.history=[];}
-  start(bpm=96,meter=4){
-    this.stop();this.bpm=bpm;this.meter=meter;this.beat=0;this.next=this.audio.context.currentTime+.04;this.running=true;
+  start(bpm=96,meter=4,origin){
+    this.stop();this.bpm=bpm;this.meter=meter;this.beat=0;this.origin=origin;this.next=origin??this.audio.context.currentTime+.04;this.running=true;
     this.schedule();this.timer=setInterval(()=>this.schedule(),25);
   }
   schedule(){
     const now=this.audio.context.currentTime;
-    if(this.next<now-.05){this.next=now+.04;this.beat=0;}
+    if(this.next<now-.05){
+      if(this.origin!==undefined){const index=Math.ceil((now-this.origin)/(60/this.bpm));this.next=this.origin+index*60/this.bpm;this.beat=index%this.meter;}
+      else{this.next=now+.04;this.beat=0;}
+      this.queue=this.queue.filter(item=>item.time>=now-.05);
+    }
     while(this.running&&this.next<now+.1){
       this.click(this.next,this.beat===0);this.queue.push({time:this.next,beat:this.beat});
       this.history.push({time:this.next,beat:this.beat});if(this.history.length>32)this.history.shift();

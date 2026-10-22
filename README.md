@@ -40,3 +40,5 @@ Cloudflare uses the existing authorized account and independent Pages project `m
 - `design/`: generated static character concept, source prompt, SHA and explicit limits.
 
 MIT applies to our code; upstream notices and third-party musical works/sample/art rights remain separate. See research for each candidate. The deployed samples include FreePats piano/guitar and Virtuosity drums (CC0), and University of Iowa marimba (its unrestricted-project-use statement, not CC0). See `public/samples/LICENSES.txt` and `docs/research/sample-manifest-2026-10-22.md`. Raw source archives are excluded from Git and deployment.
+
+Version 0.5 adds optional audio-clock practice guidance, a larger pocket-score library and original drum exercises. “Listen” plays the reference; “Play along” provides timing/key cues without scoring or adding automatic notes to the recording. See docs/v2-release-2026-10-22.md for verification and limits.

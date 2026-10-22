@@ -44,6 +44,7 @@ export function mountCharacter(scene){
   let destroyed=false,raf=0,look={x:0,y:0};
   const pawAnimations={left:null,right:null};
   const reduced=win.matchMedia?.('(prefers-reduced-motion: reduce)');
+  const cancelPaws=()=>{for(const side of ['left','right']){pawAnimations[side]?.cancel();pawAnimations[side]=null;}};
   const renderLook=()=>{
     raf=0;if(destroyed)return;
     head.style.setProperty('--plush-look-x',(look.x*1.7).toFixed(3)+'px');
@@ -57,6 +58,11 @@ export function mountCharacter(scene){
     look={x:Math.max(-1,Math.min(1,(event.clientX-rect.left)/rect.width*2-1)),y:Math.max(-1,Math.min(1,(event.clientY-rect.top)/rect.height*2-1))};queueLook();
   };
   const reset=()=>{look={x:0,y:0};queueLook();};
+  const motionPreferenceChanged=()=>{
+    if(!reduced?.matches||destroyed)return;
+    cancelPaws();look={x:0,y:0};if(raf)win.cancelAnimationFrame(raf);renderLook();
+  };
+  reduced?.addEventListener?.('change',motionPreferenceChanged);
   scene.addEventListener('pointermove',follow);scene.addEventListener('pointerleave',reset);win.addEventListener('blur',reset);
   // Old vector anatomy stays visible until the real bitmap is decoded.
   const preload=new win.Image();
@@ -75,12 +81,17 @@ export function mountCharacter(scene){
   const strike=side=>{
     if(destroyed||reduced?.matches||!scene.classList.contains('plush-ready')||!['left','right'].includes(side))return false;
     const paw=side==='left'?left:right;if(typeof paw.animate!=='function')return false;
+    // Sample the displayed pose before cancelling an interrupted strike. The
+    // implicit final transform belongs to live CSS (held keys/instrument mode),
+    // so a key released during the strike cannot leave a stale pressed pose.
+    const displayed=win.getComputedStyle(paw).transform||'none';
     pawAnimations[side]?.cancel();
     const sign=side==='left'?1:-1;
     const animation=paw.animate([
-      {transform:`translateY(-3px) rotate(${sign*2}deg)`,offset:0},
+      {transform:displayed,offset:0},
+      {transform:`translateY(-3px) rotate(${sign*2}deg)`,offset:.12},
       {transform:`translate(${sign*3}px,8px) rotate(${-sign*5}deg)`,offset:.35},
-      {transform:'translate(0,0) rotate(0)',offset:1},
+      {offset:1},
     ],{duration:190,easing:'cubic-bezier(.2,.7,.2,1)',fill:'none'});
     pawAnimations[side]=animation;
     animation.onfinish=()=>{if(pawAnimations[side]===animation)pawAnimations[side]=null;};
@@ -88,7 +99,7 @@ export function mountCharacter(scene){
   };
   const controller={ready,atlas:ATLAS,strike,destroy(){
     if(destroyed)return;destroyed=true;cancelLoad();if(raf)win.cancelAnimationFrame(raf);
-    for(const animation of Object.values(pawAnimations))animation?.cancel();
+    cancelPaws();reduced?.removeEventListener?.('change',motionPreferenceChanged);
     scene.removeEventListener('pointermove',follow);scene.removeEventListener('pointerleave',reset);win.removeEventListener('blur',reset);
     scene.classList.remove('plush-ready');delete scene.dataset.character;
     for(const node of [body,head,left,right,stylesheet])node.remove();mounted.delete(scene);

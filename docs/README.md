@@ -2,7 +2,13 @@
 
 更新：2026-10-22。当前读物按“决策 → 证据 → 实现与验收 → 早期归档”组织。网页阅读包由 `scripts/export-review.py` 导出到所有者配置的站点；产品与公开 README 不回链个人入口。
 
-## 当前结论
+## 第二版
+
+- [交付与验收](v2-release-2026-10-22.md)
+- [动画和引导的优秀参考](research/v2-animation-and-guidance-2026-10-22.md)
+- [新增谱子来源与拍长](research/scores-v2-2026-10-22.md)
+
+## 首版与主题结论
 
 1. [主题与下一步](research/theme-and-release-decision-2026-10-22.md)：首版定位、瓶子/竹知了/滑杆的取舍、创作与分享实验。
 2. [首版交付矩阵](research/first-version-audit-2026-10-22.md)：用户要求、实现、证据与未知项逐条对照。

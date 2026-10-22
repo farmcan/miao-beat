@@ -7,6 +7,7 @@ import {pathToFileURL} from 'node:url';
 import * as bindings from '../public/bindings.js';
 import * as scores from '../public/scores.js';
 import * as recording from '../public/recording.js';
+import {guidePosition} from '../public/guidance.js';
 
 let domModule;
 try { domModule=await import('jsdom'); }
@@ -33,7 +34,7 @@ function setup(t) {
   }
   class FakeClock {
     constructor(){clock=this;this.running=false;}
-    start(bpm,meter){Object.assign(this,{running:true,bpm,meter});}
+    start(bpm,meter,origin){Object.assign(this,{running:true,bpm,meter,origin});}
     stop(){this.running=false;}
     render(){}
   }
@@ -46,8 +47,8 @@ function setup(t) {
   w.URL.createObjectURL=blob=>{exportedBlob=blob;return 'blob:local-test';};
   w.URL.revokeObjectURL=()=>{};
   w.HTMLAnchorElement.prototype.click=function(){};
-  w.__deps={...bindings,...scores,...recording,SampledAudio:FakeAudio,mountPerformance(){},mountCharacter:()=>({ready:Promise.resolve(),strike(){}}),BeatClock:FakeClock};
-  w.eval('const {KEYS,MELODY,DRUMS,CHORDS,LEGACY_KEYS,SampledAudio,mountCharacter,mountPerformance,BeatClock,SONGS,scoreEvents,CODES,MAX_MS,MAX_EVENTS,makeRecording,validateRecording}=window.__deps;\n'+app);
+  w.__deps={...bindings,...scores,...recording,guidePosition,SampledAudio:FakeAudio,mountPerformance(){},mountCharacter:()=>({ready:Promise.resolve(),strike(){}}),BeatClock:FakeClock};
+  w.eval('const {KEYS,MELODY,DRUMS,CHORDS,LEGACY_KEYS,SampledAudio,mountCharacter,mountPerformance,BeatClock,SONGS,scoreEvents,guidePosition,CODES,MAX_MS,MAX_EVENTS,makeRecording,validateRecording}=window.__deps;\n'+app);
   const $=id=>w.document.getElementById(id);
   const key=(type,code,target=w.document,options={})=>target.dispatchEvent(new w.KeyboardEvent(type,{code,bubbles:true,cancelable:true,...options}));
   const frame=time=>{audio.context.currentTime=time;const queued=[...frames.values()];frames.clear();for(const fn of queued)fn();};
@@ -137,7 +138,7 @@ test('guitar chords record as compact v2 events, and drums mode excludes melodic
  $('recordToggle').click();$('exportRecording').click();const clip=JSON.parse(await h.blob().text());
  assert.equal(clip.version,2);assert.equal(clip.instrument,'guitar');assert.deepEqual(clip.events,[[0,21],[200,0]]);
  $('instrumentSelect').value='drums';$('instrumentSelect').dispatchEvent(new w.Event('change'));
- assert.equal($('melodyKeys').hidden,true);assert.equal($('scoreBook').hidden,true);
+ assert.equal($('melodyKeys').hidden,true);assert.equal($('scoreBook').hidden,false);
  const before=audio.plays.length;key('keydown','KeyA');key('keydown','Digit2');await settle();assert.equal(audio.plays.length,before);
  for(const code of ['KeyZ','KeyX','KeyC','KeyV','KeyB','KeyN','KeyM','KeyL'])key('keydown',code);
  await settle();assert.equal(audio.plays.length,before+8);
@@ -176,4 +177,67 @@ test('pending sample load for playback locks recording until playback readiness 
  assert.equal($('recordToggle').disabled,true);assert.equal($('importRecording').disabled,true);
  $('recordToggle').click();await settle();assert.equal($('recordToggle').getAttribute('aria-pressed'),'false');
  release();await settle();assert.equal(audio.plays.length,1);assert.equal(audio.plays[0].instrument,'guitar');
+});
+
+test('guided practice advances from audio time, live hits continue it, and recording contains only real input',async t=>{
+ const h=setup(t),{$,audio,key,clock,w}=h;
+ $('guideSong').click();await settle();
+ assert.equal(clock.running,true);assert.equal(audio.plays.length,0,'guide must never play the melody');
+ h.frame(.5);assert.match($('guideTime').textContent,/预备/);assert.equal($('guidePanel').dataset.index,'-1');
+ h.frame(2.6);assert.equal($('guidePanel').dataset.index,'0');assert.ok(w.document.querySelector('[data-code="KeyA"]').classList.contains('due'));
+ $('recordToggle').click();await settle();assert.equal($('guidePanel').hidden,false);
+ for(const [time,code]of [[2.65,'KeyA'],[2.8,'KeyS'],[2.95,'KeyG']]){audio.context.currentTime=time;key('keydown',code);await settle();key('keyup',code);}
+ assert.equal(audio.plays.length,3);assert.equal(clock.running,true);assert.equal($('guidePanel').hidden,false);
+ audio.context.currentTime=3.1;$('recordToggle').click();$('exportRecording').click();const saved=JSON.parse(await h.blob().text());
+ assert.deepEqual(saved.events,[[50,0],[200,1],[350,4]]);assert.equal(saved.duration,500);
+ h.frame(5.2);assert.equal($('guidePanel').dataset.index,'4','a stalled frame jumps directly to the right note');
+ assert.equal(audio.plays.length,3,'a stalled frame must not add pretend notes');
+ $('stopSong').click();assert.equal(clock.running,false);assert.equal($('guidePanel').hidden,true);
+ assert.equal(w.document.querySelectorAll('.due,.upcoming').length,0);
+});
+
+test('tempo changes clear old guidance; restart restores its cue, and demo still yields to live input',async t=>{
+ const h=setup(t),{$,audio,key,w}=h;
+ $('guideSong').click();await settle();h.frame(2.6);
+ $('bpm').value='120';$('bpm').dispatchEvent(new w.Event('input'));
+ assert.equal($('guidePanel').hidden,true);assert.equal(w.document.querySelectorAll('.due,.upcoming').length,0);assert.match($('practiceHint').textContent,/重新/);
+ $('guideSong').click();await settle();h.frame(4.7);assert.equal($('guidePanel').hidden,false);assert.ok(w.document.querySelector('[data-code="KeyA"]').classList.contains('due'));
+ $('stopSong').click();$('listenSong').click();await settle();key('keydown','KeyD');await settle();key('keyup','KeyD');
+ assert.equal($('guidePanel').hidden,true);assert.equal(audio.plays.at(-1).code,'KeyD');
+});
+
+test('pending guidance is cancelled by explicit stop or blur and cannot start late',async t=>{
+ const h=setup(t),{$,audio,w}=h;
+ for(const cancel of [()=>$('stopSong').click(),()=>w.dispatchEvent(new w.Event('blur'))]){
+  const release=audio.defer();$('guideSong').click();await settle();assert.equal($('stopSong').disabled,false);cancel();release();await settle();
+  assert.equal($('guidePanel').hidden,true);assert.equal($('guideSong').disabled,false);assert.equal($('stopSong').disabled,true);assert.equal(audio.plays.length,0);
+ }
+});
+
+
+test('enabling the metronome during a demo uses the same count-in origin',async t=>{
+ const h=setup(t),{$,audio,clock}=h;
+ $('listenSong').click();await settle();audio.context.currentTime=1;
+ $('metronomeToggle').click();await settle();assert.equal(clock.origin,.1);assert.equal(clock.bpm,96);
+ $('stopSong').click();assert.equal(clock.running,false);
+});
+
+test('drum scores filter by instrument and simultaneous cues remain two genuine human hits',async t=>{
+ const h=setup(t),{$,audio,w,key}=h;
+ $('instrumentSelect').value='drums';$('instrumentSelect').dispatchEvent(new w.Event('change'));
+ assert.deepEqual([...$('songSelect').options].map(x=>x.value),['drum-first-bar','drum-hat-pulse']);
+ $('songSelect').value='drum-hat-pulse';$('songSelect').dispatchEvent(new w.Event('change'));
+ $('guideSong').click();await settle();h.frame(2.6);assert.equal(w.document.querySelectorAll('.drum-pad.due').length,2);assert.equal(audio.plays.length,0);
+ for(const code of ['KeyZ','KeyC']){key('keydown',code);await settle();key('keyup',code);}assert.equal(audio.plays.length,2);assert.equal($('guidePanel').hidden,false);
+ $('stopSong').click();const clip={...recording.makeRecording('piano',96,4),duration:100,events:[[0,0]]};await h.importFile(clip);$('playRecording').click();await settle();
+ assert.equal($('instrumentSelect').value,'piano');assert.ok([...$('songSelect').options].every(x=>!x.value.startsWith('drum-')));
+});
+
+test('birthday pickup starts after two preparatory beats and its downbeat follows the first combined beat',async t=>{
+ const h=setup(t),{$,w}=h;
+ $('bpm').value='120';$('bpm').dispatchEvent(new w.Event('input'));$('songSelect').value='birthday';$('songSelect').dispatchEvent(new w.Event('change'));
+ $('guideSong').click();await settle();h.frame(.2);assert.match($('guideTime').textContent,/预备 2 拍/);
+ h.frame(1.1);assert.equal($('guidePanel').dataset.index,'0');assert.equal($('guidePanel').dataset.beat,'2');
+ h.frame(1.6);assert.equal($('guidePanel').dataset.index,'2');assert.equal($('guidePanel').dataset.beat,'0');
+ assert.equal(w.document.querySelector('[data-code="KeyS"]').classList.contains('due'),true);
 });

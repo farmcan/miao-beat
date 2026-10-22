@@ -6,9 +6,10 @@ import {BeatClock} from '../public/clock.js';
 test('every score pitch and compact code resolves to the same instrument key',()=>{
   assert.equal(new Set(KEYS.map(k=>k.code)).size,25);assert.deepEqual(CODES,KEYS.map(k=>k.code));
   for(const song of SONGS){const events=scoreEvents(song,120);for(let i=0;i<events.length;i++){
-    assert.ok(MELODY.some(k=>k.sub===events[i].note),events[i].note);assert.ok(events[i].beats>0);
+    if(song.kind==='rhythm'){for(const code of events[i].codes||[events[i].code])assert.ok(DRUMS.some(k=>k.code===code),code);}else assert.ok(MELODY.some(k=>k.sub===events[i].note),events[i].note);assert.ok(events[i].beats>0);
     if(i)assert.ok(Math.abs(events[i].offset-events[i-1].offset-events[i-1].beats*.5)<1e-8);
   }}
+  for(const song of SONGS){const events=scoreEvents(song,120),last=events.at(-1);assert.ok(Math.abs(last.offset+last.beats*.5-song.totalBeats*.5)<1e-8);assert.ok(song.instruments.length);}
   assert.equal(scoreEvents(SONGS[2],120).at(-1).offset+1,4); // two 4/4 bars at 120 BPM
 });
 test('new bindings append to the immutable legacy event-code prefix and retain legacy percussion',()=>{

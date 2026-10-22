@@ -6,3 +6,5 @@
 - Work in main; publish only public/ to Cloudflare Pages miao-beat. Research exports use an owner-configured destination; public products/README must not link back to the owner’s personal site, reviews or status pages. No credentials or private records in public exports.
 - Public deliveries/start/end events use existing Seed tasks status mechanism. Preserve historical events; persist pending if publishing fails.
 - Key acceptance: actual press/click → audio/visual response; metronome shares audio clock; real browser QA. Mobile physical speaker listening is not implied by desktop QA.
+
+- 2026-10-22 v2 explicitly authorized: expand selectable pocket scores, optional beat/key/time guidance, research good references and improve animation, then deploy the second version. Guidance is a practice aid, not scoring; actual human input must remain free and must be the only input written to a recording.
