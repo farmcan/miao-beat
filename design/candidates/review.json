@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-22",
+  "tool": "built-in image_gen",
+  "status": "static concept review; not production rig",
+  "selection": "C · 淘气小乐手",
+  "reason": "音乐感来自盯着琴键、抱琴扫弦、抬棒落点与身体重心，表情比A/B更明亮亲近。选择行为与性格方向，下一步先做一个乐器的短动作小样；不把整张概念图直接替换线上角色。",
+  "candidates": [
+    {
+      "id": "A",
+      "file": "bedroom-musician-v1.png",
+      "name": "软萌卧室乐手",
+      "verdict": "保留软团比例，暂不作为主方向。",
+      "detail": "圆脸与短身讨喜，但低眉半闭眼偏酷、偏困，折耳在三格中也有漂移。",
+      "alt": "圆团灰猫分别弹钢琴、抱吉他、持鼓棒的原创概念板",
+      "sha256": "586d43e48307d26ab857268d01b637c1d86c34b1e898fc1d75db1b06e6b7fbb9",
+      "bytes": 2415346,
+      "prompt_document": "docs/research/character-candidate-a-2026-10-22.md"
+    },
+    {
+      "id": "B",
+      "file": "groove-cat-v1.png",
+      "name": "松弛即兴猫",
+      "verdict": "实施备选，固定坐姿和身份较稳。",
+      "detail": "乐器接触清楚、低肩松弛；琴与吉他格的眼神仍显困倦，童真与热情不足。",
+      "alt": "白口鼻暖灰猫分别弹键盘、吉他和鼓组的原创概念板",
+      "sha256": "472f59f411d540a9b438a73cda6530d9053e403fea032321ba8cb380fd7f4b96",
+      "bytes": 2158061,
+      "prompt_document": "docs/research/character-candidate-b-2026-10-22.md"
+    },
+    {
+      "id": "C",
+      "file": "playful-player-v1.png",
+      "name": "淘气小乐手",
+      "verdict": "本轮首选：认真投入，弹开心了会小得意。",
+      "detail": "选它的注意力与身体投入；保留自然睁眼的中性脸，去掉扫弦爪的固定模糊，校准鼓棒触点。",
+      "alt": "深灰小猫投入地弹琴、扭身扫吉他、打鼓短暂眨眼的原创概念板",
+      "sha256": "e763353e699f899b3dcfea2da862596d12d1c5773cb4a1b1b1dd37803f6e1f5a",
+      "bytes": 2312178,
+      "prompt_document": "docs/research/character-candidate-c-2026-10-22.md"
+    }
+  ]
+}
