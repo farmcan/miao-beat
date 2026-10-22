@@ -88,7 +88,7 @@ async function hit(code){
   animate();
 }
 function clearHeld(){held.clear();for(const timer of pulses.values())clearTimeout(timer);pulses.clear();paint();}
-const isControl=target=>target instanceof Element&&target.closest('input:not([type="range"]),textarea,select,[contenteditable]');
+const isControl=target=>$('supportDialog')?.open||target instanceof Element&&target.closest('input:not([type="range"]),textarea,select,[contenteditable]');
 document.addEventListener('keydown',event=>{
   if(event.repeat||event.isComposing||event.ctrlKey||event.metaKey||event.altKey||isControl(event.target)||!byCode.has(event.code)||!allows(byCode.get(event.code)))return;
   event.preventDefault();if(held.has(event.code))return;held.add(event.code);paint();hit(event.code);
@@ -236,3 +236,9 @@ $('importRecording').addEventListener('change',async event=>{
 function pauseAll(){const guided=!!session?.guide||!!sessionPending;lifecycle++;recordPending=false;sessionPending=0;clearHeld();stopClock();stopSession();finishRecording();audio.stopVoices();if(guided){$('practiceHint').textContent='已暂停。回来后可以重新跟弹，或直接自由演奏。';$('scoreStatus').textContent=$('practiceHint').textContent;}}
 window.addEventListener('blur',pauseAll);document.addEventListener('visibilitychange',()=>{if(document.hidden)pauseAll();});
 renderInstrument();populateSongs();renderScore();paintClock();updateRecorder();
+
+// Reuse the owner's existing voluntary support image; no payment API or account.
+const supportDialog=$('supportDialog');
+for(const button of document.querySelectorAll('[data-open-support]'))button.addEventListener('click',()=>{if(!supportDialog.open){clearHeld();supportDialog.showModal();}});
+$('closeSupport').addEventListener('click',()=>supportDialog.close());
+supportDialog.addEventListener('click',event=>{if(event.target!==supportDialog)return;const r=supportDialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)supportDialog.close();});

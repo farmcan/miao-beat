@@ -261,3 +261,13 @@ test('birthday pickup starts after two preparatory beats and its downbeat follow
  h.frame(1.6);assert.equal($('guidePanel').dataset.index,'2');assert.equal($('guidePanel').dataset.beat,'0');
  assert.equal(w.document.querySelector('[data-code="KeyS"]').classList.contains('due'),true);
 });
+
+test('voluntary support dialog blocks performance keys and closing restores free play',async t=>{
+ const h=setup(t),{$,audio,key,w}=h;
+ w.HTMLDialogElement.prototype.showModal=function(){this.setAttribute('open','');};
+ w.HTMLDialogElement.prototype.close=function(){this.removeAttribute('open');};
+ w.document.querySelector('[data-open-support]').click();assert.equal($('supportDialog').open,true);
+ key('keydown','KeyA');await settle();assert.equal(audio.plays.length,0);
+ $('closeSupport').click();assert.equal($('supportDialog').open,false);
+ key('keydown','KeyA');await settle();assert.equal(audio.plays.length,1);key('keyup','KeyA');
+});

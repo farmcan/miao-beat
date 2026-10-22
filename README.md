@@ -44,3 +44,5 @@ MIT applies to our code; upstream notices and third-party musical works/sample/a
 Version 0.5 added optional audio-clock practice guidance, a larger pocket-score library and original drum exercises. “Listen” plays the reference; “Play along” provides timing/key cues without scoring or adding automatic notes to the recording. See docs/v2-release-2026-10-22.md for verification and limits.
 
 Version 0.6 improves the first-screen sound entry, puts free-play keys before scores, and introduces the original indie-cat contact rig. See [release notes](docs/character-ui-release-2026-10-22.md). The more friendly character remains an aesthetic hypothesis; no human preference validation is claimed.
+
+Version 0.6.1 links the MiaoTI and MiaoTarot public products and reuses the existing optional Alipay support image. All music features remain free; the app does not execute payments.

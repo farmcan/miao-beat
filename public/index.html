@@ -13,7 +13,7 @@
 <body>
   <header class="site-header">
     <a class="brand" href="./" aria-label="Miao Beat 首页"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 17 4 5l9 6h6l9-6-1 12c5 14-27 14-22 0Z" fill="currentColor"/><path d="M10 19h2m8 0h2" stroke="#f0ede5" stroke-width="2.6" stroke-linecap="round"/></svg><span>MIAO<span class="brand-light"> / </span>BEAT</span></a>
-    <a class="about-link" href="#instrumentSelect">开始演奏 <span aria-hidden="true">↓</span></a>
+    <div class="header-actions"><a class="about-link" href="#instrumentSelect">开始演奏 <span aria-hidden="true">↓</span></a><button class="support-trigger" type="button" data-open-support>请猫猫吃罐罐 <span aria-hidden="true">♡</span></button></div>
   </header>
 
   <main>
@@ -96,9 +96,23 @@
     </details>
 
     <div class="closing-note"><span aria-hidden="true">✳</span><p>没有“弹错了”。<br><strong>只是这一小段，刚好长这样。</strong></p></div>
+    <nav class="miao-family" aria-label="再玩一个猫咪小项目">
+      <div><span class="family-kicker">猫猫还有别的拿手戏</span><h2>换个心情，再玩一个。</h2></div>
+      <a href="https://miaoti-dmv.pages.dev/v1/?utm_source=miao-beat&amp;utm_medium=referral&amp;utm_campaign=play-next" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer"><span aria-hidden="true">🐱</span><span><strong>MiaoTI · 测测猫格</strong><small>这会儿的你，像哪只猫？</small></span><span aria-hidden="true">↗</span></a>
+      <a href="https://tarot-31o.pages.dev/?utm_source=miao-beat&amp;utm_medium=referral&amp;utm_campaign=play-next" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer"><span aria-hidden="true">✦</span><span><strong>MiaoTarot · 猫咪塔罗</strong><small>给心里的小事换个角度。</small></span><span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="support-note"><p>今天弹得还开心？<span>演奏一直免费，支持完全随意。</span></p><button type="button" data-open-support>请猫猫吃罐罐 ♡</button></div>
     <details class="credits"><summary>关于这个小玩具与素材来源</summary><p>Miao Beat 是独立的轻量音乐实验。当前采用真实钢琴、马林巴、尼龙弦吉他与架子鼓采样。原创墨蓝小猫采用四个独立图层，按键时爪尖触键、扫过音孔或持棒击鼓，头部轻轻跟随鼠标，节拍时点头。吉他提供简化和弦与单音；架子鼓模式可以自由编节奏。</p><p>项目起点借鉴了 <a href="https://bongo.cat/" target="_blank" rel="noopener">Bongo Cat</a> 的按键演奏思路；原始映射代码的 MIT 许可保留在 <a href="./UPSTREAM-LICENSE.txt">许可说明</a>。本站没有使用该站角色插画和录音。采样来源与各自许可见 <a href="./samples/LICENSES.txt">音色说明</a>；播放引擎采用 <a href="./vendor/smplr-LICENSE.txt">smplr（MIT）</a>。无需麦克风、登录或上传。</p><p><a href="https://github.com/farmcan/miao-beat" target="_blank" rel="noopener">源代码 ↗</a></p></details>
     <noscript><p class="noscript">这个声音玩具需要浏览器开启 JavaScript。</p></noscript>
   </main>
+  <dialog id="supportDialog" class="support-dialog" aria-labelledby="supportTitle" aria-describedby="supportDescription">
+    <div class="support-dialog-heading"><div><p class="eyebrow">谢谢你来玩</p><h2 id="supportTitle">请猫猫吃罐罐</h2></div><button id="closeSupport" type="button" aria-label="关闭支持窗口">关闭</button></div>
+    <p id="supportDescription">如果这个小玩具让你开心了一下，愿意的话，可以支持猫图制作和后续更新。</p>
+    <p class="support-free">完全自愿 · 不影响任何功能</p>
+    <img class="support-qr" src="./support-alipay-qr.jpg" width="854" height="1280" loading="lazy" alt="支付宝收款码：请猫猫吃罐罐">
+    <a class="support-download" href="./support-alipay-qr.jpg" download="miao-beat-alipay-qr.jpg">保存支付宝收款码 ↓</a>
+    <p class="support-tip">电脑端扫码；手机端保存图片后，在支付宝识别。本站不会自动扣款，也不会因此解锁功能。</p>
+  </dialog>
   <footer><span>MIAO / BEAT</span><span>MADE FOR A LITTLE JOY.</span><span class="footer-cat" aria-hidden="true">=^･ω･^=</span></footer>
 </body>
 </html>

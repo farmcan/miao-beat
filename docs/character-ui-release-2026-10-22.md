@@ -34,4 +34,14 @@
 
 ## 生产验收
 
-待正式部署后追加canonical字节核验、实际生产演奏、截图与部署标识。
+角色/UI正式提交 `5011449fdfaa6a260277cedd9f22afabe4b9d6b7`，Production `0fb40e8c-a14e-40c3-a29b-b9b7e01f39b7`。canonical release及57份公开源码SHA全部匹配。最终生产Chrome：13音hits13 peak .06595；吉他4和弦与两音后hits19 peak .07850、surface=strings；8鼓后hits27、activeKeys=0、surface=ride；warning/error零。生产三音录制313ms/145字节仅含 `[244,0] [255,2] [261,4]`，回放hits6、peak .02917、提示回放结束。截图为ignored `artifacts/production-piano-contact-v3.png`。
+
+## 追加：三站互链与自愿支持 · 0.6.1
+
+用户随后授权MiaoTI为本作推流，MiaoTI/MiaoTarot/MiaoBeat互链，并复用“请猫猫吃罐罐”。MiaoBeat在页尾增加两个同系列项目入口，在页头及演奏后的次级区域提供赞赏弹窗。外链打开新标签，固定来源UTM，no-referrer，不拼接演奏、测试或塔罗内容。赞赏使用MiaoTI已公开的原支付宝收款图，不改像素、不创建支付接口、不执行交易；完全自愿且所有演奏功能保持免费。
+
+本地320×740真实浏览器视口：弹窗282×584.88，位于x19/y77.55，44×44关闭按钮可达，QR原宽854实际加载，整页宽320。关闭与Escape可返回演奏；对话框打开时演奏快捷键暂停响应，关闭后恢复。新增行为回归后共42项测试通过。物理手机扫码、保存后的支付宝识别和实际付款未执行，不能把图片显示当交易成功。
+
+三站追加的正式交付证据在完成后继续追加；角色/UI历史验收不改写成新版本的结果。
+
+赞赏图继承来源：MiaoTI `site/assets/support-alipay-qr.jpg`，SHA256 `0d83bcdf1ed349aa584fc0f86781d17d62e1ed96984c743bbacd7421cb0f91a1`，144275字节；与既有公开图逐字节一致。
