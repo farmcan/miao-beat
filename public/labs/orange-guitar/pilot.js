@@ -39,7 +39,7 @@ async function trigger(key){
  paintPressed();status.textContent=chord.label+' · 轻扫';
 }
 function release(key){pressed.delete(key);paintPressed();if(currentKey===key)currentKey=null;if(reduced.matches&&!pressed.size)strum.style.transform=pose(-6);}
-for(const b of buttons){b.addEventListener('pointerdown',e=>{e.preventDefault();b.setPointerCapture(e.pointerId);pressed.add(b.dataset.key);paintPressed();trigger(b.dataset.key);});b.addEventListener('pointerup',()=>release(b.dataset.key));b.addEventListener('pointercancel',()=>release(b.dataset.key));}
+for(const b of buttons){b.addEventListener('pointerdown',e=>{e.preventDefault();b.setPointerCapture(e.pointerId);pressed.add(b.dataset.key);paintPressed();trigger(b.dataset.key);});b.addEventListener('pointerup',()=>release(b.dataset.key));b.addEventListener('pointercancel',()=>release(b.dataset.key));b.addEventListener('click',e=>{if(e.detail===0)trigger(b.dataset.key);});}
 addEventListener('keydown',e=>{if(!['1','2','3','4'].includes(e.key)||e.repeat||e.altKey||e.ctrlKey||e.metaKey)return;e.preventDefault();pressed.add(e.key);paintPressed();trigger(e.key);});addEventListener('keyup',e=>release(e.key));
 function reset(){epoch++;motion?.cancel();motion=null;bodyMotion?.cancel();bodyMotion=null;angle=-6;strum.style.transform=pose(-6);pressed.clear();release(currentKey);}
 addEventListener('blur',reset);document.addEventListener('visibilitychange',()=>{if(document.hidden)reset();});reduced.addEventListener('change',reset);
