@@ -38,7 +38,7 @@ export function mountCharacter(scene){
  const style=doc.createElement('link');style.rel='stylesheet';style.href=STYLES;
  const cssReady=new Promise((resolve,reject)=>{style.onload=()=>resolve(true);style.onerror=()=>reject(new Error('Character styles unavailable'));});doc.head.append(style);
  const part=(name,classes)=>{
-  const spec=CHARACTER_LAYOUT[name],g=el('g',{class:'plush-character-part '+classes,'data-character-part':name,'aria-hidden':'true'});
+  const spec=CHARACTER_LAYOUT[name],g=el('g',{class:'plush-character-part '+classes,'data-character-part':name,'aria-hidden':'true',visibility:'hidden'});
   const [x,y,w,h]=spec.box??[0,0,TILE,TILE],crop=el('svg',{x,y,width:w,height:h,viewBox:spec.tile.join(' '),overflow:'hidden'});
   crop.append(el('image',{href:ATLAS,width:SIZE,height:SIZE}));g.append(crop);return g;
  };
@@ -54,8 +54,8 @@ export function mountCharacter(scene){
  bank.append(el('rect',{x:426,y:233,width:92,height:47,rx:7,fill:'#343d50',stroke:'#242a37','stroke-width':2}));
  VOICES.forEach((voice,i)=>bank.append(el('rect',{'data-rhythm-pad':voice,x:432+(i%4)*21,y:239+Math.floor(i/4)*18,width:16,height:14,rx:3,fill:i<4?'#b8c9c4':'#d2b37a'})));
  svg.append(bank);for(const p of Object.values(paws))svg.append(p);
- const sticks={};for(const side of ['left','right']){const g=el('g',{class:'cat-drumstick','data-stick':side});g.append(el('path',{d:'M0 0 17 32',stroke:'#e7bc80','stroke-width':5,'stroke-linecap':'round'}));sticks[side]=g;svg.append(g);}
- const contact=el('circle',{class:'cat-contact',r:7,fill:'none',stroke:'#d96340','stroke-width':2});svg.append(contact,head);
+ const sticks={};for(const side of ['left','right']){const g=el('g',{class:'cat-drumstick','data-stick':side,display:'none'});g.append(el('path',{d:'M0 0 17 32',stroke:'#e7bc80','stroke-width':5,'stroke-linecap':'round'}));sticks[side]=g;svg.append(g);}
+ const contact=el('circle',{class:'cat-contact',opacity:0,r:7,fill:'none',stroke:'#d96340','stroke-width':2});svg.append(contact,head);
  let destroyed=false,instrument=scene.dataset.instrument??'piano',held=[],raf=0,look={x:0,y:0},contactTimer=0;
  const animations={left:null,right:null},stickAnimations={left:null,right:null},reduced=win.matchMedia?.('(prefers-reduced-motion: reduce)');
  const resting=()=>instrument==='guitar'?{left:[232,247],right:[373,231]}:instrument==='drums'?{left:[253,201],right:[370,201]}:{left:[236,254],right:[360,254]};
