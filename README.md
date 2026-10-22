@@ -3,8 +3,8 @@
 A small browser instrument playground. Follow a metronome, play your own music, keep a tiny event file. No falling-note game, score, account, microphone, or upload.
 
 - Play: https://miao-beat.pages.dev/
-- Research & decisions: https://farmcan.pages.dev/reviews/miao-beat/
-- Delivery history: https://farmcan-seed.pages.dev/tasks/
+- Research & decisions: [local research](docs/research/product-and-keyboard.md)
+- Public products never link back to the owner’s personal website or research hub.
 
 ## Status · 2026-10-22
 
@@ -33,7 +33,7 @@ Cloudflare uses the existing authorized account and independent Pages project `m
 - `public/bindings.js`: a new virtual-piano layout, preserving stable recording codes. Inspiration starts with Bongo Cat; the old MIT notice is retained in `UPSTREAM-LICENSE.txt`. No Bongo Cat art or recordings copied.
 - `public/clock.js`: bounded lookahead on the shared AudioContext, informed by official web.dev/MDN explanations; manual notes play immediately.
 - `public/recording.js`: versioned one-shot events, strict validation, local files. Preserve engine/version compatibility if sounds change.
-- `docs/research/`: sources, version snapshots, asset licenses, options, evidence gaps, and proposed phases. `scripts/export-review.py` publishes only selected reviewed derivatives to farmcan.
+- `docs/research/`: sources, version snapshots, asset licenses, options, evidence gaps, and proposed phases. `scripts/export-review.py` publishes only selected reviewed derivatives to an owner-configured destination.
 - `design/`: generated static character concept, source prompt, SHA and explicit limits.
 
 MIT applies to our code; upstream notices and third-party musical works/sample/art rights remain separate. See research for each candidate. No third-party sample library is included in this release.
