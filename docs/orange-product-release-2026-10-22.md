@@ -32,4 +32,18 @@ guidePanel永久放在琴键前，启动跟弹后滚入视图，不再动态改o
 
 尚未做实体手机扬声器/多指触屏/帧率、逐帧动作盲评或用户审美与分享实验。头部仅有限偏转和开/闭眼状态，没有连续三维眼球追踪；肢体是有遮挡的固定尺寸贴图，不是真实关节皮肤。资产边缘与小尺寸仍需要用户实际体验评价，不以测试数替代自然度。
 
-本轮开始事件 `miao-beat-orange-product-20261022-start` 已在Seed发布验收，历史保留。正式结果与修复记录在生产验收后追加；本文件初始阶段不声称已上线。
+本轮开始事件 `miao-beat-orange-product-20261022-start` 已在Seed发布验收，历史保留。以下追加正式结果与修复，不以本文件初始阶段或本地通过冒充上线。
+
+
+## 正式站验收补记
+
+正式版已发布至 https://miao-beat.pages.dev/ 。首版源提交 `cd92e43640bf62a95a61ec79a5eac83ff6fb6eed`，Cloudflare production部署 `015e4fc6-854b-4bbf-bbe6-2b418581b19c`；原始API latest_stage为deploy/success，结束于2026-10-22T14:49:35Z。随后修复切换乐器仍残留旧演奏名称的问题，18项交互回归通过；最终部署源为 `9bed9a54975f8b8fbe8e862c08579694d443d988`，production部署 `345d9c60-360d-4d5c-9a11-0e886362475c`，deploy/success结束于14:55:39Z。canonical release与64个公开源文件SHA逐项一致。构建只复制65项显式allowlist，不包含本地研究和私人记录。
+
+真实生产浏览器演奏吉他4和弦+2单音、钢琴13音、马林巴6音、架子鼓8件及军鼓↔高通鼓，累计hits依次6/19/25/35，均有非零电平且未产生characterWarning。录制Z/X/N得到3个真实事件，实际点击导出148B演奏文件，回放显示结束，累计hits41。最终小修复上线后另按吉他1得到hits1与peak .03921；切钢琴再切吉他后标题回到“第一声，交给你”，warn/error日志为空。未重新执行本轮未改动的实体文件导入界面，不以回归替代此项实测。
+
+390×844正式站页面宽390，完整场景y164–465，60px和弦按键y639–699。320×740支持窗口范围x19–301/y73–667、图片naturalWidth854；窗口打开时A未进入演奏，Escape可关闭。没有执行付款。移动数据来自桌面浏览器视口，不代表实体手机。
+
+验收凭据保存于本地 `artifacts/orange-product-production.json`；截图 `artifacts/orange-production-desktop.png`、`artifacts/orange-production-portrait.png`。完整生成prompt：`design/orange-product-v3/character-prompt.txt`与`instrument-prompt.txt`；实际原图在 `public/character/orange-components-v3.png`和`orange-instruments-v3.png`。后续文档提交不改已验收的产品部署源。
+
+
+状态页闭环：开始、修复、本地检查、首版生产、录制/移动尺寸补证与最终caption修复共7条本轮事件已公开摘要发布验收，历史事件保留。Seed源 `1e5e1d1dcd014f9ee975cdd6d58e9feec16799f9`，production部署 `5c2e7431-1020-4bf2-b7e4-6cc8d4db02ae`，raw deploy/success于15:01:54Z结束；15:02:07Z canonical事件逐字段及HTML摘要一致。状态页/JSON匿名均401通用密码页、鉴权均200，全路由gate未改。私有publication receipt状态为published_verified；产品未加入个人状态页反链。
