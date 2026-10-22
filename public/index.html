@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f0ede5">
+  <meta name="description" content="一个轻轻松松的猫咪音乐工作台。打开节拍器，随手弹一段旋律，再敲一点鼓。无需登录，键盘与手机都能玩。">
+  <title>Miao Beat · 猫咪音乐工作台</title>
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Miao Beat 首页"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 17 4 5l9 6h6l9-6-1 12c5 14-27 14-22 0Z" fill="currentColor"/><path d="M10 19h2m8 0h2" stroke="#f0ede5" stroke-width="2.6" stroke-linecap="round"/></svg><span>MIAO<span class="brand-light"> / </span>BEAT</span></a>
+    <a class="about-link" href="https://farmcan.pages.dev/reviews/miao-beat/" target="_blank" rel="noopener">制作手记 <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main>
+    <div class="page-heading"><div><p class="eyebrow">YOUR TINY MUSIC ROOM</p><h1>随手弹弹，<span>猫猫接住。</span></h1></div><p class="heading-note">没学过乐器也没关系。<br>开个节拍，找到你自己的小节奏。</p></div>
+
+    <section class="workbench" aria-label="猫咪音乐工作台">
+      <div class="bench-topline"><span class="room-label"><span class="status-dot" aria-hidden="true"></span>小猫排练室 <span class="room-number">NO. 01</span></span><span class="local-note">随时开场 · 不用登录</span></div>
+
+      <div class="performance-row">
+        <div id="scene" class="scene" aria-label="跟着你的按键演奏的小猫">
+          <div class="scene-sticker" aria-hidden="true">MAKE A<br>LITTLE NOISE<span>✳</span></div>
+          <svg class="cat-scene" viewBox="0 0 640 300" role="img" aria-label="戴着耳机的小猫在音乐台前，等你弹第一下">
+            <defs><pattern id="speakerDots" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#575b4c"/></pattern></defs>
+            <ellipse cx="322" cy="277" rx="196" ry="11" fill="#d9d4c7"/>
+            <g class="speaker" transform="translate(474 176)"><rect width="69" height="93" rx="9" fill="#71775e" stroke="#33362e" stroke-width="3"/><rect x="8" y="9" width="53" height="74" rx="5" fill="url(#speakerDots)"/><circle cx="34" cy="31" r="9" fill="#3a3f33"/><circle cx="34" cy="63" r="17" fill="#3a3f33"/><circle cx="34" cy="63" r="8" fill="#626a51"/></g>
+            <path class="cat-tail" d="M408 223c72 10 57-63 83-62 20 1 10 57-17 79-16 13-41 15-65 10" fill="#e8b58a" stroke="#33362e" stroke-width="4" stroke-linecap="round"/>
+            <g id="cat-body"><path d="M226 187c-29 32-33 66-20 80h220c12-28 1-58-25-80Z" fill="#e7b58e" stroke="#33362e" stroke-width="4"/><path d="M277 206q40-21 78 0l17 60H262Z" fill="#f5dbc0"/></g>
+            <g id="cat-head">
+              <path d="M218 166q-8-22-3-47L205 44q-2-13 12-7l54 31q45-13 91 0l53-31q14-6 12 8l-9 75q7 27-3 50c-27 54-170 56-197-4Z" fill="#e8b58a" stroke="#33362e" stroke-width="4.5" stroke-linejoin="round"/>
+              <path d="m220 55 6 42 29-23Zm191 0-29 19 22 24Z" fill="#c88169"/>
+              <path d="M285 67q6 21 12 27m16-31 2 28m19-24-4 25" fill="none" stroke="#c58861" stroke-width="7" stroke-linecap="round"/>
+              <path d="M232 126q-8-80 80-82 89-1 88 82" fill="none" stroke="#343b36" stroke-width="11"/>
+              <path d="M233 108q-1-64 80-65 81-2 86 66" fill="none" stroke="#70877a" stroke-width="7"/>
+              <rect x="216" y="112" width="22" height="50" rx="10" fill="#343b36" transform="rotate(-9 227 137)"/><rect x="219" y="119" width="11" height="34" rx="5" fill="#758e7f" transform="rotate(-9 227 137)"/>
+              <rect x="395" y="112" width="22" height="50" rx="10" fill="#343b36" transform="rotate(9 406 137)"/><rect x="403" y="119" width="11" height="34" rx="5" fill="#758e7f" transform="rotate(9 406 137)"/>
+              <path class="cat-eye" d="M263 137q10-10 20 0m66 0q10-10 20 0" fill="none" stroke="#33362e" stroke-width="4.5" stroke-linecap="round"/>
+              <ellipse cx="267" cy="158" rx="14" ry="5" fill="#d88c76" opacity=".6"/><ellipse cx="365" cy="158" rx="14" ry="5" fill="#d88c76" opacity=".6"/>
+              <path d="m310 151 12 0-6 7Z" fill="#68463d"/><path id="cat-mouth" d="M316 158q-5 12-13 6m13-6q5 12 13 6" fill="none" stroke="#68463d" stroke-width="3" stroke-linecap="round"/>
+              <g stroke="#8f6b53" stroke-width="2.5" stroke-linecap="round"><path d="m247 155-25-4m25 12-27 5m165-13 25-4m-25 12 27 5"/></g>
+            </g>
+            <g class="scene-keyboard"><path d="M177 240h275l17 38H159Z" fill="#4e5448" stroke="#33362e" stroke-width="4" stroke-linejoin="round"/><path d="M186 245h255l8 24H174Z" fill="#f5eedc" stroke="#33362e" stroke-width="2"/><g stroke="#33362e" stroke-width="1.7"><path d="m209 245-2 24m29-24-1 24m28-24-1 24m28-24v24m27-24v24m27-24 1 24m26-24 2 24m25-24 3 24m24-24 3 24"/></g><g fill="#33362e"><path d="M203 245h11v14h-12Zm27 0h11v14h-11Zm54 0h11v14h-11Zm27 0h11v14h-11Zm27 0h11l1 14h-11Zm54 0h11l1 14h-11Z"/></g><circle cx="451" cy="270" r="2" fill="#e47952"/></g>
+            <g id="paw-left"><path d="M246 201q-7-12-21-2-19 14-19 32 1 17 22 18 22-1 25-17" fill="#edbf97" stroke="#33362e" stroke-width="4" stroke-linecap="round"/><path d="m218 231 1 9m10-10v10" stroke="#b67f5a" stroke-width="2.3" stroke-linecap="round"/></g>
+            <g id="paw-right"><path d="M386 201q7-12 21-2 19 14 19 32-1 17-22 18-22-1-25-17" fill="#edbf97" stroke="#33362e" stroke-width="4" stroke-linecap="round"/><path d="m414 231-1 9m-10-10v10" stroke="#b67f5a" stroke-width="2.3" stroke-linecap="round"/></g>
+            <g id="hit-left" class="hit-marks" stroke="#d86e47" stroke-width="4" stroke-linecap="round"><path d="m181 216-12-8m14 18-16 1m22-21-4-14"/></g><g id="hit-right" class="hit-marks" stroke="#d86e47" stroke-width="4" stroke-linecap="round"><path d="m449 216 12-8m-14 18 16 1m-22-21 4-14"/></g>
+            <g class="music-flecks" fill="#d86e47"><path d="M135 129v25a6 6 0 1 1-4-6v-23l17-5v23a6 6 0 1 1-4-6v-12Z"/><path d="M485 95v25a6 6 0 1 1-4-6V90l18 5v7Z"/></g>
+          </svg>
+          <div class="stage-readout"><span id="signal" class="signal" role="meter" aria-label="实时声音电平" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i><i></i><i></i><i></i></span><span id="nowPlaying">等你弹第一下</span><span class="stage-caption">自由演奏中</span></div>
+        </div>
+
+        <aside class="metronome" aria-label="节拍器">
+          <div class="control-caption"><span>给灵感打个拍子</span><span class="control-index">01 / TEMPO</span></div>
+          <div class="tempo-display"><output id="bpmValue" for="bpm">96</output><span>BPM</span><button id="metronomeToggle" type="button" aria-pressed="false"><span class="play-icon" aria-hidden="true">▶</span><span>开节拍</span></button></div>
+          <div id="beatIndicator" class="beat-indicator" aria-label="四拍节奏"><span data-beat="0">1</span><span data-beat="1">2</span><span data-beat="2">3</span><span data-beat="3">4</span></div>
+          <div class="meter-controls"><label for="meterSelect"><span class="sr-only">拍号</span><select id="meterSelect"><option value="4">4/4 拍</option><option value="3">3/4 拍</option></select></label><button id="tapTempo" type="button" title="连续点按，设定节奏速度">点按测速</button></div>
+          <label class="tempo-slider" for="bpm"><span class="sr-only">每分钟拍数</span><span aria-hidden="true">慢一点</span><input id="bpm" type="range" min="50" max="180" value="96"><span aria-hidden="true">快一点</span></label>
+        </aside>
+      </div>
+
+      <div class="instrument-controls"><label class="instrument-select" for="instrumentSelect"><span>旋律音色</span><select id="instrumentSelect"><option value="marimba">木头叮咚 · 暂用音色</option><option value="sparkle">星星电音 · 暂用音色</option></select></label><label class="volume-control" for="volume"><span class="volume-icon" aria-hidden="true">◖))</span><span class="sr-only">音量</span><input id="volume" type="range" min="0" max="100" value="55"><output id="volumeValue" for="volume">55%</output></label></div>
+
+      <div class="playing-surface">
+        <div class="section-label"><h2>弹一点旋律</h2><span class="desktop-hint">白键 A — K <i>·</i> 黑键 W E T Y U</span><span class="mobile-hint">点按琴键，也可以一起按</span></div>
+        <div id="melodyKeys" class="melody-keys" aria-label="钢琴排列的旋律键"></div>
+        <div class="percussion-row"><div class="drum-heading"><h2>添一点节奏</h2><span>左手敲鼓，右手弹琴</span></div><div id="drumPads" class="drum-pads" aria-label="打击乐垫"></div></div>
+      </div>
+      <p id="soundStatus" class="sound-status" role="status">按下琴键就能出声。第一次演奏时，浏览器会开启声音。</p>
+      <div class="recording-strip" aria-label="按键片段记录"><div class="recording-actions"><button id="recordToggle" type="button" aria-pressed="false"><span class="record-dot" aria-hidden="true"></span>记下这一段</button><button id="playRecording" type="button" disabled>▶ 回放</button><button id="exportRecording" type="button" disabled>导出 JSON</button><label class="import-recording" for="importRecording">导入片段<input id="importRecording" type="file" accept=".json,application/json"><span aria-hidden="true">↗</span></label><span id="recordingInfo" class="recording-info">0:00 · 0 次按键</span></div><div class="recording-meta"><span>只保存按键与时间，文件留在你的设备</span><span id="recordingStatus" role="status"></span></div></div>
+    </section>
+
+    <details id="exportPreview" class="export-preview" hidden><summary>查看 / 复制演奏数据</summary><label for="exportData">下载不方便时，也可以复制这段 JSON，自行保存为 .json 文件。</label><textarea id="exportData" readonly rows="5" aria-label="演奏 JSON 数据"></textarea></details>
+
+    <details class="score-book">
+      <summary><span class="score-book-icon" aria-hidden="true">♫</span><span><strong>不知道从哪一音开始？</strong><small>翻翻口袋谱，跟着弹一小段</small></span><span class="score-book-open">打开参考册 <span aria-hidden="true">＋</span></span></summary>
+      <div class="score-content"><div class="score-toolbar"><label for="songSelect"><span class="sr-only">选择曲谱</span><select id="songSelect" aria-label="选择曲谱"></select></label><div class="score-actions"><button id="listenSong" type="button">▶ 听一遍</button><button id="stopSong" type="button">■ 停止</button></div></div><p id="songInfo" class="song-info"></p><div id="scoreRows" class="score-rows"></div><p id="scoreStatus" class="score-status" role="status">字母是键位，数字是音符。只是参考，不用追着谱子跑。</p></div>
+    </details>
+
+    <div class="closing-note"><span aria-hidden="true">✳</span><p>没有“弹错了”。<br><strong>只是这一小段，刚好长这样。</strong></p></div>
+    <details class="credits"><summary>关于这个小玩具与素材来源</summary><p>Miao Beat 是独立的轻量音乐实验。当前画面是可交互的分层 SVG，音色暂沿用浏览器合成音；最终角色动画与音色正在调研，不代表音频改版已完成。</p><p>项目起点借鉴了 <a href="https://bongo.cat/" target="_blank" rel="noopener">Bongo Cat</a> 的按键演奏思路；原始映射代码的 MIT 许可保留在 <a href="./UPSTREAM-LICENSE.txt">许可说明</a>。本站没有使用该站角色插画和录音。无需麦克风、登录或上传。</p><p><a href="https://github.com/farmcan/miao-beat" target="_blank" rel="noopener">源代码 ↗</a> · <a href="https://farmcan.pages.dev/reviews/miao-beat/" target="_blank" rel="noopener">研究与制作记录 ↗</a></p></details>
+    <noscript><p class="noscript">这个声音玩具需要浏览器开启 JavaScript。</p></noscript>
+  </main>
+  <footer><a href="https://farmcan.pages.dev/">← 网站杂货铺</a><span>MADE FOR A LITTLE JOY.</span><span class="footer-cat" aria-hidden="true">=^･ω･^=</span></footer>
+</body>
+</html>

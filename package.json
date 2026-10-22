@@ -1,0 +1,16 @@
+{
+  "name": "miao-beat",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A small browser instrument playground, with a metronome and a cat.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test scripts/*.test.mjs",
+    "dev": "python3 -m http.server 8894 --directory public"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "jsdom": "29.0.2"
+  }
+}
