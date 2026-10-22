@@ -1,0 +1,292 @@
+{
+  "schema": "miao-beat.hot-meme-evidence.v1",
+  "observedDate": "2026-10-22",
+  "timezone": "Asia/Shanghai",
+  "scope": "read-only public sources; docs only; no third-party assets copied or deployed",
+  "identity": [
+    {
+      "userTerm": "竹zhiliao / 之前zhuzhiliao",
+      "candidate": "imsai-sh/zhuzhiliao",
+      "confidence": "high candidate; not user-confirmed unique URL",
+      "reason": "repository name, author description and existing project case study align",
+      "alternatives": [
+        "andforce/ZhuZhiLiao native apps",
+        "iOS app promoted in an old website snapshot",
+        "unaffiliated similarly named domains"
+      ]
+    },
+    {
+      "userTerm": "梁文峰的滑动变阻器",
+      "normalizedTerm": "梁文锋 / 滑动变祖器",
+      "confidence": "high meme-family match; exact website/video unknown",
+      "candidates": [
+        "Lichtspektrum/liang-intensity-calibrator",
+        "liang-slider.vercel.app",
+        "HunLuanZhiZhu/liang-intensity-calibrator",
+        "zu.01mvp.com"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "bamboo-web",
+      "repo": "https://github.com/imsai-sh/zhuzhiliao",
+      "head": "199e203b038ffb515f3a21189a29da4b4fb8518f",
+      "headMethod": "git ls-remote HEAD",
+      "firstCommit": {
+        "sha": "3cb289de090d8d0b42eda200480c2d92f9e2a6d2",
+        "date": "2026-08-02T00:56:40+08:00",
+        "noParents": true,
+        "source": "https://github.com/imsai-sh/zhuzhiliao/commit/3cb289de090d8d0b42eda200480c2d92f9e2a6d2.patch",
+        "doesNotProve": "website launch time or worldwide meme origin"
+      },
+      "authorDeclaredEntry": "https://imsai.top/",
+      "webParserObservedRedirect": "https://zhuzhiliao.games/",
+      "fullCurrentDeployedUI": "unknown; CLI source fetch returned 403",
+      "mechanism": [
+        "pointer circles",
+        "rotation-dependent playback rate and gain",
+        "auto-spin",
+        "optional device motion",
+        "2D plus separately loaded local 3D resources"
+      ],
+      "audio": {
+        "kind": "embedded real-toy AAC sample plus synthetic decode-failure fallback",
+        "originalVideoURL": null,
+        "independentRecordingRedistributionLicense": "unknown",
+        "reused": false
+      },
+      "codeLicense": {
+        "kind": "custom source-available, not OSI open source",
+        "publicRedistribution": false,
+        "publicDeployment": false,
+        "commercialUse": false,
+        "source": "https://github.com/imsai-sh/zhuzhiliao/blob/199e203b038ffb515f3a21189a29da4b4fb8518f/LICENSE"
+      },
+      "counters": {
+        "currentCode": "localStorage personal count; earlier global backend removed",
+        "liveUV": null,
+        "historicalCounterWarning": "2026-08-07 local project note reported approximately 1.2m visitors/1.59m visits/152m wah; historical self-report, not re-audited or current UV"
+      },
+      "githubPageSnapshot": {
+        "starsDisplay": "2.9k",
+        "forksDisplay": 333,
+        "meaning": "repository attention; not website users"
+      }
+    },
+    {
+      "id": "liang-primary-web",
+      "repo": "https://github.com/Lichtspektrum/liang-intensity-calibrator",
+      "head": "5d0bbf6be5553f5e813ac0ff8b260e6ebc2bc76e",
+      "headMethod": "git ls-remote HEAD",
+      "headCommitDate": "2026-08-16T16:30:53+08:00",
+      "headDateSource": "commit-page authoredDate/committedDate metadata",
+      "headMeaning": "README community-list merge, not first release",
+      "firstRepositoryReleaseDate": null,
+      "originalMemeImageCreator": null,
+      "originalMemeVideoCreator": null,
+      "explicitBoundary": "Original project means the inherited webpage/code project only, not the first creator of the meme worldwide",
+      "authorDeclaredEntry": "https://lichtspektrum.github.io/liang-intensity-calibrator/",
+      "mechanism": [
+        "31-level slider -15..15",
+        "six named visual stages",
+        "video-frame morphing",
+        "per-browser vote with 3h update interval",
+        "community mean and daily snapshots"
+      ],
+      "musicFunction": "not established; verified evolution video is muted",
+      "audioAssetsRights": "unknown; no sound or music files reused",
+      "codeLicense": "MIT",
+      "portraitAssetsLicense": "explicitly excluded from MIT in README; permission must be separately established",
+      "runtime": "Vite/TypeScript frontend plus Cloudflare Worker/D1 vote backend",
+      "liveScore": {
+        "url": "https://liang-intensity-api.sebastiiiiiiii.workers.dev/api/score",
+        "method": "GET only",
+        "result": "403",
+        "liveVoterCount": null,
+        "liveUV": null,
+        "voteSubmitted": false
+      },
+      "githubPageSnapshot": {
+        "starsDisplay": 333,
+        "forksDisplay": 36,
+        "meaning": "repository attention; not website users"
+      }
+    },
+    {
+      "id": "liang-vercel-candidate",
+      "url": "https://liang-slider.vercel.app/",
+      "scriptURL": "https://liang-slider.vercel.app/slider.js",
+      "creator": null,
+      "publishedDate": null,
+      "relationshipToLichtspektrum": "unknown",
+      "mechanism": "drag portrait slider over visual status scale",
+      "audioFinding": "same-origin 5159-byte script has no AudioContext/new Audio/audio media path; no music feature established",
+      "codeLicense": "unknown",
+      "imageAudioRights": "unknown"
+    },
+    {
+      "id": "liang-continuous-derivative",
+      "repo": "https://github.com/HunLuanZhiZhu/liang-intensity-calibrator",
+      "relationship": "README explicitly credits Lichtspektrum's project as inspiration",
+      "readmeClaims": [
+        "AI start/end images",
+        "video interpolation",
+        "241 displayed video frames",
+        "Range-capable hosting required"
+      ],
+      "claimsNotIndependentlyBenchmarked": true,
+      "likenessAndMediaRights": "not established by AI-generated label",
+      "originalMemeCreator": false
+    },
+    {
+      "id": "bamboo-native-alternative",
+      "repo": "https://github.com/andforce/ZhuZhiLiao",
+      "relationshipToBambooWeb": "separate native project; not assumed same author or same code",
+      "readmeClaims": [
+        "SwiftUI/Metal iOS",
+        "Kotlin/OpenGL Android",
+        "server counters and leaderboard",
+        "optional coarse-grid earth feature"
+      ],
+      "codeAndSampleReusePermission": "unknown in this review",
+      "usedAsWebFeatureEvidence": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "bamboo-source",
+      "url": "https://raw.githubusercontent.com/imsai-sh/zhuzhiliao/199e203b038ffb515f3a21189a29da4b4fb8518f/index.html",
+      "sha256": "c1f9f90570cfcc84039553c81f781c0c902ffdfedc2accebc820c9fe001213b9",
+      "bytes": 89322,
+      "verifiedLines": {
+        "embeddedAAC": 558,
+        "playbackRate": 712,
+        "local3DImport": 1142,
+        "localOnlyCounter": 1325
+      }
+    },
+    {
+      "id": "liang-source-main",
+      "url": "https://raw.githubusercontent.com/Lichtspektrum/liang-intensity-calibrator/5d0bbf6be5553f5e813ac0ff8b260e6ebc2bc76e/src/main.ts",
+      "sha256": "e3ec46c6ae4d6952d81d7d3e2dfe893415b9d07449e84273f1d21bb217f26de3"
+    },
+    {
+      "id": "liang-video-renderer",
+      "url": "https://raw.githubusercontent.com/Lichtspektrum/liang-intensity-calibrator/5d0bbf6be5553f5e813ac0ff8b260e6ebc2bc76e/src/video-renderer.ts",
+      "sha256": "847c212392b556182751bc218a911f16abfd1cc36ad81744ff4f8469a0621ffb",
+      "bytes": 6599,
+      "verifiedLines": {
+        "videoElement": 95,
+        "mutedTrue": 98
+      }
+    },
+    {
+      "id": "liang-deployed-bundle",
+      "url": "https://lichtspektrum.github.io/liang-intensity-calibrator/assets/index-DWeVBD5A.js",
+      "sha256": "06563a4de399c359c4a73c0fa009fdd0968387a1496d91dcb78f29d55d045c78",
+      "bytes": 37529,
+      "finding": "matches muted evolution-video behavior; not proof every repository asset is licensed"
+    },
+    {
+      "id": "liang-vercel-script",
+      "url": "https://liang-slider.vercel.app/slider.js",
+      "sha256": "b9f71b2f97383aabbf30caf4aff47b10fd9b408f9b7fe0c42aa41945a0f5fc38",
+      "bytes": 5159
+    },
+    {
+      "id": "bamboo-public-discussion",
+      "url": "https://www.jinantimes.com.cn/news-57-5298745.html",
+      "publishedDate": "2026-08-05",
+      "type": "publisher-original commentary",
+      "supports": "public discussion of the toy meme; not the web game's causal effect or audited UV"
+    },
+    {
+      "id": "bamboo-community-post",
+      "url": "https://t.me/s/jianjiaoPD?q=%23%E7%AB%B9%E7%9F%A5%E4%BA%86",
+      "type": "direct community posts",
+      "supports": "independent introductions distinguish webpage and TestFlight derivative; impressions not players"
+    },
+    {
+      "id": "liang-community-post",
+      "url": "https://www.nodeseek.com/post-870071-1",
+      "type": "direct community post",
+      "supports": "links Lichtspektrum repository and demo; discussion exists",
+      "publishedDate": null,
+      "dateCaution": "relative days only; no invented exact date"
+    },
+    {
+      "id": "liang-price-variant-community",
+      "url": "https://www.nodeseek.com/post-862845-1",
+      "type": "direct community post",
+      "supports": "different bianzu.dyu.sh price-driven variant; not music"
+    },
+    {
+      "id": "liang-bili-repost",
+      "url": "https://www.bilibili.com/video/BV1uHu66XEC1/",
+      "poster": "2Taken",
+      "indexedPublishedDate": "2026-08-11T21:49:04+08:00",
+      "indexedViewsDisplay": "7.6万",
+      "indexedDescription": "repost from Xiaohongshu user5931227970; AI-generated label",
+      "originalXiaohongshuNoteURL": null,
+      "directFetchStatus": "412",
+      "metricsStatus": "cached search-index snapshot, not live 2026-10-22 counters",
+      "originalVideo": false,
+      "audioLicense": "unknown"
+    },
+    {
+      "id": "liang-bili-derivative-demo",
+      "url": "https://www.bilibili.com/video/BV1mVg76XEei/",
+      "poster": "逸世itsuyo",
+      "indexedPublishedDate": "2026-08-13T05:29:19+08:00",
+      "indexedViewsDisplay": "4.9万",
+      "indexedDescription": "credits Lichtspektrum project and introduces voting derivative",
+      "directFetchStatus": "412",
+      "metricsStatus": "cached search-index snapshot, not website UV",
+      "descriptionEditDate": "unknown"
+    },
+    {
+      "id": "liang-csdn-demo",
+      "url": "https://live.csdn.net/v/539569",
+      "poster": "VibeFriends",
+      "publishedDate": "2026-08-14T00:18:27+08:00",
+      "describedSite": "https://zu.01mvp.com",
+      "mechanism": "six-stage AI-generated visual slider",
+      "displayedCount": 46,
+      "countDefinition": "not labelled; not used as popularity proof"
+    },
+    {
+      "id": "liang-social-post",
+      "url": "https://www.sina.cn/news/detail/5332837163077541.html",
+      "poster": "子夜梦廊",
+      "publishedDate": "2026-08-17T09:42:00+08:00",
+      "supports": "concrete public usage of the Liang Wenfeng slider wording, not first author"
+    },
+    {
+      "id": "native-features-old-index",
+      "url": "https://zhuzhiliao.imsai.cc/",
+      "retrieval": "old search-index snapshot; current host redirects",
+      "finding": "15 sound themes, custom sound, music challenges listed under native app promotion; not attributed to current public Web source"
+    }
+  ],
+  "sourceGaps": [
+    "User has not supplied the exact intended link for either name",
+    "No uniquely verified first Liang meme image/video creator",
+    "No live UV, current website participation or independently audited counters obtained",
+    "Public GitHub REST requests returned403 rate-limit; no further quota retries",
+    "Bilibili direct page/API returned412; indexed metrics are not live",
+    "No music/voice recording reuse rights verified",
+    "No third-party app feature claim treated as tested Web functionality"
+  ],
+  "excludedAttributions": [
+    {
+      "claim": "Transformer-周 created the first Liang slider meme / origin definitively came from Jackie Chan",
+      "status": "not established; aggregation/AI summary without verified original post chain"
+    }
+  ],
+  "productInference": [
+    "Study continuous input-to-sound feedback and clearly readable parameter-to-state mapping",
+    "Preserve the user's free-instrument sandbox objective",
+    "Do not infer authorization to add public-person meme assets, scoring, a price widget or copied restricted code"
+  ]
+}
