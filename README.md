@@ -10,7 +10,7 @@ A small browser instrument playground. Follow a metronome, play your own music, 
 
 Independent extraction from MiaoTI's keyboard-cat experiment. Four **self-hosted sampled instruments**: upright piano, marimba, nylon guitar, and an eight-piece drum kit. Guitar adds simplified C / Am / F / G six-note strums on 1–4; melodic notes use A–K plus W E T Y U, and drums use Z X C V / B N M L. Simultaneous key presses and pointer input share one path.
 
-50–180 BPM metronome, 3/4 and 4/4, tap tempo, small reference scores, local timestamp/key-code recording/export/import/replay. New files use v2/sample-v1; old v1/ui-synth-v1 files retain their original synthesized sound. No multi-track editor or audio capture. The generated plush-cat PNG under `design/` remains a static concept; the current controllable character is layered SVG, with instrument-specific props. The plush animation is a separate confirmed phase.
+50–180 BPM metronome, 3/4 and 4/4, tap tempo, small reference scores, local timestamp/key-code recording/export/import/replay. New files use v2/sample-v1; old v1/ui-synth-v1 files retain their original synthesized sound. No multi-track editor or audio capture. The generated plush-cat PNG under `design/` remains a static concept; the current controllable plush cat uses four independently transformed bitmap parts, a pointer-following head, separate re-triggerable paws and instrument-specific SVG props. This is a 2.5D rig, not a 3D mesh or generated video.
 
 ## Run & verify
 

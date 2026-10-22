@@ -1,13 +1,15 @@
 import {KEYS,MELODY,DRUMS,CHORDS,LEGACY_KEYS} from './bindings.js';
 import {SampledAudio} from './sampled-audio.js';
 import {BeatClock} from './clock.js';
+import {mountCharacter} from './character.js';
 import {SONGS,scoreEvents} from './scores.js';
 import {CODES,MAX_MS,MAX_EVENTS,makeRecording,validateRecording} from './recording.js';
 const $=id=>document.getElementById(id),audio=new SampledAudio(),byCode=new Map(KEYS.map(k=>[k.code,k])),byNote=new Map(MELODY.map(k=>[k.sub,k]));
 const scene=$('scene'),status=$('soundStatus'),held=new Set(),pulses=new Map();
 audio.onProgress=()=>{if(!loading)return;const p=audio.getLoadProgress($('instrumentSelect').value);status.dataset.loaded=String(p.loaded);status.dataset.total=String(p.total);status.textContent=`正在准备真实采样 ${p.loaded} / ${p.total}，加载好后就可以演奏。`;};
+const character=mountCharacter(scene);character.ready.catch(()=>{scene.dataset.characterStatus='vector-fallback';});
 let loading=0,presetEpoch=0;
-let hits=0,frame=0,meterUntil=0,beatUntil=0,session=null,recording=null,recordStart=null,recordPending=false,importPending=false,lifecycle=0;
+let hits=0,frame=0,meterUntil=0,beatUntil=0,session=null,recording=null,recordStart=null,recordPending=false,importPending=false,sessionPending=0,sessionSerial=0,lifecycle=0;
 const clock=new BeatClock(audio,beat=>{
   for(const item of $('beatIndicator').children)item.classList.toggle('active',Number(item.dataset.beat)===beat);
   scene.classList.add('beat-pulse');beatUntil=performance.now()+160;
@@ -32,6 +34,7 @@ function paint(){
   }
 }
 function visual(key){
+  character.strike?.(key.paw);
   clearTimeout(pulses.get(key.code));pulses.set(key.code,setTimeout(()=>{pulses.delete(key.code);paint();},160));paint();
   $('nowPlaying').textContent=key.kind==='note'?`${key.sub} · ${key.label}`:key.label;scene.dataset.hits=String(++hits);
 }
@@ -104,6 +107,10 @@ $('bpm').addEventListener('input',changeTempo);$('meterSelect').addEventListener
 let taps=[];
 $('tapTempo').addEventListener('click',()=>{const now=performance.now();if(taps.length&&now-taps.at(-1)>2000)taps=[];taps.push(now);if(taps.length>5)taps.shift();if(taps.length>=2){$('bpm').value=String(Math.max(50,Math.min(180,Math.round(60000/((taps.at(-1)-taps[0])/(taps.length-1))))));changeTempo();}});
 $('volume').addEventListener('input',event=>{audio.setVolume(Number(event.target.value)/100);$('volumeValue').textContent=event.target.value+'%';});
+async function prepareSession(preset,engine='sample-v1'){
+  if(sessionPending||recordPending||importPending||recordStart!==null)return false;const id=++sessionSerial,version=lifecycle;sessionPending=id;updateRecorder();
+  try{return await ready(preset,engine)&&version===lifecycle;}finally{if(sessionPending===id)sessionPending=0;updateRecorder();}
+}
 function stopSession(natural=false){
   if(session){clearInterval(session.timer);session=null;if(!natural)audio.stopVoices();}
   document.querySelector('.score-note.playing')?.classList.remove('playing');$('stopSong').disabled=true;$('listenSong').disabled=false;$('playRecording').textContent='▶ 回放';updateRecorder();
@@ -129,29 +136,29 @@ function renderScore(){
 }
 $('songSelect').addEventListener('change',renderScore);
 $('listenSong').addEventListener('click',async()=>{
-  if(recordStart!==null||!await ready())return;const song=selectedSong(),events=scoreEvents(song,Number($('bpm').value)).map(e=>({...e,code:byNote.get(e.note).code}));
+  if(!await prepareSession($('instrumentSelect').value))return;const song=selectedSong(),events=scoreEvents(song,Number($('bpm').value)).map(e=>({...e,code:byNote.get(e.note).code}));
   const duration=events.at(-1).offset+events.at(-1).beats*60/Number($('bpm').value);
   $('scoreStatus').textContent=`示范以当前 ${$('bpm').value} BPM 播放。随时弹一下琴键就能接手。`;playEvents(events,duration,'score',$('instrumentSelect').value);
 });
 $('stopSong').addEventListener('click',()=>{stopSession();$('scoreStatus').textContent='示范已停止。';});
 function updateRecorder(){
   const active=recordStart!==null||recordPending;const playing=session?.kind==='recording';
-  $('recordToggle').textContent=active?'■ 结束记录':'● 开始记录';$('recordToggle').setAttribute('aria-pressed',String(active));$('recordToggle').disabled=recordPending||importPending||!!playing;
-  $('instrumentSelect').disabled=active||importPending||!!session;$('songSelect').disabled=active;$('listenSong').disabled=active||session?.kind==='score';
-  $('playRecording').disabled=active||importPending||!recording?.events.length;$('exportRecording').disabled=active||importPending||!recording?.events.length;$('importRecording').disabled=active||importPending||!!session;
+  $('recordToggle').textContent=active?'■ 结束记录':'● 开始记录';$('recordToggle').setAttribute('aria-pressed',String(active));$('recordToggle').disabled=recordPending||importPending||!!sessionPending||!!playing;
+  $('instrumentSelect').disabled=active||importPending||!!sessionPending||!!session;$('songSelect').disabled=active||!!sessionPending;$('listenSong').disabled=active||!!sessionPending||session?.kind==='score';
+  $('playRecording').disabled=active||importPending||!!sessionPending||!recording?.events.length;$('exportRecording').disabled=active||importPending||!!sessionPending||!recording?.events.length;$('importRecording').disabled=active||importPending||!!sessionPending||!!session;
 }
 function finishRecording(){
   if(recordStart===null)return;recording.duration=Math.min(MAX_MS,Math.max(0,Math.round((audio.context.currentTime-recordStart)*1000)));recordStart=null;
   $('recordingStatus').textContent=recording.events.length?'记下来了。可以回放，或导出文件留住这一段。':'还没有记下敲击，可以再试一次。';updateRecorder();
 }
 $('recordToggle').addEventListener('click',async()=>{
-  if(recordStart!==null){finishRecording();return;}if(recordPending||importPending)return;recordPending=true;updateRecorder();
+  if(recordStart!==null){finishRecording();return;}if(recordPending||importPending||sessionPending)return;recordPending=true;updateRecorder();
   if(!await ready()){recordPending=false;updateRecorder();return;}stopSession();$('exportPreview').hidden=true;recording=makeRecording($('instrumentSelect').value,Number($('bpm').value),Number($('meterSelect').value));recordStart=audio.context.currentTime;recordPending=false;
   $('recordingStatus').textContent='正在记下你的按键。节拍器不会录进文件；最多 5 分钟。';updateRecorder();animate();
 });
 $('playRecording').addEventListener('click',async()=>{
   if(session?.kind==='recording'){stopSession();$('recordingStatus').textContent='回放已停止。';return;}
-  if(!recording?.events.length)return;if(recording.engine==='sample-v1'){$('instrumentSelect').value=recording.instrument;renderInstrument();}if(!await ready(recording.instrument,recording.engine))return;const events=recording.events.map(([time,code])=>({offset:time/1000,code:CODES[code]}));
+  if(!recording?.events.length)return;if(recording.engine==='sample-v1'){$('instrumentSelect').value=recording.instrument;renderInstrument();}if(!await prepareSession(recording.instrument,recording.engine))return;const events=recording.events.map(([time,code])=>({offset:time/1000,code:CODES[code]}));
   playEvents(events,recording.duration/1000,'recording',recording.instrument,recording.engine);$('recordingStatus').textContent='按原来的敲击时间回放。弹一下琴键即可接手。';
 });
 $('exportRecording').addEventListener('click',()=>{
@@ -164,6 +171,6 @@ $('importRecording').addEventListener('change',async event=>{
   catch(error){$('recordingStatus').textContent='未导入：'+(error instanceof SyntaxError?'JSON 格式不正确':error.message);}
   importPending=false;event.target.value='';updateRecorder();
 });
-function pauseAll(){lifecycle++;recordPending=false;clearHeld();stopClock();stopSession();finishRecording();audio.stopVoices();}
+function pauseAll(){lifecycle++;recordPending=false;sessionPending=0;clearHeld();stopClock();stopSession();finishRecording();audio.stopVoices();}
 window.addEventListener('blur',pauseAll);document.addEventListener('visibilitychange',()=>{if(document.hidden)pauseAll();});
 renderInstrument();renderScore();paintClock();updateRecorder();

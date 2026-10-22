@@ -46,8 +46,8 @@ function setup(t) {
   w.URL.createObjectURL=blob=>{exportedBlob=blob;return 'blob:local-test';};
   w.URL.revokeObjectURL=()=>{};
   w.HTMLAnchorElement.prototype.click=function(){};
-  w.__deps={...bindings,...scores,...recording,SampledAudio:FakeAudio,BeatClock:FakeClock};
-  w.eval('const {KEYS,MELODY,DRUMS,CHORDS,LEGACY_KEYS,SampledAudio,BeatClock,SONGS,scoreEvents,CODES,MAX_MS,MAX_EVENTS,makeRecording,validateRecording}=window.__deps;\n'+app);
+  w.__deps={...bindings,...scores,...recording,SampledAudio:FakeAudio,mountCharacter:()=>({ready:Promise.resolve(),strike(){}}),BeatClock:FakeClock};
+  w.eval('const {KEYS,MELODY,DRUMS,CHORDS,LEGACY_KEYS,SampledAudio,mountCharacter,BeatClock,SONGS,scoreEvents,CODES,MAX_MS,MAX_EVENTS,makeRecording,validateRecording}=window.__deps;\n'+app);
   const $=id=>w.document.getElementById(id);
   const key=(type,code,target=w.document,options={})=>target.dispatchEvent(new w.KeyboardEvent(type,{code,bubbles:true,cancelable:true,...options}));
   const frame=time=>{audio.context.currentTime=time;const queued=[...frames.values()];frames.clear();for(const fn of queued)fn();};
@@ -166,4 +166,14 @@ test('a pending file import cannot overwrite an active newly recorded clip',asyn
  $('recordToggle').click();await settle();audio.context.currentTime=.5;key('keydown','KeyS');await settle();key('keyup','KeyS');
  audio.context.currentTime=.7;$('recordToggle').click();$('exportRecording').click();
  const saved=JSON.parse(await h.blob().text());assert.deepEqual(saved.events,[[500,1]]);assert.equal(saved.duration,700);
+});
+
+
+test('pending sample load for playback locks recording until playback readiness resolves',async t=>{
+ const h=setup(t),{$,audio}=h;
+ const clip={...recording.makeRecording('guitar',96,4),duration:100,events:[[0,21]]};await h.importFile(clip);
+ const release=audio.defer();$('playRecording').click();await settle();
+ assert.equal($('recordToggle').disabled,true);assert.equal($('importRecording').disabled,true);
+ $('recordToggle').click();await settle();assert.equal($('recordToggle').getAttribute('aria-pressed'),'false');
+ release();await settle();assert.equal(audio.plays.length,1);assert.equal(audio.plays[0].instrument,'guitar');
 });

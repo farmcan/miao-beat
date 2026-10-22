@@ -23,7 +23,7 @@ export const CHORDS = [
   ['2','Am',[48,52,57,60,64,69],'Am/C'],
   ['3','F',[53,57,60,65,69,72],'F'],
   ['4','G',[50,55,59,62,67,71],'G/D'],
-].map(([key,label,notes,voicing])=>({code:'Digit'+key,key,label,sub:voicing,voicing,notes:Object.freeze(notes),kind:'chord',id:label,paw:'right'}));
+].map(([key,label,notes,voicing])=>({code:'Digit'+key,key,label,sub:voicing,voicing,notes:Object.freeze(notes),kind:'chord',id:label,paw:'left'}));
 
 // Keep the original 17 key objects available to the legacy synth playback path:
 // v1 C/V events were shaker/bongo, never closed/open hi-hat.
