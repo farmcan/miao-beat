@@ -23,9 +23,10 @@ function setup(t) {
   let audio,clock,exportedBlob;
   class FakeAudio {
     constructor(){audio=this;this.context={currentTime:0,state:'running'};this.plays=[];this.stops=0;this.peak=0;}
+    isReady(){return !this.pending;}
     async ready(){if(this.pending)await this.pending;return this.context;}
     defer(){let resolve;this.pending=new Promise(r=>{resolve=r;});return()=>{this.pending=null;resolve();};}
-    play(key,instrument,time=this.context.currentTime){this.plays.push({code:key.code,instrument,time});}
+    play(key,instrument,time=this.context.currentTime,engine='sample-v1'){this.plays.push({code:key.code,voice:key.voice,instrument,time,engine});}
     stopVoices(){this.stops++;}
     level(){return 0;}
     setVolume(value){this.volume=value;}
@@ -45,8 +46,8 @@ function setup(t) {
   w.URL.createObjectURL=blob=>{exportedBlob=blob;return 'blob:local-test';};
   w.URL.revokeObjectURL=()=>{};
   w.HTMLAnchorElement.prototype.click=function(){};
-  w.__deps={...bindings,...scores,...recording,CatAudio:FakeAudio,BeatClock:FakeClock};
-  w.eval('const {KEYS,MELODY,DRUMS,CatAudio,BeatClock,SONGS,scoreEvents,CODES,MAX_MS,MAX_EVENTS,makeRecording,validateRecording}=window.__deps;\n'+app);
+  w.__deps={...bindings,...scores,...recording,SampledAudio:FakeAudio,BeatClock:FakeClock};
+  w.eval('const {KEYS,MELODY,DRUMS,CHORDS,LEGACY_KEYS,SampledAudio,BeatClock,SONGS,scoreEvents,CODES,MAX_MS,MAX_EVENTS,makeRecording,validateRecording}=window.__deps;\n'+app);
   const $=id=>w.document.getElementById(id);
   const key=(type,code,target=w.document,options={})=>target.dispatchEvent(new w.KeyboardEvent(type,{code,bubbles:true,cancelable:true,...options}));
   const frame=time=>{audio.context.currentTime=time;const queued=[...frames.values()];frames.clear();for(const fn of queued)fn();};
@@ -124,4 +125,45 @@ test('recording stops at the five-minute bound and invalid imports preserve the 
   await h.importFile({...saved,events:Array.from({length:33},()=>[0,0])});
   assert.match($('recordingStatus').textContent,/未导入/);assert.equal($('playRecording').disabled,false);
   $('exportRecording').click();assert.deepEqual(JSON.parse(await h.blob().text()),saved);
+});
+
+
+test('guitar chords record as compact v2 events, and drums mode excludes melodic keys',async t=>{
+ const h=setup(t),{$,key,audio,w}=h;
+ $('instrumentSelect').value='guitar';$('instrumentSelect').dispatchEvent(new w.Event('change'));
+ assert.equal($('guitarChords').hidden,false);$('recordToggle').click();await settle();
+ key('keydown','Digit1');await settle();key('keyup','Digit1');audio.context.currentTime=.2;
+ key('keydown','KeyA');await settle();key('keyup','KeyA');audio.context.currentTime=.4;
+ $('recordToggle').click();$('exportRecording').click();const clip=JSON.parse(await h.blob().text());
+ assert.equal(clip.version,2);assert.equal(clip.instrument,'guitar');assert.deepEqual(clip.events,[[0,21],[200,0]]);
+ $('instrumentSelect').value='drums';$('instrumentSelect').dispatchEvent(new w.Event('change'));
+ assert.equal($('melodyKeys').hidden,true);assert.equal($('scoreBook').hidden,true);
+ const before=audio.plays.length;key('keydown','KeyA');key('keydown','Digit2');await settle();assert.equal(audio.plays.length,before);
+ for(const code of ['KeyZ','KeyX','KeyC','KeyV','KeyB','KeyN','KeyM','KeyL'])key('keydown',code);
+ await settle();assert.equal(audio.plays.length,before+8);
+ await h.importFile(clip);$('playRecording').click();await settle();
+ assert.equal($('instrumentSelect').value,'guitar');assert.equal($('guitarChords').hidden,false);
+ assert.equal(audio.plays.at(-1).code,'Digit1');
+});
+
+test('old v1 imports retain their engine and shaker/bongo voices on replay',async t=>{
+ const h=setup(t),{$,audio}=h;
+ await h.importFile({format:'miao-beat',version:1,engine:'ui-synth-v1',instrument:'sparkle',bpm:96,meter:4,duration:10,events:[[0,15],[0,16]]});
+ $('playRecording').click();await settle();
+ assert.deepEqual(audio.plays.map(p=>[p.code,p.voice,p.engine]),[['KeyC','shaker','ui-synth-v1'],['KeyV','bongoHigh','ui-synth-v1']]);
+});
+
+
+test('a pending file import cannot overwrite an active newly recorded clip',async t=>{
+ const h=setup(t),{$,w,key,audio}=h;let release;
+ const read=new Promise(resolve=>{release=resolve;});
+ const old={format:'miao-beat',version:2,engine:'sample-v1',instrument:'piano',bpm:96,meter:4,duration:900,events:[[900,0]]};
+ Object.defineProperty($('importRecording'),'files',{value:[{size:100,text:()=>read}],configurable:true});
+ $('importRecording').dispatchEvent(new w.Event('change'));await settle();
+ assert.equal($('recordToggle').disabled,true);$('recordToggle').click();await settle();
+ assert.equal($('recordToggle').getAttribute('aria-pressed'),'false');
+ release(JSON.stringify(old));await settle();assert.equal($('recordToggle').disabled,false);
+ $('recordToggle').click();await settle();audio.context.currentTime=.5;key('keydown','KeyS');await settle();key('keyup','KeyS');
+ audio.context.currentTime=.7;$('recordToggle').click();$('exportRecording').click();
+ const saved=JSON.parse(await h.blob().text());assert.deepEqual(saved.events,[[500,1]]);assert.equal(saved.duration,700);
 });

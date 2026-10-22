@@ -4,3 +4,5 @@ dist/
 artifacts/
 .env*
 .DS_Store
+assets-source/
+public/vendor/

@@ -1,0 +1,109 @@
+{
+  "date": "2026-10-22",
+  "auditioned": false,
+  "groups": {
+    "piano-kw": {
+      "sourceVersion": "small 2019-07-03",
+      "license": "CC0-1.0",
+      "permissionURL": "https://freepats.zenvoid.org/Piano/acoustic-grand-piano.html",
+      "coverageMidi": [
+        60,
+        72
+      ],
+      "pitchShiftMaxSemitones": 1,
+      "looping": false,
+      "note": "Source SFZ loops C4/D#4/F#4; this audition intentionally plays the available samples as one-shots and does not claim infinite natural sustain.",
+      "medianRmsDbFS": -23.149,
+      "medianAttackRmsFirst150MsDbFS": -10.862,
+      "totalBytes": 131210,
+      "decodedPCMBytesEstimate": 3599608,
+      "noteURLs": {
+        "C4": "./samples/piano-kw/C4.mp3",
+        "D#4": "./samples/piano-kw/Ds4.mp3",
+        "F#4": "./samples/piano-kw/Fs4.mp3",
+        "A4": "./samples/piano-kw/A4.mp3",
+        "C5": "./samples/piano-kw/C5.mp3"
+      },
+      "decodedPCMBytes": 3599600
+    },
+    "guitar-spanish": {
+      "sourceVersion": "2019-06-18",
+      "license": "CC0-1.0",
+      "permissionURL": "https://freepats.zenvoid.org/Guitar/acoustic-guitar.html",
+      "coverageMidi": [
+        48,
+        72
+      ],
+      "pitchShiftMaxSemitones": 2,
+      "looping": false,
+      "medianRmsDbFS": -24.037,
+      "medianAttackRmsFirst150MsDbFS": -13.277,
+      "totalBytes": 133831,
+      "decodedPCMBytesEstimate": 4206712,
+      "noteURLs": {
+        "C3": "./samples/guitar-spanish/C3.mp3",
+        "E3": "./samples/guitar-spanish/E3.mp3",
+        "G3": "./samples/guitar-spanish/G3.mp3",
+        "C4": "./samples/guitar-spanish/C4.mp3",
+        "E4": "./samples/guitar-spanish/E4.mp3",
+        "G4": "./samples/guitar-spanish/G4.mp3",
+        "C5": "./samples/guitar-spanish/C5.mp3"
+      },
+      "decodedPCMBytes": 4206696
+    },
+    "marimba-iowa": {
+      "sourceVersion": "yarn-mf recorded 2013-03-20; archive last-modified 2016-06-07",
+      "license": "University of Iowa MIS unrestricted-project-use statement (not CC0)",
+      "permissionURL": "https://theremin.music.uiowa.edu/MIS.html",
+      "instrumentURL": "https://theremin.music.uiowa.edu/Mismarimba.html",
+      "coverageMidi": [
+        60,
+        72
+      ],
+      "pitchShiftMaxSemitones": 0,
+      "looping": false,
+      "medianRmsDbFS": -32.788,
+      "medianAttackRmsFirst150MsDbFS": -23.156,
+      "totalBytes": 458021,
+      "decodedPCMBytesEstimate": 16158720,
+      "noteURLs": {
+        "C4": "./samples/marimba-iowa/C4.mp3",
+        "C#4": "./samples/marimba-iowa/Cs4.mp3",
+        "D4": "./samples/marimba-iowa/D4.mp3",
+        "D#4": "./samples/marimba-iowa/Ds4.mp3",
+        "E4": "./samples/marimba-iowa/E4.mp3",
+        "F4": "./samples/marimba-iowa/F4.mp3",
+        "F#4": "./samples/marimba-iowa/Fs4.mp3",
+        "G4": "./samples/marimba-iowa/G4.mp3",
+        "G#4": "./samples/marimba-iowa/Gs4.mp3",
+        "A4": "./samples/marimba-iowa/A4.mp3",
+        "A#4": "./samples/marimba-iowa/As4.mp3",
+        "B4": "./samples/marimba-iowa/B4.mp3",
+        "C5": "./samples/marimba-iowa/C5.mp3"
+      },
+      "decodedPCMBytes": 16158624
+    },
+    "drums-virtuosity": {
+      "sourceVersion": "commit 9f04cf9a734527edfbb0a4eee1f674e45bbf71bc",
+      "license": "CC0-1.0",
+      "permissionURL": "https://github.com/sfzinstruments/virtuosity_drums/blob/9f04cf9a734527edfbb0a4eee1f674e45bbf71bc/LICENSE",
+      "looping": false,
+      "selection": "Kick close-mic vl3/4; snare close-mic center vl16/36; toms overhead center vl10/16; cymbals overhead middle velocity. Single mic per sample, no room-mix summation.",
+      "medianRmsDbFS": -48.3475,
+      "medianAttackRmsFirst150MsDbFS": -36.554,
+      "totalBytes": 410262,
+      "decodedPCMBytesEstimate": 13828352,
+      "noteURLs": {
+        "kick": "./samples/drums-virtuosity/kick.mp3",
+        "snare": "./samples/drums-virtuosity/snare.mp3",
+        "closed-hat": "./samples/drums-virtuosity/closed-hat.mp3",
+        "open-hat": "./samples/drums-virtuosity/open-hat.mp3",
+        "tom-low": "./samples/drums-virtuosity/tom-low.mp3",
+        "tom-high": "./samples/drums-virtuosity/tom-high.mp3",
+        "crash": "./samples/drums-virtuosity/crash.mp3",
+        "ride": "./samples/drums-virtuosity/ride.mp3"
+      },
+      "decodedPCMBytes": 13828328
+    }
+  }
+}

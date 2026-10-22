@@ -1,0 +1,41 @@
+Miao Beat audition samples — provenance checked 2026-10-22
+These assets have not received human listening approval.
+
+PIANO — Upright Piano KW small, FreePats, version 2019-07-03.
+Recorded by Gonzalo and Roberto, January 2017, from a Kawai upright piano.
+License: CC0 1.0 Universal (full text: ./CC0-1.0.txt).
+Official source: https://freepats.zenvoid.org/Piano/acoustic-grand-piano.html
+Five source anchors, compressed to MP3; -3 dB gain; one-shot playback.
+The three low anchors were originally loop-prepared. Their 600 ms terminal
+fade follows the source SFZ release setting; no infinite sustain is implied.
+
+GUITAR — Spanish classical guitar, FreePats, version 2019-06-18.
+Recorded in 2008, created by Roberto for FreePats.
+License: CC0 1.0 Universal (full text: ./CC0-1.0.txt).
+Official source: https://freepats.zenvoid.org/Guitar/acoustic-guitar.html
+Seven anchors, compressed to MP3; -3 dB gain; original natural decay retained.
+
+MARIMBA — University of Iowa Musical Instrument Samples, yarn mallets, mf.
+Performed by Andrew Thierauf, recorded March 20, 2013; technicians Daniel
+Frantz and Will Huff. MIS project created by Lawrence Fritts.
+Official permission: "may be downloaded and used for any projects, without restrictions."
+https://theremin.music.uiowa.edu/MIS.html
+Recording details: https://theremin.music.uiowa.edu/Mismarimba.html
+This is the institution's own permission statement, not a CC0 license.
+Thirteen notes cut from official chromatic-sequence recordings; beginning
+noise removed with 5 ms attack padding; available tails retained; -3 dB gain;
+44.1 kHz stereo MP3. No source room/recording claims are changed.
+
+DRUM KIT — Virtuosity Drums, Versilian Studios and Karoryfer Samples.
+Performed by Austin McMahon, recorded at Virtuosity Musical Instruments,
+Boston. Commit 9f04cf9a734527edfbb0a4eee1f674e45bbf71bc.
+License: CC0 1.0 Universal (full text: ./CC0-1.0.txt).
+https://github.com/sfzinstruments/virtuosity_drums
+Eight selected single hits: kick, snare, closed/open hi-hat, low/high tom,
+crash, ride. One microphone signal per hit, leading padding removed,
+-3 dB gain, original full available decay retained; 44.1 kHz MP3.
+
+All groups use libmp3lame VBR quality 2 and retain source channel counts.
+A 10 ms fade removes file-boundary discontinuities except the piano release
+noted above. No whole-song loops, third-party CDN soundfonts, or synthesized
+replacement sounds are included in these sample folders.

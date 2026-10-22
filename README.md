@@ -8,19 +8,19 @@ A small browser instrument playground. Follow a metronome, play your own music, 
 
 ## Status · 2026-10-22
 
-Independent extraction from MiaoTI's keyboard-cat experiment. This release implements the **authorized UI and basic instrument workflow**: a controllable front-end cat, one chromatic octave, four percussion pads, 50–180 BPM metronome, 3/4 and 4/4, tap tempo, pocket reference scores, timestamp/key-code recording, local JSON export/import/replay.
+Independent extraction from MiaoTI's keyboard-cat experiment. Four **self-hosted sampled instruments**: upright piano, marimba, nylon guitar, and an eight-piece drum kit. Guitar adds simplified C / Am / F / G six-note strums on 1–4; melodic notes use A–K plus W E T Y U, and drums use Z X C V / B N M L. Simultaneous key presses and pointer input share one path.
 
-**The old synthesized sounds remain temporary.** High-quality samples and the final character animation pipeline are researched, not silently approved or shipped. The generated plush-cat PNG under `design/` is a static concept, not a 3D model. Main recommendations require the user's direction confirmation.
+50–180 BPM metronome, 3/4 and 4/4, tap tempo, small reference scores, local timestamp/key-code recording/export/import/replay. New files use v2/sample-v1; old v1/ui-synth-v1 files retain their original synthesized sound. No multi-track editor or audio capture. The generated plush-cat PNG under `design/` remains a static concept; the current controllable character is layered SVG, with instrument-specific props. The plush animation is a separate confirmed phase.
 
 ## Run & verify
 
-Node 22.13+ or 24 recommended; Python 3 for the local server. `npm ci` installs development-only JSDOM; the web app has no runtime npm dependencies or external assets.
+Node 22.13+ or 24 recommended; Python 3 for the local server. `npm ci` installs JSDOM for tests and pinned smplr 1.1.0. Build vendors the runtime; the deployed app loads code and samples only from its own origin. Run `npm run build` before the dev server to prepare vendor files.
 
 ```sh
 npm ci
+npm run build
 npm test
 npm run dev
-npm run build
 ```
 
 Only `public/`'s explicit allowlist enters `dist/`; research, tests, generated concept art, credentials, and private event files are excluded. `release.json` records the Git commit and each source hash. `scripts/verify-production.py` compares the canonical deployment with those bytes.
@@ -29,11 +29,12 @@ Cloudflare uses the existing authorized account and independent Pages project `m
 
 ## Ownership, reuse, and files
 
-- `public/audio.js`: baseline independently synthesized MiaoTI experiment, adapted here for audio-clock scheduling and lifecycle cancellation. Not claimed as newly improved sample quality.
+- `public/audio.js`: original synthesis retained for the metronome and exact legacy-file playback.
+- `public/sampled-audio.js`: strict self-hosted loading, bounded voices, 15 ms strum spacing and initial bounded attack-window gain calibration. Uses smplr; physical listening and device latency remain separate from automated tests.
 - `public/bindings.js`: a new virtual-piano layout, preserving stable recording codes. Inspiration starts with Bongo Cat; the old MIT notice is retained in `UPSTREAM-LICENSE.txt`. No Bongo Cat art or recordings copied.
 - `public/clock.js`: bounded lookahead on the shared AudioContext, informed by official web.dev/MDN explanations; manual notes play immediately.
 - `public/recording.js`: versioned one-shot events, strict validation, local files. Preserve engine/version compatibility if sounds change.
 - `docs/research/`: sources, version snapshots, asset licenses, options, evidence gaps, and proposed phases. `scripts/export-review.py` publishes only selected reviewed derivatives to an owner-configured destination.
 - `design/`: generated static character concept, source prompt, SHA and explicit limits.
 
-MIT applies to our code; upstream notices and third-party musical works/sample/art rights remain separate. See research for each candidate. No third-party sample library is included in this release.
+MIT applies to our code; upstream notices and third-party musical works/sample/art rights remain separate. See research for each candidate. The deployed samples include FreePats piano/guitar and Virtuosity drums (CC0), and University of Iowa marimba (its unrestricted-project-use statement, not CC0). See `public/samples/LICENSES.txt` and `docs/research/sample-manifest-2026-10-22.md`. Raw source archives are excluded from Git and deployment.
