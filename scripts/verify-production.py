@@ -8,7 +8,7 @@ assert json.loads(get('release.json'))==local,'Production commit/manifest differ
 def check(item):
  name,digest=item
  if name=='_headers':return # deployment configuration, not a public route
- route='' if name=='index.html' else name
+ route=name[:-10] if name.endswith('index.html') else name
  assert hashlib.sha256(get(route)).hexdigest()==digest,'Production bytes differ: '+name
 with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:list(pool.map(check,local['files'].items()))
 print('Verified canonical Miao Beat commit '+local['commit']+' and '+str(len(local['files'])-1)+' public source files')

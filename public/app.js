@@ -70,7 +70,7 @@ async function ready(preset=$('instrumentSelect').value,engine='sample-v1'){
 }
 function allows(key){const preset=$('instrumentSelect').value;return key.kind==='drum'||(key.kind==='chord'?preset==='guitar':preset!=='drums');}
 function renderInstrument(){
-  const preset=$('instrumentSelect').value,drums=preset==='drums';scene.dataset.instrument=preset;$('playingSurface').dataset.instrument=preset;
+  const preset=$('instrumentSelect').value,drums=preset==='drums';$('nowPlaying').textContent='第一声，交给你';scene.dataset.instrument=preset;$('playingSurface').dataset.instrument=preset;
   $('guitarChords').hidden=preset!=='guitar';$('melodyKeys').hidden=drums;$('melodyHeading').hidden=drums;$('scoreBook').hidden=false;$('drumGuide').hidden=!drums;
   $('drumHint').textContent=drums?'Z X C V · B N M L，自由编节奏':'Z X C V · B N M L';
   $('enableAudio').textContent=audio.isReady(preset)?'声音已就绪':'打开声音';status.dataset.state=audio.isReady(preset)?'ready':'idle';status.textContent=audio.isReady(preset)?'音色已就绪，随手弹一段。':`先点“打开声音”，再按 ${drums?'Z 或点鼓垫':preset==='guitar'?'1—4 或点和弦':'A 或点琴键'}。首次需要准备音色。`;
