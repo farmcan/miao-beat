@@ -45,3 +45,11 @@
 三站追加的正式交付证据在完成后继续追加；角色/UI历史验收不改写成新版本的结果。
 
 赞赏图继承来源：MiaoTI `site/assets/support-alipay-qr.jpg`，SHA256 `0d83bcdf1ed349aa584fc0f86781d17d62e1ed96984c743bbacd7421cb0f91a1`，144275字节；与既有公开图逐字节一致。
+
+### 三站追加的正式验收
+
+- MiaoBeat：`04db8347108d3d5d8df87d192e94c1e6d25b2059` / Production `8355deea-3ef3-4184-9b1c-80ec96732259`。canonical release与58份公开源码逐字节核验匹配；实际Chrome弹窗开/关、原QR naturalWidth854/complete=true、两个固定UTM/no-referrer外链均确认，console无warning/error。42项测试通过。最终截图 `artifacts/production-family-main-v3.png`。
+- MiaoTI：原已上线未提交的公开基线先独立固化为 `6c2c1703ccbd0fcb3049c29f905cb746842f1cee`，本轮导流为 `cedcf7be311286d729364956926764f64d89b8cb` / Production `c4c643e3-99cd-4d9f-b0ad-380f08fa2a5c`。192份既有公开文件核验后保留，发布后10项校验匹配；`/v1/`与`/site/`各含首页/结果页两入口，保留原塔罗。HTML去CF注入源码SHA `8bcf9592e94e90660c380d9e453db6262a4c71b77559fd34d4376f44bef75c10`。构建改为显式 `_public` allowlist，原dirty工作区不动。本地真实浏览器流程与窄屏通过；生产做文件与只读API核验，未为QA发送假转化。远端Functions源码不可读，无法宣称其全量源码SHA已核验。
+- MiaoTarot：`ebde25d00e5be5edb2675fed4531ead46a9e25f7`，Production别名 `babd8783.tarot-31o.pages.dev`；正确canonical为 `tarot-31o.pages.dev`。精确commit clean archive重新构建后上传，生产HTML引用JS/CSS名称与刚构建一致。typecheck、本地320/390触屏2项、生产互链与既有入口4项、production smoke通过；不调用AI解读。互链位于手机首页主CTA后的说明区域，避免原页脚在手机抽牌层隐藏。
+
+MiaoTI证据与首页/结果页截图已复制到本仓库ignored的 `artifacts/`，MiaoTarot证据保留其项目 `artifacts/miao-family-links-2026-10-22/`。这些浏览器检查均不代替实体手机与支付验证，也没有增长/转化结果。

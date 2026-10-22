@@ -6,7 +6,7 @@ A small browser instrument playground. Follow a metronome, play your own music, 
 - Research & decisions: [research index](docs/README.md)
 - Public products never link back to the owner’s personal website or research hub.
 
-## Status · 2026-10-22 · 0.6.0
+## Status · 2026-10-22 · 0.6.1
 
 Independent extraction from MiaoTI's keyboard-cat experiment. Four **self-hosted sampled instruments**: upright piano, marimba, nylon guitar, and an eight-piece drum kit. Guitar adds simplified C / Am / F / G six-note strums on 1–4; melodic notes use A–K plus W E T Y U, and drums use Z X C V / B N M L. Simultaneous key presses and pointer input share one path.
 
