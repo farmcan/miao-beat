@@ -6,11 +6,11 @@ A small browser instrument playground. Follow a metronome, play your own music, 
 - Research & decisions: [research index](docs/README.md)
 - Public products never link back to the owner’s personal website or research hub.
 
-## Status · 2026-10-22
+## Status · 2026-10-22 · 0.6.0
 
 Independent extraction from MiaoTI's keyboard-cat experiment. Four **self-hosted sampled instruments**: upright piano, marimba, nylon guitar, and an eight-piece drum kit. Guitar adds simplified C / Am / F / G six-note strums on 1–4; melodic notes use A–K plus W E T Y U, and drums use Z X C V / B N M L. Simultaneous key presses and pointer input share one path.
 
-50–180 BPM metronome, 3/4 and 4/4, tap tempo, small reference scores, local timestamp/key-code recording/export/import/replay. New files use v2/sample-v1; old v1/ui-synth-v1 files retain their original synthesized sound. No multi-track editor or audio capture. The generated plush-cat PNG under `design/` remains a static concept; the current controllable plush cat uses four independently transformed bitmap parts, a pointer-following head, separate re-triggerable paws and instrument-specific SVG props. This is a 2.5D rig, not a 3D mesh or generated video.
+50–180 BPM metronome, 3/4 and 4/4, tap tempo, small reference scores, local timestamp/key-code recording/export/import/replay. New files use v2/sample-v1; old v1/ui-synth-v1 files retain their original synthesized sound. No multi-track editor or audio capture. The generated plush-cat PNG under `design/` remains a static concept; the current ink-blue indie cat uses four independently transformed bitmap parts, a folded ear, natural cream toes, and instrument-specific shoulder/toe contact geometry. Piano follows individual keys, guitar crosses the soundhole, and the drum kit uses sticks plus a kick pedal. Mixed melodic/percussion input reaches a visible electronic pad bank. This is a 2.5D rig, not a 3D mesh or generated video.
 
 Mobile screens get larger scrollable piano keys and bigger chord/drum pads. **全屏演奏** requests native fullscreen when available and falls back to a page-filling performance view; a pinned exit control remains available. Short landscape layouts prioritize the selected instrument. Real iPhone/Android touch and native fullscreen remain device acceptance items.
 
@@ -41,4 +41,6 @@ Cloudflare uses the existing authorized account and independent Pages project `m
 
 MIT applies to our code; upstream notices and third-party musical works/sample/art rights remain separate. See research for each candidate. The deployed samples include FreePats piano/guitar and Virtuosity drums (CC0), and University of Iowa marimba (its unrestricted-project-use statement, not CC0). See `public/samples/LICENSES.txt` and `docs/research/sample-manifest-2026-10-22.md`. Raw source archives are excluded from Git and deployment.
 
-Version 0.5 adds optional audio-clock practice guidance, a larger pocket-score library and original drum exercises. “Listen” plays the reference; “Play along” provides timing/key cues without scoring or adding automatic notes to the recording. See docs/v2-release-2026-10-22.md for verification and limits.
+Version 0.5 added optional audio-clock practice guidance, a larger pocket-score library and original drum exercises. “Listen” plays the reference; “Play along” provides timing/key cues without scoring or adding automatic notes to the recording. See docs/v2-release-2026-10-22.md for verification and limits.
+
+Version 0.6 improves the first-screen sound entry, puts free-play keys before scores, and introduces the original indie-cat contact rig. See [release notes](docs/character-ui-release-2026-10-22.md). The more friendly character remains an aesthetic hypothesis; no human preference validation is claimed.

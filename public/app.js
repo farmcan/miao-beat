@@ -32,6 +32,7 @@ for(const key of DRUMS){
 for(const key of CHORDS){const b=document.createElement('button');b.type='button';b.className='chord-pad';b.dataset.code=key.code;b.setAttribute('aria-label',`吉他 ${key.label} 和弦，键盘 ${key.key}`);b.innerHTML=`<kbd>${key.key}</kbd><strong>${key.label}</strong><small>轻扫</small>`;$('chordPads').append(b);}
 const buttons=new Map([...document.querySelectorAll('[data-code]')].map(b=>[b.dataset.code,b]));
 function paint(){
+  character.update?.($('instrumentSelect').value,[...held].map(code=>byCode.get(code)).filter(Boolean));
   for(const [code,b]of buttons)b.classList.toggle('active',held.has(code)||pulses.has(code));
   for(const side of ['left','right']){
     scene.classList.toggle(side+'-down',KEYS.some(k=>k.paw===side&&held.has(k.code)));
@@ -39,7 +40,7 @@ function paint(){
   }
 }
 function visual(key){
-  character.strike?.(key.paw);
+  character.strike?.(key,$('instrumentSelect').value);
   clearTimeout(pulses.get(key.code));pulses.set(key.code,setTimeout(()=>{pulses.delete(key.code);paint();},160));paint();
   $('nowPlaying').textContent=key.kind==='note'?`${key.sub} · ${key.label}`:key.label;scene.dataset.hits=String(++hits);
 }
@@ -62,22 +63,22 @@ function runFrame(){
 function animate(){meterUntil=performance.now()+900;if(!frame)frame=requestAnimationFrame(runFrame);}
 async function ready(preset=$('instrumentSelect').value,engine='sample-v1'){
   if(audio.context?.state==='running'&&audio.isReady(preset,engine))return true;
-  const version=lifecycle,selection=presetEpoch;loading++;$('enableAudio').disabled=true;$('enableAudio').textContent='加载音色…';
+  const version=lifecycle,selection=presetEpoch;loading++;status.dataset.state='loading';status.textContent='正在准备音色，准备好后再按一下。';$('enableAudio').disabled=true;$('enableAudio').textContent='准备音色…';
   try{await audio.ready(preset,engine);if(version!==lifecycle||selection!==presetEpoch||document.hidden)return false;status.dataset.state=audio.context.state;status.classList.remove('error');status.textContent='声音已就绪。按键或点按，开始你的节奏。';return true;}
   catch{if(version!==lifecycle||selection!==presetEpoch)return false;status.dataset.state='unavailable';status.classList.add('error');status.textContent='音色未能加载，请点“重试声音”。检查网络和设备静音后再试。';return false;}
-  finally{loading--;if(!loading){$('enableAudio').disabled=false;$('enableAudio').textContent=audio.isReady($('instrumentSelect').value)?'声音已就绪':'重试声音';}}
+  finally{loading--;if(!loading){const prepared=audio.isReady($('instrumentSelect').value);$('enableAudio').disabled=false;$('enableAudio').textContent=prepared?'声音已就绪':'重试声音';if(status.dataset.state==='loading'){status.dataset.state=prepared?'ready':'idle';status.textContent=prepared?'声音已就绪。回来后按键或点琴键演奏。':'声音准备已暂停，点“打开声音”再试。';}}}
 }
 function allows(key){const preset=$('instrumentSelect').value;return key.kind==='drum'||(key.kind==='chord'?preset==='guitar':preset!=='drums');}
 function renderInstrument(){
   const preset=$('instrumentSelect').value,drums=preset==='drums';scene.dataset.instrument=preset;$('playingSurface').dataset.instrument=preset;
   $('guitarChords').hidden=preset!=='guitar';$('melodyKeys').hidden=drums;$('melodyHeading').hidden=drums;$('scoreBook').hidden=false;$('drumGuide').hidden=!drums;
   $('drumHint').textContent=drums?'Z X C V · B N M L，自由编节奏':'Z X C V · B N M L';
-  $('enableAudio').textContent=audio.isReady(preset)?'声音已就绪':'打开声音';status.textContent=audio.isReady(preset)?'音色已就绪，随手弹一段。':'点“打开声音”加载当前乐器。';
+  $('enableAudio').textContent=audio.isReady(preset)?'声音已就绪':'打开声音';status.dataset.state=audio.isReady(preset)?'ready':'idle';status.textContent=audio.isReady(preset)?'音色已就绪，随手弹一段。':`先点“打开声音”，再按 ${drums?'Z 或点鼓垫':'A 或点琴键'}。首次需要准备音色。`;
 }
 $('enableAudio').addEventListener('click',()=>ready());
 $('instrumentSelect').addEventListener('change',()=>{presetEpoch++;lifecycle++;clearHeld();stopSession();audio.stopVoices();renderInstrument();populateSongs();renderScore();});
 async function hit(code){
-  const key=byCode.get(code);if(!key||!allows(key)||loading)return;if(!audio.isReady($('instrumentSelect').value)){await ready();return;}if(session&&session.kind!=='guide')stopSession();
+  const key=byCode.get(code);if(!key||!allows(key)||loading)return;if(!audio.isReady($('instrumentSelect').value)){if(await ready())status.textContent='声音准备好了。再按一下，猫就开演。';return;}if(session&&session.kind!=='guide')stopSession();
   if(!await ready())return;try{audio.play(key,$('instrumentSelect').value);}catch{status.classList.add('error');status.textContent='这一声未能播放，请切换乐器或重新打开声音。';return;}visual(key);status.textContent=clock.running?'跟着节拍，继续你的旋律。':'打开节拍器，或者按自己的感觉弹。';
   if(recordStart!==null){
     const time=Math.round((audio.context.currentTime-recordStart)*1000);
@@ -94,7 +95,7 @@ document.addEventListener('keydown',event=>{
 });
 document.addEventListener('keyup',event=>{held.delete(event.code);paint();});
 for(const [code,b]of buttons){
-  b.addEventListener('pointerdown',event=>{if(event.button!==0)return;event.preventDefault();b.setPointerCapture(event.pointerId);held.add(code);hit(code);});
+  b.addEventListener('pointerdown',event=>{if(event.button!==0)return;event.preventDefault();b.setPointerCapture(event.pointerId);held.add(code);paint();hit(code);});
   const release=()=>{held.delete(code);paint();};for(const name of ['pointerup','pointercancel','lostpointercapture'])b.addEventListener(name,release);
   b.addEventListener('click',event=>{if(event.detail===0)hit(code);});
 }

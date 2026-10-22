@@ -1,23 +1,15 @@
-.plush-character-part{pointer-events:none}
-.scene.plush-ready #cat-body,.scene.plush-ready #cat-head,
-.scene.plush-ready #paw-left,.scene.plush-ready #paw-right,
-.scene.plush-ready .cat-tail{visibility:hidden}
-.plush-character-part{visibility:hidden}
+.plush-character-part{pointer-events:none;visibility:hidden}
+.scene.plush-ready #cat-body,.scene.plush-ready #cat-head,.scene.plush-ready #paw-left,.scene.plush-ready #paw-right,.scene.plush-ready .cat-tail{visibility:hidden}
 .scene.plush-ready .plush-character-part{visibility:visible}
-.plush-head-gaze{transform-origin:320px 177px;transform:translate(var(--plush-look-x,0px),var(--plush-look-y,0px)) rotate(var(--plush-look-turn,0deg));transition:transform 110ms ease-out;will-change:transform}
-.plush-head-nod{transform-origin:320px 180px}
-.plush-body-motion{transform-origin:320px 277px;animation:plush-breathe 4.6s ease-in-out infinite}
-.plush-paw-left{transform-origin:223px 185px;transition:transform 90ms ease-out;will-change:transform}
-.plush-paw-right{transform-origin:417px 185px;transition:transform 90ms ease-out;will-change:transform}
-.scene.left-down .plush-paw-left{transform:translate(3px,7px) rotate(-4deg)}
-.scene.right-down .plush-paw-right{transform:translate(-3px,7px) rotate(4deg)}
-.scene.beat-pulse .plush-head-nod{animation:plush-nod 190ms ease-out}
-.scene[data-instrument=guitar].left-down .plush-paw-left{transform:translate(2px,5px) rotate(-3deg)}
-.scene[data-instrument=guitar].right-down .plush-paw-right{transform:translate(-5px,10px) rotate(8deg)}
+.plush-head-gaze{transform-origin:320px 177px;transform:translate(var(--plush-look-x,0px),var(--plush-look-y,0px)) rotate(var(--plush-look-turn,0deg));transition:transform 110ms ease-out}
+.plush-head-nod{transform-origin:320px 180px}.plush-paw-left,.plush-paw-right{transform-origin:0 0}
+.scene.beat-pulse .plush-head-nod{animation:plush-nod 170ms ease-out}
+.scene-rhythm-bank{display:block}.scene[data-instrument=drums] .scene-rhythm-bank{display:none}
+.cat-drumstick{display:none;pointer-events:none}.scene.plush-ready[data-instrument=drums] .cat-drumstick{display:block}
+.cat-contact{opacity:0;pointer-events:none}.cat-contact.visible{opacity:.75}
+.kick-pedal{transform-origin:320px 296px}.cat-kick .kick-pedal{animation:kick-contact 150ms ease-out}
+@keyframes kick-contact{0%,25%{transform:rotate(-16deg)}100%{transform:rotate(0)}}
 @keyframes plush-nod{0%,100%{transform:translateY(0)}42%{transform:translateY(2px) rotate(-.6deg)}}
-@keyframes plush-breathe{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.012)}}
-@media(prefers-reduced-motion:reduce){
- .plush-body-motion,.plush-head-nod,.plush-paw-left,.plush-paw-right{animation:none!important}
- .plush-head-gaze,.plush-paw-left,.plush-paw-right{transition:none;will-change:auto}
- .plush-head-gaze{transform:none}
-}
+@media(prefers-reduced-motion:reduce){.plush-head-nod,.kick-pedal{animation:none!important}.plush-head-gaze{transition:none;transform:none}}
+
+.hi-hat-top{transform-origin:181px 223px}.scene[data-hat=open] .hi-hat-top{transform:translateY(-3px)}

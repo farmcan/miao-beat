@@ -104,6 +104,26 @@ test('blur cancels pending audio activation for recording, metronome, and live n
   $('recordToggle').click();await settle();assert.equal($('recordToggle').getAttribute('aria-pressed'),'true');
 });
 
+test('a cold first note explains loading without replaying stale taps; a fresh input plays once',async t=>{
+  const h=setup(t),{$,audio,key}=h;
+  const release=audio.defer();key('keydown','KeyA');await settle();key('keyup','KeyA');
+  assert.equal($('soundStatus').dataset.state,'loading');assert.match($('soundStatus').textContent,/准备.*再按/);
+  assert.equal($('enableAudio').disabled,true);
+  key('keydown','KeyD');key('keyup','KeyD');release();await settle();
+  assert.equal(audio.plays.length,0,'initial and loading-time taps must never be queued');
+  assert.match($('soundStatus').textContent,/再按一下/);assert.equal($('enableAudio').disabled,false);
+  key('keydown','KeyS');await settle();key('keyup','KeyS');
+  assert.deepEqual(audio.plays.map(p=>p.code),['KeyS']);
+});
+
+test('blur during first-note loading clears the loading state and never starts a late note',async t=>{
+  const h=setup(t),{$,audio,key,w}=h;
+  const release=audio.defer();key('keydown','KeyA');await settle();w.dispatchEvent(new w.Event('blur'));
+  release();await settle();assert.equal(audio.plays.length,0);
+  assert.notEqual($('soundStatus').dataset.state,'loading');assert.equal($('enableAudio').disabled,false);
+  assert.equal(w.document.querySelectorAll('[data-code].active').length,0);
+});
+
 test('pending replay cannot restart after blur; regular BPM changes and blur remain usable',async t=>{
   const h=setup(t),{$,audio,clock,w,key}=h;
   const value=recording.makeRecording('marimba',96,4);Object.assign(value,{duration:100,events:[[0,0]]});

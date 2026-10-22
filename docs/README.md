@@ -2,6 +2,12 @@
 
 更新：2026-10-22。当前读物按“决策 → 证据 → 实现与验收 → 早期归档”组织。网页阅读包由 `scripts/export-review.py` 导出到所有者配置的站点；产品与公开 README 不回链个人入口。
 
+## 角色与首屏迭代
+
+- [交付与验收](character-ui-release-2026-10-22.md)
+- [社区角色参考](research/community-character-references-2026-10-22.md)
+- [首次演奏与UI评审](research/ui-first-note-review-2026-10-22.md)
+
 ## 第二版
 
 - [交付与验收](v2-release-2026-10-22.md)

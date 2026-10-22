@@ -1,9 +1,62 @@
 {
-  "version": 1,
+  "version": 2,
   "date": "2026-10-22",
-  "name": "Miao Beat plush kitten component rig",
-  "status": "front-facing four-component 2.5D prototype",
+  "name": "Miao indie cat, folded ear and natural cream toes",
+  "status": "four-component 2.5D interactive puppet, local desktop browser verified; physical devices and human aesthetic preference unverified",
   "generation": {
+    "tool": "built-in image_gen.imagegen",
+    "transparent_background": true,
+    "prompt": "Use case: stylized-concept. Asset type: production transparent four-component 2D puppet atlas for an original browser cat musician. Create ONE square RGBA transparent image arranged as a strict invisible 2 by 2 grid of FOUR equal-sized tiles. Exactly ONE detached component per tile, generous 12% transparent safe margin inside each quadrant, absolutely nothing crossing middle boundaries. No labels, no background, no cast shadows, no props, no instrument, no whole character. Character direction: a very appealing cute AND cool little indie cat musician, compact and softly sculpted like a beautifully designed matte clay animation character, confident and curious, original character. Midnight ink-blue fur without detailed hair, warm cream muzzle and natural cream toe tips, subtle lavender inside ears, amber-gold irises. Wide softly squared round kitten cheeks, short small muzzle, tiny dark triangular nose. Large almond-rounded eyes with large colored irises, few eye whites, bright attentive gaze directed gently down towards an instrument; NOT sleepy, smug, angry, sneering or judgmental. Asymmetry: one ear tip subtly bent, same side consistently. Tiny asymmetric friendly half-smile. Sculptural, tasteful, quiet, not generic baby merchandise, not long human legs, not white cartoon gloves, not giant hands. TOP LEFT: isolated complete front-facing HEAD including both ears and whiskers, no neck or torso or headphones. The head is broad, cheeks soft, eyes clearly open, complete ear silhouettes, same soft diffuse lighting. TOP RIGHT: isolated compact sitting pear-shaped TORSO with a small hooked cat tail curling at its side within the tile, a small warm cream chest patch; no head, ears, arms, front paws, feet or headphones. Rounded shoulders have enough solid body overlap to attach separate forearms, no ear-like points. BOTTOM LEFT: ONE complete viewer-left short rounded FOREARM AND CAT PAW, diagonal from upper left shoulder root to lower right paw tip. The paw is a natural rounded closed feline mitten with two tiny toe separations and cream toe tips, no opposable thumb, no fingers, no glove cuff; forearm long enough to pivot from shoulder while the round paw stays clear. BOTTOM RIGHT: ONE complete viewer-right FOREARM AND PAW, matching identity and scale, diagonal upper right root to lower left tip. All FOUR detached components share front camera, ink-blue matte clay material, subtle volume, same soft frontal lighting, clear clean silhouette. Produce attractive high-end character design with charm and presence, restrained detail, no toy glossy plastic, no fur strands. It must be possible to assemble head over torso with independently rotating paws. Real transparent alpha everywhere outside objects, including between all four components; no fake checkerboard, no opaque cream board. No text, no watermark, no frame.\n",
+    "rawOutput": "exec-981f4deb-36e5-475b-b2ba-3650474b370d.png",
+    "pixelEditing": false,
+    "inspection": "Head, torso with feet/tail, two natural paw/forearm components. Fur is more detailed than requested matte clay; do not claim exact prompt compliance. Components use the same quadrant layout; torso feet remain behind instrument."
+  },
+  "assets": [
+    {
+      "filename": "character/plush-atlas-v1.png",
+      "bytes": 1563258,
+      "sha256": "def3d68c71fc6d288325a0e61284cb909bb581a2c8de53dbad36329454611c48"
+    },
+    {
+      "filename": "character/indie-atlas-v2.png",
+      "bytes": 1136073,
+      "sha256": "1cd8b299478d2ca57f436f3fa3602dca6b4165596afb82689cc2150907c4c394"
+    },
+    {
+      "filename": "character/rig.css",
+      "bytes": 1468,
+      "sha256": "feafa41df6251da65c1d064878da6f852bc7d6d89065e0f639bebb8323f584ae"
+    },
+    {
+      "filename": "character.js",
+      "bytes": 11309,
+      "sha256": "346052ca8651bc87e600dae25042bb5b86668a1e7ec3187a0f6ef476b621f988"
+    }
+  ],
+  "atlas": {
+    "filename": "indie-atlas-v2.png",
+    "width": 1254,
+    "height": 1254,
+    "format": "RGBA PNG",
+    "grid": {
+      "columns": 2,
+      "rows": 2,
+      "tileWidth": 627,
+      "tileHeight": 627
+    }
+  },
+  "runtime": {
+    "module": "../character.js",
+    "method": "SVG clipping, separate source-shoulder/toe transforms and immediately contacted surfaces. WAAPI 150ms rebound; same-side retrigger cancels only that side. Drumstick and paw rebound together.",
+    "contactRules": "Piano by actual key; guitar soundhole plus fret grip; 7 physical kit surfaces including shared open/closed hi-hat and a foot pedal; mixed-mode percussion on visible electronic pads.",
+    "notClaimed": [
+      "true 3D",
+      "precise guitar fingering",
+      "physical device latency",
+      "human preference validation"
+    ]
+  },
+  "previousGeneration": {
     "tool": "built-in image_gen.imagegen",
     "model": "not exposed by tool",
     "transparency": true,
@@ -15,190 +68,6 @@
     "initialPrompt": "Use case: stylized-concept. Asset type: transparent 2D component atlas for a lightweight browser 2.5D puppet. Input image is a STYLE AND CHARACTER IDENTITY reference only; change the camera to a straight-on front view, level camera, no tilt, no three-quarter perspective. Preserve the adorable plush charcoal-black kitten identity, huge warm amber eyes, tiny dark nose, sage-green over-ear headphones, tactile fine soft fur, polished soft 3D animated-film rendering. Create ONE square transparent RGBA image, exactly a 2 by 2 grid of FOUR EQUAL square tiles; invisible grid boundaries, no border, no labels. All artwork must stay well inside its own quadrant with at least 8% transparent margin, never cross grid boundaries. TOP LEFT tile: the complete detached front-facing head including both ears, whiskers, both amber eyes looking straight forward, and complete sage headphones. Absolutely no neck torso paws or musical instrument in this head tile. TOP RIGHT tile: detached fluffy rounded sitting torso/chest only, front view, no head, no ears, no headphones, no paws, no arms, no hands, no feet, no tail; a plain small black plush pear-shaped body, broad shoulders at top and rounded bottom. BOTTOM LEFT tile: ONE detached viewer-left short black plush forearm and rounded mitten paw, angled slightly inward to reach a keyboard in front; furry closed wrist at upper left and rounded three-toed paw at lower right, no body/head/other paw. BOTTOM RIGHT tile: ONE detached viewer-right short black plush forearm and rounded mitten paw, a matching mirror of the left part, angled slightly inward; wrist upper right and paw lower left. The four components must share exactly the same fur material, scale logic, frontal camera and soft diffuse frontal-top-left lighting. Clean real transparency between and around all components, including fur-edge antialiasing. No opaque backdrop or checkerboard baked into the pixels. No floor shadow, no stage, no keyboard, no props, no text, no watermark, no remaining hidden/ghost limbs inside the torso. This is a production puppet kit, not a complete character illustration or a collage of full cats. Head, body, left forearm, right forearm are four independently movable objects.",
     "packingRevisionPrompt": "Edit this exact transparent four-part kitten component atlas. Preserve the exact plush black kitten identity, front-facing amber eyes, sage headphones, frontal camera, fur, lighting, and the two detached forearm/paw components. Fix ONLY the packing and torso shape: use exact four equal quadrants, a strict 2x2 layout, and make each component fully fit inside its own quadrant with at least 10 percent clear transparent margin on ALL four sides of that quadrant. In TOP LEFT, shrink and recenter the full detached headphone head until every whisker and fur strand fits within the top-left quarter; no parts may cross the vertical center line or horizontal center line. In TOP RIGHT, shrink and recenter the torso until ALL torso fur fits inside its quarter, well above the horizontal center line. The torso is a simple rounded pear-shaped chest without head, ears, paws, arms, feet or tail; smooth rounded shoulders, remove the two pointy ear-like corners at its top. Bottom-left and bottom-right remain one matching detached short forearm/paw per quarter, same inward poses; keep their silhouettes but ensure safe transparent margins. The visible grid boundaries must NOT be drawn. Transparent RGBA outside the four clean individual components; no background checkerboard, no text, no shadows, no props. All four tiles have exactly equal dimensions. This is a tightly specified puppet atlas, no complete cats.",
     "revisionNote": "First atlas had components crossing the tile boundaries; packing revision selected. Final original PNG is copied without pixel editing."
-  },
-  "assets": [
-    {
-      "filename": "character/plush-atlas-v1.png",
-      "bytes": 1563258,
-      "sha256": "def3d68c71fc6d288325a0e61284cb909bb581a2c8de53dbad36329454611c48"
-    },
-    {
-      "filename": "character/rig.css",
-      "bytes": 1743,
-      "sha256": "320e64052f05b8030fadb0bbfe8a5b52c51ae31c305e524301521d6a70c2010d"
-    },
-    {
-      "filename": "character.js",
-      "bytes": 6565,
-      "sha256": "42c435ea6e1fbcc0cce2e48933644814b5755aed81d1645063bfeebbca49d671"
-    }
-  ],
-  "atlas": {
-    "filename": "plush-atlas-v1.png",
-    "width": 1254,
-    "height": 1254,
-    "format": "RGBA PNG",
-    "grid": {
-      "columns": 2,
-      "rows": 2,
-      "tileWidth": 627,
-      "tileHeight": 627
-    },
-    "alphaZeroFraction": 0.5925078027822929,
-    "layerCoordinates": {
-      "head": {
-        "tile": [
-          0,
-          0,
-          627,
-          627
-        ],
-        "alphaBoundingBoxGt8": [
-          56,
-          120,
-          613,
-          597
-        ],
-        "stageBox": [
-          184.7,
-          -25.7,
-          249.5,
-          249.5
-        ],
-        "pivot": [
-          320,
-          177
-        ]
-      },
-      "body": {
-        "tile": [
-          627,
-          0,
-          627,
-          627
-        ],
-        "alphaBoundingBoxGt8": [
-          684,
-          213,
-          1194,
-          626
-        ],
-        "stageBox": [
-          204.8,
-          47.8,
-          233.1,
-          233.1
-        ],
-        "pivot": [
-          320,
-          277
-        ]
-      },
-      "leftPaw": {
-        "tile": [
-          0,
-          627,
-          627,
-          627
-        ],
-        "alphaBoundingBoxGt8": [
-          85,
-          730,
-          543,
-          1135
-        ],
-        "stageBox": [
-          189.9,
-          153.6,
-          118.8,
-          118.8
-        ],
-        "pivot": [
-          223,
-          185
-        ]
-      },
-      "rightPaw": {
-        "tile": [
-          627,
-          627,
-          627,
-          627
-        ],
-        "alphaBoundingBoxGt8": [
-          710,
-          730,
-          1168,
-          1135
-        ],
-        "stageBox": [
-          331.3,
-          153.6,
-          118.8,
-          118.8
-        ],
-        "pivot": [
-          417,
-          185
-        ]
-      }
-    },
-    "edgeNote": "Torso fine fur reaches row626 (19 alpha>8 pixels at tile border); no visible seam or neon fringe observed in the actual cream-background Chrome stage at normal scale. Other themes/large-scale edges are not certified."
-  },
-  "runtime": {
-    "coordinateSystem": "existing SVG viewBox 0 0 640 300",
-    "method": "nested SVG viewBox clipping; one cached original atlas, four independently transformed groups",
-    "backToFront": [
-      "plush body",
-      "existing keyboard/guitar/drums SVG props",
-      "left forearm/paw",
-      "right forearm/paw",
-      "head/headphones"
-    ],
-    "module": "../character.js",
-    "styles": "rig.css",
-    "mount": "mountCharacter(scene)",
-    "controller": [
-      "ready: Promise<boolean>",
-      "strike('left'|'right'): boolean",
-      "destroy()",
-      "atlas: URL"
-    ],
-    "csp": "External same-origin stylesheet; no inline style element or unsafe-inline requirement. CSS and PNG must both load before legacy anatomy is hidden.",
-    "motion": {
-      "body": "1.2% scale breathing",
-      "head": "pointer: <=1.7 SVG units x, <=0.9 y, <=0.85deg turn; beat: <=2 units nod",
-      "paws": "separate 190ms Web Animations; retriggers sample displayed transform before cancelling only that paw; implicit final transform follows live held/instrument CSS; fill:none",
-      "reducedMotion": "no breathing/nod/strike animation or pointer head shift; live preference changes cancel active strikes and reset gaze",
-      "eyes": "pupils are baked into the head image; no independently animated pupil layer or true 3D mesh is claimed"
-    }
-  },
-  "verification": {
-    "sourceAtlasViewed": true,
-    "actualChromeCreamStage": [
-      "piano",
-      "guitar",
-      "drums"
-    ],
-    "cspProduction": "pending parent release QA",
-    "automatedDOMChecks": [
-      "four independent component groups",
-      "same mount is idempotent",
-      "waits for PNG and external CSS readiness",
-      "no SVG inline style element",
-      "same-side strike cancels and restarts its own animation",
-      "opposite paw animation unaffected",
-      "190ms/no-fill animation restores held CSS",
-      "destroy cancels animations and restores legacy scene",
-      "v2 retrigger begins at displayed transform",
-      "v2 implicit endpoint follows live CSS instead of captured held transform",
-      "v2 live reduced-motion cancels WAAPI and destroy removes preference listener"
-    ],
-    "notVerified": [
-      "mobile physical-device frame rate",
-      "arbitrary large-scale/dark-background edge quality",
-      "true 3D anatomy or independent pupil deformation"
-    ]
   },
   "rights": {
     "provenance": "AI-generated original project character; reference is the project's earlier AI-generated concept, not Bongo Cat art or a stock-image cutout",
