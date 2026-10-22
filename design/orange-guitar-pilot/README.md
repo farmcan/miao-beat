@@ -11,3 +11,11 @@
 已检查：实际Chrome按1/2/3/4共四击，hits4，非零RMS peak .08311，左右臂回到固定transform，console无warning/error；390×844页面宽390，完整猫与吉他可见，四和弦按钮均82.25×71.5、底部581.70。它证明实际输入、声音与可见短扫弦能工作，不证明人类已认为自然，也不是实体手机听审。
 
 仍有限制：整只曲臂是刚性贴图，不含独立肘腕；身体头部不能独立追光或改表情，闭眼是基态；琴颈爪没有逐指换和弦；只做吉他，没有把这张图拉伸成钢琴/鼓手。原正式首页未被本小样替换。预览发布信息验收后追加。
+
+## 独立预览验收
+
+- [可试玩预览](https://orange-guitar-pilot.miao-beat.pages.dev/labs/orange-guitar/)；[本次固定地址](https://10ac6a94.miao-beat.pages.dev/labs/orange-guitar/)。Cloudflare部署 `10ac6a94-564a-41ed-bdab-df2544ed36f4`，环境preview，API最新阶段success并有ended_on；来源提交 `267dc23`。正式canonical部署仍为 `8355deea-3ef3-4184-9b1c-80ec96732259`，未被替换。
+- 首次预览发现内联样式被现有 `style-src 'self'` 拦截，真实页面未显示本地排版。已在 `7bf231f` 移入独立同源CSS，安全策略保持原样；重新实际截图确认样式生效，不将首次无样式截图当最终交付。
+- 独立评审实际看图与输入，确认固定尺寸结构消除了“触达距离改变整爪大小”的问题；没有宣称顺滑与审美通过。评审复现Enter激活按钮无效，已在 `267dc23` 补键盘产生的click处理，避免与pointerdown重复。最终固定部署真实Chrome上Enter激活F得到hits1，随后1/2/4得到hits4、RMS peak .06757，activeButtons0，无整页横向溢出。
+- 组件、完整prompt与素材来源见本目录；生成方式为内置image_gen，无像素后期。最终截图 `artifacts/orange-guitar-preview-contact.png` 与原始核验JSON位于本仓库ignored验收目录；截图只能显示一个姿态，实际动作请直接在预览点按/按1—4查看。
+- 本轮是独立动作小样交付，不是完整视觉改版、全部乐器修复或用户自然度认可。开始/纠正记录已接入Seed，预览结果作为后续独立事件追加，不改写此前交付历史。
