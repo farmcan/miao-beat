@@ -20,7 +20,7 @@
     <div class="page-heading"><div><p class="eyebrow">YOUR TINY MUSIC ROOM</p><h1>随手弹弹，<span>猫猫接住。</span></h1></div><p class="heading-note">没学过乐器也没关系。<br>开个节拍，找到你自己的小节奏。</p></div>
 
     <section class="workbench" aria-label="猫咪音乐工作台">
-      <div class="bench-topline"><span class="room-label"><span class="status-dot" aria-hidden="true"></span>小猫排练室 <span class="room-number">NO. 01</span></span><span class="local-note">随时开场 · 不用登录</span></div>
+      <div class="bench-topline"><span class="room-label"><span class="status-dot" aria-hidden="true"></span>小猫排练室 <span class="room-number">NO. 01</span></span><span class="local-note">随时开场 · 不用登录</span><button id="performanceExit" class="performance-toggle" type="button" hidden>退出演奏</button></div>
 
       <div class="performance-row">
         <div id="scene" class="scene" aria-label="跟着你的按键演奏的小猫">
@@ -64,13 +64,13 @@
         </aside>
       </div>
 
-      <div class="instrument-controls"><label class="instrument-select" for="instrumentSelect"><span>选择乐器</span><select id="instrumentSelect"><option value="piano">钢琴 · 清亮琴房</option><option value="marimba">马林巴 · 木头叮咚</option><option value="guitar">吉他 · 尼龙弦</option><option value="drums">架子鼓 · 八件套</option></select></label><label class="volume-control" for="volume"><span class="volume-icon" aria-hidden="true">◖))</span><span class="sr-only">音量</span><input id="volume" type="range" min="0" max="100" value="55"><output id="volumeValue" for="volume">55%</output></label></div>
+      <div class="instrument-controls"><label class="instrument-select" for="instrumentSelect"><span>选择乐器</span><select id="instrumentSelect"><option value="piano">钢琴 · 清亮琴房</option><option value="marimba">马林巴 · 木头叮咚</option><option value="guitar">吉他 · 尼龙弦</option><option value="drums">架子鼓 · 八件套</option></select></label><label class="volume-control" for="volume"><span class="volume-icon" aria-hidden="true">◖))</span><span class="sr-only">音量</span><input id="volume" type="range" min="0" max="100" value="55"><output id="volumeValue" for="volume">55%</output></label><button id="performanceToggle" class="performance-toggle" type="button" aria-pressed="false">全屏演奏</button><span id="performanceStatus" class="performance-status" role="status"></span></div>
 
       <div class="playing-surface" id="playingSurface">
         <div id="guitarChords" class="guitar-chords" hidden><div><h2>先扫一个和弦</h2><p>数字 1 — 4 扫弦，字母弹旋律。试试 C → Am → F → G，每个和弦四拍。</p></div><div id="chordPads" class="chord-pads" aria-label="吉他简化和弦"></div></div>
         <div id="drumGuide" class="drum-guide" hidden><strong>第一个小节，可以这样玩</strong><p>节拍器开 80 BPM，闭镲 C 连敲八下；第 1、3 拍加底鼓 Z，第 2、4 拍加军鼓 X。熟悉后，随时改成你的节奏。</p></div>
         <div class="section-label" id="melodyHeading"><h2>弹一点旋律</h2><span class="desktop-hint">白键 A — K <i>·</i> 黑键 W E T Y U</span><span class="mobile-hint">点按琴键，也可以一起按</span></div>
-        <div id="melodyKeys" class="melody-keys" aria-label="钢琴排列的旋律键"></div>
+        <div class="melody-scroll" tabindex="0" role="region" aria-label="旋律键盘，可左右滑动"><div id="melodyKeys" class="melody-keys" aria-label="钢琴排列的旋律键"></div></div><p class="keyboard-scroll-hint">← 左右滑动琴键 · 横过手机，展开演奏 →</p>
         <div class="percussion-row"><div class="drum-heading"><h2>添一点节奏</h2><span id="drumHint">Z X C V · B N M L</span></div><div id="drumPads" class="drum-pads" aria-label="打击乐垫"></div></div>
       </div>
       <div class="sound-ready"><button id="enableAudio" type="button">打开声音</button><p id="soundStatus" class="sound-status" role="status">先打开声音，再开始演奏。乐器采样只在第一次使用时加载。</p></div>

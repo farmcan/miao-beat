@@ -6,7 +6,7 @@ root=Path(__file__).resolve().parents[1]
 p=argparse.ArgumentParser();p.add_argument('--target',required=True);p.add_argument('--owner-origin',required=True);args=p.parse_args()
 out=Path(args.target).resolve()/'site/reviews/miao-beat';out.mkdir(parents=True,exist_ok=True)
 md=MarkdownIt('commonmark',{'html':False}).enable('table')
-entries=[('plan','计划与确认边界','docs/plan.md'),('product','作品、出路与键位','docs/research/product-and-keyboard.md'),('audio','声音与节拍','docs/research/audio-and-timing.md'),('animation','角色与动画','docs/research/animation-and-experience.md'),('recording','参考谱与小文件','docs/research/scores.md'),('samples','真实采样与许可','docs/research/sample-manifest-2026-10-22.md'),('character','角色生产方案','docs/research/character-production-plan.md'),('verification','实际验收与边界','docs/verification-2026-10-22.md')]
+entries=[('plan','计划与确认边界','docs/plan.md'),('product','作品、出路与键位','docs/research/product-and-keyboard.md'),('audio','声音与节拍','docs/research/audio-and-timing.md'),('animation','角色与动画','docs/research/animation-and-experience.md'),('recording','参考谱与小文件','docs/research/scores.md'),('samples','真实采样与许可','docs/research/sample-manifest-2026-10-22.md'),('character','角色生产方案','docs/research/character-production-plan.md'),('verification','实际验收与边界','docs/verification-2026-10-22.md'),('mobile','手机与全屏演奏','docs/mobile-performance-2026-10-22.md')]
 nav=''.join(f'<a href="#{slug}">{title}</a>' for slug,title,_ in entries)
 sections=[]
 for slug,title,file in entries:
