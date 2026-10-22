@@ -1,0 +1,14 @@
+{
+  "tool": "built-in image_gen",
+  "date": "2026-10-22",
+  "reference": "reference-v1.png",
+  "prompt": "prompt.txt",
+  "file": "../../public/labs/orange-guitar/atlas-v1.png",
+  "size": [
+    1254,
+    1254
+  ],
+  "sha256": "4f8d53c6f071bed1b49c56ffd15311ec466abcb99c1fc4868002277f4dcf6818",
+  "pixelEdits": false,
+  "status": "isolated guitar motion pilot; not production asset"
+}

@@ -9,7 +9,7 @@ await fs.mkdir(path.join(root,'public/vendor'),{recursive:true});
 const vendor=(await fs.readFile(path.join(root,'node_modules/smplr/dist/index.mjs'),'utf8')).replace(/\/\/# sourceMappingURL=.*$/m,'');
 await fs.writeFile(path.join(root,'public/vendor/smplr.mjs'),vendor);
 await fs.copyFile(path.join(root,'scripts/smplr-LICENSE.txt'),path.join(root,'public/vendor/smplr-LICENSE.txt'));
-const allowed=['index.html','style.css','icon.svg','support-alipay-qr.jpg','app.js','audio.js','sampled-audio.js','bindings.js','clock.js','recording.js','scores.js','UPSTREAM-LICENSE.txt','_headers','vendor/smplr.mjs','vendor/smplr-LICENSE.txt','samples/manifest.json','samples/LICENSES.txt','samples/CC0-1.0.txt','character.js','performance.js','guidance.js','character/plush-atlas-v1.png','character/indie-atlas-v2.png','character/rig.css','character/manifest.json','character/README.md'];
+const allowed=['index.html','style.css','icon.svg','support-alipay-qr.jpg','app.js','audio.js','sampled-audio.js','bindings.js','clock.js','recording.js','scores.js','UPSTREAM-LICENSE.txt','_headers','vendor/smplr.mjs','vendor/smplr-LICENSE.txt','samples/manifest.json','samples/LICENSES.txt','samples/CC0-1.0.txt','character.js','performance.js','guidance.js','character/plush-atlas-v1.png','character/indie-atlas-v2.png','character/rig.css','character/manifest.json','character/README.md','labs/orange-guitar/index.html','labs/orange-guitar/pilot.js','labs/orange-guitar/atlas-v1.png'];
 const art=JSON.parse(await fs.readFile(path.join(root,'public/character/manifest.json')));
 for(const asset of art.assets){if(!allowed.includes(asset.filename))throw Error('Unreviewed character file');const bytes=await fs.readFile(path.join(root,'public',asset.filename));if(createHash('sha256').update(bytes).digest('hex')!==asset.sha256)throw Error('Character provenance differs: '+asset.filename);}
 const manifest=JSON.parse(await fs.readFile(path.join(root,'public/samples/manifest.json')));
@@ -23,7 +23,7 @@ await fs.rm(path.join(root,'dist'),{recursive:true,force:true});await fs.mkdir(p
 const files={};for(const name of allowed){
  const content=await fs.readFile(path.join(root,'public',name));
  const text=/\.(mp3|png|jpg)$/.test(name)?'':content.toString();
- const maxBytes=/^character\/.*\.png$/.test(name)?2000000:256000;
+ const maxBytes=/^(?:character\/|labs\/orange-guitar\/).*\.png$/.test(name)?2000000:256000;
  if(content.length>maxBytes||/\/Users\/|oauth_token|BEGIN PRIVATE KEY|farmcan(?:-seed)?\.pages\.dev/.test(text))throw Error('Invalid public file: '+name);
  await fs.mkdir(path.dirname(path.join(root,'dist',name)),{recursive:true});await fs.writeFile(path.join(root,'dist',name),content);files[name]=createHash('sha256').update(content).digest('hex');
 }
