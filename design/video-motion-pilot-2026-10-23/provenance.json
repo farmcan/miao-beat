@@ -1,0 +1,43 @@
+{
+  "created_date": "2026-10-23",
+  "timezone": "Asia/Shanghai",
+  "tool": "built-in image_gen",
+  "identity_reference": "design/orange-guitar-pilot/reference-v1.png",
+  "video_generated": false,
+  "production_replaced": false,
+  "rights": "Original project character reference and generated artwork; upstream code licenses do not license third-party example art.",
+  "files": {
+    "01-turnaround.png": {
+      "generation_file": "exec-92c20462-58d3-43f3-a006-36bb931aa106.png",
+      "width": 2022,
+      "height": 778,
+      "bytes": 1712557,
+      "sha256": "44f0d9bedd020baf2bc3f43ff0442153f93515e56340f0af46411a6657e0c4fc",
+      "pixels_modified": false
+    },
+    "02-guitar.png": {
+      "generation_file": "exec-bb7331ed-c437-4feb-9a75-8ffadeea3658.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1774458,
+      "sha256": "2b30a8289aa04fd359c20c68816b6bc8fbd0bc0c0c80767b9e70bd510ef6d397",
+      "pixels_modified": false
+    },
+    "03-keyboard.png": {
+      "generation_file": "exec-1d07d7ad-f403-4666-9fde-87cb5d51d064.png",
+      "width": 1672,
+      "height": 940,
+      "bytes": 1674373,
+      "sha256": "b41e10c6317c4ef8f702d52759408f360047bdc8cb493d7896c42eaf45be4fb3",
+      "pixels_modified": false
+    },
+    "04-drums.png": {
+      "generation_file": "exec-0be3ff8b-c979-45a1-9ea8-79aad5421320.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1750901,
+      "sha256": "a132339339039b72e849479649727d34c2d9a3286067d2fb48814a67b3f0243c",
+      "pixels_modified": false
+    }
+  }
+}
