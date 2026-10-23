@@ -7,7 +7,7 @@ A small browser instrument playground. Follow a metronome, play your own music, 
 - Generate the next motion video on another computer: [one-document handoff](docs/video-animation-handoff.md), with committed reference images and copyable prompts.
 - Public products never link back to the owner’s personal website or research hub.
 
-2026-10-23: the user rejected the current 0.7 character motion. The next trial uses complete-character video/poses from the original orange-cat direction. Reference images and a generation handoff are prepared; no replacement animation has been generated or deployed.
+2026-10-23: the user rejected the current 0.7 character motion. The next trial uses complete-character video/poses from the original orange-cat direction. Reference images and a generation handoff are prepared. A first user-generated guitar clip has been inspected; the current trial is alternating adjacent keyboard presses. No replacement animation is deployed.
 
 ## Implementation · 2026-10-22 · 0.7.0
 
