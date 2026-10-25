@@ -1,8 +1,8 @@
 {
-  "version": 4,
+  "version": 5,
   "date": "2026-10-25",
-  "name": "Original orange cat: complete captured keyboard poses",
-  "status": "interactive whole-pose keyboard preview; naturalness and physical-device acceptance remain separate",
+  "name": "Original orange cat: high-resolution body and deterministic piano contacts",
+  "status": "per-key piano geometry and textured complete-arm mesh; human preference and real-device acceptance separate",
   "generation": {
     "tool": "built-in image_gen.imagegen",
     "transparent_background": true,
@@ -72,20 +72,33 @@
       "filename": "character/keyboard-demo-v1.mp4",
       "bytes": 2753636,
       "sha256": "5d722abd7d65d4551a982a3ec898bc64103a92b78c39466479332bdf6c044667"
+    },
+    {
+      "filename": "character/keyboard-body-v2.jpg",
+      "bytes": 140793,
+      "sha256": "7012a8203390ea1a464b3b8ccc21e2b17c184ab0eca79f9b3ed24af5ba7dfd03"
+    },
+    {
+      "filename": "precise-character.js",
+      "bytes": 19391,
+      "sha256": "6e88ffac93e8f6405cd64cf04405f18963898660085a39c02f530b699d8ba614"
+    },
+    {
+      "filename": "character/whole-arm-v2.png",
+      "bytes": 624341,
+      "sha256": "a5718767c1befc7320748b94f7eedf547cb7b7f0987d9866685b734bcb0bee43"
     }
   ],
   "runtime": {
-    "method": "Piano: complete captured poses with immediate region contact and 70ms release frames; remaining instruments: retained fixed-length articulated rig",
-    "contactRules": "Piano distinguishes four pitch regions and both paws, not thirteen anatomical key contacts. Remaining instruments retain prior simplified geometry.",
+    "method": "Piano: deterministic key depression and independent continuous arm silhouettes; other instruments: retained prior articulated rig",
+    "contactRules": "Piano has 8 white and 5 black keys with 13 separate contacts. Latest confirmed note per paw, all confirmed held keys depress; no automatic notes are recorded.",
     "notClaimed": [
       "anatomical guitar fingering",
       "continuous 3D eye tracking",
       "physical device QA",
-      "human naturalness approval",
-      "thirteen exact physical piano keys",
-      "independent paw control in captured whole poses"
+      "human naturalness approval"
     ],
-    "historicalNote": "The prior rig remains for other instruments; its geometry checks are not human naturalness approval."
+    "historicalNote": "Prior region-pose video and articulated rig records are retained as historical/fallback assets; their technical verification does not imply human naturalness approval."
   },
   "previousGeneration": {
     "version": 2,
@@ -102,11 +115,45 @@
   },
   "activeByInstrument": {
     "piano": {
-      "module": "whole-character.js",
-      "motionManifest": "character/keyboard-motion-v1.json",
-      "sourceSha256": "17a223bc41021898f120d2660b4c0787660a07ff157d1910d8f2f6f2572bd8a5",
-      "method": "Complete cat and keyboard frames, region-level contacts, short release; no limb recomposition or full-video restart"
+      "module": "precise-character.js",
+      "body": "character/keyboard-body-v2.jpg",
+      "sourceSha256": "41ea0d318386b4b2f1f89f812319a79eb7d350d88562251c6c05276a07ee418c",
+      "method": "Fixed 13-key geometry and separate continuous whole-arm contours over a high-resolution AI body; every note has a distinct contact"
     },
     "guitar/marimba/drums": "retained earlier articulated rig; not upgraded by this motion source"
+  },
+  "precisePiano": {
+    "date": "2026-10-25",
+    "tool": "built-in image_gen.imagegen",
+    "reference": "design/video-motion-pilot-2026-10-23/03-keyboard.png",
+    "promptDirectory": "design/keyboard-contact-pilot-2026-10-25",
+    "bodySourceSha256": "41ea0d318386b4b2f1f89f812319a79eb7d350d88562251c6c05276a07ee418c",
+    "bodyPixels": [
+      1254,
+      1254
+    ],
+    "method": "AI-created whole-body plate with cleaned front-arm areas; runtime keyboard geometry and continuous arm contours give deterministic per-note contact",
+    "notClaimed": [
+      "single GPT call produced a correct complete animation",
+      "thirteen validated AI pose sheets",
+      "human naturalness approval",
+      "physical-device listening acceptance"
+    ],
+    "armTexture": {
+      "file": "character/whole-arm-v2.png",
+      "pixels": [
+        1254,
+        1254
+      ],
+      "alphaBounds": [
+        458,
+        61,
+        349,
+        1130
+      ],
+      "tool": "built-in image_gen.imagegen",
+      "prompt": "design/keyboard-contact-pilot-2026-10-25/prompt-arm-texture.txt",
+      "method": "Single continuous shoulder-to-paw texture, warped as one mesh along each controlled arm; no separated upper/lower/paw sprites"
+    }
   }
 }

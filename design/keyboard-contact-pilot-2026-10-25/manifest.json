@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-25",
+  "tool": "built-in image_gen.imagegen",
+  "purpose": "static feasibility only; not a production animation replacement",
+  "reference": "design/video-motion-pilot-2026-10-23/03-keyboard.png",
+  "attempts": [
+    {
+      "file": "contact-a-attempt-01.png",
+      "sha256": "270f2723fafa8513698ff3f72005e291b1a1fa629c060151338ba027d28d75ef",
+      "bytes": 1850733,
+      "width": 1254,
+      "height": 1254,
+      "prompt": "prompt-a.txt",
+      "status": "rejected-for-precise-piano-contact",
+      "review": "First image has nine white fronts and misplaced first black group; contact overlaps a boundary"
+    },
+    {
+      "file": "contact-a-attempt-02.png",
+      "sha256": "9961c856243f120a632341549cb8aef568667386bd5114e13c2c6d61a7241f59",
+      "bytes": 1781380,
+      "width": 1254,
+      "height": 1254,
+      "prompt": "prompt-a-correction.txt",
+      "status": "rejected-for-precise-piano-contact",
+      "review": "Eight white fronts, but black-group alignment still does not match the specified C-to-C keyboard; no validated one-key depression"
+    }
+  ],
+  "selectedProduction": {
+    "body-plate.png": {
+      "role": "GPT-created stationary full-body plate",
+      "sha256": "41ea0d318386b4b2f1f89f812319a79eb7d350d88562251c6c05276a07ee418c",
+      "bytes": 1672144
+    },
+    "whole-arm-texture.png": {
+      "role": "GPT-created single continuous RGBA arm, not a multi-part sprite",
+      "sha256": "a5718767c1befc7320748b94f7eedf547cb7b7f0987d9866685b734bcb0bee43",
+      "bytes": 624341
+    },
+    "guide-a.jpg": {
+      "role": "annotated position reference",
+      "sha256": "6fed605615d9cb7adf71b1e3444b479825463ae76378a82aa3fa1dd4276b76e6",
+      "bytes": 99206
+    },
+    "guide-s.jpg": {
+      "role": "annotated position reference",
+      "sha256": "ff19307a6199bbc9c477b52f4e8e4a94f429d1f1cd0f29cd7e9908a2ae0f61d5",
+      "bytes": 98826
+    },
+    "guide-d.jpg": {
+      "role": "annotated position reference",
+      "sha256": "a628eadce526bd71b4998d1c25c56a6ed2669c556e4d3fa79b4b5ec448d13a27",
+      "bytes": 99220
+    }
+  },
+  "armAlphaBounds": [
+    458,
+    61,
+    349,
+    1130
+  ],
+  "rendering": "A continuous 2D mesh follows independently controlled 13-note contacts; no Blender/3D model is claimed."
+}

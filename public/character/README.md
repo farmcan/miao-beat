@@ -1,8 +1,8 @@
 # Original orange musician
 
-The default piano uses complete cat-and-keyboard frames from a user-supplied generated video based on the project's original orange-cat artwork. `keyboard-motion-v1.json` records the archived source SHA, crop, exact frame selection and region-level action mapping. `keyboard-demo-v1.mp4` is a silent, metadata-stripped remux for inspecting the full source motion. No temporary signed URL is stored. Complete poses preserve coupled body/paw changes; they do not provide thirteen exact physical key contacts or independent limbs.
+The default piano uses a 1254-square AI-generated body plate and one complete transparent arm-and-paw texture, keeping the project's original orange cat. The keyboard has deterministic eight-white/five-black geometry. Each of thirteen notes has a different contact, and the left/right arms follow independently. A continuous mesh bends the entire textured arm; it does not assemble separate upper-arm, forearm and paw bitmaps. Source prompts, hashes and alpha bounds are recorded in manifest.json and the repository design folder.
 
-The guitar, marimba and drum modes retain the earlier rig described below. The keyboard does not load its old sheets until another mode needs them. Source files and runtime assets have distinct provenance in manifest.json. Human naturalness, actual phone latency and speaker sound remain separate acceptance items.
+The guitar, marimba and drums retain the earlier rig below. The earlier keyboard video and region-pose assets remain historical references. Functional coordinates and desktop checks do not establish human naturalness approval or physical phone audio/touch acceptance. Code and generated-art provenance are separate.
 
 ## Historical v3 rig retained for other instruments
 

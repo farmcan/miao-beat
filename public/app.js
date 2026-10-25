@@ -2,9 +2,10 @@ import {KEYS,MELODY,DRUMS,CHORDS,LEGACY_KEYS} from './bindings.js';
 import {SampledAudio} from './sampled-audio.js';
 import {BeatClock} from './clock.js';
 import {guidePosition} from './guidance.js';
-import {mountCharacter} from './whole-character.js';
+import {mountCharacter} from './precise-character.js';
 import {mountPerformance} from './performance.js';
 import {mountKeyboardNavigation} from './keyboard-navigation.js';
+import {loadSiteCounter} from './site-counter.js';
 import {SONGS,scoreEvents} from './scores.js';
 import {CODES,MAX_MS,MAX_EVENTS,makeRecording,validateRecording} from './recording.js';
 const $=id=>document.getElementById(id),audio=new SampledAudio(),byCode=new Map(KEYS.map(k=>[k.code,k])),byNote=new Map(MELODY.map(k=>[k.sub,k]));
@@ -33,6 +34,7 @@ for(const key of DRUMS){
 for(const key of CHORDS){const b=document.createElement('button');b.type='button';b.className='chord-pad';b.dataset.code=key.code;b.setAttribute('aria-label',`吉他 ${key.label} 和弦，键盘 ${key.key}`);b.innerHTML=`<kbd>${key.key}</kbd><strong>${key.label}</strong><small>轻扫</small>`;$('chordPads').append(b);}
 const buttons=new Map([...document.querySelectorAll('[data-code]')].map(b=>[b.dataset.code,b]));
 mountKeyboardNavigation();
+loadSiteCounter();
 function paint(){
   character.update?.($('instrumentSelect').value,[...held].map(code=>byCode.get(code)).filter(Boolean));
   for(const [code,b]of buttons)b.classList.toggle('active',held.has(code)||pulses.has(code));
@@ -158,6 +160,7 @@ function populateSongs(){
 function selectedSong(){return SONGS.find(s=>$('songSelect').value===s.id)||SONGS[0];}
 function renderScore(){
   stopSession();const song=selectedSong();$('songInfo').textContent=`${song.key} · ${song.meter}/4 拍 · 建议 ${song.bpm} BPM。${song.description}`;$('scoreRows').replaceChildren();let index=0;
+  $('scoreSourceRow').hidden=!song.sourceLabel;if(song.sourceLabel){$('scoreSource').href=song.sourceUrl;$('scoreSource').textContent=song.sourceLabel;}
   for(const phrase of song.phrases){const row=document.createElement('div');row.className='score-phrase';for(const event of phrase){const keys=scoreKeys(event),n=document.createElement('div');n.className='score-note';n.dataset.scoreIndex=String(index++);n.innerHTML=`<span>${keys.map(k=>k.label).join('+')}</span><kbd>${keys.map(k=>k.key).join('+')}</kbd><small>${event.beats} 拍</small>`;row.append(n);}$('scoreRows').append(row);}
   $('practiceHint').textContent=`${song.name} · ${song.key} · ${song.meter}/4 · 建议 ${song.bpm} BPM。跟弹按当前速度，不判分。`;
   $('scoreStatus').textContent='字母是键位；数字按 C 音起排列，上点表示高音。按键时间由竖线提示，长条表示到下一音的间隔。';

@@ -2,6 +2,14 @@
 
 更新：2026-10-25。当前读物按“决策 → 证据 → 实现与验收 → 早期归档”组织。网页阅读包由 `scripts/export-review.py` 导出到所有者配置的站点；产品与公开 README 不回链个人入口。
 
+## 本轮追加：逐键接触和访问统计
+
+- [实现与生产验收](precise-piano-release-2026-10-25.md)
+
+- [逐键复现、标注生图试验与修复路线](research/key-contact-repair-2026-10-25.md)
+- [访问计数：口径、独立存储与验收](site-counter-2026-10-25.md)
+- [粉刷匠既有完整谱核验与仍存缺口](research/painter-full-score-2026-10-22.md)
+
 ## 本轮：完整钢琴猫与优化研究
 
 - [新素材归档、交互实现与生产验收](whole-character-release-2026-10-25.md)

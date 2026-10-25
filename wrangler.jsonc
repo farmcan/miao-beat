@@ -1,5 +1,10 @@
 {
   "name": "miao-beat",
   "pages_build_output_dir": "./dist",
-  "compatibility_date": "2026-10-22"
+  "compatibility_date": "2026-10-22",
+  "d1_databases": [{
+    "binding": "MIAOBEAT_DB",
+    "database_name": "miaoti-stats",
+    "database_id": "450ae91b-2a5b-48f7-9d1c-98fe3a4df2bd"
+  }]
 }

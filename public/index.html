@@ -101,7 +101,7 @@
 
     <details class="score-book" id="scoreBook">
       <summary><span class="score-book-icon" aria-hidden="true">♫</span><span><strong>不知道从哪一音开始？</strong><small>展开完整键位与拍数，按自己的节奏弹</small></span><span class="score-book-open">打开参考册 <span aria-hidden="true">＋</span></span></summary>
-      <div class="score-content"><p id="songInfo" class="song-info"></p><div id="scoreRows" class="score-rows"></div><p id="scoreStatus" class="score-status" role="status">字母是键位，数字是音符。只是参考，不用追着谱子跑。</p></div>
+      <div class="score-content"><p id="songInfo" class="song-info"></p><p id="scoreSourceRow" hidden><a id="scoreSource" target="_blank" rel="noopener"></a></p><div id="scoreRows" class="score-rows"></div><p id="scoreStatus" class="score-status" role="status">字母是键位，数字是音符。只是参考，不用追着谱子跑。</p></div>
     </details>
 
     <div class="closing-note"><span aria-hidden="true">✳</span><p>没有“弹错了”。<br><strong>只是这一小段，刚好长这样。</strong></p></div>
@@ -112,6 +112,7 @@
     </nav>
     <div class="support-note"><p>今天弹得还开心？<span>演奏一直免费，支持完全随意。</span></p><button type="button" data-open-support>请猫猫吃罐罐 ♡</button></div>
     <details class="credits"><summary>关于这个小玩具与素材来源</summary><p>Miao Beat 是独立的轻量音乐实验。当前采用真实钢琴、马林巴、尼龙弦吉他与架子鼓采样。原创橘猫的演奏动作由你的按键触发。吉他提供简化和弦与单音；架子鼓模式可以自由编节奏。</p><p>项目起点借鉴了 <a href="https://bongo.cat/" target="_blank" rel="noopener">Bongo Cat</a> 的按键演奏思路；原始映射代码的 MIT 许可保留在 <a href="./UPSTREAM-LICENSE.txt">许可说明</a>。本站没有使用该站角色插画和录音。采样来源与各自许可见 <a href="./samples/LICENSES.txt">音色说明</a>；播放引擎采用 <a href="./vendor/smplr-LICENSE.txt">smplr（MIT）</a>。无需麦克风、登录或上传。</p><p><a href="https://github.com/farmcan/miao-beat" target="_blank" rel="noopener">源代码 ↗</a></p></details>
+    <aside class="site-visits" aria-label="站点累计访问"><p id="siteVisitCount" role="status">累计访问：暂时未知</p><small>从启用统计起累计 · 同一浏览器 24 小时内计 1 次 · 非独立人数</small></aside>
     <noscript><p class="noscript">这个声音玩具需要浏览器开启 JavaScript。</p></noscript>
   </main>
   <dialog id="supportDialog" class="support-dialog" aria-labelledby="supportTitle" aria-describedby="supportDescription">

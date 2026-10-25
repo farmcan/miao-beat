@@ -1,0 +1,4 @@
+Use case: precise-object-edit. Asset type: one clean high-resolution animation background/body plate.
+The input is our original orange cat with keyboard. Keep exactly the same face, head, torso silhouette, cream belly, stripes, eyes, tail, feet, keyboard/stand, lighting, camera and 1254x1254 square framing.
+Remove BOTH FRONT ARMS AND FRONT PAWS completely. Paint the clean continuous orange/cream torso surfaces that were hidden behind them, and restore the keyboard surfaces where the left paw covered them. Do not leave arm stumps, disconnected paws, fingers, outlines or shadows of the removed arms. This is an animation production plate: movable continuous arms will be drawn over it later.
+Do not remove the cat's hind feet or tail. No redesign, new pose, new instrument, text, circles, arrows, labels, watermarks, seams or extra objects. Keep the original soft warm matte clay/paper appearance and sharp details. Pale cream opaque background retained.

@@ -7,7 +7,9 @@ A small browser instrument playground. Follow a metronome, play your own music, 
 - Generate the next motion video on another computer: [one-document handoff](docs/video-animation-handoff.md), with committed reference images and copyable prompts.
 - Public products never link back to the owner’s personal website or research hub.
 
-2026-10-25 · 0.8.0: the default piano now uses complete cat-and-keyboard poses extracted from the user's newly supplied 10-second video. Input selects a pitch-region contact, simultaneous left/right input selects a two-paw pose, and release follows short captured frames. It never restarts the full video on every note. The [original-motion preview](https://miao-beat.pages.dev/labs/keyboard-motion/) remains separate from the playable instrument. This is a region-level interactive preview, not thirteen anatomically exact key contacts or human naturalness approval. Other instruments retain their previous character rig. See [current release and limits](docs/whole-character-release-2026-10-25.md) and [research priorities](docs/research/optimization-review-2026-10-25.md).
+2026-10-25 · 0.9.0: the default piano uses a high-resolution original orange-cat body, a single continuous textured arm per paw, and fixed eight-white/five-black key geometry. All thirteen notes have distinct contacts and independent key depression; both paws follow confirmed real inputs. Annotated circles/arrows and the generation prompts are committed in `design/keyboard-contact-pilot-2026-10-25/`. Other instruments keep their previous rig. See [release and limits](docs/precise-piano-release-2026-10-25.md).
+
+A separate aggregate visit counter follows MiaoTI's 24-hour browser-cookie rule, starting when enabled; it is not a historical PV total or a count of unique people. No recording or performance data is uploaded. The [earlier video preview](https://miao-beat.pages.dev/labs/keyboard-motion/) remains available as a historical source, not the active piano renderer.
 
 ## Existing musical features · 0.7 baseline retained
 
