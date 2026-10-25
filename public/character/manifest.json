@@ -1,8 +1,8 @@
 {
-  "version": 3,
-  "date": "2026-10-22",
-  "name": "Original orange cat musician, articulated shoulders elbows and wrists",
-  "status": "integrated product candidate; human preference and physical device latency unverified",
+  "version": 4,
+  "date": "2026-10-25",
+  "name": "Original orange cat: complete captured keyboard poses",
+  "status": "interactive whole-pose keyboard preview; naturalness and physical-device acceptance remain separate",
   "generation": {
     "tool": "built-in image_gen.imagegen",
     "transparent_background": true,
@@ -47,17 +47,45 @@
       "filename": "character.js",
       "bytes": 15852,
       "sha256": "afbed90d2291d3098afe58f623b07dda126ad87c36ab7aba3809be5d6a903e0d"
+    },
+    {
+      "filename": "whole-character.js",
+      "bytes": 6623,
+      "sha256": "b18d274f351f8929069b00c8dcd7b74729f9e4fb1dc24cc36c60d8f6ff9632c6"
+    },
+    {
+      "filename": "character/whole.css",
+      "bytes": 310,
+      "sha256": "f2af469faac0c308e352ef68d641a3a64a0ad46d5fc896a7a626cab59f1a6810"
+    },
+    {
+      "filename": "character/keyboard-poses-v1.jpg",
+      "bytes": 501596,
+      "sha256": "3624382992d65da7f617fcaec48ac12b4bb48e09ee21818b02b4b065b00fabc9"
+    },
+    {
+      "filename": "character/keyboard-motion-v1.json",
+      "bytes": 1597,
+      "sha256": "f6250ef98dd00a9565d13182e1fbcb685e3dccf2cab1e503a7169f879ee0d7e2"
+    },
+    {
+      "filename": "character/keyboard-demo-v1.mp4",
+      "bytes": 2753636,
+      "sha256": "5d722abd7d65d4551a982a3ec898bc64103a92b78c39466479332bdf6c044667"
     }
   ],
   "runtime": {
-    "method": "fixed 68/60-unit two-bone IK and 32-unit paw, independent wrist rotation, 54-unit sticks or 42-unit marimba mallets parented to wrist; velocity-continuous interrupted strokes; reject unreachable targets",
-    "contactRules": "13 distinct piano or marimba key/bar positions, guitar soundhole plus simplified neck grip, seven physical kit surfaces, mixed percussion on reachable pad stand; release/blur/mode reset",
+    "method": "Piano: complete captured poses with immediate region contact and 70ms release frames; remaining instruments: retained fixed-length articulated rig",
+    "contactRules": "Piano distinguishes four pitch regions and both paws, not thirteen anatomical key contacts. Remaining instruments retain prior simplified geometry.",
     "notClaimed": [
       "anatomical guitar fingering",
       "continuous 3D eye tracking",
       "physical device QA",
-      "human naturalness approval"
-    ]
+      "human naturalness approval",
+      "thirteen exact physical piano keys",
+      "independent paw control in captured whole poses"
+    ],
+    "historicalNote": "The prior rig remains for other instruments; its geometry checks are not human naturalness approval."
   },
   "previousGeneration": {
     "version": 2,
@@ -71,5 +99,14 @@
   "rights": {
     "provenance": "AI-generated original project character; reference is the project's earlier AI-generated concept, not Bongo Cat art or a stock-image cutout",
     "licenseNote": "No separate CC0/public-domain dedication is asserted here. Application code licensing does not establish third-party asset rights."
+  },
+  "activeByInstrument": {
+    "piano": {
+      "module": "whole-character.js",
+      "motionManifest": "character/keyboard-motion-v1.json",
+      "sourceSha256": "17a223bc41021898f120d2660b4c0787660a07ff157d1910d8f2f6f2572bd8a5",
+      "method": "Complete cat and keyboard frames, region-level contacts, short release; no limb recomposition or full-video restart"
+    },
+    "guitar/marimba/drums": "retained earlier articulated rig; not upgraded by this motion source"
   }
 }

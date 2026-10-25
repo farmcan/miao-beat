@@ -47,8 +47,8 @@ function setup(t) {
   w.URL.createObjectURL=blob=>{exportedBlob=blob;return 'blob:local-test';};
   w.URL.revokeObjectURL=()=>{};
   w.HTMLAnchorElement.prototype.click=function(){};
-  w.__deps={...bindings,...scores,...recording,guidePosition,SampledAudio:FakeAudio,mountPerformance(){},mountCharacter:()=>({ready:Promise.resolve(),strike(){}}),BeatClock:FakeClock};
-  w.eval('const {KEYS,MELODY,DRUMS,CHORDS,LEGACY_KEYS,SampledAudio,mountCharacter,mountPerformance,BeatClock,SONGS,scoreEvents,guidePosition,CODES,MAX_MS,MAX_EVENTS,makeRecording,validateRecording}=window.__deps;\n'+app);
+  w.__deps={...bindings,...scores,...recording,guidePosition,SampledAudio:FakeAudio,mountPerformance(){},mountKeyboardNavigation(){},mountCharacter:()=>({ready:Promise.resolve(),strike(){}}),BeatClock:FakeClock};
+  w.eval('const {KEYS,MELODY,DRUMS,CHORDS,LEGACY_KEYS,SampledAudio,mountCharacter,mountPerformance,mountKeyboardNavigation,BeatClock,SONGS,scoreEvents,guidePosition,CODES,MAX_MS,MAX_EVENTS,makeRecording,validateRecording}=window.__deps;\n'+app);
   const $=id=>w.document.getElementById(id);
   const key=(type,code,target=w.document,options={})=>target.dispatchEvent(new w.KeyboardEvent(type,{code,bubbles:true,cancelable:true,...options}));
   const frame=time=>{audio.context.currentTime=time;const queued=[...frames.values()];frames.clear();for(const fn of queued)fn();};

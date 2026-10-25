@@ -1,6 +1,13 @@
 # Miao Beat 研究与交付索引
 
-更新：2026-10-22。当前读物按“决策 → 证据 → 实现与验收 → 早期归档”组织。网页阅读包由 `scripts/export-review.py` 导出到所有者配置的站点；产品与公开 README 不回链个人入口。
+更新：2026-10-25。当前读物按“决策 → 证据 → 实现与验收 → 早期归档”组织。网页阅读包由 `scripts/export-review.py` 导出到所有者配置的站点；产品与公开 README 不回链个人入口。
+
+## 本轮：完整钢琴猫与优化研究
+
+- [新素材归档、交互实现与生产验收](whole-character-release-2026-10-25.md)
+- [UI、使用体验、用户心理及下一步排序](research/optimization-review-2026-10-25.md)
+- [五个开源方向：实际源码、许可、维护与复用边界](research/reference-opportunities-2026-10-25.md)
+- [用户动机与最小验证方案](research/user-motivation-audit-2026-10-25.md)
 
 ## 橘猫完整产品迭代
 

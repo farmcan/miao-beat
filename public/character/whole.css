@@ -1,0 +1,2 @@
+.whole-cat-canvas{position:absolute;inset:0;display:block;width:100%;height:calc(100% - 22px);object-fit:contain;mix-blend-mode:darken;pointer-events:none}.whole-cat-canvas[hidden]{display:none}.scene[data-whole-character] .cat-scene{display:none}
+.scene[data-whole-character]{background:var(--paper,#f8f4eb)}

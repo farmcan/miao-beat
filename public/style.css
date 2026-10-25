@@ -99,6 +99,8 @@ select { border: 1px solid var(--line); border-radius: 9px; min-height: 40px; ba
 .music-key.active, .music-key[aria-pressed=true] { transform: translateY(3px); background: #f3cba5; border-bottom-width: 1px; color: #704226; }
 .music-key.black.active, .music-key.black-key.active, .music-key[data-accidental=true].active { background: #b56e42; color: #fffaf3; }
 .keyboard-scroll-hint { display: none; margin: 4px 0 0; font-size: 10px; line-height: 1.5; color: var(--muted); text-align: center; }
+.keyboard-navigation { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 6px; color: var(--muted); font-size: 10px; }
+.keyboard-navigation button { min-height: 44px; min-width: 76px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 9px; background: var(--cream); font-size: 11px; }
 .percussion-row { margin-top: 17px; }
 .drum-pads { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 6px; touch-action: none; }
 .drum-pad { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 9px 6px; border: 1px solid #e3d4c3; border-radius: 9px; background: #f5eadc; color: #644a36; user-select: none; touch-action: none; transition: background 60ms ease, transform 60ms ease; }
@@ -106,7 +108,7 @@ select { border: 1px solid var(--line); border-radius: 9px; min-height: 40px; ba
 .drum-pad .pad-label { display: block; font-size: 10px; white-space: nowrap; }
 .drum-pad .pad-sub { display: none; }
 .drum-pad.active, .drum-pad[aria-pressed=true] { transform: translateY(2px); background: #eec29c; border-color: #cb8e5b; }
-.playing-surface[data-instrument=drums] .melody-scroll, .playing-surface[data-instrument=drums] .keyboard-scroll-hint { display: none; }
+.playing-surface[data-instrument=drums] .melody-scroll, .playing-surface[data-instrument=drums] .keyboard-navigation, .playing-surface[data-instrument=drums] .keyboard-scroll-hint { display: none; }
 .playing-surface[data-instrument=drums] .percussion-row { margin-top: 0; }
 .playing-surface[data-instrument=drums] .drum-pad { min-height: 82px; }
 .playing-surface[data-instrument=drums] .drum-pad .pad-label { font-size: 13px; }
@@ -396,6 +398,8 @@ body.performance-mode .recording-strip { grid-column: 2; grid-row: 6; padding: 1
 }
 @media(orientation:landscape) and (max-height:550px) {
   body.performance-mode .workbench { grid-template-columns: minmax(170px,.65fr) minmax(0,1.35fr); gap: 8px 22px; padding-block: calc(env(safe-area-inset-top,0px) + 8px) 18px; }
+  body.performance-mode .metronome { grid-column: 2; grid-row: 6; }
+  body.performance-mode .recording-strip { grid-column: 2; grid-row: 7; }
   body.performance-mode .bench-topline { min-height: 42px; font-size: 10px; }
   body.performance-mode .performance-row { position: sticky; top: 64px; max-width: 320px; align-self: start; }
   body.performance-mode .scene { aspect-ratio: 640 / 550; }

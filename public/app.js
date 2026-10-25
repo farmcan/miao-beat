@@ -2,8 +2,9 @@ import {KEYS,MELODY,DRUMS,CHORDS,LEGACY_KEYS} from './bindings.js';
 import {SampledAudio} from './sampled-audio.js';
 import {BeatClock} from './clock.js';
 import {guidePosition} from './guidance.js';
-import {mountCharacter} from './character.js';
+import {mountCharacter} from './whole-character.js';
 import {mountPerformance} from './performance.js';
+import {mountKeyboardNavigation} from './keyboard-navigation.js';
 import {SONGS,scoreEvents} from './scores.js';
 import {CODES,MAX_MS,MAX_EVENTS,makeRecording,validateRecording} from './recording.js';
 const $=id=>document.getElementById(id),audio=new SampledAudio(),byCode=new Map(KEYS.map(k=>[k.code,k])),byNote=new Map(MELODY.map(k=>[k.sub,k]));
@@ -31,6 +32,7 @@ for(const key of DRUMS){
 }
 for(const key of CHORDS){const b=document.createElement('button');b.type='button';b.className='chord-pad';b.dataset.code=key.code;b.setAttribute('aria-label',`吉他 ${key.label} 和弦，键盘 ${key.key}`);b.innerHTML=`<kbd>${key.key}</kbd><strong>${key.label}</strong><small>轻扫</small>`;$('chordPads').append(b);}
 const buttons=new Map([...document.querySelectorAll('[data-code]')].map(b=>[b.dataset.code,b]));
+mountKeyboardNavigation();
 function paint(){
   character.update?.($('instrumentSelect').value,[...held].map(code=>byCode.get(code)).filter(Boolean));
   for(const [code,b]of buttons)b.classList.toggle('active',held.has(code)||pulses.has(code));

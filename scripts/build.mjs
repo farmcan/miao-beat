@@ -9,7 +9,7 @@ await fs.mkdir(path.join(root,'public/vendor'),{recursive:true});
 const vendor=(await fs.readFile(path.join(root,'node_modules/smplr/dist/index.mjs'),'utf8')).replace(/\/\/# sourceMappingURL=.*$/m,'');
 await fs.writeFile(path.join(root,'public/vendor/smplr.mjs'),vendor);
 await fs.copyFile(path.join(root,'scripts/smplr-LICENSE.txt'),path.join(root,'public/vendor/smplr-LICENSE.txt'));
-const allowed=['index.html','style.css','icon.svg','support-alipay-qr.jpg','app.js','audio.js','sampled-audio.js','bindings.js','clock.js','recording.js','scores.js','UPSTREAM-LICENSE.txt','_headers','vendor/smplr.mjs','vendor/smplr-LICENSE.txt','samples/manifest.json','samples/LICENSES.txt','samples/CC0-1.0.txt','character.js','performance.js','guidance.js','character/plush-atlas-v1.png','character/indie-atlas-v2.png','character/orange-components-v3.png','character/orange-instruments-v3.png','character/rig.css','character/manifest.json','character/README.md','labs/orange-guitar/index.html','labs/orange-guitar/pilot.js','labs/orange-guitar/style.css','labs/orange-guitar/atlas-v1.png'];
+const allowed=['index.html','style.css','icon.svg','support-alipay-qr.jpg','app.js','audio.js','sampled-audio.js','bindings.js','clock.js','recording.js','scores.js','UPSTREAM-LICENSE.txt','_headers','vendor/smplr.mjs','vendor/smplr-LICENSE.txt','samples/manifest.json','samples/LICENSES.txt','samples/CC0-1.0.txt','character.js','performance.js','guidance.js','character/plush-atlas-v1.png','character/indie-atlas-v2.png','character/orange-components-v3.png','character/orange-instruments-v3.png','character/rig.css','character/manifest.json','character/README.md','labs/orange-guitar/index.html','labs/orange-guitar/pilot.js','labs/orange-guitar/style.css','labs/orange-guitar/atlas-v1.png','whole-character.js','keyboard-navigation.js','character/whole.css','character/keyboard-poses-v1.jpg','character/keyboard-motion-v1.json','character/keyboard-demo-v1.mp4','labs/keyboard-motion/index.html','labs/keyboard-motion/style.css'];
 const art=JSON.parse(await fs.readFile(path.join(root,'public/character/manifest.json')));
 for(const asset of art.assets){if(!allowed.includes(asset.filename))throw Error('Unreviewed character file');const bytes=await fs.readFile(path.join(root,'public',asset.filename));if(createHash('sha256').update(bytes).digest('hex')!==asset.sha256)throw Error('Character provenance differs: '+asset.filename);}
 const manifest=JSON.parse(await fs.readFile(path.join(root,'public/samples/manifest.json')));
@@ -22,11 +22,11 @@ if(actual.sort().join('|')!==[...allowed].sort().join('|'))throw Error('Unexpect
 await fs.rm(path.join(root,'dist'),{recursive:true,force:true});await fs.mkdir(path.join(root,'dist'));
 const files={};for(const name of allowed){
  const content=await fs.readFile(path.join(root,'public',name));
- const text=/\.(mp3|png|jpg)$/.test(name)?'':content.toString();
- const maxBytes=/^(?:character\/|labs\/orange-guitar\/).*\.png$/.test(name)?2000000:256000;
+ const text=/\.(mp3|png|jpg|mp4)$/.test(name)?'':content.toString();
+ const maxBytes=/^character\/.*\.mp4$/.test(name)?8000000:/^(?:character\/|labs\/orange-guitar\/).*\.(png|jpg)$/.test(name)?2000000:256000;
  if(content.length>maxBytes||/\/Users\/|oauth_token|BEGIN PRIVATE KEY|farmcan(?:-seed)?\.pages\.dev/.test(text))throw Error('Invalid public file: '+name);
  await fs.mkdir(path.dirname(path.join(root,'dist',name)),{recursive:true});await fs.writeFile(path.join(root,'dist',name),content);files[name]=createHash('sha256').update(content).digest('hex');
 }
 let commit='local';try{commit=execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8',stdio:['ignore','pipe','ignore']}).trim();}catch{}
-await fs.writeFile(path.join(root,'dist/release.json'),JSON.stringify({project:'miao-beat',version:'0.7.0-orange',commit,files},null,2)+'\n');
-console.log('Built '+allowed.length+' explicit public files; four sampled instruments and an articulated orange musician.');
+await fs.writeFile(path.join(root,'dist/release.json'),JSON.stringify({project:'miao-beat',version:'0.8.0-whole-cat',commit,files},null,2)+'\n');
+console.log('Built '+allowed.length+' explicit public files; four sampled instruments and a whole-character keyboard motion preview.');

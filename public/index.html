@@ -59,7 +59,7 @@
       </div>
 
       <div class="play-area" aria-label="你的演奏区">
-      <div class="instrument-controls"><label class="instrument-select" for="instrumentSelect"><span>乐器</span><select id="instrumentSelect"><option value="piano">钢琴 · 清亮琴房</option><option value="marimba">马林巴 · 木头叮咚</option><option value="guitar" selected>吉他 · 尼龙弦</option><option value="drums">架子鼓 · 八件套</option></select></label><label class="volume-control" for="volume"><span class="volume-icon" aria-hidden="true">◖))</span><span class="sr-only">音量</span><input id="volume" type="range" min="0" max="100" value="55"><output id="volumeValue" for="volume">55%</output></label><button id="performanceToggle" class="performance-toggle" type="button" aria-pressed="false" disabled>全屏演奏</button><span id="performanceStatus" class="performance-status" role="status"></span></div>
+      <div class="instrument-controls"><label class="instrument-select" for="instrumentSelect"><span>乐器</span><select id="instrumentSelect"><option value="piano" selected>钢琴 · 清亮琴房</option><option value="marimba">马林巴 · 木头叮咚</option><option value="guitar">吉他 · 尼龙弦</option><option value="drums">架子鼓 · 八件套</option></select></label><label class="volume-control" for="volume"><span class="volume-icon" aria-hidden="true">◖))</span><span class="sr-only">音量</span><input id="volume" type="range" min="0" max="100" value="55"><output id="volumeValue" for="volume">55%</output></label><button id="performanceToggle" class="performance-toggle" type="button" aria-pressed="false" disabled>全屏演奏</button><span id="performanceStatus" class="performance-status" role="status"></span></div>
 
       <div class="sound-ready"><button id="enableAudio" type="button">打开声音</button><p id="soundStatus" class="sound-status" role="status">先点“打开声音”，再按 A 或点琴键。首次需要准备音色。</p></div>
       <div class="playing-surface" id="playingSurface">
@@ -72,7 +72,9 @@
           <p id="guideAnnounce" class="sr-only" role="status"></p>
         </div>
         <div class="section-label" id="melodyHeading"><h2>你的琴键</h2><span class="desktop-hint">白键 A — K <i>·</i> 黑键 W E T Y U</span><span class="mobile-hint">点按琴键，也可以一起按</span></div>
-        <div class="melody-scroll" tabindex="0" role="region" aria-label="旋律键盘，可左右滑动"><div id="melodyKeys" class="melody-keys" aria-label="钢琴排列的旋律键"></div></div><p class="keyboard-scroll-hint">← 左右滑动琴键 · 横过手机，展开演奏 →</p>
+        <div class="melody-scroll" tabindex="0" role="region" aria-label="旋律键盘，可左右滑动"><div id="melodyKeys" class="melody-keys" aria-label="钢琴排列的旋律键"></div></div>
+        <div id="keyboardNavigation" class="keyboard-navigation" role="group" aria-label="切换琴键音域" hidden><button id="keyboardLower" type="button" aria-controls="melodyKeys" aria-label="显示更低的琴键" disabled>← 低音</button><span>切换琴键</span><button id="keyboardHigher" type="button" aria-controls="melodyKeys" aria-label="显示更高的琴键" disabled>高音 →</button></div>
+        <p class="keyboard-scroll-hint">左右滑动或点低音 / 高音 · 横过手机，展开演奏</p>
         <div class="percussion-row"><div class="drum-heading"><h2>添点节奏</h2><span id="drumHint">Z X C V · B N M L</span></div><div id="drumPads" class="drum-pads" aria-label="打击乐垫"></div></div>
       </div>
       </div>

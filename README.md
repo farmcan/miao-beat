@@ -7,9 +7,9 @@ A small browser instrument playground. Follow a metronome, play your own music, 
 - Generate the next motion video on another computer: [one-document handoff](docs/video-animation-handoff.md), with committed reference images and copyable prompts.
 - Public products never link back to the owner’s personal website or research hub.
 
-2026-10-23: the user rejected the current 0.7 character motion. The next trial uses complete-character video/poses from the original orange-cat direction. Reference images and a generation handoff are prepared. A first user-generated guitar clip has been inspected; the current trial is alternating adjacent keyboard presses. No replacement animation is deployed.
+2026-10-25 · 0.8.0: the default piano now uses complete cat-and-keyboard poses extracted from the user's newly supplied 10-second video. Input selects a pitch-region contact, simultaneous left/right input selects a two-paw pose, and release follows short captured frames. It never restarts the full video on every note. The [original-motion preview](https://miao-beat.pages.dev/labs/keyboard-motion/) remains separate from the playable instrument. This is a region-level interactive preview, not thirteen anatomically exact key contacts or human naturalness approval. Other instruments retain their previous character rig. See [current release and limits](docs/whole-character-release-2026-10-25.md) and [research priorities](docs/research/optimization-review-2026-10-25.md).
 
-## Implementation · 2026-10-22 · 0.7.0
+## Existing musical features · 0.7 baseline retained
 
 Independent extraction from MiaoTI's keyboard-cat experiment. Four **self-hosted sampled instruments**: upright piano, marimba, nylon guitar, and an eight-piece drum kit. Guitar adds simplified C / Am / F / G six-note strums on 1–4; melodic notes use A–K plus W E T Y U, and drums use Z X C V / B N M L. Simultaneous key presses and pointer input share one path.
 

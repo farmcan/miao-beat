@@ -116,6 +116,18 @@ Key只在你自己的调用环境使用，不写进本仓库、结果文件、�
 
 不清楚的值保留null。不要放API Key、Authorization、Cookie或带访问凭据的下载链接。
 
+## 原始视频先归档，再评审
+
+2026-10-25早期纠正（保留历史）：前两条视频只做了流式查看和评审记录，没有保存原始MP4。键盘视频的临时链接随后过期，当前缺少可切片、可发布的真实源文件。评审JSON、截图和浏览器播放成功均不能代替素材归档；新的动画尚未上线。
+
+以后先把完整MP4保存在本地，再检查SHA、时长、尺寸，随后才预览和切片。仓库新增了归档命令：
+
+```sh
+python3 scripts/archive-motion-video.py --name keyboard-take-01 --file /path/to/your/video.mp4
+```
+
+它把原片和校验元数据保存在Git忽略的 `assets-source/motion/keyboard-take-01/`，不覆盖已有take。临时下载链接可以通过 `--url-stdin` 从标准输入传入，脚本不保存或打印该链接。原片是本地归档，不会因Git push自动出现在另一台电脑；跨电脑仍应传原始文件或提供当时有效的下载链接。发布只带经检查的衍生动画和公开来源说明。
+
 ## 6. 我拿到视频后负责什么
 
 先审看完整动作，标出接触与回弹帧，再做统一画布、抠背景和短动作切片。浅米色背景与奶油肚颜色接近，不会直接一键删米色；先比较实际效果。
@@ -133,3 +145,13 @@ Key只在你自己的调用环境使用，不写进本仓库、结果文件、�
 原小红书是 [陈小爷的追光猫](https://xhslink.cn/o/8oQtxWNLGCT)。本轮在原视频画面重新读到即梦Seedance 2.0 Pro、16:9、1080p、10s；借用的是“先生成完整动作，再抽帧组织交互”的方法，没有复制作者猫图或视频。
 
 查到了真实GitHub skills：[character-animation-skill](https://github.com/karem505/character-animation-skill/tree/6fb1cdb1071c32d381ea0ee995014f9b0b6d96fd)的已有视频抽帧，以及[video2dsprite](https://github.com/0x0funky/agent-sprite-forge/tree/5324342fdfab72430f4e9604f3fe427009f8596d/skills/video2dsprite)的统一画布、锚点与短动作时序。已读源码和MIT许可，尚未安装或调用它们的付费生成接口；它们也不会自动解决猫的自然演奏。具体限制和备选见[研究记录](research/whole-character-motion-2026-10-23.md)。
+
+## 2026-10-25 新 take 已归档并接线
+
+新收到的另一条键盘视频已成功下载：2,775,311 字节、1280×720、24fps、10.041667 秒、无音轨。SHA-256：`17a223bc41021898f120d2660b4c0787660a07ff157d1910d8f2f6f2572bd8a5`。这是新的素材对象，不是旧过期对象找回。
+
+原片与探测信息在 Git 忽略的 `assets-source/motion/keyboard-take-20261025/`；可跨电脑获取的无音轨、去元数据 MP4 已提交为 `public/character/keyboard-demo-v1.mp4`。画面与原片的视频流相同，容器重新打包，因此文件 SHA 不同。无需重新调用模型即可继续使用这一版。公开预览为 `/labs/keyboard-motion/`。
+
+运行 `python3 scripts/prepare-keyboard-motion.py` 可从校验后的本地原片复现图集/动作映射。没有原片的另一台电脑可直接使用已提交衍生素材，无需重新生成。脚本依赖 ffmpeg/ffprobe；原始签名地址不落盘、不入 Git。
+
+本次直接保留完整猫与琴，统一裁切缩放，抽取13个姿态。四个音区和双手状态可读；不声称每个音都准确压到十三个独立物理键，也不把别的乐器旧动作算成本轮升级。后续素材如需提高准确度，应在同一机位/身体姿态下分别给出各音区的提爪、接触、松开，避免另一只爪和躯干同时改变。详细验收及已知限制见[本轮发布记录](whole-character-release-2026-10-25.md)。
