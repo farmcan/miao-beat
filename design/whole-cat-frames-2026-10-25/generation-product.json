@@ -1,0 +1,766 @@
+{
+  "task": "whole-frame generation indices29..55",
+  "mode": "builtin image_gen, every reference viewed first",
+  "status": "generation_complete_candidates",
+  "started_at": "2026-10-25T11:32:31.208614+00:00",
+  "constraint": "Each output complete cat+both arms+keyboard, no separated parts",
+  "items": [
+    {
+      "index": 29,
+      "id": "KeyD-KeyH",
+      "keys": [
+        "KeyD",
+        "KeyH"
+      ],
+      "reference_exists": true,
+      "output_exists": true,
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit",
+          "output": "frames/KeyD-KeyH.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "090351f440b4d28bd381d73b437f127dfabc8a60a5e4129f3e0babacc7db13e3",
+          "review": "Viewed whole generated scene; contacts visually consistent with reference; no obvious added/removed keys or detached parts. Candidate still requires set-level/runtime acceptance.",
+          "source_output_file": "exec-53c9d0fc-7189-4365-873b-cad26067f059.png",
+          "prompt_path": "prompts/KeyD-KeyH.txt",
+          "selected": true
+        }
+      ],
+      "prompt_path": "prompts/KeyD-KeyH.txt",
+      "reference_viewed": true
+    },
+    {
+      "index": 30,
+      "id": "KeyD-KeyJ",
+      "keys": [
+        "KeyD",
+        "KeyJ"
+      ],
+      "reference_exists": true,
+      "output_exists": true,
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit",
+          "output": "frames/KeyD-KeyJ.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "afc3711ffac6ff4e06c57e62f753ad3c97fa849fede6ef88e18e3fe3392128ef",
+          "review": "Viewed whole generated scene; contacts visually consistent with reference; no obvious added/removed keys or detached parts. Candidate still requires set-level/runtime acceptance.",
+          "source_output_file": "exec-1f6d71a6-66f4-4787-971f-1796d7efd566.png",
+          "prompt_path": "prompts/KeyD-KeyJ.txt",
+          "selected": true
+        }
+      ],
+      "prompt_path": "prompts/KeyD-KeyJ.txt",
+      "reference_viewed": true
+    },
+    {
+      "index": 31,
+      "id": "KeyD-KeyK",
+      "keys": [
+        "KeyD",
+        "KeyK"
+      ],
+      "reference_exists": true,
+      "output_exists": true,
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit",
+          "output": "frames/KeyD-KeyK.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "c8a51d6fc474a6d6b4f6d582d7e58c4dcdbaa9293a6bb257c2d725b2f3d43458",
+          "review": "Viewed whole generated scene; contacts visually consistent with reference; no obvious added/removed keys or detached parts. Candidate still requires set-level/runtime acceptance.",
+          "source_output_file": "exec-85019443-9b82-4929-bbb1-8b91f8bd3ff7.png",
+          "prompt_path": "prompts/KeyD-KeyK.txt",
+          "selected": true
+        }
+      ],
+      "prompt_path": "prompts/KeyD-KeyK.txt",
+      "reference_viewed": true
+    },
+    {
+      "index": 32,
+      "id": "KeyD-KeyT",
+      "keys": [
+        "KeyD",
+        "KeyT"
+      ],
+      "reference_exists": true,
+      "output_exists": true,
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit",
+          "output": "frames/KeyD-KeyT.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "6321c4c09e32519e8ed88a89d0f6e9ffb679921c6baeb47f1f470c8ee8e57e1a",
+          "review": "Viewed whole generated scene; contacts visually consistent with reference; no obvious added/removed keys or detached parts. Candidate still requires set-level/runtime acceptance.",
+          "source_output_file": "exec-792b886d-1a94-498d-9d0a-5e51264fdf81.png",
+          "prompt_path": "prompts/KeyD-KeyT.txt",
+          "selected": true
+        }
+      ],
+      "prompt_path": "prompts/KeyD-KeyT.txt",
+      "reference_viewed": true
+    },
+    {
+      "index": 33,
+      "id": "KeyD-KeyY",
+      "keys": [
+        "KeyD",
+        "KeyY"
+      ],
+      "reference_exists": true,
+      "output_exists": true,
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit",
+          "output": "frames/KeyD-KeyY.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "5fb4c50fb1d3082c9c932333b8f2eee0e563c49f9bac3263b86aab08a54ac8c1",
+          "review": "Viewed whole generated scene; contacts visually consistent with reference; no obvious added/removed keys or detached parts. Candidate still requires set-level/runtime acceptance.",
+          "source_output_file": "exec-048488ac-a5ec-45b3-8bff-221cc2acbb33.png",
+          "prompt_path": "prompts/KeyD-KeyY.txt",
+          "selected": true
+        }
+      ],
+      "prompt_path": "prompts/KeyD-KeyY.txt",
+      "reference_viewed": true
+    },
+    {
+      "index": 34,
+      "id": "KeyD-KeyU",
+      "keys": [
+        "KeyD",
+        "KeyU"
+      ],
+      "reference_exists": true,
+      "output_exists": true,
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit",
+          "output": "frames/KeyD-KeyU.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "167b2fd314c62c8700d71e9a890fdbdf98e00790297446fdc599eb2edc179bea",
+          "review": "Viewed whole generated scene; contacts visually consistent with reference; no obvious added/removed keys or detached parts. Candidate still requires set-level/runtime acceptance.",
+          "source_output_file": "exec-a85c913c-d2ba-47a9-952f-0c64cc656ff9.png",
+          "prompt_path": "prompts/KeyD-KeyU.txt",
+          "selected": true
+        }
+      ],
+      "prompt_path": "prompts/KeyD-KeyU.txt",
+      "reference_viewed": true
+    },
+    {
+      "index": 35,
+      "id": "KeyF-KeyG",
+      "keys": [
+        "KeyF",
+        "KeyG"
+      ],
+      "reference_exists": true,
+      "output_exists": true,
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit",
+          "output": "frames/KeyF-KeyG.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "653ee7efa518fd26ed89046d7b72b991a6c44f12c0c242e20c9d8279b563bfc7",
+          "review": "Viewed whole generated scene; contacts visually consistent with reference; no obvious added/removed keys or detached parts. Candidate still requires set-level/runtime acceptance.",
+          "source_output_file": "exec-3e2ae737-7edf-44a7-9973-70b8cb966f71.png",
+          "prompt_path": "prompts/KeyF-KeyG.txt",
+          "selected": true
+        }
+      ],
+      "prompt_path": "prompts/KeyF-KeyG.txt",
+      "reference_viewed": true
+    },
+    {
+      "index": 36,
+      "id": "KeyF-KeyH",
+      "keys": [
+        "KeyF",
+        "KeyH"
+      ],
+      "reference_exists": true,
+      "output_exists": true,
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit",
+          "output": "frames/KeyF-KeyH.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "91a59fadf691f347ea6e58d81c9d64b26f4682af8981bd01e79abec254c1aa5c",
+          "review": "Viewed whole generated scene; contacts visually consistent with reference; no obvious added/removed keys or detached parts. Candidate still requires set-level/runtime acceptance.",
+          "source_output_file": "exec-8238daed-7443-41ac-af3e-d6776d02cd69.png",
+          "prompt_path": "prompts/KeyF-KeyH.txt",
+          "selected": true
+        }
+      ],
+      "prompt_path": "prompts/KeyF-KeyH.txt",
+      "reference_viewed": true
+    },
+    {
+      "index": 37,
+      "id": "KeyF-KeyJ",
+      "keys": [
+        "KeyF",
+        "KeyJ"
+      ],
+      "reference_exists": true,
+      "output_exists": true,
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit",
+          "output": "frames/KeyF-KeyJ.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "d2efb9420405f561473609036000a4b66a875a5677e09ae08cbc1a9cef40a0a5",
+          "review": "Viewed whole generated scene; contacts visually consistent with reference; no obvious added/removed keys or detached parts. Candidate still requires set-level/runtime acceptance.",
+          "source_output_file": "exec-2aa63b97-d87e-4884-ab73-48cdca97b010.png",
+          "prompt_path": "prompts/KeyF-KeyJ.txt",
+          "selected": true
+        }
+      ],
+      "prompt_path": "prompts/KeyF-KeyJ.txt",
+      "reference_viewed": true
+    },
+    {
+      "index": 38,
+      "id": "KeyF-KeyK",
+      "keys": [
+        "KeyF",
+        "KeyK"
+      ],
+      "reference_exists": true,
+      "output_exists": true,
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit",
+          "output": "frames/KeyF-KeyK.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "a74d5e178a5d7c27f5ce24fd88a88546fff0006fe5aa1ffdd560e1e84dfd8717",
+          "review": "Viewed whole generated scene; contacts visually consistent with reference; no obvious added/removed keys or detached parts. Candidate still requires set-level/runtime acceptance.",
+          "source_output_file": "exec-5756e00f-6e83-4378-981e-5912f5454369.png",
+          "prompt_path": "prompts/KeyF-KeyK.txt",
+          "selected": true
+        }
+      ],
+      "prompt_path": "prompts/KeyF-KeyK.txt",
+      "reference_viewed": true
+    },
+    {
+      "index": 39,
+      "id": "KeyF-KeyT",
+      "keys": [
+        "KeyF",
+        "KeyT"
+      ],
+      "reference_exists": true,
+      "output_exists": true,
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit",
+          "output": "frames/KeyF-KeyT.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "56ffe02381a875cddf2947508bfd7ce0fa12fccb44ed1b41faec2b0043d65e60",
+          "review": "Viewed whole generated scene; contacts visually consistent with reference; no obvious added/removed keys or detached parts. Candidate still requires set-level/runtime acceptance.",
+          "source_output_file": "exec-53014233-3db8-4ce0-8cf1-a145d11363a3.png",
+          "prompt_path": "prompts/KeyF-KeyT.txt",
+          "selected": true
+        }
+      ],
+      "prompt_path": "prompts/KeyF-KeyT.txt",
+      "reference_viewed": true
+    },
+    {
+      "index": 40,
+      "id": "KeyF-KeyY",
+      "keys": [
+        "KeyF",
+        "KeyY"
+      ],
+      "reference_exists": true,
+      "output_exists": true,
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit",
+          "output": "frames/KeyF-KeyY.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "d41bd341c2fdf1bbc05732d6f169cf863daf1083bba86cc289101d2593aa1fde",
+          "review": "Viewed whole generated scene; contacts visually consistent with reference; no obvious added/removed keys or detached parts. Candidate still requires set-level/runtime acceptance.",
+          "source_output_file": "exec-8db4ff06-d471-48a9-810f-a8af00bddfe7.png",
+          "prompt_path": "prompts/KeyF-KeyY.txt",
+          "selected": true
+        }
+      ],
+      "prompt_path": "prompts/KeyF-KeyY.txt",
+      "reference_viewed": true
+    },
+    {
+      "index": 41,
+      "id": "KeyF-KeyU",
+      "keys": [
+        "KeyF",
+        "KeyU"
+      ],
+      "reference_exists": true,
+      "output_exists": true,
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit",
+          "output": "frames/KeyF-KeyU.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "1197d2a5b3fa13a591d7fbbee05871ea538ddb486be909d982bb6ec20b52cca7",
+          "review": "Viewed whole generated scene; contacts visually consistent with reference; no obvious added/removed keys or detached parts. Candidate still requires set-level/runtime acceptance.",
+          "source_output_file": "exec-229699c8-4b15-4101-b65f-f41e5a97f223.png",
+          "prompt_path": "prompts/KeyF-KeyU.txt",
+          "selected": true
+        }
+      ],
+      "prompt_path": "prompts/KeyF-KeyU.txt",
+      "reference_viewed": true
+    },
+    {
+      "index": 42,
+      "id": "KeyW-KeyG",
+      "keys": [
+        "KeyW",
+        "KeyG"
+      ],
+      "reference_exists": true,
+      "output_exists": true,
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit",
+          "output": "frames/KeyW-KeyG.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "f6c806ae146af44b0b2e5199f787d461cfe371fc0086fd2610e5ef1fb8f98c1e",
+          "review": "Viewed whole generated scene; contacts visually consistent with reference; no obvious added/removed keys or detached parts. Candidate still requires set-level/runtime acceptance.",
+          "source_output_file": "exec-91600aa5-41d1-40f8-8209-71e07cf78cb2.png",
+          "prompt_path": "prompts/KeyW-KeyG.txt",
+          "selected": true
+        }
+      ],
+      "prompt_path": "prompts/KeyW-KeyG.txt",
+      "reference_viewed": true
+    },
+    {
+      "index": 43,
+      "id": "KeyW-KeyH",
+      "keys": [
+        "KeyW",
+        "KeyH"
+      ],
+      "reference_exists": true,
+      "output_exists": true,
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit",
+          "output": "frames/KeyW-KeyH.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "82a0a878680f75af1f339f484173c8948e302da7a74577d400b83b9be6af98e2",
+          "review": "Viewed whole generated scene; contacts visually consistent with reference; no obvious added/removed keys or detached parts. Candidate still requires set-level/runtime acceptance.",
+          "source_output_file": "exec-fc7244a2-8c2f-4282-a16c-3392540ad2dc.png",
+          "prompt_path": "prompts/KeyW-KeyH.txt",
+          "selected": true
+        }
+      ],
+      "prompt_path": "prompts/KeyW-KeyH.txt",
+      "reference_viewed": true
+    },
+    {
+      "index": 44,
+      "id": "KeyW-KeyJ",
+      "keys": [
+        "KeyW",
+        "KeyJ"
+      ],
+      "reference_exists": true,
+      "output_exists": true,
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit",
+          "output": "frames/KeyW-KeyJ.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "86eb50a82eb013e077600fecb2b1b56487acebbe8f3cad063ac18d29477ca06e",
+          "review": "Viewed whole generated scene; contacts visually consistent with reference; no obvious added/removed keys or detached parts. Candidate still requires set-level/runtime acceptance.",
+          "source_output_file": "exec-04d61672-bb64-4f4c-bebf-7a164652709b.png",
+          "prompt_path": "prompts/KeyW-KeyJ.txt",
+          "selected": true
+        }
+      ],
+      "prompt_path": "prompts/KeyW-KeyJ.txt",
+      "reference_viewed": true
+    },
+    {
+      "index": 45,
+      "id": "KeyW-KeyK",
+      "keys": [
+        "KeyW",
+        "KeyK"
+      ],
+      "reference_exists": true,
+      "output_exists": true,
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit",
+          "output": "frames/KeyW-KeyK.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "8ef6cc5cf76415cc389ff618d9d210b8418b4e2f447f32d7aedbc2ca7958912a",
+          "review": "Viewed whole generated scene; contacts visually consistent with reference; no obvious added/removed keys or detached parts. Candidate still requires set-level/runtime acceptance.",
+          "source_output_file": "exec-6055f57d-9860-42fd-9020-8c2c503ac9bc.png",
+          "prompt_path": "prompts/KeyW-KeyK.txt",
+          "selected": true
+        }
+      ],
+      "prompt_path": "prompts/KeyW-KeyK.txt",
+      "reference_viewed": true
+    },
+    {
+      "index": 46,
+      "id": "KeyW-KeyT",
+      "keys": [
+        "KeyW",
+        "KeyT"
+      ],
+      "reference_exists": true,
+      "output_exists": true,
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit",
+          "output": "frames/KeyW-KeyT.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "205503a2c93e495c5d99e99b532b95d901264cd6461910f01acafd828fb78dbd",
+          "review": "Viewed whole generated scene; contacts visually consistent with reference; no obvious added/removed keys or detached parts. Candidate still requires set-level/runtime acceptance.",
+          "source_output_file": "exec-0931ed83-abc3-4035-ae86-aba1dda4b32b.png",
+          "prompt_path": "prompts/KeyW-KeyT.txt",
+          "selected": true
+        }
+      ],
+      "prompt_path": "prompts/KeyW-KeyT.txt",
+      "reference_viewed": true
+    },
+    {
+      "index": 47,
+      "id": "KeyW-KeyY",
+      "keys": [
+        "KeyW",
+        "KeyY"
+      ],
+      "reference_exists": true,
+      "output_exists": true,
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit",
+          "source_output_file": "exec-2af78300-223f-40b6-b7f5-9e1f30d92fbd.png",
+          "output": "attempts-product/KeyW-KeyY-attempt1.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "6bfb404a3b9049c5840005fc689c8c61a1ea84b0d6ec2eafb90edd1e14a2977b",
+          "review": "Complete scene and correct black key still contacted, but right paw modestly shifted right relative to reference; superseded by one targeted retry.",
+          "selected": false,
+          "prompt_path": "prompts/KeyW-KeyY.txt"
+        },
+        {
+          "attempt": 2,
+          "method": "builtin image_gen edit",
+          "source_output_file": "exec-4437a9b9-620f-4b93-b80f-da158480d7e5.png",
+          "prompt_path": "prompts/KeyW-KeyY-retry.txt",
+          "output": "frames/KeyW-KeyY.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "f18afe9e75571be9cc2bb01686b6b3db7657db739600d85b08e98df12e1bad3b",
+          "selected": true,
+          "review": "Targeted retry moved right paw closer to original KeyY footprint; the middle black key remains visibly contacted. Complete cat, both arms, keyboard and stand preserved. Minor generative alignment drift remains possible; no pixel-exact or runtime naturalness claim."
+        }
+      ],
+      "prompt_path": "prompts/KeyW-KeyY-retry.txt",
+      "reference_viewed": true,
+      "review_note": "One targeted retry selected; set-level/runtime acceptance remains with root."
+    },
+    {
+      "index": 48,
+      "id": "KeyW-KeyU",
+      "keys": [
+        "KeyW",
+        "KeyU"
+      ],
+      "reference_exists": true,
+      "output_exists": true,
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit",
+          "source_output_file": "exec-3f221bb8-6bbb-4551-9ff8-dd23c368abdc.png",
+          "output": "frames/KeyW-KeyU.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "468fce1f84ca874689bbabc879a99b6f619fc36ba4b318ac077fee54fde0a71f",
+          "review": "Viewed whole generated scene; contacts visually consistent with reference; no obvious added/removed keys or detached parts. Candidate still requires set-level/runtime acceptance.",
+          "prompt_path": "prompts/KeyW-KeyU.txt",
+          "selected": true
+        }
+      ],
+      "prompt_path": "prompts/KeyW-KeyU.txt",
+      "reference_viewed": true
+    },
+    {
+      "index": 49,
+      "id": "KeyE-KeyG",
+      "keys": [
+        "KeyE",
+        "KeyG"
+      ],
+      "reference_exists": true,
+      "output_exists": true,
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit",
+          "source_output_file": "exec-3c50ede2-853f-42cb-8841-dd5c34f88555.png",
+          "output": "frames/KeyE-KeyG.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "ae8eef8132836bd62c46b7e38cbf1ad5f5019fd53bd65a39b411932d3931f767",
+          "review": "Viewed whole generated scene; contacts visually consistent with reference; no obvious added/removed keys or detached parts. Candidate still requires set-level/runtime acceptance.",
+          "prompt_path": "prompts/KeyE-KeyG.txt",
+          "selected": true
+        }
+      ],
+      "prompt_path": "prompts/KeyE-KeyG.txt",
+      "reference_viewed": true
+    },
+    {
+      "index": 50,
+      "id": "KeyE-KeyH",
+      "keys": [
+        "KeyE",
+        "KeyH"
+      ],
+      "reference_exists": true,
+      "output_exists": true,
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit",
+          "source_output_file": "exec-d3767cb6-3572-4a66-9b36-a919afc022f1.png",
+          "output": "frames/KeyE-KeyH.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "a2aea9ab38ab8823760b394866619a48c60002654d13cca60e80ec8a814467e7",
+          "review": "Viewed whole generated scene; contacts visually consistent with reference; no obvious added/removed keys or detached parts. Candidate still requires set-level/runtime acceptance.",
+          "prompt_path": "prompts/KeyE-KeyH.txt",
+          "selected": true
+        }
+      ],
+      "prompt_path": "prompts/KeyE-KeyH.txt",
+      "reference_viewed": true
+    },
+    {
+      "index": 51,
+      "id": "KeyE-KeyJ",
+      "keys": [
+        "KeyE",
+        "KeyJ"
+      ],
+      "reference_exists": true,
+      "output_exists": true,
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit",
+          "source_output_file": "exec-9de8f76b-47c2-4350-a916-ec408487e50d.png",
+          "output": "frames/KeyE-KeyJ.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "299a1e29afca66ff258ef9f5a4e6a438172a6e9e0d74ba11e40936d76c065e70",
+          "review": "Viewed whole generated scene; contacts visually consistent with reference; no obvious added/removed keys or detached parts. Candidate still requires set-level/runtime acceptance.",
+          "prompt_path": "prompts/KeyE-KeyJ.txt",
+          "selected": true
+        }
+      ],
+      "prompt_path": "prompts/KeyE-KeyJ.txt",
+      "reference_viewed": true
+    },
+    {
+      "index": 52,
+      "id": "KeyE-KeyK",
+      "keys": [
+        "KeyE",
+        "KeyK"
+      ],
+      "reference_exists": true,
+      "output_exists": true,
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit",
+          "source_output_file": "exec-3f8f2156-8fa9-4130-8970-24c300901195.png",
+          "output": "frames/KeyE-KeyK.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "20ab235387594952369e576730674b336be801f5b307e33c359c484af4472210",
+          "review": "Viewed whole generated scene; contacts visually consistent with reference; no obvious added/removed keys or detached parts. Candidate still requires set-level/runtime acceptance.",
+          "prompt_path": "prompts/KeyE-KeyK.txt",
+          "selected": true
+        }
+      ],
+      "prompt_path": "prompts/KeyE-KeyK.txt",
+      "reference_viewed": true
+    },
+    {
+      "index": 53,
+      "id": "KeyE-KeyT",
+      "keys": [
+        "KeyE",
+        "KeyT"
+      ],
+      "reference_exists": true,
+      "output_exists": true,
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit",
+          "source_output_file": "exec-8b65f514-57f0-4893-bac1-0e00f9d8b1a5.png",
+          "output": "frames/KeyE-KeyT.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "21560eb103edd96345165724ebe17967be23bed81f39316248b6b7020fc98e89",
+          "review": "Viewed whole generated scene; contacts visually consistent with reference; no obvious added/removed keys or detached parts. Candidate still requires set-level/runtime acceptance.",
+          "prompt_path": "prompts/KeyE-KeyT.txt",
+          "selected": true
+        }
+      ],
+      "prompt_path": "prompts/KeyE-KeyT.txt",
+      "reference_viewed": true
+    },
+    {
+      "index": 54,
+      "id": "KeyE-KeyY",
+      "keys": [
+        "KeyE",
+        "KeyY"
+      ],
+      "reference_exists": true,
+      "output_exists": true,
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit",
+          "source_output_file": "exec-981a35c5-dbbf-413a-ae17-d367ef638a07.png",
+          "output": "frames/KeyE-KeyY.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "8cb0b7d910224ae7270e62dd80d66e9cb3db4885a3bc95500856d8f3f71a04b8",
+          "review": "Viewed whole generated scene; contacts visually consistent with reference; no obvious added/removed keys or detached parts. Candidate still requires set-level/runtime acceptance.",
+          "prompt_path": "prompts/KeyE-KeyY.txt",
+          "selected": true
+        }
+      ],
+      "prompt_path": "prompts/KeyE-KeyY.txt",
+      "reference_viewed": true
+    },
+    {
+      "index": 55,
+      "id": "KeyE-KeyU",
+      "keys": [
+        "KeyE",
+        "KeyU"
+      ],
+      "reference_exists": true,
+      "output_exists": true,
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit",
+          "source_output_file": "exec-5dff35ae-75d6-4985-8ca5-e381d6b692ef.png",
+          "output": "frames/KeyE-KeyU.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "b81cae1c914251f4f166ab82430ba42e8e503c042f5fe46a33f624c3b8658b06",
+          "review": "Viewed whole generated scene; contacts visually consistent with reference; no obvious added/removed keys or detached parts. Candidate still requires set-level/runtime acceptance.",
+          "prompt_path": "prompts/KeyE-KeyU.txt",
+          "selected": true
+        }
+      ],
+      "prompt_path": "prompts/KeyE-KeyU.txt",
+      "reference_viewed": true
+    }
+  ],
+  "updated_at": "2026-10-25T11:51:18.705026+00:00",
+  "finished_at": "2026-10-25T11:52:41.529344+00:00",
+  "summary": {
+    "requested": 27,
+    "selected_complete_pngs": 27,
+    "native_size": [
+      1254,
+      1254
+    ],
+    "builtin_calls": 28,
+    "targeted_retries": 1,
+    "unresolved_obvious_contact_or_completeness_errors": [],
+    "remaining_acceptance": "Root set-level/contact/runtime review; user naturalness approval and physical-phone not implied"
+  },
+  "file_presence_verified_at_packaging": true
+}

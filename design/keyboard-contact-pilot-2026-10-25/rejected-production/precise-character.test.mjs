@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {MELODY,DRUMS} from '../public/bindings.js';
-import {pianoKeyGeometry,pianoContact,armGuide,createPianoState} from '../public/precise-character.js';
+import {MELODY,DRUMS} from './bindings.js';
+import {pianoKeyGeometry,pianoContact,armGuide,createPianoState} from './precise-character.js';
 
 const note=code=>MELODY.find(k=>k.code===code);
 test('all thirteen physical keys have distinct in-face contacts and remain inside the fixed arm workspace',()=>{

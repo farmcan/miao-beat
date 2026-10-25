@@ -7,9 +7,7 @@ A small browser instrument playground. Follow a metronome, play your own music, 
 - Generate the next motion video on another computer: [one-document handoff](docs/video-animation-handoff.md), with committed reference images and copyable prompts.
 - Public products never link back to the owner’s personal website or research hub.
 
-2026-10-25 · 0.9.1-whole-preview: the default piano is temporarily back on complete captured cat-and-keyboard poses. Each displayed frame contains the cat, arms/paws and instrument together. The prior v0.9 body plate plus separate arm texture/mesh was rejected by the user and is no longer the active piano renderer; its assets remain historical provenance. This whole preview still uses broad pitch-region poses and does not provide thirteen distinct physical key contacts. New complete per-key poses remain unfinished. Guitar and drums use existing complete still images with a visible motion-pending label; marimba temporarily shows a labelled complete keyboard-cat idle reference. No articulated or separate-arm fallback runs on any instrument.
-
-The separate aggregate visit counter remains enabled with MiaoTI's 24-hour browser-cookie rule, starting when enabled; it is neither a historical PV total nor a count of unique people. No recording or performance data is uploaded. The [source video preview](https://miao-beat.pages.dev/labs/keyboard-motion/) remains separate from interactive input.
+2026-10-25 · 0.10.0: the piano now switches among 56 complete AI-generated cat-and-piano images: idle, thirteen notes and all 42 left/right combinations. Each frame contains the entire cat, both connected paws and keyboard together. The product does not render separate arm/body layers. The 0.9 separated-arm experiment was rejected and withdrawn. See [current release](docs/whole-frame-release-2026-10-25.md). Guitar/drums retain whole static images; marimba motion remains unfinished. Visit counting remains enabled with the 24-hour browser-cookie rule, starting when enabled; it is not unique people or historical PV.
 
 ## Existing musical features · 0.7 baseline retained
 

@@ -2,7 +2,7 @@ import {KEYS,MELODY,DRUMS,CHORDS,LEGACY_KEYS} from './bindings.js';
 import {SampledAudio} from './sampled-audio.js';
 import {BeatClock} from './clock.js';
 import {guidePosition} from './guidance.js';
-import {mountCharacter} from './whole-character.js';
+import {mountCharacter} from './full-frame-character.js';
 import {mountPerformance} from './performance.js';
 import {mountKeyboardNavigation} from './keyboard-navigation.js';
 import {loadSiteCounter} from './site-counter.js';

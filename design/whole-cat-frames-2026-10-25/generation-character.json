@@ -1,0 +1,477 @@
+[
+  {
+    "id": "KeyF",
+    "tool": "image_gen.imagegen",
+    "toolPath": "$CODEX_HOME/generated_images/01a1639c-2dcd-7bd0-b0e4-d694a3beea6f/exec-0b23dfb3-676d-4cb0-802d-b96c33b81279.png",
+    "output": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/frames/KeyF.png",
+    "sha256": "7bc1bb67a3a4eb6842bfd9f78b33f3a2dffc26285a9023c2af8a211266cf9837",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "prompt": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/prompts/KeyF.txt",
+    "review": "visually_checked_whole_cat_and_reference_contact_regions_preserved",
+    "reference": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/reference/KeyF.jpg",
+    "referenceSha256": "23feac17c1f26322dd1876c15bb92d5a351aa745a9ff034991814e481f888055",
+    "promptSha256": "50069d7f2b76edca75db3ea50cc49317862c535edd5cb47db6f165131d07012f",
+    "attempts": 1,
+    "visualBoundary": "Static visual inspection only; not pixel-identical reference preservation or animation/transition acceptance.",
+    "output_exists": true
+  },
+  {
+    "id": "KeyG",
+    "tool": "image_gen.imagegen",
+    "toolPath": "$CODEX_HOME/generated_images/01a1639c-2dcd-7bd0-b0e4-d694a3beea6f/exec-e31ba53a-fba8-4b7b-bdbe-e3e2fe08ca44.png",
+    "output": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/frames/KeyG.png",
+    "sha256": "aa6963f7a1cee83a3ae1d86fd9db9b6e2b990e6d291b2b96c626970afab10385",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "prompt": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/prompts/KeyG.txt",
+    "review": "visually_checked_whole_cat_and_reference_contact_regions_preserved",
+    "reference": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/reference/KeyG.jpg",
+    "referenceSha256": "69922a6853a547f4b25468794762d8a9d8791d8b965ec3bee10e21688fe4d3be",
+    "promptSha256": "def873c9818eccd59dba8bab6cf54c66dbf5f8c97d95d24363aae4d9fb532579",
+    "attempts": 1,
+    "visualBoundary": "Static visual inspection only; not pixel-identical reference preservation or animation/transition acceptance.",
+    "output_exists": true
+  },
+  {
+    "id": "KeyH",
+    "tool": "image_gen.imagegen",
+    "toolPath": "$CODEX_HOME/generated_images/01a1639c-2dcd-7bd0-b0e4-d694a3beea6f/exec-bd0f0dc1-90a9-415d-bea2-43c0ac1d6fab.png",
+    "output": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/frames/KeyH.png",
+    "sha256": "c5c67d50bfc61bde0620c7e249a95790de14aa7da832d79c47265323132b489a",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "prompt": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/prompts/KeyH.txt",
+    "review": "visually_checked_whole_cat_and_reference_contact_regions_preserved",
+    "reference": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/reference/KeyH.jpg",
+    "referenceSha256": "a63b0c2b5d40aeb29426288f32abe582ab233e42054989dc9e26c0034ee6fb55",
+    "promptSha256": "055834998568ad17a44a7d31eb2c948ca8c7cf1d528784a475f6257e71ffd42a",
+    "attempts": 1,
+    "visualBoundary": "Static visual inspection only; not pixel-identical reference preservation or animation/transition acceptance.",
+    "output_exists": true
+  },
+  {
+    "id": "KeyJ",
+    "tool": "image_gen.imagegen",
+    "toolPath": "$CODEX_HOME/generated_images/01a1639c-2dcd-7bd0-b0e4-d694a3beea6f/exec-064ed606-605d-426e-80fb-95694c816f1f.png",
+    "output": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/frames/KeyJ.png",
+    "sha256": "fc66bf2bbf0a35d99506ddb109a94b666292d12709f43f8c3932b7057fbb8331",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "prompt": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/prompts/KeyJ.txt",
+    "review": "visually_checked_whole_cat_and_reference_contact_regions_preserved",
+    "reference": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/reference/KeyJ.jpg",
+    "referenceSha256": "81dcfa95eec05e52882a7ada562b7058aea96226cb450b8659be45d46df834c5",
+    "promptSha256": "d32061089939dd74a0f978b2ade9e31057ddb302b5de78c235708786640efa3d",
+    "attempts": 1,
+    "visualBoundary": "Static visual inspection only; not pixel-identical reference preservation or animation/transition acceptance.",
+    "output_exists": true
+  },
+  {
+    "id": "KeyK",
+    "tool": "image_gen.imagegen",
+    "toolPath": "$CODEX_HOME/generated_images/01a1639c-2dcd-7bd0-b0e4-d694a3beea6f/exec-6cebaf00-a6b8-4d96-9912-c4c918559e71.png",
+    "output": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/frames/KeyK.png",
+    "sha256": "84c29e621cea41933e927ca09f5e70bed553b22fe2cb58fe745455d36048357f",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "prompt": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/prompts/KeyK.txt",
+    "review": "visually_checked_whole_cat_and_reference_contact_regions_preserved",
+    "reference": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/reference/KeyK.jpg",
+    "referenceSha256": "111d373ba601e9e1684d0bda57a52d4776b24d623688d82b8b42239d931ff93b",
+    "promptSha256": "a69df20228396c25ffc5241884d25c73c59acce6215e3ec282b228b168ec00ff",
+    "attempts": 1,
+    "visualBoundary": "Static visual inspection only; not pixel-identical reference preservation or animation/transition acceptance.",
+    "output_exists": true
+  },
+  {
+    "id": "KeyW",
+    "tool": "image_gen.imagegen",
+    "toolPath": "$CODEX_HOME/generated_images/01a1639c-2dcd-7bd0-b0e4-d694a3beea6f/exec-07eadcd8-78b1-4ce3-896a-e6bf08197cfc.png",
+    "output": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/frames/KeyW.png",
+    "sha256": "7203c4270eebe863524818c02e739e92088b223aa6d38f1360de0eb7aa18a222",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "prompt": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/prompts/KeyW.txt",
+    "review": "visually_checked_whole_cat_and_reference_contact_regions_preserved",
+    "reference": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/reference/KeyW.jpg",
+    "referenceSha256": "29ee15415562ab0ed7eeda721a79d4df16fcd0d3ea46328a5c1fed95c3074a7d",
+    "promptSha256": "561354ebf8f539e134b6d981d94c883f221685dea92e97dd90080d8ef68f6978",
+    "attempts": 1,
+    "visualBoundary": "Static visual inspection only; not pixel-identical reference preservation or animation/transition acceptance.",
+    "output_exists": true
+  },
+  {
+    "id": "KeyE",
+    "tool": "image_gen.imagegen",
+    "toolPath": "$CODEX_HOME/generated_images/01a1639c-2dcd-7bd0-b0e4-d694a3beea6f/exec-653f92d1-6623-429c-86e8-751fb5106d6d.png",
+    "output": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/frames/KeyE.png",
+    "sha256": "04865577b33f5d8100ae9cc862e1af700215abf3bfa7c3321cbd2d4d85852ee9",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "prompt": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/prompts/KeyE.txt",
+    "review": "visually_checked_whole_cat_and_reference_contact_regions_preserved",
+    "reference": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/reference/KeyE.jpg",
+    "referenceSha256": "bb130d2b1d949dfbb9ef4eff035a4fc6129ea97bda19946fcf14cdf449e8c464",
+    "promptSha256": "42e2a84bd7e244dc37382232e632923972579c433c32c4eeead56399ea8efa71",
+    "attempts": 1,
+    "visualBoundary": "Static visual inspection only; not pixel-identical reference preservation or animation/transition acceptance.",
+    "output_exists": true
+  },
+  {
+    "id": "KeyT",
+    "tool": "image_gen.imagegen",
+    "toolPath": "$CODEX_HOME/generated_images/01a1639c-2dcd-7bd0-b0e4-d694a3beea6f/exec-74382906-93e7-4276-a40f-7d917628ca57.png",
+    "output": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/frames/KeyT.png",
+    "sha256": "9c038aff5c6ff38417dc8b4905bf5567b541cea6693909e152a4e14113e39ada",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "prompt": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/prompts/KeyT.txt",
+    "review": "visually_checked_whole_cat_and_reference_contact_regions_preserved",
+    "reference": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/reference/KeyT.jpg",
+    "referenceSha256": "b6193c68e0b547c4db355949df4f82f7e44c55fbc60232547e64a5f760ab8a77",
+    "promptSha256": "4cd7bc5148f9c8a1ac1bfdd31ece6dc7311e91c587c2b008ada3e586abc0b265",
+    "attempts": 1,
+    "visualBoundary": "Static visual inspection only; not pixel-identical reference preservation or animation/transition acceptance.",
+    "output_exists": true
+  },
+  {
+    "id": "KeyY",
+    "tool": "image_gen.imagegen",
+    "toolPath": "$CODEX_HOME/generated_images/01a1639c-2dcd-7bd0-b0e4-d694a3beea6f/exec-505b0ca5-7c76-4a8f-a0f5-2cdb0532fc6e.png",
+    "output": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/frames/KeyY.png",
+    "sha256": "aa2cf70a323551b3fa7a0c10087916bff7196ac48b8e39d61cb286dac6ab77af",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "prompt": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/prompts/KeyY.txt",
+    "review": "visually_checked_whole_cat_and_reference_contact_regions_preserved",
+    "reference": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/reference/KeyY.jpg",
+    "referenceSha256": "5ef0c40a03399660dbf5cc4cccb49c1e4620762a26881d6c33f3bd4cebd558b6",
+    "promptSha256": "e031e137e26c6a0e29d9f7eaa62e8aa87e559feaedffdb6b1ac8aca5b559b46b",
+    "attempts": 1,
+    "visualBoundary": "Static visual inspection only; not pixel-identical reference preservation or animation/transition acceptance.",
+    "output_exists": true
+  },
+  {
+    "id": "KeyU",
+    "tool": "image_gen.imagegen",
+    "toolPath": "$CODEX_HOME/generated_images/01a1639c-2dcd-7bd0-b0e4-d694a3beea6f/exec-ca794bbb-837c-4545-ae67-8faa41d9db37.png",
+    "output": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/frames/KeyU.png",
+    "sha256": "24173c4e17c197820f644fb8626b0b03aeba950ce41f27a2c15c2bd419407f57",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "prompt": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/prompts/KeyU.txt",
+    "review": "visually_checked_whole_cat_and_reference_contact_regions_preserved",
+    "reference": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/reference/KeyU.jpg",
+    "referenceSha256": "bbda1337caea06ff738708c75c75899cf56a22b8bea99200070fbd08b5db493a",
+    "promptSha256": "1759b3fed0b7951191387672511cd8a0306041b13cb3cb24728dcf79d6d2c99b",
+    "attempts": 1,
+    "visualBoundary": "Static visual inspection only; not pixel-identical reference preservation or animation/transition acceptance.",
+    "output_exists": true
+  },
+  {
+    "id": "KeyA-KeyG",
+    "tool": "image_gen.imagegen",
+    "toolPath": "$CODEX_HOME/generated_images/01a1639c-2dcd-7bd0-b0e4-d694a3beea6f/exec-58f16923-8d03-4273-8b5b-e887434355ae.png",
+    "output": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/frames/KeyA-KeyG.png",
+    "sha256": "2d78d2b180c546917a35899f476d092630c0ffc937200a2319bb3da41c7aa6f3",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "prompt": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/prompts/KeyA-KeyG.txt",
+    "review": "visually_checked_whole_cat_and_reference_contact_regions_preserved",
+    "reference": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/reference/KeyA-KeyG.jpg",
+    "referenceSha256": "79b7fa890a4448f0d740291e59b08b84ee85bb7100857debdc6a6e81b4fc0fd1",
+    "promptSha256": "56772fa8b88b96e4bf4ced467c608e1049da85435e30edea8854bbc7ca0ea920",
+    "attempts": 1,
+    "visualBoundary": "Static visual inspection only; not pixel-identical reference preservation or animation/transition acceptance.",
+    "output_exists": true
+  },
+  {
+    "id": "KeyA-KeyH",
+    "tool": "image_gen.imagegen",
+    "toolPath": "$CODEX_HOME/generated_images/01a1639c-2dcd-7bd0-b0e4-d694a3beea6f/exec-e2f2fbc4-9fa9-4204-9b0f-56be6655fc13.png",
+    "output": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/frames/KeyA-KeyH.png",
+    "sha256": "5339a20c8ca84e4a86e804bdf4f1fd126e37375c289a4f28dd4a82519b8c18d3",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "prompt": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/prompts/KeyA-KeyH.txt",
+    "review": "visually_checked_whole_cat_and_reference_contact_regions_preserved",
+    "reference": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/reference/KeyA-KeyH.jpg",
+    "referenceSha256": "69cfc9b06c8054f27a6526ff6077628b91abe1a73be1d9768a801d892470ef6d",
+    "promptSha256": "d301cd7a6455e7616c19545c1ec35550bd1d8b9ce92d06c45bcf91993105ef7c",
+    "attempts": 1,
+    "visualBoundary": "Static visual inspection only; not pixel-identical reference preservation or animation/transition acceptance.",
+    "output_exists": true
+  },
+  {
+    "id": "KeyA-KeyJ",
+    "tool": "image_gen.imagegen",
+    "toolPath": "$CODEX_HOME/generated_images/01a1639c-2dcd-7bd0-b0e4-d694a3beea6f/exec-5b6c5b62-7b64-4f59-88f8-bcc5e3cad45f.png",
+    "output": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/frames/KeyA-KeyJ.png",
+    "sha256": "542fbe4606cca6ba3b1501eea4ec22ef106172b64deff0eeebb29ce4af874857",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "prompt": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/prompts/KeyA-KeyJ.txt",
+    "review": "visually_checked_whole_cat_and_reference_contact_regions_preserved",
+    "reference": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/reference/KeyA-KeyJ.jpg",
+    "referenceSha256": "53c05274b33e6ce4ae9b8e1db2371149c5ca46442c9b96638e3739123580d858",
+    "promptSha256": "e7e2960aa76a90d0523847409c8c23b007277105bc54e83c64374b91405cd90e",
+    "attempts": 1,
+    "visualBoundary": "Static visual inspection only; not pixel-identical reference preservation or animation/transition acceptance.",
+    "output_exists": true
+  },
+  {
+    "id": "KeyA-KeyK",
+    "tool": "image_gen.imagegen",
+    "toolPath": "$CODEX_HOME/generated_images/01a1639c-2dcd-7bd0-b0e4-d694a3beea6f/exec-5cf5b75d-e92f-4955-858c-0c5508d5c6ca.png",
+    "output": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/frames/KeyA-KeyK.png",
+    "sha256": "c1fa1b2717105114766293f1e03c99ea04982835b7466c8ca8d673262b4748b6",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "prompt": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/prompts/KeyA-KeyK.txt",
+    "review": "visually_checked_whole_cat_and_reference_contact_regions_preserved",
+    "reference": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/reference/KeyA-KeyK.jpg",
+    "referenceSha256": "4932e8a6314e92c3424709b4b2df4ea2c99c4b3278771f823d3998be63916903",
+    "promptSha256": "09d51ccac9982984317aefc57fd357ec23cb15d09db84b66ae359992efa622dd",
+    "attempts": 1,
+    "visualBoundary": "Static visual inspection only; not pixel-identical reference preservation or animation/transition acceptance.",
+    "output_exists": true
+  },
+  {
+    "id": "KeyA-KeyT",
+    "tool": "image_gen.imagegen",
+    "toolPath": "$CODEX_HOME/generated_images/01a1639c-2dcd-7bd0-b0e4-d694a3beea6f/exec-19af76e4-3fff-44fc-9880-3c8cb4346862.png",
+    "output": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/frames/KeyA-KeyT.png",
+    "sha256": "a540528a0b33b7502abbc9b75dc0a30ae9944b054968852825cf41d67e2d7bbe",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "prompt": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/prompts/KeyA-KeyT.txt",
+    "review": "visually_checked_whole_cat_and_reference_contact_regions_preserved",
+    "reference": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/reference/KeyA-KeyT.jpg",
+    "referenceSha256": "79892a78fb2103a381801e88b621246f77597e81c4a638347fafad94322d9a99",
+    "promptSha256": "a7e5458dac4676471dba07c3af797d776517104ae0f2085139055fc818a633b2",
+    "attempts": 1,
+    "visualBoundary": "Static visual inspection only; not pixel-identical reference preservation or animation/transition acceptance.",
+    "output_exists": true
+  },
+  {
+    "id": "KeyA-KeyY",
+    "tool": "image_gen.imagegen",
+    "toolPath": "$CODEX_HOME/generated_images/01a1639c-2dcd-7bd0-b0e4-d694a3beea6f/exec-ba7aa75e-e98a-4cc2-a580-cd9aeeb4608e.png",
+    "output": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/frames/KeyA-KeyY.png",
+    "sha256": "289d8d743cc746d8e79f52a8a48104b04e311d7fcc023e0e5e953c7468137a55",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "prompt": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/prompts/KeyA-KeyY.txt",
+    "review": "visually_checked_whole_cat_and_reference_contact_regions_preserved",
+    "reference": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/reference/KeyA-KeyY.jpg",
+    "referenceSha256": "86b2fd5a73856ac86c54089a50f0dadafeee81e94eeaa71a014e8e0fa663b6af",
+    "promptSha256": "6f19952ecf644218eda9bb41002e009292ae51935d4900cf8dda33cfa369df7b",
+    "attempts": 1,
+    "visualBoundary": "Static visual inspection only; not pixel-identical reference preservation or animation/transition acceptance.",
+    "output_exists": true
+  },
+  {
+    "id": "KeyA-KeyU",
+    "tool": "image_gen.imagegen",
+    "toolPath": "$CODEX_HOME/generated_images/01a1639c-2dcd-7bd0-b0e4-d694a3beea6f/exec-af86c1d0-c1d7-4988-86da-211127a0a2dc.png",
+    "output": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/frames/KeyA-KeyU.png",
+    "sha256": "a796406de7570f4ada72a2bf2e1f1f4a985b368ecdc90733465042343be0ee09",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "prompt": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/prompts/KeyA-KeyU.txt",
+    "review": "visually_checked_whole_cat_and_reference_contact_regions_preserved",
+    "reference": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/reference/KeyA-KeyU.jpg",
+    "referenceSha256": "0b2f487ffa3d91a8119c47a20bfffada037c730086b58a0c61aa1cf43f19ac27",
+    "promptSha256": "7ba174434dac2e8f0d53542ecf9c246f367b726ebf3f9a2d9d9386df32f93a7b",
+    "attempts": 1,
+    "visualBoundary": "Static visual inspection only; not pixel-identical reference preservation or animation/transition acceptance.",
+    "output_exists": true
+  },
+  {
+    "id": "KeyS-KeyG",
+    "tool": "image_gen.imagegen",
+    "toolPath": "$CODEX_HOME/generated_images/01a1639c-2dcd-7bd0-b0e4-d694a3beea6f/exec-248e44d2-517a-4652-b413-fc4751306335.png",
+    "output": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/frames/KeyS-KeyG.png",
+    "sha256": "fd9629e22562542acafd7b09b4a501ec7ad15b06ce5f3d5c6486c3417b3d3fae",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "prompt": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/prompts/KeyS-KeyG.txt",
+    "review": "visually_checked_whole_cat_and_reference_contact_regions_preserved",
+    "reference": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/reference/KeyS-KeyG.jpg",
+    "referenceSha256": "3b6bee6bd1b882600a30bdd783317c40cf6531c568a342f7fcb148530f656167",
+    "promptSha256": "ffeee7173e4cb5ee475191ec5eac46635fba75f6eb4f201460eaf69705ffa6c3",
+    "attempts": 1,
+    "visualBoundary": "Static visual inspection only; not pixel-identical reference preservation or animation/transition acceptance.",
+    "output_exists": true
+  },
+  {
+    "id": "KeyS-KeyH",
+    "tool": "image_gen.imagegen",
+    "toolPath": "$CODEX_HOME/generated_images/01a1639c-2dcd-7bd0-b0e4-d694a3beea6f/exec-39c394a2-e15b-4ff2-bbf1-cfb8e6ba8b19.png",
+    "output": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/frames/KeyS-KeyH.png",
+    "sha256": "12d32d18a995fcbef93fbfb73be4435349487dc28ad703a749b2b67f5a5e3f5d",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "prompt": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/prompts/KeyS-KeyH.txt",
+    "review": "visually_checked_whole_cat_and_reference_contact_regions_preserved",
+    "reference": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/reference/KeyS-KeyH.jpg",
+    "referenceSha256": "9b741260c11009b5d9fc58487fe494a7988d2bafda6ae397577f262ac9aa2b78",
+    "promptSha256": "3a46974f15191063ca5171c54781260c5d6c523ef83b5cb7859afad98107fdb0",
+    "attempts": 1,
+    "visualBoundary": "Static visual inspection only; not pixel-identical reference preservation or animation/transition acceptance.",
+    "output_exists": true
+  },
+  {
+    "id": "KeyS-KeyJ",
+    "tool": "image_gen.imagegen",
+    "toolPath": "$CODEX_HOME/generated_images/01a1639c-2dcd-7bd0-b0e4-d694a3beea6f/exec-6183a863-e04c-4ef7-a9df-d0184ee8e2e0.png",
+    "output": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/frames/KeyS-KeyJ.png",
+    "sha256": "6664fc94a73def7d70f24e7942e14d476ebc9db243dbbb77c7b60117e0ad6cbb",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "prompt": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/prompts/KeyS-KeyJ.txt",
+    "review": "visually_checked_whole_cat_and_reference_contact_regions_preserved",
+    "reference": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/reference/KeyS-KeyJ.jpg",
+    "referenceSha256": "17c1885180c39130b339fd716db280cbc36aeb94615fce533a1b946d88e71832",
+    "promptSha256": "a44831b49bb494116201ebc63f428d173980f0c37416498f5fb9fc928692886f",
+    "attempts": 1,
+    "visualBoundary": "Static visual inspection only; not pixel-identical reference preservation or animation/transition acceptance.",
+    "output_exists": true
+  },
+  {
+    "id": "KeyS-KeyK",
+    "tool": "image_gen.imagegen",
+    "toolPath": "$CODEX_HOME/generated_images/01a1639c-2dcd-7bd0-b0e4-d694a3beea6f/exec-47e4cfba-80a4-46cc-8feb-e051f5c47592.png",
+    "output": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/frames/KeyS-KeyK.png",
+    "sha256": "0d0109a153fd864e9ede9042ca23c48316489e8c38c7236898ff736bca1a9bee",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "prompt": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/prompts/KeyS-KeyK.txt",
+    "review": "visually_checked_whole_cat_and_reference_contact_regions_preserved",
+    "reference": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/reference/KeyS-KeyK.jpg",
+    "referenceSha256": "822d68b78c0fe316fe4b69bde42a2ce1192eeb82fc3fc3c2b66aa89277fdb629",
+    "promptSha256": "f4cfd3aba2496c98b27f1b76459c3ef96c45b330bc88082071d790116efebc32",
+    "attempts": 1,
+    "visualBoundary": "Static visual inspection only; not pixel-identical reference preservation or animation/transition acceptance.",
+    "output_exists": true
+  },
+  {
+    "id": "KeyS-KeyT",
+    "tool": "image_gen.imagegen",
+    "toolPath": "$CODEX_HOME/generated_images/01a1639c-2dcd-7bd0-b0e4-d694a3beea6f/exec-2b041b70-96ce-48c8-9de9-04bc2c04eaa0.png",
+    "output": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/frames/KeyS-KeyT.png",
+    "sha256": "1376682c1d2339abdaa2d437f968513edc2a0592d1966b04e2535d4a35b3de74",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "prompt": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/prompts/KeyS-KeyT.txt",
+    "review": "visually_checked_whole_cat_and_reference_contact_regions_preserved",
+    "reference": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/reference/KeyS-KeyT.jpg",
+    "referenceSha256": "4e800369c9fe1de23fc7b79a966cce6bd47f5e0fdfb61aa8e946c63007736ab1",
+    "promptSha256": "8ddbcb1aa628c28f5b873e9bdfd952eb03ae88b07e6362a428ff409cc67a6d18",
+    "attempts": 1,
+    "visualBoundary": "Static visual inspection only; not pixel-identical reference preservation or animation/transition acceptance.",
+    "output_exists": true
+  },
+  {
+    "id": "KeyS-KeyY",
+    "tool": "image_gen.imagegen",
+    "toolPath": "$CODEX_HOME/generated_images/01a1639c-2dcd-7bd0-b0e4-d694a3beea6f/exec-8f62b749-0b8b-4b23-8986-90aa53bbbefa.png",
+    "output": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/frames/KeyS-KeyY.png",
+    "sha256": "c0d04cb53f64f2855439704cec6a19686eec7e85ba97523c465484a5494507bc",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "prompt": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/prompts/KeyS-KeyY.txt",
+    "review": "visually_checked_whole_cat_and_reference_contact_regions_preserved",
+    "reference": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/reference/KeyS-KeyY.jpg",
+    "referenceSha256": "c744f5778972adb600b292ca7fc2be81b8f95e357d2797707a2f106d77c6d9d6",
+    "promptSha256": "e5ecd1ac8f426875c2a920eb725a0137ea6059ff99e531d836aad3878ba5e9b6",
+    "attempts": 1,
+    "visualBoundary": "Static visual inspection only; not pixel-identical reference preservation or animation/transition acceptance.",
+    "output_exists": true
+  },
+  {
+    "id": "KeyS-KeyU",
+    "tool": "image_gen.imagegen",
+    "toolPath": "$CODEX_HOME/generated_images/01a1639c-2dcd-7bd0-b0e4-d694a3beea6f/exec-e22b8f27-cbe0-44ef-bf88-f490ab35cd99.png",
+    "output": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/frames/KeyS-KeyU.png",
+    "sha256": "db0267f4a8a29ff11a85cc28e3ba1b5b2df012d0748205d3697e41beae3c34a8",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "prompt": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/prompts/KeyS-KeyU.txt",
+    "review": "visually_checked_whole_cat_and_reference_contact_regions_preserved",
+    "reference": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/reference/KeyS-KeyU.jpg",
+    "referenceSha256": "5a4f385cbc21b2a434e047ea72d17d28845762eaab5f6eea8eb5a025df175296",
+    "promptSha256": "55b2a43fed25c14e566fd8d2b83b7a73bcfc041383b389dcb0f2a1ccdc367e9f",
+    "attempts": 1,
+    "visualBoundary": "Static visual inspection only; not pixel-identical reference preservation or animation/transition acceptance.",
+    "output_exists": true
+  },
+  {
+    "id": "KeyD-KeyG",
+    "tool": "image_gen.imagegen",
+    "toolPath": "$CODEX_HOME/generated_images/01a1639c-2dcd-7bd0-b0e4-d694a3beea6f/exec-0d4ddb4d-9f3b-4791-b21b-67c97d876bbc.png",
+    "output": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/frames/KeyD-KeyG.png",
+    "sha256": "36da301291ab3bf049a0d4d8f287c45becf0bb3d6ad8f14246d6161f904680c7",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "prompt": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/prompts/KeyD-KeyG.txt",
+    "review": "visually_checked_whole_cat_and_reference_contact_regions_preserved",
+    "reference": "/Users/levi/wrksp/miao-beat/design/whole-cat-frames-2026-10-25/reference/KeyD-KeyG.jpg",
+    "referenceSha256": "eb477c17793c4885d59b861f5b9718743c55a637d26fc3a5fb2469ad04a09a2b",
+    "promptSha256": "37159051c50bcc42b3b387e819235f4b3d0c04db77a3291fb5cfd037a103bd2c",
+    "attempts": 1,
+    "visualBoundary": "Static visual inspection only; not pixel-identical reference preservation or animation/transition acceptance.",
+    "output_exists": true
+  }
+]

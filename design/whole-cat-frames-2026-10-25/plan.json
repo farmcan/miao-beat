@@ -1,0 +1,1546 @@
+{
+  "date": "2026-10-25",
+  "constraint": "Every deployed pose is one complete cat+arms+keyboard image; no separated limb composition",
+  "frames": [
+    {
+      "id": "idle",
+      "keys": []
+    },
+    {
+      "id": "KeyA",
+      "keys": [
+        {
+          "code": "KeyA",
+          "key": "A",
+          "midi": 60,
+          "label": "1",
+          "sub": "C4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "C4",
+          "frequency": 261.6255653005986,
+          "paw": "left"
+        }
+      ]
+    },
+    {
+      "id": "KeyS",
+      "keys": [
+        {
+          "code": "KeyS",
+          "key": "S",
+          "midi": 62,
+          "label": "2",
+          "sub": "D4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "D4",
+          "frequency": 293.6647679174076,
+          "paw": "left"
+        }
+      ]
+    },
+    {
+      "id": "KeyD",
+      "keys": [
+        {
+          "code": "KeyD",
+          "key": "D",
+          "midi": 64,
+          "label": "3",
+          "sub": "E4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "E4",
+          "frequency": 329.6275569128699,
+          "paw": "left"
+        }
+      ]
+    },
+    {
+      "id": "KeyF",
+      "keys": [
+        {
+          "code": "KeyF",
+          "key": "F",
+          "midi": 65,
+          "label": "4",
+          "sub": "F4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "F4",
+          "frequency": 349.2282314330039,
+          "paw": "left"
+        }
+      ]
+    },
+    {
+      "id": "KeyG",
+      "keys": [
+        {
+          "code": "KeyG",
+          "key": "G",
+          "midi": 67,
+          "label": "5",
+          "sub": "G4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "G4",
+          "frequency": 391.99543598174927,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyH",
+      "keys": [
+        {
+          "code": "KeyH",
+          "key": "H",
+          "midi": 69,
+          "label": "6",
+          "sub": "A4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "A4",
+          "frequency": 440,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyJ",
+      "keys": [
+        {
+          "code": "KeyJ",
+          "key": "J",
+          "midi": 71,
+          "label": "7",
+          "sub": "B4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "B4",
+          "frequency": 493.8833012561241,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyK",
+      "keys": [
+        {
+          "code": "KeyK",
+          "key": "K",
+          "midi": 72,
+          "label": "1̇",
+          "sub": "C5",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "C5",
+          "frequency": 523.2511306011972,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyW",
+      "keys": [
+        {
+          "code": "KeyW",
+          "key": "W",
+          "midi": 61,
+          "label": "♯1",
+          "sub": "C♯4",
+          "position": 1,
+          "black": true,
+          "kind": "note",
+          "id": "C♯4",
+          "frequency": 277.1826309768721,
+          "paw": "left"
+        }
+      ]
+    },
+    {
+      "id": "KeyE",
+      "keys": [
+        {
+          "code": "KeyE",
+          "key": "E",
+          "midi": 63,
+          "label": "♯2",
+          "sub": "D♯4",
+          "position": 2,
+          "black": true,
+          "kind": "note",
+          "id": "D♯4",
+          "frequency": 311.12698372208087,
+          "paw": "left"
+        }
+      ]
+    },
+    {
+      "id": "KeyT",
+      "keys": [
+        {
+          "code": "KeyT",
+          "key": "T",
+          "midi": 66,
+          "label": "♯4",
+          "sub": "F♯4",
+          "position": 4,
+          "black": true,
+          "kind": "note",
+          "id": "F♯4",
+          "frequency": 369.99442271163446,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyY",
+      "keys": [
+        {
+          "code": "KeyY",
+          "key": "Y",
+          "midi": 68,
+          "label": "♯5",
+          "sub": "G♯4",
+          "position": 5,
+          "black": true,
+          "kind": "note",
+          "id": "G♯4",
+          "frequency": 415.3046975799451,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyU",
+      "keys": [
+        {
+          "code": "KeyU",
+          "key": "U",
+          "midi": 70,
+          "label": "♭7",
+          "sub": "B♭4",
+          "position": 6,
+          "black": true,
+          "kind": "note",
+          "id": "B♭4",
+          "frequency": 466.1637615180899,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyA-KeyG",
+      "keys": [
+        {
+          "code": "KeyA",
+          "key": "A",
+          "midi": 60,
+          "label": "1",
+          "sub": "C4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "C4",
+          "frequency": 261.6255653005986,
+          "paw": "left"
+        },
+        {
+          "code": "KeyG",
+          "key": "G",
+          "midi": 67,
+          "label": "5",
+          "sub": "G4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "G4",
+          "frequency": 391.99543598174927,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyA-KeyH",
+      "keys": [
+        {
+          "code": "KeyA",
+          "key": "A",
+          "midi": 60,
+          "label": "1",
+          "sub": "C4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "C4",
+          "frequency": 261.6255653005986,
+          "paw": "left"
+        },
+        {
+          "code": "KeyH",
+          "key": "H",
+          "midi": 69,
+          "label": "6",
+          "sub": "A4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "A4",
+          "frequency": 440,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyA-KeyJ",
+      "keys": [
+        {
+          "code": "KeyA",
+          "key": "A",
+          "midi": 60,
+          "label": "1",
+          "sub": "C4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "C4",
+          "frequency": 261.6255653005986,
+          "paw": "left"
+        },
+        {
+          "code": "KeyJ",
+          "key": "J",
+          "midi": 71,
+          "label": "7",
+          "sub": "B4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "B4",
+          "frequency": 493.8833012561241,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyA-KeyK",
+      "keys": [
+        {
+          "code": "KeyA",
+          "key": "A",
+          "midi": 60,
+          "label": "1",
+          "sub": "C4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "C4",
+          "frequency": 261.6255653005986,
+          "paw": "left"
+        },
+        {
+          "code": "KeyK",
+          "key": "K",
+          "midi": 72,
+          "label": "1̇",
+          "sub": "C5",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "C5",
+          "frequency": 523.2511306011972,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyA-KeyT",
+      "keys": [
+        {
+          "code": "KeyA",
+          "key": "A",
+          "midi": 60,
+          "label": "1",
+          "sub": "C4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "C4",
+          "frequency": 261.6255653005986,
+          "paw": "left"
+        },
+        {
+          "code": "KeyT",
+          "key": "T",
+          "midi": 66,
+          "label": "♯4",
+          "sub": "F♯4",
+          "position": 4,
+          "black": true,
+          "kind": "note",
+          "id": "F♯4",
+          "frequency": 369.99442271163446,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyA-KeyY",
+      "keys": [
+        {
+          "code": "KeyA",
+          "key": "A",
+          "midi": 60,
+          "label": "1",
+          "sub": "C4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "C4",
+          "frequency": 261.6255653005986,
+          "paw": "left"
+        },
+        {
+          "code": "KeyY",
+          "key": "Y",
+          "midi": 68,
+          "label": "♯5",
+          "sub": "G♯4",
+          "position": 5,
+          "black": true,
+          "kind": "note",
+          "id": "G♯4",
+          "frequency": 415.3046975799451,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyA-KeyU",
+      "keys": [
+        {
+          "code": "KeyA",
+          "key": "A",
+          "midi": 60,
+          "label": "1",
+          "sub": "C4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "C4",
+          "frequency": 261.6255653005986,
+          "paw": "left"
+        },
+        {
+          "code": "KeyU",
+          "key": "U",
+          "midi": 70,
+          "label": "♭7",
+          "sub": "B♭4",
+          "position": 6,
+          "black": true,
+          "kind": "note",
+          "id": "B♭4",
+          "frequency": 466.1637615180899,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyS-KeyG",
+      "keys": [
+        {
+          "code": "KeyS",
+          "key": "S",
+          "midi": 62,
+          "label": "2",
+          "sub": "D4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "D4",
+          "frequency": 293.6647679174076,
+          "paw": "left"
+        },
+        {
+          "code": "KeyG",
+          "key": "G",
+          "midi": 67,
+          "label": "5",
+          "sub": "G4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "G4",
+          "frequency": 391.99543598174927,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyS-KeyH",
+      "keys": [
+        {
+          "code": "KeyS",
+          "key": "S",
+          "midi": 62,
+          "label": "2",
+          "sub": "D4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "D4",
+          "frequency": 293.6647679174076,
+          "paw": "left"
+        },
+        {
+          "code": "KeyH",
+          "key": "H",
+          "midi": 69,
+          "label": "6",
+          "sub": "A4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "A4",
+          "frequency": 440,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyS-KeyJ",
+      "keys": [
+        {
+          "code": "KeyS",
+          "key": "S",
+          "midi": 62,
+          "label": "2",
+          "sub": "D4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "D4",
+          "frequency": 293.6647679174076,
+          "paw": "left"
+        },
+        {
+          "code": "KeyJ",
+          "key": "J",
+          "midi": 71,
+          "label": "7",
+          "sub": "B4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "B4",
+          "frequency": 493.8833012561241,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyS-KeyK",
+      "keys": [
+        {
+          "code": "KeyS",
+          "key": "S",
+          "midi": 62,
+          "label": "2",
+          "sub": "D4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "D4",
+          "frequency": 293.6647679174076,
+          "paw": "left"
+        },
+        {
+          "code": "KeyK",
+          "key": "K",
+          "midi": 72,
+          "label": "1̇",
+          "sub": "C5",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "C5",
+          "frequency": 523.2511306011972,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyS-KeyT",
+      "keys": [
+        {
+          "code": "KeyS",
+          "key": "S",
+          "midi": 62,
+          "label": "2",
+          "sub": "D4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "D4",
+          "frequency": 293.6647679174076,
+          "paw": "left"
+        },
+        {
+          "code": "KeyT",
+          "key": "T",
+          "midi": 66,
+          "label": "♯4",
+          "sub": "F♯4",
+          "position": 4,
+          "black": true,
+          "kind": "note",
+          "id": "F♯4",
+          "frequency": 369.99442271163446,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyS-KeyY",
+      "keys": [
+        {
+          "code": "KeyS",
+          "key": "S",
+          "midi": 62,
+          "label": "2",
+          "sub": "D4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "D4",
+          "frequency": 293.6647679174076,
+          "paw": "left"
+        },
+        {
+          "code": "KeyY",
+          "key": "Y",
+          "midi": 68,
+          "label": "♯5",
+          "sub": "G♯4",
+          "position": 5,
+          "black": true,
+          "kind": "note",
+          "id": "G♯4",
+          "frequency": 415.3046975799451,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyS-KeyU",
+      "keys": [
+        {
+          "code": "KeyS",
+          "key": "S",
+          "midi": 62,
+          "label": "2",
+          "sub": "D4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "D4",
+          "frequency": 293.6647679174076,
+          "paw": "left"
+        },
+        {
+          "code": "KeyU",
+          "key": "U",
+          "midi": 70,
+          "label": "♭7",
+          "sub": "B♭4",
+          "position": 6,
+          "black": true,
+          "kind": "note",
+          "id": "B♭4",
+          "frequency": 466.1637615180899,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyD-KeyG",
+      "keys": [
+        {
+          "code": "KeyD",
+          "key": "D",
+          "midi": 64,
+          "label": "3",
+          "sub": "E4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "E4",
+          "frequency": 329.6275569128699,
+          "paw": "left"
+        },
+        {
+          "code": "KeyG",
+          "key": "G",
+          "midi": 67,
+          "label": "5",
+          "sub": "G4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "G4",
+          "frequency": 391.99543598174927,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyD-KeyH",
+      "keys": [
+        {
+          "code": "KeyD",
+          "key": "D",
+          "midi": 64,
+          "label": "3",
+          "sub": "E4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "E4",
+          "frequency": 329.6275569128699,
+          "paw": "left"
+        },
+        {
+          "code": "KeyH",
+          "key": "H",
+          "midi": 69,
+          "label": "6",
+          "sub": "A4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "A4",
+          "frequency": 440,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyD-KeyJ",
+      "keys": [
+        {
+          "code": "KeyD",
+          "key": "D",
+          "midi": 64,
+          "label": "3",
+          "sub": "E4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "E4",
+          "frequency": 329.6275569128699,
+          "paw": "left"
+        },
+        {
+          "code": "KeyJ",
+          "key": "J",
+          "midi": 71,
+          "label": "7",
+          "sub": "B4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "B4",
+          "frequency": 493.8833012561241,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyD-KeyK",
+      "keys": [
+        {
+          "code": "KeyD",
+          "key": "D",
+          "midi": 64,
+          "label": "3",
+          "sub": "E4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "E4",
+          "frequency": 329.6275569128699,
+          "paw": "left"
+        },
+        {
+          "code": "KeyK",
+          "key": "K",
+          "midi": 72,
+          "label": "1̇",
+          "sub": "C5",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "C5",
+          "frequency": 523.2511306011972,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyD-KeyT",
+      "keys": [
+        {
+          "code": "KeyD",
+          "key": "D",
+          "midi": 64,
+          "label": "3",
+          "sub": "E4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "E4",
+          "frequency": 329.6275569128699,
+          "paw": "left"
+        },
+        {
+          "code": "KeyT",
+          "key": "T",
+          "midi": 66,
+          "label": "♯4",
+          "sub": "F♯4",
+          "position": 4,
+          "black": true,
+          "kind": "note",
+          "id": "F♯4",
+          "frequency": 369.99442271163446,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyD-KeyY",
+      "keys": [
+        {
+          "code": "KeyD",
+          "key": "D",
+          "midi": 64,
+          "label": "3",
+          "sub": "E4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "E4",
+          "frequency": 329.6275569128699,
+          "paw": "left"
+        },
+        {
+          "code": "KeyY",
+          "key": "Y",
+          "midi": 68,
+          "label": "♯5",
+          "sub": "G♯4",
+          "position": 5,
+          "black": true,
+          "kind": "note",
+          "id": "G♯4",
+          "frequency": 415.3046975799451,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyD-KeyU",
+      "keys": [
+        {
+          "code": "KeyD",
+          "key": "D",
+          "midi": 64,
+          "label": "3",
+          "sub": "E4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "E4",
+          "frequency": 329.6275569128699,
+          "paw": "left"
+        },
+        {
+          "code": "KeyU",
+          "key": "U",
+          "midi": 70,
+          "label": "♭7",
+          "sub": "B♭4",
+          "position": 6,
+          "black": true,
+          "kind": "note",
+          "id": "B♭4",
+          "frequency": 466.1637615180899,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyF-KeyG",
+      "keys": [
+        {
+          "code": "KeyF",
+          "key": "F",
+          "midi": 65,
+          "label": "4",
+          "sub": "F4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "F4",
+          "frequency": 349.2282314330039,
+          "paw": "left"
+        },
+        {
+          "code": "KeyG",
+          "key": "G",
+          "midi": 67,
+          "label": "5",
+          "sub": "G4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "G4",
+          "frequency": 391.99543598174927,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyF-KeyH",
+      "keys": [
+        {
+          "code": "KeyF",
+          "key": "F",
+          "midi": 65,
+          "label": "4",
+          "sub": "F4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "F4",
+          "frequency": 349.2282314330039,
+          "paw": "left"
+        },
+        {
+          "code": "KeyH",
+          "key": "H",
+          "midi": 69,
+          "label": "6",
+          "sub": "A4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "A4",
+          "frequency": 440,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyF-KeyJ",
+      "keys": [
+        {
+          "code": "KeyF",
+          "key": "F",
+          "midi": 65,
+          "label": "4",
+          "sub": "F4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "F4",
+          "frequency": 349.2282314330039,
+          "paw": "left"
+        },
+        {
+          "code": "KeyJ",
+          "key": "J",
+          "midi": 71,
+          "label": "7",
+          "sub": "B4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "B4",
+          "frequency": 493.8833012561241,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyF-KeyK",
+      "keys": [
+        {
+          "code": "KeyF",
+          "key": "F",
+          "midi": 65,
+          "label": "4",
+          "sub": "F4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "F4",
+          "frequency": 349.2282314330039,
+          "paw": "left"
+        },
+        {
+          "code": "KeyK",
+          "key": "K",
+          "midi": 72,
+          "label": "1̇",
+          "sub": "C5",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "C5",
+          "frequency": 523.2511306011972,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyF-KeyT",
+      "keys": [
+        {
+          "code": "KeyF",
+          "key": "F",
+          "midi": 65,
+          "label": "4",
+          "sub": "F4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "F4",
+          "frequency": 349.2282314330039,
+          "paw": "left"
+        },
+        {
+          "code": "KeyT",
+          "key": "T",
+          "midi": 66,
+          "label": "♯4",
+          "sub": "F♯4",
+          "position": 4,
+          "black": true,
+          "kind": "note",
+          "id": "F♯4",
+          "frequency": 369.99442271163446,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyF-KeyY",
+      "keys": [
+        {
+          "code": "KeyF",
+          "key": "F",
+          "midi": 65,
+          "label": "4",
+          "sub": "F4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "F4",
+          "frequency": 349.2282314330039,
+          "paw": "left"
+        },
+        {
+          "code": "KeyY",
+          "key": "Y",
+          "midi": 68,
+          "label": "♯5",
+          "sub": "G♯4",
+          "position": 5,
+          "black": true,
+          "kind": "note",
+          "id": "G♯4",
+          "frequency": 415.3046975799451,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyF-KeyU",
+      "keys": [
+        {
+          "code": "KeyF",
+          "key": "F",
+          "midi": 65,
+          "label": "4",
+          "sub": "F4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "F4",
+          "frequency": 349.2282314330039,
+          "paw": "left"
+        },
+        {
+          "code": "KeyU",
+          "key": "U",
+          "midi": 70,
+          "label": "♭7",
+          "sub": "B♭4",
+          "position": 6,
+          "black": true,
+          "kind": "note",
+          "id": "B♭4",
+          "frequency": 466.1637615180899,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyW-KeyG",
+      "keys": [
+        {
+          "code": "KeyW",
+          "key": "W",
+          "midi": 61,
+          "label": "♯1",
+          "sub": "C♯4",
+          "position": 1,
+          "black": true,
+          "kind": "note",
+          "id": "C♯4",
+          "frequency": 277.1826309768721,
+          "paw": "left"
+        },
+        {
+          "code": "KeyG",
+          "key": "G",
+          "midi": 67,
+          "label": "5",
+          "sub": "G4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "G4",
+          "frequency": 391.99543598174927,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyW-KeyH",
+      "keys": [
+        {
+          "code": "KeyW",
+          "key": "W",
+          "midi": 61,
+          "label": "♯1",
+          "sub": "C♯4",
+          "position": 1,
+          "black": true,
+          "kind": "note",
+          "id": "C♯4",
+          "frequency": 277.1826309768721,
+          "paw": "left"
+        },
+        {
+          "code": "KeyH",
+          "key": "H",
+          "midi": 69,
+          "label": "6",
+          "sub": "A4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "A4",
+          "frequency": 440,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyW-KeyJ",
+      "keys": [
+        {
+          "code": "KeyW",
+          "key": "W",
+          "midi": 61,
+          "label": "♯1",
+          "sub": "C♯4",
+          "position": 1,
+          "black": true,
+          "kind": "note",
+          "id": "C♯4",
+          "frequency": 277.1826309768721,
+          "paw": "left"
+        },
+        {
+          "code": "KeyJ",
+          "key": "J",
+          "midi": 71,
+          "label": "7",
+          "sub": "B4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "B4",
+          "frequency": 493.8833012561241,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyW-KeyK",
+      "keys": [
+        {
+          "code": "KeyW",
+          "key": "W",
+          "midi": 61,
+          "label": "♯1",
+          "sub": "C♯4",
+          "position": 1,
+          "black": true,
+          "kind": "note",
+          "id": "C♯4",
+          "frequency": 277.1826309768721,
+          "paw": "left"
+        },
+        {
+          "code": "KeyK",
+          "key": "K",
+          "midi": 72,
+          "label": "1̇",
+          "sub": "C5",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "C5",
+          "frequency": 523.2511306011972,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyW-KeyT",
+      "keys": [
+        {
+          "code": "KeyW",
+          "key": "W",
+          "midi": 61,
+          "label": "♯1",
+          "sub": "C♯4",
+          "position": 1,
+          "black": true,
+          "kind": "note",
+          "id": "C♯4",
+          "frequency": 277.1826309768721,
+          "paw": "left"
+        },
+        {
+          "code": "KeyT",
+          "key": "T",
+          "midi": 66,
+          "label": "♯4",
+          "sub": "F♯4",
+          "position": 4,
+          "black": true,
+          "kind": "note",
+          "id": "F♯4",
+          "frequency": 369.99442271163446,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyW-KeyY",
+      "keys": [
+        {
+          "code": "KeyW",
+          "key": "W",
+          "midi": 61,
+          "label": "♯1",
+          "sub": "C♯4",
+          "position": 1,
+          "black": true,
+          "kind": "note",
+          "id": "C♯4",
+          "frequency": 277.1826309768721,
+          "paw": "left"
+        },
+        {
+          "code": "KeyY",
+          "key": "Y",
+          "midi": 68,
+          "label": "♯5",
+          "sub": "G♯4",
+          "position": 5,
+          "black": true,
+          "kind": "note",
+          "id": "G♯4",
+          "frequency": 415.3046975799451,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyW-KeyU",
+      "keys": [
+        {
+          "code": "KeyW",
+          "key": "W",
+          "midi": 61,
+          "label": "♯1",
+          "sub": "C♯4",
+          "position": 1,
+          "black": true,
+          "kind": "note",
+          "id": "C♯4",
+          "frequency": 277.1826309768721,
+          "paw": "left"
+        },
+        {
+          "code": "KeyU",
+          "key": "U",
+          "midi": 70,
+          "label": "♭7",
+          "sub": "B♭4",
+          "position": 6,
+          "black": true,
+          "kind": "note",
+          "id": "B♭4",
+          "frequency": 466.1637615180899,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyE-KeyG",
+      "keys": [
+        {
+          "code": "KeyE",
+          "key": "E",
+          "midi": 63,
+          "label": "♯2",
+          "sub": "D♯4",
+          "position": 2,
+          "black": true,
+          "kind": "note",
+          "id": "D♯4",
+          "frequency": 311.12698372208087,
+          "paw": "left"
+        },
+        {
+          "code": "KeyG",
+          "key": "G",
+          "midi": 67,
+          "label": "5",
+          "sub": "G4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "G4",
+          "frequency": 391.99543598174927,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyE-KeyH",
+      "keys": [
+        {
+          "code": "KeyE",
+          "key": "E",
+          "midi": 63,
+          "label": "♯2",
+          "sub": "D♯4",
+          "position": 2,
+          "black": true,
+          "kind": "note",
+          "id": "D♯4",
+          "frequency": 311.12698372208087,
+          "paw": "left"
+        },
+        {
+          "code": "KeyH",
+          "key": "H",
+          "midi": 69,
+          "label": "6",
+          "sub": "A4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "A4",
+          "frequency": 440,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyE-KeyJ",
+      "keys": [
+        {
+          "code": "KeyE",
+          "key": "E",
+          "midi": 63,
+          "label": "♯2",
+          "sub": "D♯4",
+          "position": 2,
+          "black": true,
+          "kind": "note",
+          "id": "D♯4",
+          "frequency": 311.12698372208087,
+          "paw": "left"
+        },
+        {
+          "code": "KeyJ",
+          "key": "J",
+          "midi": 71,
+          "label": "7",
+          "sub": "B4",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "B4",
+          "frequency": 493.8833012561241,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyE-KeyK",
+      "keys": [
+        {
+          "code": "KeyE",
+          "key": "E",
+          "midi": 63,
+          "label": "♯2",
+          "sub": "D♯4",
+          "position": 2,
+          "black": true,
+          "kind": "note",
+          "id": "D♯4",
+          "frequency": 311.12698372208087,
+          "paw": "left"
+        },
+        {
+          "code": "KeyK",
+          "key": "K",
+          "midi": 72,
+          "label": "1̇",
+          "sub": "C5",
+          "position": 0,
+          "black": false,
+          "kind": "note",
+          "id": "C5",
+          "frequency": 523.2511306011972,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyE-KeyT",
+      "keys": [
+        {
+          "code": "KeyE",
+          "key": "E",
+          "midi": 63,
+          "label": "♯2",
+          "sub": "D♯4",
+          "position": 2,
+          "black": true,
+          "kind": "note",
+          "id": "D♯4",
+          "frequency": 311.12698372208087,
+          "paw": "left"
+        },
+        {
+          "code": "KeyT",
+          "key": "T",
+          "midi": 66,
+          "label": "♯4",
+          "sub": "F♯4",
+          "position": 4,
+          "black": true,
+          "kind": "note",
+          "id": "F♯4",
+          "frequency": 369.99442271163446,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyE-KeyY",
+      "keys": [
+        {
+          "code": "KeyE",
+          "key": "E",
+          "midi": 63,
+          "label": "♯2",
+          "sub": "D♯4",
+          "position": 2,
+          "black": true,
+          "kind": "note",
+          "id": "D♯4",
+          "frequency": 311.12698372208087,
+          "paw": "left"
+        },
+        {
+          "code": "KeyY",
+          "key": "Y",
+          "midi": 68,
+          "label": "♯5",
+          "sub": "G♯4",
+          "position": 5,
+          "black": true,
+          "kind": "note",
+          "id": "G♯4",
+          "frequency": 415.3046975799451,
+          "paw": "right"
+        }
+      ]
+    },
+    {
+      "id": "KeyE-KeyU",
+      "keys": [
+        {
+          "code": "KeyE",
+          "key": "E",
+          "midi": 63,
+          "label": "♯2",
+          "sub": "D♯4",
+          "position": 2,
+          "black": true,
+          "kind": "note",
+          "id": "D♯4",
+          "frequency": 311.12698372208087,
+          "paw": "left"
+        },
+        {
+          "code": "KeyU",
+          "key": "U",
+          "midi": 70,
+          "label": "♭7",
+          "sub": "B♭4",
+          "position": 6,
+          "black": true,
+          "kind": "note",
+          "id": "B♭4",
+          "frequency": 466.1637615180899,
+          "paw": "right"
+        }
+      ]
+    }
+  ]
+}

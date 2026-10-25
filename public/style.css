@@ -446,5 +446,8 @@ body.performance-mode .recording-strip { grid-column: 2; grid-row: 6; padding: 1
   .guide-track { will-change: auto; }
 }
 
-.precise-cat-canvas { mix-blend-mode: darken; }
-.scene[data-precise-character] { background: var(--paper); }
+
+.full-frame-cat-canvas { mix-blend-mode: darken; }
+.scene[data-complete-character] { background: var(--paper); }
+.whole-frame-message { position: absolute; inset: auto 12px 22px; margin: 0; color: var(--muted); text-align: center; font-size: 11px; }
+.whole-frame-message[hidden] { display: none; }

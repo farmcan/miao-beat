@@ -1,0 +1,46 @@
+{
+  "tool": "built-in image_gen.imagegen",
+  "mode": "whole-image edit",
+  "items": [
+    {
+      "id": "idle",
+      "file": "frames/idle.png",
+      "source_output_file": "exec-4d0f3f5c-58a4-478b-957a-808aa45d26e7.png",
+      "prompt": "prompts/idle.txt",
+      "sha256": "9f06920cbbdbb80aedd2d690baa27c00ecd2885bfce41edb0a05bf3ce9c390a8",
+      "width": 1254,
+      "height": 1254,
+      "review": "Complete scene, integrated shoulders and specified contact/rest retained; discrete-pose naturalness remains user acceptance"
+    },
+    {
+      "id": "KeyA",
+      "file": "frames/KeyA.png",
+      "source_output_file": "exec-0132cd19-488c-41c0-bbfe-aed5ac9069d2.png",
+      "prompt": "prompts/KeyA.txt",
+      "sha256": "21a692972fdc13a9528c89372f02607e685159a3575b185b7680d11340204eb7",
+      "width": 1254,
+      "height": 1254,
+      "review": "Complete scene, integrated shoulders and specified contact/rest retained; discrete-pose naturalness remains user acceptance"
+    },
+    {
+      "id": "KeyS",
+      "file": "frames/KeyS.png",
+      "source_output_file": "exec-5c5be16b-219c-471f-b713-bf181680ba75.png",
+      "prompt": "prompts/KeyS.txt",
+      "sha256": "009d8e6aaab9c0f91b9c8f2e7b978081c723c05daddd6f2abb4e5bf827966f0b",
+      "width": 1254,
+      "height": 1254,
+      "review": "Complete scene, integrated shoulders and specified contact/rest retained; discrete-pose naturalness remains user acceptance"
+    },
+    {
+      "id": "KeyD",
+      "file": "frames/KeyD.png",
+      "source_output_file": "exec-75869679-4d93-44ee-a37f-745c3da6d7e4.png",
+      "prompt": "prompts/KeyD.txt",
+      "sha256": "2a818a43b0bc96db13c15cf7acdc8ac5e8c10ba40a24326abe49609504ce4823",
+      "width": 1254,
+      "height": 1254,
+      "review": "Complete scene, integrated shoulders and specified contact/rest retained; discrete-pose naturalness remains user acceptance"
+    }
+  ]
+}
