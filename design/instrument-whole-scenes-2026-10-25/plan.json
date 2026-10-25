@@ -1,0 +1,864 @@
+{
+  "date": "2026-10-25",
+  "method": "One full generated character and instrument scene per state; no separate limbs",
+  "frames": {
+    "guitar": [
+      {
+        "id": "idle",
+        "keys": []
+      },
+      {
+        "id": "KeyA",
+        "keys": [
+          {
+            "code": "KeyA",
+            "key": "A",
+            "midi": 60,
+            "label": "1",
+            "sub": "C4",
+            "position": 0,
+            "black": false,
+            "kind": "note",
+            "id": "C4",
+            "frequency": 261.6255653005986,
+            "paw": "left"
+          }
+        ]
+      },
+      {
+        "id": "KeyS",
+        "keys": [
+          {
+            "code": "KeyS",
+            "key": "S",
+            "midi": 62,
+            "label": "2",
+            "sub": "D4",
+            "position": 0,
+            "black": false,
+            "kind": "note",
+            "id": "D4",
+            "frequency": 293.6647679174076,
+            "paw": "left"
+          }
+        ]
+      },
+      {
+        "id": "KeyD",
+        "keys": [
+          {
+            "code": "KeyD",
+            "key": "D",
+            "midi": 64,
+            "label": "3",
+            "sub": "E4",
+            "position": 0,
+            "black": false,
+            "kind": "note",
+            "id": "E4",
+            "frequency": 329.6275569128699,
+            "paw": "left"
+          }
+        ]
+      },
+      {
+        "id": "KeyF",
+        "keys": [
+          {
+            "code": "KeyF",
+            "key": "F",
+            "midi": 65,
+            "label": "4",
+            "sub": "F4",
+            "position": 0,
+            "black": false,
+            "kind": "note",
+            "id": "F4",
+            "frequency": 349.2282314330039,
+            "paw": "left"
+          }
+        ]
+      },
+      {
+        "id": "KeyW",
+        "keys": [
+          {
+            "code": "KeyW",
+            "key": "W",
+            "midi": 61,
+            "label": "♯1",
+            "sub": "C♯4",
+            "position": 1,
+            "black": true,
+            "kind": "note",
+            "id": "C♯4",
+            "frequency": 277.1826309768721,
+            "paw": "left"
+          }
+        ]
+      },
+      {
+        "id": "KeyE",
+        "keys": [
+          {
+            "code": "KeyE",
+            "key": "E",
+            "midi": 63,
+            "label": "♯2",
+            "sub": "D♯4",
+            "position": 2,
+            "black": true,
+            "kind": "note",
+            "id": "D♯4",
+            "frequency": 311.12698372208087,
+            "paw": "left"
+          }
+        ]
+      },
+      {
+        "id": "KeyG",
+        "keys": [
+          {
+            "code": "KeyG",
+            "key": "G",
+            "midi": 67,
+            "label": "5",
+            "sub": "G4",
+            "position": 0,
+            "black": false,
+            "kind": "note",
+            "id": "G4",
+            "frequency": 391.99543598174927,
+            "paw": "right"
+          }
+        ]
+      },
+      {
+        "id": "KeyH",
+        "keys": [
+          {
+            "code": "KeyH",
+            "key": "H",
+            "midi": 69,
+            "label": "6",
+            "sub": "A4",
+            "position": 0,
+            "black": false,
+            "kind": "note",
+            "id": "A4",
+            "frequency": 440,
+            "paw": "right"
+          }
+        ]
+      },
+      {
+        "id": "KeyJ",
+        "keys": [
+          {
+            "code": "KeyJ",
+            "key": "J",
+            "midi": 71,
+            "label": "7",
+            "sub": "B4",
+            "position": 0,
+            "black": false,
+            "kind": "note",
+            "id": "B4",
+            "frequency": 493.8833012561241,
+            "paw": "right"
+          }
+        ]
+      },
+      {
+        "id": "KeyK",
+        "keys": [
+          {
+            "code": "KeyK",
+            "key": "K",
+            "midi": 72,
+            "label": "1̇",
+            "sub": "C5",
+            "position": 0,
+            "black": false,
+            "kind": "note",
+            "id": "C5",
+            "frequency": 523.2511306011972,
+            "paw": "right"
+          }
+        ]
+      },
+      {
+        "id": "KeyT",
+        "keys": [
+          {
+            "code": "KeyT",
+            "key": "T",
+            "midi": 66,
+            "label": "♯4",
+            "sub": "F♯4",
+            "position": 4,
+            "black": true,
+            "kind": "note",
+            "id": "F♯4",
+            "frequency": 369.99442271163446,
+            "paw": "right"
+          }
+        ]
+      },
+      {
+        "id": "KeyY",
+        "keys": [
+          {
+            "code": "KeyY",
+            "key": "Y",
+            "midi": 68,
+            "label": "♯5",
+            "sub": "G♯4",
+            "position": 5,
+            "black": true,
+            "kind": "note",
+            "id": "G♯4",
+            "frequency": 415.3046975799451,
+            "paw": "right"
+          }
+        ]
+      },
+      {
+        "id": "KeyU",
+        "keys": [
+          {
+            "code": "KeyU",
+            "key": "U",
+            "midi": 70,
+            "label": "♭7",
+            "sub": "B♭4",
+            "position": 6,
+            "black": true,
+            "kind": "note",
+            "id": "B♭4",
+            "frequency": 466.1637615180899,
+            "paw": "right"
+          }
+        ]
+      },
+      {
+        "id": "Digit1",
+        "keys": [
+          {
+            "code": "Digit1",
+            "key": "1",
+            "label": "C",
+            "sub": "C",
+            "voicing": "C",
+            "notes": [
+              48,
+              52,
+              55,
+              60,
+              64,
+              67
+            ],
+            "kind": "chord",
+            "id": "C",
+            "paw": "left"
+          }
+        ]
+      },
+      {
+        "id": "Digit2",
+        "keys": [
+          {
+            "code": "Digit2",
+            "key": "2",
+            "label": "Am",
+            "sub": "Am/C",
+            "voicing": "Am/C",
+            "notes": [
+              48,
+              52,
+              57,
+              60,
+              64,
+              69
+            ],
+            "kind": "chord",
+            "id": "Am",
+            "paw": "left"
+          }
+        ]
+      },
+      {
+        "id": "Digit3",
+        "keys": [
+          {
+            "code": "Digit3",
+            "key": "3",
+            "label": "F",
+            "sub": "F",
+            "voicing": "F",
+            "notes": [
+              53,
+              57,
+              60,
+              65,
+              69,
+              72
+            ],
+            "kind": "chord",
+            "id": "F",
+            "paw": "left"
+          }
+        ]
+      },
+      {
+        "id": "Digit4",
+        "keys": [
+          {
+            "code": "Digit4",
+            "key": "4",
+            "label": "G",
+            "sub": "G/D",
+            "voicing": "G/D",
+            "notes": [
+              50,
+              55,
+              59,
+              62,
+              67,
+              71
+            ],
+            "kind": "chord",
+            "id": "G",
+            "paw": "left"
+          }
+        ]
+      }
+    ],
+    "drums": [
+      {
+        "id": "idle",
+        "keys": []
+      },
+      {
+        "id": "KeyZ",
+        "keys": [
+          {
+            "code": "KeyZ",
+            "key": "Z",
+            "voice": "kick",
+            "label": "底鼓",
+            "sub": "KICK",
+            "paw": "left",
+            "kind": "drum",
+            "id": "kick"
+          }
+        ]
+      },
+      {
+        "id": "KeyC",
+        "keys": [
+          {
+            "code": "KeyC",
+            "key": "C",
+            "voice": "closed-hat",
+            "label": "闭镲",
+            "sub": "CLOSED HAT",
+            "paw": "left",
+            "kind": "drum",
+            "id": "closed-hat"
+          }
+        ]
+      },
+      {
+        "id": "KeyB",
+        "keys": [
+          {
+            "code": "KeyB",
+            "key": "B",
+            "voice": "tom-low",
+            "label": "低通鼓",
+            "sub": "LOW TOM",
+            "paw": "left",
+            "kind": "drum",
+            "id": "tom-low"
+          }
+        ]
+      },
+      {
+        "id": "KeyM",
+        "keys": [
+          {
+            "code": "KeyM",
+            "key": "M",
+            "voice": "crash",
+            "label": "碎音镲",
+            "sub": "CRASH",
+            "paw": "left",
+            "kind": "drum",
+            "id": "crash"
+          }
+        ]
+      },
+      {
+        "id": "KeyX",
+        "keys": [
+          {
+            "code": "KeyX",
+            "key": "X",
+            "voice": "snare",
+            "label": "军鼓",
+            "sub": "SNARE",
+            "paw": "right",
+            "kind": "drum",
+            "id": "snare"
+          }
+        ]
+      },
+      {
+        "id": "KeyV",
+        "keys": [
+          {
+            "code": "KeyV",
+            "key": "V",
+            "voice": "open-hat",
+            "label": "开镲",
+            "sub": "OPEN HAT",
+            "paw": "right",
+            "kind": "drum",
+            "id": "open-hat"
+          }
+        ]
+      },
+      {
+        "id": "KeyN",
+        "keys": [
+          {
+            "code": "KeyN",
+            "key": "N",
+            "voice": "tom-high",
+            "label": "高通鼓",
+            "sub": "HIGH TOM",
+            "paw": "right",
+            "kind": "drum",
+            "id": "tom-high"
+          }
+        ]
+      },
+      {
+        "id": "KeyL",
+        "keys": [
+          {
+            "code": "KeyL",
+            "key": "L",
+            "voice": "ride",
+            "label": "叮叮镲",
+            "sub": "RIDE",
+            "paw": "right",
+            "kind": "drum",
+            "id": "ride"
+          }
+        ]
+      },
+      {
+        "id": "KeyZ-KeyX",
+        "keys": [
+          {
+            "code": "KeyZ",
+            "key": "Z",
+            "voice": "kick",
+            "label": "底鼓",
+            "sub": "KICK",
+            "paw": "left",
+            "kind": "drum",
+            "id": "kick"
+          },
+          {
+            "code": "KeyX",
+            "key": "X",
+            "voice": "snare",
+            "label": "军鼓",
+            "sub": "SNARE",
+            "paw": "right",
+            "kind": "drum",
+            "id": "snare"
+          }
+        ]
+      },
+      {
+        "id": "KeyZ-KeyV",
+        "keys": [
+          {
+            "code": "KeyZ",
+            "key": "Z",
+            "voice": "kick",
+            "label": "底鼓",
+            "sub": "KICK",
+            "paw": "left",
+            "kind": "drum",
+            "id": "kick"
+          },
+          {
+            "code": "KeyV",
+            "key": "V",
+            "voice": "open-hat",
+            "label": "开镲",
+            "sub": "OPEN HAT",
+            "paw": "right",
+            "kind": "drum",
+            "id": "open-hat"
+          }
+        ]
+      },
+      {
+        "id": "KeyZ-KeyN",
+        "keys": [
+          {
+            "code": "KeyZ",
+            "key": "Z",
+            "voice": "kick",
+            "label": "底鼓",
+            "sub": "KICK",
+            "paw": "left",
+            "kind": "drum",
+            "id": "kick"
+          },
+          {
+            "code": "KeyN",
+            "key": "N",
+            "voice": "tom-high",
+            "label": "高通鼓",
+            "sub": "HIGH TOM",
+            "paw": "right",
+            "kind": "drum",
+            "id": "tom-high"
+          }
+        ]
+      },
+      {
+        "id": "KeyZ-KeyL",
+        "keys": [
+          {
+            "code": "KeyZ",
+            "key": "Z",
+            "voice": "kick",
+            "label": "底鼓",
+            "sub": "KICK",
+            "paw": "left",
+            "kind": "drum",
+            "id": "kick"
+          },
+          {
+            "code": "KeyL",
+            "key": "L",
+            "voice": "ride",
+            "label": "叮叮镲",
+            "sub": "RIDE",
+            "paw": "right",
+            "kind": "drum",
+            "id": "ride"
+          }
+        ]
+      },
+      {
+        "id": "KeyC-KeyX",
+        "keys": [
+          {
+            "code": "KeyC",
+            "key": "C",
+            "voice": "closed-hat",
+            "label": "闭镲",
+            "sub": "CLOSED HAT",
+            "paw": "left",
+            "kind": "drum",
+            "id": "closed-hat"
+          },
+          {
+            "code": "KeyX",
+            "key": "X",
+            "voice": "snare",
+            "label": "军鼓",
+            "sub": "SNARE",
+            "paw": "right",
+            "kind": "drum",
+            "id": "snare"
+          }
+        ]
+      },
+      {
+        "id": "KeyC-KeyV",
+        "keys": [
+          {
+            "code": "KeyC",
+            "key": "C",
+            "voice": "closed-hat",
+            "label": "闭镲",
+            "sub": "CLOSED HAT",
+            "paw": "left",
+            "kind": "drum",
+            "id": "closed-hat"
+          },
+          {
+            "code": "KeyV",
+            "key": "V",
+            "voice": "open-hat",
+            "label": "开镲",
+            "sub": "OPEN HAT",
+            "paw": "right",
+            "kind": "drum",
+            "id": "open-hat"
+          }
+        ]
+      },
+      {
+        "id": "KeyC-KeyN",
+        "keys": [
+          {
+            "code": "KeyC",
+            "key": "C",
+            "voice": "closed-hat",
+            "label": "闭镲",
+            "sub": "CLOSED HAT",
+            "paw": "left",
+            "kind": "drum",
+            "id": "closed-hat"
+          },
+          {
+            "code": "KeyN",
+            "key": "N",
+            "voice": "tom-high",
+            "label": "高通鼓",
+            "sub": "HIGH TOM",
+            "paw": "right",
+            "kind": "drum",
+            "id": "tom-high"
+          }
+        ]
+      },
+      {
+        "id": "KeyC-KeyL",
+        "keys": [
+          {
+            "code": "KeyC",
+            "key": "C",
+            "voice": "closed-hat",
+            "label": "闭镲",
+            "sub": "CLOSED HAT",
+            "paw": "left",
+            "kind": "drum",
+            "id": "closed-hat"
+          },
+          {
+            "code": "KeyL",
+            "key": "L",
+            "voice": "ride",
+            "label": "叮叮镲",
+            "sub": "RIDE",
+            "paw": "right",
+            "kind": "drum",
+            "id": "ride"
+          }
+        ]
+      },
+      {
+        "id": "KeyB-KeyX",
+        "keys": [
+          {
+            "code": "KeyB",
+            "key": "B",
+            "voice": "tom-low",
+            "label": "低通鼓",
+            "sub": "LOW TOM",
+            "paw": "left",
+            "kind": "drum",
+            "id": "tom-low"
+          },
+          {
+            "code": "KeyX",
+            "key": "X",
+            "voice": "snare",
+            "label": "军鼓",
+            "sub": "SNARE",
+            "paw": "right",
+            "kind": "drum",
+            "id": "snare"
+          }
+        ]
+      },
+      {
+        "id": "KeyB-KeyV",
+        "keys": [
+          {
+            "code": "KeyB",
+            "key": "B",
+            "voice": "tom-low",
+            "label": "低通鼓",
+            "sub": "LOW TOM",
+            "paw": "left",
+            "kind": "drum",
+            "id": "tom-low"
+          },
+          {
+            "code": "KeyV",
+            "key": "V",
+            "voice": "open-hat",
+            "label": "开镲",
+            "sub": "OPEN HAT",
+            "paw": "right",
+            "kind": "drum",
+            "id": "open-hat"
+          }
+        ]
+      },
+      {
+        "id": "KeyB-KeyN",
+        "keys": [
+          {
+            "code": "KeyB",
+            "key": "B",
+            "voice": "tom-low",
+            "label": "低通鼓",
+            "sub": "LOW TOM",
+            "paw": "left",
+            "kind": "drum",
+            "id": "tom-low"
+          },
+          {
+            "code": "KeyN",
+            "key": "N",
+            "voice": "tom-high",
+            "label": "高通鼓",
+            "sub": "HIGH TOM",
+            "paw": "right",
+            "kind": "drum",
+            "id": "tom-high"
+          }
+        ]
+      },
+      {
+        "id": "KeyB-KeyL",
+        "keys": [
+          {
+            "code": "KeyB",
+            "key": "B",
+            "voice": "tom-low",
+            "label": "低通鼓",
+            "sub": "LOW TOM",
+            "paw": "left",
+            "kind": "drum",
+            "id": "tom-low"
+          },
+          {
+            "code": "KeyL",
+            "key": "L",
+            "voice": "ride",
+            "label": "叮叮镲",
+            "sub": "RIDE",
+            "paw": "right",
+            "kind": "drum",
+            "id": "ride"
+          }
+        ]
+      },
+      {
+        "id": "KeyM-KeyX",
+        "keys": [
+          {
+            "code": "KeyM",
+            "key": "M",
+            "voice": "crash",
+            "label": "碎音镲",
+            "sub": "CRASH",
+            "paw": "left",
+            "kind": "drum",
+            "id": "crash"
+          },
+          {
+            "code": "KeyX",
+            "key": "X",
+            "voice": "snare",
+            "label": "军鼓",
+            "sub": "SNARE",
+            "paw": "right",
+            "kind": "drum",
+            "id": "snare"
+          }
+        ]
+      },
+      {
+        "id": "KeyM-KeyV",
+        "keys": [
+          {
+            "code": "KeyM",
+            "key": "M",
+            "voice": "crash",
+            "label": "碎音镲",
+            "sub": "CRASH",
+            "paw": "left",
+            "kind": "drum",
+            "id": "crash"
+          },
+          {
+            "code": "KeyV",
+            "key": "V",
+            "voice": "open-hat",
+            "label": "开镲",
+            "sub": "OPEN HAT",
+            "paw": "right",
+            "kind": "drum",
+            "id": "open-hat"
+          }
+        ]
+      },
+      {
+        "id": "KeyM-KeyN",
+        "keys": [
+          {
+            "code": "KeyM",
+            "key": "M",
+            "voice": "crash",
+            "label": "碎音镲",
+            "sub": "CRASH",
+            "paw": "left",
+            "kind": "drum",
+            "id": "crash"
+          },
+          {
+            "code": "KeyN",
+            "key": "N",
+            "voice": "tom-high",
+            "label": "高通鼓",
+            "sub": "HIGH TOM",
+            "paw": "right",
+            "kind": "drum",
+            "id": "tom-high"
+          }
+        ]
+      },
+      {
+        "id": "KeyM-KeyL",
+        "keys": [
+          {
+            "code": "KeyM",
+            "key": "M",
+            "voice": "crash",
+            "label": "碎音镲",
+            "sub": "CRASH",
+            "paw": "left",
+            "kind": "drum",
+            "id": "crash"
+          },
+          {
+            "code": "KeyL",
+            "key": "L",
+            "voice": "ride",
+            "label": "叮叮镲",
+            "sub": "RIDE",
+            "paw": "right",
+            "kind": "drum",
+            "id": "ride"
+          }
+        ]
+      }
+    ]
+  }
+}

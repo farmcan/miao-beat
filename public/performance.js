@@ -24,7 +24,7 @@ export function mountPerformance(doc=document){
   }
   async function enter(){
     if(active||destroyed)return;const token=++revision;savedScroll=win.scrollY||0;active=true;paint();
-    if(status)status.textContent='横屏空间更大，双手一起弹也可以。';
+    if(status)status.textContent='横过手机，琴键会大些。';
     const request=root.requestFullscreen||root.webkitRequestFullscreen;
     if(!request||doc.fullscreenEnabled===false)return;
     pending=true;paint();
@@ -38,7 +38,7 @@ export function mountPerformance(doc=document){
       body.dataset.fullscreenError=error?.name||'Error';
       // iPhone/embedded browsers may reject element fullscreen. Keep the usable
       // page-filling mode rather than a disabled button or a misleading error.
-      if(token===revision&&status)status.textContent='演奏区已展开。横屏琴键更大，点“退出演奏”即可返回。';
+      if(token===revision&&status)status.textContent='演奏区已展开，点“退出演奏”返回。';
     }finally{if(token===revision&&!destroyed){pending=false;paint();}}
   }
   async function exit(){

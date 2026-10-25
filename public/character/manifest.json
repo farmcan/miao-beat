@@ -1,5 +1,5 @@
 {
-  "version": 7,
+  "version": 8,
   "date": "2026-10-25",
   "name": "Original orange cat: complete generated scene states",
   "status": "Whole-scene discrete poses; no independent limb rendering",
@@ -10,7 +10,8 @@
     "reference": "original project orange guitarist concept, retained in design/orange-guitar-pilot/reference-v1.png",
     "characterPrompt": "Use case: identity-preserve.\nAsset type: one transparent production component sheet for an animated browser cat musician.\nImage 1 is the exact character and style reference. Preserve the ORIGINAL CHUNKY ORANGE CAT: small squared head, broad pear-shaped rust orange body, cream muzzle and belly, navy nose and eyebrows, short legs and hooked tail. Matte softly textured illustrated/clay material, never glossy or furry. Do not redesign into a generic round baby kitten.\nCreate a square transparent RGBA canvas arranged as a precise invisible 3 by 3 grid of NINE equally sized cells. One isolated part per cell, complete contour and 12 percent clear transparent margin; no part may cross a cell boundary. No lines or labels. Same front slightly three-quarter camera and soft light for every part.\nTOP ROW left: detached full HEAD including ears/whiskers, relaxed open eyes looking slightly down at an instrument, warm friendly attentive face, short square muzzle and same shape as reference. No neck or torso.\nTOP ROW middle: identical head, same scale and angle, eyes gently closed and small satisfied smile while enjoying music. Only expression changes. No neck or torso.\nTOP ROW right: full pear-shaped TORSO plus short feet and hooked tail as a single piece, headless and entirely armless. Broad rounded shoulders, cream belly, no sharp neck stump; complete feet and tail fully inside cell.\nMIDDLE ROW left: viewer-left UPPER ARM only, short thick orange tapered capsule, shoulder rounded root at TOP and elbow rounded end at BOTTOM. Minimal stripes, clean overlapping joint ends, no paw, no forearm.\nMIDDLE ROW middle: viewer-left FOREARM only, short orange rounded tapered capsule, elbow root at TOP and wrist end at BOTTOM. No paw or fingers, no upper arm. Must overlap the matching elbow cleanly.\nMIDDLE ROW right: viewer-left CAT PAW only, a compact rounded unsegmented orange mitten, wrist attachment at TOP and round toe edge at BOTTOM. Two tiny curved toe marks, no human thumb, fingers, claws or glove cuff.\nBOTTOM ROW left: viewer-right UPPER ARM only, matching the left upper arm in size and material, shoulder TOP elbow BOTTOM.\nBOTTOM ROW middle: viewer-right FOREARM only, matching left forearm, elbow TOP wrist BOTTOM.\nBOTTOM ROW right: viewer-right CAT PAW only, matching left paw, wrist TOP round toe edge BOTTOM.\nThis is an articulated puppet kit: shoulder, elbow and wrist will rotate independently at fixed lengths, NEVER stretch fingers or rubbery arms. All segments rendered pointing vertically down so they can be rigged deterministically; keep joints rounded for overlap. Detached head must preserve the reference's relatively SMALL head, not giant sparkly eyes. No instruments, background, cast shadow, text, watermark, clothes, duplicate parts, full cats, fake checkerboard or opaque backdrop.\n",
     "instrumentPrompt": "Use case: stylized-concept.\nAsset type: one transparent 2 by 2 instrument prop atlas for the referenced orange cat music toy.\nInput image 1 is STYLE reference only: match the reference guitar's soft warm matte illustrated/clay material, restrained papery texture and cream/rust palette, gentle volume and NO heavy black outline. Do not draw any cat, paw or person.\nSquare transparent RGBA canvas, four invisible equal quadrants, each item fully inside its quadrant with clear margin. Same frontal slightly elevated camera and soft light for all items. No labels, lettering, logos, stage, floor, cast ground shadow, grid or checkerboard.\nTOP LEFT: one compact elegant cream and dark brown music KEYBOARD seen slightly from above/front, eight clearly separated white keys and five black keys in groups of two and three, only a simple slim warm cream body with softly rounded rust side cheeks. All keys unobstructed and actual playable surface easily visible. Entire keyboard inside quadrant.\nTOP RIGHT: one compact MARIMBA with a warm wooden frame, eight long natural-note wooden bars in a clear front row plus five shorter raised chromatic bars in the rear row. Soft walnut/caramel material, small dark resonator hints underneath, no mallets. Entire marimba inside quadrant.\nBOTTOM LEFT: one compact small acoustic DRUM KIT, softly sculpted warm terracotta shells, pale cream drum skins and softly brushed warm golden cymbals. Exactly one large bass drum front center, two small toms above it, a snare at front viewer-right, a hi-hat at viewer-left front, a separate crash at far viewer-left behind it, and a separate ride at far viewer-right. Seven distinct playable surfaces must remain readable. Few slim dark warm-brown stands, no chair, drumsticks, cat or decorative text. Compact full kit, not an elaborate realistic concert rig.\nBOTTOM RIGHT: one small 2 by 4 electronic percussion PAD BANK: eight separated dark muted pads in a cream rounded body with a small rust edge. Frontal slightly top view, all eight pads visible, no screen, tiny labels or text.\nKeep materials and perspective coherent with the illustrated orange cat's acoustic guitar. This is not a UI screenshot, photographic studio product, glossy plastic toy, 3D CAD diagram or outlined flat icon. True transparent background, clean contours, no detached random extras.\n",
-    "inspection": "Nine character components and four instrument groups. Exact equal-tile packing was not achieved: torso feet and the kit cross nominal cell lines, so runtime uses manually inspected source rectangles. Warm matte paper-like rendering retained; no true 3D model or authored skeletal video is claimed."
+    "inspection": "Nine character components and four instrument groups. Exact equal-tile packing was not achieved: torso feet and the kit cross nominal cell lines, so runtime uses manually inspected source rectangles. Warm matte paper-like rendering retained; no true 3D model or authored skeletal video is claimed.",
+    "historicalOnly": true
   },
   "assets": [
     {
@@ -85,13 +86,18 @@
     },
     {
       "filename": "full-frame-character.js",
-      "bytes": 8648,
-      "sha256": "88a754b332d237f6bbe4048b052d32d856784b79d4d55062d623054e06e60bae"
+      "bytes": 10605,
+      "sha256": "4255f8b39308c8eab62a5c79cbb55eafa8a7854ef9938f13ef503e7c32028c09"
     },
     {
       "filename": "character/whole-piano-v3/manifest.json",
       "bytes": 24208,
       "sha256": "46d4eb00fb1a664645f1bb099067ed48dd3fbd0c1032803d08b4d498c0cb4587"
+    },
+    {
+      "filename": "character/instrument-scenes-v1/manifest.json",
+      "bytes": 20308,
+      "sha256": "95a38b25a11b7996eef439f283fc7e4f8ac7e84b2fb5253e8a68fa191f15d80a"
     }
   ],
   "runtime": {
@@ -128,18 +134,20 @@
       "method": "One complete generated cat+both-paws+piano image per state, never limb composition"
     },
     "guitar": {
-      "module": "whole-character.js",
-      "still": "character/guitar-whole-still-v1.jpg",
-      "status": "Complete cat+arms+guitar still; animation pending"
+      "module": "full-frame-character.js",
+      "manifest": "character/instrument-scenes-v1/manifest.json",
+      "frameCount": 18,
+      "method": "One complete generated cat+both-paws+instrument image per state"
     },
     "drums": {
-      "module": "whole-character.js",
-      "still": "character/drums-whole-still-v1.jpg",
-      "status": "Complete cat+arms+drums still; animation pending"
+      "module": "full-frame-character.js",
+      "manifest": "character/instrument-scenes-v1/manifest.json",
+      "frameCount": 25,
+      "method": "One complete generated cat+both-paws+instrument image per state"
     },
     "marimba": {
-      "module": "whole-character.js",
-      "still": "character/keyboard-poses-v1.jpg frame 0",
+      "module": "full-frame-character.js",
+      "still": "character/whole-piano-v3/idle.jpg",
       "status": "Complete idle keyboard-cat reference only, visibly labelled; no marimba motion claimed"
     }
   },
@@ -231,5 +239,15 @@
       "Minor frame-to-frame shading changes and wide paw occlusion remain",
       "Human taste and physical-device acceptance remain separate"
     ]
+  },
+  "currentGeneration": {
+    "tool": "built-in image_gen.imagegen",
+    "transparent_background": false,
+    "method": "Complete character and instrument scenes; one entire image per state",
+    "sourceDirectories": [
+      "design/whole-cat-frames-2026-10-25",
+      "design/instrument-whole-scenes-2026-10-25"
+    ],
+    "note": "Guitar contact is cartoon gesture; exact fret accuracy and human naturalness acceptance are not claimed"
   }
 }

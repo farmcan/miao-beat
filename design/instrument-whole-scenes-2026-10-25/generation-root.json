@@ -1,0 +1,41 @@
+[
+  {
+    "mode": "guitar",
+    "id": "idle",
+    "file": "design/instrument-whole-scenes-2026-10-25/guitar/frames/idle.png",
+    "tool": "built-in image_gen.imagegen",
+    "source": "$CODEX_HOME/generated_images/01a16399-9b2d-7451-84c9-4c6e59ed8115/exec-f8c0d481-ac2f-4d58-b83f-dfae48ae150a.png",
+    "sha256": "00dd3d6397cebc87cec4fcf3b4d21cbe0b778d64e7f9538c988d11d6d58e3479",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "review": "Whole cat and guitar kept together, entire neck in square frame."
+  },
+  {
+    "mode": "drums",
+    "id": "idle-attempt1",
+    "file": "design/instrument-whole-scenes-2026-10-25/drums/attempts/idle-first.png",
+    "tool": "built-in image_gen.imagegen",
+    "source": "$CODEX_HOME/generated_images/01a16399-9b2d-7451-84c9-4c6e59ed8115/exec-e13152ed-065e-498f-ac48-57a8f47337e8.png",
+    "sha256": "0de88e78844b94a5442c51aa38ab7445c9211201aff9eaaba0727b929750f37c",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "review": "Rejected: right ride edge clipped; audience-facing bass pedal wrong."
+  },
+  {
+    "mode": "drums",
+    "id": "idle",
+    "file": "design/instrument-whole-scenes-2026-10-25/drums/frames/idle.png",
+    "tool": "built-in image_gen.imagegen",
+    "source": "$CODEX_HOME/generated_images/01a16399-9b2d-7451-84c9-4c6e59ed8115/exec-172d6db3-9216-4002-941d-7ac0f8239a01.png",
+    "sha256": "380c8393ad9bb732736772eae49270d0efc1a94840a0fa378ce6a9ed3c419a2e",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "review": "Selected correction: all cymbal edges in frame; wrong front bass beater removed. Rounded paws/whole kit intact."
+  }
+]

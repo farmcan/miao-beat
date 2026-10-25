@@ -1,0 +1,202 @@
+{
+  "date": "2026-10-25",
+  "reference": "frames/idle.png",
+  "frames": [
+    {
+      "id": "KeyA",
+      "kind": "note",
+      "note": "C4",
+      "string": "B3",
+      "fret": 1,
+      "targetApprox": [
+        1026,
+        483
+      ]
+    },
+    {
+      "id": "KeyS",
+      "kind": "note",
+      "note": "D4",
+      "string": "B3",
+      "fret": 3,
+      "targetApprox": [
+        956,
+        509
+      ]
+    },
+    {
+      "id": "KeyD",
+      "kind": "note",
+      "note": "E4",
+      "string": "B3",
+      "fret": 5,
+      "targetApprox": [
+        893,
+        532
+      ]
+    },
+    {
+      "id": "KeyF",
+      "kind": "note",
+      "note": "F4",
+      "string": "B3",
+      "fret": 6,
+      "targetApprox": [
+        865,
+        542
+      ]
+    },
+    {
+      "id": "KeyG",
+      "kind": "note",
+      "note": "G4",
+      "string": "B3",
+      "fret": 8,
+      "targetApprox": [
+        812,
+        562
+      ]
+    },
+    {
+      "id": "KeyH",
+      "kind": "note",
+      "note": "A4",
+      "string": "B3",
+      "fret": 10,
+      "targetApprox": [
+        765,
+        579
+      ]
+    },
+    {
+      "id": "KeyJ",
+      "kind": "note",
+      "note": "B4",
+      "string": "B3",
+      "fret": 12,
+      "targetApprox": [
+        724,
+        594
+      ]
+    },
+    {
+      "id": "KeyK",
+      "kind": "note",
+      "note": "C5",
+      "string": "B3",
+      "fret": 13,
+      "targetApprox": [
+        705,
+        601
+      ]
+    },
+    {
+      "id": "KeyW",
+      "kind": "note",
+      "note": "C\u266f4",
+      "string": "B3",
+      "fret": 2,
+      "targetApprox": [
+        990,
+        496
+      ]
+    },
+    {
+      "id": "KeyE",
+      "kind": "note",
+      "note": "D\u266f4",
+      "string": "B3",
+      "fret": 4,
+      "targetApprox": [
+        924,
+        521
+      ]
+    },
+    {
+      "id": "KeyT",
+      "kind": "note",
+      "note": "F\u266f4",
+      "string": "B3",
+      "fret": 7,
+      "targetApprox": [
+        838,
+        552
+      ]
+    },
+    {
+      "id": "KeyY",
+      "kind": "note",
+      "note": "G\u266f4",
+      "string": "B3",
+      "fret": 9,
+      "targetApprox": [
+        788,
+        571
+      ]
+    },
+    {
+      "id": "KeyU",
+      "kind": "note",
+      "note": "B\u266d4",
+      "string": "B3",
+      "fret": 11,
+      "targetApprox": [
+        744,
+        587
+      ]
+    },
+    {
+      "id": "Digit1",
+      "kind": "chord",
+      "chord": "C",
+      "fretTargetApprox": [
+        996,
+        498
+      ],
+      "strumTargetApprox": [
+        550,
+        622
+      ]
+    },
+    {
+      "id": "Digit2",
+      "kind": "chord",
+      "chord": "Am/C",
+      "fretTargetApprox": [
+        1008,
+        492
+      ],
+      "strumTargetApprox": [
+        558,
+        648
+      ]
+    },
+    {
+      "id": "Digit3",
+      "kind": "chord",
+      "chord": "F",
+      "fretTargetApprox": [
+        1024,
+        487
+      ],
+      "strumTargetApprox": [
+        568,
+        672
+      ]
+    },
+    {
+      "id": "Digit4",
+      "kind": "chord",
+      "chord": "G/D",
+      "fretTargetApprox": [
+        975,
+        506
+      ],
+      "strumTargetApprox": [
+        571,
+        690
+      ]
+    }
+  ],
+  "limits": "Whole-scene generated feline gesture; fret coordinate targets are approximate image guidance, not physically measured fingering."
+}

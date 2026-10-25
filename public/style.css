@@ -451,3 +451,15 @@ body.performance-mode .recording-strip { grid-column: 2; grid-row: 6; padding: 1
 .scene[data-complete-character] { background: var(--paper); }
 .whole-frame-message { position: absolute; inset: auto 12px 22px; margin: 0; color: var(--muted); text-align: center; font-size: 11px; }
 .whole-frame-message[hidden] { display: none; }
+
+/* One short greeting; device instructions stay concrete. */
+.touch-copy { display: none; }
+@media (max-width: 760px), (pointer: coarse) {
+  .desktop-copy { display: none; }
+  .touch-copy { display: inline; }
+}
+
+@media (max-width: 760px) {
+  .page-heading { display: block; }
+  .heading-note { display: block; margin: 8px 0 0; font-size: 11px; }
+}

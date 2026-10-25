@@ -1,0 +1,339 @@
+{
+  "task": "12drum simultaneous whole-scene pairs",
+  "mode": "builtin image_gen edit, fixed idle only; no chained generation",
+  "started_at": "2026-10-25T13:23:00.144406+00:00",
+  "status": "in_progress",
+  "reference": "frames/idle.png",
+  "reference_sha256": "380c8393ad9bb732736772eae49270d0efc1a94840a0fa378ce6a9ed3c419a2e",
+  "reference_dimensions": [
+    1254,
+    1254
+  ],
+  "items": [
+    {
+      "id": "KeyC-KeyX",
+      "left_key": "KeyC",
+      "right_key": "KeyX",
+      "reference": "frames/idle.png",
+      "reference_sha256": "380c8393ad9bb732736772eae49270d0efc1a94840a0fa378ce6a9ed3c419a2e",
+      "prompt_path": "prompts/KeyC-KeyX.txt",
+      "output": "frames/KeyC-KeyX.png",
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit, fixed idle only",
+          "source_output_file": "exec-9930e650-e7a1-4649-839b-5033bd887e56.png",
+          "prompt_path": "prompts/KeyC-KeyX.txt",
+          "output": "frames/KeyC-KeyX.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "1244b4b16029c91fd8b382e55346fe563f7b0c1c41e5b07d82e23b7fd30fd640",
+          "selected": true,
+          "review": "Viewed full output: exactly2sticks; left tip visibly contacts closed lower-left hi-hat top; right tip contacts lower-right snare head, not rim; entire cat/kit retained."
+        }
+      ],
+      "reference_viewed": true
+    },
+    {
+      "id": "KeyC-KeyV",
+      "left_key": "KeyC",
+      "right_key": "KeyV",
+      "reference": "frames/idle.png",
+      "reference_sha256": "380c8393ad9bb732736772eae49270d0efc1a94840a0fa378ce6a9ed3c419a2e",
+      "prompt_path": "prompts/KeyC-KeyV.txt",
+      "output": "frames/KeyC-KeyV.png",
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit, fixed idle only",
+          "source_output_file": "exec-1e12d79d-2303-4f66-a568-ce314040d922.png",
+          "prompt_path": "prompts/KeyC-KeyV.txt",
+          "output": "frames/KeyC-KeyV.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "d966959de3202f4046eb7fc3a2fc9d06dfb73dffe3243d9f886596d37aa3b606",
+          "selected": true,
+          "review": "Viewed full output: both tips contact separate nearby points on same single hi-hat upper plate; existing two plates visibly separated for open state; right arm crosses body; exactly2sticks and no extra hi-hat."
+        }
+      ],
+      "reference_viewed": true
+    },
+    {
+      "id": "KeyC-KeyN",
+      "left_key": "KeyC",
+      "right_key": "KeyN",
+      "reference": "frames/idle.png",
+      "reference_sha256": "380c8393ad9bb732736772eae49270d0efc1a94840a0fa378ce6a9ed3c419a2e",
+      "prompt_path": "prompts/KeyC-KeyN.txt",
+      "output": "frames/KeyC-KeyN.png",
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit, fixed idle only",
+          "source_output_file": "exec-87d5b667-55f9-4bdf-8e6e-4b9659ab35b9.png",
+          "prompt_path": "prompts/KeyC-KeyN.txt",
+          "output": "frames/KeyC-KeyN.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "3b9f431ce2912c4ebfa763aca06d7a6bebeb6fba5a17ec00a564d97798d3f134",
+          "selected": true,
+          "review": "Viewed full output: left tip touches lower-left closed hi-hat top; right tip touches center-right raised high-tom head; exactly2sticks and entire cat/kit retained."
+        }
+      ],
+      "reference_viewed": true
+    },
+    {
+      "id": "KeyC-KeyL",
+      "left_key": "KeyC",
+      "right_key": "KeyL",
+      "reference": "frames/idle.png",
+      "reference_sha256": "380c8393ad9bb732736772eae49270d0efc1a94840a0fa378ce6a9ed3c419a2e",
+      "prompt_path": "prompts/KeyC-KeyL.txt",
+      "output": "frames/KeyC-KeyL.png",
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit, fixed idle only",
+          "source_output_file": "exec-a87b053a-4285-468a-8651-3aded817f73e.png",
+          "prompt_path": "prompts/KeyC-KeyL.txt",
+          "output": "frames/KeyC-KeyL.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "23d4727d6ea1424e41d325e7da5082faf3ca72c076465303f5a3240dea5d59e3",
+          "selected": true,
+          "review": "已实看完整猫与鼓组。左槌圆尖触下左闭合hi-hat顶片，右槌圆尖触上右ride外侧镲面；双肩臂连续，恰两槌，无额外镲。"
+        }
+      ],
+      "reference_viewed": true
+    },
+    {
+      "id": "KeyB-KeyX",
+      "left_key": "KeyB",
+      "right_key": "KeyX",
+      "reference": "frames/idle.png",
+      "reference_sha256": "380c8393ad9bb732736772eae49270d0efc1a94840a0fa378ce6a9ed3c419a2e",
+      "prompt_path": "prompts/KeyB-KeyX.txt",
+      "output": "frames/KeyB-KeyX.png",
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit, fixed idle only",
+          "source_output_file": "exec-b48694a4-5c21-4b1d-a60e-c35c85495e3e.png",
+          "prompt_path": "prompts/KeyB-KeyX.txt",
+          "output": "frames/KeyB-KeyX.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "d5fe7ea145fabf09bf66cb3760cbfc419f7d0ed6a4ad6a68e20ca99ad8b9d951",
+          "selected": true,
+          "review": "已实看完整猫与鼓组。左槌尖落左下大floor tom皮，右槌尖落右下小snare皮；两触点可见、恰两槌，身体与器材保持。"
+        }
+      ],
+      "reference_viewed": true
+    },
+    {
+      "id": "KeyB-KeyV",
+      "left_key": "KeyB",
+      "right_key": "KeyV",
+      "reference": "frames/idle.png",
+      "reference_sha256": "380c8393ad9bb732736772eae49270d0efc1a94840a0fa378ce6a9ed3c419a2e",
+      "prompt_path": "prompts/KeyB-KeyV.txt",
+      "output": "frames/KeyB-KeyV.png",
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit, fixed idle only",
+          "source_output_file": "exec-619b1554-b21d-4084-903c-75884661b2bb.png",
+          "prompt_path": "prompts/KeyB-KeyV.txt",
+          "output": "frames/KeyB-KeyV.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "696f6f1cffdac6277e991238c65d31b639dc78901e98a2478851d9bae0061b3f",
+          "selected": true,
+          "review": "已实看完整猫与鼓组。左槌尖落floor tom皮；右臂横身，右槌尖触原下左hi-hat顶片；两片间小开口可见，无额外hi-hat，恰两槌。"
+        }
+      ],
+      "reference_viewed": true
+    },
+    {
+      "id": "KeyB-KeyN",
+      "left_key": "KeyB",
+      "right_key": "KeyN",
+      "reference": "frames/idle.png",
+      "reference_sha256": "380c8393ad9bb732736772eae49270d0efc1a94840a0fa378ce6a9ed3c419a2e",
+      "prompt_path": "prompts/KeyB-KeyN.txt",
+      "output": "frames/KeyB-KeyN.png",
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit, fixed idle only",
+          "source_output_file": "exec-6b78e19f-d36c-42fa-935e-e9c0bf22ac72.png",
+          "prompt_path": "prompts/KeyB-KeyN.txt",
+          "output": "frames/KeyB-KeyN.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "922df82a754744b9089b1dec7df19d5dbbec74cc4ae121c6d2b3ebc6fe8fb126",
+          "selected": true,
+          "review": "已实看完整猫与鼓组。左槌尖触下左floor tom皮，右槌尖触中央偏右high tom皮；双爪握持、两肩连续、恰两槌，固定器材保持。"
+        }
+      ],
+      "reference_viewed": true
+    },
+    {
+      "id": "KeyB-KeyL",
+      "left_key": "KeyB",
+      "right_key": "KeyL",
+      "reference": "frames/idle.png",
+      "reference_sha256": "380c8393ad9bb732736772eae49270d0efc1a94840a0fa378ce6a9ed3c419a2e",
+      "prompt_path": "prompts/KeyB-KeyL.txt",
+      "output": "frames/KeyB-KeyL.png",
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit, fixed idle only",
+          "source_output_file": "exec-8538f2e1-ec01-43e0-91d0-f29b4eb5f018.png",
+          "prompt_path": "prompts/KeyB-KeyL.txt",
+          "output": "frames/KeyB-KeyL.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "102ab7fc760cc168e20caab2fdf863918b805da78cb9bc5349acf305fcbc4beb",
+          "selected": true,
+          "review": "已实看完整猫与鼓组。左槌尖触floor tom皮，右槌尖触上右ride外侧镲面非凸钟；两触点可见、恰两槌。"
+        }
+      ],
+      "reference_viewed": true
+    },
+    {
+      "id": "KeyM-KeyX",
+      "left_key": "KeyM",
+      "right_key": "KeyX",
+      "reference": "frames/idle.png",
+      "reference_sha256": "380c8393ad9bb732736772eae49270d0efc1a94840a0fa378ce6a9ed3c419a2e",
+      "prompt_path": "prompts/KeyM-KeyX.txt",
+      "output": "frames/KeyM-KeyX.png",
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "source_output_file": "exec-4350be52-be56-42f0-b103-d1e6c1ced0e0.png",
+          "output_path": "attempts-product/KeyM-KeyX-attempt1.png",
+          "sha256": "4c1e7e3ed98d1de29fff05b9d540661c6dc7df69f2cf028a70517388f9800502",
+          "selected": false,
+          "review": "完整场景与右槌snare触点可见，但左爪看似搭住crash边缘，槌杆大部分藏在镲后，握持不清；针对重试一次。"
+        },
+        {
+          "attempt": 2,
+          "source_output_file": "exec-585609df-ba2f-42aa-b90e-24fd75481de6.png",
+          "prompt_path": "prompts/KeyM-KeyX-retry1.txt",
+          "output_path": "frames/KeyM-KeyX.png",
+          "sha256": "d71771f47dbb48d8448f94435dd0981664f329f023280fc79b7c9f2092e41fd3",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "selected": true,
+          "review": "唯一重试已实看：左爪清楚握住crash槌尾，杆从爪到圆尖完整可见并触镲外侧；右尖触snare皮，恰两槌、完整猫与鼓组。仍为单帧接触候选，不等于连续自然度验收。"
+        }
+      ],
+      "reference_viewed": true,
+      "sha256": "d71771f47dbb48d8448f94435dd0981664f329f023280fc79b7c9f2092e41fd3",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "review": "唯一重试已实看：左爪清楚握住crash槌尾，杆从爪到圆尖完整可见并触镲外侧；右尖触snare皮，恰两槌、完整猫与鼓组。仍为单帧接触候选，不等于连续自然度验收。"
+    },
+    {
+      "id": "KeyM-KeyV",
+      "left_key": "KeyM",
+      "right_key": "KeyV",
+      "reference": "frames/idle.png",
+      "reference_sha256": "380c8393ad9bb732736772eae49270d0efc1a94840a0fa378ce6a9ed3c419a2e",
+      "prompt_path": "prompts/KeyM-KeyV.txt",
+      "output": "frames/KeyM-KeyV.png",
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit, fixed idle only",
+          "source_output_file": "exec-e24fd984-e03a-47ae-9e77-c6e06377798b.png",
+          "prompt_path": "prompts/KeyM-KeyV.txt",
+          "output": "frames/KeyM-KeyV.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "05744a9315e6d8d4f0535d9d3618fea7ac46628ed5de9df422067b2bcba1bf7d",
+          "selected": true,
+          "review": "已实看完整场景。左爪握crash槌尾且槌杆可见，圆尖触左上crash外侧；右臂横身，右槌尖触原下左open hi-hat顶片。恰两槌，现有hat两片开口可见。"
+        }
+      ],
+      "reference_viewed": true
+    },
+    {
+      "id": "KeyM-KeyN",
+      "left_key": "KeyM",
+      "right_key": "KeyN",
+      "reference": "frames/idle.png",
+      "reference_sha256": "380c8393ad9bb732736772eae49270d0efc1a94840a0fa378ce6a9ed3c419a2e",
+      "prompt_path": "prompts/KeyM-KeyN.txt",
+      "output": "frames/KeyM-KeyN.png",
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit, fixed idle only",
+          "source_output_file": "exec-ae1f3dcb-d9f8-4874-a202-fd9dd7914998.png",
+          "prompt_path": "prompts/KeyM-KeyN.txt",
+          "output": "frames/KeyM-KeyN.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "c8b4deebb8e9cb6a6561d2fad33adb609b45d7033dafd0d93af06d60d34772a5",
+          "selected": true,
+          "review": "已实看完整场景。左爪悬于crash右上方握槌，杆完整可见，尖触左上crash外三分之一；右尖触high tom皮。双肩连续、恰两槌。"
+        }
+      ],
+      "reference_viewed": true
+    },
+    {
+      "id": "KeyM-KeyL",
+      "left_key": "KeyM",
+      "right_key": "KeyL",
+      "reference": "frames/idle.png",
+      "reference_sha256": "380c8393ad9bb732736772eae49270d0efc1a94840a0fa378ce6a9ed3c419a2e",
+      "prompt_path": "prompts/KeyM-KeyL.txt",
+      "output": "frames/KeyM-KeyL.png",
+      "status": "generated_reviewed_candidate",
+      "attempts": [
+        {
+          "attempt": 1,
+          "method": "builtin image_gen edit, fixed idle only",
+          "source_output_file": "exec-daba25e1-95d6-45cc-9ad1-3e1b425b7c24.png",
+          "prompt_path": "prompts/KeyM-KeyL.txt",
+          "output": "frames/KeyM-KeyL.png",
+          "width": 1254,
+          "height": 1254,
+          "sha256": "3f831a6905c6da015fa19b43e091b43241f7d4dbbdc56abc91bd3435582aea2e",
+          "selected": true,
+          "review": "已实看完整场景。双爪分别握两槌，左尖触crash外侧，右尖触ride外侧，均避开中央凸钟；槌杆可见，完整猫和鼓组保持。"
+        }
+      ],
+      "reference_viewed": true
+    }
+  ],
+  "updated_at": "2026-10-25T13:36:08.495388+00:00",
+  "completed_at": "2026-10-25T13:37:51.212122+00:00",
+  "summary": {
+    "requested_count": 12,
+    "saved_and_visually_reviewed": 12,
+    "builtin_calls": 13,
+    "targeted_retries": 1,
+    "reference_policy": "Each image uses only the fixed idle full scene; no generated-frame chaining.",
+    "limits": "Single-frame contact/continuity checks only; runtime loading, multi-key mapping and continuous-motion/user naturalness acceptance belong to root release QA."
+  }
+}

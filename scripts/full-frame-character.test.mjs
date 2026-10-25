@@ -1,9 +1,11 @@
 import test from 'node:test';import assert from 'node:assert/strict';
-import {createFrameState,validateFrameManifest} from '../public/full-frame-character.js';
+import {createFrameState,validateFrameManifest,validateInstrumentManifest,INSTRUMENT_FRAME_IDS} from '../public/full-frame-character.js';
+import {MELODY,DRUMS,CHORDS} from '../public/bindings.js';
 import fs from 'node:fs';
 const plan=JSON.parse(fs.readFileSync(new URL('../design/whole-cat-frames-2026-10-25/plan.json',import.meta.url)));
 const config={version:1,width:1254,height:1254,frames:Object.fromEntries(plan.frames.map(f=>[f.id,f.id+'.jpg']))};
 const key=code=>({kind:'note',code});
+const bandConfig={version:1,width:1254,height:1254,modes:Object.fromEntries(Object.entries(INSTRUMENT_FRAME_IDS).map(([mode,ids])=>[mode,{frames:Object.fromEntries(ids.map(id=>[id,mode+'/'+id+'.jpg']))}]))};
 test('manifest covers idle, thirteen single keys and every 6 by 7 two-paw whole scene',()=>{
  assert.equal(plan.frames.length,56);assert.equal(Object.keys(validateFrameManifest(config).frames).length,56);
  for(const frame of plan.frames){const p=createFrameState(()=>0);p.update(frame.keys);for(const k of frame.keys)p.strike(k);assert.equal(p.sample().id,frame.id);}
@@ -25,15 +27,30 @@ test('fast pulses are interruptible and expire without replaying a stale whole-f
  p.strike(key('KeyG'));p.reset();assert.equal(p.sample().id,'idle');assert.equal(p.sample().needsFrame,false);
 });
 
+test('guitar accepts thirteen notes and four actual chord controls, showing the latest fretting target',()=>{
+ assert.equal(INSTRUMENT_FRAME_IDS.guitar.length,18);validateInstrumentManifest(bandConfig);
+ for(const k of [...MELODY,...CHORDS]){const p=createFrameState(()=>0,'guitar');p.update([k]);assert.equal(p.strike(k),true);assert.equal(p.sample().id,k.code);}
+ let time=0;const p=createFrameState(()=>time,'guitar');p.update([CHORDS[0]]);p.strike(CHORDS[0]);time=100;p.update([CHORDS[0],MELODY[2]]);p.strike(MELODY[2]);assert.equal(p.sample().id,'KeyD');
+ time=200;p.update([CHORDS[0]]);assert.equal(p.sample().id,'Digit1');assert.equal(p.strike(DRUMS[0]),false);
+});
+
+test('drums map all eight voices and sixteen two-side combinations to complete scenes',()=>{
+ assert.equal(INSTRUMENT_FRAME_IDS.drums.length,25);
+ for(const id of INSTRUMENT_FRAME_IDS.drums){const p=createFrameState(()=>0,'drums'),keys=id==='idle'?[]:id.split('-').map(code=>DRUMS.find(k=>k.code===code));p.update(keys);for(const k of keys)assert.equal(p.strike(k),true);assert.equal(p.sample().id,id);}
+ const p=createFrameState(()=>0,'drums');p.update([DRUMS[1]]);assert.equal(p.sample().id,'idle');assert.equal(p.strike(MELODY[0]),false);
+ const bad=structuredClone(bandConfig);delete bad.modes.drums.frames['KeyC-KeyV'];assert.throws(()=>validateInstrumentManifest(bad));
+});
+
 test('a late image cannot repaint an older input, and each draw uses one whole scene',async t=>{
  const {JSDOM}=await import('jsdom');const {mountCharacter}=await import('../public/full-frame-character.js');
  const dom=new JSDOM('<div id="scene" data-instrument="piano"><svg class="cat-scene"></svg><div class="stage-readout"></div></div>');const w=dom.window;
- let now=0,serial=0,releaseA;const queue=new Map(),draws=[];
+ let now=0,serial=0,releaseA,releaseGuitar;const queue=new Map(),draws=[];
  t.mock.method(w.performance,'now',()=>now);w.requestAnimationFrame=fn=>{queue.set(++serial,fn);return serial;};w.cancelAnimationFrame=id=>queue.delete(id);
  w.HTMLCanvasElement.prototype.getContext=()=>({drawImage(...args){assert.equal(args.length,3,'no body/limb crops or independent compositing');draws.push(args[0].id);}});
  w.createImageBitmap=async blob=>({width:1254,height:1254,id:await blob.text(),close(){}});
  const deferredA=new Promise(resolve=>{releaseA=resolve;});
- t.mock.method(globalThis,'fetch',async input=>{const name=new URL(input).pathname.split('/').at(-1);if(name==='manifest.json')return Response.json(config);if(name==='KeyA.jpg')await deferredA;return new Response(name.replace('.jpg',''));});
+ const deferredGuitar=new Promise(resolve=>{releaseGuitar=resolve;});
+ t.mock.method(globalThis,'fetch',async input=>{const path=new URL(input).pathname,name=path.split('/').at(-1);if(name==='manifest.json')return Response.json(path.includes('instrument-scenes-v1')?bandConfig:config);if(name==='KeyA.jpg')await(path.includes('/guitar/')?deferredGuitar:deferredA);return new Response(name.replace('.jpg',''));});
  const controller=mountCharacter(w.document.querySelector('#scene'));t.after(()=>{controller.destroy();w.close();});
  const tick=()=>new Promise(resolve=>setImmediate(resolve));const frame=()=>{const current=[...queue.values()];queue.clear();for(const fn of current)fn(now);};
  await controller.ready;await tick();
@@ -42,5 +59,9 @@ test('a late image cannot repaint an older input, and each draw uses one whole s
  assert.equal(w.document.querySelector('#scene').dataset.wholeFrame,'KeyS');
  releaseA();await tick();assert.equal(w.document.querySelector('#scene').dataset.wholeFrame,'KeyS');assert.equal(draws.includes('KeyA'),false);
  now=200;controller.update('piano',[]);frame();await tick();assert.equal(w.document.querySelector('#scene').dataset.wholeFrame,'idle');
+ controller.update('guitar',[MELODY[0]]);controller.strike(MELODY[0],'guitar');frame();
+ assert.equal(w.document.querySelector('canvas').hidden,true);assert.equal(w.document.querySelector('.whole-frame-message').hidden,false,'a new instrument must show loading feedback while its whole image is pending');
+ controller.update('drums',[DRUMS[1]]);controller.strike(DRUMS[1],'drums');frame();await tick();assert.equal(w.document.querySelector('#scene').dataset.wholeFrame,'drums:KeyX');
+ releaseGuitar();await tick();assert.equal(w.document.querySelector('#scene').dataset.wholeFrame,'drums:KeyX','old guitar cannot repaint the new instrument');
  assert.equal(w.document.querySelectorAll('canvas').length,1);
 });

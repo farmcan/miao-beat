@@ -1,0 +1,596 @@
+{
+  "version": 1,
+  "date": "2026-10-25",
+  "width": 1254,
+  "height": 1254,
+  "modes": {
+    "guitar": {
+      "frames": {
+        "idle": "guitar/idle.jpg",
+        "KeyA": "guitar/KeyA.jpg",
+        "KeyS": "guitar/KeyS.jpg",
+        "KeyD": "guitar/KeyD.jpg",
+        "KeyF": "guitar/KeyF.jpg",
+        "KeyW": "guitar/KeyW.jpg",
+        "KeyE": "guitar/KeyE.jpg",
+        "KeyG": "guitar/KeyG.jpg",
+        "KeyH": "guitar/KeyH.jpg",
+        "KeyJ": "guitar/KeyJ.jpg",
+        "KeyK": "guitar/KeyK.jpg",
+        "KeyT": "guitar/KeyT.jpg",
+        "KeyY": "guitar/KeyY.jpg",
+        "KeyU": "guitar/KeyU.jpg",
+        "Digit1": "guitar/Digit1.jpg",
+        "Digit2": "guitar/Digit2.jpg",
+        "Digit3": "guitar/Digit3.jpg",
+        "Digit4": "guitar/Digit4.jpg"
+      }
+    },
+    "drums": {
+      "frames": {
+        "idle": "drums/idle.jpg",
+        "KeyZ": "drums/KeyZ.jpg",
+        "KeyC": "drums/KeyC.jpg",
+        "KeyB": "drums/KeyB.jpg",
+        "KeyM": "drums/KeyM.jpg",
+        "KeyX": "drums/KeyX.jpg",
+        "KeyV": "drums/KeyV.jpg",
+        "KeyN": "drums/KeyN.jpg",
+        "KeyL": "drums/KeyL.jpg",
+        "KeyZ-KeyX": "drums/KeyZ-KeyX.jpg",
+        "KeyZ-KeyV": "drums/KeyZ-KeyV.jpg",
+        "KeyZ-KeyN": "drums/KeyZ-KeyN.jpg",
+        "KeyZ-KeyL": "drums/KeyZ-KeyL.jpg",
+        "KeyC-KeyX": "drums/KeyC-KeyX.jpg",
+        "KeyC-KeyV": "drums/KeyC-KeyV.jpg",
+        "KeyC-KeyN": "drums/KeyC-KeyN.jpg",
+        "KeyC-KeyL": "drums/KeyC-KeyL.jpg",
+        "KeyB-KeyX": "drums/KeyB-KeyX.jpg",
+        "KeyB-KeyV": "drums/KeyB-KeyV.jpg",
+        "KeyB-KeyN": "drums/KeyB-KeyN.jpg",
+        "KeyB-KeyL": "drums/KeyB-KeyL.jpg",
+        "KeyM-KeyX": "drums/KeyM-KeyX.jpg",
+        "KeyM-KeyV": "drums/KeyM-KeyV.jpg",
+        "KeyM-KeyN": "drums/KeyM-KeyN.jpg",
+        "KeyM-KeyL": "drums/KeyM-KeyL.jpg"
+      }
+    }
+  },
+  "method": "Each state is one complete generated cat and instrument scene",
+  "provenance": [
+    {
+      "mode": "guitar",
+      "id": "idle",
+      "source": "design/instrument-whole-scenes-2026-10-25/guitar/frames/idle.png",
+      "sourceSha256": "00dd3d6397cebc87cec4fcf3b4d21cbe0b778d64e7f9538c988d11d6d58e3479",
+      "file": "guitar/idle.jpg",
+      "bytes": 212015,
+      "sha256": "4418fd737891283f42568306cb427b1f7604a86cae5513b1d6c49b3c31f338d1",
+      "keys": []
+    },
+    {
+      "mode": "guitar",
+      "id": "KeyA",
+      "source": "design/instrument-whole-scenes-2026-10-25/guitar/frames/KeyA.png",
+      "sourceSha256": "3a1712f1823690104165a1b3404a25916394a442b21115a5b0da278ba4a14e92",
+      "file": "guitar/KeyA.jpg",
+      "bytes": 196296,
+      "sha256": "5df9853f51e0071137fcb76365200f6f7706ea12645d9eccf804e9ab0676e1c9",
+      "keys": [
+        "KeyA"
+      ]
+    },
+    {
+      "mode": "guitar",
+      "id": "KeyS",
+      "source": "design/instrument-whole-scenes-2026-10-25/guitar/frames/KeyS.png",
+      "sourceSha256": "9739c9de79148238f601514567cde78b15560bdd8d2ab077ad20b9430d385d76",
+      "file": "guitar/KeyS.jpg",
+      "bytes": 194606,
+      "sha256": "4b5a7ba4f0f8a1b1d8e45c321b21eec6c702ba600d475e3160c02db6b42e3fc7",
+      "keys": [
+        "KeyS"
+      ]
+    },
+    {
+      "mode": "guitar",
+      "id": "KeyD",
+      "source": "design/instrument-whole-scenes-2026-10-25/guitar/frames/KeyD.png",
+      "sourceSha256": "0132fb4d43be42990131733d77b5715cc244731216448e265279877d66bf0b7e",
+      "file": "guitar/KeyD.jpg",
+      "bytes": 194974,
+      "sha256": "55273b32de9f95bcd8a64f4f43752ae055537cb231d03292d44a9f297317947f",
+      "keys": [
+        "KeyD"
+      ]
+    },
+    {
+      "mode": "guitar",
+      "id": "KeyF",
+      "source": "design/instrument-whole-scenes-2026-10-25/guitar/frames/KeyF.png",
+      "sourceSha256": "40ad1a8853cb48fcce909c4cee4e691bf80ba3d9f5ea64ea908f06f4ea272b24",
+      "file": "guitar/KeyF.jpg",
+      "bytes": 194991,
+      "sha256": "f9c0549656ff32c564f90f12cad66107182e089f568d5407a0493b16e6cec388",
+      "keys": [
+        "KeyF"
+      ]
+    },
+    {
+      "mode": "guitar",
+      "id": "KeyW",
+      "source": "design/instrument-whole-scenes-2026-10-25/guitar/frames/KeyW.png",
+      "sourceSha256": "870fdd02043413075c100636efecd8c90a6290d5b51253bb444bb8b96509be69",
+      "file": "guitar/KeyW.jpg",
+      "bytes": 193310,
+      "sha256": "ee7b0f8bc1fc7040eb0c453443026908b3b7390ecdf34394ef12a94c1eda3f53",
+      "keys": [
+        "KeyW"
+      ]
+    },
+    {
+      "mode": "guitar",
+      "id": "KeyE",
+      "source": "design/instrument-whole-scenes-2026-10-25/guitar/frames/KeyE.png",
+      "sourceSha256": "a27964d1f0d3aaa6c9c875356337465071bccd82e240f951ebe19ad17e1f595f",
+      "file": "guitar/KeyE.jpg",
+      "bytes": 209409,
+      "sha256": "4307e87eb26840f64563a2f17d1d65c41231d113c07272741547e883fd1d0486",
+      "keys": [
+        "KeyE"
+      ]
+    },
+    {
+      "mode": "guitar",
+      "id": "KeyG",
+      "source": "design/instrument-whole-scenes-2026-10-25/guitar/frames/KeyG.png",
+      "sourceSha256": "2c4d50f45b64649f277335868a2ac56a1d1f12e94c1ad1c722073f689de165e6",
+      "file": "guitar/KeyG.jpg",
+      "bytes": 202910,
+      "sha256": "01f04a56c543e8ffbc85bb9539cecbd0ae72e78f468a9b5710d21ee825421c92",
+      "keys": [
+        "KeyG"
+      ]
+    },
+    {
+      "mode": "guitar",
+      "id": "KeyH",
+      "source": "design/instrument-whole-scenes-2026-10-25/guitar/frames/KeyH.png",
+      "sourceSha256": "5ae066a521a97fddaeb6ebcb98a8480f76fb1ceb8665672a00b59bfd2d3a9f3a",
+      "file": "guitar/KeyH.jpg",
+      "bytes": 193986,
+      "sha256": "21ab56fe0a3e87d0b1ec4439683f2bd40b8df9e847f6570fc3652b53749e7b13",
+      "keys": [
+        "KeyH"
+      ]
+    },
+    {
+      "mode": "guitar",
+      "id": "KeyJ",
+      "source": "design/instrument-whole-scenes-2026-10-25/guitar/frames/KeyJ.png",
+      "sourceSha256": "5a6ae3fd36e38fedcf1b52c629ff1472831099c50d0d963ba5a5323cd0746173",
+      "file": "guitar/KeyJ.jpg",
+      "bytes": 211648,
+      "sha256": "50e34d6fc998fa4c83ab119471d07f9fd1e56d811592b3773bde52567d7f281f",
+      "keys": [
+        "KeyJ"
+      ]
+    },
+    {
+      "mode": "guitar",
+      "id": "KeyK",
+      "source": "design/instrument-whole-scenes-2026-10-25/guitar/frames/KeyK.png",
+      "sourceSha256": "1ff0d59d1232bd08b4e7d12abcbea13303bd5d0894e41d2d83fc3eec216f30f1",
+      "file": "guitar/KeyK.jpg",
+      "bytes": 200445,
+      "sha256": "931da9f1a619ba112829096dc1d59028e89c3a5013a242a36cd582b7067c1ca9",
+      "keys": [
+        "KeyK"
+      ]
+    },
+    {
+      "mode": "guitar",
+      "id": "KeyT",
+      "source": "design/instrument-whole-scenes-2026-10-25/guitar/frames/KeyT.png",
+      "sourceSha256": "a0bfe12bcf00727f75f92275d8cf9362a94db1b7d3c0981a42ab8a5afc367fb4",
+      "file": "guitar/KeyT.jpg",
+      "bytes": 190242,
+      "sha256": "7816183382ce2bbd81533b565481ca3e395ead2c01c2c63176867fb3ea56a9dc",
+      "keys": [
+        "KeyT"
+      ]
+    },
+    {
+      "mode": "guitar",
+      "id": "KeyY",
+      "source": "design/instrument-whole-scenes-2026-10-25/guitar/frames/KeyY.png",
+      "sourceSha256": "56ca43621f93db375e3ea88f879d037f1c2f22ba0e3015c5fdfc358979b026e9",
+      "file": "guitar/KeyY.jpg",
+      "bytes": 203743,
+      "sha256": "40105d5038d239df79fbe50fdb9067b107e3b2912a272bb4c4102d3fb8abc331",
+      "keys": [
+        "KeyY"
+      ]
+    },
+    {
+      "mode": "guitar",
+      "id": "KeyU",
+      "source": "design/instrument-whole-scenes-2026-10-25/guitar/frames/KeyU.png",
+      "sourceSha256": "59e110c3064bd793c64d30a3f9e3856a4171de97aef845f5ce65903b42a07d21",
+      "file": "guitar/KeyU.jpg",
+      "bytes": 200334,
+      "sha256": "c8730ad265b35f58c985fa7f938ba8f386e2e111485b3540cc21250b10588fad",
+      "keys": [
+        "KeyU"
+      ]
+    },
+    {
+      "mode": "guitar",
+      "id": "Digit1",
+      "source": "design/instrument-whole-scenes-2026-10-25/guitar/frames/Digit1.png",
+      "sourceSha256": "6a81280f2f3e07cd88dd23ba74a71b6dad3abd3c075ddf0bf198285eb35c7796",
+      "file": "guitar/Digit1.jpg",
+      "bytes": 203540,
+      "sha256": "bc11c5c0e3e208ebf317c69d81c8374032fd15585440392222587c8ca003ea64",
+      "keys": [
+        "Digit1"
+      ]
+    },
+    {
+      "mode": "guitar",
+      "id": "Digit2",
+      "source": "design/instrument-whole-scenes-2026-10-25/guitar/frames/Digit2.png",
+      "sourceSha256": "cb647247640c1adca201b6fbd5e7f6bab75457f79579c2bf76469d6d3ebd6813",
+      "file": "guitar/Digit2.jpg",
+      "bytes": 197429,
+      "sha256": "d1328ab834e091c7006cdccb956386caf3f9984fce7890dde233cb813dfee825",
+      "keys": [
+        "Digit2"
+      ]
+    },
+    {
+      "mode": "guitar",
+      "id": "Digit3",
+      "source": "design/instrument-whole-scenes-2026-10-25/guitar/frames/Digit3.png",
+      "sourceSha256": "1616e3b4e7b267a4114862e4c006ab4361f6347f2dd9bacb822bdec9518173ab",
+      "file": "guitar/Digit3.jpg",
+      "bytes": 196765,
+      "sha256": "a7f4d5c3ff3925427ffcaa24ee41e5795df06c94df3610719888c1744305d1e5",
+      "keys": [
+        "Digit3"
+      ]
+    },
+    {
+      "mode": "guitar",
+      "id": "Digit4",
+      "source": "design/instrument-whole-scenes-2026-10-25/guitar/frames/Digit4.png",
+      "sourceSha256": "dc0e03b4f690bc2486a3091af25f7262ad5e4d25803b286750300050a6965b21",
+      "file": "guitar/Digit4.jpg",
+      "bytes": 198492,
+      "sha256": "c6802d4ad1186304b752869d7471944746c0ba7b8284f5421657cbbed9bc568a",
+      "keys": [
+        "Digit4"
+      ]
+    },
+    {
+      "mode": "drums",
+      "id": "idle",
+      "source": "design/instrument-whole-scenes-2026-10-25/drums/frames/idle.png",
+      "sourceSha256": "380c8393ad9bb732736772eae49270d0efc1a94840a0fa378ce6a9ed3c419a2e",
+      "file": "drums/idle.jpg",
+      "bytes": 276491,
+      "sha256": "c692e41dd9cc984916fd6ae8dcfb512b09ef008e7db04c42535e0c9b1a76b282",
+      "keys": []
+    },
+    {
+      "mode": "drums",
+      "id": "KeyZ",
+      "source": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyZ.png",
+      "sourceSha256": "5679fe47664ae0ab03973b905c0fdf37d263378e5a71770f74906416380abd9e",
+      "file": "drums/KeyZ.jpg",
+      "bytes": 259982,
+      "sha256": "8b796ab0f70200d8352db9523b846752a058329e639a7c1f63406d39ede4efa3",
+      "keys": [
+        "KeyZ"
+      ]
+    },
+    {
+      "mode": "drums",
+      "id": "KeyC",
+      "source": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyC.png",
+      "sourceSha256": "5d548f19863d3a2570922ba3a558f14d850412f2be1a49cb67f8278ada4e74fa",
+      "file": "drums/KeyC.jpg",
+      "bytes": 258933,
+      "sha256": "275c984eeeb2d71e51e547411c6cc4389f90a47fdb0fcae15311b60c973c3eb7",
+      "keys": [
+        "KeyC"
+      ]
+    },
+    {
+      "mode": "drums",
+      "id": "KeyB",
+      "source": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyB.png",
+      "sourceSha256": "1ffc97759bdf54226ac4c16cae5e9d906923e050ba716f56a2242b893714149a",
+      "file": "drums/KeyB.jpg",
+      "bytes": 263902,
+      "sha256": "6053a2fa9808682dc4f9fc16cb666d0de904e6e74b1bf43a13a47b134d67b8f2",
+      "keys": [
+        "KeyB"
+      ]
+    },
+    {
+      "mode": "drums",
+      "id": "KeyM",
+      "source": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyM.png",
+      "sourceSha256": "474d62d150211bb54b2760355904aa99f0fce4ab20a2b782bec63bc73435ddbc",
+      "file": "drums/KeyM.jpg",
+      "bytes": 262552,
+      "sha256": "b11ba4955eaff14cab013e7e7f6537f2196aa616263e99e09e4c07d63b812607",
+      "keys": [
+        "KeyM"
+      ]
+    },
+    {
+      "mode": "drums",
+      "id": "KeyX",
+      "source": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyX.png",
+      "sourceSha256": "f0cf2479a61179d16117947855250ac3bc9e0f8802c1c2618bb65926d1cd28c4",
+      "file": "drums/KeyX.jpg",
+      "bytes": 256372,
+      "sha256": "1c4552970d42f784cfdefca7b709217f7d3fa010466f65cd5e62c06c09abb728",
+      "keys": [
+        "KeyX"
+      ]
+    },
+    {
+      "mode": "drums",
+      "id": "KeyV",
+      "source": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyV.png",
+      "sourceSha256": "549b0ac2dec497e260e0cc2c0b68a9d3d931302966c86539f5cdd5fe35bcd667",
+      "file": "drums/KeyV.jpg",
+      "bytes": 267264,
+      "sha256": "843a3120e55297f8f6080175b087e3098a0fe1cea47d589c4153d1176a2dfcfe",
+      "keys": [
+        "KeyV"
+      ]
+    },
+    {
+      "mode": "drums",
+      "id": "KeyN",
+      "source": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyN.png",
+      "sourceSha256": "6681ff02d792a60f1d28d90de304cc5a82051e7aac1cf6967dfd6f5c88be11e7",
+      "file": "drums/KeyN.jpg",
+      "bytes": 263417,
+      "sha256": "827935006121630bbf5e4266754575951350c024ebac476d0641fcf373cb5623",
+      "keys": [
+        "KeyN"
+      ]
+    },
+    {
+      "mode": "drums",
+      "id": "KeyL",
+      "source": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyL.png",
+      "sourceSha256": "4c3fbd58bea624b094da4179389f25172aa80f2a97643e50181bf1083048178a",
+      "file": "drums/KeyL.jpg",
+      "bytes": 261571,
+      "sha256": "ed4edb3b82735e576806bc39e522f9757344e3ade58a00e596ceffcc1a2358df",
+      "keys": [
+        "KeyL"
+      ]
+    },
+    {
+      "mode": "drums",
+      "id": "KeyZ-KeyX",
+      "source": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyZ-KeyX.png",
+      "sourceSha256": "9208c267ebc05356c77bc0d0859ec41b6752f8c72d5479ef8b607e4e635bc540",
+      "file": "drums/KeyZ-KeyX.jpg",
+      "bytes": 260683,
+      "sha256": "db3ca5e2f6aeb56ccb426cf29d28235e4b2ae55252eb2479091d0a06172810bf",
+      "keys": [
+        "KeyZ",
+        "KeyX"
+      ]
+    },
+    {
+      "mode": "drums",
+      "id": "KeyZ-KeyV",
+      "source": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyZ-KeyV.png",
+      "sourceSha256": "8b4b1dfa210b2c7419bd6a9c641b64826736b8d8196e581444dc652727ef8120",
+      "file": "drums/KeyZ-KeyV.jpg",
+      "bytes": 264972,
+      "sha256": "23ad4fe190fe4d3e0553a6b076636ec0bc55b47df57c5f4959a95bef2c78f44c",
+      "keys": [
+        "KeyZ",
+        "KeyV"
+      ]
+    },
+    {
+      "mode": "drums",
+      "id": "KeyZ-KeyN",
+      "source": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyZ-KeyN.png",
+      "sourceSha256": "b82bd538ebce44b5cce84dc63ea26211b9a94860e9910622507a67948a6ff6d2",
+      "file": "drums/KeyZ-KeyN.jpg",
+      "bytes": 257281,
+      "sha256": "a2920dd360a9daea3d94cca2a8f6dc5515a3c09af2b396339e1bf5a0b77645b2",
+      "keys": [
+        "KeyZ",
+        "KeyN"
+      ]
+    },
+    {
+      "mode": "drums",
+      "id": "KeyZ-KeyL",
+      "source": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyZ-KeyL.png",
+      "sourceSha256": "cb60449ac7c8fbc0ebb7062e743788de06f42ea6615f37c56df39d3a4b18add5",
+      "file": "drums/KeyZ-KeyL.jpg",
+      "bytes": 262523,
+      "sha256": "0dcff4c0818ab55fa01fcb3b3552bc11e508dddb25ba59320879b7d3e8179b51",
+      "keys": [
+        "KeyZ",
+        "KeyL"
+      ]
+    },
+    {
+      "mode": "drums",
+      "id": "KeyC-KeyX",
+      "source": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyC-KeyX.png",
+      "sourceSha256": "1244b4b16029c91fd8b382e55346fe563f7b0c1c41e5b07d82e23b7fd30fd640",
+      "file": "drums/KeyC-KeyX.jpg",
+      "bytes": 257838,
+      "sha256": "cd05258c2461f040a3f1e4547f869785742efb9d86c171bcd882c87799af6477",
+      "keys": [
+        "KeyC",
+        "KeyX"
+      ]
+    },
+    {
+      "mode": "drums",
+      "id": "KeyC-KeyV",
+      "source": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyC-KeyV.png",
+      "sourceSha256": "d966959de3202f4046eb7fc3a2fc9d06dfb73dffe3243d9f886596d37aa3b606",
+      "file": "drums/KeyC-KeyV.jpg",
+      "bytes": 266967,
+      "sha256": "74fb7e2257799ed12496f22f8d1f4a13be653c6592900b5ff4db3683989ad035",
+      "keys": [
+        "KeyC",
+        "KeyV"
+      ]
+    },
+    {
+      "mode": "drums",
+      "id": "KeyC-KeyN",
+      "source": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyC-KeyN.png",
+      "sourceSha256": "3b9f431ce2912c4ebfa763aca06d7a6bebeb6fba5a17ec00a564d97798d3f134",
+      "file": "drums/KeyC-KeyN.jpg",
+      "bytes": 258926,
+      "sha256": "92b3cabf0a2becbe429ab90f00d79ff194bd611e7cd9f4881efe37d37887d2a8",
+      "keys": [
+        "KeyC",
+        "KeyN"
+      ]
+    },
+    {
+      "mode": "drums",
+      "id": "KeyC-KeyL",
+      "source": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyC-KeyL.png",
+      "sourceSha256": "23d4727d6ea1424e41d325e7da5082faf3ca72c076465303f5a3240dea5d59e3",
+      "file": "drums/KeyC-KeyL.jpg",
+      "bytes": 260932,
+      "sha256": "75858cc522e6be17dc54449971038d5a5df53c9d259d3b903212d5c05d8c2a49",
+      "keys": [
+        "KeyC",
+        "KeyL"
+      ]
+    },
+    {
+      "mode": "drums",
+      "id": "KeyB-KeyX",
+      "source": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyB-KeyX.png",
+      "sourceSha256": "d5fe7ea145fabf09bf66cb3760cbfc419f7d0ed6a4ad6a68e20ca99ad8b9d951",
+      "file": "drums/KeyB-KeyX.jpg",
+      "bytes": 259327,
+      "sha256": "7da4cd5a1e3174ce1f0a81a0d9196077b120759a72a3d137b5c74d4e19270214",
+      "keys": [
+        "KeyB",
+        "KeyX"
+      ]
+    },
+    {
+      "mode": "drums",
+      "id": "KeyB-KeyV",
+      "source": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyB-KeyV.png",
+      "sourceSha256": "696f6f1cffdac6277e991238c65d31b639dc78901e98a2478851d9bae0061b3f",
+      "file": "drums/KeyB-KeyV.jpg",
+      "bytes": 273557,
+      "sha256": "f0afb68d82b55dbbb830fa9e74220d0dededc4c0d200278914545c82a0a45cb6",
+      "keys": [
+        "KeyB",
+        "KeyV"
+      ]
+    },
+    {
+      "mode": "drums",
+      "id": "KeyB-KeyN",
+      "source": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyB-KeyN.png",
+      "sourceSha256": "922df82a754744b9089b1dec7df19d5dbbec74cc4ae121c6d2b3ebc6fe8fb126",
+      "file": "drums/KeyB-KeyN.jpg",
+      "bytes": 257846,
+      "sha256": "d0c377703d2bf8b8c8278c93df7c834f843c6f524e89adb1ef857a2a7b1bb4fa",
+      "keys": [
+        "KeyB",
+        "KeyN"
+      ]
+    },
+    {
+      "mode": "drums",
+      "id": "KeyB-KeyL",
+      "source": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyB-KeyL.png",
+      "sourceSha256": "102ab7fc760cc168e20caab2fdf863918b805da78cb9bc5349acf305fcbc4beb",
+      "file": "drums/KeyB-KeyL.jpg",
+      "bytes": 262492,
+      "sha256": "4ac765da7b0ca2998f9716b369cbfe0114b8955fc5bed14f97d614e2b7c018b5",
+      "keys": [
+        "KeyB",
+        "KeyL"
+      ]
+    },
+    {
+      "mode": "drums",
+      "id": "KeyM-KeyX",
+      "source": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyM-KeyX.png",
+      "sourceSha256": "d71771f47dbb48d8448f94435dd0981664f329f023280fc79b7c9f2092e41fd3",
+      "file": "drums/KeyM-KeyX.jpg",
+      "bytes": 260734,
+      "sha256": "7388fd2e1265c35f4eeb9aa58c6c005fcb9d3c9b6c549d3ee1171dc38166725b",
+      "keys": [
+        "KeyM",
+        "KeyX"
+      ]
+    },
+    {
+      "mode": "drums",
+      "id": "KeyM-KeyV",
+      "source": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyM-KeyV.png",
+      "sourceSha256": "05744a9315e6d8d4f0535d9d3618fea7ac46628ed5de9df422067b2bcba1bf7d",
+      "file": "drums/KeyM-KeyV.jpg",
+      "bytes": 269398,
+      "sha256": "7a20a41409e2993ce9ee2063041492c324672b61daa478a966938103668f26bf",
+      "keys": [
+        "KeyM",
+        "KeyV"
+      ]
+    },
+    {
+      "mode": "drums",
+      "id": "KeyM-KeyN",
+      "source": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyM-KeyN.png",
+      "sourceSha256": "c8b4deebb8e9cb6a6561d2fad33adb609b45d7033dafd0d93af06d60d34772a5",
+      "file": "drums/KeyM-KeyN.jpg",
+      "bytes": 264929,
+      "sha256": "5bfbf78c484e5843ae17f741aaf4d8e9d4d176cfec747a8d5640ffac848ca547",
+      "keys": [
+        "KeyM",
+        "KeyN"
+      ]
+    },
+    {
+      "mode": "drums",
+      "id": "KeyM-KeyL",
+      "source": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyM-KeyL.png",
+      "sourceSha256": "3f831a6905c6da015fa19b43e091b43241f7d4dbbdc56abc91bd3435582aea2e",
+      "file": "drums/KeyM-KeyL.jpg",
+      "bytes": 261568,
+      "sha256": "c5a2a1512145572716cc928ceda80af1579a26edb0e634d9569cef15728df39a",
+      "keys": [
+        "KeyM",
+        "KeyL"
+      ]
+    }
+  ],
+  "limits": [
+    "Discrete poses, not generated continuous video",
+    "Guitar paw contact is a cartoon gesture, not a fingering lesson",
+    "Most recent target per available paw; all triggered sounds remain independent",
+    "Marimba motion remains unfinished; physical-device and user aesthetic acceptance pending"
+  ]
+}

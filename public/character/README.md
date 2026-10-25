@@ -1,5 +1,7 @@
 # Original orange musician: complete scenes
 
-The active piano renderer uses 56 complete generated cat+both-paws+piano pictures, one entire picture per idle/single-key/two-paw state. It never combines separate body, arm or paw images. Whole-frame sources, prompts and provenance are in the project design/whole-cat-frames-2026-10-25 directory and whole-piano-v3/manifest.json.
+The active renderer uses complete generated cat+both-paws+instrument scenes: 56 piano poses (whole-piano-v3/manifest.json), 18 guitar poses and 25 drum poses (instrument-scenes-v1/manifest.json). Every draw is one entire picture; no separate arm/body layers, crops or limb warping.
 
-These are discrete illustrated poses, not a newly generated continuous video or pixel-perfect human fingering. Guitar/drums use full static pictures; marimba motion is unfinished. The separated-arm experiment was rejected and archived; no production fallback activates it.
+Source PNGs, prompts, generation and review records are in the project design/whole-cat-frames-2026-10-25 and design/instrument-whole-scenes-2026-10-25 directories. JPEG packaging only scales/encodes the whole picture. These are discrete cartoon poses, not continuous video or precise guitar-fingering instruction. Most recent confirmed targets select the scene; sound still follows all actual inputs independently. Marimba motion remains visibly labelled as unfinished.
+
+The separated-arm experiment was rejected and archived; no production fallback activates it. Historic atlases/static previews remain only as provenance.

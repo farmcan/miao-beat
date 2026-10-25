@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-25",
+  "generator": "OpenAI built-in image_gen image edit",
+  "mode": "Each pose is a whole-scene edit of the same sole idle reference; no limb compositing, pixel edit, or chained generated reference.",
+  "reference": {
+    "path": "design/instrument-whole-scenes-2026-10-25/drums/frames/idle.png",
+    "sha256": "380c8393ad9bb732736772eae49270d0efc1a94840a0fa378ce6a9ed3c419a2e",
+    "width": 1254,
+    "height": 1254
+  },
+  "scope": "judge_ui assigned 8 singles plus 4 kick/right-hand pairs. Product agent owns remaining pairs.",
+  "boundary": "Manual visual review of individual PNGs, not runtime QA or user aesthetic approval. Kit has 7 physical pieces and 8 sounds; closed/open hi-hat share one instrument. Kick pedal remains behind bass drum and is occluded; kick visual feedback is a whole-scene head/downbeat pose, not verified visible pedal contact.",
+  "records": [
+    {
+      "id": "KeyZ",
+      "path": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyZ.png",
+      "source": "$CODEX_HOME/generated_images/01a1639c-503e-7f72-b6f6-9ecf02e53696/exec-42714705-87bb-4e84-bcbd-423b6451e428.png",
+      "prompt": "design/instrument-whole-scenes-2026-10-25/drums/prompts/KeyZ-downbeat.txt",
+      "reference": "design/instrument-whole-scenes-2026-10-25/drums/frames/idle.png",
+      "reviewMethod": "tools.view_image detail original, final asset explicitly viewed",
+      "status": "accepted_with_boundary",
+      "review": "Actually viewed nod redesign. Head tilts/lowers and eyes look down clearly; two hands/sticks idle and bass front unstruck. Pedal remains occluded, so kick feedback is head downbeat rather than visually verified foot/pedal contact. No obvious extra limb; whole cat retained.",
+      "priorAttempts": [
+        {
+          "source": "$CODEX_HOME/generated_images/01a1639c-503e-7f72-b6f6-9ecf02e53696/exec-3ae10400-afbd-4c20-9609-cbe7444cbac7.png",
+          "review": "Foot cue too weak; archived; one retry.",
+          "sha256": "afbbc316cdceef507fe5fb7264bb7a7e59b4376d9045b6e62d72a23d53bdfde4",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "source": "$CODEX_HOME/generated_images/01a1639c-503e-7f72-b6f6-9ecf02e53696/exec-6528158a-7943-469b-a721-b7b813202e58.png",
+          "review": "Second foot-only variant still not visually distinct. Parent changed action design to visible head/body downbeat because foot naturally occluded.",
+          "sha256": "30b13506c6f06600d8bd538a14b5958d2081599374906aca99f23b3aa8e89795",
+          "width": 1254,
+          "height": 1254
+        }
+      ],
+      "sha256": "5679fe47664ae0ab03973b905c0fdf37d263378e5a71770f74906416380abd9e",
+      "width": 1254,
+      "height": 1254,
+      "promptSha256": "76134b60b92faceb3ea493c0d5d8a014a200b158805b5cdd66dd792d356fb2a9"
+    },
+    {
+      "id": "KeyX",
+      "path": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyX.png",
+      "source": "$CODEX_HOME/generated_images/01a1639c-503e-7f72-b6f6-9ecf02e53696/exec-b5365857-8337-49ab-9fd9-72356755f94d.png",
+      "prompt": "design/instrument-whole-scenes-2026-10-25/drums/prompts/KeyX.txt",
+      "reference": "design/instrument-whole-scenes-2026-10-25/drums/frames/idle.png",
+      "reviewMethod": "tools.view_image detail original, final asset explicitly viewed",
+      "status": "accepted",
+      "review": "Actually viewed full-resolution output. Whole cat and kit retained, exactly two sticks. Viewer-right stick bead visibly contacts lower-right snare skin; left remains idle. No obvious extra limb.",
+      "priorAttempts": [],
+      "sha256": "f0cf2479a61179d16117947855250ac3bc9e0f8802c1c2618bb65926d1cd28c4",
+      "width": 1254,
+      "height": 1254,
+      "promptSha256": "0476606dcfa13e31479be86bc26fa20b36edd09c217498c6b0641111fbaac38f"
+    },
+    {
+      "id": "KeyC",
+      "path": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyC.png",
+      "source": "$CODEX_HOME/generated_images/01a1639c-503e-7f72-b6f6-9ecf02e53696/exec-672bb898-fc2a-43d8-8d25-cb4a50f266a0.png",
+      "prompt": "design/instrument-whole-scenes-2026-10-25/drums/prompts/KeyC.txt",
+      "reference": "design/instrument-whole-scenes-2026-10-25/drums/frames/idle.png",
+      "reviewMethod": "tools.view_image detail original, final asset explicitly viewed",
+      "status": "accepted",
+      "review": "Actually viewed full-resolution output. Viewer-left stick bead contacts lower-left closed hi-hat upper face; two discs remain nested/closed. Right stick idle. No obvious anatomy defect.",
+      "priorAttempts": [],
+      "sha256": "5d548f19863d3a2570922ba3a558f14d850412f2be1a49cb67f8278ada4e74fa",
+      "width": 1254,
+      "height": 1254,
+      "promptSha256": "7eaa322f090af6d00b1a9d89f60de7a3a828650b4c4a0907240de238ab3c6343"
+    },
+    {
+      "id": "KeyV",
+      "path": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyV.png",
+      "source": "$CODEX_HOME/generated_images/01a1639c-503e-7f72-b6f6-9ecf02e53696/exec-101482a2-b1b9-4bb9-a470-3f18360d16f7.png",
+      "prompt": "design/instrument-whole-scenes-2026-10-25/drums/prompts/KeyV-retry.txt",
+      "reference": "design/instrument-whole-scenes-2026-10-25/drums/frames/idle.png",
+      "reviewMethod": "tools.view_image detail original, final asset explicitly viewed",
+      "status": "accepted",
+      "review": "Actually viewed final full image after one targeted retry. Connected viewer-right arm crosses belly; its bead contacts upper face of open lower-left hi-hat. Small disc gap visible; left stick idle; exactly two paws/sticks. Right arm bulk changes but no obvious disconnection.",
+      "priorAttempts": [
+        {
+          "source": "$CODEX_HOME/generated_images/01a1639c-503e-7f72-b6f6-9ecf02e53696/exec-f568f808-e897-46b9-a179-fa85c217fe54.png",
+          "review": "Rejected first attempt: open hi-hat contact correct but left hand used instead of assigned crossing right.",
+          "sha256": "2f8905dc5da5db6e987f6daece88360a24474b09474e2380f8506ca67607ddbe",
+          "width": 1254,
+          "height": 1254
+        }
+      ],
+      "sha256": "549b0ac2dec497e260e0cc2c0b68a9d3d931302966c86539f5cdd5fe35bcd667",
+      "width": 1254,
+      "height": 1254,
+      "promptSha256": "ec2cbbab293f1600e9f0ba1a08348a1bb0dd5ca4a084d5f29a0da4dabf41f37c"
+    },
+    {
+      "id": "KeyB",
+      "path": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyB.png",
+      "source": "$CODEX_HOME/generated_images/01a1639c-503e-7f72-b6f6-9ecf02e53696/exec-aaecdfb9-a848-4642-a134-d3979993f6af.png",
+      "prompt": "design/instrument-whole-scenes-2026-10-25/drums/prompts/KeyB.txt",
+      "reference": "design/instrument-whole-scenes-2026-10-25/drums/frames/idle.png",
+      "reviewMethod": "tools.view_image detail original, final asset explicitly viewed",
+      "status": "accepted",
+      "review": "Actually viewed full-resolution output. Viewer-left bead touches interior of floor-tom top skin, not its rim. Right stick idle, intact whole scene and two sticks.",
+      "priorAttempts": [],
+      "sha256": "1ffc97759bdf54226ac4c16cae5e9d906923e050ba716f56a2242b893714149a",
+      "width": 1254,
+      "height": 1254,
+      "promptSha256": "9787dc0fb1821a03a7de8a8873be3ff27c025bd733d899ef850476930db46e18"
+    },
+    {
+      "id": "KeyN",
+      "path": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyN.png",
+      "source": "$CODEX_HOME/generated_images/01a1639c-503e-7f72-b6f6-9ecf02e53696/exec-ef305c0a-9e6b-49bf-9a93-04fccfe63b55.png",
+      "prompt": "design/instrument-whole-scenes-2026-10-25/drums/prompts/KeyN.txt",
+      "reference": "design/instrument-whole-scenes-2026-10-25/drums/frames/idle.png",
+      "reviewMethod": "tools.view_image detail original, final asset explicitly viewed",
+      "status": "accepted",
+      "review": "Actually viewed full-resolution output. Viewer-right bead contacts tilted high-tom interior skin. Left idle; intact whole cat and fixed kit.",
+      "priorAttempts": [],
+      "sha256": "6681ff02d792a60f1d28d90de304cc5a82051e7aac1cf6967dfd6f5c88be11e7",
+      "width": 1254,
+      "height": 1254,
+      "promptSha256": "68d61507e4172550d5c635a3397b993a98bc411130df6f67660e1cbd423f7b62"
+    },
+    {
+      "id": "KeyM",
+      "path": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyM.png",
+      "source": "$CODEX_HOME/generated_images/01a1639c-503e-7f72-b6f6-9ecf02e53696/exec-9e536815-b19a-43ad-8e46-799aa32e71d3.png",
+      "prompt": "design/instrument-whole-scenes-2026-10-25/drums/prompts/KeyM-retry.txt",
+      "reference": "design/instrument-whole-scenes-2026-10-25/drums/frames/idle.png",
+      "reviewMethod": "tools.view_image detail original, final asset explicitly viewed",
+      "status": "accepted",
+      "review": "Actually viewed after one targeted retry. Viewer-left bead contacts left outer third of crash surface, away from center post. Right idle; connected arm and exactly two sticks.",
+      "priorAttempts": [
+        {
+          "source": "$CODEX_HOME/generated_images/01a1639c-503e-7f72-b6f6-9ecf02e53696/exec-a5c296e3-46cb-4c53-96f6-00e988de904e.png",
+          "review": "Target contact on crash surface achieved but too near center mount; outer-third spec not met. One targeted retry.",
+          "sha256": "556261fbffaca4b81320a88a2fb678c61f1147aed2d29a52c635e0c1d626e52f",
+          "width": 1254,
+          "height": 1254
+        }
+      ],
+      "sha256": "474d62d150211bb54b2760355904aa99f0fce4ab20a2b782bec63bc73435ddbc",
+      "width": 1254,
+      "height": 1254,
+      "promptSha256": "27feef557fcf9762c2b9433d45b49d17d7b4330bfec437595d6dc5b75b88c1d8"
+    },
+    {
+      "id": "KeyL",
+      "path": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyL.png",
+      "source": "$CODEX_HOME/generated_images/01a1639c-503e-7f72-b6f6-9ecf02e53696/exec-2f1bdfc3-ae6d-4866-8010-36349a8d35dd.png",
+      "prompt": "design/instrument-whole-scenes-2026-10-25/drums/prompts/KeyL.txt",
+      "reference": "design/instrument-whole-scenes-2026-10-25/drums/frames/idle.png",
+      "reviewMethod": "tools.view_image detail original, final asset explicitly viewed",
+      "status": "accepted",
+      "review": "Actually viewed full-resolution output. Viewer-right bead touches ride outer third; left idle. Whole scene intact, no extra paw or stick.",
+      "priorAttempts": [],
+      "sha256": "4c3fbd58bea624b094da4179389f25172aa80f2a97643e50181bf1083048178a",
+      "width": 1254,
+      "height": 1254,
+      "promptSha256": "0c6c10b4a68ecb1447678659f34a1f9ff7cf2e24748fd506a3cd869de89e3911"
+    },
+    {
+      "id": "KeyZ-KeyX",
+      "path": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyZ-KeyX.png",
+      "source": "$CODEX_HOME/generated_images/01a1639c-503e-7f72-b6f6-9ecf02e53696/exec-ef29babc-f744-4f51-8b7f-a6575e96d345.png",
+      "prompt": "design/instrument-whole-scenes-2026-10-25/drums/prompts/KeyZ-KeyX.txt",
+      "reference": "design/instrument-whole-scenes-2026-10-25/drums/frames/idle.png",
+      "reviewMethod": "tools.view_image detail original, final asset explicitly viewed",
+      "status": "accepted_with_boundary",
+      "review": "Actually viewed. Clear downward head/eyes feedback plus right bead contacts snare interior skin; left idle. Bass pedal remains occluded. Whole cat and exactly two sticks.",
+      "priorAttempts": [],
+      "sha256": "9208c267ebc05356c77bc0d0859ec41b6752f8c72d5479ef8b607e4e635bc540",
+      "width": 1254,
+      "height": 1254,
+      "promptSha256": "7f0f06df1a2e224b07ea439af216363d336498509b88ae72d78883475c08cd8d"
+    },
+    {
+      "id": "KeyZ-KeyV",
+      "path": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyZ-KeyV.png",
+      "source": "$CODEX_HOME/generated_images/01a1639c-503e-7f72-b6f6-9ecf02e53696/exec-f037f25e-e1c5-4bfc-9bd3-5bc382173751.png",
+      "prompt": "design/instrument-whole-scenes-2026-10-25/drums/prompts/KeyZ-KeyV.txt",
+      "reference": "design/instrument-whole-scenes-2026-10-25/drums/frames/idle.png",
+      "reviewMethod": "tools.view_image detail original, final asset explicitly viewed",
+      "status": "accepted_with_boundary",
+      "review": "Actually viewed. Right arm crosses belly, bead touches upper hi-hat surface near right outer area; upper/lower discs visibly open. Head nod/downward gaze and two connected arms/two sticks. Bass pedal remains hidden.",
+      "priorAttempts": [],
+      "sha256": "8b4b1dfa210b2c7419bd6a9c641b64826736b8d8196e581444dc652727ef8120",
+      "width": 1254,
+      "height": 1254,
+      "promptSha256": "b7e031dfcd08cf80896dc420a6eb0bf99266ddf6381919057362b8197a61a1d0"
+    },
+    {
+      "id": "KeyZ-KeyN",
+      "path": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyZ-KeyN.png",
+      "source": "$CODEX_HOME/generated_images/01a1639c-503e-7f72-b6f6-9ecf02e53696/exec-0f7dbaf0-f7e7-4c29-8071-dcf64854edfa.png",
+      "prompt": "design/instrument-whole-scenes-2026-10-25/drums/prompts/KeyZ-KeyN-retry.txt",
+      "reference": "design/instrument-whole-scenes-2026-10-25/drums/frames/idle.png",
+      "reviewMethod": "tools.view_image detail original, final asset explicitly viewed",
+      "status": "accepted_with_boundary",
+      "review": "Actually viewed after one retry. Right bead contacts tilted high-tom skin; hi-hat now closed as idle. Clear head downbeat, left stick idle, whole cat connected. Bass pedal remains hidden.",
+      "priorAttempts": [
+        {
+          "source": "$CODEX_HOME/generated_images/01a1639c-503e-7f72-b6f6-9ecf02e53696/exec-40d9a367-3f49-4ba7-9da1-b6629f7e008e.png",
+          "review": "High tom contact and nod correct but unrequested hi-hat opening; targeted single retry to close hat.",
+          "sha256": "e9df698a80b9b25aecb304f42c9c9d459648fc917e2be53c2e07505fdd6387e6",
+          "width": 1254,
+          "height": 1254
+        }
+      ],
+      "sha256": "b82bd538ebce44b5cce84dc63ea26211b9a94860e9910622507a67948a6ff6d2",
+      "width": 1254,
+      "height": 1254,
+      "promptSha256": "39383c718b643434751fdbe5eb7425c98cb40d4f8a13e63232cb6780349a6df6"
+    },
+    {
+      "id": "KeyZ-KeyL",
+      "path": "design/instrument-whole-scenes-2026-10-25/drums/frames/KeyZ-KeyL.png",
+      "source": "$CODEX_HOME/generated_images/01a1639c-503e-7f72-b6f6-9ecf02e53696/exec-2afef858-7fd1-4083-8e20-bae5d89a80d8.png",
+      "prompt": "design/instrument-whole-scenes-2026-10-25/drums/prompts/KeyZ-KeyL-retry.txt",
+      "reference": "design/instrument-whole-scenes-2026-10-25/drums/frames/idle.png",
+      "reviewMethod": "tools.view_image detail original, final asset explicitly viewed",
+      "status": "accepted_with_boundary",
+      "review": "Actually viewed after one targeted retry. Entire right stick shaft now visible continuously from paw to bead on ride outer third. Head/downward eyes show kick downbeat; left stick idle and hi-hat closed. Whole cat connected; bass pedal hidden.",
+      "priorAttempts": [
+        {
+          "source": "$CODEX_HOME/generated_images/01a1639c-503e-7f72-b6f6-9ecf02e53696/exec-0cdf5465-0fc9-480b-9446-d637e452cfed.png",
+          "review": "Nod and ride target are correct, but shaft occluded behind ride surface while isolated bead visible creates broken-stick ambiguity. One targeted retry to keep continuous shaft visibly on top surface.",
+          "sha256": "91a985afcf89cb81ee895aeac34295955b069c4af0e64fd9a70f3a5e89fe0745",
+          "width": 1254,
+          "height": 1254
+        }
+      ],
+      "sha256": "cb60449ac7c8fbc0ebb7062e743788de06f42ea6615f37c56df39d3a4b18add5",
+      "width": 1254,
+      "height": 1254,
+      "promptSha256": "028c13ab1798f511b6ab02a4324cd3d71efa1829235f7c2a745cd825bc7a7013"
+    }
+  ]
+}

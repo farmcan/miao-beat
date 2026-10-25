@@ -107,7 +107,7 @@ test('blur cancels pending audio activation for recording, metronome, and live n
 test('a cold first note explains loading without replaying stale taps; a fresh input plays once',async t=>{
   const h=setup(t),{$,audio,key}=h;
   const release=audio.defer();key('keydown','KeyA');await settle();key('keyup','KeyA');
-  assert.equal($('soundStatus').dataset.state,'loading');assert.match($('soundStatus').textContent,/准备.*再按/);
+  assert.equal($('soundStatus').dataset.state,'loading');assert.match($('soundStatus').textContent,/加载.*再点/);
   assert.equal($('enableAudio').disabled,true);
   key('keydown','KeyD');key('keyup','KeyD');release();await settle();
   assert.equal(audio.plays.length,0,'initial and loading-time taps must never be queued');
