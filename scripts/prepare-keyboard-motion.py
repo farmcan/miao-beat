@@ -11,7 +11,7 @@ expected = '17a223bc41021898f120d2660b4c0787660a07ff157d1910d8f2f6f2572bd8a5'
 assert hashlib.sha256(source.read_bytes()).hexdigest() == expected, 'Unreviewed motion source'
 frames = [234, 230, 232, 152, 154, 156, 84, 86, 88, 108, 110, 112, 228]
 temporary = root / 'artifacts/keyboard-motion-export'
-temporary.mkdir(exist_ok=True)
+temporary.mkdir(parents=True, exist_ok=True)
 output = root / 'public/character'
 for index, frame in enumerate(frames):
     subprocess.run(['ffmpeg', '-hide_banner', '-loglevel', 'error', '-i', str(source),

@@ -20,7 +20,17 @@
 
 ## 生产验收
 
-发布后补记精确source commit、Cloudflare状态、canonical字节与浏览器结果。构建只允许public的73项（含_headers配置），不发布研究/本地原片/凭据；部署只用dist。
+生产source commit：`b07d3971dedc848997d3f7a819e525d42e5d97cf`，已push到main。Cloudflare production deployment：`ac415528-b59b-466b-819b-75af2e020fc5`，2026-10-25T09:25:12Z为deploy/success。CLI部署元数据使用短SHA `b07d397`；站点release.json记录完整SHA。构建只允许public的73项（含_headers配置），不发布研究/本地原片/凭据；部署只用dist。
+
+`python3 scripts/verify-production.py` 核实正式域名 `https://miao-beat.pages.dev/` 的完整commit及72个公开源文件SHA全部一致（_headers是部署配置，无对应公开route）。
+
+正式域名真实IAB复测：打开声音后A/F/K响应与非零电平；A+K按住观察both/frame12；松开恢复；三次真实输入记录为3次并能回放到结束；390×844无整页横向溢出，高音导航到约290px右端并禁用；844×390演奏模式下猫x24–275、节拍器按钮x749–820，可实际点击，退出正常。浏览器error/warn为空。实体手机听音、触控与用户自然度认可仍未测。
+
+原片预览 `https://miao-beat.pages.dev/labs/keyboard-motion/` 在正式域名实际解码：readyState4，duration10.041667；点击播放后paused=false、时间前进，未见媒体/CSP错误。生产截图留在本地 `artifacts/whole-cat-production-desktop.png`、`whole-cat-production-landscape.png`、`whole-cat-production-video.png`。
+
+独立角色复核确认A/F/G/K和快速交替可回休息帧、未见断肢接缝；同时明确整帧切换会带动头/尾/另一爪，仍有照片式跳切。此结论不以部署成功或测试数量撤销。后续应在同机位、同身体与另一爪姿态下补充动作素材。
+
+Seed状态页通过既有pending→审查→安全发布机制追加本轮开始、研究、新take归档与交付事件，保留旧素材丢失/过期历史，不将另一条新视频标作旧对象恢复。
 
 ## 后续判断
 
