@@ -36,3 +36,11 @@ MiaoBeat 复用现有 `miaoti-stats` 数据库及已有表结构，使用独立�
 - 另一仅静态的本地服务器模拟计数 API 不可用：真实 Chrome 显示 `累计访问：暂时未知`；仍能准备钢琴并按 A，显示 C4 与非零电平。失败没有阻塞演奏。未据此声称物理扬声器听感通过。
 - 截图在本地 artifacts：`site-counter-local-mobile-2026-10-25.jpg` 与 `site-counter-local-unavailable-2026-10-25.jpg`；不进入 public。
 - 生产待验：正式 GET 与只读浏览器页面、普通真实访问后的 Cookie 去重、无正文/跨站拒绝、预览只读、静态页面与音色/视频仍正常、源码 allowlist 字节核验。不要向生产写测试用录制/虚构访客数据。
+
+## 生产补记
+
+已随source `6381f3d301966eb4cf0ddde34316b789576e5a57`部署，CF `88100f2a-c930-421a-bed0-973a51b88b7f` production成功。生产先只读确认独立key无行，API GET返回0；正式浏览器自然访问后显示1，刷新仍1；其后GET为1，未用脚本伪造历史访问或补种总数。
+
+正式curl：GET200；带正文POST400；跨源POST403；preview无cookie POST200/count=false。全部检查后总数仍1。与实际D1绑定/持久化闭环相符。个别Python UA遭Cloudflare边缘1010，未冒称API本身不可用或拿该403替代业务校验。
+
+合并角色/入口后的最终全套58项测试通过；79显式public（76公开静态源+3部署配置），canonical静态SHA一致。完整验收见[0.9发布记录](precise-piano-release-2026-10-25.md)。

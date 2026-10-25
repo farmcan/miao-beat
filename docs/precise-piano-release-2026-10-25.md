@@ -27,3 +27,16 @@
 58项全套回归通过；独立浏览器实查纹理A/F/K/W/T，未见网格三角接缝、重复纹理或爪横转。root实际逐个长按ASDFGHJK/WETYU，13个不同接触位置全部到达，未见不可达告警；纯色尖角/塑料肩部两轮内部草样均已退回，最终使用完整RGBA材质并将肩根内收。每只爪跟随该侧最新确认音，多个实际held键均保持下沉；不是让一只爪长出13个手指。原曲开头/参考谱不会被自动记成真实演奏。
 
 此处的图像与坐标检查不替代用户审美判断，也未声称实体手机扬声器、触控和持续帧率通过。
+
+## 正式交付结果
+
+- source commit：`6381f3d301966eb4cf0ddde34316b789576e5a57`，已push main；release `0.9.0-precise-piano`。
+- Cloudflare production：`88100f2a-c930-421a-bed0-973a51b88b7f`，2026-10-25T10:58:19.626567Z deploy/success，元数据是完整source SHA。
+- 正式域名release与76个公开静态源SHA全部匹配。3项部署配置不冒称远端逐字节已取回；Worker/绑定另用业务行为检查。
+- 正式IAB依次长按13键：8白/5黑各自到达独立坐标，A+G双手同时到正确位置，无characterWarning；三次真实输入记录为3次，回放至结束；吉他1=C、马林巴A=C4、鼓Z=底鼓，回钢琴正常。console warn/error为空。
+- 生产计数初始GET0；真实浏览器访问显示1，刷新仍1。curl GET200为1/count=false，非空POST400、跨源POST403，preview无Cookie POST只读/count=false且仍1。一个Python urllib验证客户端曾被边缘1010拦截，未将其403冒充业务拒绝；业务行为通过可正常访问的curl/浏览器路径单独验证。
+- 当前IAB窄面板实际CSS319×780：无整页横向溢出，高音导航两次到361最大值并禁用；fullscreen实际844×390：猫x24–275，节拍器按钮x750–820，可开/停，退出正常。已清除临时视口覆盖。这些不代表实体手机音频/多点触控验收。
+- 截图：本地`artifacts/precise-piano-production-both.jpg`（A+G，1254宽QA）、`precise-piano-production-counter.jpg`、`precise-piano-production-current-panel.jpg`（当前窄面板，不能冒充大屏）。
+- 粉刷匠选择后指向出版资源PDF第125页；仍标“开头”，没有将外链误称内置全曲播放。全曲缺口保留。
+
+新反馈、失败生图尝试、逐键修复、访问统计启用和正式验证通过既有Seed状态机制留痕；旧历史不删除。几何/功能修复已验收，最终角色自然度与用户偏好仍待用户实际观看。
