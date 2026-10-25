@@ -55,7 +55,8 @@
       "sha256": "f0cf2479a61179d16117947855250ac3bc9e0f8802c1c2618bb65926d1cd28c4",
       "width": 1254,
       "height": 1254,
-      "promptSha256": "0476606dcfa13e31479be86bc26fa20b36edd09c217498c6b0641111fbaac38f"
+      "promptSha256": "f5d029278dfc565d491eb7c2c798abd70e9e3d6fbe16f2ee3225a31710632182",
+      "promptFileSha256AtFirstArchive": "0476606dcfa13e31479be86bc26fa20b36edd09c217498c6b0641111fbaac38f"
     },
     {
       "id": "KeyC",
@@ -70,7 +71,8 @@
       "sha256": "5d548f19863d3a2570922ba3a558f14d850412f2be1a49cb67f8278ada4e74fa",
       "width": 1254,
       "height": 1254,
-      "promptSha256": "7eaa322f090af6d00b1a9d89f60de7a3a828650b4c4a0907240de238ab3c6343"
+      "promptSha256": "6720827a797c4c352447d9472c77680cb4ea78273ab2a8e88a961dcb786a5ff5",
+      "promptFileSha256AtFirstArchive": "7eaa322f090af6d00b1a9d89f60de7a3a828650b4c4a0907240de238ab3c6343"
     },
     {
       "id": "KeyV",
@@ -108,7 +110,8 @@
       "sha256": "1ffc97759bdf54226ac4c16cae5e9d906923e050ba716f56a2242b893714149a",
       "width": 1254,
       "height": 1254,
-      "promptSha256": "9787dc0fb1821a03a7de8a8873be3ff27c025bd733d899ef850476930db46e18"
+      "promptSha256": "9b943a3b0640b5d3d9197d1d5a1ed78f645c97394ae10a07381361f005a0ab67",
+      "promptFileSha256AtFirstArchive": "9787dc0fb1821a03a7de8a8873be3ff27c025bd733d899ef850476930db46e18"
     },
     {
       "id": "KeyN",
@@ -123,7 +126,8 @@
       "sha256": "6681ff02d792a60f1d28d90de304cc5a82051e7aac1cf6967dfd6f5c88be11e7",
       "width": 1254,
       "height": 1254,
-      "promptSha256": "68d61507e4172550d5c635a3397b993a98bc411130df6f67660e1cbd423f7b62"
+      "promptSha256": "0d8d4fa4f60c8d04f00dc08f8b4ee8b05b7e614d78d6fef728fc811da54af397",
+      "promptFileSha256AtFirstArchive": "68d61507e4172550d5c635a3397b993a98bc411130df6f67660e1cbd423f7b62"
     },
     {
       "id": "KeyM",
@@ -161,7 +165,8 @@
       "sha256": "4c3fbd58bea624b094da4179389f25172aa80f2a97643e50181bf1083048178a",
       "width": 1254,
       "height": 1254,
-      "promptSha256": "0c6c10b4a68ecb1447678659f34a1f9ff7cf2e24748fd506a3cd869de89e3911"
+      "promptSha256": "345441bf160c40ddb5e54b0e2e5653840e9996b820be29f3834b0ab8a5b04814",
+      "promptFileSha256AtFirstArchive": "0c6c10b4a68ecb1447678659f34a1f9ff7cf2e24748fd506a3cd869de89e3911"
     },
     {
       "id": "KeyZ-KeyX",
@@ -239,5 +244,6 @@
       "height": 1254,
       "promptSha256": "028c13ab1798f511b6ab02a4324cd3d71efa1829235f7c2a745cd825bc7a7013"
     }
-  ]
+  ],
+  "promptArchiveNormalization": "2026-10-25: removed trailing blank lines from text files only; first-archive hash retained where referenced; no image bytes or prompt wording changed. Earlier exact archive remains in Git 49d6519."
 }
