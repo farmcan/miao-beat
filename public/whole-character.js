@@ -1,5 +1,3 @@
-import {mountCharacter as mountRigCharacter} from './character.js';
-
 const MANIFEST=new URL('./character/keyboard-motion-v1.json',import.meta.url);
 const STYLE=new URL('./character/whole.css',import.meta.url);
 
@@ -37,22 +35,35 @@ export function createPoseState(config,now=()=>performance.now()){
 
 export function mountCharacter(scene){
   const doc=scene.ownerDocument,win=doc.defaultView;
-  let rig=null,wholeFailed=false;
+  const legacy=scene.querySelector('.cat-scene'),legacyDisplay=legacy?.style.display;
+  if(legacy)legacy.style.display='none';
   const canvas=doc.createElement('canvas');canvas.className='whole-cat-canvas';canvas.hidden=true;
-  canvas.setAttribute('role','img');canvas.setAttribute('aria-label','橘猫在小键盘前，随你的输入呈现完整演奏姿态');
+  canvas.setAttribute('role','img');canvas.setAttribute('aria-label','完整橘猫与乐器画面');
+  const notice=doc.createElement('p');notice.className='whole-motion-note';notice.setAttribute('role','status');notice.textContent='猫猫的整图准备中…';
   scene.insertBefore(canvas,scene.querySelector('.stage-readout'));
+  scene.append(notice);scene.setAttribute('data-whole-character','');
   const style=doc.createElement('link');style.rel='stylesheet';style.href=STYLE.href;doc.head.append(style);
   const cssReady=new Promise((resolve,reject)=>{style.onload=resolve;style.onerror=()=>reject(new Error('Whole-character style unavailable'));});
   cssReady.catch(()=>{});
   const reduced=win.matchMedia?.('(prefers-reduced-motion: reduce)');
+  const stillSources={guitar:new URL('./character/guitar-whole-still-v1.jpg',import.meta.url),drums:new URL('./character/drums-whole-still-v1.jpg',import.meta.url)};
+  const labels={guitar:'吉他整图静帧 · 动作待补',drums:'架子鼓整图静帧 · 动作待补',marimba:'马林巴音色 · 暂用完整键盘猫静帧，动作待补'};
+  const images=new Map(),pending=new Map(),failed=new Set();
   let mode=scene.dataset.instrument??'piano',keys=[],loaded=false,destroyed=false,raf=0,state,config,atlas,lastFrame=-1;
-  function ensureRig(){
-    if(!rig){rig=mountRigCharacter(scene);rig.update?.(mode,mode==='piano'?[]:keys);rig.ready.then(()=>{if(loaded&&!destroyed)applyMode();}).catch(()=>{});}
-    return rig;
+  const loadImage=url=>new Promise((resolve,reject)=>{const image=new win.Image();image.onload=()=>resolve(image);image.onerror=()=>reject(new Error('Whole image unavailable'));image.src=url.href;});
+  function loadStill(next){
+    if(!stillSources[next]||images.has(next)||pending.has(next)||failed.has(next))return;
+    pending.set(next,loadImage(stillSources[next]).then(image=>{images.set(next,image);if(!destroyed&&mode===next)applyMode();}).catch(()=>{failed.add(next);if(!destroyed&&mode===next)applyMode();}));
   }
-  if(mode!=='piano')ensureRig();
   function draw(){
-    raf=0;if(destroyed||!loaded||mode!=='piano')return;
+    raf=0;if(destroyed||!loaded||canvas.hidden)return;
+    if(mode!=='piano'){
+      const ctx=canvas.getContext('2d');ctx.clearRect(0,0,canvas.width,canvas.height);
+      const image=images.get(mode);
+      if(image){const scale=Math.min(canvas.width/image.naturalWidth,canvas.height/image.naturalHeight),w=image.naturalWidth*scale,h=image.naturalHeight*scale;ctx.drawImage(image,0,0,image.naturalWidth,image.naturalHeight,(canvas.width-w)/2,(canvas.height-h)/2,w,h);}
+      else{const frame=config.idle;ctx.drawImage(atlas,(frame%config.columns)*config.width,Math.floor(frame/config.columns)*config.height,config.width,config.height,0,0,canvas.width,canvas.height);}
+      scene.dataset.motionPose='static';scene.dataset.motionPhase='static';scene.dataset.motionFrame=String(config.idle);lastFrame=-1;return;
+    }
     const pose=state.sample();scene.dataset.motionPose=pose.pose;scene.dataset.motionPhase=pose.phase;
     if(lastFrame!==pose.frame){
       const ctx=canvas.getContext('2d'),column=pose.frame%config.columns,row=Math.floor(pose.frame/config.columns);
@@ -62,46 +73,48 @@ export function mountCharacter(scene){
     }
     if(pose.needsFrame)raf=win.requestAnimationFrame(draw);
   }
-  function request(){if(loaded&&mode==='piano'&&!raf)raf=win.requestAnimationFrame(draw);}
+  function request(){if(loaded&&!destroyed&&!raf)raf=win.requestAnimationFrame(draw);}
   function applyMode(){
-    const active=loaded&&mode==='piano';canvas.hidden=!active;
-    scene.toggleAttribute('data-whole-character',active);
-    if(active){scene.dataset.character='whole-cat-poses-v1';request();}
-    else if(loaded){scene.dataset.character='orange-articulated-v3';delete scene.dataset.motionPose;delete scene.dataset.motionPhase;}
+    if(!loaded||destroyed)return;
+    const needsStill=Boolean(stillSources[mode]);loadStill(mode);
+    const unavailable=failed.has(mode),waiting=needsStill&&!images.has(mode)&&!unavailable;
+    canvas.hidden=unavailable||waiting;notice.hidden=mode==='piano'&&!unavailable;
+    notice.textContent=unavailable?'这张完整猫图暂时没加载，声音仍可用。':waiting?'完整乐器静帧准备中…':labels[mode]||'完整静帧 · 对应动作待补';
+    canvas.setAttribute('aria-label',mode==='piano'?'完整橘猫与键盘，按音域显示原片姿态':labels[mode]||'完整橘猫静帧');
+    scene.dataset.character=unavailable?'whole-image-unavailable':mode==='piano'?'whole-cat-poses-v1':'whole-cat-still-v1';
+    scene.dataset.motionStatus=unavailable?'unavailable':mode==='piano'?'region-preview':'static-preview';request();
   }
   function reset(){state?.reset();if(raf)win.cancelAnimationFrame(raf);raf=0;lastFrame=-1;request();}
   const visibility=()=>{if(doc.hidden)reset();};
   win.addEventListener('blur',reset);doc.addEventListener('visibilitychange',visibility);reduced?.addEventListener?.('change',reset);
   const wholeReady=(async()=>{
-    const response=await fetch(MANIFEST);if(!response.ok)throw new Error('Whole-character manifest unavailable');
+    const response=await win.fetch(MANIFEST);if(!response.ok)throw new Error('Whole-character manifest unavailable');
     config=await response.json();
     if(config.version!==1||config.width!==480||config.height!==412||config.columns!==4||config.frameCount!==13)throw new Error('Unreviewed whole-character layout');
     const url=new URL(config.atlas,MANIFEST);if(url.origin!==MANIFEST.origin)throw new Error('Character image must be local');
-    atlas=new win.Image();await Promise.all([cssReady,new Promise((resolve,reject)=>{atlas.onload=resolve;atlas.onerror=()=>reject(new Error('Character image unavailable'));atlas.src=url.href;})]);
+    [atlas]=await Promise.all([loadImage(url),cssReady]);
     if(destroyed)return;
     canvas.width=config.width;canvas.height=config.height;
     if(!canvas.getContext('2d'))throw new Error('Canvas unavailable');
     state=createPoseState(config,()=>win.performance.now());loaded=true;applyMode();
   })();
-  wholeReady.catch(()=>{if(destroyed)return;wholeFailed=true;scene.dataset.motionStatus='original-character-fallback';canvas.hidden=true;scene.removeAttribute('data-whole-character');ensureRig();});
-  // The keyboard does not download legacy character sheets until another instrument needs them.
-  const ready=wholeReady.catch(()=>destroyed?undefined:ensureRig().ready);
+  const ready=wholeReady.catch(()=>{if(destroyed)return;canvas.hidden=true;notice.hidden=false;notice.textContent='猫猫的整图暂时没加载，声音仍可用。';scene.dataset.character='whole-image-unavailable';scene.dataset.motionStatus='unavailable';});
   return {
     ready,
     update(next=mode,nextKeys=keys){
-      const changed=next!==mode;mode=next;keys=nextKeys;if(mode!=='piano'||wholeFailed)ensureRig().update?.(mode,keys);else rig?.update?.(mode,[]);
-      if(changed)reset();state?.update(keys);applyMode();request();
+      const changed=next!==mode;mode=next;keys=nextKeys;
+      if(changed)reset();state?.update(mode==='piano'?keys:[]);applyMode();request();
     },
     strike(key,next=mode){
       if(next!==mode){mode=next;reset();applyMode();}
       if(loaded&&mode==='piano'){
         if(state.strike(key)){state.update(keys);request();}
-      }else if(mode!=='piano'||wholeFailed)ensureRig().strike?.(key,next);
+      }
     },
     destroy(){
       if(destroyed)return;destroyed=true;if(raf)win.cancelAnimationFrame(raf);
       win.removeEventListener('blur',reset);doc.removeEventListener('visibilitychange',visibility);reduced?.removeEventListener?.('change',reset);
-      canvas.remove();style.remove();scene.removeAttribute('data-whole-character');rig?.destroy();
+      canvas.remove();notice.remove();style.remove();scene.removeAttribute('data-whole-character');if(legacy)legacy.style.display=legacyDisplay;
     },
   };
 }

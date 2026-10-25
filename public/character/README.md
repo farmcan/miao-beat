@@ -1,13 +1,11 @@
-# Original orange musician
+# Original orange musician · temporary whole preview
 
-The default piano uses a 1254-square AI-generated body plate and one complete transparent arm-and-paw texture, keeping the project's original orange cat. The keyboard has deterministic eight-white/five-black geometry. Each of thirteen notes has a different contact, and the left/right arms follow independently. A continuous mesh bends the entire textured arm; it does not assemble separate upper-arm, forearm and paw bitmaps. Source prompts, hashes and alpha bounds are recorded in manifest.json and the repository design folder.
+Version 0.9.1-whole-preview returns the default piano to complete poses captured from the user's cat-and-keyboard video. Each displayed frame includes the entire cat, both arms/paws and the keyboard together. Source video, shared crop, selected frames, atlas hashes and limits are recorded in keyboard-motion-v1.json and manifest.json.
 
-The guitar, marimba and drums retain the earlier rig below. The earlier keyboard video and region-pose assets remain historical references. Functional coordinates and desktop checks do not establish human naturalness approval or physical phone audio/touch acceptance. Code and generated-art provenance are separate.
+This is an interim preview with representative pitch-region contacts and short captured releases. It is not thirteen distinct physical key contacts, independent paw animation or completion of the new whole-frame assets. Coupled body/opposite-paw changes in the original video remain a known limit.
 
-## Historical v3 rig retained for other instruments
+The user's production constraint is explicit: use a whole cat+arms+instrument image or video frame. A body plate with separately textured or drawn arms is prohibited. Version 0.9's precise-character.js, body plate and whole-arm texture are retained only as rejected historical provenance and must not be activated.
 
-The active 2.5D character uses two AI-generated original PNG sheets: nine character components and four instrument groups. Guitar artwork comes from the earlier original orange-guitar sheet. Complete prompts, source hashes and limitations are in manifest.json and the repository design/orange-product-v3 directory. PNG pixels were not edited. Previous plush/indie sheets remain historical assets.
+Guitar and drums currently show complete instrument stills converted from the existing original reference images. They are visibly labelled as static and awaiting motion. Marimba uses a visibly labelled complete keyboard-cat idle reference; it does not pretend to animate a marimba. Missing images show a text placeholder while sound remains usable. No articulated fallback is loaded.
 
-Fixed-length upper arms and forearms use shoulder/elbow geometry; paw size stays constant. Piano presses and releases, marimba uses wrist-parented mallets, guitar combines a short strum with a simplified neck grip, and kit sticks share the wrist transform. Unreachable targets are rejected. Continuous strokes retain current position and velocity; blur, mode changes and reduced-motion preference reset safely. Mixed percussion has a nearby pad stand.
-
-This is neither a 3D model nor anatomical fingering or full directional eye tracking. Original vector artwork is the resource-error fallback. Desktop interaction and geometry checks do not establish human aesthetic preference, physical touch latency, phone frame rate or speaker sound quality.
+Older component sheets and articulated rigs are also retained as historical files. Technical coordinate tests do not establish human naturalness approval or physical phone audio/touch acceptance. Code licensing and generated-art provenance remain separate.

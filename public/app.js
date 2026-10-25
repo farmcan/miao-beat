@@ -2,7 +2,7 @@ import {KEYS,MELODY,DRUMS,CHORDS,LEGACY_KEYS} from './bindings.js';
 import {SampledAudio} from './sampled-audio.js';
 import {BeatClock} from './clock.js';
 import {guidePosition} from './guidance.js';
-import {mountCharacter} from './precise-character.js';
+import {mountCharacter} from './whole-character.js';
 import {mountPerformance} from './performance.js';
 import {mountKeyboardNavigation} from './keyboard-navigation.js';
 import {loadSiteCounter} from './site-counter.js';
@@ -14,7 +14,7 @@ let cueCodes=[],guideIndex=-2,guideBeat=-1;
 const reducedMotion=window.matchMedia?.('(prefers-reduced-motion: reduce)');
 audio.onProgress=()=>{if(!loading)return;const p=audio.getLoadProgress($('instrumentSelect').value);status.dataset.loaded=String(p.loaded);status.dataset.total=String(p.total);status.textContent=`正在准备真实采样 ${p.loaded} / ${p.total}，加载好后就可以演奏。`;};
 mountPerformance(document);
-const character=mountCharacter(scene);character.ready.catch(()=>{scene.dataset.characterStatus='vector-fallback';});
+const character=mountCharacter(scene);character.ready.catch(()=>{scene.dataset.characterStatus='whole-image-unavailable';});
 let loading=0,presetEpoch=0;
 let hits=0,frame=0,meterUntil=0,beatUntil=0,session=null,recording=null,recordStart=null,recordPending=false,importPending=false,sessionPending=0,sessionSerial=0,lifecycle=0;
 const clock=new BeatClock(audio,beat=>{

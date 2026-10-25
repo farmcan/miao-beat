@@ -1,2 +1,4 @@
 .whole-cat-canvas{position:absolute;inset:0;display:block;width:100%;height:calc(100% - 22px);object-fit:contain;mix-blend-mode:darken;pointer-events:none}.whole-cat-canvas[hidden]{display:none}.scene[data-whole-character] .cat-scene{display:none}
 .scene[data-whole-character]{background:var(--paper,#f8f4eb)}
+.whole-motion-note{position:absolute;left:8px;right:8px;bottom:25px;margin:0;text-align:center;font-size:10px;line-height:1.5;color:var(--muted,#7c6959)}
+.scene[data-motion-status=unavailable] .whole-motion-note{top:40%;bottom:auto}

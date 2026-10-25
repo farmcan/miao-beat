@@ -1,8 +1,8 @@
 {
-  "version": 5,
+  "version": 6,
   "date": "2026-10-25",
-  "name": "Original orange cat: high-resolution body and deterministic piano contacts",
-  "status": "per-key piano geometry and textured complete-arm mesh; human preference and real-device acceptance separate",
+  "name": "Original orange cat: temporary whole-frame keyboard preview",
+  "status": "Temporary whole-frame preview; region-level captured poses, not thirteen distinct key contacts; v0.9 separate-arm composition rejected by user",
   "generation": {
     "tool": "built-in image_gen.imagegen",
     "transparent_background": true,
@@ -50,13 +50,13 @@
     },
     {
       "filename": "whole-character.js",
-      "bytes": 6623,
-      "sha256": "b18d274f351f8929069b00c8dcd7b74729f9e4fb1dc24cc36c60d8f6ff9632c6"
+      "bytes": 8474,
+      "sha256": "1fc813573d080b2714e727a2098071f36710347416b6e1d6a31d63c03e77a2e7"
     },
     {
       "filename": "character/whole.css",
-      "bytes": 310,
-      "sha256": "f2af469faac0c308e352ef68d641a3a64a0ad46d5fc896a7a626cab59f1a6810"
+      "bytes": 543,
+      "sha256": "bcab4f3fc831df18473252039eacc531bef26f8e295b09e311b345290dd7cf55"
     },
     {
       "filename": "character/keyboard-poses-v1.jpg",
@@ -76,29 +76,44 @@
     {
       "filename": "character/keyboard-body-v2.jpg",
       "bytes": 140793,
-      "sha256": "7012a8203390ea1a464b3b8ccc21e2b17c184ab0eca79f9b3ed24af5ba7dfd03"
+      "sha256": "7012a8203390ea1a464b3b8ccc21e2b17c184ab0eca79f9b3ed24af5ba7dfd03",
+      "status": "rejected-by-user-2026-10-25; retained as history, not active"
     },
     {
       "filename": "precise-character.js",
       "bytes": 19391,
-      "sha256": "6e88ffac93e8f6405cd64cf04405f18963898660085a39c02f530b699d8ba614"
+      "sha256": "6e88ffac93e8f6405cd64cf04405f18963898660085a39c02f530b699d8ba614",
+      "status": "rejected-by-user-2026-10-25; retained as history, not active"
     },
     {
       "filename": "character/whole-arm-v2.png",
       "bytes": 624341,
-      "sha256": "a5718767c1befc7320748b94f7eedf547cb7b7f0987d9866685b734bcb0bee43"
+      "sha256": "a5718767c1befc7320748b94f7eedf547cb7b7f0987d9866685b734bcb0bee43",
+      "status": "rejected-by-user-2026-10-25; retained as history, not active"
+    },
+    {
+      "filename": "character/guitar-whole-still-v1.jpg",
+      "bytes": 250309,
+      "sha256": "fba000b2dae06f2c87a4db9a40fa10e354ab7dace66fa6c6512625f4c6322f85"
+    },
+    {
+      "filename": "character/drums-whole-still-v1.jpg",
+      "bytes": 266553,
+      "sha256": "161d1804d75f6c6e9058ba860ea66edf01252c77e6dea35566981e46d7020a6f"
     }
   ],
   "runtime": {
-    "method": "Piano: deterministic key depression and independent continuous arm silhouettes; other instruments: retained prior articulated rig",
-    "contactRules": "Piano has 8 white and 5 black keys with 13 separate contacts. Latest confirmed note per paw, all confirmed held keys depress; no automatic notes are recorded.",
+    "method": "Piano: temporary whole captured pitch-region poses. Guitar/drums: complete still images. Marimba: explicitly labelled complete keyboard-cat idle reference. No old rig fallback.",
+    "contactRules": "Representative pitch-region poses selected by real input; previous per-key geometry is retained only as rejected history, not active completion",
     "notClaimed": [
       "anatomical guitar fingering",
       "continuous 3D eye tracking",
       "physical device QA",
-      "human naturalness approval"
+      "human naturalness approval",
+      "thirteen validated whole-frame key contacts",
+      "completion of new whole-frame animation"
     ],
-    "historicalNote": "Prior region-pose video and articulated rig records are retained as historical/fallback assets; their technical verification does not imply human naturalness approval."
+    "historicalNote": "v0.9 precise-piano body plus separate whole-arm texture/mesh was explicitly rejected by the user on 2026-10-25. Historical assets remain for provenance and must not be activated in production."
   },
   "previousGeneration": {
     "version": 2,
@@ -115,12 +130,31 @@
   },
   "activeByInstrument": {
     "piano": {
-      "module": "precise-character.js",
-      "body": "character/keyboard-body-v2.jpg",
-      "sourceSha256": "41ea0d318386b4b2f1f89f812319a79eb7d350d88562251c6c05276a07ee418c",
-      "method": "Fixed 13-key geometry and separate continuous whole-arm contours over a high-resolution AI body; every note has a distinct contact"
+      "module": "whole-character.js",
+      "motion": "character/keyboard-motion-v1.json",
+      "atlas": "character/keyboard-poses-v1.jpg",
+      "method": "Complete captured cat, arms and keyboard together per frame; representative pitch-region contact and release poses",
+      "limits": [
+        "Not thirteen distinct physical key contacts",
+        "Coupled whole-body and opposite-paw movement remains in captured frames",
+        "Temporary whole preview while new complete poses are authored"
+      ]
     },
-    "guitar/marimba/drums": "retained earlier articulated rig; not upgraded by this motion source"
+    "guitar": {
+      "module": "whole-character.js",
+      "still": "character/guitar-whole-still-v1.jpg",
+      "status": "Complete cat+arms+guitar still; animation pending"
+    },
+    "drums": {
+      "module": "whole-character.js",
+      "still": "character/drums-whole-still-v1.jpg",
+      "status": "Complete cat+arms+drums still; animation pending"
+    },
+    "marimba": {
+      "module": "whole-character.js",
+      "still": "character/keyboard-poses-v1.jpg frame 0",
+      "status": "Complete idle keyboard-cat reference only, visibly labelled; no marimba motion claimed"
+    }
   },
   "precisePiano": {
     "date": "2026-10-25",
@@ -154,6 +188,25 @@
       "tool": "built-in image_gen.imagegen",
       "prompt": "design/keyboard-contact-pilot-2026-10-25/prompt-arm-texture.txt",
       "method": "Single continuous shoulder-to-paw texture, warped as one mesh along each controlled arm; no separated upper/lower/paw sprites"
-    }
+    },
+    "status": "rejected-by-user-2026-10-25; historical only, not an active renderer",
+    "rejectionReason": "Production must contain the whole cat, arms/paws and instrument together in each frame; separate arm textures or geometry over a body plate are prohibited."
+  },
+  "wholeStills": {
+    "date": "2026-10-25",
+    "method": "Complete source image converted to JPEG with sips quality 90, no crop, no limb compositing",
+    "sources": [
+      {
+        "output": "character/guitar-whole-still-v1.jpg",
+        "source": "design/video-motion-pilot-2026-10-23/02-guitar.png",
+        "sourceSha256": "2b30a8289aa04fd359c20c68816b6bc8fbd0bc0c0c80767b9e70bd510ef6d397"
+      },
+      {
+        "output": "character/drums-whole-still-v1.jpg",
+        "source": "design/video-motion-pilot-2026-10-23/04-drums.png",
+        "sourceSha256": "a132339339039b72e849479649727d34c2d9a3286067d2fb48814a67b3f0243c"
+      }
+    ],
+    "limits": "Full images are static; instrument actions remain unfinished. No separately animated limbs."
   }
 }
