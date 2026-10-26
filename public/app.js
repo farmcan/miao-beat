@@ -163,7 +163,7 @@ function playEvents(events,duration,kind,instrument,engine='sample-v1',guide=nul
   if(guide){mountGuidance(guide);if(kind==='guide'){clock.start(guide.bpm,guide.meter,origin);paintClock();}$('stopSong').disabled=false;$('listenSong').disabled=true;$('guideSong').setAttribute('aria-pressed',String(kind==='guide'));}
   else $('playRecording').textContent='■ 停止回放';updateRecorder();animate();
 }
-function scoreKeys(event){return event.codes?event.codes.map(code=>byCode.get(code)):event.code?[byCode.get(event.code)]:[byNote.get(event.note)];}
+function scoreKeys(event){return event.rest?[]:event.codes?event.codes.map(code=>byCode.get(code)):event.code?[byCode.get(event.code)]:[byNote.get(event.note)];}
 function populateSongs(){
   const previous=$('songSelect').value,preset=$('instrumentSelect').value;$('songSelect').replaceChildren();
   const groups=new Map();
@@ -178,13 +178,13 @@ function selectedSong(){return SONGS.find(s=>$('songSelect').value===s.id)||SONG
 function renderScore(){
   stopSession();const song=selectedSong();$('songInfo').textContent=`${song.key} · ${song.meter}/4 拍 · 建议 ${song.bpm} BPM。${song.description}`;$('scoreRows').replaceChildren();let index=0;
   $('scoreSourceRow').hidden=!song.sourceLabel;if(song.sourceLabel){$('scoreSource').href=song.sourceUrl;$('scoreSource').textContent=song.sourceLabel;}
-  for(const phrase of song.phrases){const row=document.createElement('div');row.className='score-phrase';for(const event of phrase){const keys=scoreKeys(event),n=document.createElement('div');n.className='score-note';n.dataset.scoreIndex=String(index++);n.innerHTML=`<span>${keys.map(k=>k.label).join('+')}</span><kbd>${keys.map(k=>k.key).join('+')}</kbd><small>${event.beats} 拍</small>`;row.append(n);}$('scoreRows').append(row);}
+  for(const phrase of song.phrases){const row=document.createElement('div');row.className='score-phrase';for(const event of phrase){const keys=scoreKeys(event),n=document.createElement('div');n.className='score-note';n.dataset.scoreIndex=String(index++);n.innerHTML=`<span>${event.rest?'0':keys.map(k=>k.label).join('+')}</span><kbd>${event.rest?'休止':keys.map(k=>k.key).join('+')}</kbd><small>${event.beats} 拍</small>`;row.append(n);}$('scoreRows').append(row);}
   $('practiceHint').textContent=`${song.name} · ${song.key} · ${song.meter}/4 · 建议 ${song.bpm} BPM。点“听一遍”先听。`;
   $('scoreStatus').textContent='字母是键位；数字按 C 音起排列，上点表示高音。按键时间由竖线提示，长条表示到下一音的间隔。';
 }
 function mountGuidance(guide){
   $('guidePanel').hidden=false;guideIndex=-2;guideBeat=-1;
-  for(const event of guide.events){const n=document.createElement('div');n.className='guide-note';n.style.left=event.offset*guide.bpm/60*72+'px';n.style.width=Math.max(20,event.beats*72-5)+'px';n.innerHTML=`<kbd>${event.keys.map(k=>k.key).join('+')}</kbd><small>${event.keys.map(k=>k.label).join('+')}</small>`;$('guideTrack').append(n);}
+  for(const event of guide.events){const n=document.createElement('div');n.className='guide-note';n.style.left=event.offset*guide.bpm/60*72+'px';n.style.width=Math.max(20,event.beats*72-5)+'px';n.innerHTML=`<kbd>${event.rest?'休止':event.keys.map(k=>k.key).join('+')}</kbd><small>${event.rest?'空一拍':event.keys.map(k=>k.label).join('+')}</small>`;$('guideTrack').append(n);}
   const totalBeats=Math.ceil(session.duration*guide.bpm/60);
   for(let beat=0;beat<=totalBeats;beat++){const line=document.createElement('i');line.className='guide-tick'+((beat+guide.phaseBeats)%guide.meter===0?' bar-tick':'');line.style.left=beat*72+'px';$('guideTrack').append(line);}
   $('guideAnnounce').textContent=`${guide.songName}，预备 ${guide.countInBeats} 拍。${session.kind==='guide'?'只放节拍，旋律你来弹。':'即将播放示范。'}`;
@@ -198,8 +198,8 @@ function renderGuidance(now){
   if(p.index!==guideIndex||p.beat!==guideBeat){
     guideIndex=p.index;guideBeat=p.beat;
     const current=p.index>=0?guide.events[p.index]:null,next=p.next>=0?guide.events[p.next]:null;
-    $('guideNow').textContent=current?`现在 ${current.keys.map(k=>k.key).join(' + ')} · ${current.keys.map(k=>k.kind==='note'?k.sub:k.label).join('+')}`:'听预备拍';
-    $('guideNext').textContent=next?`下一音 ${next.keys.map(k=>k.key).join(' + ')}`:'最后一音';
+    $('guideNow').textContent=current?.rest?'休止 · 空一拍':current?`现在 ${current.keys.map(k=>k.key).join(' + ')} · ${current.keys.map(k=>k.kind==='note'?k.sub:k.label).join('+')}`:'听预备拍';
+    $('guideNext').textContent=next?.rest?'接着空一拍':next?`下一音 ${next.keys.map(k=>k.key).join(' + ')}`:current?.rest?'弹完啦': '最后一音';
     for(const n of document.querySelectorAll('.score-note.playing'))n.classList.remove('playing');
     if(current)document.querySelector(`[data-score-index="${current.index}"]`)?.classList.add('playing');
     $('guidePanel').dataset.index=String(p.index);$('guidePanel').dataset.bar=String(p.bar);$('guidePanel').dataset.beat=String(p.beat);

@@ -9,7 +9,7 @@ export function validateRecording(value){
   const legacy=value.version===1&&value.engine==='ui-synth-v1';
   if(!legacy&&!(value.version===2&&value.engine===ENGINE))throw Error('不是支持的 Miao Beat v1/v2 文件');
   const instruments=legacy?['marimba','sparkle']:['piano','marimba','guitar','drums'];
-  if(!instruments.includes(value.instrument)||!Number.isInteger(value.bpm)||value.bpm<50||value.bpm>180||![3,4].includes(value.meter))throw Error('音色或节拍信息不正确');
+  if(!instruments.includes(value.instrument)||!Number.isInteger(value.bpm)||value.bpm<50||value.bpm>180||!(legacy?[3,4]:[2,3,4]).includes(value.meter))throw Error('音色或节拍信息不正确');
   if(!Number.isInteger(value.duration)||value.duration<0||value.duration>MAX_MS||!Array.isArray(value.events)||value.events.length>MAX_EVENTS)throw Error('文件超过 5 分钟或 5000 次敲击上限');
   let previous=-1,left=0;
   const events=value.events.map((event,index)=>{

@@ -58,7 +58,7 @@ function setup(t) {
     $('importRecording').dispatchEvent(new w.Event('change'));await settle();
   };
   t.after(()=>{w.dispatchEvent(new w.Event('blur'));dom.window.close();});
-  return {w,$,audio,clock,key,frame,importFile,blob:()=>exportedBlob};
+  return {w,$,audio,clock,key,frame,tick:()=>{for(const fn of intervals.values())fn();},importFile,blob:()=>exportedBlob};
 }
 
 test('simultaneous keyboard notes survive record/export/import/replay; a live key takes over',async t=>{
@@ -270,4 +270,33 @@ test('voluntary support dialog blocks performance keys and closing restores free
  key('keydown','KeyA');await settle();assert.equal(audio.plays.length,0);
  $('closeSupport').click();assert.equal($('supportDialog').open,false);
  key('keydown','KeyA');await settle();assert.equal(audio.plays.length,1);key('keyup','KeyA');
+});
+
+test('full Painter demo schedules all 48 notes and leaves the closing rest silent',async t=>{
+ const h=setup(t),{$,audio,w}=h;
+ $('songSelect').value='painter';$('songSelect').dispatchEvent(new w.Event('change'));
+ assert.equal(w.document.querySelectorAll('.score-phrase').length,4);
+ assert.equal(w.document.querySelectorAll('.score-note').length,49);
+ assert.equal(w.document.querySelector('.score-phrase:last-child .score-note:last-child kbd').textContent,'休止');
+ $('bpm').value='120';$('listenSong').click();await settle();
+ assert.equal($('meterSelect').value,'2');
+ for(let i=0;i<=431;i++){audio.context.currentTime=i*.04;h.tick();h.frame(audio.context.currentTime);}
+ assert.equal(audio.plays.length,48);assert.equal(audio.plays.at(-1).code,'KeyA');
+ assert.ok(Math.abs(audio.plays.at(-1).time-16.1)<1e-8);
+ assert.equal($('scoreStatus').textContent,'听完了，换你试试。');
+});
+
+test('Painter rest clears key cues, 2/4 guide never records automatic melody',async t=>{
+ const h=setup(t),{$,audio,w,key,clock}=h;
+ $('songSelect').value='painter';$('songSelect').dispatchEvent(new w.Event('change'));
+ $('bpm').value='120';$('guideSong').click();await settle();assert.equal(clock.meter,2);
+ h.frame(16.2);assert.equal($('guidePanel').dataset.index,'47');
+ assert.equal(w.document.querySelectorAll('.due').length,1);
+ h.frame(16.7);assert.equal($('guidePanel').dataset.index,'48');
+ assert.equal($('guideNow').textContent,'休止 · 空一拍');
+ assert.equal(w.document.querySelectorAll('.due,.upcoming').length,0);assert.equal(audio.plays.length,0);
+ $('recordToggle').click();await settle();audio.context.currentTime=16.8;key('keydown','KeyD');await settle();key('keyup','KeyD');
+ audio.context.currentTime=16.9;$('recordToggle').click();$('exportRecording').click();
+ const saved=JSON.parse(await h.blob().text());assert.equal(saved.meter,2);assert.deepEqual(saved.events,[[100,2]]);
+ assert.deepEqual(recording.validateRecording(saved),saved);
 });
