@@ -65,7 +65,7 @@ export function mountCharacter(scene){
   const bitmaps=new Map(),encoded=new Map(),pending=new Map(),warming=new Set(),complete=new Set();
   let config,bandConfig,bandRequest,mode=scene.dataset.instrument??'piano',destroyed=false,loaded=false,raf=0,wanted='',shown='',epoch=0,ctx;
   let visualClock=0,lastMotionTick=win.performance.now();
-  let lastContactSerial=0;scene.dataset.guitarStrikeCount='0';scene.dataset.guitarContactCount='0';
+  let lastContactSerial=0,lastLiftSerial=0;scene.dataset.guitarStrikeCount='0';scene.dataset.guitarContactCount='0';scene.dataset.guitarLiftCount='0';
   let motion,motionConfig,motionRequest,motionEnabled=!win.matchMedia?.('(prefers-reduced-motion: reduce)').matches,wantedAsset='';
   let state=createFrameState(()=>win.performance.now(),mode);
   async function loadBand(){
@@ -112,7 +112,7 @@ export function mountCharacter(scene){
       if(win.createImageBitmap)image=await win.createImageBitmap(blob);
       else image=await new Promise((resolve,reject)=>{const img=new win.Image();img.onload=()=>resolve(img);img.onerror=reject;img.src=urlFor(id);});
       if(destroyed){image.close?.();throw new Error('Character unmounted');}
-      if(image.width!==(id.startsWith('pluck:')?2560:1254)||image.height!==(id.startsWith('pluck:')?1280:1254))throw new Error('Unexpected full-frame dimensions');
+      if(image.width!==(id.startsWith('pluck:')?1920:1254)||image.height!==(id.startsWith('pluck:')?1920:1254))throw new Error('Unexpected full-frame dimensions');
       bitmaps.set(id,image);
       for(const key of bitmaps.keys())if(bitmaps.size>4&&key!==shown&&key!==wantedAsset){bitmaps.get(key).close?.();bitmaps.delete(key);}
       return image;
@@ -122,9 +122,10 @@ export function mountCharacter(scene){
     try{
       const image=await getBitmap(id);if(destroyed||ticket!==epoch||wanted!==signature)return;
       if(canvas.width!==1254||canvas.height!==1254){canvas.width=1254;canvas.height=1254;}ctx=canvas.getContext('2d');if(!ctx)throw new Error('Canvas unavailable');
-      if(cell===undefined)ctx.drawImage(image,0,0);else ctx.drawImage(image,(cell%4)*640,Math.floor(cell/4)*640,640,640,0,0,1254,1254);canvas.hidden=false;shown=id;scene.dataset.wholeFrame=id.startsWith('pluck:')?'guitar:transition':id.startsWith('up:')?'guitar-up:'+id.slice(3):id;scene.dataset.guitarTransition=cell===undefined?'':id+':'+cell;scene.dataset.character='complete-frame-scenes-v6';
+      if(cell===undefined)ctx.drawImage(image,0,0);else ctx.drawImage(image,(cell%3)*640,Math.floor(cell/3)*640,640,640,0,0,1254,1254);canvas.hidden=false;shown=id;scene.dataset.wholeFrame=id.startsWith('pluck:')?'guitar:transition':id.startsWith('up:')?'guitar-up:'+id.slice(3):id;scene.dataset.guitarTransition=cell===undefined?'':id+':'+cell;scene.dataset.character='complete-frame-scenes-v6';
       scene.dataset.guitarPhase=stroke?.phase??'';scene.dataset.guitarStrokeSerial=String(stroke?.serial??0);
-      if(stroke?.contact&&stroke.serial>lastContactSerial){lastContactSerial=stroke.serial;scene.dataset.guitarContactCount=String(Number(scene.dataset.guitarContactCount)+1);}
+      if(stroke?.lift&&stroke.serial>lastLiftSerial){lastLiftSerial=stroke.serial;scene.dataset.guitarLiftCount=String(Number(scene.dataset.guitarLiftCount)+1);}
+      if(stroke?.contact&&stroke.serial>lastContactSerial){lastContactSerial=stroke.serial;scene.dataset.guitarContactCount=String(Number(scene.dataset.guitarContactCount)+1);motion?.contactPainted(stroke.serial);}
       scene.style.aspectRatio='1';scene.dataset.wholeFrameStatus='ready';
       const label=mode==='marimba'?'马林巴暂用钢琴猫静图，动作还没补。':'';message.textContent=label;message.hidden=!label;
     }catch{
@@ -139,7 +140,7 @@ export function mountCharacter(scene){
     lastMotionTick=time;
     const pose=state.sample();let id=mode==='piano'?pose.id:mode==='marimba'?'idle':mode+':'+pose.id,cell,moving=false,stroke;
     scene.dataset.confirmedKeys=pose.held.join(',');
-    if(mode==='guitar'&&motion&&motionEnabled){const p=motion.sample();moving=p.needsFrame;stroke={serial:p.serial,phase:p.phase,contact:p.pose==='down'};if(p.pose==='idle')id='guitar:idle';else if(p.pose==='up')id='up:'+p.code;else if(p.pose==='down')id='guitar:'+p.code;else{id='pluck:'+p.code;cell=p.cell;}}
+    if(mode==='guitar'&&motion&&motionEnabled){const p=motion.sample();moving=p.needsFrame;stroke={serial:p.serial,phase:p.phase,contact:p.pose==='down',lift:p.pose==='up'||Number.isInteger(p.cell)&&p.cell<=5};if(p.pose==='idle')id='guitar:idle';else if(p.pose==='up'&&!p.needsFrame)id='up:'+p.code;else{id='pluck:'+p.code;cell=p.pose==='down'?8:p.pose==='up'?0:p.cell+1;}}
     const signature=id+(cell===undefined?'':':'+cell)+(stroke?':s'+stroke.serial+':'+stroke.phase:'');
     if(signature!==wanted){wanted=signature;wantedAsset=id;show(id,++epoch,signature,cell,stroke);}
     if(mode==='marimba'){message.textContent='马林巴暂用钢琴猫静图，动作还没补。';message.hidden=false;}

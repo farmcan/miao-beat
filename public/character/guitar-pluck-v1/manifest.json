@@ -3,8 +3,8 @@
   "width": 1254,
   "height": 1254,
   "tileSize": 640,
-  "columns": 4,
-  "rows": 2,
+  "columns": 3,
+  "rows": 3,
   "intermediates": 7,
   "clips": {
     "KeyA": {
@@ -22,8 +22,8 @@
       },
       "atlas": {
         "file": "KeyA.webp",
-        "bytes": 238070,
-        "sha256": "19f62aee88c186bea2ded26487e68da2d705d3f7b9de67e592ac5fcc06e8e7ae"
+        "bytes": 269106,
+        "sha256": "674a159f60a7d5948c1bcdd97802105739a3ef2c6031d1375136e307bebfbf4a"
       }
     },
     "KeyS": {
@@ -41,8 +41,8 @@
       },
       "atlas": {
         "file": "KeyS.webp",
-        "bytes": 236576,
-        "sha256": "f16283406212076b31bd93f2534cda30a7513fb9b5347856bc5dd1b822e53eca"
+        "bytes": 267862,
+        "sha256": "8fa39e3750f0baf7e469ef7f3017e8137ea3458deab93814a22364d248dce6a2"
       }
     },
     "KeyD": {
@@ -60,8 +60,8 @@
       },
       "atlas": {
         "file": "KeyD.webp",
-        "bytes": 238660,
-        "sha256": "85f5724713767dd4e61df3432d3a479e9b0b84a7a9e7fdbb1605e866bdf327f1"
+        "bytes": 269582,
+        "sha256": "ce881eef7b6f3703d3a97f21816dbbb3e549bf5609235583c63838c459d304ff"
       }
     },
     "KeyF": {
@@ -79,8 +79,8 @@
       },
       "atlas": {
         "file": "KeyF.webp",
-        "bytes": 235936,
-        "sha256": "f0ac15c98bfab501dd5323479c6d201f86bea18f8b05595898e33bebf8b32676"
+        "bytes": 266228,
+        "sha256": "366dcf93a8964e45dc1933947b707e3761d8041a5e9da7901fed8201950ee6bc"
       }
     },
     "KeyW": {
@@ -98,8 +98,8 @@
       },
       "atlas": {
         "file": "KeyW.webp",
-        "bytes": 237520,
-        "sha256": "05e60c04a9bc6e8b242206cd9968a310f49dfc503e1698426da412d2a169af49"
+        "bytes": 268350,
+        "sha256": "f1780a4abed21876b38da56d13f40b743909d3813bde21f1c39186d389bc732b"
       }
     },
     "KeyE": {
@@ -117,8 +117,8 @@
       },
       "atlas": {
         "file": "KeyE.webp",
-        "bytes": 241298,
-        "sha256": "9975c10548eba38d658e35373a38b48f5481560d5fc3d0abf479039db57ae949"
+        "bytes": 272908,
+        "sha256": "b08576417e8bcd8af5da5e8e8e934dc377234312a36893cfa655ae4d2ef164bb"
       }
     },
     "KeyG": {
@@ -136,8 +136,8 @@
       },
       "atlas": {
         "file": "KeyG.webp",
-        "bytes": 236800,
-        "sha256": "1e2289979186cfb49375b2108382dd7f5a6dba2e32f13a794b71b3e6f9c3addf"
+        "bytes": 267934,
+        "sha256": "a8524ae15d6b22144be46b34a5e2359a2c8d4947892720c39b8af5ac6761eb45"
       }
     },
     "KeyH": {
@@ -155,8 +155,8 @@
       },
       "atlas": {
         "file": "KeyH.webp",
-        "bytes": 236210,
-        "sha256": "05b7fc9e1cb3252fd875d5690dbbbed2bc2904ee2934fbe7094e5e20f10a7be2"
+        "bytes": 266894,
+        "sha256": "616235e340a0ee70b6dad980f412dcc5eed11a39c7a28eb78915f078864bcba4"
       }
     },
     "KeyJ": {
@@ -174,8 +174,8 @@
       },
       "atlas": {
         "file": "KeyJ.webp",
-        "bytes": 241912,
-        "sha256": "f3f1eca73b8f3208a997c3d976ddad0945e037538911d8fae631541cced01042"
+        "bytes": 273712,
+        "sha256": "5c75b54e38a63923262c6712cc7df368439f02256ed4bd7fdbef9322a68720a0"
       }
     },
     "KeyK": {
@@ -193,8 +193,8 @@
       },
       "atlas": {
         "file": "KeyK.webp",
-        "bytes": 241070,
-        "sha256": "1e39baf21fbc0752d0e3d17618bf25ad5497075ce7c14c6d1204d523d7e6a827"
+        "bytes": 272026,
+        "sha256": "db40e070400d3e5636346f050a776d72bc9b87f469162156ab21f8bd7f2af1fe"
       }
     },
     "KeyT": {
@@ -212,8 +212,8 @@
       },
       "atlas": {
         "file": "KeyT.webp",
-        "bytes": 236322,
-        "sha256": "fb7e8caddde6ba02b8e9dfbcd0ef040d9631634033b123d59aac93d6b29e8d52"
+        "bytes": 268084,
+        "sha256": "90c9dbd6bcf82f024517d249b9175830e6ede5f83cf02a1309022f79543258b0"
       }
     },
     "KeyY": {
@@ -231,8 +231,8 @@
       },
       "atlas": {
         "file": "KeyY.webp",
-        "bytes": 239782,
-        "sha256": "165201f7e6f581d73cf36617d3b980a9b94eb77f363787f7676b711f5d0c0a9d"
+        "bytes": 271328,
+        "sha256": "661a4bbd3d2b82f4f2f50073f32e6e196957b972e8d5faac47b0ccbb97e9116a"
       }
     },
     "KeyU": {
@@ -250,8 +250,8 @@
       },
       "atlas": {
         "file": "KeyU.webp",
-        "bytes": 240044,
-        "sha256": "75e605b8c28fafcf396852bc3b52d85634030f891d7c3e5b67e8d9703af45dc9"
+        "bytes": 271106,
+        "sha256": "02f65361eec05a9eb0afee50e43707774b256257fd93cdf05f9c78df817f1c56"
       }
     },
     "Digit1": {
@@ -269,8 +269,8 @@
       },
       "atlas": {
         "file": "Digit1.webp",
-        "bytes": 238458,
-        "sha256": "6c627eecc329690ea69bc5b3ce27b53b392a109e4393368b82d010245d3f95ce"
+        "bytes": 270312,
+        "sha256": "612d95a679c2c0511320069abbdc2346debcad444d47dd9f0dc17022af3d2731"
       }
     },
     "Digit2": {
@@ -288,8 +288,8 @@
       },
       "atlas": {
         "file": "Digit2.webp",
-        "bytes": 238232,
-        "sha256": "e950961effa5285208e7c682c48ad47f868f104c4f2a046e928e7dbd218c0090"
+        "bytes": 269414,
+        "sha256": "11d560bde9d1433e74b667aeb34c9ebfc7c774456e773c0ad9e766a73a6abe59"
       }
     },
     "Digit3": {
@@ -307,8 +307,8 @@
       },
       "atlas": {
         "file": "Digit3.webp",
-        "bytes": 239238,
-        "sha256": "e769dc5802151faac181e6051645cb6b3f5f7ba7bd0561855025b528a5a716a9"
+        "bytes": 270566,
+        "sha256": "d3d9a4cb819164d1d0544eaabd6c6df6a66ab028e2d0261cf53fa270a19ff615"
       }
     },
     "Digit4": {
@@ -326,8 +326,8 @@
       },
       "atlas": {
         "file": "Digit4.webp",
-        "bytes": 238812,
-        "sha256": "875753b3398859dc08ae31c7003cfe036ddeafa58e773fb41110a6b116aaf1e9"
+        "bytes": 270790,
+        "sha256": "308765f900b00cd42da904969d71442c5c832c5fe01912b3d4bd69feffa27d59"
       }
     }
   },

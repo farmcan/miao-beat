@@ -23,11 +23,12 @@ if len(list(outputs.glob('*.png')))!=expected:
 assert len(list(outputs.glob('*.png')))==expected
 for j,code in enumerate(codes):
  frames=[Image.open(outputs/f'{j*16+k+1:08d}.png').convert('RGB') for k in range(1,8)]
- sheet=Image.new('RGB',(2560,1280))
- for k,im in enumerate(frames+[frames[-1]]):sheet.paste(im,(k%4*640,k//4*640))
+ poses=[Image.open(out/f'{code}-up.jpg').convert('RGB').resize((640,640),Image.Resampling.LANCZOS),*frames,Image.open(root/'public'/clips[code]['down']['file']).convert('RGB').resize((640,640),Image.Resampling.LANCZOS)]
+ sheet=Image.new('RGB',(1920,1920))
+ for k,im in enumerate(poses):sheet.paste(im,(k%3*640,k//3*640))
  path=out/f'{code}.webp';sheet.save(path,'WEBP',quality=86,method=6);clips[code]['atlas']=entry(path)
 upstream=json.loads((root/'public/character/guitar-motion-v1/manifest.json').read_text())['upstream']
-manifest={'version':1,'width':1254,'height':1254,'tileSize':640,'columns':4,'rows':2,'intermediates':7,'clips':clips,'method':'Each clip changes the raised strumming paw to contact while keeping the fretting hand fixed. Every frame is a complete cat, both connected paws and guitar picture.','upstream':upstream,'limits':['Cartoon pluck, not exact strings or fingering instruction','Large changes between frets select the new full scene directly; clips never tour other notes','Intermediate frames may be softer than 1254px endpoints; physical device and user naturalness remain unverified']}
+manifest={'version':1,'width':1254,'height':1254,'tileSize':640,'columns':3,'rows':3,'intermediates':7,'clips':clips,'method':'Each clip changes the raised strumming paw to contact while keeping the fretting hand fixed. Every frame is a complete cat, both connected paws and guitar picture.','upstream':upstream,'limits':['Cartoon pluck, not exact strings or fingering instruction','Large changes between frets select the new full scene directly; clips never tour other notes','Intermediate frames may be softer than 1254px endpoints; physical device and user naturalness remain unverified']}
 (out/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
 for page in range(3):
  group=codes[page*6:(page+1)*6];board=Image.new('RGB',(960,340*len(group)),'#eee');d=ImageDraw.Draw(board)
