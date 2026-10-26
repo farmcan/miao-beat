@@ -300,3 +300,28 @@ test('Painter rest clears key cues, 2/4 guide never records automatic melody',as
  const saved=JSON.parse(await h.blob().text());assert.equal(saved.meter,2);assert.deepEqual(saved.events,[[100,2]]);
  assert.deepEqual(recording.validateRecording(saved),saved);
 });
+
+test('five-key Miles demo plays one complete round, never repeats a tied note and leaves a silent ending',async t=>{
+ const h=setup(t),{$,audio,w}=h;
+ $('songSelect').value='five-hundred-miles';$('songSelect').dispatchEvent(new w.Event('change'));
+ assert.equal(w.document.querySelectorAll('.score-phrase').length,4);
+ assert.equal(w.document.querySelectorAll('.score-note').length,52);
+ $('bpm').value='120';$('listenSong').click();await settle();
+ h.frame(.5);assert.match($('guideTime').textContent,/预备/);
+ for(let i=13;i<=862;i++){audio.context.currentTime=i*.04;h.tick();h.frame(audio.context.currentTime);}
+ assert.equal(audio.plays.length,51);assert.equal(audio.plays[0].code,'KeyF');
+ assert.equal(audio.plays.at(-1).code,'KeyH');assert.ok(Math.abs(audio.plays.at(-1).time-30.1)<1e-8);
+ assert.equal($('scoreStatus').textContent,'听完了，换你试试。');
+ assert.equal($('recordingInfo').textContent,'0:00 · 0 次按键');
+});
+
+test('Miles guidance uses actual multi-beat rest and clears the final key cue',async t=>{
+ const h=setup(t),{$,w}=h;
+ $('songSelect').value='five-hundred-miles';$('songSelect').dispatchEvent(new w.Event('change'));
+ $('bpm').value='120';$('guideSong').click();await settle();
+ h.frame(31);assert.equal($('guidePanel').dataset.index,'50');
+ assert.equal($('guideNext').textContent,'接着空 2.5 拍');
+ h.frame(33);assert.equal($('guidePanel').dataset.index,'51');
+ assert.equal($('guideNow').textContent,'休止 · 空 2.5 拍');
+ assert.equal(w.document.querySelectorAll('.due,.upcoming').length,0);
+});

@@ -85,3 +85,13 @@ test('2/4 recordings roundtrip while legacy format acceptance stays unchanged',(
  assert.throws(()=>validateRecording({...song,version:1,engine:'ui-synth-v1',instrument:'marimba'}));
  for(const meter of [0,1,5])assert.throws(()=>validateRecording({...song,meter}));
 });
+
+test('Five Hundred Miles fits five white keys and keeps pickup, repeat phrases and tied ending',()=>{
+ const song=SONGS.find(song=>song.id==='five-hundred-miles'),events=scoreEvents(song,120),notes=events.filter(e=>!e.rest);
+ assert.deepEqual([...new Set(notes.map(e=>e.note))].sort(),['A4','C4','D4','F4','G4']);
+ assert.equal(notes.length,51);assert.equal(song.pickupBeats,2);assert.equal(song.totalBeats,66);
+ assert.deepEqual(song.phrases.map(row=>row.reduce((sum,e)=>sum+e.beats,0)),[18,16,16,16]);
+ assert.deepEqual(song.phrases[0].slice(2),song.phrases[2]);
+ assert.equal(notes.at(-1).note,'A4');assert.equal(notes.at(-1).beats,5.5);
+ assert.deepEqual(events.at(-1),{rest:true,beats:2.5,index:51,offset:31.75});
+});
