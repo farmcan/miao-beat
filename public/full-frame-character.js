@@ -136,7 +136,7 @@ export function mountCharacter(scene){
     lastMotionTick=time;
     const pose=state.sample();let id=mode==='piano'?pose.id:mode==='marimba'?'idle':mode+':'+pose.id,cell,moving=false;
     scene.dataset.confirmedKeys=pose.held.join(',');
-    if(mode==='guitar'&&motion&&motionEnabled){const finishing=pose.id==='idle'&&motion.target!=='idle'&&motion.sample().needsFrame;if(!finishing)motion.go(pose.id);const p=motion.sample();moving=p.needsFrame;if(p.edge){id='motion:'+p.edge;cell=p.cell;}else id='guitar:'+p.pose;}
+    if(mode==='guitar'&&motion&&motionEnabled){const p=motion.sample();moving=p.needsFrame;if(p.edge){id='motion:'+p.edge;cell=p.cell;}else id='guitar:'+p.pose;}
     const signature=id+(cell===undefined?'':':'+cell);
     if(signature!==wanted){wanted=signature;wantedAsset=id;show(id,++epoch,signature,cell);}
     if(mode==='marimba'){message.textContent='马林巴暂用钢琴猫静图，动作还没补。';message.hidden=false;}
@@ -160,7 +160,7 @@ export function mountCharacter(scene){
   return{ready,
     setMotionEnabled(enabled){motionEnabled=!!enabled;motion?.reset(state.sample().id);wanted='';epoch++;request();},
     update(next=mode,keys=[]){const changed=next!==mode;mode=next;if(changed){state=createFrameState(()=>win.performance.now(),mode);wanted='';epoch++;canvas.hidden=true;message.hidden=false;message.textContent='猫的图还在加载…';}state.update(keys);request();if(changed){motion?.reset();prefetch(false);if(mode==='guitar')loadMotion();}},
-    strike(key,next=mode){if(next!==mode){mode=next;state=createFrameState(()=>win.performance.now(),mode);canvas.hidden=true;message.hidden=false;message.textContent='猫的图还在加载…';reset();}const accepted=state.strike(key);if(accepted&&mode==='guitar'&&motionEnabled&&motion?.target===key.code)motion.pulse();request();if(accepted)prefetch(true);return accepted;},
+    strike(key,next=mode){if(next!==mode){mode=next;state=createFrameState(()=>win.performance.now(),mode);canvas.hidden=true;message.hidden=false;message.textContent='猫的图还在加载…';reset();}const accepted=state.strike(key);if(accepted&&mode==='guitar'&&motionEnabled&&motion){if(motion.target===key.code)motion.pulse();else motion.go(key.code);}request();if(accepted)prefetch(true);return accepted;},
     destroy(){if(destroyed)return;destroyed=true;epoch++;if(raf)win.cancelAnimationFrame(raf);win.removeEventListener('blur',reset);doc.removeEventListener('visibilitychange',visibility);for(const image of bitmaps.values())image.close?.();bitmaps.clear();encoded.clear();canvas.remove();message.remove();if(svg)svg.style.display=original.display;scene.style.aspectRatio=original.aspect;scene.removeAttribute('data-complete-character');},
   };
 }

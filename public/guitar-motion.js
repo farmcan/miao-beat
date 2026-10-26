@@ -18,19 +18,26 @@ export function createGuitarMotion(config,now=()=>performance.now()){
     const s=segments[0],progress=Math.max(0,Math.min(1,(t-s.start)/(s.end-s.start))),phase=s.from+(s.to-s.from)*progress;
     return{edge:s.edge,phase,needsFrame:true};
   }
-  function route(from,to){
-    const queue=[[from,[]]],seen=new Set([from]);
-    for(const[id,path]of queue){if(id===to)return path;for(const step of graph.get(id)??[])if(!seen.has(step.to)){seen.add(step.to);queue.push([step.to,[...path,{edge:step.edge,from:step.edge.from===id?0:1,to:step.edge.from===id?1:0}]]);}}
-    return[];
+  // An input may use one direct transition, never a route through other notes.
+  // When no reviewed direct edge exists, land at the actual target and make
+  // one small recoil inside its own neighbourhood; never reach that neighbour.
+  function recoil(id){
+    const options=graph.get(id),edge=(options.find(s=>id.startsWith('Digit')?s.to==='idle':id.startsWith('Key')&&s.to.startsWith('Key'))??options[0]).edge;
+    const end=edge.from===id?0:1,near=end===0?.25:.75;
+    return[{edge,from:end,to:near},{edge,from:near,to:end}];
   }
   function schedule(to,pulse=false){
     if(!graph.has(to)||to===target&&!pulse)return;
-    const p=position(),path=[];let at=p.pose,time=now();
-    if(p.edge){const end=p.phase<.5?0:1;at=end===0?p.edge.from:p.edge.to;path.push({edge:p.edge,from:p.phase,to:end});}
-    path.push(...route(at,to));
-    if(pulse&&!path.length){const e=graph.get(to)[0].edge,end=e.from===to?0:1;path.push({edge:e,from:end,to:end===0?.25:.75},{edge:e,from:end===0?.25:.75,to:end});}
-    const weight=path.reduce((sum,s)=>sum+Math.abs(s.to-s.from),0),perEdge=Math.min(to==='idle'?150:75,Math.max(15,(to==='idle'?200:170)/Math.max(weight,1)));
-    segments=path.map(s=>{const start=time;time+=Math.max(8,Math.abs(s.to-s.from)*perEdge);return{...s,start,end:time};});target=to;
+    const p=position();let path=[];
+    if(pulse){anchor=to;path=recoil(to);}
+    else if(p.edge&&(p.edge.from===to||p.edge.to===to))path=[{edge:p.edge,from:p.phase,to:p.edge.from===to?0:1}];
+    else{
+      const direct=p.pose&&graph.get(p.pose).find(s=>s.to===to);
+      if(direct)path=[{edge:direct.edge,from:direct.edge.from===p.pose?0:1,to:direct.edge.from===to?0:1}];
+      else{anchor=to;if(to!=='idle')path=recoil(to);}
+    }
+    let time=now();
+    segments=path.map(s=>{const start=time;time+=Math.max(8,Math.abs(s.to-s.from)*(to==='idle'?110:85));return{...s,start,end:time};});target=to;
   }
   return{
     go:to=>schedule(to),pulse:()=>schedule(target,true),

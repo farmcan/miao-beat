@@ -9,13 +9,16 @@ test('reviewed graph connects all guitar poses without the rejected direct low-t
  const broken=structuredClone(data);broken.edges[0].file='../limb.png';assert.throws(()=>validateGuitarMotionManifest(broken));
 });
 test('attack includes complete-scene intermediate frames; return reaches idle in bounded time',()=>{
- let now=0;const m=createGuitarMotion(data,()=>now);m.go('Digit4');now=35;const p=m.sample();assert.equal(p.edge,'e03');assert.ok(p.cell>=0&&p.cell<7);now=80;assert.equal(m.sample().pose,'Digit4');m.go('idle');now=120;assert.ok(m.sample().edge);now=300;assert.deepEqual(m.sample(),{pose:'idle',needsFrame:false});
+ let now=0;const m=createGuitarMotion(data,()=>now);m.go('Digit4');now=35;const p=m.sample();assert.equal(p.edge,'e03');assert.ok(p.cell>=0&&p.cell<7);now=90;assert.equal(m.sample().pose,'Digit4');m.go('idle');now=120;assert.ok(m.sample().edge);now=300;assert.deepEqual(m.sample(),{pose:'idle',needsFrame:false});
 });
-test('a new target interrupts the current interpolation continuously and drops stale actions',()=>{
- let now=0;const m=createGuitarMotion(data,()=>now);m.go('KeyK');now=31;const p=m.sample();m.go('Digit2');assert.deepEqual(m.sample(),p,'same-time interruption retains the actual in-between picture');now=400;assert.equal(m.sample().pose,'Digit2');now=700;assert.equal(m.sample().pose,'Digit2');m.reset();assert.equal(m.sample().pose,'idle');
+test('one distant note never tours other notes; a new input replaces its single action',()=>{
+ let now=0;const m=createGuitarMotion(data,()=>now);m.go('KeyK');const edges=new Set(),poses=new Set();
+ for(now=0;now<400;now++){const p=m.sample();if(p.edge)edges.add(p.edge);if(p.pose)poses.add(p.pose);}
+ assert.equal(edges.size,1,'one distant input cannot queue thirteen intermediate playing actions');assert.deepEqual([...poses],['KeyK'],'no other note endpoint is played on the way');
+ now=500;m.reset();m.go('KeyK');now=512;m.go('Digit2');assert.equal(m.target,'Digit2');now=1000;assert.equal(m.sample().pose,'Digit2');now=2000;assert.equal(m.sample().pose,'Digit2');
 });
 test('repeated confirmed keys get a small complete-scene recoil, without changing the musical target',()=>{
- let now=0;const m=createGuitarMotion(data,()=>now);m.reset('Digit1');m.pulse();now=12;assert.ok(m.sample().edge);now=80;assert.equal(m.sample().pose,'Digit1');assert.equal(m.target,'Digit1');
+ let now=0;const m=createGuitarMotion(data,()=>now);m.reset('Digit1');m.pulse();now=12;assert.ok(m.sample().edge);now=90;assert.equal(m.sample().pose,'Digit1');assert.equal(m.target,'Digit1');
 });
 test('real renderer selects exactly one entire scene tile and a late transition cannot repaint drums',async t=>{
  const {JSDOM}=await import('jsdom');const dom=new JSDOM('<div id="scene" data-instrument="guitar"><div class="stage-readout"></div></div>');const w=dom.window,scene=w.document.querySelector('#scene');t.after(()=>w.close());
@@ -27,8 +30,8 @@ test('real renderer selects exactly one entire scene tile and a late transition 
  t.mock.method(globalThis,'fetch',async input=>{const path=new URL(input).pathname;if(path.endsWith('manifest.json'))return Response.json(path.includes('guitar-motion-v1')?data:path.includes('instrument-scenes-v1')?band:piano);return new Response(path.split('/').at(-1));});
  const c=mountCharacter(scene);t.after(()=>c.destroy());const tick=()=>new Promise(r=>setImmediate(r));const frame=async time=>{now=time;const q=[...frames.values()];frames.clear();for(const f of q)f(now);await tick();};
  await c.ready;await tick();await frame(0);const chord={code:'Digit4',kind:'chord'};c.update('guitar',[chord]);c.strike(chord);await frame(1);await frame(37);await tick();assert.ok(draws.some(a=>a.length===9),'actual full-scene tile was drawn');assert.equal(scene.dataset.wholeFrame,'guitar:transition');
- c.update('guitar',[]);await frame(70);await frame(110);assert.equal(scene.dataset.wholeFrame,'guitar:Digit4','a short tap finishes its latest stroke before returning, instead of folding back midway');
- block=true;const note={code:'KeyK',kind:'note'};c.update('guitar',[note]);c.strike(note);await frame(120);await frame(145);c.update('drums',[{code:'KeyX',kind:'drum'}]);c.strike({code:'KeyX',kind:'drum'},'drums');await frame(180);await tick();assert.equal(scene.dataset.wholeFrame,'drums:KeyX');release();await tick();assert.equal(scene.dataset.wholeFrame,'drums:KeyX');assert.equal(scene.querySelectorAll('canvas').length,1);
+ c.update('guitar',[]);await frame(70);await frame(110);await frame(250);assert.equal(scene.dataset.wholeFrame,'guitar:Digit4','release holds the latest fret instead of inventing a return performance');
+ block=true;const note={code:'KeyK',kind:'note'};c.update('guitar',[note]);c.strike(note);await frame(270);await frame(295);c.update('drums',[{code:'KeyX',kind:'drum'}]);c.strike({code:'KeyX',kind:'drum'},'drums');await frame(320);await tick();assert.equal(scene.dataset.wholeFrame,'drums:KeyX');release();await tick();assert.equal(scene.dataset.wholeFrame,'drums:KeyX');assert.equal(scene.querySelectorAll('canvas').length,1);
 });
 test('cold transition downloads keep original poses usable and enable smoothing only after preparation',async t=>{
  const {JSDOM}=await import('jsdom');const dom=new JSDOM('<div id="scene" data-instrument="guitar"><div class="stage-readout"></div></div>');const w=dom.window,scene=w.document.querySelector('#scene');t.after(()=>w.close());

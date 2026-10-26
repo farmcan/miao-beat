@@ -70,7 +70,7 @@ manifest={'version':1,'date':'2026-10-26','width':640,'height':640,'columns':4,'
           'upstream':{'repository':'https://github.com/nihui/rife-ncnn-vulkan','commit':'a7532fc3f9f8f008cd6eecd6f2ffe2a9698e0cf7','release':'20221029','model':'rife-v4.6',
                       'binarySha256':hashlib.sha256(args.rife.read_bytes()).hexdigest(),
                       'modelSha256':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(args.model.glob('*')) if p.is_file()}},
-          'limits':['Large direct low-to-high fret interpolation rejected after a paw disappeared; route uses adjacent complete poses',
+          'limits':['Large direct fret interpolation rejected after a paw disappeared. Runtime does not tour other notes: unsupported distant changes land on the target and use one short local recoil.',
                     'Interpolation is not a fingering correction or physically authored guitar performance',
                     'No independent body/arm composition; only whole-scene tiles selected at runtime']}
 (public/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')

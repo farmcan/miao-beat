@@ -87,7 +87,7 @@
     {
       "filename": "full-frame-character.js",
       "bytes": 10605,
-      "sha256": "061979322932ad8fc4f1236e69cfeba9121e29f696642dee27ec545d5a50439e"
+      "sha256": "86297b255bf05eb75b12467b2e55418ce45ff48810ed8e414f9645fc0a33b70e"
     },
     {
       "filename": "character/whole-piano-v3/manifest.json",
@@ -252,7 +252,7 @@
   },
   "guitarMotion": {
     "manifest": "character/guitar-motion-v1/manifest.json",
-    "method": "RIFE-v4.6 whole-scene intermediate frames, safe adjacent-pose graph",
+    "method": "One direct complete-scene transition per confirmed input; no multi-note routing. Distant inputs snap to their target plus one small local recoil; release holds the fret.",
     "productionFrames": "Every selected tile is one complete cat, paws and guitar scene; no limb layers."
   }
 }

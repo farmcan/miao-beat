@@ -311,7 +311,7 @@
     }
   },
   "limits": [
-    "Large direct low-to-high fret interpolation rejected after a paw disappeared; route uses adjacent complete poses",
+    "Large direct fret interpolation rejected after a paw disappeared. Runtime does not tour other notes: unsupported distant changes land on the target and use one short local recoil.",
     "Interpolation is not a fingering correction or physically authored guitar performance",
     "No independent body/arm composition; only whole-scene tiles selected at runtime"
   ]
