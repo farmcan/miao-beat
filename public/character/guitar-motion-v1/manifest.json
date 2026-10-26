@@ -1,0 +1,318 @@
+{
+  "version": 1,
+  "date": "2026-10-26",
+  "width": 640,
+  "height": 640,
+  "columns": 4,
+  "rows": 2,
+  "intermediates": 7,
+  "poses": {
+    "idle": {
+      "source": "character/instrument-scenes-v1/guitar/idle.jpg",
+      "sha256": "4418fd737891283f42568306cb427b1f7604a86cae5513b1d6c49b3c31f338d1"
+    },
+    "KeyA": {
+      "source": "character/instrument-scenes-v1/guitar/KeyA.jpg",
+      "sha256": "5df9853f51e0071137fcb76365200f6f7706ea12645d9eccf804e9ab0676e1c9"
+    },
+    "Digit4": {
+      "source": "character/instrument-scenes-v1/guitar/Digit4.jpg",
+      "sha256": "c6802d4ad1186304b752869d7471944746c0ba7b8284f5421657cbbed9bc568a"
+    },
+    "Digit3": {
+      "source": "character/instrument-scenes-v1/guitar/Digit3.jpg",
+      "sha256": "a7f4d5c3ff3925427ffcaa24ee41e5795df06c94df3610719888c1744305d1e5"
+    },
+    "Digit2": {
+      "source": "character/instrument-scenes-v1/guitar/Digit2.jpg",
+      "sha256": "d1328ab834e091c7006cdccb956386caf3f9984fce7890dde233cb813dfee825"
+    },
+    "Digit1": {
+      "source": "character/instrument-scenes-v1/guitar/Digit1.jpg",
+      "sha256": "bc11c5c0e3e208ebf317c69d81c8374032fd15585440392222587c8ca003ea64"
+    },
+    "KeyW": {
+      "source": "character/instrument-scenes-v1/guitar/KeyW.jpg",
+      "sha256": "ee7b0f8bc1fc7040eb0c453443026908b3b7390ecdf34394ef12a94c1eda3f53"
+    },
+    "KeyS": {
+      "source": "character/instrument-scenes-v1/guitar/KeyS.jpg",
+      "sha256": "4b5a7ba4f0f8a1b1d8e45c321b21eec6c702ba600d475e3160c02db6b42e3fc7"
+    },
+    "KeyE": {
+      "source": "character/instrument-scenes-v1/guitar/KeyE.jpg",
+      "sha256": "4307e87eb26840f64563a2f17d1d65c41231d113c07272741547e883fd1d0486"
+    },
+    "KeyD": {
+      "source": "character/instrument-scenes-v1/guitar/KeyD.jpg",
+      "sha256": "55273b32de9f95bcd8a64f4f43752ae055537cb231d03292d44a9f297317947f"
+    },
+    "KeyF": {
+      "source": "character/instrument-scenes-v1/guitar/KeyF.jpg",
+      "sha256": "f9c0549656ff32c564f90f12cad66107182e089f568d5407a0493b16e6cec388"
+    },
+    "KeyT": {
+      "source": "character/instrument-scenes-v1/guitar/KeyT.jpg",
+      "sha256": "7816183382ce2bbd81533b565481ca3e395ead2c01c2c63176867fb3ea56a9dc"
+    },
+    "KeyG": {
+      "source": "character/instrument-scenes-v1/guitar/KeyG.jpg",
+      "sha256": "01f04a56c543e8ffbc85bb9539cecbd0ae72e78f468a9b5710d21ee825421c92"
+    },
+    "KeyY": {
+      "source": "character/instrument-scenes-v1/guitar/KeyY.jpg",
+      "sha256": "40105d5038d239df79fbe50fdb9067b107e3b2912a272bb4c4102d3fb8abc331"
+    },
+    "KeyH": {
+      "source": "character/instrument-scenes-v1/guitar/KeyH.jpg",
+      "sha256": "21ab56fe0a3e87d0b1ec4439683f2bd40b8df9e847f6570fc3652b53749e7b13"
+    },
+    "KeyU": {
+      "source": "character/instrument-scenes-v1/guitar/KeyU.jpg",
+      "sha256": "c8730ad265b35f58c985fa7f938ba8f386e2e111485b3540cc21250b10588fad"
+    },
+    "KeyJ": {
+      "source": "character/instrument-scenes-v1/guitar/KeyJ.jpg",
+      "sha256": "50e34d6fc998fa4c83ab119471d07f9fd1e56d811592b3773bde52567d7f281f"
+    },
+    "KeyK": {
+      "source": "character/instrument-scenes-v1/guitar/KeyK.jpg",
+      "sha256": "931da9f1a619ba112829096dc1d59028e89c3a5013a242a36cd582b7067c1ca9"
+    }
+  },
+  "edges": [
+    {
+      "id": "e00",
+      "from": "idle",
+      "to": "Digit1",
+      "file": "e00.webp",
+      "bytes": 217610,
+      "sha256": "c16744484bd822b7e312c0b6231b1b2e9720a5c3fbfed5d1b905bc8670dd8bbe"
+    },
+    {
+      "id": "e01",
+      "from": "idle",
+      "to": "Digit2",
+      "file": "e01.webp",
+      "bytes": 215930,
+      "sha256": "96480e7facddb328c5247d8ff53cd5030c7b0d18a610fe78be35b2132924af41"
+    },
+    {
+      "id": "e02",
+      "from": "idle",
+      "to": "Digit3",
+      "file": "e02.webp",
+      "bytes": 214804,
+      "sha256": "4081bbc69d9ba537eda5c9ea018bfe73b4145f48d5970480258147ba6d246f45"
+    },
+    {
+      "id": "e03",
+      "from": "idle",
+      "to": "Digit4",
+      "file": "e03.webp",
+      "bytes": 215594,
+      "sha256": "71006f549e0697110ab00684456a5a7f52a4ca69231c81f65df81f6a234c88df"
+    },
+    {
+      "id": "e04",
+      "from": "Digit1",
+      "to": "Digit2",
+      "file": "e04.webp",
+      "bytes": 217850,
+      "sha256": "943a2d8b85e58cd13b95edeb10cb230b6f885e857f6c79e09cbdfd4ebd115a9d"
+    },
+    {
+      "id": "e05",
+      "from": "Digit1",
+      "to": "Digit3",
+      "file": "e05.webp",
+      "bytes": 216848,
+      "sha256": "21a39ba8fd22909fa0342e6ed3e65d8353593f03f8e98d0874b6c0955f70739d"
+    },
+    {
+      "id": "e06",
+      "from": "Digit1",
+      "to": "Digit4",
+      "file": "e06.webp",
+      "bytes": 215308,
+      "sha256": "d504b3a304930caf29936099a408377ad57b353f0122ae3c52a573a41aaacd88"
+    },
+    {
+      "id": "e07",
+      "from": "Digit2",
+      "to": "Digit3",
+      "file": "e07.webp",
+      "bytes": 218162,
+      "sha256": "b4491d17e012375f08b631ddd46df8a940e7174e5b91217ab5993fa227e7f919"
+    },
+    {
+      "id": "e08",
+      "from": "Digit2",
+      "to": "Digit4",
+      "file": "e08.webp",
+      "bytes": 215390,
+      "sha256": "697a93540e709d0b8d8ce68db0d3b09ccb6b299ede36cc8611f5d61db00b9eed"
+    },
+    {
+      "id": "e09",
+      "from": "Digit3",
+      "to": "Digit4",
+      "file": "e09.webp",
+      "bytes": 215142,
+      "sha256": "a09566479880631129edb5e64601c4a335e1d16c6a0f995a6c77a0b4a01eb4e2"
+    },
+    {
+      "id": "e10",
+      "from": "KeyA",
+      "to": "KeyW",
+      "file": "e10.webp",
+      "bytes": 212018,
+      "sha256": "0a2ea4fa5f990758ba8eac1eb89c62ff37ca7d8ef694f38c184c979fee4c048b"
+    },
+    {
+      "id": "e11",
+      "from": "KeyW",
+      "to": "KeyS",
+      "file": "e11.webp",
+      "bytes": 212738,
+      "sha256": "0a3442048e878a579207e2b67dcd1e6b880e14e4ea0b476bc5c73c01297c6581"
+    },
+    {
+      "id": "e12",
+      "from": "KeyS",
+      "to": "KeyE",
+      "file": "e12.webp",
+      "bytes": 214694,
+      "sha256": "1f5c778512db3ad5bfc562f91c3ec0b3a0924a90978a9769f7e663fc3d927e10"
+    },
+    {
+      "id": "e13",
+      "from": "KeyE",
+      "to": "KeyD",
+      "file": "e13.webp",
+      "bytes": 218384,
+      "sha256": "ffa6d8932d458e092250553b575f183a9531463849bf2440648c1248e933011a"
+    },
+    {
+      "id": "e14",
+      "from": "KeyD",
+      "to": "KeyF",
+      "file": "e14.webp",
+      "bytes": 213614,
+      "sha256": "b7df02bbe8673a3dfdb00d5e4fa6bb0c99f24f26c1582e0f7f4b1ad032013c80"
+    },
+    {
+      "id": "e15",
+      "from": "KeyF",
+      "to": "KeyT",
+      "file": "e15.webp",
+      "bytes": 215160,
+      "sha256": "292c904556c9bde4faf8cd638815e60b7b90c9f716bb6df6412ab031fe92a54b"
+    },
+    {
+      "id": "e16",
+      "from": "KeyT",
+      "to": "KeyG",
+      "file": "e16.webp",
+      "bytes": 215020,
+      "sha256": "fbfa5d273f63c293852dca053607489f132e9fad29c989667b1aed1f0089f301"
+    },
+    {
+      "id": "e17",
+      "from": "KeyG",
+      "to": "KeyY",
+      "file": "e17.webp",
+      "bytes": 215948,
+      "sha256": "857ccd126cf5849b3ca2916c5cd70a5b065d130a6a128d925f13a76f6b748edf"
+    },
+    {
+      "id": "e18",
+      "from": "KeyY",
+      "to": "KeyH",
+      "file": "e18.webp",
+      "bytes": 214750,
+      "sha256": "d764463006c07ef308779e019c55908521929fbdfb0cbe84ac8d7fb8f1c9d938"
+    },
+    {
+      "id": "e19",
+      "from": "KeyH",
+      "to": "KeyU",
+      "file": "e19.webp",
+      "bytes": 217922,
+      "sha256": "2575c47a4b8416431439676975611253c7a12a28ff37ee06b47326043bd154d0"
+    },
+    {
+      "id": "e20",
+      "from": "KeyU",
+      "to": "KeyJ",
+      "file": "e20.webp",
+      "bytes": 220002,
+      "sha256": "550f38ea6775b5e6b68bcc025d855918dd812cc3edbd6e96dc547655121f67e8"
+    },
+    {
+      "id": "e21",
+      "from": "KeyJ",
+      "to": "KeyK",
+      "file": "e21.webp",
+      "bytes": 219746,
+      "sha256": "45ce5664c60d8c757f467faa52a6657b5d09fcc8a8739583866c0d9bb622c3bd"
+    },
+    {
+      "id": "e22",
+      "from": "idle",
+      "to": "KeyA",
+      "file": "e22.webp",
+      "bytes": 214122,
+      "sha256": "ed5948246812bd976d25d4649f35a3b715fd684df3410c23d95f3886f8daee63"
+    },
+    {
+      "id": "e23",
+      "from": "Digit1",
+      "to": "KeyA",
+      "file": "e23.webp",
+      "bytes": 215154,
+      "sha256": "5a1bbb0cb83b05274ecf94c904b595ae29f9e45efa76a0c5dc5fc307d3a9a539"
+    },
+    {
+      "id": "e24",
+      "from": "Digit2",
+      "to": "KeyA",
+      "file": "e24.webp",
+      "bytes": 214160,
+      "sha256": "1aa6baafb9f13eb8de5f4fd524ee1f95e4bddba07bdb3653e5eb3ef07fcfdc4a"
+    },
+    {
+      "id": "e25",
+      "from": "Digit3",
+      "to": "KeyA",
+      "file": "e25.webp",
+      "bytes": 213350,
+      "sha256": "e6273644eae62bbdea29c1fb1eab7014585e8d92bc613eb0a197e64d4bf6cfe3"
+    },
+    {
+      "id": "e26",
+      "from": "Digit4",
+      "to": "KeyA",
+      "file": "e26.webp",
+      "bytes": 211842,
+      "sha256": "4a7ceb8dcf0c482c9bec48183fe6e0c87f1e1fd256102e8eae75f822622d8e0c"
+    }
+  ],
+  "method": "Offline RIFE-v4.6 complete-scene interpolation; every tile is an entire cat and guitar picture",
+  "upstream": {
+    "repository": "https://github.com/nihui/rife-ncnn-vulkan",
+    "commit": "a7532fc3f9f8f008cd6eecd6f2ffe2a9698e0cf7",
+    "release": "20221029",
+    "model": "rife-v4.6",
+    "binarySha256": "d11429c72f0cddfb170fd131ee9373dc5329a5729c4382c0acfd40092e5ed19a",
+    "modelSha256": {
+      "flownet.bin": "f334ed2260149ce0188a6dcf049844e8b0cdd912e01cbcfb63553157d2508958",
+      "flownet.param": "724569596bcd1e7b9fa50455c604777ebed99746d2ef40aa86e31b5725f1053c"
+    }
+  },
+  "limits": [
+    "Large direct low-to-high fret interpolation rejected after a paw disappeared; route uses adjacent complete poses",
+    "Interpolation is not a fingering correction or physically authored guitar performance",
+    "No independent body/arm composition; only whole-scene tiles selected at runtime"
+  ]
+}

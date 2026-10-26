@@ -19,6 +19,11 @@ const instrumentScenes=validateInstrumentManifest(JSON.parse(await fs.readFile(p
 allowed.push('character/instrument-scenes-v1/manifest.json',...Object.values(instrumentScenes.modes).flatMap(mode=>Object.values(mode.frames).map(name=>'character/instrument-scenes-v1/'+name)));
 if(instrumentScenes.provenance.length!==43)throw Error('Missing complete instrument provenance');
 for(const frame of instrumentScenes.provenance){const bytes=await fs.readFile(path.join(root,'public/character/instrument-scenes-v1',frame.file));if(createHash('sha256').update(bytes).digest('hex')!==frame.sha256)throw Error('Instrument scene differs: '+frame.mode+':'+frame.id);}
+const {validateGuitarMotionManifest}=await import('../public/guitar-motion.js');
+const motion=validateGuitarMotionManifest(JSON.parse(await fs.readFile(path.join(root,'public/character/guitar-motion-v1/manifest.json'))));
+allowed.push('guitar-motion.js','character/guitar-motion-v1/manifest.json','character/guitar-motion-v1/RIFE-LICENSE.txt',...motion.edges.map(e=>'character/guitar-motion-v1/'+e.file));
+for(const e of motion.edges){const bytes=await fs.readFile(path.join(root,'public/character/guitar-motion-v1',e.file));if(bytes.length!==e.bytes||createHash('sha256').update(bytes).digest('hex')!==e.sha256)throw Error('Guitar transition differs: '+e.id);}
+for(const p of Object.values(motion.poses)){if(createHash('sha256').update(await fs.readFile(path.join(root,'public',p.source))).digest('hex')!==p.sha256)throw Error('Guitar motion source differs');}
 const art=JSON.parse(await fs.readFile(path.join(root,'public/character/manifest.json')));
 for(const asset of art.assets){if(!allowed.includes(asset.filename))throw Error('Unreviewed character file');const bytes=await fs.readFile(path.join(root,'public',asset.filename));if(createHash('sha256').update(bytes).digest('hex')!==asset.sha256)throw Error('Character provenance differs: '+asset.filename);}
 const manifest=JSON.parse(await fs.readFile(path.join(root,'public/samples/manifest.json')));
@@ -31,11 +36,11 @@ if(actual.sort().join('|')!==[...allowed].sort().join('|'))throw Error('Unexpect
 await fs.rm(path.join(root,'dist'),{recursive:true,force:true});await fs.mkdir(path.join(root,'dist'));
 const files={};for(const name of allowed){
  const content=await fs.readFile(path.join(root,'public',name));
- const text=/\.(mp3|png|jpg|mp4)$/.test(name)?'':content.toString();
- const maxBytes=/^character\/.*\.mp4$/.test(name)?8000000:/^(?:character\/|labs\/orange-guitar\/).*\.(png|jpg)$/.test(name)?2000000:256000;
+ const text=/\.(mp3|png|jpg|mp4|webp)$/.test(name)?'':content.toString();
+ const maxBytes=/^character\/.*\.mp4$/.test(name)?8000000:/^(?:character\/|labs\/orange-guitar\/).*\.(png|jpg|webp)$/.test(name)?2000000:256000;
  if(content.length>maxBytes||/\/Users\/|oauth_token|BEGIN PRIVATE KEY|farmcan(?:-seed)?\.pages\.dev/.test(text))throw Error('Invalid public file: '+name);
  await fs.mkdir(path.dirname(path.join(root,'dist',name)),{recursive:true});await fs.writeFile(path.join(root,'dist',name),content);files[name]=createHash('sha256').update(content).digest('hex');
 }
 let commit='local';try{commit=execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8',stdio:['ignore','pipe','ignore']}).trim();}catch{}
-await fs.writeFile(path.join(root,'dist/release.json'),JSON.stringify({project:'miao-beat',version:'0.11.0-whole-band',commit,files},null,2)+'\n');
+await fs.writeFile(path.join(root,'dist/release.json'),JSON.stringify({project:'miao-beat',version:'0.12.0-guitar-motion',commit,files},null,2)+'\n');
 console.log('Built '+allowed.length+' explicit public files; whole-scene piano, guitar and drum poses, four sampled sounds and a visit counter.');

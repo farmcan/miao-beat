@@ -1,5 +1,5 @@
 {
-  "version": 8,
+  "version": 9,
   "date": "2026-10-25",
   "name": "Original orange cat: complete generated scene states",
   "status": "Whole-scene discrete poses; no independent limb rendering",
@@ -87,7 +87,7 @@
     {
       "filename": "full-frame-character.js",
       "bytes": 10605,
-      "sha256": "4255f8b39308c8eab62a5c79cbb55eafa8a7854ef9938f13ef503e7c32028c09"
+      "sha256": "717313540595deb58ea822590fe8a233f5bc4f76257f166f731877da35dae4ab"
     },
     {
       "filename": "character/whole-piano-v3/manifest.json",
@@ -249,5 +249,10 @@
       "design/instrument-whole-scenes-2026-10-25"
     ],
     "note": "Guitar contact is cartoon gesture; exact fret accuracy and human naturalness acceptance are not claimed"
+  },
+  "guitarMotion": {
+    "manifest": "character/guitar-motion-v1/manifest.json",
+    "method": "RIFE-v4.6 whole-scene intermediate frames, safe adjacent-pose graph",
+    "productionFrames": "Every selected tile is one complete cat, paws and guitar scene; no limb layers."
   }
 }

@@ -463,3 +463,5 @@ body.performance-mode .recording-strip { grid-column: 2; grid-row: 6; padding: 1
   .page-heading { display: block; }
   .heading-note { display: block; margin: 8px 0 0; font-size: 11px; }
 }
+
+.guitar-motion-toggle{display:inline-flex;align-items:center;gap:4px;font-size:12px;color:var(--muted,#777);cursor:pointer;margin:5px 0}.guitar-motion-toggle input{accent-color:#db743e}

@@ -26,7 +26,8 @@ test('every actual surface is reachable with fixed bones and the grip places the
 
 test('retrigger starts at the current pose, sticks share their wrist, and blur/mode clear movement',async t=>{
  const dom=new JSDOM(await readFile(new URL('../public/index.html',import.meta.url),'utf8'),{pretendToBeVisual:true});t.after(()=>dom.window.close());
- const w=dom.window,scene=w.document.getElementById('scene');let time=0,id=0;const frames=new Map();
+ // This archived rig has its own fixture; production deliberately has no component SVG.
+ const w=dom.window,scene=w.document.getElementById('scene');scene.insertAdjacentHTML('afterbegin','<svg class="cat-scene"></svg>');let time=0,id=0;const frames=new Map();
  w.performance.now=()=>time;w.requestAnimationFrame=fn=>{frames.set(++id,fn);return id;};w.cancelAnimationFrame=i=>frames.delete(i);
  const frame=ms=>{time=ms;const q=[...frames.values()];frames.clear();for(const fn of q)fn(time);};
  w.Image=class{naturalWidth=1254;naturalHeight=1254;set src(value){queueMicrotask(()=>this.onload());}};
