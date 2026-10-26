@@ -64,6 +64,7 @@ export function mountCharacter(scene){
   const original={display:svg?.style.display??'',aspect:scene.style.aspectRatio};if(svg)svg.style.display='none';
   const bitmaps=new Map(),encoded=new Map(),pending=new Map(),warming=new Set(),complete=new Set();
   let config,bandConfig,bandRequest,mode=scene.dataset.instrument??'piano',destroyed=false,loaded=false,raf=0,wanted='',shown='',epoch=0,ctx;
+  let visualClock=0,lastMotionTick=win.performance.now();
   let motion,motionConfig,motionRequest,motionEnabled=!win.matchMedia?.('(prefers-reduced-motion: reduce)').matches,wantedAsset='';
   let state=createFrameState(()=>win.performance.now(),mode);
   async function loadBand(){
@@ -78,12 +79,14 @@ export function mountCharacter(scene){
       motionStatus('loading');
       const r=await fetch(MOTION_MANIFEST);if(!r.ok)throw Error('Guitar transitions unavailable');
       motionConfig=validateGuitarMotionManifest(await r.json());
-      motion=createGuitarMotion(motionConfig,()=>win.performance.now());
-      motion.reset(shown.startsWith('guitar:')?shown.slice(7):'idle');
-      motionStatus('ready');
-      // Encoded strips are small; decode only the bounded current LRU, not all atlases.
+      // Prepare encoded whole scenes before advertising smooth playback. Audio stays usable.
       let cursor=0;const queue=motionConfig.edges.map(e=>'motion:'+e.id);
-      void Promise.all([0,1,2].map(async()=>{while(!destroyed&&mode==='guitar'&&cursor<queue.length){try{await getBlob(queue[cursor++]);}catch{}}}));
+      await Promise.all([0,1,2].map(async()=>{while(!destroyed&&cursor<queue.length)await getBlob(queue[cursor++]);}));
+      if(destroyed)return null;
+      await getBitmap('motion:e00');
+      motion=createGuitarMotion(motionConfig,()=>visualClock);
+      motion.reset(shown.startsWith('guitar:')?shown.slice(7):'idle');lastMotionTick=win.performance.now();
+      motionStatus('ready');
       request();return motionConfig;
     })().catch(()=>{motionStatus('unavailable');return null;}).finally(()=>{motionRequest=null;});
     return motionRequest;
@@ -127,6 +130,10 @@ export function mountCharacter(scene){
   }
   function draw(){
     raf=0;if(destroyed||!loaded)return;
+    const time=win.performance.now();
+    // Do not spend the animation while a new complete-scene strip is decoding.
+    if(mode==='guitar'&&motion&&motionEnabled&&shown===wantedAsset)visualClock+=Math.min(32,Math.max(0,time-lastMotionTick));
+    lastMotionTick=time;
     const pose=state.sample();let id=mode==='piano'?pose.id:mode==='marimba'?'idle':mode+':'+pose.id,cell,moving=false;
     scene.dataset.confirmedKeys=pose.held.join(',');
     if(mode==='guitar'&&motion&&motionEnabled){motion.go(pose.id);const p=motion.sample();moving=p.needsFrame;if(p.edge){id='motion:'+p.edge;cell=p.cell;}else id='guitar:'+p.pose;}
