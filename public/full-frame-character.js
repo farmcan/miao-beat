@@ -136,7 +136,7 @@ export function mountCharacter(scene){
     lastMotionTick=time;
     const pose=state.sample();let id=mode==='piano'?pose.id:mode==='marimba'?'idle':mode+':'+pose.id,cell,moving=false;
     scene.dataset.confirmedKeys=pose.held.join(',');
-    if(mode==='guitar'&&motion&&motionEnabled){motion.go(pose.id);const p=motion.sample();moving=p.needsFrame;if(p.edge){id='motion:'+p.edge;cell=p.cell;}else id='guitar:'+p.pose;}
+    if(mode==='guitar'&&motion&&motionEnabled){const finishing=pose.id==='idle'&&motion.target!=='idle'&&motion.sample().needsFrame;if(!finishing)motion.go(pose.id);const p=motion.sample();moving=p.needsFrame;if(p.edge){id='motion:'+p.edge;cell=p.cell;}else id='guitar:'+p.pose;}
     const signature=id+(cell===undefined?'':':'+cell);
     if(signature!==wanted){wanted=signature;wantedAsset=id;show(id,++epoch,signature,cell);}
     if(mode==='marimba'){message.textContent='马林巴暂用钢琴猫静图，动作还没补。';message.hidden=false;}
