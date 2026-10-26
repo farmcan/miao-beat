@@ -87,7 +87,7 @@
     {
       "filename": "full-frame-character.js",
       "bytes": 10605,
-      "sha256": "86297b255bf05eb75b12467b2e55418ce45ff48810ed8e414f9645fc0a33b70e"
+      "sha256": "b9295abe97663da9999b5454f6a8bea0222ebd75bbabd361fd9affd5f2839296"
     },
     {
       "filename": "character/whole-piano-v3/manifest.json",
@@ -137,7 +137,10 @@
       "module": "full-frame-character.js",
       "manifest": "character/instrument-scenes-v1/manifest.json",
       "frameCount": 18,
-      "method": "One complete generated cat+both-paws+instrument image per state"
+      "method": "One complete generated cat+both-paws+instrument image per state",
+      "pluckManifest": "character/guitar-pluck-v1/manifest.json",
+      "pluckClips": 17,
+      "addedReadyFrames": 17
     },
     "drums": {
       "module": "full-frame-character.js",
@@ -251,8 +254,8 @@
     "note": "Guitar contact is cartoon gesture; exact fret accuracy and human naturalness acceptance are not claimed"
   },
   "guitarMotion": {
-    "manifest": "character/guitar-motion-v1/manifest.json",
-    "method": "One direct complete-scene transition per confirmed input; no multi-note routing. Distant inputs snap to their target plus one small local recoil; release holds the fret.",
-    "productionFrames": "Every selected tile is one complete cat, paws and guitar scene; no limb layers."
+    "manifest": "character/guitar-pluck-v1/manifest.json",
+    "method": "One fixed-fret complete-scene up/contact/right-paw recovery clip per confirmed sound; every repeated or changed note retriggers a visible strum.",
+    "productionFrames": "Every endpoint and intermediate tile contains the complete connected cat, both paws and guitar; no arm layers."
   }
 }

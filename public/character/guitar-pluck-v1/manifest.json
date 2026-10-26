@@ -1,0 +1,351 @@
+{
+  "version": 1,
+  "width": 1254,
+  "height": 1254,
+  "tileSize": 640,
+  "columns": 4,
+  "rows": 2,
+  "intermediates": 7,
+  "clips": {
+    "KeyA": {
+      "up": {
+        "file": "KeyA-up.jpg",
+        "bytes": 358862,
+        "sha256": "43708d4ec26ef90ac9370a1ede2e596f6c5d74c8f43edaaebee1514301b0bd7b",
+        "source": "design/guitar-pluck-2026-10-26/up/KeyA.png",
+        "sourceSha256": "0e84813731f4c8405127cc87461ebb3b135ec4c70677711dedb5fbe4b1092ea8"
+      },
+      "down": {
+        "file": "character/instrument-scenes-v1/guitar/KeyA.jpg",
+        "bytes": 196296,
+        "sha256": "5df9853f51e0071137fcb76365200f6f7706ea12645d9eccf804e9ab0676e1c9"
+      },
+      "atlas": {
+        "file": "KeyA.webp",
+        "bytes": 238070,
+        "sha256": "19f62aee88c186bea2ded26487e68da2d705d3f7b9de67e592ac5fcc06e8e7ae"
+      }
+    },
+    "KeyS": {
+      "up": {
+        "file": "KeyS-up.jpg",
+        "bytes": 357600,
+        "sha256": "6b097af44e395a16d12c29fde88311a1d3e1036ca5399b7cd45ce93c9d0714d3",
+        "source": "design/guitar-pluck-2026-10-26/up/KeyS.png",
+        "sourceSha256": "daf99e16cca6b8916c012a7f9bb34cc297496e4c35d0cddc20ce07b386292d22"
+      },
+      "down": {
+        "file": "character/instrument-scenes-v1/guitar/KeyS.jpg",
+        "bytes": 194606,
+        "sha256": "4b5a7ba4f0f8a1b1d8e45c321b21eec6c702ba600d475e3160c02db6b42e3fc7"
+      },
+      "atlas": {
+        "file": "KeyS.webp",
+        "bytes": 236576,
+        "sha256": "f16283406212076b31bd93f2534cda30a7513fb9b5347856bc5dd1b822e53eca"
+      }
+    },
+    "KeyD": {
+      "up": {
+        "file": "KeyD-up.jpg",
+        "bytes": 360136,
+        "sha256": "bf0601ab31dc0caa5cc03b25035e88d7a0c393a6e6eeea497da739ddc5e1633a",
+        "source": "design/guitar-pluck-2026-10-26/up/KeyD.png",
+        "sourceSha256": "0ad1c38169acc2e26def46311ee1c1d7cd34811023f7e5d704f88b7895e60d6c"
+      },
+      "down": {
+        "file": "character/instrument-scenes-v1/guitar/KeyD.jpg",
+        "bytes": 194974,
+        "sha256": "55273b32de9f95bcd8a64f4f43752ae055537cb231d03292d44a9f297317947f"
+      },
+      "atlas": {
+        "file": "KeyD.webp",
+        "bytes": 238660,
+        "sha256": "85f5724713767dd4e61df3432d3a479e9b0b84a7a9e7fdbb1605e866bdf327f1"
+      }
+    },
+    "KeyF": {
+      "up": {
+        "file": "KeyF-up.jpg",
+        "bytes": 355250,
+        "sha256": "da3ad37f37224b9dfd6a6f31f96d888d34a328d8f216ec25a7aa9e6ac5b034d3",
+        "source": "design/guitar-pluck-2026-10-26/up/KeyF.png",
+        "sourceSha256": "47d79dcea471a9a514f1505de972ec814fc9934b7921e37d42b9f4f944bc0e43"
+      },
+      "down": {
+        "file": "character/instrument-scenes-v1/guitar/KeyF.jpg",
+        "bytes": 194991,
+        "sha256": "f9c0549656ff32c564f90f12cad66107182e089f568d5407a0493b16e6cec388"
+      },
+      "atlas": {
+        "file": "KeyF.webp",
+        "bytes": 235936,
+        "sha256": "f0ac15c98bfab501dd5323479c6d201f86bea18f8b05595898e33bebf8b32676"
+      }
+    },
+    "KeyW": {
+      "up": {
+        "file": "KeyW-up.jpg",
+        "bytes": 358857,
+        "sha256": "b18806462752ac1059f1e32ce91a6b4fba6d116e25290ae51f1d68ea72f227b4",
+        "source": "design/guitar-pluck-2026-10-26/up/KeyW.png",
+        "sourceSha256": "c852965ef37bdc1ff753066dfbf3029399549b34acb1fb0e1dd480b869da30fd"
+      },
+      "down": {
+        "file": "character/instrument-scenes-v1/guitar/KeyW.jpg",
+        "bytes": 193310,
+        "sha256": "ee7b0f8bc1fc7040eb0c453443026908b3b7390ecdf34394ef12a94c1eda3f53"
+      },
+      "atlas": {
+        "file": "KeyW.webp",
+        "bytes": 237520,
+        "sha256": "05e60c04a9bc6e8b242206cd9968a310f49dfc503e1698426da412d2a169af49"
+      }
+    },
+    "KeyE": {
+      "up": {
+        "file": "KeyE-up.jpg",
+        "bytes": 364034,
+        "sha256": "b7037cb57aa070ca599038fccfa0e1c6c9faede3ad135337867406eb17524b06",
+        "source": "design/guitar-pluck-2026-10-26/up/KeyE.png",
+        "sourceSha256": "4774fe729fcd2ae1ab1867b004e54fd83bfe6704b3ac32e51482e5514b1add2a"
+      },
+      "down": {
+        "file": "character/instrument-scenes-v1/guitar/KeyE.jpg",
+        "bytes": 209409,
+        "sha256": "4307e87eb26840f64563a2f17d1d65c41231d113c07272741547e883fd1d0486"
+      },
+      "atlas": {
+        "file": "KeyE.webp",
+        "bytes": 241298,
+        "sha256": "9975c10548eba38d658e35373a38b48f5481560d5fc3d0abf479039db57ae949"
+      }
+    },
+    "KeyG": {
+      "up": {
+        "file": "KeyG-up.jpg",
+        "bytes": 353683,
+        "sha256": "db3b3f835de662cc7b2ba3fad3e60c5f9c4e01f512abbe24b4b05f2b799ebfc7",
+        "source": "design/guitar-pluck-2026-10-26/up/KeyG.png",
+        "sourceSha256": "6f7740fb1bc55ee91e217d8b0831dc3b9a2655f99c182b7fd259983b442e3771"
+      },
+      "down": {
+        "file": "character/instrument-scenes-v1/guitar/KeyG.jpg",
+        "bytes": 202910,
+        "sha256": "01f04a56c543e8ffbc85bb9539cecbd0ae72e78f468a9b5710d21ee825421c92"
+      },
+      "atlas": {
+        "file": "KeyG.webp",
+        "bytes": 236800,
+        "sha256": "1e2289979186cfb49375b2108382dd7f5a6dba2e32f13a794b71b3e6f9c3addf"
+      }
+    },
+    "KeyH": {
+      "up": {
+        "file": "KeyH-up.jpg",
+        "bytes": 353091,
+        "sha256": "d78d8cbc4d8ed87cc4e7f7cf2400daa1c430f2cc3e951b66f1094d83bae46c27",
+        "source": "design/guitar-pluck-2026-10-26/up/KeyH.png",
+        "sourceSha256": "0fdf9de7e5d94f135db6873fccedbfabd3f32e821b51f12aeb5048d0c204ca54"
+      },
+      "down": {
+        "file": "character/instrument-scenes-v1/guitar/KeyH.jpg",
+        "bytes": 193986,
+        "sha256": "21ab56fe0a3e87d0b1ec4439683f2bd40b8df9e847f6570fc3652b53749e7b13"
+      },
+      "atlas": {
+        "file": "KeyH.webp",
+        "bytes": 236210,
+        "sha256": "05b7fc9e1cb3252fd875d5690dbbbed2bc2904ee2934fbe7094e5e20f10a7be2"
+      }
+    },
+    "KeyJ": {
+      "up": {
+        "file": "KeyJ-up.jpg",
+        "bytes": 363713,
+        "sha256": "0ab923acb0deac8b629ecee7f5e0908479cdef6a31f0f1cd8e019af4c4997c87",
+        "source": "design/guitar-pluck-2026-10-26/up/KeyJ.png",
+        "sourceSha256": "efc9a29f2801719d005943e91a3dcc50ab6da3ad216a30ae228d03c8139ea359"
+      },
+      "down": {
+        "file": "character/instrument-scenes-v1/guitar/KeyJ.jpg",
+        "bytes": 211648,
+        "sha256": "50e34d6fc998fa4c83ab119471d07f9fd1e56d811592b3773bde52567d7f281f"
+      },
+      "atlas": {
+        "file": "KeyJ.webp",
+        "bytes": 241912,
+        "sha256": "f3f1eca73b8f3208a997c3d976ddad0945e037538911d8fae631541cced01042"
+      }
+    },
+    "KeyK": {
+      "up": {
+        "file": "KeyK-up.jpg",
+        "bytes": 362209,
+        "sha256": "ea9dfa6044e29e31a31f2e57ce298a410dfbc4561782c56feb78d54adca43569",
+        "source": "design/guitar-pluck-2026-10-26/up/KeyK.png",
+        "sourceSha256": "25855a7a45fc98715422d6704743ad25df55e97c7e27ca6395e0c756aeb14d93"
+      },
+      "down": {
+        "file": "character/instrument-scenes-v1/guitar/KeyK.jpg",
+        "bytes": 200445,
+        "sha256": "931da9f1a619ba112829096dc1d59028e89c3a5013a242a36cd582b7067c1ca9"
+      },
+      "atlas": {
+        "file": "KeyK.webp",
+        "bytes": 241070,
+        "sha256": "1e39baf21fbc0752d0e3d17618bf25ad5497075ce7c14c6d1204d523d7e6a827"
+      }
+    },
+    "KeyT": {
+      "up": {
+        "file": "KeyT-up.jpg",
+        "bytes": 358398,
+        "sha256": "8dcccb4af9879019ef9b690c462a1d58702f750e68eb3c95005ea75c6080b819",
+        "source": "design/guitar-pluck-2026-10-26/up/KeyT.png",
+        "sourceSha256": "1a3a50e6d5e308e1ec0fa7c60ddb15b31049c23565a5490530af3f28cb141c9e"
+      },
+      "down": {
+        "file": "character/instrument-scenes-v1/guitar/KeyT.jpg",
+        "bytes": 190242,
+        "sha256": "7816183382ce2bbd81533b565481ca3e395ead2c01c2c63176867fb3ea56a9dc"
+      },
+      "atlas": {
+        "file": "KeyT.webp",
+        "bytes": 236322,
+        "sha256": "fb7e8caddde6ba02b8e9dfbcd0ef040d9631634033b123d59aac93d6b29e8d52"
+      }
+    },
+    "KeyY": {
+      "up": {
+        "file": "KeyY-up.jpg",
+        "bytes": 364799,
+        "sha256": "3b4463bd89d1ed448350ef5571d57a3abae3220edba0e6af49221f604f5a1db3",
+        "source": "design/guitar-pluck-2026-10-26/up/KeyY.png",
+        "sourceSha256": "198392131988671704ebf5c297465d42743d9bff1ce1563db54d7e3a67197974"
+      },
+      "down": {
+        "file": "character/instrument-scenes-v1/guitar/KeyY.jpg",
+        "bytes": 203743,
+        "sha256": "40105d5038d239df79fbe50fdb9067b107e3b2912a272bb4c4102d3fb8abc331"
+      },
+      "atlas": {
+        "file": "KeyY.webp",
+        "bytes": 239782,
+        "sha256": "165201f7e6f581d73cf36617d3b980a9b94eb77f363787f7676b711f5d0c0a9d"
+      }
+    },
+    "KeyU": {
+      "up": {
+        "file": "KeyU-up.jpg",
+        "bytes": 355046,
+        "sha256": "8ef2301f06af233b108b7c7a3a4831115cb5ca2aebc678b4a9b93d9f1818977c",
+        "source": "design/guitar-pluck-2026-10-26/up/KeyU.png",
+        "sourceSha256": "50a77b3d89c1ee73d1fd7c502dc10457448f22d8e35d25872a9cbf63b8cc0d49"
+      },
+      "down": {
+        "file": "character/instrument-scenes-v1/guitar/KeyU.jpg",
+        "bytes": 200334,
+        "sha256": "c8730ad265b35f58c985fa7f938ba8f386e2e111485b3540cc21250b10588fad"
+      },
+      "atlas": {
+        "file": "KeyU.webp",
+        "bytes": 240044,
+        "sha256": "75e605b8c28fafcf396852bc3b52d85634030f891d7c3e5b67e8d9703af45dc9"
+      }
+    },
+    "Digit1": {
+      "up": {
+        "file": "Digit1-up.jpg",
+        "bytes": 367193,
+        "sha256": "ae05d2acdb0ffe39520ae2dd1838ec7d779888374b93b118b02c7847388f71d9",
+        "source": "design/guitar-pluck-2026-10-26/up/Digit1.png",
+        "sourceSha256": "bda85366656fce697df5e316bf34ea28d9006b27fab0db030c28e8ae5e7756ad"
+      },
+      "down": {
+        "file": "character/instrument-scenes-v1/guitar/Digit1.jpg",
+        "bytes": 203540,
+        "sha256": "bc11c5c0e3e208ebf317c69d81c8374032fd15585440392222587c8ca003ea64"
+      },
+      "atlas": {
+        "file": "Digit1.webp",
+        "bytes": 238458,
+        "sha256": "6c627eecc329690ea69bc5b3ce27b53b392a109e4393368b82d010245d3f95ce"
+      }
+    },
+    "Digit2": {
+      "up": {
+        "file": "Digit2-up.jpg",
+        "bytes": 352074,
+        "sha256": "a5486d1479745c8fdadad44ab36ea1b97751d0413d5087b59b165fad1751819a",
+        "source": "design/guitar-pluck-2026-10-26/up/Digit2.png",
+        "sourceSha256": "34c2c04a820295ce5b46965171e324a9dd9fd37449f525962b522795a8144c46"
+      },
+      "down": {
+        "file": "character/instrument-scenes-v1/guitar/Digit2.jpg",
+        "bytes": 197429,
+        "sha256": "d1328ab834e091c7006cdccb956386caf3f9984fce7890dde233cb813dfee825"
+      },
+      "atlas": {
+        "file": "Digit2.webp",
+        "bytes": 238232,
+        "sha256": "e950961effa5285208e7c682c48ad47f868f104c4f2a046e928e7dbd218c0090"
+      }
+    },
+    "Digit3": {
+      "up": {
+        "file": "Digit3-up.jpg",
+        "bytes": 374065,
+        "sha256": "1daf7411600c909c0968a69993fb7e553026c2cba9c1d65eed4483d74569c36a",
+        "source": "design/guitar-pluck-2026-10-26/up/Digit3.png",
+        "sourceSha256": "669fe989d7052730e0ccb2e4f3fbb61e201dc8ce53d549f687ac77deb34ca3b8"
+      },
+      "down": {
+        "file": "character/instrument-scenes-v1/guitar/Digit3.jpg",
+        "bytes": 196765,
+        "sha256": "a7f4d5c3ff3925427ffcaa24ee41e5795df06c94df3610719888c1744305d1e5"
+      },
+      "atlas": {
+        "file": "Digit3.webp",
+        "bytes": 239238,
+        "sha256": "e769dc5802151faac181e6051645cb6b3f5f7ba7bd0561855025b528a5a716a9"
+      }
+    },
+    "Digit4": {
+      "up": {
+        "file": "Digit4-up.jpg",
+        "bytes": 371509,
+        "sha256": "c6e0805f238230730810fbac0fc8001951bf85ab94b05a0551683cf646fee682",
+        "source": "design/guitar-pluck-2026-10-26/up/Digit4.png",
+        "sourceSha256": "54efeff9455df54981b1c194bbd331515d1237c1a49b5dc2b2b83bfc98e31836"
+      },
+      "down": {
+        "file": "character/instrument-scenes-v1/guitar/Digit4.jpg",
+        "bytes": 198492,
+        "sha256": "c6802d4ad1186304b752869d7471944746c0ba7b8284f5421657cbbed9bc568a"
+      },
+      "atlas": {
+        "file": "Digit4.webp",
+        "bytes": 238812,
+        "sha256": "875753b3398859dc08ae31c7003cfe036ddeafa58e773fb41110a6b116aaf1e9"
+      }
+    }
+  },
+  "method": "Each clip changes the raised strumming paw to contact while keeping the fretting hand fixed. Every frame is a complete cat, both connected paws and guitar picture.",
+  "upstream": {
+    "repository": "https://github.com/nihui/rife-ncnn-vulkan",
+    "commit": "a7532fc3f9f8f008cd6eecd6f2ffe2a9698e0cf7",
+    "release": "20221029",
+    "model": "rife-v4.6",
+    "binarySha256": "d11429c72f0cddfb170fd131ee9373dc5329a5729c4382c0acfd40092e5ed19a",
+    "modelSha256": {
+      "flownet.bin": "f334ed2260149ce0188a6dcf049844e8b0cdd912e01cbcfb63553157d2508958",
+      "flownet.param": "724569596bcd1e7b9fa50455c604777ebed99746d2ef40aa86e31b5725f1053c"
+    }
+  },
+  "limits": [
+    "Cartoon pluck, not exact strings or fingering instruction",
+    "Large changes between frets select the new full scene directly; clips never tour other notes",
+    "Intermediate frames may be softer than 1254px endpoints; physical device and user naturalness remain unverified"
+  ]
+}

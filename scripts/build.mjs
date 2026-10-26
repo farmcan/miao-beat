@@ -24,6 +24,10 @@ const motion=validateGuitarMotionManifest(JSON.parse(await fs.readFile(path.join
 allowed.push('guitar-motion.js','character/guitar-motion-v1/manifest.json','character/guitar-motion-v1/RIFE-LICENSE.txt',...motion.edges.map(e=>'character/guitar-motion-v1/'+e.file));
 for(const e of motion.edges){const bytes=await fs.readFile(path.join(root,'public/character/guitar-motion-v1',e.file));if(bytes.length!==e.bytes||createHash('sha256').update(bytes).digest('hex')!==e.sha256)throw Error('Guitar transition differs: '+e.id);}
 for(const p of Object.values(motion.poses)){if(createHash('sha256').update(await fs.readFile(path.join(root,'public',p.source))).digest('hex')!==p.sha256)throw Error('Guitar motion source differs');}
+const {validateGuitarPluckManifest}=await import('../public/guitar-motion.js');
+const plucks=validateGuitarPluckManifest(JSON.parse(await fs.readFile(path.join(root,'public/character/guitar-pluck-v1/manifest.json'))));
+allowed.push('character/guitar-pluck-v1/manifest.json',...Object.values(plucks.clips).flatMap(c=>['character/guitar-pluck-v1/'+c.up.file,'character/guitar-pluck-v1/'+c.atlas.file]));
+for(const c of Object.values(plucks.clips))for(const [kind,e]of Object.entries(c)){const file=kind==='down'?e.file:'character/guitar-pluck-v1/'+e.file;const bytes=await fs.readFile(path.join(root,'public',file));if(bytes.length!==e.bytes||createHash('sha256').update(bytes).digest('hex')!==e.sha256)throw Error('Guitar pluck differs: '+file);}
 const art=JSON.parse(await fs.readFile(path.join(root,'public/character/manifest.json')));
 for(const asset of art.assets){if(!allowed.includes(asset.filename))throw Error('Unreviewed character file');const bytes=await fs.readFile(path.join(root,'public',asset.filename));if(createHash('sha256').update(bytes).digest('hex')!==asset.sha256)throw Error('Character provenance differs: '+asset.filename);}
 const manifest=JSON.parse(await fs.readFile(path.join(root,'public/samples/manifest.json')));
@@ -42,5 +46,5 @@ const files={};for(const name of allowed){
  await fs.mkdir(path.dirname(path.join(root,'dist',name)),{recursive:true});await fs.writeFile(path.join(root,'dist',name),content);files[name]=createHash('sha256').update(content).digest('hex');
 }
 let commit='local';try{commit=execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8',stdio:['ignore','pipe','ignore']}).trim();}catch{}
-await fs.writeFile(path.join(root,'dist/release.json'),JSON.stringify({project:'miao-beat',version:'0.12.1-single-action',commit,files},null,2)+'\n');
+await fs.writeFile(path.join(root,'dist/release.json'),JSON.stringify({project:'miao-beat',version:'0.13.0-guitar-pluck',commit,files},null,2)+'\n');
 console.log('Built '+allowed.length+' explicit public files; whole-scene piano, guitar and drum poses, four sampled sounds and a visit counter.');

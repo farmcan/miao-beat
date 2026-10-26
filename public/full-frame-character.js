@@ -1,9 +1,9 @@
-import {createGuitarMotion,validateGuitarMotionManifest} from './guitar-motion.js';
+import {createGuitarMotion,validateGuitarPluckManifest} from './guitar-motion.js';
 // Every visible state is one complete generated cat+both-paws+instrument image.
 // Never combine body/arm layers, warp limbs or draw replacement paw geometry.
 const MANIFEST=new URL('./character/whole-piano-v3/manifest.json',import.meta.url);
 const BAND_MANIFEST=new URL('./character/instrument-scenes-v1/manifest.json',import.meta.url);
-const MOTION_MANIFEST=new URL('./character/guitar-motion-v1/manifest.json',import.meta.url);
+const MOTION_MANIFEST=new URL('./character/guitar-pluck-v1/manifest.json',import.meta.url);
 const LEFT=['KeyA','KeyS','KeyD','KeyF','KeyW','KeyE'];
 const RIGHT=['KeyG','KeyH','KeyJ','KeyK','KeyT','KeyY','KeyU'];
 const ALL=new Set([...LEFT,...RIGHT]);
@@ -65,6 +65,7 @@ export function mountCharacter(scene){
   const bitmaps=new Map(),encoded=new Map(),pending=new Map(),warming=new Set(),complete=new Set();
   let config,bandConfig,bandRequest,mode=scene.dataset.instrument??'piano',destroyed=false,loaded=false,raf=0,wanted='',shown='',epoch=0,ctx;
   let visualClock=0,lastMotionTick=win.performance.now();
+  let lastContactSerial=0;scene.dataset.guitarStrikeCount='0';scene.dataset.guitarContactCount='0';
   let motion,motionConfig,motionRequest,motionEnabled=!win.matchMedia?.('(prefers-reduced-motion: reduce)').matches,wantedAsset='';
   let state=createFrameState(()=>win.performance.now(),mode);
   async function loadBand(){
@@ -78,12 +79,12 @@ export function mountCharacter(scene){
     if(!motionRequest)motionRequest=(async()=>{
       motionStatus('loading');
       const r=await fetch(MOTION_MANIFEST);if(!r.ok)throw Error('Guitar transitions unavailable');
-      motionConfig=validateGuitarMotionManifest(await r.json());
+      motionConfig=validateGuitarPluckManifest(await r.json());
       // Prepare encoded whole scenes before advertising smooth playback. Audio stays usable.
-      let cursor=0;const queue=motionConfig.edges.map(e=>'motion:'+e.id);
+      let cursor=0;const queue=Object.keys(motionConfig.clips).flatMap(code=>['pluck:'+code,'up:'+code,'guitar:'+code]);
       await Promise.all([0,1,2].map(async()=>{while(!destroyed&&cursor<queue.length)await getBlob(queue[cursor++]);}));
       if(destroyed)return null;
-      await getBitmap('motion:e00');
+      await getBitmap('up:KeyA');await getBitmap('pluck:KeyA');
       motion=createGuitarMotion(motionConfig,()=>visualClock);
       motion.reset(shown.startsWith('guitar:')?shown.slice(7):'idle');lastMotionTick=win.performance.now();
       motionStatus('ready');
@@ -92,7 +93,7 @@ export function mountCharacter(scene){
     return motionRequest;
   }
   const urlFor=id=>{
-    if(id.startsWith('motion:')){const edge=motionConfig.edges.find(e=>e.id===id.slice(7));if(!edge)throw Error('Unknown guitar transition');return new URL(edge.file,MOTION_MANIFEST).href;}
+    if(id.startsWith('pluck:')||id.startsWith('up:')){const [kind,code]=id.split(':'),clip=motionConfig.clips[code];if(!clip)throw Error('Unknown guitar pluck');return new URL((kind==='up'?clip.up:clip.atlas).file,MOTION_MANIFEST).href;}
 
     const[family,pose]=id.includes(':')?id.split(':'):['piano',id];
     const name=family==='piano'?config.frames[pose]:bandConfig.modes[family]?.frames[pose];
@@ -100,7 +101,7 @@ export function mountCharacter(scene){
   };
   async function getBlob(id){
     if(encoded.has(id))return encoded.get(id);
-    const task=(async()=>{if(id.includes(':')&&!id.startsWith('motion:'))await loadBand();const r=await fetch(urlFor(id));if(!r.ok)throw new Error('Complete character image unavailable');const blob=await r.blob();if(blob.size>2000000)throw new Error('Oversized character image');if(destroyed)throw new Error('Character unmounted');return blob;})();encoded.set(id,task);
+    const task=(async()=>{if(id.includes(':')&&!id.startsWith('pluck:')&&!id.startsWith('up:'))await loadBand();const r=await fetch(urlFor(id));if(!r.ok)throw new Error('Complete character image unavailable');const blob=await r.blob();if(blob.size>2000000)throw new Error('Oversized character image');if(destroyed)throw new Error('Character unmounted');return blob;})();encoded.set(id,task);
     try{const blob=await task;encoded.set(id,blob);return blob;}catch(error){encoded.delete(id);throw error;}
   }
   async function getBitmap(id){
@@ -111,21 +112,23 @@ export function mountCharacter(scene){
       if(win.createImageBitmap)image=await win.createImageBitmap(blob);
       else image=await new Promise((resolve,reject)=>{const img=new win.Image();img.onload=()=>resolve(img);img.onerror=reject;img.src=urlFor(id);});
       if(destroyed){image.close?.();throw new Error('Character unmounted');}
-      if(image.width!==(id.startsWith('motion:')?2560:1254)||image.height!==(id.startsWith('motion:')?1280:1254))throw new Error('Unexpected full-frame dimensions');
+      if(image.width!==(id.startsWith('pluck:')?2560:1254)||image.height!==(id.startsWith('pluck:')?1280:1254))throw new Error('Unexpected full-frame dimensions');
       bitmaps.set(id,image);
       for(const key of bitmaps.keys())if(bitmaps.size>4&&key!==shown&&key!==wantedAsset){bitmaps.get(key).close?.();bitmaps.delete(key);}
       return image;
     })().finally(()=>pending.delete(id));pending.set(id,task);return task;
   }
-  async function show(id,ticket,signature=id,cell){
+  async function show(id,ticket,signature=id,cell,stroke){
     try{
       const image=await getBitmap(id);if(destroyed||ticket!==epoch||wanted!==signature)return;
       if(canvas.width!==1254||canvas.height!==1254){canvas.width=1254;canvas.height=1254;}ctx=canvas.getContext('2d');if(!ctx)throw new Error('Canvas unavailable');
-      if(cell===undefined)ctx.drawImage(image,0,0);else ctx.drawImage(image,(cell%4)*640,Math.floor(cell/4)*640,640,640,0,0,1254,1254);canvas.hidden=false;shown=id;scene.dataset.wholeFrame=id.startsWith('motion:')?'guitar:transition':id;scene.dataset.guitarTransition=cell===undefined?'':id+':'+cell;scene.dataset.character='complete-frame-scenes-v5';
+      if(cell===undefined)ctx.drawImage(image,0,0);else ctx.drawImage(image,(cell%4)*640,Math.floor(cell/4)*640,640,640,0,0,1254,1254);canvas.hidden=false;shown=id;scene.dataset.wholeFrame=id.startsWith('pluck:')?'guitar:transition':id.startsWith('up:')?'guitar-up:'+id.slice(3):id;scene.dataset.guitarTransition=cell===undefined?'':id+':'+cell;scene.dataset.character='complete-frame-scenes-v6';
+      scene.dataset.guitarPhase=stroke?.phase??'';scene.dataset.guitarStrokeSerial=String(stroke?.serial??0);
+      if(stroke?.contact&&stroke.serial>lastContactSerial){lastContactSerial=stroke.serial;scene.dataset.guitarContactCount=String(Number(scene.dataset.guitarContactCount)+1);}
       scene.style.aspectRatio='1';scene.dataset.wholeFrameStatus='ready';
       const label=mode==='marimba'?'马林巴暂用钢琴猫静图，动作还没补。':'';message.textContent=label;message.hidden=!label;
     }catch{
-      if(destroyed||ticket!==epoch)return;if(id.startsWith('motion:')){motion=null;motionStatus('unavailable');wanted='';epoch++;request();return;}scene.dataset.wholeFrameStatus='unavailable';message.hidden=false;message.textContent='猫的图没加载出来，声音还能用。';
+      if(destroyed||ticket!==epoch)return;if(id.startsWith('pluck:')||id.startsWith('up:')){motion=null;motionStatus('unavailable');wanted='';epoch++;request();return;}scene.dataset.wholeFrameStatus='unavailable';message.hidden=false;message.textContent='猫的图没加载出来，声音还能用。';
     }
   }
   function draw(){
@@ -134,11 +137,11 @@ export function mountCharacter(scene){
     // Do not spend the animation while a new complete-scene strip is decoding.
     if(mode==='guitar'&&motion&&motionEnabled&&shown===wantedAsset)visualClock+=Math.min(32,Math.max(0,time-lastMotionTick));
     lastMotionTick=time;
-    const pose=state.sample();let id=mode==='piano'?pose.id:mode==='marimba'?'idle':mode+':'+pose.id,cell,moving=false;
+    const pose=state.sample();let id=mode==='piano'?pose.id:mode==='marimba'?'idle':mode+':'+pose.id,cell,moving=false,stroke;
     scene.dataset.confirmedKeys=pose.held.join(',');
-    if(mode==='guitar'&&motion&&motionEnabled){const p=motion.sample();moving=p.needsFrame;if(p.edge){id='motion:'+p.edge;cell=p.cell;}else id='guitar:'+p.pose;}
-    const signature=id+(cell===undefined?'':':'+cell);
-    if(signature!==wanted){wanted=signature;wantedAsset=id;show(id,++epoch,signature,cell);}
+    if(mode==='guitar'&&motion&&motionEnabled){const p=motion.sample();moving=p.needsFrame;stroke={serial:p.serial,phase:p.phase,contact:p.pose==='down'};if(p.pose==='idle')id='guitar:idle';else if(p.pose==='up')id='up:'+p.code;else if(p.pose==='down')id='guitar:'+p.code;else{id='pluck:'+p.code;cell=p.cell;}}
+    const signature=id+(cell===undefined?'':':'+cell)+(stroke?':s'+stroke.serial+':'+stroke.phase:'');
+    if(signature!==wanted){wanted=signature;wantedAsset=id;show(id,++epoch,signature,cell,stroke);}
     if(mode==='marimba'){message.textContent='马林巴暂用钢琴猫静图，动作还没补。';message.hidden=false;}
     if(pose.needsFrame||moving)raf=win.requestAnimationFrame(draw);
   }
@@ -160,7 +163,7 @@ export function mountCharacter(scene){
   return{ready,
     setMotionEnabled(enabled){motionEnabled=!!enabled;motion?.reset(state.sample().id);wanted='';epoch++;request();},
     update(next=mode,keys=[]){const changed=next!==mode;mode=next;if(changed){state=createFrameState(()=>win.performance.now(),mode);wanted='';epoch++;canvas.hidden=true;message.hidden=false;message.textContent='猫的图还在加载…';}state.update(keys);request();if(changed){motion?.reset();prefetch(false);if(mode==='guitar')loadMotion();}},
-    strike(key,next=mode){if(next!==mode){mode=next;state=createFrameState(()=>win.performance.now(),mode);canvas.hidden=true;message.hidden=false;message.textContent='猫的图还在加载…';reset();}const accepted=state.strike(key);if(accepted&&mode==='guitar'&&motionEnabled&&motion){if(motion.target===key.code)motion.pulse();else motion.go(key.code);}request();if(accepted)prefetch(true);return accepted;},
+    strike(key,next=mode){if(next!==mode){mode=next;state=createFrameState(()=>win.performance.now(),mode);canvas.hidden=true;message.hidden=false;message.textContent='猫的图还在加载…';reset();}const accepted=state.strike(key);if(accepted&&mode==='guitar'&&motionEnabled&&motion){motion.strike(key.code);scene.dataset.guitarStrikeCount=String(Number(scene.dataset.guitarStrikeCount)+1);}request();if(accepted)prefetch(true);return accepted;},
     destroy(){if(destroyed)return;destroyed=true;epoch++;if(raf)win.cancelAnimationFrame(raf);win.removeEventListener('blur',reset);doc.removeEventListener('visibilitychange',visibility);for(const image of bitmaps.values())image.close?.();bitmaps.clear();encoded.clear();canvas.remove();message.remove();if(svg)svg.style.display=original.display;scene.style.aspectRatio=original.aspect;scene.removeAttribute('data-complete-character');},
   };
 }

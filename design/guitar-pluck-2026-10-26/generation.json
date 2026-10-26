@@ -1,0 +1,142 @@
+{
+  "date": "2026-10-26",
+  "purpose": "Full-scene raised right strumming paw; left fretting pose fixed",
+  "frames": [
+    {
+      "code": "KeyA",
+      "tool": "image_gen built-in",
+      "reference": "public/character/instrument-scenes-v1/guitar/KeyA.jpg",
+      "prompt": "prompts/KeyA.txt",
+      "output": "up/KeyA.png",
+      "generationFile": "exec-83d5d7da-16dc-4f6b-becf-a9f898f733ba.png"
+    },
+    {
+      "code": "KeyS",
+      "tool": "image_gen built-in",
+      "reference": "public/character/instrument-scenes-v1/guitar/KeyS.jpg",
+      "prompt": "prompts/KeyS.txt",
+      "output": "up/KeyS.png",
+      "generationFile": "exec-d600b6e9-9962-4134-a2a2-1123ddb43e0a.png"
+    },
+    {
+      "code": "KeyD",
+      "tool": "image_gen built-in",
+      "reference": "public/character/instrument-scenes-v1/guitar/KeyD.jpg",
+      "prompt": "prompts/KeyD.txt",
+      "output": "up/KeyD.png",
+      "generationFile": "exec-9a39cea0-1c43-411e-99bc-9498594dc44f.png"
+    },
+    {
+      "code": "KeyF",
+      "tool": "image_gen built-in",
+      "reference": "public/character/instrument-scenes-v1/guitar/KeyF.jpg",
+      "prompt": "prompts/KeyF.txt",
+      "output": "up/KeyF.png",
+      "generationFile": "exec-263b7f34-edcd-4851-8a67-cacd51a75c5f.png"
+    },
+    {
+      "code": "KeyW",
+      "tool": "image_gen built-in",
+      "reference": "public/character/instrument-scenes-v1/guitar/KeyW.jpg",
+      "prompt": "prompts/KeyW.txt",
+      "output": "up/KeyW.png",
+      "generationFile": "exec-9cc2d8ba-bd60-4150-8fba-3eed54e9d66d.png"
+    },
+    {
+      "code": "KeyE",
+      "tool": "image_gen built-in",
+      "reference": "public/character/instrument-scenes-v1/guitar/KeyE.jpg",
+      "prompt": "prompts/KeyE.txt",
+      "output": "up/KeyE.png",
+      "generationFile": "exec-0890430a-444c-481e-ba7d-c82f12584ca1.png"
+    },
+    {
+      "code": "KeyG",
+      "tool": "image_gen built-in",
+      "reference": "public/character/instrument-scenes-v1/guitar/KeyG.jpg",
+      "prompt": "prompts/KeyG.txt",
+      "output": "up/KeyG.png",
+      "generationFile": "exec-117032ad-54b2-4f92-9783-6c3bf9569be4.png"
+    },
+    {
+      "code": "KeyH",
+      "tool": "image_gen built-in",
+      "reference": "public/character/instrument-scenes-v1/guitar/KeyH.jpg",
+      "prompt": "prompts/KeyH.txt",
+      "output": "up/KeyH.png",
+      "generationFile": "exec-5452b0a1-b76e-4bbc-b16e-5455465b252d.png"
+    },
+    {
+      "code": "KeyJ",
+      "tool": "image_gen built-in",
+      "reference": "public/character/instrument-scenes-v1/guitar/KeyJ.jpg",
+      "prompt": "prompts/KeyJ.txt",
+      "output": "up/KeyJ.png",
+      "generationFile": "exec-2107c036-e7e4-452d-81fd-3d0adf9247d2.png"
+    },
+    {
+      "code": "KeyK",
+      "tool": "image_gen built-in",
+      "reference": "public/character/instrument-scenes-v1/guitar/KeyK.jpg",
+      "prompt": "prompts/KeyK.txt",
+      "output": "up/KeyK.png",
+      "generationFile": "exec-ce7e8dde-30de-4ec0-bbb6-2dc272150a40.png"
+    },
+    {
+      "code": "KeyT",
+      "tool": "image_gen built-in",
+      "reference": "public/character/instrument-scenes-v1/guitar/KeyT.jpg",
+      "prompt": "prompts/KeyT.txt",
+      "output": "up/KeyT.png",
+      "generationFile": "exec-01ed48a7-0959-4d4c-b9c3-0951bea23d4c.png"
+    },
+    {
+      "code": "KeyY",
+      "tool": "image_gen built-in",
+      "reference": "public/character/instrument-scenes-v1/guitar/KeyY.jpg",
+      "prompt": "prompts/KeyY.txt",
+      "output": "up/KeyY.png",
+      "generationFile": "exec-06a392ef-72e1-4c97-921e-4314f279a34a.png"
+    },
+    {
+      "code": "KeyU",
+      "tool": "image_gen built-in",
+      "reference": "public/character/instrument-scenes-v1/guitar/KeyU.jpg",
+      "prompt": "prompts/KeyU.txt",
+      "output": "up/KeyU.png",
+      "generationFile": "exec-f3a6ee8f-143b-446a-befb-51e931ed8abd.png"
+    },
+    {
+      "code": "Digit1",
+      "tool": "image_gen built-in",
+      "reference": "public/character/instrument-scenes-v1/guitar/Digit1.jpg",
+      "prompt": "prompts/Digit1.txt",
+      "output": "up/Digit1.png",
+      "generationFile": "exec-a86616e5-258e-4037-af06-588e295800f4.png"
+    },
+    {
+      "code": "Digit2",
+      "tool": "image_gen built-in",
+      "reference": "public/character/instrument-scenes-v1/guitar/Digit2.jpg",
+      "prompt": "prompts/Digit2.txt",
+      "output": "up/Digit2.png",
+      "generationFile": "exec-526335c5-61f9-4e9a-ab29-e76f1ddfc6a6.png"
+    },
+    {
+      "code": "Digit3",
+      "tool": "image_gen built-in",
+      "reference": "public/character/instrument-scenes-v1/guitar/Digit3.jpg",
+      "prompt": "prompts/Digit3.txt",
+      "output": "up/Digit3.png",
+      "generationFile": "exec-2f198a2a-7551-4f94-8ef6-5ecdeb65c441.png"
+    },
+    {
+      "code": "Digit4",
+      "tool": "image_gen built-in",
+      "reference": "public/character/instrument-scenes-v1/guitar/Digit4.jpg",
+      "prompt": "prompts/Digit4.txt",
+      "output": "up/Digit4.png",
+      "generationFile": "exec-396143b9-a17e-4518-bf27-98f08b2ae048.png"
+    }
+  ]
+}

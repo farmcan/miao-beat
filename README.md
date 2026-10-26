@@ -7,7 +7,9 @@ A small browser instrument playground. Follow a metronome, play your own music, 
 - Generate the next motion video on another computer: [one-document handoff](docs/video-animation-handoff.md), with committed reference images and copyable prompts.
 - Public products never link back to the owner’s personal website or research hub.
 
-2026-10-26 · 0.12.1: one confirmed input creates one guitar action. Removed the multi-note path that made a single K look like repeated playing. Release holds the final fret; long unreviewed changes land directly on the target plus one short recoil. See [current release and limits](docs/guitar-single-action-fix-2026-10-26.md).
+2026-10-26 · 0.13.0: each confirmed guitar note or chord retriggers a visible right-paw contact and lift, even when the same note repeats. Seventeen complete-scene raised-paw images pair with the original contact images, keeping the left fret pose stable within each stroke. See [current release, asset sources and limitations](docs/guitar-pluck-release-2026-10-26.md).
+
+2026-10-26 · 0.12.1: one confirmed input creates one guitar action. Removed the multi-note path that made a single K look like repeated playing. Release holds the final fret; long unreviewed changes land directly on the target plus one short recoil. See [0.12.1 historical release and limits](docs/guitar-single-action-fix-2026-10-26.md).
 
 2026-10-26 · 0.12.0: guitar uses offline RIFE whole-scene intermediate frames for interruptible strumming/fret changes and return. Short taps finish the latest stroke; new notes take over immediately. A “平滑动作” toggle compares the old discrete swaps. Open `?instrument=guitar` for the pilot. Every selected tile is a complete cat, both paws and guitar; no separated limb composition. Audio and recording timing remain independent. See [0.12 historical verification, superseded by the single-action correction](docs/guitar-motion-release-2026-10-26.md). Naturalness awaits user review; exact fingering is not taught.
 
