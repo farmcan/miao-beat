@@ -1,6 +1,6 @@
 {
   "name": "miao-beat",
-  "version": "0.13.3-five-key-miles",
+  "version": "0.14.0-miles-full-lyrics",
   "private": true,
   "type": "module",
   "description": "A small browser instrument playground, with a metronome and a cat.",

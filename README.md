@@ -7,6 +7,8 @@ A small browser instrument playground. Follow a metronome, play your own music, 
 - Generate the next motion video on another computer: [one-document handoff](docs/video-animation-handoff.md), with committed reference images and copyable prompts.
 - Public products never link back to the owner’s personal website or research hub.
 
+2026-10-26 · 0.14.0: Five Hundred Miles now follows all four verses and the complete ending supplied by the user: 26 lyric lines, 235 notes, and phrase highlighting during demo/guidance. See [full arrangement and lyric synchronization](docs/miles-full-lyrics-release-2026-10-26.md).
+
 2026-10-26 · 0.13.3: Five Hundred Miles now has a five-white-key main-melody arrangement, transposed to F with a two-beat pickup and one complete 16-bar cycle. See [arrangement and validation](docs/five-key-miles-release-2026-10-26.md).
 
 2026-10-26 · 0.13.2: Painter now includes all four melodic phrases (48 notes, 16 bars in 2/4), with the final silent beat preserved in the score, demo and guidance. See [release and validation](docs/painter-full-release-2026-10-26.md).

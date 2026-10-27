@@ -22,7 +22,7 @@ touchInstructions?.addEventListener?.('change',()=>{
   const text=(audio.isReady($('instrumentSelect').value)?'':'先打开声音。')+playHint();if(status.textContent!==text)status.textContent=text;
 });
 
-let cueCodes=[],guideIndex=-2,guideBeat=-1;
+let cueCodes=[],guideIndex=-2,guideBeat=-1,lyricIndex=-1;
 const reducedMotion=window.matchMedia?.('(prefers-reduced-motion: reduce)');
 audio.onProgress=()=>{if(!loading)return;const p=audio.getLoadProgress($('instrumentSelect').value);status.dataset.loaded=String(p.loaded);status.dataset.total=String(p.total);status.textContent=`声音加载中（${p.loaded} / ${p.total}）`;};
 mountPerformance(document);
@@ -143,6 +143,8 @@ async function prepareSession(preset,engine='sample-v1'){
 function clearGuidance(){
   for(const code of cueCodes){buttons.get(code)?.classList.remove('due','upcoming');}cueCodes=[];
   for(const n of document.querySelectorAll('.score-note.playing'))n.classList.remove('playing');
+  lyricIndex=-1;$('lyricPanel').hidden=true;$('lyricCurrent').textContent='';$('lyricNext').textContent='';$('lyricPosition').textContent='';delete $('lyricPanel').dataset.line;
+  for(const line of document.querySelectorAll('.score-lyric[aria-current]'))line.removeAttribute('aria-current');
   guideIndex=-2;guideBeat=-1;delete $('guidePanel').dataset.cue;$('guidePanel').hidden=true;$('guideTrack').replaceChildren();
   $('guideProgress').setAttribute('aria-valuenow','0');$('guideProgressFill').style.width='0%';$('guideAnnounce').textContent='';
 }
@@ -179,7 +181,7 @@ function selectedSong(){return SONGS.find(s=>$('songSelect').value===s.id)||SONG
 function renderScore(){
   stopSession();const song=selectedSong();$('songInfo').textContent=`${song.key} · ${song.meter}/4 拍 · 建议 ${song.bpm} BPM。${song.description}`;$('scoreRows').replaceChildren();let index=0;
   $('scoreSourceRow').hidden=!song.sourceLabel;if(song.sourceLabel){$('scoreSource').href=song.sourceUrl;$('scoreSource').textContent=song.sourceLabel;}
-  for(const phrase of song.phrases){const row=document.createElement('div');row.className='score-phrase';for(const event of phrase){const keys=scoreKeys(event),n=document.createElement('div');n.className='score-note';n.dataset.scoreIndex=String(index++);n.innerHTML=`<span>${event.rest?'0':keys.map(k=>k.label).join('+')}</span><kbd>${event.rest?'休止':keys.map(k=>k.key).join('+')}</kbd><small>${event.beats} 拍</small>`;row.append(n);}$('scoreRows').append(row);}
+  for(const [lineIndex,phrase]of song.phrases.entries()){const row=document.createElement('div');row.className='score-phrase';for(const event of phrase){const keys=scoreKeys(event),n=document.createElement('div');n.className='score-note';n.dataset.scoreIndex=String(index++);n.innerHTML=`<span>${event.rest?'0':keys.map(k=>k.label).join('+')}</span><kbd>${event.rest?'休止':keys.map(k=>k.key).join('+')}</kbd><small>${event.beats} 拍</small>`;row.append(n);}if(song.lyrics){const line=document.createElement('p'),block=document.createElement('section');line.className='score-lyric';line.dataset.lyricIndex=String(lineIndex);line.textContent=song.lyrics[lineIndex];block.className='score-line';block.append(line,row);$('scoreRows').append(block);}else $('scoreRows').append(row);}
   $('practiceHint').textContent=`${song.name} · ${song.key} · ${song.meter}/4 · 建议 ${song.bpm} BPM。点“听一遍”先听。`;
   $('scoreStatus').textContent='字母是键位；数字按 C 音起排列，上点表示高音。按键时间由竖线提示，长条表示到下一音的间隔。';
 }
@@ -188,7 +190,16 @@ function mountGuidance(guide){
   for(const event of guide.events){const n=document.createElement('div');n.className='guide-note';n.style.left=event.offset*guide.bpm/60*72+'px';n.style.width=Math.max(20,event.beats*72-5)+'px';n.innerHTML=`<kbd>${event.rest?'休止':event.keys.map(k=>k.key).join('+')}</kbd><small>${event.rest?restHint(event):event.keys.map(k=>k.label).join('+')}</small>`;$('guideTrack').append(n);}
   const totalBeats=Math.ceil(session.duration*guide.bpm/60);
   for(let beat=0;beat<=totalBeats;beat++){const line=document.createElement('i');line.className='guide-tick'+((beat+guide.phaseBeats)%guide.meter===0?' bar-tick':'');line.style.left=beat*72+'px';$('guideTrack').append(line);}
+  if(guide.lyrics)renderLyrics(guide,0,true);
   $('guideAnnounce').textContent=`${guide.songName}，预备 ${guide.countInBeats} 拍。${session.kind==='guide'?'只放节拍，旋律你来弹。':'即将播放示范。'}`;
+}
+function renderLyrics(guide,index,countIn=false){
+  if(!guide.lyrics||index===lyricIndex)return;
+  lyricIndex=index;$('lyricPanel').hidden=false;$('lyricPanel').dataset.line=String(index);
+  $('lyricPosition').textContent=`歌词 · ${index+1} / ${guide.lyrics.length}${countIn?' · 预备':''}`;
+  $('lyricCurrent').textContent=guide.lyrics[index];$('lyricNext').textContent=guide.lyrics[index+1]||'';
+  for(const line of document.querySelectorAll('.score-lyric[aria-current]'))line.removeAttribute('aria-current');
+  document.querySelector(`[data-lyric-index="${index}"]`)?.setAttribute('aria-current','true');
 }
 function renderGuidance(now){
   const {guide}=session,elapsed=now-session.start,p=guidePosition(guide.events,elapsed,session.duration,guide.bpm,guide.meter,guide.phaseBeats);
@@ -199,6 +210,7 @@ function renderGuidance(now){
   if(p.index!==guideIndex||p.beat!==guideBeat){
     guideIndex=p.index;guideBeat=p.beat;
     const current=p.index>=0?guide.events[p.index]:null,next=p.next>=0?guide.events[p.next]:null;
+    if(current&&guide.lyrics){if($('lyricPosition').textContent.endsWith(' · 预备'))lyricIndex=-1;renderLyrics(guide,current.lyricIndex);}
     $('guideNow').textContent=current?.rest?`休止 · ${restHint(current)}`:current?`现在 ${current.keys.map(k=>k.key).join(' + ')} · ${current.keys.map(k=>k.kind==='note'?k.sub:k.label).join('+')}`:'听预备拍';
     $('guideNext').textContent=next?.rest?`接着${restHint(next)}`:next?`下一音 ${next.keys.map(k=>k.key).join(' + ')}`:current?.rest?'弹完啦': '最后一音';
     for(const n of document.querySelectorAll('.score-note.playing'))n.classList.remove('playing');
@@ -220,8 +232,8 @@ async function startScore(kind){
   const events=guideEvents.flatMap(e=>e.keys.map(k=>({...e,code:k.code}))),last=guideEvents.at(-1),duration=last.offset+last.beats*60/bpm;
   $('scoreStatus').textContent=kind==='guide'?`跟弹 ${bpm} BPM。只放节拍，旋律你来弹。`:`示范 ${bpm} BPM。点琴键就能接着弹。`;
   $('practiceHint').textContent=$('scoreStatus').textContent;
-  playEvents(events,duration,kind,$('instrumentSelect').value,'sample-v1',{events:guideEvents,bpm,meter:song.meter,phaseBeats:song.pickupBeats?song.meter-song.pickupBeats:0,countInBeats:song.pickupBeats?song.meter-song.pickupBeats:song.meter,songName:song.name});
-  if(kind==='guide')requestAnimationFrame(()=>$('guidePanel').scrollIntoView?.({block:'nearest',behavior:reducedMotion?.matches?'auto':'smooth'}));
+  playEvents(events,duration,kind,$('instrumentSelect').value,'sample-v1',{events:guideEvents,bpm,meter:song.meter,phaseBeats:song.pickupBeats?song.meter-song.pickupBeats:0,countInBeats:song.pickupBeats?song.meter-song.pickupBeats:song.meter,songName:song.name,lyrics:song.lyrics});
+  if(kind==='guide'||song.lyrics)requestAnimationFrame(()=>$('guidePanel').scrollIntoView?.({block:'nearest',behavior:reducedMotion?.matches?'auto':'smooth'}));
 }
 $('listenSong').addEventListener('click',()=>startScore('score'));
 $('guideSong').addEventListener('click',()=>startScore('guide'));

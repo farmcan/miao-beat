@@ -301,27 +301,44 @@ test('Painter rest clears key cues, 2/4 guide never records automatic melody',as
  assert.deepEqual(recording.validateRecording(saved),saved);
 });
 
-test('five-key Miles demo plays one complete round, never repeats a tied note and leaves a silent ending',async t=>{
+test('full Miles demo plays all 235 notes, follows all lyrics and ends without recording automatic input',async t=>{
  const h=setup(t),{$,audio,w}=h;
  $('songSelect').value='five-hundred-miles';$('songSelect').dispatchEvent(new w.Event('change'));
- assert.equal(w.document.querySelectorAll('.score-phrase').length,4);
- assert.equal(w.document.querySelectorAll('.score-note').length,52);
+ assert.equal(w.document.querySelectorAll('.score-phrase').length,26);assert.equal(w.document.querySelectorAll('.score-note').length,236);
+ assert.equal(w.document.querySelectorAll('.score-lyric').length,26);assert.equal($('lyricPanel').hidden,true);
  $('bpm').value='120';$('listenSong').click();await settle();
- h.frame(.5);assert.match($('guideTime').textContent,/预备/);
- for(let i=13;i<=862;i++){audio.context.currentTime=i*.04;h.tick();h.frame(audio.context.currentTime);}
- assert.equal(audio.plays.length,51);assert.equal(audio.plays[0].code,'KeyF');
- assert.equal(audio.plays.at(-1).code,'KeyH');assert.ok(Math.abs(audio.plays.at(-1).time-30.1)<1e-8);
- assert.equal($('scoreStatus').textContent,'听完了，换你试试。');
- assert.equal($('recordingInfo').textContent,'0:00 · 0 次按键');
+ h.frame(.5);assert.match($('guideTime').textContent,/预备/);assert.match($('lyricPosition').textContent,/预备/);
+ const visited=new Set();
+ for(let i=13;i<=3660;i++){audio.context.currentTime=i*.04;h.tick();h.frame(audio.context.currentTime);if(!$('lyricPanel').hidden)visited.add(Number($('lyricPanel').dataset.line));}
+ assert.equal(audio.plays.length,235);assert.equal(audio.plays[0].code,'KeyF');
+ assert.equal(audio.plays.at(-1).code,'KeyH');assert.ok(Math.abs(audio.plays.at(-1).time-142.1)<1e-8);
+ assert.equal(visited.size,26);assert.equal($('scoreStatus').textContent,'听完了，换你试试。');
+ assert.equal($('recordingInfo').textContent,'0:00 · 0 次按键');assert.equal($('lyricPanel').hidden,true);
+ assert.equal(w.document.querySelectorAll('.score-lyric[aria-current]').length,0);
 });
 
-test('Miles guidance uses actual multi-beat rest and clears the final key cue',async t=>{
- const h=setup(t),{$,w}=h;
+test('Miles lyric cues jump from audio time, stop on cancel, and remain absent from other songs',async t=>{
+ const h=setup(t),{$,w,audio}=h;
  $('songSelect').value='five-hundred-miles';$('songSelect').dispatchEvent(new w.Event('change'));
  $('bpm').value='120';$('guideSong').click();await settle();
- h.frame(31);assert.equal($('guidePanel').dataset.index,'50');
- assert.equal($('guideNext').textContent,'接着空 2.5 拍');
- h.frame(33);assert.equal($('guidePanel').dataset.index,'51');
- assert.equal($('guideNow').textContent,'休止 · 空 2.5 拍');
+ h.frame(1.2);assert.equal($('lyricPanel').dataset.line,'0');assert.doesNotMatch($('lyricPosition').textContent,/预备/);
+ h.frame(33);assert.equal($('lyricPanel').dataset.line,'6');assert.equal($('lyricCurrent').textContent,"Lord, I'm one, Lord, I'm two");
+ assert.equal(w.document.querySelectorAll('.score-lyric[aria-current="true"]').length,1);
+ assert.equal(audio.plays.length,0,'guided lyrics must not generate melody notes');
+ h.frame(144.9);assert.equal($('lyricPanel').dataset.line,'25');assert.equal($('guideNow').textContent,'休止 · 空 2.5 拍');
  assert.equal(w.document.querySelectorAll('.due,.upcoming').length,0);
+ $('stopSong').click();assert.equal($('lyricPanel').hidden,true);assert.equal($('lyricCurrent').textContent,'');
+ $('songSelect').value='twinkle';$('songSelect').dispatchEvent(new w.Event('change'));
+ assert.equal(w.document.querySelectorAll('.score-lyric').length,0);$('guideSong').click();await settle();
+ assert.equal($('lyricPanel').hidden,true);
+});
+
+ test('Miles lyrics persist under real playing while guide recording contains only the player',async t=>{
+ const h=setup(t),{$,w,audio,key}=h;
+ $('songSelect').value='five-hundred-miles';$('songSelect').dispatchEvent(new w.Event('change'));
+ $('bpm').value='120';$('guideSong').click();await settle();h.frame(5.2);
+ $('recordToggle').click();await settle();audio.context.currentTime=5.3;key('keydown','KeyF');await settle();key('keyup','KeyF');
+ assert.equal($('lyricPanel').hidden,false);audio.context.currentTime=5.4;$('recordToggle').click();$('exportRecording').click();
+ const saved=JSON.parse(await h.blob().text());assert.deepEqual(saved.events,[[100,3]]);assert.equal(audio.plays.length,1);
+ w.dispatchEvent(new w.Event('blur'));assert.equal($('lyricPanel').hidden,true);
 });

@@ -1,3 +1,4 @@
+import {readFile} from 'node:fs/promises';
 import test from 'node:test';import assert from 'node:assert/strict';
 import {KEYS,MELODY,DRUMS,CHORDS,LEGACY_KEYS} from '../public/bindings.js';
 import {SONGS,scoreEvents} from '../public/scores.js';
@@ -86,12 +87,18 @@ test('2/4 recordings roundtrip while legacy format acceptance stays unchanged',(
  for(const meter of [0,1,5])assert.throws(()=>validateRecording({...song,meter}));
 });
 
-test('Five Hundred Miles fits five white keys and keeps pickup, repeat phrases and tied ending',()=>{
+test('full Miles keeps all user lyrics, four verses, three closing lines and five white keys',async()=>{
  const song=SONGS.find(song=>song.id==='five-hundred-miles'),events=scoreEvents(song,120),notes=events.filter(e=>!e.rest);
+ const supplied=await readFile(new URL('./fixtures/500-miles-user-lyrics.txt',import.meta.url),'utf8');
+ assert.equal(song.lyrics.join('').replace(/\s/g,''),supplied.replace(/\s/g,''),'only whitespace may change');
+ assert.equal(song.phrases.length,26);assert.equal(song.lyrics.length,26);
+ assert.equal(song.lyrics[17],"Lord, I can't go back home this this ole way");
+ assert.deepEqual(song.lyrics.slice(-3),Array(3).fill('You can hear the whistle blow a hundred miles'));
  assert.deepEqual([...new Set(notes.map(e=>e.note))].sort(),['A4','C4','D4','F4','G4']);
- assert.equal(notes.length,51);assert.equal(song.pickupBeats,2);assert.equal(song.totalBeats,66);
- assert.deepEqual(song.phrases.map(row=>row.reduce((sum,e)=>sum+e.beats,0)),[18,16,16,16]);
- assert.deepEqual(song.phrases[0].slice(2),song.phrases[2]);
+ assert.equal(notes.length,235);assert.equal(song.pickupBeats,2);assert.equal(song.totalBeats,290);assert.equal(song.durationSeconds,217.5);
+ for(const line of [6,12,18]){const afterPickup=events.filter(e=>e.lyricIndex===line)[3];assert.equal((afterPickup.offset*2+2)%4,0,'new verse body stays on the bar accent');}
  assert.equal(notes.at(-1).note,'A4');assert.equal(notes.at(-1).beats,5.5);
- assert.deepEqual(events.at(-1),{rest:true,beats:2.5,index:51,offset:31.75});
+ assert.deepEqual(events.at(-1),{rest:true,beats:2.5,lyricIndex:25,index:235,offset:143.75});
+ for(let line=0;line<26;line++)assert.ok(events.some(e=>e.lyricIndex===line));
+ assert.ok(SONGS.filter(s=>s.id!=='five-hundred-miles').every(s=>!s.lyrics));
 });
