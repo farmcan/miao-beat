@@ -18,8 +18,9 @@ export function validateGuitarPluckManifest(data){
 // A confirmed sound starts one right-paw cycle at the selected, fixed fret.
 // No change of target/held state can silently replace that cycle with a fret tour.
 export function createGuitarMotion(config,now=()=>performance.now()){
-  let code='KeyA',active=false,paintedAt=null,serial=0;
+  let code='KeyA',active=false,paintedAt=null,serial=0,contactHold=0;
   return{
+    setContactHold(ms){if(!Number.isFinite(ms)||ms<0||ms>40)throw Error('Invalid capture contact hold');contactHold=ms;},
     strike(next){if(!config.clips[next])return false;code=next;active=true;paintedAt=null;serial++;return true;},
     contactPainted(id){if(active&&id===serial&&paintedAt===null)paintedAt=now();},
     reset(next){code=config.clips[next]?next:'KeyA';active=false;paintedAt=null;},
@@ -27,7 +28,7 @@ export function createGuitarMotion(config,now=()=>performance.now()){
       if(!active)return{pose:'up',code,serial:0,phase:'ready',needsFrame:false};
       // Asset decode and the first RAF must never spend an unseen attack.
       if(paintedAt===null)return{pose:'down',code,serial,phase:'contact',needsFrame:true};
-      const elapsed=Math.max(0,now()-paintedAt),amount=Math.max(0,1-elapsed/64);
+      const elapsed=Math.max(0,now()-paintedAt-contactHold),amount=Math.max(0,1-elapsed/64);
       const frame=Math.round(amount*8),phase=frame===8?'contact':elapsed>=64?'ready':'return';
       const p={code,serial,phase,needsFrame:elapsed<64};
       return frame===0?{...p,pose:'up'}:frame===8?{...p,pose:'down'}:{...p,cell:frame-1};

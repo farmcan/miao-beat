@@ -7,6 +7,8 @@ import {pathToFileURL} from 'node:url';
 import * as bindings from '../public/bindings.js';
 import * as scores from '../public/scores.js';
 import * as recording from '../public/recording.js';
+import {createMediaExport,mediaSupported} from '../public/media-export.js';
+import {beatPattern} from '../public/clock.js';
 import {guidePosition} from '../public/guidance.js';
 
 let domModule;
@@ -20,7 +22,7 @@ const html=await readFile(new URL('../public/index.html',import.meta.url),'utf8'
 const app=(await readFile(new URL('../public/app.js',import.meta.url),'utf8')).replace(/^import .*;\n/gm,'');
 const settle=async()=>{for(let i=0;i<8;i++)await Promise.resolve();};
 
-function setup(t) {
+function setup(t,overrides={}) {
   let audio,clock,exportedBlob;
   class FakeAudio {
     constructor(){audio=this;this.context={currentTime:0,state:'running'};this.plays=[];this.stops=0;this.peak=0;}
@@ -36,6 +38,7 @@ function setup(t) {
     constructor(){clock=this;this.running=false;}
     start(bpm,meter,origin){Object.assign(this,{running:true,bpm,meter,origin});}
     stop(){this.running=false;}
+    setSound(sound,accent){Object.assign(this,{sound,accent});}
     render(){}
   }
   const dom=new JSDOM(html,{runScripts:'outside-only',pretendToBeVisual:true,url:'https://miao-beat.pages.dev/'});
@@ -44,11 +47,12 @@ function setup(t) {
   w.setInterval=fn=>{const id=next++;intervals.set(id,fn);return id;};
   w.clearInterval=id=>intervals.delete(id);
   w.Blob=Blob;
+  w.HTMLMediaElement.prototype.pause=function(){};
   w.URL.createObjectURL=blob=>{exportedBlob=blob;return 'blob:local-test';};
   w.URL.revokeObjectURL=()=>{};
   w.HTMLAnchorElement.prototype.click=function(){};
-  w.__deps={...bindings,...scores,...recording,guidePosition,SampledAudio:FakeAudio,mountPerformance(){},mountKeyboardNavigation(){},loadSiteCounter(){},mountCharacter:()=>({ready:Promise.resolve(),strike(){}}),BeatClock:FakeClock};
-  w.eval('const {KEYS,MELODY,DRUMS,CHORDS,LEGACY_KEYS,SampledAudio,mountCharacter,mountPerformance,mountKeyboardNavigation,loadSiteCounter,BeatClock,SONGS,scoreEvents,guidePosition,CODES,MAX_MS,MAX_EVENTS,makeRecording,validateRecording}=window.__deps;\n'+app);
+  w.__deps={...bindings,...scores,...recording,guidePosition,beatPattern,createMediaExport,mediaSupported,SampledAudio:FakeAudio,mountPerformance(){},mountKeyboardNavigation(){},loadSiteCounter(){},mountCharacter:()=>({ready:Promise.resolve(),strike(){}}),BeatClock:FakeClock,...overrides};
+  w.eval('const {KEYS,MELODY,DRUMS,CHORDS,LEGACY_KEYS,SampledAudio,mountCharacter,mountPerformance,mountKeyboardNavigation,loadSiteCounter,BeatClock,SONGS,scoreEvents,guidePosition,beatPattern,createMediaExport,mediaSupported,CODES,MAX_MS,MAX_EVENTS,makeRecording,validateRecording}=window.__deps;\n'+app);
   const $=id=>w.document.getElementById(id);
   const key=(type,code,target=w.document,options={})=>target.dispatchEvent(new w.KeyboardEvent(type,{code,bubbles:true,cancelable:true,...options}));
   const frame=time=>{audio.context.currentTime=time;const queued=[...frames.values()];frames.clear();for(const fn of queued)fn();};
@@ -341,4 +345,46 @@ test('Miles lyric cues jump from audio time, stop on cancel, and remain absent f
  assert.equal($('lyricPanel').hidden,false);audio.context.currentTime=5.4;$('recordToggle').click();$('exportRecording').click();
  const saved=JSON.parse(await h.blob().text());assert.deepEqual(saved.events,[[100,3]]);assert.equal(audio.plays.length,1);
  w.dispatchEvent(new w.Event('blur'));assert.equal($('lyricPanel').hidden,true);
+});
+
+test('metronome sound and first/last accent update the actual clock and visible pattern',async t=>{
+ const h=setup(t),{$,w,clock}=h;
+ assert.equal($('metronomePattern').textContent,'当 · 当 · 当 · 叮');
+ $('metronomeToggle').click();await settle();
+ $('metronomeSound').value='wood';$('metronomeAccent').value='first';$('metronomeSound').dispatchEvent(new w.Event('change'));
+ assert.equal(clock.sound,'wood');assert.equal(clock.accent,'first');assert.equal(clock.running,true);
+ assert.equal($('metronomePattern').textContent,'嗒 · 咚 · 咚 · 咚');
+ $('meterSelect').value='3';$('meterSelect').dispatchEvent(new w.Event('change'));
+ assert.equal($('metronomePattern').textContent,'嗒 · 咚 · 咚');
+});
+
+test('audio export replays notes once, keeps the tail and publishes an audio file without altering the event file',async t=>{
+ let job;const h=setup(t,{mediaSupported:()=>true,createMediaExport:async()=>{let resolve,reject;const done=new Promise((r,j)=>{resolve=r;reject=j;});done.catch(()=>{});job={kind:'audio',done,stop(){resolve({blob:new Blob(['media'],{type:'audio/webm'}),mimeType:'audio/webm',extension:'webm'});},cancel(){reject(Error('cancelled'));}};return job;}}),{$,audio,key}=h;
+ $('recordToggle').click();await settle();key('keydown','KeyF');await settle();key('keyup','KeyF');audio.context.currentTime=.2;$('recordToggle').click();
+ $('exportAudio').click();await settle();assert.equal($('exportVideo').disabled,true);assert.equal(audio.plays.length,2);
+ key('keydown','KeyG');await settle();assert.equal(audio.plays.length,2,'live notes cannot leak into capture');
+ h.frame(.6);h.tick();assert.equal($('downloadAudio').hidden,true,'do not truncate the last one-shot');
+ h.frame(1.9);await settle();assert.equal($('downloadAudio').hidden,false);assert.match($('downloadAudio').download,/\.webm$/);
+ assert.equal($('mediaAudio').hidden,false);assert.equal($('cancelMediaExport').hidden,true);
+ $('exportRecording').click();const eventFile=JSON.parse(await h.blob().text());assert.deepEqual(eventFile.events,[[0,3]]);
+});
+
+test('cancelling pending media startup cannot stop a later recording or publish its stale file',async t=>{
+ let release;const pending=new Promise(r=>{release=r;});let rejected;const done=new Promise((r,j)=>{rejected=j;});done.catch(()=>{});
+ const h=setup(t,{mediaSupported:()=>true,createMediaExport:()=>pending}),{$,audio,key}=h;
+ $('recordToggle').click();await settle();key('keydown','KeyA');await settle();key('keyup','KeyA');audio.context.currentTime=.2;$('recordToggle').click();
+ $('exportAudio').click();await settle();$('cancelMediaExport').click();
+ $('recordToggle').click();await settle();key('keydown','KeyS');await settle();key('keyup','KeyS');
+ release({kind:'audio',done,stop(){},cancel(){rejected(Error('cancelled'));}});await settle();
+ assert.equal($('recordToggle').getAttribute('aria-pressed'),'true');assert.equal($('downloadAudio').hidden,true);
+ audio.context.currentTime=.4;$('recordToggle').click();$('exportRecording').click();assert.equal(JSON.parse(await h.blob().text()).events.length,1);
+});
+
+test('current-score export includes the full score without inventing a saved user recording',async t=>{
+ let job;const h=setup(t,{mediaSupported:()=>true,createMediaExport:async()=>{let resolve,reject;const done=new Promise((r,j)=>{resolve=r;reject=j;});done.catch(()=>{});job={kind:'audio',done,stop(){resolve({blob:new Blob(['media']),mimeType:'audio/mp4',extension:'m4a'});},cancel(){reject(Error('cancelled'));}};return job;}}),{$,audio,w}=h;
+ $('instrumentSelect').value='drums';$('instrumentSelect').dispatchEvent(new w.Event('change'));
+ $('exportSource').value='score';$('exportSource').dispatchEvent(new w.Event('change'));assert.equal($('exportAudio').disabled,false);
+ $('bpm').value='120';$('exportAudio').click();await settle();
+ for(let i=0;i<=140;i++){audio.context.currentTime=i*.04;h.tick();h.frame(audio.context.currentTime);}
+ await settle();assert.equal(audio.plays.length,4);assert.equal($('downloadAudio').hidden,false);assert.equal($('playRecording').disabled,true);assert.equal($('exportRecording').disabled,true);
 });

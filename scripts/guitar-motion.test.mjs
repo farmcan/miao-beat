@@ -42,3 +42,12 @@ test('late pluck frames cannot paint over a newly selected drum instrument',asyn
 test('cold preparation leaves original poses usable and never replays an old pre-load input',async t=>{
  const h=await harness(t,{cold:true});assert.equal(h.scene.dataset.guitarMotion,'loading');const chord={code:'Digit4',kind:'chord'};h.c.update('guitar',[chord]);h.c.strike(chord);await h.frame(1);assert.equal(h.scene.dataset.wholeFrame,'guitar:Digit4');h.release();await h.prepared();assert.equal(h.scene.dataset.guitarStrikeCount,'0');assert.equal(h.scene.dataset.guitarLiftCount,'0','preparation/reset cannot manufacture a recovered stroke');const key={code:'KeyS',kind:'note'};h.c.update('guitar',[key]);h.c.strike(key);for(let time=17;time<210;time+=16)await h.frame(time);assert.equal(h.scene.dataset.guitarContactCount,'1');assert.equal(h.scene.dataset.wholeFrame,'guitar-up:KeyS');
 });
+
+test('capture mode holds actual source contact across a video frame and restores normal recovery',()=>{
+ let now=0;const config={clips:{KeyA:{}}},motion=createGuitarMotion(config,()=>now);
+ motion.setContactHold(24);motion.strike('KeyA');motion.contactPainted(1);
+ now=17;assert.equal(motion.sample().pose,'down');now=50;assert.equal(motion.sample().phase,'return');
+ now=90;assert.equal(motion.sample().pose,'up');
+ motion.setContactHold(0);motion.strike('KeyA');motion.contactPainted(2);now=110;assert.equal(motion.sample().phase,'return');
+ assert.throws(()=>motion.setContactHold(200));
+});

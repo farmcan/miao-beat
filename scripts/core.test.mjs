@@ -102,3 +102,13 @@ test('full Miles keeps all user lyrics, four verses, three closing lines and fiv
  for(let line=0;line<26;line++)assert.ok(events.some(e=>e.lyricIndex===line));
  assert.ok(SONGS.filter(s=>s.id!=='five-hundred-miles').every(s=>!s.lyrics));
 });
+
+test('three metronome timbres have different synthesis and the last beat can be distinctly accented',()=>{
+ const oscillators=[];const param=()=>({setValueAtTime(){},exponentialRampToValueAtTime(){},cancelScheduledValues(){}});
+ const context={currentTime:0,createGain(){return {gain:param(),connect(){},disconnect(){}};},createOscillator(){const o={frequency:{value:0},connect(){},disconnect(){},start(){},stop(){}};oscillators.push(o);return o;}};
+ const clock=new BeatClock({context,master:{}},()=>{}),tones=[];
+ for(const sound of ['bell','wood','electronic']){clock.setSound(sound,'last');const at=oscillators.length;clock.click(0,false);tones.push(oscillators[at].frequency.value);clock.stop();}
+ assert.equal(new Set(tones).size,3);
+ clock.setSound('bell','last');clock.start(120,4);for(let i=1;i<=3;i++){context.currentTime=i*.5;clock.schedule();}
+ assert.deepEqual(clock.history.map(e=>e.accent),[false,false,false,true]);clock.stop();
+});

@@ -10,7 +10,7 @@ const vendor=(await fs.readFile(path.join(root,'node_modules/smplr/dist/index.mj
 await fs.writeFile(path.join(root,'public/vendor/smplr.mjs'),vendor);
 await fs.copyFile(path.join(root,'scripts/smplr-LICENSE.txt'),path.join(root,'public/vendor/smplr-LICENSE.txt'));
 const allowed=['index.html','style.css','icon.svg','support-alipay-qr.jpg','app.js','audio.js','sampled-audio.js','bindings.js','clock.js','recording.js','scores.js','UPSTREAM-LICENSE.txt','_headers','vendor/smplr.mjs','vendor/smplr-LICENSE.txt','samples/manifest.json','samples/LICENSES.txt','samples/CC0-1.0.txt','character.js','performance.js','guidance.js','character/plush-atlas-v1.png','character/indie-atlas-v2.png','character/orange-components-v3.png','character/orange-instruments-v3.png','character/rig.css','character/manifest.json','character/README.md','labs/orange-guitar/index.html','labs/orange-guitar/pilot.js','labs/orange-guitar/style.css','labs/orange-guitar/atlas-v1.png','whole-character.js','keyboard-navigation.js','character/whole.css','character/keyboard-poses-v1.jpg','character/keyboard-motion-v1.json','character/keyboard-demo-v1.mp4','labs/keyboard-motion/index.html','labs/keyboard-motion/style.css'];
-allowed.push('site-counter.js','_worker.js','_routes.json','character/guitar-whole-still-v1.jpg','character/drums-whole-still-v1.jpg');
+allowed.push('media-export.js','site-counter.js','_worker.js','_routes.json','character/guitar-whole-still-v1.jpg','character/drums-whole-still-v1.jpg');
 const wholeFrames=JSON.parse(await fs.readFile(path.join(root,'public/character/whole-piano-v3/manifest.json')));
 const {validateFrameManifest,validateInstrumentManifest}=await import('../public/full-frame-character.js');validateFrameManifest(wholeFrames);
 allowed.push('full-frame-character.js','character/whole-piano-v3/manifest.json',...Object.values(wholeFrames.frames).map(name=>'character/whole-piano-v3/'+name));
@@ -46,5 +46,5 @@ const files={};for(const name of allowed){
  await fs.mkdir(path.dirname(path.join(root,'dist',name)),{recursive:true});await fs.writeFile(path.join(root,'dist',name),content);files[name]=createHash('sha256').update(content).digest('hex');
 }
 let commit='local';try{commit=execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8',stdio:['ignore','pipe','ignore']}).trim();}catch{}
-await fs.writeFile(path.join(root,'dist/release.json'),JSON.stringify({project:'miao-beat',version:'0.14.0-miles-full-lyrics',commit,files},null,2)+'\n');
+await fs.writeFile(path.join(root,'dist/release.json'),JSON.stringify({project:'miao-beat',version:'0.15.0-media-metronome',commit,files},null,2)+'\n');
 console.log('Built '+allowed.length+' explicit public files; whole-scene piano, guitar and drum poses, four sampled sounds and a visit counter.');
