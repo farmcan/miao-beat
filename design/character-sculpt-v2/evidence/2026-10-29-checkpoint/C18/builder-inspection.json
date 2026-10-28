@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-29",
+  "role": "builder observation; not independent craft approval",
+  "inspected_images": [
+    "D-refraction-only-whole.png",
+    "D-refraction-only-head.png",
+    "../character-eye-optics-c17/A-original-whole.png",
+    "../character-eye-optics-c17/A-original-head.png",
+    "../character-eye-optics-c17/B-ior-one-head.png",
+    "../character-eye-optics-c17/C-cornea-hidden-head.png"
+  ],
+  "observations": {
+    "whole": "Head/gaze, full cat, guitar and other known paw/material problems remain; without physical specular spots the eyes read flatter.",
+    "head": "The objectionable horizontal dark/cloudy layer visible in A is no longer visible in D; the bright corneal catchlights are absent. D still has a smooth dark central pupil and blue radial ring.",
+    "comparison_to_B_C": "Qualitatively similar flattened eye, though D retains non-unit IOR and a nominal refracting shell, so it is not identical to simply hiding the shell."
+  },
+  "supported_inference": "The removed reflected/Fresnel portion of the original combined glass closure contributes to the objectionable layering in these static views. A geometrically refracting nominal-IOR-1.38 shell alone does not recreate the visible band in this D setting.",
+  "unresolved": [
+    "Reflection versus Fresnel transmission-weight coupling is not mathematically separated.",
+    "No unique scene object/light/environment reflection source was localized.",
+    "Single-GGX refraction replaces multi-GGX glass; energy and stochastic sampling differ.",
+    "No moving gaze, eyelid coverage, blink, new camera or production/Web performance has been tested."
+  ],
+  "acceptance": "Not a delivery fix: flat dark eyes lack the required wet lively appearance. No independent C gate passed.",
+  "next_scope_candidate": "A separately scoped wet-eye art candidate must decouple stable readable iris coloration from restrained optical reflection, preserving the sideward gaze and recovering a real catchlight without the broad band. Do not silently promote D, hide corneas in production, or paint catchlight pixels."
+}

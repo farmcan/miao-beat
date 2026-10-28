@@ -1,0 +1,76 @@
+{
+  "status": "C14C-frozen-head-color-diagnostic-not-approved",
+  "native_sha256": "9948a6eaa4c0001c6f511e86d4b98fcd0fc15a0928f8399c7e8a1f73f198a3a9",
+  "files": [
+    {
+      "path": "artifacts/character-head-c14-color/README.md",
+      "bytes": 5422,
+      "sha256": "9aff2eafa714bcd498993db8b4d59522d019aa38a9dfc824f2b8d97a446ab3d1"
+    },
+    {
+      "path": "artifacts/character-head-c14-color/builder-view.json",
+      "bytes": 930,
+      "sha256": "16404ebd39e266e6f822d4982ce466bf6237eddd55b0e9bbb44f4fdaef1f7e07"
+    },
+    {
+      "path": "artifacts/character-head-c14-color/color-front.png",
+      "bytes": 1263095,
+      "sha256": "d44876bff3b2c173eada6f6549de1069cb179189913e460b544f7c70c51a0ed3"
+    },
+    {
+      "path": "artifacts/character-head-c14-color/color-head-front.png",
+      "bytes": 1220868,
+      "sha256": "da0893d57ce52cac5fb340ba863c63f1f8f7bb68c3edea5673b2f8db2f939ed4"
+    },
+    {
+      "path": "artifacts/character-head-c14-color/color-head-three-quarter.png",
+      "bytes": 1268301,
+      "sha256": "53c38dc6359b6695d176a288ac0e02c0457df172160564bda81c5a17f576d268"
+    },
+    {
+      "path": "artifacts/character-head-c14-color/color-three-quarter.png",
+      "bytes": 1257428,
+      "sha256": "042bf9b3eff4066ae1d24c57ea3c49888ff31db80369d385b30c666632f7bdb0"
+    },
+    {
+      "path": "artifacts/character-head-c14-color/control-c8-head-front.png",
+      "bytes": 1221480,
+      "sha256": "60490668b10bc3f5c9ce75c944b812ef75f81bbfb0025010598eb9b5f33672d9"
+    },
+    {
+      "path": "artifacts/character-head-c14-color/control-receipt.json",
+      "bytes": 1168,
+      "sha256": "ff442edd5bbe64d6564c3086863ca57a3248b3674670c08956296065e4104856"
+    },
+    {
+      "path": "artifacts/character-head-c14-color/control.log",
+      "bytes": 1283,
+      "sha256": "a114ae907fc0a47579c80fb7a2d3d58da87997665202b50303a92ff7f274da4f"
+    },
+    {
+      "path": "artifacts/character-head-c14-color/executed-binding-helpers.py",
+      "bytes": 2945,
+      "sha256": "0f4c69af9c402129004fb2736b784c698c5b7608b9297653b31e9c2746a173cf"
+    },
+    {
+      "path": "artifacts/character-head-c14-color/executed-color-check.py",
+      "bytes": 10967,
+      "sha256": "c30747e6cdcae53f1cc6501228a922731aeedce384fc822fca702b082c5c9b09"
+    },
+    {
+      "path": "artifacts/character-head-c14-color/executed-optical-control.py",
+      "bytes": 1530,
+      "sha256": "654a657a7dd4a83062951f00636200b3fd3c2aaa32f6950421d4420ead41badb"
+    },
+    {
+      "path": "artifacts/character-head-c14-color/miao-c14c-head-color.blend",
+      "bytes": 79471968,
+      "sha256": "9948a6eaa4c0001c6f511e86d4b98fcd0fc15a0928f8399c7e8a1f73f198a3a9"
+    },
+    {
+      "path": "artifacts/character-head-c14-color/receipt.json",
+      "bytes": 8511,
+      "sha256": "e9a4e3bef7effce3cb18fbc0e463b3e5e8d955815687450e6116c466a77aaf76"
+    }
+  ]
+}

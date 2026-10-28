@@ -1,0 +1,339 @@
+{
+  "stage": "C14C-head-only-static-material-diagnostic",
+  "status": "rendered-awaiting-builder-view-and-three-independent-C-reviews",
+  "input": "artifacts/character-head-c14/miao-c14-compact-head.blend",
+  "input_sha256": "6a61727939d1e9375d4e912685277cfb63bc4ca3427744c3c799461e824aab10",
+  "source_sha256": "c30747e6cdcae53f1cc6501228a922731aeedce384fc822fca702b082c5c9b09",
+  "helper_source_sha256": "4f096be8a6bf97cfe945f65d106ff7413b7f72e24d75bb3c54cdf0cd40a70726",
+  "helper_functions": [
+    "digest",
+    "native_uv_validity",
+    "positions",
+    "rest_hash",
+    "stats",
+    "world"
+  ],
+  "blender": "5.2.3 LTS",
+  "renders": [
+    {
+      "name": "color-front",
+      "seconds": 27.900192975997925,
+      "sha256": "d44876bff3b2c173eada6f6549de1069cb179189913e460b544f7c70c51a0ed3",
+      "camera_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.09881033003330231
+        ],
+        [
+          0.0,
+          0.08139567822217941,
+          -0.9966818690299988,
+          -12.008593559265137
+        ],
+        [
+          0.0,
+          0.9966818690299988,
+          0.08139567822217941,
+          2.5947763919830322
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "lens": 50.0,
+      "type": "ORTHO",
+      "ortho_scale": 4.2002763748168945
+    },
+    {
+      "name": "color-three-quarter",
+      "seconds": 29.14678120613098,
+      "sha256": "042bf9b3eff4066ae1d24c57ea3c49888ff31db80369d385b30c666632f7bdb0",
+      "camera_matrix": [
+        [
+          0.8362634181976318,
+          -0.11416733264923096,
+          0.5363108515739441,
+          6.0
+        ],
+        [
+          0.5483279228210449,
+          0.17411832511425018,
+          -0.8179360032081604,
+          -9.0
+        ],
+        [
+          2.7329075891202592e-08,
+          0.978084146976471,
+          0.20820991694927216,
+          3.9000000953674316
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "lens": 50.0,
+      "type": "ORTHO",
+      "ortho_scale": 4.2002763748168945
+    },
+    {
+      "name": "color-head-front",
+      "seconds": 21.49729895591736,
+      "sha256": "da0893d57ce52cac5fb340ba863c63f1f8f7bb68c3edea5673b2f8db2f939ed4",
+      "camera_matrix": [
+        [
+          0.9998942613601685,
+          -0.0002907904563471675,
+          0.01454101037234068,
+          0.11999999731779099
+        ],
+        [
+          0.014543917030096054,
+          0.019991841167211533,
+          -0.9996943473815918,
+          -5.5
+        ],
+        [
+          2.178257574314557e-11,
+          0.9998000860214233,
+          0.01999395526945591,
+          3.0799999237060547
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "lens": 90.0,
+      "type": "PERSP",
+      "ortho_scale": 4.2002763748168945
+    },
+    {
+      "name": "color-head-three-quarter",
+      "seconds": 21.705318927764893,
+      "sha256": "53c38dc6359b6695d176a288ac0e02c0457df172160564bda81c5a17f576d268",
+      "camera_matrix": [
+        [
+          0.8061135411262512,
+          -0.013006562367081642,
+          0.5916179418563843,
+          3.25
+        ],
+        [
+          0.5917609333992004,
+          0.017717914655804634,
+          -0.80591881275177,
+          -4.400000095367432
+        ],
+        [
+          -3.525761016476281e-09,
+          0.9997584223747253,
+          0.021979425102472305,
+          3.0799999237060547
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "lens": 90.0,
+      "type": "PERSP",
+      "ortho_scale": 4.2002763748168945
+    }
+  ],
+  "original_c8_sha256": "2432d199edeae964631cb79d96b1d06a5ba2fb908143532fc5bb0a86f600f33e",
+  "binding": {
+    "curves": 180000,
+    "points": 720000,
+    "surface": "Miao / continuous pear and rounded-square face",
+    "surface_uv_map": "BindUV",
+    "rest_hashes": {
+      "body_raw": "df537eb22bf8d075158c5d0870258cfcec07e4663d60210aafd604986ac6bf4a",
+      "body_eval": "df537eb22bf8d075158c5d0870258cfcec07e4663d60210aafd604986ac6bf4a",
+      "hair_raw": "7446e079f4e27239ba9c195f1db388a0e2f515a3a2c8269e80eb79693337b419",
+      "hair_eval": "7446e079f4e27239ba9c195f1db388a0e2f515a3a2c8269e80eb79693337b419"
+    },
+    "C8_custom_rest_and_binding_uv_unchanged": true,
+    "body_and_hair_raw_positions_unchanged_from_C8": true,
+    "hair_modifiers": [
+      {
+        "name": "D0 / official surface attachment",
+        "type": "NODES",
+        "node_types": [
+          "NodeGroupInput",
+          "NodeGroupOutput",
+          "GeometryNodeDeformCurvesOnSurface"
+        ]
+      }
+    ],
+    "official_all_root_uv_validity": {
+      "count": 180000,
+      "valid": 180000,
+      "invalid": []
+    },
+    "all_root_to_current_uv_surface": {
+      "count": 180000,
+      "finite": true,
+      "max": 8.226177365746587e-05,
+      "mean": 4.71531573465612e-07,
+      "p50": 2.980232238769531e-07,
+      "p95": 9.762250992154597e-07,
+      "p99": 3.255990660247483e-06
+    },
+    "all_root_to_current_nearest_surface": {
+      "count": 180000,
+      "finite": true,
+      "max": 7.43565017086684e-05,
+      "mean": 4.960187394593576e-08,
+      "p50": 3.725290298461914e-09,
+      "p95": 1.7881393432617188e-07,
+      "p99": 2.7314279645418166e-07
+    },
+    "head_root_count": 26928,
+    "head_root_to_UV_surface": {
+      "count": 26928,
+      "finite": true,
+      "max": 4.796951633707215e-05,
+      "mean": 7.330632230512953e-07,
+      "p50": 3.6010283153040923e-07,
+      "p95": 1.2056785597946355e-06,
+      "p99": 1.1917029523045173e-05
+    },
+    "head_root_to_nearest_surface": {
+      "count": 26928,
+      "finite": true,
+      "max": 3.249606750103689e-05,
+      "mean": 6.937098314041084e-08,
+      "p50": 2.9802322387695312e-08,
+      "p95": 2.4755668231600746e-07,
+      "p99": 4.85203866814522e-07
+    }
+  },
+  "materials_unchanged": [
+    {
+      "object": "Miao / continuous pear and rounded-square face",
+      "materials": [
+        "Miao / warm short plush",
+        "Clay / body",
+        "Miao / ear velvet"
+      ]
+    },
+    {
+      "object": "Face / thick curved brow",
+      "materials": [
+        "Face / ink blue"
+      ]
+    },
+    {
+      "object": "Face / thick curved brow.001",
+      "materials": [
+        "Face / ink blue"
+      ]
+    },
+    {
+      "object": "Face / smile stem",
+      "materials": [
+        "Face / ink blue"
+      ]
+    },
+    {
+      "object": "Face / smile",
+      "materials": [
+        "Face / ink blue"
+      ]
+    },
+    {
+      "object": "Miao / native short plush",
+      "materials": [
+        "Miao / warm short plush"
+      ]
+    },
+    {
+      "object": "C6 / sclera L",
+      "materials": [
+        "C6 / warm sclera"
+      ]
+    },
+    {
+      "object": "C6 / iris L",
+      "materials": [
+        "C6 / attached navy iris"
+      ]
+    },
+    {
+      "object": "C6 / upper lid L",
+      "materials": [
+        "Miao / warm short plush"
+      ]
+    },
+    {
+      "object": "C6 / lower lid L",
+      "materials": [
+        "Miao / warm short plush"
+      ]
+    },
+    {
+      "object": "C6 / sclera R",
+      "materials": [
+        "C6 / warm sclera"
+      ]
+    },
+    {
+      "object": "C6 / iris R",
+      "materials": [
+        "C6 / attached navy iris"
+      ]
+    },
+    {
+      "object": "C6 / upper lid R",
+      "materials": [
+        "Miao / warm short plush"
+      ]
+    },
+    {
+      "object": "C6 / lower lid R",
+      "materials": [
+        "Miao / warm short plush"
+      ]
+    },
+    {
+      "object": "C7 / clear cornea L",
+      "materials": [
+        "C7 / clear thin cornea"
+      ]
+    },
+    {
+      "object": "C7 / clear cornea R",
+      "materials": [
+        "C7 / clear thin cornea"
+      ]
+    },
+    {
+      "object": "Face / rounded triangular nose",
+      "materials": [
+        "Face / ink blue"
+      ]
+    }
+  ],
+  "source_native_unchanged": true,
+  "geometry_and_original_camera_lights_unchanged": true,
+  "native_output_sha256": "9948a6eaa4c0001c6f511e86d4b98fcd0fc15a0928f8399c7e8a1f73f198a3a9",
+  "limits": [
+    "Head-only static C diagnostic; no full character approval.",
+    "B-known ear grooves and barrel side remain P1; whole-character paw P0 remain.",
+    "No geometry/material/light edit; original optical stack and eyecards tested as-is.",
+    "All-root static attachment does not prove motion, eyelid closure, retopo or another mesh.",
+    "No animation/Godot/web/Cloudflare/API/commit/push."
+  ]
+}

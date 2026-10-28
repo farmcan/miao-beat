@@ -1,0 +1,461 @@
+{
+  "stage": "C16-local-volume-gray-candidate-unreviewed",
+  "input_sha256": "2432d199edeae964631cb79d96b1d06a5ba2fb908143532fc5bb0a86f600f33e",
+  "input_C8_unchanged": true,
+  "C11_builder_source_sha256": "f177180b4c03388d1c03d6d1597508cd2f8d58a4b8ae84e227754cf91f7a0c88",
+  "C11_builder_source_unchanged": true,
+  "script_sha256": "e024f08e7e6ad3ad8c2a4b25783b4d9c96466069308ac6cebb29cc2d5ee0a3cd",
+  "blender": "5.2.3 LTS",
+  "voxel": 0.006,
+  "halfwidth_voxels": 12,
+  "dense_ROI": {
+    "lo": [
+      0.8,
+      -1.44,
+      1.35
+    ],
+    "hi": [
+      1.64,
+      -0.7,
+      2.32
+    ],
+    "ijk": [
+      133,
+      -240,
+      225
+    ],
+    "shape": [
+      142,
+      125,
+      163
+    ],
+    "one_float32_array_bytes": 11573000,
+    "conservative_peak_18_arrays_bytes": 208314000,
+    "limit_bytes": 1000000000,
+    "full_body_dense_array_used": false
+  },
+  "cut_old_wrist": {
+    "type": "distal-only actual C8 mesh field subtraction",
+    "x_range": [
+      0.86,
+      1.56
+    ],
+    "z_range": [
+      1.4,
+      2.3
+    ],
+    "front_of_y": -0.83,
+    "actual_distal_surface_samples": 2103,
+    "outside_clipped_body_fraction": 1.0,
+    "minimum_clipped_field": 0.010000808238983163,
+    "max_clipping_field_change_on_source_skin_behind_minus_80": 0.0
+  },
+  "bridge": {
+    "type": "R2 bounded lower-palm shape replacement between full actual C8 3D SDF and closed C11 palm 3D SDF; no third additive wrist volume",
+    "source_forearm_section_y": -0.798,
+    "source_palm_section_y": -1.062,
+    "replacement_y_range": [
+      -1.13,
+      -0.78
+    ],
+    "palm_root_z_cap": 1.9,
+    "no_guessed_fixed_X_or_radius": true,
+    "third_volume_union_used_in_R2": false,
+    "root_weight_z_full_below": 1.9,
+    "root_weight_zero_above": 2.02,
+    "original_C8_full_field_behind_minus78": true,
+    "globally_exact_SDF_after_morph": false,
+    "not_Laplacian": true
+  },
+  "raw_isosurface_topology": {
+    "vertices": 928998,
+    "faces": 928996,
+    "components": 2,
+    "component_vertices": [
+      928990,
+      8
+    ],
+    "boundary_edges": 0,
+    "non_manifold_edges": 0,
+    "signed_volume": 6.623545875311637,
+    "quads": 928996,
+    "triangles": 0
+  },
+  "local_fragment_cleanup": [
+    {
+      "vertices": 928990,
+      "deleted": false,
+      "main": true
+    },
+    {
+      "vertices": 8,
+      "faces": 6,
+      "bounds_min": [
+        1.0799566507339478,
+        -1.1100226640701294,
+        2.03397536277771
+      ],
+      "bounds_max": [
+        1.0801150798797607,
+        -1.1099497079849243,
+        2.034055471420288
+      ],
+      "signed_volume": 9.25925352016077e-13,
+      "entirely_within_wrist_ROI": true,
+      "aabb_volume_upper_bound": 9.25925352016077e-13,
+      "deleted": true
+    }
+  ],
+  "full_body": {
+    "vertices": 928990,
+    "faces": 928990,
+    "components": 1,
+    "component_vertices": [
+      928990
+    ],
+    "boundary_edges": 0,
+    "non_manifold_edges": 0,
+    "signed_volume": 6.62354587531071,
+    "quads": 928990,
+    "triangles": 0
+  },
+  "non_wrist_resample_residuals": {
+    "front_head_region_definition": {
+      "abs_x_max": 0.8,
+      "z_min": 2.25,
+      "y_max_actual_front_20pct_quantile": -0.329013979434967
+    },
+    "non_wrist": {
+      "sample_count": 6041,
+      "method": "actual reference vertices to new evaluated BVH nearest distance; measurement only, not sculpt fallback",
+      "mean": 7.999685549161216e-05,
+      "p95": 0.0002147190534742549,
+      "max": 0.008917241357266903,
+      "voxel": 0.006
+    },
+    "front_head_eye_surround": {
+      "sample_count": 7037,
+      "method": "actual reference vertices to new evaluated BVH nearest distance; measurement only, not sculpt fallback",
+      "mean": 2.3163882030395524e-05,
+      "p95": 5.423937909654341e-05,
+      "max": 0.002646450884640217,
+      "voxel": 0.006
+    },
+    "preserved_C8_forearm": {
+      "sample_count": 7233,
+      "method": "actual reference vertices to new evaluated BVH nearest distance; measurement only, not sculpt fallback",
+      "mean": 0.00010645663889732732,
+      "p95": 0.0004085208522155881,
+      "max": 0.0042718942277133465,
+      "voxel": 0.006
+    }
+  },
+  "wrist_patch_audit": {
+    "object": "C16 diagnostic / wrist audit patch",
+    "verts": 40959,
+    "edges": 81775,
+    "faces": 40815,
+    "tris_equivalent": 81630,
+    "tris": 0,
+    "quads": 40815,
+    "ngons": 0,
+    "quads_pct": 100.0,
+    "valence_hist_interior": {
+      "3": 11655,
+      "4": 19153,
+      "5": 8065,
+      "6": 1795,
+      "7": 1
+    },
+    "poles_e3": 11655,
+    "poles_e5plus": 9861,
+    "valence_6plus": 1796,
+    "non_manifold_edges": 0,
+    "boundary_loops": [
+      290
+    ],
+    "loose_verts": 0,
+    "loose_edges": 0,
+    "zero_area_faces": 0,
+    "duplicate_verts": 2,
+    "flipped_faces": 0,
+    "self_intersections": 0,
+    "edge_len_mean": 0.004972,
+    "edge_len_cv": 0.228,
+    "symmetry_pct": 0.0,
+    "dimensions": [
+      0.4921,
+      0.6023,
+      0.693
+    ],
+    "ngon_faces_sample": [],
+    "pole_e5_sample": [
+      [
+        1.1131,
+        -0.8253,
+        1.5349
+      ],
+      [
+        1.1192,
+        -0.8187,
+        1.5311
+      ],
+      [
+        1.1305,
+        -0.8316,
+        1.5346
+      ],
+      [
+        1.1313,
+        -0.8245,
+        1.5313
+      ],
+      [
+        1.1313,
+        -0.8193,
+        1.5292
+      ],
+      [
+        1.1066,
+        -0.7769,
+        1.535
+      ],
+      [
+        1.1195,
+        -0.7774,
+        1.5309
+      ],
+      [
+        1.1305,
+        -0.7765,
+        1.5293
+      ],
+      [
+        1.1305,
+        -0.7709,
+        1.5304
+      ],
+      [
+        1.1374,
+        -0.7709,
+        1.5296
+      ],
+      [
+        1.1905,
+        -0.8244,
+        1.5313
+      ],
+      [
+        1.1905,
+        -0.8192,
+        1.5292
+      ],
+      [
+        1.1965,
+        -0.8312,
+        1.5351
+      ],
+      [
+        1.1551,
+        -0.8125,
+        1.5248
+      ],
+      [
+        1.1553,
+        -0.8011,
+        1.5243
+      ],
+      [
+        1.1609,
+        -0.8011,
+        1.5238
+      ],
+      [
+        1.1609,
+        -0.7949,
+        1.5242
+      ],
+      [
+        1.1669,
+        -0.7949,
+        1.5237
+      ],
+      [
+        1.1669,
+        -0.7892,
+        1.5243
+      ],
+      [
+        1.1735,
+        -0.8126,
+        1.5248
+      ],
+      [
+        1.1735,
+        -0.8076,
+        1.5236
+      ],
+      [
+        1.1904,
+        -0.8064,
+        1.5249
+      ],
+      [
+        1.1905,
+        -0.7894,
+        1.5244
+      ],
+      [
+        1.2029,
+        -0.8187,
+        1.5311
+      ],
+      [
+        1.209,
+        -0.8253,
+        1.5349
+      ]
+    ],
+    "pole_e3_sample": [
+      [
+        1.1035,
+        -0.8223,
+        1.5359
+      ],
+      [
+        1.1036,
+        -0.7789,
+        1.5358
+      ],
+      [
+        1.1151,
+        -0.8284,
+        1.5358
+      ],
+      [
+        1.1213,
+        -0.8164,
+        1.5299
+      ],
+      [
+        1.1321,
+        -0.8345,
+        1.5357
+      ],
+      [
+        1.1336,
+        -0.8221,
+        1.5299
+      ],
+      [
+        1.1296,
+        -0.8214,
+        1.5302
+      ],
+      [
+        1.1218,
+        -0.7797,
+        1.5299
+      ],
+      [
+        1.1282,
+        -0.7741,
+        1.53
+      ],
+      [
+        1.1322,
+        -0.7729,
+        1.5298
+      ],
+      [
+        1.1357,
+        -0.7689,
+        1.5302
+      ],
+      [
+        1.1882,
+        -0.8221,
+        1.53
+      ],
+      [
+        1.1922,
+        -0.8213,
+        1.5303
+      ],
+      [
+        1.1941,
+        -0.834,
+        1.536
+      ],
+      [
+        1.1571,
+        -0.8102,
+        1.5239
+      ],
+      [
+        1.1575,
+        -0.8032,
+        1.524
+      ],
+      [
+        1.1588,
+        -0.7992,
+        1.5241
+      ],
+      [
+        1.1628,
+        -0.7968,
+        1.5239
+      ],
+      [
+        1.1648,
+        -0.7928,
+        1.5241
+      ],
+      [
+        1.1688,
+        -0.7913,
+        1.5239
+      ],
+      [
+        1.1718,
+        -0.8103,
+        1.5239
+      ],
+      [
+        1.1758,
+        -0.8099,
+        1.524
+      ],
+      [
+        1.188,
+        -0.804,
+        1.524
+      ],
+      [
+        1.1882,
+        -0.7917,
+        1.524
+      ],
+      [
+        1.2008,
+        -0.8164,
+        1.5298
+      ]
+    ]
+  },
+  "old_bindings_valid": false,
+  "limits": [
+    "Volume/voxel topology is not animation-ready retopology.",
+    "Entire body iso-surface was resampled; non-wrist/head residuals are measured, UV/groom/shape keys invalidated.",
+    "Contributor colors are authoring diagnostics on one connected model, not separate production arms.",
+    "Static character, contact and three nonbuilder reviews pending; no animation/engine/browser/deployment."
+  ],
+  "seconds": 93.80993604660034,
+  "contact_status": "Read-only actual Bezier/backface audit complete, not a contact pass",
+  "replacement_contact_audit": "contact-audit.json",
+  "builder_gate": "FAILED visual wrist/palm continuity and unverified hold; not production art",
+  "frozen": true,
+  "independent_reviews": "Pending parent nonbuilder assignment",
+  "input_source_kind": "original C8r2-color evaluated hold=1 body; no C11/13/15 body/collar carried forward"
+}

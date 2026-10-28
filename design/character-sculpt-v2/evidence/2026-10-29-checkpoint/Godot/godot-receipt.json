@@ -1,0 +1,28 @@
+{
+	"camera": {
+		"name": "Camera _ reference front",
+		"projection": 1,
+		"size": 4.20027637481689
+	},
+	"device": "Apple M1 Pro",
+	"draw_calls": 75.0,
+	"godot": "4.7.2-stable (official)",
+	"limits": [
+		"No native groom or authoring lights; linear COLOR_0 explicitly enabled; transparent cornea alpha approximation, not native transmission. No material/identity/quality or animation acceptance.",
+		"Desktop Compatibility only; browser/phone/audio/export not tested.",
+		"No FPS benchmark under concurrent Blender work."
+	],
+	"linear_color_0_compat_shader": true,
+	"load_and_45_frames_ms": 1955,
+	"materials_using_vertex_color": 23,
+	"meshes": 74,
+	"png_size": [
+		1024,
+		1024
+	],
+	"render_primitives": 1696884.0,
+	"renderer": "gl_compatibility",
+	"save_error": 0,
+	"scope": "Unaccepted C8 whole-scene native migration diagnostic only",
+	"shadow_diagnostic_disabled": true
+}

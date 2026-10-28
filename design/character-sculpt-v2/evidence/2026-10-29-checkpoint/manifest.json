@@ -1,0 +1,215 @@
+{
+  "scope": "Frozen evidence only; C14C eye P0, C16 paw P0, Godot migration losses. Not an accepted asset or motion delivery.",
+  "files": [
+    {
+      "stage": "C14C",
+      "source": "artifacts/character-head-c14-color/README.md",
+      "checkpoint": "C14C/README.md",
+      "bytes": 5422,
+      "sha256": "9aff2eafa714bcd498993db8b4d59522d019aa38a9dfc824f2b8d97a446ab3d1"
+    },
+    {
+      "stage": "C14C",
+      "source": "artifacts/character-head-c14-color/receipt.json",
+      "checkpoint": "C14C/receipt.json",
+      "bytes": 8511,
+      "sha256": "e9a4e3bef7effce3cb18fbc0e463b3e5e8d955815687450e6116c466a77aaf76"
+    },
+    {
+      "stage": "C14C",
+      "source": "artifacts/character-head-c14-color/handoff-manifest.json",
+      "checkpoint": "C14C/handoff-manifest.json",
+      "bytes": 2851,
+      "sha256": "e4f85f885bc6444944898b28b533effeea1acdf0ea279cee974e5ba507b62ed1"
+    },
+    {
+      "stage": "C14C",
+      "source": "artifacts/character-head-c14-color/color-front.png",
+      "checkpoint": "C14C/color-front.png",
+      "bytes": 1263095,
+      "sha256": "d44876bff3b2c173eada6f6549de1069cb179189913e460b544f7c70c51a0ed3"
+    },
+    {
+      "stage": "C14C",
+      "source": "artifacts/character-head-c14-color/color-head-front.png",
+      "checkpoint": "C14C/color-head-front.png",
+      "bytes": 1220868,
+      "sha256": "da0893d57ce52cac5fb340ba863c63f1f8f7bb68c3edea5673b2f8db2f939ed4"
+    },
+    {
+      "stage": "C14C",
+      "source": "artifacts/character-head-c14-color/color-head-three-quarter.png",
+      "checkpoint": "C14C/color-head-three-quarter.png",
+      "bytes": 1268301,
+      "sha256": "53c38dc6359b6695d176a288ac0e02c0457df172160564bda81c5a17f576d268"
+    },
+    {
+      "stage": "C14C",
+      "source": "artifacts/character-head-c14-color/control-c8-head-front.png",
+      "checkpoint": "C14C/control-c8-head-front.png",
+      "bytes": 1221480,
+      "sha256": "60490668b10bc3f5c9ce75c944b812ef75f81bbfb0025010598eb9b5f33672d9"
+    },
+    {
+      "stage": "C16",
+      "source": "artifacts/character-paw-c16/README.md",
+      "checkpoint": "C16/README.md",
+      "bytes": 8002,
+      "sha256": "d65d6a4a7c93d2bed5cbc86c281d22764c0e0f39b1e22e787fe02e69a1de5ff7"
+    },
+    {
+      "stage": "C16",
+      "source": "artifacts/character-paw-c16/handoff-manifest.json",
+      "checkpoint": "C16/handoff-manifest.json",
+      "bytes": 4246,
+      "sha256": "58136b85f2cc60b544deeb04324d05c0a4b5f788f5366596679784f5cc7c213a"
+    },
+    {
+      "stage": "C16",
+      "source": "artifacts/character-paw-c16/r2/gray-front.png",
+      "checkpoint": "C16/r2/gray-front.png",
+      "bytes": 1093018,
+      "sha256": "269f79888095ef0d8af95c64b3c8f0b1da3502ad20ea566b3b59d3367ce5564c"
+    },
+    {
+      "stage": "C16",
+      "source": "artifacts/character-paw-c16/r2/gray-three-quarter.png",
+      "checkpoint": "C16/r2/gray-three-quarter.png",
+      "bytes": 1083368,
+      "sha256": "800d75e5ef70023aff60b8704c877b66c0684eb4595933ed1ae71071b83c0102"
+    },
+    {
+      "stage": "C16",
+      "source": "artifacts/character-paw-c16/r2/gray-grip-inside.png",
+      "checkpoint": "C16/r2/gray-grip-inside.png",
+      "bytes": 686390,
+      "sha256": "6203f1dcbdd9dd5fdd2ce398648e477835c5f7de64981076056b321411f39873"
+    },
+    {
+      "stage": "C16",
+      "source": "artifacts/character-paw-c16/r2/diagnostic-volume-source-inside.png",
+      "checkpoint": "C16/r2/diagnostic-volume-source-inside.png",
+      "bytes": 701971,
+      "sha256": "892c3cd81d4c46235b0cc77d42750fceaae8e078ffec4c8c5c23ef1c1555e87d"
+    },
+    {
+      "stage": "C16",
+      "source": "artifacts/character-paw-c16/r2/receipt.json",
+      "checkpoint": "C16/r2/receipt.json",
+      "bytes": 9195,
+      "sha256": "f99d6446b5e2ac555b4b12fe439579a3272fc61ccc84d93054cd0c5ceb056021"
+    },
+    {
+      "stage": "C16",
+      "source": "artifacts/character-paw-c16/r2/contact-audit.json",
+      "checkpoint": "C16/r2/contact-audit.json",
+      "bytes": 52323,
+      "sha256": "84c31a2b1c69ff280e110cb6ce178628d8532e0b0f9cba6adfaf3b42f0ba248c"
+    },
+    {
+      "stage": "C16",
+      "source": "artifacts/character-paw-c16/r2/segment-audit.json",
+      "checkpoint": "C16/r2/segment-audit.json",
+      "bytes": 4436,
+      "sha256": "51937c6f58e36b93dda86a0ca8e91c1d5e105dece70f07fa7ead56c1e3bd3757"
+    },
+    {
+      "stage": "Godot",
+      "source": "artifacts/godot-cat-static/godot-static.png",
+      "checkpoint": "Godot/godot-static.png",
+      "bytes": 338643,
+      "sha256": "40f0a3f5c8a7455bf669592d696da95874227c4e734f90cc0ed1d276d944e0a2"
+    },
+    {
+      "stage": "Godot",
+      "source": "artifacts/godot-cat-static/godot-receipt.json",
+      "checkpoint": "Godot/godot-receipt.json",
+      "bytes": 876,
+      "sha256": "2fde841048c29b7a6da6401375ac71856afe8f0bbe0b2480a3721f56241ab651"
+    },
+    {
+      "stage": "Godot",
+      "source": "artifacts/godot-cat-static/export-receipt.json",
+      "checkpoint": "Godot/export-receipt.json",
+      "bytes": 10778,
+      "sha256": "41793530a8facbaa5f8e5793eb7918be5fe33d5d3d9c315cb45ea36d163881b1"
+    },
+    {
+      "stage": "C17",
+      "source": "artifacts/character-eye-optics-c17/README.md",
+      "checkpoint": "C17/README.md",
+      "bytes": 3810,
+      "sha256": "d53be1af6925641a84c120e49899f897c202b2982aca0e8e04a3868598349536"
+    },
+    {
+      "stage": "C17",
+      "source": "artifacts/character-eye-optics-c17/receipt.json",
+      "checkpoint": "C17/receipt.json",
+      "bytes": 7487,
+      "sha256": "143a45687b7b9e721ed336adc00b008e005e38b7120f1bde21e2c90d3c2d2f1b"
+    },
+    {
+      "stage": "C17",
+      "source": "artifacts/character-eye-optics-c17/builder-inspection.json",
+      "checkpoint": "C17/builder-inspection.json",
+      "bytes": 1927,
+      "sha256": "2c7964b29e1e8d254062f42a9c3f01a3d3f03ec0fa7ebfc426e720652d8a0e8e"
+    },
+    {
+      "stage": "C17",
+      "source": "artifacts/character-eye-optics-c17/A-original-head.png",
+      "checkpoint": "C17/A-original-head.png",
+      "bytes": 1220278,
+      "sha256": "075714e2d82fda2f1d441b4c5f597127ca85aff4f9dbb129f0ceca2c9cae7105"
+    },
+    {
+      "stage": "C17",
+      "source": "artifacts/character-eye-optics-c17/B-ior-one-head.png",
+      "checkpoint": "C17/B-ior-one-head.png",
+      "bytes": 1218927,
+      "sha256": "8f19569a26cad5609d8ad840a5e0dd8fb0c5563b4a94b452ed6411359b5ab91e"
+    },
+    {
+      "stage": "C17",
+      "source": "artifacts/character-eye-optics-c17/C-cornea-hidden-head.png",
+      "checkpoint": "C17/C-cornea-hidden-head.png",
+      "bytes": 1219087,
+      "sha256": "a6cd93f24672f6336a4ffc3ba0a688df071f55b414c14dae9a254662a5ad1d6a"
+    },
+    {
+      "stage": "C16",
+      "source": "artifacts/character-paw-c16/shared-cage-axis-measurements.json",
+      "checkpoint": "C16/shared-cage-axis-measurements.json",
+      "bytes": 1005,
+      "sha256": "1ab0f5ca734a97c05a64e6aba78ef89a768a008c182bae69ae60cae1b4930255"
+    },
+    {
+      "stage": "C18",
+      "source": "artifacts/character-eye-optics-c18-reflection/README.md",
+      "checkpoint": "C18/README.md",
+      "bytes": 4746,
+      "sha256": "9d92351fa1eb0199be8223e62a2a524ab0b0b00742cd3e57eb474168518dedb8"
+    },
+    {
+      "stage": "C18",
+      "source": "artifacts/character-eye-optics-c18-reflection/receipt.json",
+      "checkpoint": "C18/receipt.json",
+      "bytes": 5490,
+      "sha256": "691bad92668379e0727fd22f60240aceb23da59ef179b8994c24b2c9b09b24ca"
+    },
+    {
+      "stage": "C18",
+      "source": "artifacts/character-eye-optics-c18-reflection/builder-inspection.json",
+      "checkpoint": "C18/builder-inspection.json",
+      "bytes": 2092,
+      "sha256": "b8d60809bda528578a4738bde5b34a1f16252499c7692dc1995b74f7306660e7"
+    },
+    {
+      "stage": "C18",
+      "source": "artifacts/character-eye-optics-c18-reflection/D-refraction-only-head.png",
+      "checkpoint": "C18/D-refraction-only-head.png",
+      "bytes": 1219530,
+      "sha256": "53d317b4454bd5c242cfdd467e5fcf6665428e2c4f5c7ce29e7656d16785703d"
+    }
+  ]
+}

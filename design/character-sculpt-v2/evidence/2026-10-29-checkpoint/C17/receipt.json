@@ -1,0 +1,260 @@
+{
+  "stage": "C17-single-variable-eye-layer-diagnosis",
+  "input": "artifacts/character-head-c14-color/miao-c14c-head-color.blend",
+  "input_sha256": "9948a6eaa4c0001c6f511e86d4b98fcd0fc15a0928f8399c7e8a1f73f198a3a9",
+  "reference_sha256": "4418fd737891283f42568306cb427b1f7604a86cae5513b1d6c49b3c31f338d1",
+  "source_sha256": "89e9c22f3a075408d0bed149e2d5aa09a0a1f00b048586a27a2ee87c455d2952",
+  "blender": "5.2.3 LTS",
+  "cases": [
+    {
+      "case": "A-original",
+      "cornea_ior": 1.3799999952316284,
+      "cornea_hide_render": false,
+      "geometry_sha256": "44f577d3af38c63e11e60f27d64e4eab1849eae483cccce8916fc87c4ef1ba3e",
+      "only_expected_material_change": true,
+      "lights_unchanged": true,
+      "renders": [
+        {
+          "view": "whole",
+          "filename": "A-original-whole.png",
+          "sha256": "6d8bb95de38c1b3ffcb15493bb2e9c11b054defaf37bad015ce9d88ba825f3d6",
+          "seconds": 29.020330905914307,
+          "camera_matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.09881033003330231
+            ],
+            [
+              0.0,
+              0.08139567822217941,
+              -0.9966818690299988,
+              -12.008593559265137
+            ],
+            [
+              0.0,
+              0.9966818690299988,
+              0.08139567822217941,
+              2.5947763919830322
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "camera_type": "ORTHO",
+          "lens": 50.0,
+          "ortho_scale": 4.2002763748168945
+        },
+        {
+          "view": "head",
+          "filename": "A-original-head.png",
+          "sha256": "075714e2d82fda2f1d441b4c5f597127ca85aff4f9dbb129f0ceca2c9cae7105",
+          "seconds": 22.182830810546875,
+          "camera_matrix": [
+            [
+              0.9998942613601685,
+              -0.0002907882153522223,
+              0.014541011303663254,
+              0.11999999731779099
+            ],
+            [
+              0.014543917961418629,
+              0.01999160274863243,
+              -0.9996943473815918,
+              -5.5
+            ],
+            [
+              1.2345471311903111e-09,
+              0.9998000860214233,
+              0.019993716850876808,
+              3.0799999237060547
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "camera_type": "PERSP",
+          "lens": 90.0,
+          "ortho_scale": 4.2002763748168945
+        }
+      ]
+    },
+    {
+      "case": "B-ior-one",
+      "cornea_ior": 1.0,
+      "cornea_hide_render": false,
+      "geometry_sha256": "44f577d3af38c63e11e60f27d64e4eab1849eae483cccce8916fc87c4ef1ba3e",
+      "only_expected_material_change": true,
+      "lights_unchanged": true,
+      "renders": [
+        {
+          "view": "whole",
+          "filename": "B-ior-one-whole.png",
+          "sha256": "4473211bed5576249642783d02ccbbbceed2dacb1cdd41e7b0eb80ed408be1d2",
+          "seconds": 28.488938808441162,
+          "camera_matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.09881033003330231
+            ],
+            [
+              0.0,
+              0.08139567822217941,
+              -0.9966818690299988,
+              -12.008593559265137
+            ],
+            [
+              0.0,
+              0.9966818690299988,
+              0.08139567822217941,
+              2.5947763919830322
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "camera_type": "ORTHO",
+          "lens": 50.0,
+          "ortho_scale": 4.2002763748168945
+        },
+        {
+          "view": "head",
+          "filename": "B-ior-one-head.png",
+          "sha256": "8f19569a26cad5609d8ad840a5e0dd8fb0c5563b4a94b452ed6411359b5ab91e",
+          "seconds": 21.890480279922485,
+          "camera_matrix": [
+            [
+              0.9998942613601685,
+              -0.0002907882153522223,
+              0.014541011303663254,
+              0.11999999731779099
+            ],
+            [
+              0.014543917961418629,
+              0.01999160274863243,
+              -0.9996943473815918,
+              -5.5
+            ],
+            [
+              1.2345471311903111e-09,
+              0.9998000860214233,
+              0.019993716850876808,
+              3.0799999237060547
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "camera_type": "PERSP",
+          "lens": 90.0,
+          "ortho_scale": 4.2002763748168945
+        }
+      ]
+    },
+    {
+      "case": "C-cornea-hidden",
+      "cornea_ior": 1.3799999952316284,
+      "cornea_hide_render": true,
+      "geometry_sha256": "44f577d3af38c63e11e60f27d64e4eab1849eae483cccce8916fc87c4ef1ba3e",
+      "only_expected_material_change": true,
+      "lights_unchanged": true,
+      "renders": [
+        {
+          "view": "whole",
+          "filename": "C-cornea-hidden-whole.png",
+          "sha256": "188173b64e6a51971521b4b0c5f690248912f02a34e2bdbb58f4f55533735ce3",
+          "seconds": 29.062021017074585,
+          "camera_matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.09881033003330231
+            ],
+            [
+              0.0,
+              0.08139567822217941,
+              -0.9966818690299988,
+              -12.008593559265137
+            ],
+            [
+              0.0,
+              0.9966818690299988,
+              0.08139567822217941,
+              2.5947763919830322
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "camera_type": "ORTHO",
+          "lens": 50.0,
+          "ortho_scale": 4.2002763748168945
+        },
+        {
+          "view": "head",
+          "filename": "C-cornea-hidden-head.png",
+          "sha256": "a6cd93f24672f6336a4ffc3ba0a688df071f55b414c14dae9a254662a5ad1d6a",
+          "seconds": 21.94545006752014,
+          "camera_matrix": [
+            [
+              0.9998942613601685,
+              -0.0002907882153522223,
+              0.014541011303663254,
+              0.11999999731779099
+            ],
+            [
+              0.014543917961418629,
+              0.01999160274863243,
+              -0.9996943473815918,
+              -5.5
+            ],
+            [
+              1.2345471311903111e-09,
+              0.9998000860214233,
+              0.019993716850876808,
+              3.0799999237060547
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "camera_type": "PERSP",
+          "lens": 90.0,
+          "ortho_scale": 4.2002763748168945
+        }
+      ]
+    }
+  ],
+  "status": "bounded-diagnosis-complete-not-art-accepted",
+  "limits": [
+    "Diagnostic only; cornea hiding is not a proposed production fix.",
+    "IOR change affects reflection and transmission together.",
+    "No normal/light/iris edits; remaining causes cannot be uniquely separated.",
+    "No animation, web, Cloudflare, paid service, commit or push."
+  ],
+  "source_native_unchanged": true,
+  "geometry_and_lights_identical_between_cases": true,
+  "builder_inspection_sha256": "2c7964b29e1e8d254062f42a9c3f01a3d3f03ec0fa7ebfc426e720652d8a0e8e"
+}

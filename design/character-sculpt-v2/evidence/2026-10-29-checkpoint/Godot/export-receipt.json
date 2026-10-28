@@ -1,0 +1,446 @@
+{
+  "input_sha256": "2432d199edeae964631cb79d96b1d06a5ba2fb908143532fc5bb0a86f600f33e",
+  "input_unchanged": true,
+  "bakes": [
+    {
+      "object": "Miao / continuous pear and rounded-square face",
+      "vertices": 609383,
+      "seconds": 2.9668140411376953,
+      "rgb_min": [
+        0.6441690325737,
+        0.06738034020299496,
+        0.005916930131010107
+      ],
+      "rgb_max": [
+        0.9695307787726907,
+        0.701850414276123,
+        0.3975738286972046
+      ],
+      "source_corner_samples": 2436882,
+      "point_colors": 609383
+    },
+    {
+      "object": "Guitar / rosewood body",
+      "vertices": 1120,
+      "seconds": 1.923321008682251,
+      "rgb_min": [
+        0.16072630882263184,
+        0.03696705400943756,
+        0.008036316682895025
+      ],
+      "rgb_max": [
+        0.20233741402626038,
+        0.046537600457668304,
+        0.01011686958372593
+      ],
+      "source_corner_samples": 4200,
+      "point_colors": 1120
+    },
+    {
+      "object": "Guitar / spruce soundboard",
+      "vertices": 1120,
+      "seconds": 1.5426440238952637,
+      "rgb_min": [
+        0.589840292930603,
+        0.3465311527252197,
+        0.1400870680809021
+      ],
+      "rgb_max": [
+        0.7940587202707926,
+        0.46650950113932294,
+        0.18858893712361655
+      ],
+      "source_corner_samples": 4200,
+      "point_colors": 1120
+    },
+    {
+      "object": "Guitar / rosette ring",
+      "vertices": 27684,
+      "seconds": 1.53659987449646,
+      "rgb_min": [
+        0.15689104795455933,
+        0.03608493506908417,
+        0.007844552397727966
+      ],
+      "rgb_max": [
+        0.20410923659801483,
+        0.04694512113928795,
+        0.010205461643636227
+      ],
+      "source_corner_samples": 110652,
+      "point_colors": 27684
+    },
+    {
+      "object": "Guitar / rosette ring.001",
+      "vertices": 27684,
+      "seconds": 1.4959747791290283,
+      "rgb_min": [
+        0.15755584836006165,
+        0.036237847059965134,
+        0.007877793163061142
+      ],
+      "rgb_max": [
+        0.20562542974948883,
+        0.04729384556412697,
+        0.010281271301209927
+      ],
+      "source_corner_samples": 110652,
+      "point_colors": 27684
+    },
+    {
+      "object": "Guitar / rosette ring.002",
+      "vertices": 27684,
+      "seconds": 1.4381752014160156,
+      "rgb_min": [
+        0.15782731771469116,
+        0.036300282925367355,
+        0.007891366258263588
+      ],
+      "rgb_max": [
+        0.205574631690979,
+        0.04728216305375099,
+        0.010278730653226376
+      ],
+      "source_corner_samples": 110652,
+      "point_colors": 27684
+    },
+    {
+      "object": "Guitar / rosette ring.003",
+      "vertices": 27684,
+      "seconds": 1.4273512363433838,
+      "rgb_min": [
+        0.15625467896461487,
+        0.035938575863838196,
+        0.007812734693288803
+      ],
+      "rgb_max": [
+        0.20617593824863434,
+        0.04742046445608139,
+        0.010308797471225262
+      ],
+      "source_corner_samples": 110652,
+      "point_colors": 27684
+    },
+    {
+      "object": "C6 / iris L",
+      "vertices": 2305,
+      "seconds": 1.3795909881591797,
+      "rgb_min": [
+        0.0023484155535697937,
+        0.010567869991064072,
+        0.017026010900735855
+      ],
+      "rgb_max": [
+        0.00981846172362566,
+        0.0469445139169693,
+        0.07414983212947845
+      ],
+      "source_corner_samples": 9120,
+      "point_colors": 2305
+    },
+    {
+      "object": "C6 / upper lid L",
+      "vertices": 585,
+      "seconds": 1.3697941303253174,
+      "rgb_min": [
+        0.9695307016372681,
+        0.19779683649539948,
+        0.020034991204738617
+      ],
+      "rgb_max": [
+        0.9695307016372681,
+        0.19779683649539948,
+        0.020034994930028915
+      ],
+      "source_corner_samples": 2048,
+      "point_colors": 585
+    },
+    {
+      "object": "C6 / lower lid L",
+      "vertices": 585,
+      "seconds": 1.3914270401000977,
+      "rgb_min": [
+        0.9695307016372681,
+        0.19779683649539948,
+        0.020034991204738617
+      ],
+      "rgb_max": [
+        0.9695307016372681,
+        0.701850414276123,
+        0.366658478975296
+      ],
+      "source_corner_samples": 2048,
+      "point_colors": 585
+    },
+    {
+      "object": "C6 / iris R",
+      "vertices": 2305,
+      "seconds": 1.3922030925750732,
+      "rgb_min": [
+        0.002348436741158366,
+        0.010567965917289257,
+        0.01702616550028324
+      ],
+      "rgb_max": [
+        0.009819395840168,
+        0.04694898799061775,
+        0.07415689527988434
+      ],
+      "source_corner_samples": 9120,
+      "point_colors": 2305
+    },
+    {
+      "object": "C6 / upper lid R",
+      "vertices": 585,
+      "seconds": 1.3765299320220947,
+      "rgb_min": [
+        0.9606626033782959,
+        0.1928587406873703,
+        0.019654124975204468
+      ],
+      "rgb_max": [
+        0.9695307016372681,
+        0.19779683649539948,
+        0.020034994930028915
+      ],
+      "source_corner_samples": 2048,
+      "point_colors": 585
+    },
+    {
+      "object": "C6 / lower lid R",
+      "vertices": 585,
+      "seconds": 1.3817369937896729,
+      "rgb_min": [
+        0.9695307016372681,
+        0.19779683649539948,
+        0.020034991204738617
+      ],
+      "rgb_max": [
+        0.9695307016372681,
+        0.701850414276123,
+        0.366658478975296
+      ],
+      "source_corner_samples": 2048,
+      "point_colors": 585
+    },
+    {
+      "object": "Guitar / neck",
+      "vertices": 152,
+      "seconds": 1.3693859577178955,
+      "rgb_min": [
+        0.16454607248306274,
+        0.03784559667110443,
+        0.008227304555475712
+      ],
+      "rgb_max": [
+        0.1991633176803589,
+        0.04580756276845932,
+        0.009958166629076004
+      ],
+      "source_corner_samples": 600,
+      "point_colors": 152
+    },
+    {
+      "object": "Guitar / ebony fretboard",
+      "vertices": 152,
+      "seconds": 1.4215288162231445,
+      "rgb_min": [
+        0.020367566496133804,
+        0.006789187900722027,
+        0.0025459458120167255
+      ],
+      "rgb_max": [
+        0.023330222815275192,
+        0.007776740472763777,
+        0.002916277851909399
+      ],
+      "source_corner_samples": 600,
+      "point_colors": 152
+    },
+    {
+      "object": "Guitar / bridge",
+      "vertices": 152,
+      "seconds": 1.3969237804412842,
+      "rgb_min": [
+        0.16326530277729034,
+        0.037551019340753555,
+        0.008163264952600002
+      ],
+      "rgb_max": [
+        0.1969665139913559,
+        0.04530230164527893,
+        0.009848326444625854
+      ],
+      "source_corner_samples": 600,
+      "point_colors": 152
+    },
+    {
+      "object": "Guitar / headstock",
+      "vertices": 152,
+      "seconds": 1.660156011581421,
+      "rgb_min": [
+        0.16838926076889038,
+        0.038729529827833176,
+        0.008419463410973549
+      ],
+      "rgb_max": [
+        0.1954597383737564,
+        0.04495573788881302,
+        0.009772987104952335
+      ],
+      "source_corner_samples": 600,
+      "point_colors": 152
+    },
+    {
+      "object": "Guitar / bridge tie",
+      "vertices": 178,
+      "seconds": 1.5154740810394287,
+      "rgb_min": [
+        0.16532906889915466,
+        0.03802568465471268,
+        0.008266453631222248
+      ],
+      "rgb_max": [
+        0.19797322154045105,
+        0.045533839613199234,
+        0.009898661635816097
+      ],
+      "source_corner_samples": 736,
+      "point_colors": 178
+    },
+    {
+      "object": "Guitar / bridge tie.001",
+      "vertices": 178,
+      "seconds": 1.518977165222168,
+      "rgb_min": [
+        0.16473616659641266,
+        0.03788931667804718,
+        0.008236808702349663
+      ],
+      "rgb_max": [
+        0.19566690921783447,
+        0.045003391802310944,
+        0.009783346205949783
+      ],
+      "source_corner_samples": 736,
+      "point_colors": 178
+    },
+    {
+      "object": "Guitar / bridge tie.002",
+      "vertices": 178,
+      "seconds": 1.4810361862182617,
+      "rgb_min": [
+        0.1691523790359497,
+        0.03890504688024521,
+        0.008457619696855545
+      ],
+      "rgb_max": [
+        0.19926372170448303,
+        0.04583065211772919,
+        0.009963186457753181
+      ],
+      "source_corner_samples": 736,
+      "point_colors": 178
+    },
+    {
+      "object": "Guitar / bridge tie.003",
+      "vertices": 178,
+      "seconds": 1.4348549842834473,
+      "rgb_min": [
+        0.16072596609592438,
+        0.036966972053050995,
+        0.008036298677325249
+      ],
+      "rgb_max": [
+        0.19435113668441772,
+        0.04470076039433479,
+        0.009717556647956371
+      ],
+      "source_corner_samples": 736,
+      "point_colors": 178
+    },
+    {
+      "object": "Guitar / bridge tie.004",
+      "vertices": 178,
+      "seconds": 1.3734018802642822,
+      "rgb_min": [
+        0.17328044772148132,
+        0.0398545041680336,
+        0.008664023131132126
+      ],
+      "rgb_max": [
+        0.1956612914800644,
+        0.04500209912657738,
+        0.00978306494653225
+      ],
+      "source_corner_samples": 736,
+      "point_colors": 178
+    },
+    {
+      "object": "Guitar / bridge tie.005",
+      "vertices": 178,
+      "seconds": 1.3666069507598877,
+      "rgb_min": [
+        0.16174930334091187,
+        0.03720233961939812,
+        0.008087465539574623
+      ],
+      "rgb_max": [
+        0.1959972232580185,
+        0.04507935792207718,
+        0.009799860417842865
+      ],
+      "source_corner_samples": 736,
+      "point_colors": 178
+    }
+  ],
+  "glb_bytes": 45046024,
+  "glb_sha256": "d9e4702b99646bf7582702ee672ac5f84afb2385fa511c095e63c807684bb0ff",
+  "gltf_meshes": 74,
+  "gltf_cameras": [
+    {
+      "name": "Camera.001",
+      "orthographic": {
+        "xmag": 2.1001381874084473,
+        "ymag": 2.1001381874084473,
+        "zfar": 1000,
+        "znear": 0.10000000149011612
+      },
+      "type": "orthographic"
+    }
+  ],
+  "exported_position_accessors_total": 855845,
+  "exported_triangles": 1696882,
+  "bake_operator_properties": [
+    "rna_type",
+    "type",
+    "pass_filter",
+    "filepath",
+    "width",
+    "height",
+    "margin",
+    "margin_type",
+    "use_selected_to_active",
+    "max_ray_distance",
+    "cage_extrusion",
+    "cage_object",
+    "normal_space",
+    "normal_r",
+    "normal_g",
+    "normal_b",
+    "target",
+    "save_mode",
+    "use_clear",
+    "use_cage",
+    "use_split_materials",
+    "use_automatic_name",
+    "uv_layer"
+  ],
+  "limits": [
+    "Unaccepted C8 migration diagnostic only, not current refined art.",
+    "Native groom excluded; UV maps removed after point-color baking.",
+    "No rig/animation; native camera retained.",
+    "Corneal transmission and realtime lights still require actual Godot inspection.",
+    "Not production, browser, audio/export or performance acceptance."
+  ]
+}

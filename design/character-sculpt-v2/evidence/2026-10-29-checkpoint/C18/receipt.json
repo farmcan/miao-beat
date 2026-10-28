@@ -1,0 +1,204 @@
+{
+  "stage": "C18-D-refraction-only-closure-contrast",
+  "status": "bounded-closure-contrast-complete-not-art-accepted",
+  "input": "artifacts/character-head-c14-color/miao-c14c-head-color.blend",
+  "input_sha256": "9948a6eaa4c0001c6f511e86d4b98fcd0fc15a0928f8399c7e8a1f73f198a3a9",
+  "source_sha256": "688dee4b689452b89bc8fb3a837d4c9fe4c503d511fd7d90ceccb4005ebab5a5",
+  "helper_source_sha256": "89e9c22f3a075408d0bed149e2d5aa09a0a1f00b048586a27a2ee87c455d2952",
+  "reused_baseline_receipt_sha256": "143a45687b7b9e721ed336adc00b008e005e38b7120f1bde21e2c90d3c2d2f1b",
+  "baseline_renders": [
+    {
+      "view": "whole",
+      "filename": "A-original-whole.png",
+      "sha256": "6d8bb95de38c1b3ffcb15493bb2e9c11b054defaf37bad015ce9d88ba825f3d6",
+      "seconds": 29.020330905914307,
+      "camera_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.09881033003330231
+        ],
+        [
+          0.0,
+          0.08139567822217941,
+          -0.9966818690299988,
+          -12.008593559265137
+        ],
+        [
+          0.0,
+          0.9966818690299988,
+          0.08139567822217941,
+          2.5947763919830322
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "camera_type": "ORTHO",
+      "lens": 50.0,
+      "ortho_scale": 4.2002763748168945
+    },
+    {
+      "view": "head",
+      "filename": "A-original-head.png",
+      "sha256": "075714e2d82fda2f1d441b4c5f597127ca85aff4f9dbb129f0ceca2c9cae7105",
+      "seconds": 22.182830810546875,
+      "camera_matrix": [
+        [
+          0.9998942613601685,
+          -0.0002907882153522223,
+          0.014541011303663254,
+          0.11999999731779099
+        ],
+        [
+          0.014543917961418629,
+          0.01999160274863243,
+          -0.9996943473815918,
+          -5.5
+        ],
+        [
+          1.2345471311903111e-09,
+          0.9998000860214233,
+          0.019993716850876808,
+          3.0799999237060547
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "camera_type": "PERSP",
+      "lens": 90.0,
+      "ortho_scale": 4.2002763748168945
+    }
+  ],
+  "blender": "5.2.3 LTS",
+  "build_hash": "e13b728c6880",
+  "original_principled": {
+    "IOR": 1.3799999952316284,
+    "Roughness": 0.03500000014901161,
+    "Transmission Weight": 1.0,
+    "Metallic": 0.0,
+    "Coat Weight": 0.0,
+    "Sheen Weight": 0.0,
+    "Emission Strength": 0.0,
+    "Alpha": 1.0,
+    "distribution": "MULTI_GGX",
+    "Base Color": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "Normal_unlinked": true
+  },
+  "changed_cornea_surface": {
+    "node": "ShaderNodeBsdfRefraction",
+    "distribution": "GGX",
+    "IOR": 1.3799999952316284,
+    "roughness": 0.03500000014901161,
+    "color": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "normal_unlinked": true
+  },
+  "geometry_sha256": "44f577d3af38c63e11e60f27d64e4eab1849eae483cccce8916fc87c4ef1ba3e",
+  "all_non_cornea_materials_unchanged": true,
+  "geometry_lights_and_visibility_unchanged": true,
+  "renders": [
+    {
+      "view": "whole",
+      "filename": "D-refraction-only-whole.png",
+      "sha256": "5bc69ac0bb80269726ef10ecb4f6ede737460993385a9e6f1408b74d87d4a4d0",
+      "seconds": 28.540573120117188,
+      "camera_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.09881033003330231
+        ],
+        [
+          0.0,
+          0.08139567822217941,
+          -0.9966818690299988,
+          -12.008593559265137
+        ],
+        [
+          0.0,
+          0.9966818690299988,
+          0.08139567822217941,
+          2.5947763919830322
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "camera_type": "ORTHO",
+      "lens": 50.0,
+      "ortho_scale": 4.2002763748168945
+    },
+    {
+      "view": "head",
+      "filename": "D-refraction-only-head.png",
+      "sha256": "53d317b4454bd5c242cfdd467e5fcf6665428e2c4f5c7ce29e7656d16785703d",
+      "seconds": 24.50567102432251,
+      "camera_matrix": [
+        [
+          0.9998942613601685,
+          -0.000290786410914734,
+          0.014541011303663254,
+          0.11999999731779099
+        ],
+        [
+          0.014543917961418629,
+          0.01999148353934288,
+          -0.9996943473815918,
+          -5.5
+        ],
+        [
+          1.143490524491142e-09,
+          0.9998000860214233,
+          0.019993597641587257,
+          3.0799999237060547
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "camera_type": "PERSP",
+      "lens": 90.0,
+      "ortho_scale": 4.2002763748168945
+    }
+  ],
+  "couplings": [
+    "Removes the reflected closure and the Principled glass Fresnel energy split.",
+    "Uses single-scatter GGX refraction instead of Principled multi-GGX glass.",
+    "Nominal IOR, roughness, white transmission, default normal and two interfaces retained.",
+    "Therefore not a mathematically exact isolated-reflection ablation."
+  ],
+  "limits": [
+    "One new closure setting only; no parameter sweep.",
+    "Baseline A is reused and its output SHA checked; C17 files untouched.",
+    "Diagnostic only, not an accepted eye/material or motion.",
+    "No animation, web, Cloudflare, paid API, commit or push."
+  ],
+  "source_native_unchanged": true,
+  "C17_receipt_and_baseline_images_unchanged": true,
+  "builder_inspection_sha256": "b8d60809bda528578a4738bde5b34a1f16252499c7692dc1995b74f7306660e7"
+}

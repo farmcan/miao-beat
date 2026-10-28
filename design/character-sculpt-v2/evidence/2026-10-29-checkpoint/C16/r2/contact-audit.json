@@ -1,0 +1,1793 @@
+{
+  "stage": "read-only-static-grip-diagnostic-not-contact-pass",
+  "native_scene_sha256": "7fab90a280c1f3c65103b8012cbc4f3dd843beccec3e763827c4c58a4117a6b0",
+  "source_scene_unchanged": true,
+  "script_sha256": "8668a052fcadf7ea8939fcdfd1cd2e3c1bab3d653545863b91feb1288675a607",
+  "method": "Actual saved six string Bezier controls/handles and matrices, 512 samples/segment; compare256. Skin rays startY=-.88 in front of torso and target toward viewer, explicithit/miss only. Only +Y backface normals permit a gap. Evaluated fingerboard separately raycast.",
+  "legacy_receipt_contacts_status": "C10 old extrapolated table remains INVALID. This C16 audit uses saved actual Bezier controls and explicit BVH rays only.",
+  "sampling": {
+    "total": 36,
+    "valid_backface_samples": 29,
+    "misses": 7,
+    "invalid_frontface_hits": 0,
+    "minimum_valid_near_surface_clearance_y": -0.013775360770523548,
+    "maximum_valid_near_surface_clearance_y": 0.06058906298130751,
+    "strictly_negative_gap_count": 8,
+    "negative_below_minus_005_count": 6,
+    "positive_gap_count": 21
+  },
+  "records": [
+    {
+      "string": 1,
+      "actual_object": "Guitar / string 1",
+      "u": 1.22,
+      "actual_bezier_centerline_world": [
+        1.086422324180603,
+        -1.0510755777359009,
+        1.941765546798706
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 2.2206230175730177e-06,
+      "ray_origin_world": [
+        1.086422324180603,
+        -0.8799999952316284,
+        1.941765546798706
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_material_id": 3,
+      "surface_source": "bounded full-3D field replacement zone in C16r2",
+      "actual_skin_world": [
+        1.086422324180603,
+        -1.045179843902588,
+        1.941765546798706
+      ],
+      "actual_skin_normal_world": [
+        -0.3423798680305481,
+        0.836734414100647,
+        0.4273775517940521
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": -0.005895733833312988,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": -0.008695733733475208,
+      "board_hit": false
+    },
+    {
+      "string": 1,
+      "actual_object": "Guitar / string 1",
+      "u": 1.25,
+      "actual_bezier_centerline_world": [
+        1.116989016532898,
+        -1.0514976978302002,
+        1.9536328315734863
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 2.448873351117866e-06,
+      "ray_origin_world": [
+        1.116989016532898,
+        -0.8799999952316284,
+        1.9536328315734863
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_material_id": 3,
+      "surface_source": "bounded full-3D field replacement zone in C16r2",
+      "actual_skin_world": [
+        1.116989016532898,
+        -1.041482925415039,
+        1.9536328315734863
+      ],
+      "actual_skin_normal_world": [
+        -0.224929079413414,
+        0.8539621233940125,
+        0.4692074656486511
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": -0.010014772415161133,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": -0.012814772315323353,
+      "board_hit": false
+    },
+    {
+      "string": 1,
+      "actual_object": "Guitar / string 1",
+      "u": 1.33,
+      "actual_bezier_centerline_world": [
+        1.1983294486999512,
+        -1.0519243478775024,
+        1.9857137203216553
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 2.44597012146511e-06,
+      "ray_origin_world": [
+        1.1983294486999512,
+        -0.8799999952316284,
+        1.9857137203216553
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_material_id": 3,
+      "surface_source": "bounded full-3D field replacement zone in C16r2",
+      "actual_skin_world": [
+        1.1983294486999512,
+        -1.0409489870071411,
+        1.9857137203216553
+      ],
+      "actual_skin_normal_world": [
+        -0.15494543313980103,
+        0.8840070962905884,
+        0.4410480856895447
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": -0.010975360870361328,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": -0.013775360770523548,
+      "board_hit": false
+    },
+    {
+      "string": 1,
+      "actual_object": "Guitar / string 1",
+      "u": 1.36,
+      "actual_bezier_centerline_world": [
+        1.2287629842758179,
+        -1.051795482635498,
+        1.9979193210601807
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 3.1017331674713345e-06,
+      "ray_origin_world": [
+        1.2287629842758179,
+        -0.8799999952316284,
+        1.9979193210601807
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_material_id": 3,
+      "surface_source": "bounded full-3D field replacement zone in C16r2",
+      "actual_skin_world": [
+        1.2287629842758179,
+        -1.042006492614746,
+        1.9979193210601807
+      ],
+      "actual_skin_normal_world": [
+        -0.10789191722869873,
+        0.8998204469680786,
+        0.4227084815502167
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": -0.009788990020751953,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": -0.012588989920914173,
+      "board_hit": false
+    },
+    {
+      "string": 1,
+      "actual_object": "Guitar / string 1",
+      "u": 1.44,
+      "actual_bezier_centerline_world": [
+        1.3097217082977295,
+        -1.0506141185760498,
+        2.03096866607666
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 2.7624679151192826e-06,
+      "ray_origin_world": [
+        1.3097217082977295,
+        -0.8799999952316284,
+        2.03096866607666
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_material_id": 1,
+      "surface_source": "actual closed C11 palm and toes mesh volume",
+      "actual_skin_world": [
+        1.3097217082977295,
+        -1.049035906791687,
+        2.03096866607666
+      ],
+      "actual_skin_normal_world": [
+        -0.021382292732596397,
+        0.932537853717804,
+        0.3604385256767273
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": -0.001578211784362793,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": -0.004378211684525013,
+      "board_hit": false
+    },
+    {
+      "string": 1,
+      "actual_object": "Guitar / string 1",
+      "u": 1.47,
+      "actual_bezier_centerline_world": [
+        1.3400057554244995,
+        -1.0498459339141846,
+        2.0435543060302734
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 3.0648613291221717e-06,
+      "ray_origin_world": [
+        1.3400057554244995,
+        -0.8799999952316284,
+        2.0435543060302734
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_material_id": 1,
+      "surface_source": "actual closed C11 palm and toes mesh volume",
+      "actual_skin_world": [
+        1.3400057554244995,
+        -1.0540105104446411,
+        2.0435543060302734
+      ],
+      "actual_skin_normal_world": [
+        0.09506231546401978,
+        0.9270647764205933,
+        0.3626488149166107
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.004164576530456543,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.001364576630294323,
+      "board_hit": false
+    },
+    {
+      "string": 2,
+      "actual_object": "Guitar / string 2",
+      "u": 1.22,
+      "actual_bezier_centerline_world": [
+        1.0701124668121338,
+        -1.0511085987091064,
+        1.9831812381744385
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 7.633118912497578e-07,
+      "ray_origin_world": [
+        1.0701124668121338,
+        -0.8799999952316284,
+        1.9831812381744385
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_material_id": 3,
+      "surface_source": "bounded full-3D field replacement zone in C16r2",
+      "actual_skin_world": [
+        1.0701124668121338,
+        -1.0767021179199219,
+        1.9831812381744385
+      ],
+      "actual_skin_normal_world": [
+        -0.5201262831687927,
+        0.7605411410331726,
+        0.38864636421203613
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.02559351921081543,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.02279351931065321,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.0701123476028442,
+        -1.0130000114440918,
+        1.9831814765930176
+      ],
+      "board_front_minus_skin_back_y": 0.06370210647583008
+    },
+    {
+      "string": 2,
+      "actual_object": "Guitar / string 2",
+      "u": 1.25,
+      "actual_bezier_centerline_world": [
+        1.1006559133529663,
+        -1.0515309572219849,
+        1.995107650756836
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 9.757700886574328e-07,
+      "ray_origin_world": [
+        1.1006559133529663,
+        -0.8799999952316284,
+        1.995107650756836
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_material_id": 3,
+      "surface_source": "bounded full-3D field replacement zone in C16r2",
+      "actual_skin_world": [
+        1.1006559133529663,
+        -1.0712392330169678,
+        1.995107650756836
+      ],
+      "actual_skin_normal_world": [
+        -0.22228486835956573,
+        0.8150560259819031,
+        0.5350449085235596
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.01970827579498291,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.01690827589482069,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.1006559133529663,
+        -1.0130000114440918,
+        1.9951077699661255
+      ],
+      "board_front_minus_skin_back_y": 0.05823922157287598
+    },
+    {
+      "string": 2,
+      "actual_object": "Guitar / string 2",
+      "u": 1.33,
+      "actual_bezier_centerline_world": [
+        1.1820026636123657,
+        -1.0519556999206543,
+        2.027172088623047
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 1.018524616398517e-06,
+      "ray_origin_world": [
+        1.1820026636123657,
+        -0.8799999952316284,
+        2.027172088623047
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_material_id": 1,
+      "surface_source": "actual closed C11 palm and toes mesh volume",
+      "actual_skin_world": [
+        1.1820026636123657,
+        -1.0708856582641602,
+        2.027172088623047
+      ],
+      "actual_skin_normal_world": [
+        -0.4112197756767273,
+        0.7437336444854736,
+        0.5270280241966248
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.01892995834350586,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.01612995844334364,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.1820026636123657,
+        -1.0130000114440918,
+        2.027172327041626
+      ],
+      "board_front_minus_skin_back_y": 0.05788564682006836
+    },
+    {
+      "string": 2,
+      "actual_object": "Guitar / string 2",
+      "u": 1.36,
+      "actual_bezier_centerline_world": [
+        1.2124660015106201,
+        -1.0518256425857544,
+        2.039301872253418
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 7.996802249550068e-07,
+      "ray_origin_world": [
+        1.2124660015106201,
+        -0.8799999952316284,
+        2.039301872253418
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_material_id": 1,
+      "surface_source": "actual closed C11 palm and toes mesh volume",
+      "actual_skin_world": [
+        1.2124660015106201,
+        -1.0680115222930908,
+        2.039301872253418
+      ],
+      "actual_skin_normal_world": [
+        -0.15457360446453094,
+        0.8015089631080627,
+        0.5776594281196594
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.016185879707336426,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.013385879807174206,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.2124660015106201,
+        -1.0130000114440918,
+        2.039302110671997
+      ],
+      "board_front_minus_skin_back_y": 0.05501151084899902
+    },
+    {
+      "string": 2,
+      "actual_object": "Guitar / string 2",
+      "u": 1.44,
+      "actual_bezier_centerline_world": [
+        1.2935833930969238,
+        -1.0506393909454346,
+        2.071949005126953
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 6.848052318737541e-07,
+      "ray_origin_world": [
+        1.2935833930969238,
+        -0.8799999952316284,
+        2.071949005126953
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_material_id": 1,
+      "surface_source": "actual closed C11 palm and toes mesh volume",
+      "actual_skin_world": [
+        1.2935833930969238,
+        -1.0739926099777222,
+        2.071949005126953
+      ],
+      "actual_skin_normal_world": [
+        -0.4158744812011719,
+        0.7528030276298523,
+        0.5102313756942749
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.023353219032287598,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.020553219132125378,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.2935833930969238,
+        -1.0130000114440918,
+        2.0719492435455322
+      ],
+      "board_front_minus_skin_back_y": 0.06099259853363037
+    },
+    {
+      "string": 2,
+      "actual_object": "Guitar / string 2",
+      "u": 1.47,
+      "actual_bezier_centerline_world": [
+        1.323956847190857,
+        -1.0498688220977783,
+        2.0843071937561035
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 7.152557373046875e-07,
+      "ray_origin_world": [
+        1.323956847190857,
+        -0.8799999952316284,
+        2.0843071937561035
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_material_id": 1,
+      "surface_source": "actual closed C11 palm and toes mesh volume",
+      "actual_skin_world": [
+        1.323956847190857,
+        -1.07389235496521,
+        2.0843071937561035
+      ],
+      "actual_skin_normal_world": [
+        -0.03214631602168083,
+        0.8498250246047974,
+        0.526083767414093
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.02402353286743164,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.02122353296726942,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.3239569664001465,
+        -1.0130000114440918,
+        2.0843071937561035
+      ],
+      "board_front_minus_skin_back_y": 0.060892343521118164
+    },
+    {
+      "string": 3,
+      "actual_object": "Guitar / string 3",
+      "u": 1.22,
+      "actual_bezier_centerline_world": [
+        1.0537962913513184,
+        -1.0511263608932495,
+        2.0246126651763916
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 1.1980385328675377e-06,
+      "ray_origin_world": [
+        1.0537962913513184,
+        -0.8799999952316284,
+        2.0246126651763916
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_material_id": 1,
+      "surface_source": "actual closed C11 palm and toes mesh volume",
+      "actual_skin_world": [
+        1.0537962913513184,
+        -1.0564836263656616,
+        2.0246126651763916
+      ],
+      "actual_skin_normal_world": [
+        -0.19945338368415833,
+        0.5831798911094666,
+        -0.7874767780303955
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.005357265472412109,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.0025572655722498894,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.0537961721420288,
+        -1.0130000114440918,
+        2.0246129035949707
+      ],
+      "board_front_minus_skin_back_y": 0.043483614921569824
+    },
+    {
+      "string": 3,
+      "actual_object": "Guitar / string 3",
+      "u": 1.25,
+      "actual_bezier_centerline_world": [
+        1.0843167304992676,
+        -1.0515486001968384,
+        2.036597967147827
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 1.0925711858167266e-06,
+      "ray_origin_world": [
+        1.0843167304992676,
+        -0.8799999952316284,
+        2.036597967147827
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_material_id": 1,
+      "surface_source": "actual closed C11 palm and toes mesh volume",
+      "actual_skin_world": [
+        1.0843167304992676,
+        -1.0486814975738525,
+        2.036597967147827
+      ],
+      "actual_skin_normal_world": [
+        0.27958762645721436,
+        0.8224964737892151,
+        -0.4953084886074066
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": -0.00286710262298584,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": -0.00566710252314806,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.0843167304992676,
+        -1.0130000114440918,
+        2.0365982055664062
+      ],
+      "board_front_minus_skin_back_y": 0.03568148612976074
+    },
+    {
+      "string": 3,
+      "actual_object": "Guitar / string 3",
+      "u": 1.33,
+      "actual_bezier_centerline_world": [
+        1.1656701564788818,
+        -1.0519722700119019,
+        2.068645477294922
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 1.1246181883879427e-06,
+      "ray_origin_world": [
+        1.1656701564788818,
+        -0.8799999952316284,
+        2.068645477294922
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_material_id": 1,
+      "surface_source": "actual closed C11 palm and toes mesh volume",
+      "actual_skin_world": [
+        1.1656701564788818,
+        -1.1153613328933716,
+        2.068645477294922
+      ],
+      "actual_skin_normal_world": [
+        -0.5825417637825012,
+        0.726773738861084,
+        0.36393001675605774
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.06338906288146973,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.06058906298130751,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.1656701564788818,
+        -1.0130000114440918,
+        2.068645477294922
+      ],
+      "board_front_minus_skin_back_y": 0.10236132144927979
+    },
+    {
+      "string": 3,
+      "actual_object": "Guitar / string 3",
+      "u": 1.36,
+      "actual_bezier_centerline_world": [
+        1.1961636543273926,
+        -1.0518414974212646,
+        2.0806984901428223
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 1.7398023032339124e-06,
+      "ray_origin_world": [
+        1.1961636543273926,
+        -0.8799999952316284,
+        2.0806984901428223
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_material_id": 1,
+      "surface_source": "actual closed C11 palm and toes mesh volume",
+      "actual_skin_world": [
+        1.1961636543273926,
+        -1.1093469858169556,
+        2.0806984901428223
+      ],
+      "actual_skin_normal_world": [
+        -0.14522477984428406,
+        0.7865579128265381,
+        0.6001971364021301
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.05750548839569092,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.0547054884955287,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.1961636543273926,
+        -1.0130000114440918,
+        2.0806987285614014
+      ],
+      "board_front_minus_skin_back_y": 0.09634697437286377
+    },
+    {
+      "string": 3,
+      "actual_object": "Guitar / string 3",
+      "u": 1.44,
+      "actual_bezier_centerline_world": [
+        1.2774405479431152,
+        -1.0506523847579956,
+        2.112940788269043
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 1.0115243642614567e-06,
+      "ray_origin_world": [
+        1.2774405479431152,
+        -0.8799999952316284,
+        2.112940788269043
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_material_id": 1,
+      "surface_source": "actual closed C11 palm and toes mesh volume",
+      "actual_skin_world": [
+        1.2774405479431152,
+        -1.053865909576416,
+        2.112940788269043
+      ],
+      "actual_skin_normal_world": [
+        -0.4137009084224701,
+        0.7699938416481018,
+        -0.48575830459594727
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.00321352481842041,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.00041352491825819016,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.2774405479431152,
+        -1.0130000114440918,
+        2.112941026687622
+      ],
+      "board_front_minus_skin_back_y": 0.04086589813232422
+    },
+    {
+      "string": 3,
+      "actual_object": "Guitar / string 3",
+      "u": 1.47,
+      "actual_bezier_centerline_world": [
+        1.3079041242599487,
+        -1.0498803853988647,
+        2.1250698566436768
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 1.215700987241932e-06,
+      "ray_origin_world": [
+        1.3079041242599487,
+        -0.8799999952316284,
+        2.1250698566436768
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_material_id": 1,
+      "surface_source": "actual closed C11 palm and toes mesh volume",
+      "actual_skin_world": [
+        1.3079041242599487,
+        -1.046362042427063,
+        2.1250698566436768
+      ],
+      "actual_skin_normal_world": [
+        0.1254393309354782,
+        0.9699819684028625,
+        -0.2083268016576767
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": -0.003518342971801758,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": -0.006318342871963978,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.3079041242599487,
+        -1.0130000114440918,
+        2.125070095062256
+      ],
+      "board_front_minus_skin_back_y": 0.03336203098297119
+    },
+    {
+      "string": 4,
+      "actual_object": "Guitar / string 4",
+      "u": 1.22,
+      "actual_bezier_centerline_world": [
+        1.0374782085418701,
+        -1.0511263608932495,
+        2.066049575805664
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 1.5125963140069866e-06,
+      "ray_origin_world": [
+        1.0374782085418701,
+        -0.8799999952316284,
+        2.066049575805664
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_material_id": 1,
+      "surface_source": "actual closed C11 palm and toes mesh volume",
+      "actual_skin_world": [
+        1.0374782085418701,
+        -1.0599451065063477,
+        2.066049575805664
+      ],
+      "actual_skin_normal_world": [
+        -0.46423453092575073,
+        0.833275556564331,
+        0.3002302944660187
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.008818745613098145,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.0067187456879764795,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.0374782085418701,
+        -1.0130000114440918,
+        2.066049814224243
+      ],
+      "board_front_minus_skin_back_y": 0.04694509506225586
+    },
+    {
+      "string": 4,
+      "actual_object": "Guitar / string 4",
+      "u": 1.25,
+      "actual_bezier_centerline_world": [
+        1.0679752826690674,
+        -1.0515486001968384,
+        2.0780935287475586
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 1.3953089607619793e-06,
+      "ray_origin_world": [
+        1.0679752826690674,
+        -0.8799999952316284,
+        2.0780935287475586
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_material_id": 1,
+      "surface_source": "actual closed C11 palm and toes mesh volume",
+      "actual_skin_world": [
+        1.0679752826690674,
+        -1.0566819906234741,
+        2.0780935287475586
+      ],
+      "actual_skin_normal_world": [
+        -0.09618876129388809,
+        0.8565887212753296,
+        0.506955087184906
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.005133390426635742,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.003033390501514077,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.0679752826690674,
+        -1.0130000114440918,
+        2.0780935287475586
+      ],
+      "board_front_minus_skin_back_y": 0.043681979179382324
+    },
+    {
+      "string": 4,
+      "actual_object": "Guitar / string 4",
+      "u": 1.33,
+      "actual_bezier_centerline_world": [
+        1.1493353843688965,
+        -1.0519722700119019,
+        2.110124111175537
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 1.215700987241932e-06,
+      "ray_origin_world": [
+        1.1493353843688965,
+        -0.8799999952316284,
+        2.110124111175537
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_material_id": 1,
+      "surface_source": "actual closed C11 palm and toes mesh volume",
+      "actual_skin_world": [
+        1.1493353843688965,
+        -1.0549499988555908,
+        2.110124111175537
+      ],
+      "actual_skin_normal_world": [
+        -0.43902119994163513,
+        0.8769816756248474,
+        0.1953553855419159
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.002977728843688965,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.0008777289185672998,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.1493353843688965,
+        -1.0130000114440918,
+        2.110124349594116
+      ],
+      "board_front_minus_skin_back_y": 0.04194998741149902
+    },
+    {
+      "string": 4,
+      "actual_object": "Guitar / string 4",
+      "u": 1.36,
+      "actual_bezier_centerline_world": [
+        1.1798593997955322,
+        -1.0518416166305542,
+        2.122100353240967
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 1.8659205248950158e-06,
+      "ray_origin_world": [
+        1.1798593997955322,
+        -0.8799999952316284,
+        2.122100353240967
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_material_id": 1,
+      "surface_source": "actual closed C11 palm and toes mesh volume",
+      "actual_skin_world": [
+        1.1798593997955322,
+        -1.049695611000061,
+        2.122100353240967
+      ],
+      "actual_skin_normal_world": [
+        -0.027444124221801758,
+        0.9280811548233032,
+        0.3713652491569519
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": -0.002146005630493164,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": -0.004246005555614829,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.1798593997955322,
+        -1.0130000114440918,
+        2.122100353240967
+      ],
+      "board_front_minus_skin_back_y": 0.03669559955596924
+    },
+    {
+      "string": 4,
+      "actual_object": "Guitar / string 4",
+      "u": 1.44,
+      "actual_bezier_centerline_world": [
+        1.2612959146499634,
+        -1.0506523847579956,
+        2.1539368629455566
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 1.1055014724130278e-06,
+      "ray_origin_world": [
+        1.2612959146499634,
+        -0.8799999952316284,
+        2.1539368629455566
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_material_id": 1,
+      "surface_source": "actual closed C11 palm and toes mesh volume",
+      "actual_skin_world": [
+        1.2612959146499634,
+        -1.0675512552261353,
+        2.1539368629455566
+      ],
+      "actual_skin_normal_world": [
+        -0.5313371419906616,
+        0.7631173133850098,
+        0.36787617206573486
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.01689887046813965,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.014798870543017983,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.2612959146499634,
+        -1.0130000114440918,
+        2.1539368629455566
+      ],
+      "board_front_minus_skin_back_y": 0.05455124378204346
+    },
+    {
+      "string": 4,
+      "actual_object": "Guitar / string 4",
+      "u": 1.47,
+      "actual_bezier_centerline_world": [
+        1.2918498516082764,
+        -1.0498803853988647,
+        2.165836811065674
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 9.610960183499514e-07,
+      "ray_origin_world": [
+        1.2918498516082764,
+        -0.8799999952316284,
+        2.165836811065674
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_material_id": 1,
+      "surface_source": "actual closed C11 palm and toes mesh volume",
+      "actual_skin_world": [
+        1.2918498516082764,
+        -1.059871792793274,
+        2.165836811065674
+      ],
+      "actual_skin_normal_world": [
+        -0.18143191933631897,
+        0.830938458442688,
+        0.5259503722190857
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.00999140739440918,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.007891407469287515,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.2918498516082764,
+        -1.0130001306533813,
+        2.165837049484253
+      ],
+      "board_front_minus_skin_back_y": 0.04687166213989258
+    },
+    {
+      "string": 5,
+      "actual_object": "Guitar / string 5",
+      "u": 1.22,
+      "actual_bezier_centerline_world": [
+        1.0211620330810547,
+        -1.0511085987091064,
+        2.1074812412261963
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 1.3058723390225556e-06,
+      "ray_origin_world": [
+        1.0211620330810547,
+        -0.8799999952316284,
+        2.1074812412261963
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_material_id": 1,
+      "surface_source": "actual closed C11 palm and toes mesh volume",
+      "actual_skin_world": [
+        1.0211620330810547,
+        -1.1040301322937012,
+        2.1074812412261963
+      ],
+      "actual_skin_normal_world": [
+        -0.5152767896652222,
+        0.44569748640060425,
+        0.7320134043693542
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.05292153358459473,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.05082153365947306,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.0211620330810547,
+        -1.0130000114440918,
+        2.1074812412261963
+      ],
+      "board_front_minus_skin_back_y": 0.09103012084960938
+    },
+    {
+      "string": 5,
+      "actual_object": "Guitar / string 5",
+      "u": 1.25,
+      "actual_bezier_centerline_world": [
+        1.051635980606079,
+        -1.0515309572219849,
+        2.119584321975708
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 1.0794860289260646e-06,
+      "ray_origin_world": [
+        1.051635980606079,
+        -0.8799999952316284,
+        2.119584321975708
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_material_id": 1,
+      "surface_source": "actual closed C11 palm and toes mesh volume",
+      "actual_skin_world": [
+        1.051635980606079,
+        -1.1008037328720093,
+        2.119584321975708
+      ],
+      "actual_skin_normal_world": [
+        -0.22307026386260986,
+        0.4475608170032501,
+        0.865984320640564
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.049272775650024414,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.04717277572490275,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.051635980606079,
+        -1.0130000114440918,
+        2.119584560394287
+      ],
+      "board_front_minus_skin_back_y": 0.08780372142791748
+    },
+    {
+      "string": 5,
+      "actual_object": "Guitar / string 5",
+      "u": 1.33,
+      "actual_bezier_centerline_world": [
+        1.1330028772354126,
+        -1.0519556999206543,
+        2.151597499847412
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 1.2839233415447482e-06,
+      "ray_origin_world": [
+        1.1330028772354126,
+        -0.8799999952316284,
+        2.151597499847412
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_material_id": 1,
+      "surface_source": "actual closed C11 palm and toes mesh volume",
+      "actual_skin_world": [
+        1.1330028772354126,
+        -1.0880695581436157,
+        2.151597499847412
+      ],
+      "actual_skin_normal_world": [
+        -0.589728593826294,
+        0.6502609252929688,
+        0.4789372980594635
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.036113858222961426,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.03401385829783976,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.1330028772354126,
+        -1.0130000114440918,
+        2.151597499847412
+      ],
+      "board_front_minus_skin_back_y": 0.07506954669952393
+    },
+    {
+      "string": 5,
+      "actual_object": "Guitar / string 5",
+      "u": 1.36,
+      "actual_bezier_centerline_world": [
+        1.1635570526123047,
+        -1.0518256425857544,
+        2.163496732711792
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 1.1246181883879427e-06,
+      "ray_origin_world": [
+        1.1635570526123047,
+        -0.8799999952316284,
+        2.163496732711792
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_material_id": 1,
+      "surface_source": "actual closed C11 palm and toes mesh volume",
+      "actual_skin_world": [
+        1.1635570526123047,
+        -1.0821259021759033,
+        2.163496732711792
+      ],
+      "actual_skin_normal_world": [
+        -0.17841215431690216,
+        0.6855951547622681,
+        0.7057821154594421
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.030300259590148926,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.02820025966502726,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.1635571718215942,
+        -1.0130000114440918,
+        2.163496732711792
+      ],
+      "board_front_minus_skin_back_y": 0.06912589073181152
+    },
+    {
+      "string": 5,
+      "actual_object": "Guitar / string 5",
+      "u": 1.44,
+      "actual_bezier_centerline_world": [
+        1.2451534271240234,
+        -1.0506393909454346,
+        2.19492769241333
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 1.1246181883879427e-06,
+      "ray_origin_world": [
+        1.2451534271240234,
+        -0.8799999952316284,
+        2.19492769241333
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": false,
+      "fallback_used": false,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.2451534271240234,
+        -1.0130000114440918,
+        2.19492769241333
+      ]
+    },
+    {
+      "string": 5,
+      "actual_object": "Guitar / string 5",
+      "u": 1.47,
+      "actual_bezier_centerline_world": [
+        1.2757974863052368,
+        -1.0498688220977783,
+        2.2065985202789307
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 1.8000207985092997e-06,
+      "ray_origin_world": [
+        1.2757974863052368,
+        -0.8799999952316284,
+        2.2065985202789307
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_material_id": 1,
+      "surface_source": "actual closed C11 palm and toes mesh volume",
+      "actual_skin_world": [
+        1.2757974863052368,
+        -1.1104910373687744,
+        2.2065985202789307
+      ],
+      "actual_skin_normal_world": [
+        -0.3324156403541565,
+        0.38042575120925903,
+        0.8630041480064392
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.060622215270996094,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.05852221534587443,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.2757974863052368,
+        -1.0130000114440918,
+        2.2065987586975098
+      ],
+      "board_front_minus_skin_back_y": 0.09749102592468262
+    },
+    {
+      "string": 6,
+      "actual_object": "Guitar / string 6",
+      "u": 1.22,
+      "actual_bezier_centerline_world": [
+        1.0048524141311646,
+        -1.0510755777359009,
+        2.1488962173461914
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 8.344650268554688e-07,
+      "ray_origin_world": [
+        1.0048524141311646,
+        -0.8799999952316284,
+        2.1488962173461914
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": false,
+      "fallback_used": false,
+      "board_hit": false
+    },
+    {
+      "string": 6,
+      "actual_object": "Guitar / string 6",
+      "u": 1.25,
+      "actual_bezier_centerline_world": [
+        1.0353032350540161,
+        -1.0514976978302002,
+        2.161057949066162
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 9.684608464999152e-07,
+      "ray_origin_world": [
+        1.0353032350540161,
+        -0.8799999952316284,
+        2.161057949066162
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": false,
+      "fallback_used": false,
+      "board_hit": false
+    },
+    {
+      "string": 6,
+      "actual_object": "Guitar / string 6",
+      "u": 1.33,
+      "actual_bezier_centerline_world": [
+        1.1166764497756958,
+        -1.051924228668213,
+        2.1930553913116455
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 6.419616707723741e-07,
+      "ray_origin_world": [
+        1.1166764497756958,
+        -0.8799999952316284,
+        2.1930553913116455
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": false,
+      "fallback_used": false,
+      "board_hit": false
+    },
+    {
+      "string": 6,
+      "actual_object": "Guitar / string 6",
+      "u": 1.36,
+      "actual_bezier_centerline_world": [
+        1.1472605466842651,
+        -1.051795482635498,
+        2.204878807067871
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 5.057621821307283e-07,
+      "ray_origin_world": [
+        1.1472605466842651,
+        -0.8799999952316284,
+        2.204878807067871
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": false,
+      "fallback_used": false,
+      "board_hit": false
+    },
+    {
+      "string": 6,
+      "actual_object": "Guitar / string 6",
+      "u": 1.44,
+      "actual_bezier_centerline_world": [
+        1.2290153503417969,
+        -1.0506141185760498,
+        2.2359070777893066
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 2.6656007498500226e-07,
+      "ray_origin_world": [
+        1.2290153503417969,
+        -0.8799999952316284,
+        2.2359070777893066
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": false,
+      "fallback_used": false,
+      "board_hit": false
+    },
+    {
+      "string": 6,
+      "actual_object": "Guitar / string 6",
+      "u": 1.47,
+      "actual_bezier_centerline_world": [
+        1.2597488164901733,
+        -1.0498459339141846,
+        2.2473509311676025
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 3.5762786865234375e-07,
+      "ray_origin_world": [
+        1.2597488164901733,
+        -0.8799999952316284,
+        2.2473509311676025
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": false,
+      "fallback_used": false,
+      "board_hit": false
+    }
+  ],
+  "declared_toe_pad_targets": [
+    {
+      "intent": "relaxed short toe pad near string 3; not all-string fingering",
+      "digit": 1,
+      "u": 1.2456666666666667,
+      "expected_source": "actual C11 palm/toe mesh volume",
+      "expected_source_id": 1,
+      "target_string": 3,
+      "target_world": [
+        1.0799086093902588,
+        -1.0514957904815674,
+        2.0348658561706543
+      ],
+      "hit": true,
+      "fallback_used": false,
+      "provenance_material_id": 1,
+      "surface_source": "actual closed C11 palm and toes mesh volume",
+      "hit_world": [
+        1.0799086093902588,
+        -1.0483415126800537,
+        2.0348658561706543
+      ],
+      "normal_world": [
+        0.19181658327579498,
+        0.9110682010650635,
+        -0.3649124503135681
+      ],
+      "valid_back_surface": true,
+      "source_matches_declared_intent": true,
+      "signed_near_string_y_gap": -0.005954277701675892
+    },
+    {
+      "intent": "relaxed short toe pad near string 3; not all-string fingering",
+      "digit": 2,
+      "u": 1.355,
+      "expected_source": "actual C11 palm/toe mesh volume",
+      "expected_source_id": 1,
+      "target_string": 3,
+      "target_world": [
+        1.1910821199417114,
+        -1.0518748760223389,
+        2.078688144683838
+      ],
+      "hit": true,
+      "fallback_used": false,
+      "provenance_material_id": 1,
+      "surface_source": "actual closed C11 palm and toes mesh volume",
+      "hit_world": [
+        1.1910821199417114,
+        -1.108841896057129,
+        2.078688144683838
+      ],
+      "normal_world": [
+        -0.15540426969528198,
+        0.7997646927833557,
+        0.5798500180244446
+      ],
+      "valid_back_surface": true,
+      "source_matches_declared_intent": true,
+      "signed_near_string_y_gap": 0.05416702013462782
+    },
+    {
+      "intent": "relaxed short toe pad near string 3; not all-string fingering",
+      "digit": 3,
+      "u": 1.4643333333333335,
+      "expected_source": "actual C11 palm/toe mesh volume",
+      "expected_source_id": 1,
+      "target_string": 3,
+      "target_world": [
+        1.3021504878997803,
+        -1.0500400066375732,
+        2.122777223587036
+      ],
+      "hit": true,
+      "fallback_used": false,
+      "provenance_material_id": 1,
+      "surface_source": "actual closed C11 palm and toes mesh volume",
+      "hit_world": [
+        1.3021504878997803,
+        -1.0461723804473877,
+        2.122777223587036
+      ],
+      "normal_world": [
+        0.0397159680724144,
+        0.9915398359298706,
+        -0.1235780417919159
+      ],
+      "valid_back_surface": true,
+      "source_matches_declared_intent": true,
+      "signed_near_string_y_gap": -0.006667626090347767
+    }
+  ],
+  "declared_hold_support_targets": [
+    {
+      "intent": "palm interior under lower fingerboard edge supports relaxed hold",
+      "u": 1.28,
+      "calibrated_world_y": -0.9830000102519989,
+      "board_depth_front_world": [
+        1.1066546440124512,
+        -1.0130000114440918,
+        2.0693607330322266
+      ],
+      "board_depth_back_world": [
+        1.1066546440124512,
+        -0.953000009059906,
+        2.0693607330322266
+      ],
+      "depth_rule": "midpoint of explicit front/back board ray hits at logical V=0; no nearest fallback",
+      "expected_skin_source": "palm inner supporting surface, original palm or bounded palm/loft blend",
+      "expected_source_ids": [
+        1,
+        3
+      ],
+      "board_ray_origin_world": [
+        1.2268009185791016,
+        -0.9830000400543213,
+        1.764272928237915
+      ],
+      "board_ray_direction_world": [
+        -0.3664192855358124,
+        0.0,
+        0.9304498434066772
+      ],
+      "board_hit": true,
+      "fallback_used": false,
+      "skin_ray_origin_world": [
+        1.1507083177566528,
+        -0.9830000400543213,
+        1.9574952125549316
+      ],
+      "skin_ray_direction_world": [
+        0.3664192855358124,
+        -0.0,
+        -0.9304498434066772
+      ],
+      "skin_hit": true,
+      "board_lower_edge_world": [
+        1.1450207233428955,
+        -0.9830000400543213,
+        1.9719377756118774
+      ],
+      "provenance_material_id": 3,
+      "surface_source": "bounded full-3D field replacement zone in C16r2",
+      "skin_world": [
+        1.1894810199737549,
+        -0.9830000400543213,
+        1.859039545059204
+      ],
+      "skin_normal_world": [
+        -0.2927843928337097,
+        0.7365613579750061,
+        0.6097168922424316
+      ],
+      "valid_upward_facing_support_surface": true,
+      "source_matches_declared_intent": true,
+      "signed_lower_edge_gap_along_v": 0.12133724801242352
+    },
+    {
+      "intent": "palm interior under lower fingerboard edge supports relaxed hold",
+      "u": 1.4,
+      "calibrated_world_y": -0.9830000400543213,
+      "board_depth_front_world": [
+        1.2286897897720337,
+        -1.0130000114440918,
+        2.117419481277466
+      ],
+      "board_depth_back_world": [
+        1.2286897897720337,
+        -0.9530000686645508,
+        2.117419481277466
+      ],
+      "depth_rule": "midpoint of explicit front/back board ray hits at logical V=0; no nearest fallback",
+      "expected_skin_source": "palm inner supporting surface, original palm or bounded palm/loft blend",
+      "expected_source_ids": [
+        1,
+        3
+      ],
+      "board_ray_origin_world": [
+        1.348836064338684,
+        -0.9830000400543213,
+        1.8123314380645752
+      ],
+      "board_ray_direction_world": [
+        -0.3664192855358124,
+        0.0,
+        0.9304498434066772
+      ],
+      "board_hit": true,
+      "fallback_used": false,
+      "skin_ray_origin_world": [
+        1.2727434635162354,
+        -0.9830000400543213,
+        2.005553722381592
+      ],
+      "skin_ray_direction_world": [
+        0.3664192855358124,
+        -0.0,
+        -0.9304498434066772
+      ],
+      "skin_hit": true,
+      "board_lower_edge_world": [
+        1.267055869102478,
+        -0.9830000400543213,
+        2.019996166229248
+      ],
+      "provenance_material_id": 3,
+      "surface_source": "bounded full-3D field replacement zone in C16r2",
+      "skin_world": [
+        1.3115863800048828,
+        -0.9830000400543213,
+        1.9069195985794067
+      ],
+      "skin_normal_world": [
+        -0.17468412220478058,
+        0.6620756387710571,
+        0.7287943959236145
+      ],
+      "valid_upward_facing_support_surface": true,
+      "source_matches_declared_intent": true,
+      "signed_lower_edge_gap_along_v": 0.12152891606092453
+    }
+  ],
+  "hold_intent": "relaxed static support; all-six-string pressing is not required; declared source IDs must match actual hits; no animation/contact pass inferred",
+  "limits": [
+    "Finite samples, not full collision or dynamics proof.",
+    "Source colors identify contributing scalar fields, not skeletal anatomy. Toe number comes from predeclared U strip; no rig/weights/dynamics proof.",
+    "Positive clearance indicates a gap; it must not be called pressing a string. Negative means potential plush/string overlap at that sample.",
+    "No actual playing or per-note fingering has been built or passed."
+  ]
+}

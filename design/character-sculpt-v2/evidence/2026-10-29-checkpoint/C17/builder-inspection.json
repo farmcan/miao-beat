@@ -1,0 +1,26 @@
+{
+  "role": "builder observation, not independent approval",
+  "date": "2026-10-29",
+  "inspected_images": [
+    "A-original-whole.png",
+    "A-original-head.png",
+    "B-ior-one-whole.png",
+    "B-ior-one-head.png",
+    "C-cornea-hidden-whole.png",
+    "C-cornea-hidden-head.png"
+  ],
+  "A_original": "Horizontal darker/blue haze layers and physical bright optical spots remain visible in both irises in the matched head render.",
+  "B_IOR_one": "The objectionable horizontal layering is no longer visible; iris is a flat dark-blue radial ring and the wet bright catchlights are also absent.",
+  "C_cornea_hidden": "Same qualitative loss of band and catchlights as B; body, muzzle, ears, gaze coordinates and guitar remain unchanged.",
+  "supported_conclusion": "In this frozen scene and matched cameras, the objectionable band depends on the existing non-unit-IOR cornea optical stack. It is not adequately explained by the unchanged diffuse radial iris tone alone.",
+  "not_proved": [
+    "Whether refraction or reflection dominates the band.",
+    "Whether cornea geometry/normals, lighting/environment or their interaction is the primary physical cause.",
+    "That either flat unhighlighted B or C meets the approved-reference craft standard.",
+    "Any animation/blink performance."
+  ],
+  "next_minimal_trial": "One diagnostic keeping original IOR 1.38, geometry, lighting and iris fixed while suppressing only the cornea reflection contribution, after checking the actual Blender shader socket semantics. Compare to A. This can separate reflection contribution from refraction more directly; not a final wet-eye material design. If reflection cannot be isolated cleanly with Principled sockets, use an explicitly documented diagnostic shader-lobe separation rather than asserting a misleading single-variable test.",
+  "source_native_unchanged": true,
+  "no_further_candidate_rendered": true,
+  "additional_cost": 0
+}

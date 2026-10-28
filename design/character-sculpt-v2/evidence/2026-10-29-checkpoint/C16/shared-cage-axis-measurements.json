@@ -1,0 +1,40 @@
+{
+  "C8_incoming_axis_Yminus72_to_minus83": [
+    0.07392691113668806,
+    -0.9897526506040896,
+    -0.12216588080134028
+  ],
+  "C11_bottom_control_ring_center": [
+    1.1853354376287317,
+    -1.035,
+    1.6011090240600983
+  ],
+  "C11_mid_dome": [
+    1.2149436296699734,
+    -1.033,
+    1.8242104969075996
+  ],
+  "C11_upper_palm": [
+    1.2286678036526202,
+    -1.05,
+    1.9235892001532053
+  ],
+  "C11_knuckle_ring_center": [
+    1.2089582379592432,
+    -1.07,
+    2.0332949050120255
+  ],
+  "C11_bottom_ring_plane_normal_V": [
+    -0.36641928888561703,
+    0.0,
+    0.9304498399873895
+  ],
+  "C11_bottom_to_knuckle_center_axis": [
+    0.05439985711208751,
+    -0.0805998853770038,
+    0.9952609276081316
+  ],
+  "incoming_to_palm_axis_deg": 92.1658014109616,
+  "incoming_to_bottom_ring_positive_normal_deg": 98.09168015708748,
+  "limits": "Derived from measured C8 section area centroids and frozen C11 authored ring controls; normals are construction values, not a unique anatomical or causal proof."
+}
