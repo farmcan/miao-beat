@@ -2,7 +2,11 @@
 
 更新：2026-10-26。当前读物按“决策 → 证据 → 实现与验收 → 早期归档”组织。网页阅读包由 `scripts/export-review.py` 导出到所有者配置的站点；产品与公开 README 不回链个人入口。
 
-## 最新：Blender 吉他一期测试 · 0.16.0
+## 当前重点：角色精致度与原图一致性
+
+当前Blender样机美术未通过。先执行[精修计划与阶段门槛](character-quality-plan-2026-10-28.md)，阅读[原图差距评审](research/blender-original-gap-review-2026-10-28.md)、[图生3D候选](research/image-to-3d-options-2026-10-28.md)和[专业制作方法](research/character-quality-method-2026-10-28.md)。包含头眼/身体微动作及每轮独立subagent评估要求。
+
+## Blender 技术样机 · 0.16.0（美术否决）
 
 [执行计划与验收](blender-guitar-v1-plan.md) · [场景/动作/资产参考](research/blender-guitar-v1-references.md) · [网页项目源码对照](research/blender-web-input-references.md) · [可编辑Blender工程与复现](../design/blender-guitar-v1/README.md)
 

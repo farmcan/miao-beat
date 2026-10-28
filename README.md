@@ -7,7 +7,7 @@ A small browser instrument playground. Follow a metronome, play your own music, 
 - Generate the next motion video on another computer: [one-document handoff](docs/video-animation-handoff.md), with committed reference images and copyable prompts.
 - Public products never link back to the owner’s personal website or research hub.
 
-2026-10-28 · 0.16.0: Independent [Blender guitar pilot](https://miao-beat.pages.dev/labs/blender-guitar/) uses 24 complete-scene renders and the existing guitar samples/media exporter. This is a right-paw motion study: fixed fretting hand, fast visual inputs may merge, crafted-toy model pending user review. [Plan and measured limits](docs/blender-guitar-v1-plan.md).
+2026-10-28 · 0.16.0: Independent [Blender guitar pilot](https://miao-beat.pages.dev/labs/blender-guitar/) uses 24 complete-scene renders and the existing guitar samples/media exporter. The owner rejected this model's visual fidelity: it is a technical study only, with fixed fretting hand and merged fast visual inputs. Character/art delivery is not complete. [Plan and measured limits](docs/blender-guitar-v1-plan.md).
 
 2026-10-27 · 0.15.0: Local video/audio export captures the complete character and app sound from a recorded take or the selected score. The metronome now has bell, wood and electronic tones, with first/last-beat cues. See [release, native-file validation and limits](docs/media-metronome-release-2026-10-27.md).
 
