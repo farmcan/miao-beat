@@ -68,3 +68,12 @@ root并行验证Godot最小短毛shader的4.7.2 Compatibility可用性（仅中�
 Godot的无毛诊断、减面和8/16层毛小样只是内部损失定位，不作为“已给用户多版成品”。两版都用原图并排，不用当前粗模取代美术标尺。A/B至少交原速/慢放短片、可操作本地工程、同输入事件和P0清单；随机动作有开关/固定seed。尚未做出的版本明确待完成。
 
 C9补充定位纠正：motion reviewer核对源码/receipt发现 `bx_sculpt.on_surface` 的射线miss会自动nearest fallback；root一笔目标(x1.095,z2.235)实落z2.0183，偏约0.217u，不能写成已按预期雕到趾顶。调用方未设命中断言是本次试验不足，不据此称上游bug。C10制作已明确：显式BVH命中/残差检查，miss停止，不自动nearest补位。保留C9失败与错误定位证据，不重跑inflate路线冒充修好。
+
+
+## C10三方复评与下一步并行制作
+
+C10r3按弦爪已由共享掌根与弯趾控制环重建，完整body/腕/掌趾融合为单一闭合网格；真实图见 `design/character-sculpt-v2/evidence/C10-gray/`。三评承认三根短圆弯趾有结构进展、旧横盖问题解除，但一致拦下薄叶片尖掌底与后腕套环P0。29个真实弦采样backface命中不等于29个正确触点：含约-0.01159穿入及+0.06664间隙，7个miss。旧外推contacts表已明确作废。没有彩色/动作扩展。
+
+已并行启动两个独立builder：C11保新掌趾cage，修掌背鼓度/短圆掌根/渐细腕与接触；C12只作用头口鼻/耳壳，制作可套新body的独立脚本，修平板侧颊/软口鼻/三角耳槽。三名非builder评审资格保留，静态两关均严格；单个部位通过不代整体/真实动作。最后仍交Blender与Godot同输入实片对比，不因换工具给粗模贴完成标签。
+
+研究checkpoint `43629bd` 已commit/push至main；采用官方支持的 `[skip ci]` 前缀，随后远端sha一致且GitHubActions runs=0。未请求Cloudflare账户/生产、未wrangler部署，状态页新事件仍pending；不能据此宣称长期自动化或全账户费用已封顶。

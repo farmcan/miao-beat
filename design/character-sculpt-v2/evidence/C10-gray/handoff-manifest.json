@@ -1,0 +1,49 @@
+{
+  "candidate": "C10r3-gray-unreviewed",
+  "source_input_unchanged": true,
+  "body": {
+    "vertices": 587688,
+    "faces": 587175,
+    "components": 1,
+    "component_vertices": [
+      587688
+    ],
+    "boundary_edges": 0,
+    "non_manifold_edges": 0,
+    "signed_volume": 6.608739877811324,
+    "quads": 586791,
+    "triangles": 94
+  },
+  "standalone_hand_audit": {
+    "verts": 2650,
+    "faces": 2648,
+    "quads_pct": 100.0,
+    "non_manifold_edges": 0,
+    "self_intersections": 0,
+    "flipped_faces": 0,
+    "loose_verts": 0,
+    "ngons": 0
+  },
+  "actual_contact_sampling": {
+    "total": 36,
+    "valid_backface_samples": 29,
+    "misses": 7,
+    "invalid_frontface_hits": 0,
+    "minimum_valid_near_surface_clearance_y": -0.01159204263240099,
+    "maximum_valid_near_surface_clearance_y": 0.06664370279759169
+  },
+  "files_sha256": {
+    "miao-c10-paw-topology.blend": "8b839c7db54c3a836b2288e5e7e3e46d9f3dce3e9e643e1f2b341395475e6980",
+    "executed-script-r3.py": "1033428ce625a857252607037485b99c2a106ee82254895f6423b463189af3be",
+    "contact-audit.json": "c5adb1b983201d855d5b58df69866cac1b8939f8a7817bf7a7bdc4549709a242",
+    "gray-front.png": "c4bce1ac57c220a1bed3d896414d02df47e93419fa42fdbc3fed3f64173bbe15",
+    "gray-three-quarter.png": "7420465771655968aa5cd03c492197ed3f7e35917c69f509be55de414eb1bfff",
+    "gray-grip-inside.png": "c3de6c4114feea97c1a603d20fb91ea3942d9baa2dbeb8db68a13b2eab813afa"
+  },
+  "limits": [
+    "Not complete art, animation or contact acceptance.",
+    "Old native groom hidden and binding invalid after topology change.",
+    "Body is one closed connected mesh; high-density whole-body self-intersection not fully audited.",
+    "Per-digit binding and wrist deformation are not implemented."
+  ]
+}

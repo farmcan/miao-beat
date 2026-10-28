@@ -1,0 +1,824 @@
+{
+  "stage": "C10-gray-candidate-unreviewed",
+  "input_sha256": "2432d199edeae964631cb79d96b1d06a5ba2fb908143532fc5bb0a86f600f33e",
+  "script_sha256": "1033428ce625a857252607037485b99c2a106ee82254895f6423b463189af3be",
+  "helper_repository": "https://github.com/scenario-labs/skills",
+  "helper_commit": "d44410f058991f677ccf733a8e86ce95110857eb",
+  "helper_sha256": "81bc2063c7c9ebe69c80b54041d1b70ce7c2fd47538a1d475cc0943f785f3266",
+  "design": {
+    "hand_audit": {
+      "object": "C10 / reference palm and curled short toes",
+      "verts": 2650,
+      "edges": 5296,
+      "faces": 2648,
+      "tris_equivalent": 5296,
+      "tris": 0,
+      "quads": 2648,
+      "ngons": 0,
+      "quads_pct": 100.0,
+      "valence_hist_interior": {
+        "3": 30,
+        "4": 2610,
+        "5": 4,
+        "6": 4,
+        "8": 1,
+        "10": 1
+      },
+      "poles_e3": 30,
+      "poles_e5plus": 10,
+      "valence_6plus": 6,
+      "non_manifold_edges": 0,
+      "boundary_loops": [],
+      "loose_verts": 0,
+      "loose_edges": 0,
+      "zero_area_faces": 0,
+      "duplicate_verts": 0,
+      "flipped_faces": 0,
+      "self_intersections": 0,
+      "edge_len_mean": 0.018698,
+      "edge_len_cv": 0.562,
+      "symmetry_pct": 0.0,
+      "dimensions": [
+        0.3971,
+        0.6701,
+        0.6212
+      ],
+      "ngon_faces_sample": [],
+      "pole_e5_sample": [
+        [
+          1.2666,
+          -1.0141,
+          1.676
+        ],
+        [
+          1.1109,
+          -1.0141,
+          1.6165
+        ],
+        [
+          1.369,
+          -1.0229,
+          1.8855
+        ],
+        [
+          1.0593,
+          -1.0229,
+          1.7647
+        ],
+        [
+          1.1539,
+          -1.1988,
+          2.0036
+        ],
+        [
+          1.2658,
+          -1.1986,
+          2.0474
+        ],
+        [
+          1.2638,
+          -1.0722,
+          2.0525
+        ],
+        [
+          1.1521,
+          -1.072,
+          2.0083
+        ],
+        [
+          1.1854,
+          -1.0415,
+          1.6034
+        ],
+        [
+          1.1994,
+          -0.5596,
+          1.7842
+        ]
+      ],
+      "pole_e3_sample": [
+        [
+          1.1533,
+          -1.0484,
+          1.5988
+        ],
+        [
+          1.1733,
+          -1.0692,
+          1.6067
+        ],
+        [
+          1.198,
+          -1.0692,
+          1.6164
+        ],
+        [
+          1.218,
+          -1.0484,
+          1.6242
+        ],
+        [
+          1.218,
+          -1.0289,
+          1.6242
+        ],
+        [
+          1.198,
+          -1.017,
+          1.6164
+        ],
+        [
+          1.1733,
+          -1.017,
+          1.6067
+        ],
+        [
+          1.1533,
+          -1.0289,
+          1.5988
+        ],
+        [
+          1.0517,
+          -1.0742,
+          2.0551
+        ],
+        [
+          1.0852,
+          -1.0742,
+          2.0683
+        ],
+        [
+          1.0866,
+          -1.0998,
+          2.0647
+        ],
+        [
+          1.0531,
+          -1.0998,
+          2.0515
+        ],
+        [
+          1.1589,
+          -1.0742,
+          2.1114
+        ],
+        [
+          1.1924,
+          -1.0742,
+          2.1246
+        ],
+        [
+          1.1938,
+          -1.0998,
+          2.121
+        ],
+        [
+          1.1603,
+          -1.0998,
+          2.1078
+        ],
+        [
+          1.278,
+          -1.0742,
+          2.1372
+        ],
+        [
+          1.3115,
+          -1.0742,
+          2.1504
+        ],
+        [
+          1.3129,
+          -1.0998,
+          2.1468
+        ],
+        [
+          1.2794,
+          -1.0998,
+          2.1336
+        ],
+        [
+          1.3151,
+          -0.6001,
+          1.705
+        ],
+        [
+          1.2317,
+          -0.5991,
+          1.6388
+        ],
+        [
+          1.1503,
+          -0.5991,
+          1.637
+        ],
+        [
+          1.0979,
+          -0.6001,
+          1.665
+        ],
+        [
+          1.0578,
+          -0.6003,
+          1.7291
+        ]
+      ]
+    },
+    "profile": [
+      [
+        -0.425,
+        1.19,
+        0.028,
+        -1.035,
+        0.038,
+        0.018
+      ],
+      [
+        -0.39,
+        1.205,
+        0.08,
+        -1.025,
+        0.075,
+        0.035
+      ],
+      [
+        -0.325,
+        1.245,
+        0.138,
+        -1.025,
+        0.165,
+        0.045
+      ],
+      [
+        -0.245,
+        1.29,
+        0.168,
+        -1.033,
+        0.205,
+        0.045
+      ],
+      [
+        -0.165,
+        1.335,
+        0.174,
+        -1.05,
+        0.185,
+        0.03
+      ],
+      [
+        -0.065,
+        1.355,
+        0.164,
+        -1.07,
+        0.15,
+        0.02
+      ]
+    ],
+    "toe_cages": [
+      {
+        "digit": 0,
+        "root_indices": [
+          40,
+          41,
+          46,
+          47
+        ],
+        "centreline_world": [
+          [
+            1.0877584218978882,
+            -1.159999966621399,
+            2.014932155609131
+          ],
+          [
+            1.070690631866455,
+            -1.1749999523162842,
+            2.0493245124816895
+          ],
+          [
+            1.0564426183700562,
+            -1.1549999713897705,
+            2.078953742980957
+          ],
+          [
+            1.0484163761138916,
+            -1.125,
+            2.0969369411468506
+          ],
+          [
+            1.0532386302947998,
+            -1.0989999771118164,
+            2.0870893001556396
+          ],
+          [
+            1.0626808404922485,
+            -1.0870000123977661,
+            2.0696637630462646
+          ],
+          [
+            1.071338415145874,
+            -1.0870000123977661,
+            2.0566275119781494
+          ]
+        ],
+        "joint_support_rings": 7,
+        "ring_bridge": "pinned bx_retopo.bridge align=False",
+        "not_individual_rig": true
+      },
+      {
+        "digit": 1,
+        "root_indices": [
+          41,
+          42,
+          45,
+          46
+        ],
+        "centreline_world": [
+          [
+            1.1989461183547974,
+            -1.159999966621399,
+            2.058718681335449
+          ],
+          [
+            1.180123209953308,
+            -1.1749999523162842,
+            2.106515884399414
+          ],
+          [
+            1.168108582496643,
+            -1.1549999713897705,
+            2.1370246410369873
+          ],
+          [
+            1.1608998775482178,
+            -1.125,
+            2.155329942703247
+          ],
+          [
+            1.1649047136306763,
+            -1.0989999771118164,
+            2.145160436630249
+          ],
+          [
+            1.1721135377883911,
+            -1.0870000123977661,
+            2.1268551349639893
+          ],
+          [
+            1.177720308303833,
+            -1.0870000123977661,
+            2.1126177310943604
+          ]
+        ],
+        "joint_support_rings": 7,
+        "ring_bridge": "pinned bx_retopo.bridge align=False",
+        "not_individual_rig": true
+      },
+      {
+        "digit": 2,
+        "root_indices": [
+          42,
+          43,
+          44,
+          45
+        ],
+        "centreline_world": [
+          [
+            1.3101335763931274,
+            -1.159999966621399,
+            2.102505683898926
+          ],
+          [
+            1.3015704154968262,
+            -1.1749999523162842,
+            2.1331987380981445
+          ],
+          [
+            1.2917892932891846,
+            -1.1549999713897705,
+            2.1645870208740234
+          ],
+          [
+            1.2853978872299194,
+            -1.125,
+            2.1832141876220703
+          ],
+          [
+            1.2885854244232178,
+            -1.0989999771118164,
+            2.172722816467285
+          ],
+          [
+            1.2935606241226196,
+            -1.0870000123977661,
+            2.1535379886627197
+          ],
+          [
+            1.296116590499878,
+            -1.0870000123977661,
+            2.138099193572998
+          ]
+        ],
+        "joint_support_rings": 7,
+        "ring_bridge": "pinned bx_retopo.bridge align=False",
+        "not_individual_rig": true
+      }
+    ],
+    "cage": {
+      "vertices": 170,
+      "faces": 163,
+      "components": 1,
+      "component_vertices": [
+        170
+      ],
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "signed_volume": 0.06908129427402472,
+      "quads": 161,
+      "triangles": 0
+    },
+    "subdivided": {
+      "vertices": 2650,
+      "faces": 2648,
+      "components": 1,
+      "component_vertices": [
+        2650
+      ],
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "signed_volume": 0.055659585105122415,
+      "quads": 2648,
+      "triangles": 0
+    },
+    "socket_indices_before_subdiv": [
+      12,
+      13,
+      14,
+      15,
+      23,
+      31,
+      30,
+      29,
+      28,
+      20
+    ],
+    "method": "shared knuckle grid -> explicit curved quad digit rings, rear wrist socket/collar; no toe spheres, no old-hand shrinkwrap"
+  },
+  "original_counts": {
+    "vertices": 609383,
+    "faces": 609060,
+    "shape_keys": [
+      "Basis",
+      "D0 technical only / local paw +0.02Z",
+      "C8 / reference hold sculpt"
+    ]
+  },
+  "frozen_before": {
+    "vertices": 609383,
+    "faces": 609060,
+    "components": 1,
+    "component_vertices": [
+      609383
+    ],
+    "boundary_edges": 0,
+    "non_manifold_edges": 0,
+    "signed_volume": 6.627265217039973,
+    "quads": 608776,
+    "triangles": 78
+  },
+  "after_old_hand_cut": {
+    "vertices": 585159,
+    "faces": 584740,
+    "components": 1,
+    "component_vertices": [
+      585159
+    ],
+    "boundary_edges": 0,
+    "non_manifold_edges": 0,
+    "signed_volume": 6.56355022792571,
+    "quads": 584423,
+    "triangles": 90
+  },
+  "final_body": {
+    "vertices": 587688,
+    "faces": 587175,
+    "components": 1,
+    "component_vertices": [
+      587688
+    ],
+    "boundary_edges": 0,
+    "non_manifold_edges": 0,
+    "signed_volume": 6.608739877811324,
+    "quads": 586791,
+    "triangles": 94
+  },
+  "groom_hidden_because_binding_invalid": true,
+  "old_shape_keys_not_animation_rest": true,
+  "contacts": [
+    {
+      "u": 1.22,
+      "string": 0,
+      "hit": true,
+      "actual_surface_world": [
+        1.0826822519302368,
+        -0.07744216918945312,
+        1.9512627124786377
+      ],
+      "string_world": [
+        1.0826822519302368,
+        -1.0214545726776123,
+        1.9512627124786377
+      ],
+      "string_minus_surface_y": -0.9440124034881592,
+      "note": "First back-to-front body ray may hit torso/arm, not proof of digit contact; full table retained, no nearest fallback."
+    },
+    {
+      "u": 1.22,
+      "string": 1,
+      "hit": true,
+      "actual_surface_world": [
+        1.067864179611206,
+        -0.06997966766357422,
+        1.9888901710510254
+      ],
+      "string_world": [
+        1.067864179611206,
+        -1.0214545726776123,
+        1.9888901710510254
+      ],
+      "string_minus_surface_y": -0.9514749050140381,
+      "note": "First back-to-front body ray may hit torso/arm, not proof of digit contact; full table retained, no nearest fallback."
+    },
+    {
+      "u": 1.22,
+      "string": 2,
+      "hit": true,
+      "actual_surface_world": [
+        1.0530461072921753,
+        -0.06663966178894043,
+        2.026517629623413
+      ],
+      "string_world": [
+        1.0530461072921753,
+        -1.0214545726776123,
+        2.026517629623413
+      ],
+      "string_minus_surface_y": -0.9548149108886719,
+      "note": "First back-to-front body ray may hit torso/arm, not proof of digit contact; full table retained, no nearest fallback."
+    },
+    {
+      "u": 1.22,
+      "string": 3,
+      "hit": true,
+      "actual_surface_world": [
+        1.038228154182434,
+        -0.06849896907806396,
+        2.06414532661438
+      ],
+      "string_world": [
+        1.038228154182434,
+        -1.0214545726776123,
+        2.06414532661438
+      ],
+      "string_minus_surface_y": -0.9529556035995483,
+      "note": "First back-to-front body ray may hit torso/arm, not proof of digit contact; full table retained, no nearest fallback."
+    },
+    {
+      "u": 1.22,
+      "string": 4,
+      "hit": true,
+      "actual_surface_world": [
+        1.0234100818634033,
+        -0.07626903057098389,
+        2.1017727851867676
+      ],
+      "string_world": [
+        1.0234100818634033,
+        -1.0214545726776123,
+        2.1017727851867676
+      ],
+      "string_minus_surface_y": -0.9451855421066284,
+      "note": "First back-to-front body ray may hit torso/arm, not proof of digit contact; full table retained, no nearest fallback."
+    },
+    {
+      "u": 1.22,
+      "string": 5,
+      "hit": true,
+      "actual_surface_world": [
+        1.0085920095443726,
+        -0.09104907512664795,
+        2.1394002437591553
+      ],
+      "string_world": [
+        1.0085920095443726,
+        -1.0214545726776123,
+        2.1394002437591553
+      ],
+      "string_minus_surface_y": -0.9304054975509644,
+      "note": "First back-to-front body ray may hit torso/arm, not proof of digit contact; full table retained, no nearest fallback."
+    },
+    {
+      "u": 1.33,
+      "string": 0,
+      "hit": true,
+      "actual_surface_world": [
+        1.1945477724075317,
+        -0.1957552433013916,
+        1.9953162670135498
+      ],
+      "string_world": [
+        1.1945477724075317,
+        -1.0192322731018066,
+        1.9953162670135498
+      ],
+      "string_minus_surface_y": -0.823477029800415,
+      "note": "First back-to-front body ray may hit torso/arm, not proof of digit contact; full table retained, no nearest fallback."
+    },
+    {
+      "u": 1.33,
+      "string": 1,
+      "hit": true,
+      "actual_surface_world": [
+        1.179729700088501,
+        -0.2011502981185913,
+        2.0329437255859375
+      ],
+      "string_world": [
+        1.179729700088501,
+        -1.0192322731018066,
+        2.0329437255859375
+      ],
+      "string_minus_surface_y": -0.8180819749832153,
+      "note": "First back-to-front body ray may hit torso/arm, not proof of digit contact; full table retained, no nearest fallback."
+    },
+    {
+      "u": 1.33,
+      "string": 2,
+      "hit": true,
+      "actual_surface_world": [
+        1.1649116277694702,
+        -0.21690356731414795,
+        2.070571184158325
+      ],
+      "string_world": [
+        1.1649116277694702,
+        -1.0192322731018066,
+        2.070571184158325
+      ],
+      "string_minus_surface_y": -0.8023287057876587,
+      "note": "First back-to-front body ray may hit torso/arm, not proof of digit contact; full table retained, no nearest fallback."
+    },
+    {
+      "u": 1.33,
+      "string": 3,
+      "hit": true,
+      "actual_surface_world": [
+        1.150093674659729,
+        -0.25390946865081787,
+        2.108198881149292
+      ],
+      "string_world": [
+        1.150093674659729,
+        -1.0192322731018066,
+        2.108198881149292
+      ],
+      "string_minus_surface_y": -0.7653228044509888,
+      "note": "First back-to-front body ray may hit torso/arm, not proof of digit contact; full table retained, no nearest fallback."
+    },
+    {
+      "u": 1.33,
+      "string": 4,
+      "hit": true,
+      "actual_surface_world": [
+        1.1352756023406982,
+        -0.3184168338775635,
+        2.1458263397216797
+      ],
+      "string_world": [
+        1.1352756023406982,
+        -1.0192322731018066,
+        2.1458263397216797
+      ],
+      "string_minus_surface_y": -0.7008154392242432,
+      "note": "First back-to-front body ray may hit torso/arm, not proof of digit contact; full table retained, no nearest fallback."
+    },
+    {
+      "u": 1.33,
+      "string": 5,
+      "hit": true,
+      "actual_surface_world": [
+        1.1204575300216675,
+        -0.4016791582107544,
+        2.1834537982940674
+      ],
+      "string_world": [
+        1.1204575300216675,
+        -1.0192322731018066,
+        2.1834537982940674
+      ],
+      "string_minus_surface_y": -0.6175531148910522,
+      "note": "First back-to-front body ray may hit torso/arm, not proof of digit contact; full table retained, no nearest fallback."
+    },
+    {
+      "u": 1.44,
+      "string": 0,
+      "hit": true,
+      "actual_surface_world": [
+        1.3064132928848267,
+        -0.4993607997894287,
+        2.039369821548462
+      ],
+      "string_world": [
+        1.3064132928848267,
+        -1.0170100927352905,
+        2.039369821548462
+      ],
+      "string_minus_surface_y": -0.5176492929458618,
+      "note": "First back-to-front body ray may hit torso/arm, not proof of digit contact; full table retained, no nearest fallback."
+    },
+    {
+      "u": 1.44,
+      "string": 1,
+      "hit": true,
+      "actual_surface_world": [
+        1.291595220565796,
+        -1.0774590969085693,
+        2.0769972801208496
+      ],
+      "string_world": [
+        1.291595220565796,
+        -1.0170100927352905,
+        2.0769972801208496
+      ],
+      "string_minus_surface_y": 0.06044900417327881,
+      "note": "First back-to-front body ray may hit torso/arm, not proof of digit contact; full table retained, no nearest fallback."
+    },
+    {
+      "u": 1.44,
+      "string": 2,
+      "hit": true,
+      "actual_surface_world": [
+        1.2767771482467651,
+        -1.1227424144744873,
+        2.1146247386932373
+      ],
+      "string_world": [
+        1.2767771482467651,
+        -1.0170100927352905,
+        2.1146247386932373
+      ],
+      "string_minus_surface_y": 0.10573232173919678,
+      "note": "First back-to-front body ray may hit torso/arm, not proof of digit contact; full table retained, no nearest fallback."
+    },
+    {
+      "u": 1.44,
+      "string": 3,
+      "hit": true,
+      "actual_surface_world": [
+        1.261959195137024,
+        -1.0697438716888428,
+        2.152252435684204
+      ],
+      "string_world": [
+        1.261959195137024,
+        -1.0170100927352905,
+        2.152252435684204
+      ],
+      "string_minus_surface_y": 0.052733778953552246,
+      "note": "First back-to-front body ray may hit torso/arm, not proof of digit contact; full table retained, no nearest fallback."
+    },
+    {
+      "u": 1.44,
+      "string": 4,
+      "hit": true,
+      "actual_surface_world": [
+        1.2471411228179932,
+        -1.10410475730896,
+        2.189879894256592
+      ],
+      "string_world": [
+        1.2471411228179932,
+        -1.0170100927352905,
+        2.189879894256592
+      ],
+      "string_minus_surface_y": 0.08709466457366943,
+      "note": "First back-to-front body ray may hit torso/arm, not proof of digit contact; full table retained, no nearest fallback."
+    },
+    {
+      "u": 1.44,
+      "string": 5,
+      "hit": false
+    }
+  ],
+  "limitations": [
+    "This is one fretting-paw structural gray candidate, not overall character acceptance.",
+    "Old picking-paw, head/muzzle/ear P0/P1 remain from C8.",
+    "Old groom/root/UV/shape-key evidence does not transfer after this local topology change.",
+    "No colors, animation, rig, Godot asset, browser, audio or export acceptance.",
+    "Boolean junction near wrist still needs deforming retopology/weights; toe cage is planned, whole cat is not a finished low-poly rig.",
+    "Three nonbuilder reviews pending; topology metrics do not certify natural grip."
+  ],
+  "input_unchanged": true,
+  "seconds": 61.840230226516724,
+  "legacy_contacts_status": "Do not use earlier receipt.contacts for grip: old calculation extrapolated bridge segment slope to neck and rays began behind torso. Historical raw table retained, superseded by this explicit audit.",
+  "replacement_contact_audit": "contact-audit.json"
+}

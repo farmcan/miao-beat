@@ -1,0 +1,1509 @@
+{
+  "stage": "read-only-static-grip-diagnostic-not-contact-pass",
+  "native_scene_sha256": "8b839c7db54c3a836b2288e5e7e3e46d9f3dce3e9e643e1f2b341395475e6980",
+  "source_scene_unchanged": true,
+  "script_sha256": "4582ffcdba3c3ae9f3783e17f3ca9a5c3de0fad4423ebc1dc9310cbd554c367b",
+  "method": "Actual saved six string Bezier controls/handles and matrices, 512 samples/segment; compare256. Skin rays startY=-.88 in front of torso and target toward viewer, explicithit/miss only. Only +Y backface normals permit a gap. Evaluated fingerboard separately raycast.",
+  "legacy_receipt_contacts_status": "Do not use earlier receipt.contacts for grip: old calculation extrapolated bridge segment slope to neck and rays began behind torso. Historical raw table retained, superseded by this explicit audit.",
+  "sampling": {
+    "total": 36,
+    "valid_backface_samples": 29,
+    "misses": 7,
+    "invalid_frontface_hits": 0,
+    "minimum_valid_near_surface_clearance_y": -0.01159204263240099,
+    "maximum_valid_near_surface_clearance_y": 0.06664370279759169
+  },
+  "records": [
+    {
+      "string": 1,
+      "actual_object": "Guitar / string 1",
+      "u": 1.22,
+      "actual_bezier_centerline_world": [
+        1.086422324180603,
+        -1.0510755777359009,
+        1.941765546798706
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 2.2206230175730177e-06,
+      "ray_origin_world": [
+        1.086422324180603,
+        -0.8799999952316284,
+        1.941765546798706
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "actual_skin_world": [
+        1.086422324180603,
+        -1.0551373958587646,
+        1.941765546798706
+      ],
+      "actual_skin_normal_world": [
+        -0.33549919724464417,
+        0.912129282951355,
+        0.2355005145072937
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.0040618181228637695,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.0012618182227015495,
+      "board_hit": false
+    },
+    {
+      "string": 1,
+      "actual_object": "Guitar / string 1",
+      "u": 1.25,
+      "actual_bezier_centerline_world": [
+        1.116989016532898,
+        -1.0514976978302002,
+        1.9536328315734863
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 2.448873351117866e-06,
+      "ray_origin_world": [
+        1.116989016532898,
+        -0.8799999952316284,
+        1.9536328315734863
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "actual_skin_world": [
+        1.116989016532898,
+        -1.048990249633789,
+        1.9536328315734863
+      ],
+      "actual_skin_normal_world": [
+        -0.22224651277065277,
+        0.919897198677063,
+        0.323103129863739
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": -0.002507448196411133,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": -0.005307448096573353,
+      "board_hit": false
+    },
+    {
+      "string": 1,
+      "actual_object": "Guitar / string 1",
+      "u": 1.33,
+      "actual_bezier_centerline_world": [
+        1.1983294486999512,
+        -1.0519243478775024,
+        1.9857137203216553
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 2.44597012146511e-06,
+      "ray_origin_world": [
+        1.1983294486999512,
+        -0.8799999952316284,
+        1.9857137203216553
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "actual_skin_world": [
+        1.1983294486999512,
+        -1.0432666540145874,
+        1.9857137203216553
+      ],
+      "actual_skin_normal_world": [
+        -0.16213464736938477,
+        0.9215890169143677,
+        0.35268399119377136
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": -0.008657693862915039,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": -0.011457693763077259,
+      "board_hit": false
+    },
+    {
+      "string": 1,
+      "actual_object": "Guitar / string 1",
+      "u": 1.36,
+      "actual_bezier_centerline_world": [
+        1.2287629842758179,
+        -1.051795482635498,
+        1.9979193210601807
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 3.1017331674713345e-06,
+      "ray_origin_world": [
+        1.2287629842758179,
+        -0.8799999952316284,
+        1.9979193210601807
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "actual_skin_world": [
+        1.2287629842758179,
+        -1.0430034399032593,
+        1.9979193210601807
+      ],
+      "actual_skin_normal_world": [
+        -0.10486871749162674,
+        0.9252955913543701,
+        0.36445942521095276
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": -0.00879204273223877,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": -0.01159204263240099,
+      "board_hit": false
+    },
+    {
+      "string": 1,
+      "actual_object": "Guitar / string 1",
+      "u": 1.44,
+      "actual_bezier_centerline_world": [
+        1.3097217082977295,
+        -1.0506141185760498,
+        2.03096866607666
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 2.7624679151192826e-06,
+      "ray_origin_world": [
+        1.3097217082977295,
+        -0.8799999952316284,
+        2.03096866607666
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "actual_skin_world": [
+        1.3097217082977295,
+        -1.049546718597412,
+        2.03096866607666
+      ],
+      "actual_skin_normal_world": [
+        -0.004856501240283251,
+        0.9302188158035278,
+        0.36697325110435486
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": -0.0010673999786376953,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": -0.0038673998787999153,
+      "board_hit": false
+    },
+    {
+      "string": 1,
+      "actual_object": "Guitar / string 1",
+      "u": 1.47,
+      "actual_bezier_centerline_world": [
+        1.3400057554244995,
+        -1.0498459339141846,
+        2.0435543060302734
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 3.0648613291221717e-06,
+      "ray_origin_world": [
+        1.3400057554244995,
+        -0.8799999952316284,
+        2.0435543060302734
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "actual_skin_world": [
+        1.3400057554244995,
+        -1.0549029111862183,
+        2.0435543060302734
+      ],
+      "actual_skin_normal_world": [
+        0.09657680243253708,
+        0.9423026442527771,
+        0.32052865624427795
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.005056977272033691,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.0022569773718714714,
+      "board_hit": false
+    },
+    {
+      "string": 2,
+      "actual_object": "Guitar / string 2",
+      "u": 1.22,
+      "actual_bezier_centerline_world": [
+        1.0701124668121338,
+        -1.0511085987091064,
+        1.9831812381744385
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 7.633118912497578e-07,
+      "ray_origin_world": [
+        1.0701124668121338,
+        -0.8799999952316284,
+        1.9831812381744385
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "actual_skin_world": [
+        1.0701124668121338,
+        -1.0778108835220337,
+        1.9831812381744385
+      ],
+      "actual_skin_normal_world": [
+        -0.5396938920021057,
+        0.7771456837654114,
+        0.32368963956832886
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.026702284812927246,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.023902284912765026,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.0701123476028442,
+        -1.0130000114440918,
+        1.9831814765930176
+      ],
+      "board_front_minus_skin_back_y": 0.0648108720779419
+    },
+    {
+      "string": 2,
+      "actual_object": "Guitar / string 2",
+      "u": 1.25,
+      "actual_bezier_centerline_world": [
+        1.1006559133529663,
+        -1.0515309572219849,
+        1.995107650756836
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 9.757700886574328e-07,
+      "ray_origin_world": [
+        1.1006559133529663,
+        -0.8799999952316284,
+        1.995107650756836
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "actual_skin_world": [
+        1.1006559133529663,
+        -1.071600317955017,
+        1.995107650756836
+      ],
+      "actual_skin_normal_world": [
+        -0.21534544229507446,
+        0.8525577783584595,
+        0.476205438375473
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.020069360733032227,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.017269360832870007,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.1006559133529663,
+        -1.0130000114440918,
+        1.9951077699661255
+      ],
+      "board_front_minus_skin_back_y": 0.05860030651092529
+    },
+    {
+      "string": 2,
+      "actual_object": "Guitar / string 2",
+      "u": 1.33,
+      "actual_bezier_centerline_world": [
+        1.1820026636123657,
+        -1.0519556999206543,
+        2.027172088623047
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 1.018524616398517e-06,
+      "ray_origin_world": [
+        1.1820026636123657,
+        -0.8799999952316284,
+        2.027172088623047
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "actual_skin_world": [
+        1.1820026636123657,
+        -1.070420265197754,
+        2.027172088623047
+      ],
+      "actual_skin_normal_world": [
+        -0.2824130058288574,
+        0.7630054354667664,
+        0.5814342498779297
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.01846456527709961,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.01566456537693739,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.1820026636123657,
+        -1.0130000114440918,
+        2.027172327041626
+      ],
+      "board_front_minus_skin_back_y": 0.05742025375366211
+    },
+    {
+      "string": 2,
+      "actual_object": "Guitar / string 2",
+      "u": 1.36,
+      "actual_bezier_centerline_world": [
+        1.2124660015106201,
+        -1.0518256425857544,
+        2.039301872253418
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 7.996802249550068e-07,
+      "ray_origin_world": [
+        1.2124660015106201,
+        -0.8799999952316284,
+        2.039301872253418
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "actual_skin_world": [
+        1.2124660015106201,
+        -1.0679500102996826,
+        2.039301872253418
+      ],
+      "actual_skin_normal_world": [
+        -0.1384841799736023,
+        0.7634198665618896,
+        0.6308822631835938
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.016124367713928223,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.013324367813766003,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.2124660015106201,
+        -1.0130000114440918,
+        2.039302110671997
+      ],
+      "board_front_minus_skin_back_y": 0.05494999885559082
+    },
+    {
+      "string": 2,
+      "actual_object": "Guitar / string 2",
+      "u": 1.44,
+      "actual_bezier_centerline_world": [
+        1.2935833930969238,
+        -1.0506393909454346,
+        2.071949005126953
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 6.848052318737541e-07,
+      "ray_origin_world": [
+        1.2935833930969238,
+        -0.8799999952316284,
+        2.071949005126953
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "actual_skin_world": [
+        1.2935833930969238,
+        -1.0733072757720947,
+        2.071949005126953
+      ],
+      "actual_skin_normal_world": [
+        -0.19128187000751495,
+        0.7982044816017151,
+        0.5712100863456726
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.022667884826660156,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.019867884926497936,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.2935833930969238,
+        -1.0130000114440918,
+        2.0719492435455322
+      ],
+      "board_front_minus_skin_back_y": 0.06030726432800293
+    },
+    {
+      "string": 2,
+      "actual_object": "Guitar / string 2",
+      "u": 1.47,
+      "actual_bezier_centerline_world": [
+        1.323956847190857,
+        -1.0498688220977783,
+        2.0843071937561035
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 7.152557373046875e-07,
+      "ray_origin_world": [
+        1.323956847190857,
+        -0.8799999952316284,
+        2.0843071937561035
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "actual_skin_world": [
+        1.323956847190857,
+        -1.0740519762039185,
+        2.0843071937561035
+      ],
+      "actual_skin_normal_world": [
+        -0.03386042267084122,
+        0.8660034537315369,
+        0.4988902807235718
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.024183154106140137,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.021383154205977917,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.3239569664001465,
+        -1.0130000114440918,
+        2.0843071937561035
+      ],
+      "board_front_minus_skin_back_y": 0.06105196475982666
+    },
+    {
+      "string": 3,
+      "actual_object": "Guitar / string 3",
+      "u": 1.22,
+      "actual_bezier_centerline_world": [
+        1.0537962913513184,
+        -1.0511263608932495,
+        2.0246126651763916
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 1.1980385328675377e-06,
+      "ray_origin_world": [
+        1.0537962913513184,
+        -0.8799999952316284,
+        2.0246126651763916
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "actual_skin_world": [
+        1.0537962913513184,
+        -1.1175599098205566,
+        2.0246126651763916
+      ],
+      "actual_skin_normal_world": [
+        -0.6132199764251709,
+        0.7112749218940735,
+        0.3435829281806946
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.06643354892730713,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.06363354902714491,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.0537961721420288,
+        -1.0130000114440918,
+        2.0246129035949707
+      ],
+      "board_front_minus_skin_back_y": 0.10455989837646484
+    },
+    {
+      "string": 3,
+      "actual_object": "Guitar / string 3",
+      "u": 1.25,
+      "actual_bezier_centerline_world": [
+        1.0843167304992676,
+        -1.0515486001968384,
+        2.036597967147827
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 1.0925711858167266e-06,
+      "ray_origin_world": [
+        1.0843167304992676,
+        -0.8799999952316284,
+        2.036597967147827
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "actual_skin_world": [
+        1.0843167304992676,
+        -1.111917495727539,
+        2.036597967147827
+      ],
+      "actual_skin_normal_world": [
+        -0.13327530026435852,
+        0.7016403675079346,
+        0.6999561190605164
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.060368895530700684,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.057568895630538464,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.0843167304992676,
+        -1.0130000114440918,
+        2.0365982055664062
+      ],
+      "board_front_minus_skin_back_y": 0.09891748428344727
+    },
+    {
+      "string": 3,
+      "actual_object": "Guitar / string 3",
+      "u": 1.33,
+      "actual_bezier_centerline_world": [
+        1.1656701564788818,
+        -1.0519722700119019,
+        2.068645477294922
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 1.1246181883879427e-06,
+      "ray_origin_world": [
+        1.1656701564788818,
+        -0.8799999952316284,
+        2.068645477294922
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "actual_skin_world": [
+        1.1656701564788818,
+        -1.1154875755310059,
+        2.068645477294922
+      ],
+      "actual_skin_normal_world": [
+        -0.6245460510253906,
+        0.7024559378623962,
+        0.3413178026676178
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.063515305519104,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.060715305618941784,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.1656701564788818,
+        -1.0130000114440918,
+        2.068645477294922
+      ],
+      "board_front_minus_skin_back_y": 0.10248756408691406
+    },
+    {
+      "string": 3,
+      "actual_object": "Guitar / string 3",
+      "u": 1.36,
+      "actual_bezier_centerline_world": [
+        1.1961636543273926,
+        -1.0518414974212646,
+        2.0806984901428223
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 1.7398023032339124e-06,
+      "ray_origin_world": [
+        1.1961636543273926,
+        -0.8799999952316284,
+        2.0806984901428223
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "actual_skin_world": [
+        1.1961636543273926,
+        -1.109446406364441,
+        2.0806984901428223
+      ],
+      "actual_skin_normal_world": [
+        -0.09454455226659775,
+        0.7778542637825012,
+        0.621292233467102
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.05760490894317627,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.05480490904301405,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.1961636543273926,
+        -1.0130000114440918,
+        2.0806987285614014
+      ],
+      "board_front_minus_skin_back_y": 0.09644639492034912
+    },
+    {
+      "string": 3,
+      "actual_object": "Guitar / string 3",
+      "u": 1.44,
+      "actual_bezier_centerline_world": [
+        1.2774405479431152,
+        -1.0506523847579956,
+        2.112940788269043
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 1.0115243642614567e-06,
+      "ray_origin_world": [
+        1.2774405479431152,
+        -0.8799999952316284,
+        2.112940788269043
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "actual_skin_world": [
+        1.2774405479431152,
+        -1.1200960874557495,
+        2.112940788269043
+      ],
+      "actual_skin_normal_world": [
+        -0.6132568120956421,
+        0.5276889801025391,
+        0.5877587795257568
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.0694437026977539,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.06664370279759169,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.2774405479431152,
+        -1.0130000114440918,
+        2.112941026687622
+      ],
+      "board_front_minus_skin_back_y": 0.10709607601165771
+    },
+    {
+      "string": 3,
+      "actual_object": "Guitar / string 3",
+      "u": 1.47,
+      "actual_bezier_centerline_world": [
+        1.3079041242599487,
+        -1.0498803853988647,
+        2.1250698566436768
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 1.215700987241932e-06,
+      "ray_origin_world": [
+        1.3079041242599487,
+        -0.8799999952316284,
+        2.1250698566436768
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "actual_skin_world": [
+        1.3079041242599487,
+        -1.1132370233535767,
+        2.1250698566436768
+      ],
+      "actual_skin_normal_world": [
+        -0.19755379855632782,
+        0.5532415509223938,
+        0.8092566728591919
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.06335663795471191,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.060556638054549694,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.3079041242599487,
+        -1.0130000114440918,
+        2.125070095062256
+      ],
+      "board_front_minus_skin_back_y": 0.10023701190948486
+    },
+    {
+      "string": 4,
+      "actual_object": "Guitar / string 4",
+      "u": 1.22,
+      "actual_bezier_centerline_world": [
+        1.0374782085418701,
+        -1.0511263608932495,
+        2.066049575805664
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 1.5125963140069866e-06,
+      "ray_origin_world": [
+        1.0374782085418701,
+        -0.8799999952316284,
+        2.066049575805664
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "actual_skin_world": [
+        1.0374782085418701,
+        -1.0679527521133423,
+        2.066049575805664
+      ],
+      "actual_skin_normal_world": [
+        -0.3110203146934509,
+        0.9290871024131775,
+        -0.20015892386436462
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.016826391220092773,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.014726391294971108,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.0374782085418701,
+        -1.0130000114440918,
+        2.066049814224243
+      ],
+      "board_front_minus_skin_back_y": 0.05495274066925049
+    },
+    {
+      "string": 4,
+      "actual_object": "Guitar / string 4",
+      "u": 1.25,
+      "actual_bezier_centerline_world": [
+        1.0679752826690674,
+        -1.0515486001968384,
+        2.0780935287475586
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 1.3953089607619793e-06,
+      "ray_origin_world": [
+        1.0679752826690674,
+        -0.8799999952316284,
+        2.0780935287475586
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "actual_skin_world": [
+        1.0679752826690674,
+        -1.063323974609375,
+        2.0780935287475586
+      ],
+      "actual_skin_normal_world": [
+        0.07026790082454681,
+        0.9890639781951904,
+        0.12967246770858765
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.011775374412536621,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.009675374487414956,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.0679752826690674,
+        -1.0130000114440918,
+        2.0780935287475586
+      ],
+      "board_front_minus_skin_back_y": 0.0503239631652832
+    },
+    {
+      "string": 4,
+      "actual_object": "Guitar / string 4",
+      "u": 1.33,
+      "actual_bezier_centerline_world": [
+        1.1493353843688965,
+        -1.0519722700119019,
+        2.110124111175537
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 1.215700987241932e-06,
+      "ray_origin_world": [
+        1.1493353843688965,
+        -0.8799999952316284,
+        2.110124111175537
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "actual_skin_world": [
+        1.1493353843688965,
+        -1.0769656896591187,
+        2.110124111175537
+      ],
+      "actual_skin_normal_world": [
+        -0.1269346922636032,
+        0.5108944177627563,
+        -0.850220263004303
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.024993419647216797,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.022893419722095132,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.1493353843688965,
+        -1.0130000114440918,
+        2.110124349594116
+      ],
+      "board_front_minus_skin_back_y": 0.06396567821502686
+    },
+    {
+      "string": 4,
+      "actual_object": "Guitar / string 4",
+      "u": 1.36,
+      "actual_bezier_centerline_world": [
+        1.1798593997955322,
+        -1.0518416166305542,
+        2.122100353240967
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 1.8659205248950158e-06,
+      "ray_origin_world": [
+        1.1798593997955322,
+        -0.8799999952316284,
+        2.122100353240967
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "actual_skin_world": [
+        1.1798593997955322,
+        -1.0680872201919556,
+        2.122100353240967
+      ],
+      "actual_skin_normal_world": [
+        0.3545002341270447,
+        0.5891101360321045,
+        -0.7261397242546082
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.016245603561401367,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.014145603636279702,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.1798593997955322,
+        -1.0130000114440918,
+        2.122100353240967
+      ],
+      "board_front_minus_skin_back_y": 0.05508720874786377
+    },
+    {
+      "string": 4,
+      "actual_object": "Guitar / string 4",
+      "u": 1.44,
+      "actual_bezier_centerline_world": [
+        1.2612959146499634,
+        -1.0506523847579956,
+        2.1539368629455566
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 1.1055014724130278e-06,
+      "ray_origin_world": [
+        1.2612959146499634,
+        -0.8799999952316284,
+        2.1539368629455566
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "actual_skin_world": [
+        1.2612959146499634,
+        -1.0701318979263306,
+        2.1539368629455566
+      ],
+      "actual_skin_normal_world": [
+        -0.418721467256546,
+        0.907045841217041,
+        0.044049374759197235
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.01947951316833496,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.017379513243213296,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.2612959146499634,
+        -1.0130000114440918,
+        2.1539368629455566
+      ],
+      "board_front_minus_skin_back_y": 0.05713188648223877
+    },
+    {
+      "string": 4,
+      "actual_object": "Guitar / string 4",
+      "u": 1.47,
+      "actual_bezier_centerline_world": [
+        1.2918498516082764,
+        -1.0498803853988647,
+        2.165836811065674
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 9.610960183499514e-07,
+      "ray_origin_world": [
+        1.2918498516082764,
+        -0.8799999952316284,
+        2.165836811065674
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "actual_skin_world": [
+        1.2918498516082764,
+        -1.0633618831634521,
+        2.165836811065674
+      ],
+      "actual_skin_normal_world": [
+        0.07595481723546982,
+        0.9925270676612854,
+        0.09550318866968155
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.013481497764587402,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.011381497839465737,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.2918498516082764,
+        -1.0130001306533813,
+        2.165837049484253
+      ],
+      "board_front_minus_skin_back_y": 0.0503617525100708
+    },
+    {
+      "string": 5,
+      "actual_object": "Guitar / string 5",
+      "u": 1.22,
+      "actual_bezier_centerline_world": [
+        1.0211620330810547,
+        -1.0511085987091064,
+        2.1074812412261963
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 1.3058723390225556e-06,
+      "ray_origin_world": [
+        1.0211620330810547,
+        -0.8799999952316284,
+        2.1074812412261963
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "actual_skin_world": [
+        1.0211620330810547,
+        -1.094354271888733,
+        2.1074812412261963
+      ],
+      "actual_skin_normal_world": [
+        -0.6010133028030396,
+        0.556691586971283,
+        0.5734783411026001
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.043245673179626465,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.0411456732545048,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.0211620330810547,
+        -1.0130000114440918,
+        2.1074812412261963
+      ],
+      "board_front_minus_skin_back_y": 0.08135426044464111
+    },
+    {
+      "string": 5,
+      "actual_object": "Guitar / string 5",
+      "u": 1.25,
+      "actual_bezier_centerline_world": [
+        1.051635980606079,
+        -1.0515309572219849,
+        2.119584321975708
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 1.0794860289260646e-06,
+      "ray_origin_world": [
+        1.051635980606079,
+        -0.8799999952316284,
+        2.119584321975708
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "actual_skin_world": [
+        1.051635980606079,
+        -1.0920872688293457,
+        2.119584321975708
+      ],
+      "actual_skin_normal_world": [
+        -0.20344282686710358,
+        0.5677582025527954,
+        0.797660231590271
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.04055631160736084,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.038456311682239175,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.051635980606079,
+        -1.0130000114440918,
+        2.119584560394287
+      ],
+      "board_front_minus_skin_back_y": 0.0790872573852539
+    },
+    {
+      "string": 5,
+      "actual_object": "Guitar / string 5",
+      "u": 1.33,
+      "actual_bezier_centerline_world": [
+        1.1330028772354126,
+        -1.0519556999206543,
+        2.151597499847412
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 1.2839233415447482e-06,
+      "ray_origin_world": [
+        1.1330028772354126,
+        -0.8799999952316284,
+        2.151597499847412
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "actual_skin_world": [
+        1.1330028772354126,
+        -1.0815730094909668,
+        2.151597499847412
+      ],
+      "actual_skin_normal_world": [
+        -0.563987135887146,
+        0.6762984395027161,
+        0.4738553464412689
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.0296173095703125,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.027517309645190835,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.1330028772354126,
+        -1.0130000114440918,
+        2.151597499847412
+      ],
+      "board_front_minus_skin_back_y": 0.068572998046875
+    },
+    {
+      "string": 5,
+      "actual_object": "Guitar / string 5",
+      "u": 1.36,
+      "actual_bezier_centerline_world": [
+        1.1635570526123047,
+        -1.0518256425857544,
+        2.163496732711792
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 1.1246181883879427e-06,
+      "ray_origin_world": [
+        1.1635570526123047,
+        -0.8799999952316284,
+        2.163496732711792
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "actual_skin_world": [
+        1.1635570526123047,
+        -1.075676679611206,
+        2.163496732711792
+      ],
+      "actual_skin_normal_world": [
+        -0.11076469719409943,
+        0.8169485926628113,
+        0.5659737586975098
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.02385103702545166,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.021751037100329995,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.1635571718215942,
+        -1.0130000114440918,
+        2.163496732711792
+      ],
+      "board_front_minus_skin_back_y": 0.06267666816711426
+    },
+    {
+      "string": 5,
+      "actual_object": "Guitar / string 5",
+      "u": 1.44,
+      "actual_bezier_centerline_world": [
+        1.2451534271240234,
+        -1.0506393909454346,
+        2.19492769241333
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 1.1246181883879427e-06,
+      "ray_origin_world": [
+        1.2451534271240234,
+        -0.8799999952316284,
+        2.19492769241333
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": false,
+      "fallback_used": false,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.2451534271240234,
+        -1.0130000114440918,
+        2.19492769241333
+      ]
+    },
+    {
+      "string": 5,
+      "actual_object": "Guitar / string 5",
+      "u": 1.47,
+      "actual_bezier_centerline_world": [
+        1.2757974863052368,
+        -1.0498688220977783,
+        2.2065985202789307
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 1.8000207985092997e-06,
+      "ray_origin_world": [
+        1.2757974863052368,
+        -0.8799999952316284,
+        2.2065985202789307
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "actual_skin_world": [
+        1.2757974863052368,
+        -1.1002044677734375,
+        2.2065985202789307
+      ],
+      "actual_skin_normal_world": [
+        -0.23207911849021912,
+        0.42208331823349,
+        0.8763474822044373
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.05033564567565918,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.048235645750537515,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.2757974863052368,
+        -1.0130000114440918,
+        2.2065987586975098
+      ],
+      "board_front_minus_skin_back_y": 0.0872044563293457
+    },
+    {
+      "string": 6,
+      "actual_object": "Guitar / string 6",
+      "u": 1.22,
+      "actual_bezier_centerline_world": [
+        1.0048524141311646,
+        -1.0510755777359009,
+        2.1488962173461914
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 8.344650268554688e-07,
+      "ray_origin_world": [
+        1.0048524141311646,
+        -0.8799999952316284,
+        2.1488962173461914
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": false,
+      "fallback_used": false,
+      "board_hit": false
+    },
+    {
+      "string": 6,
+      "actual_object": "Guitar / string 6",
+      "u": 1.25,
+      "actual_bezier_centerline_world": [
+        1.0353032350540161,
+        -1.0514976978302002,
+        2.161057949066162
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 9.684608464999152e-07,
+      "ray_origin_world": [
+        1.0353032350540161,
+        -0.8799999952316284,
+        2.161057949066162
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": false,
+      "fallback_used": false,
+      "board_hit": false
+    },
+    {
+      "string": 6,
+      "actual_object": "Guitar / string 6",
+      "u": 1.33,
+      "actual_bezier_centerline_world": [
+        1.1166764497756958,
+        -1.051924228668213,
+        2.1930553913116455
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 6.419616707723741e-07,
+      "ray_origin_world": [
+        1.1166764497756958,
+        -0.8799999952316284,
+        2.1930553913116455
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": false,
+      "fallback_used": false,
+      "board_hit": false
+    },
+    {
+      "string": 6,
+      "actual_object": "Guitar / string 6",
+      "u": 1.36,
+      "actual_bezier_centerline_world": [
+        1.1472605466842651,
+        -1.051795482635498,
+        2.204878807067871
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 5.057621821307283e-07,
+      "ray_origin_world": [
+        1.1472605466842651,
+        -0.8799999952316284,
+        2.204878807067871
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": false,
+      "fallback_used": false,
+      "board_hit": false
+    },
+    {
+      "string": 6,
+      "actual_object": "Guitar / string 6",
+      "u": 1.44,
+      "actual_bezier_centerline_world": [
+        1.2290153503417969,
+        -1.0506141185760498,
+        2.2359070777893066
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 2.6656007498500226e-07,
+      "ray_origin_world": [
+        1.2290153503417969,
+        -0.8799999952316284,
+        2.2359070777893066
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": false,
+      "fallback_used": false,
+      "board_hit": false
+    },
+    {
+      "string": 6,
+      "actual_object": "Guitar / string 6",
+      "u": 1.47,
+      "actual_bezier_centerline_world": [
+        1.2597488164901733,
+        -1.0498459339141846,
+        2.2473509311676025
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 3.5762786865234375e-07,
+      "ray_origin_world": [
+        1.2597488164901733,
+        -0.8799999952316284,
+        2.2473509311676025
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": false,
+      "fallback_used": false,
+      "board_hit": false
+    }
+  ],
+  "limits": [
+    "Finite samples, not full collision or dynamics proof.",
+    "Some rays may hit palm/forearm skin within the restricted paw region; individual toe identity is not certified.",
+    "Positive clearance indicates a gap; it must not be called pressing a string. Negative means potential plush/string overlap at that sample.",
+    "No actual playing or per-note fingering has been built or passed."
+  ]
+}
