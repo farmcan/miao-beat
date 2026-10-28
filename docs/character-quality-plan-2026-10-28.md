@@ -86,3 +86,5 @@ Blender首先是角色资产与动作制作工具。最终可比较：完整离�
 C制作已执行：C2因粉桃色／单色前臂／木材与灰背景未过；C4修色与工艺后，三方仍拦前臂亮细缝；C5改为独立前臂色场保留条纹，1024正／侧实图均无亮缝，三方静态P0解除，**只允许窄D0，不是最终美术完成**。原生工程、操作说明和实际图见[静态候选目录](../design/character-sculpt-v2/README.md)。毛粒、规则条纹、面部浮件、掌体与阴影等P1保留；D0必须检验色场随变形、毛根附着、闭眼穿插及触弦。
 
 Modelr单次试验现已真实完成：精确权重SHA通过，固定seed17、fp16/30步/256octree，在M1 Pro上69.93秒生成213650顶点／427384面；MLX peak5.076GB、time峰值RSS4.173GB，无swap，随后Blender真实导入并渲染1024正／侧／背图。三位非builder的[B身份](research/modelr-static-gray-identity-review-2026-10-28.md)、[B工艺](research/modelr-static-gray-craft-review-2026-10-28.md)、[B接触](research/modelr-static-gray-contact-review-2026-10-28.md)均未放行：保留自然梨体／抱琴底稿价值，面部浮雕、弦网粘连和猫琴未分离阻止直接rig。未跑paint，未公开该权重输出；本机可用性现在有实测证据，美术／可动画性不能随之算成功。
+
+D0已有两项窄实测与独立复核：[rest材质静态对照](research/blender-d0-rest-review-2026-10-28.md)与[真实180k短毛跟随](research/blender-d0-groom-review-2026-10-28.md)。前者最大差2／255仅支持静态外观保持；后者保留1根native UV invalid的发现与修复、最终全180k有效及很小局部形变结果。均不外推正式触弦／眨眼／头动／网页／导出。下一项实际眼睑闭合小样已交builder，尚待图／短片与独立评审；整体目标继续。

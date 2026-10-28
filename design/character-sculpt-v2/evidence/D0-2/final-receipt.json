@@ -1,0 +1,521 @@
+{
+  "status": "D0.2-small-technical-loop-recorded-pending-independent-review",
+  "source_and_input_unchanged_from_execution": true,
+  "final_gpu_renders": 2,
+  "historical_pre_native_fix_gpu_renders": 2,
+  "total_gpu_renders": 4,
+  "failed_attempt_directories": [
+    "attempt-1",
+    "attempt-2",
+    "attempt-3-pre-native-fix"
+  ],
+  "execution": {
+    "stage": "D0.2-groom-attachment",
+    "status": "small_technical_loop_recorded_pending_independent_review",
+    "actual_gpu_renders": 2,
+    "input_sha256": "25d7d95ff1b21dfafbded4e0fb673faa1f45eb7234d2e010dd48f3c0125f15b6",
+    "source_sha256": "4f096be8a6bf97cfe945f65d106ff7413b7f72e24d75bb3c54cdf0cd40a70726",
+    "blender": "5.2.3 LTS",
+    "started_unix": 1793186384.0140932,
+    "existing_uv_layers_preserved": {
+      "UVMap": "85766ea78bdb44e30bd1ea32488914f725837870368028f488c6377c60d6b259"
+    },
+    "bind_uv": {
+      "name": "BindUV",
+      "domain": "CORNER",
+      "data_type": "FLOAT2",
+      "grid_side": 781,
+      "polygon_count": 609060,
+      "max_polygon_corners": 126,
+      "corners": 2436882,
+      "padding_cell_fraction_min": 0.11,
+      "uv_sha256": "78903d2cbcdf4e9f0bb7f12cdc529254c673add09fe989755193ebc53af74b1e",
+      "tile_order": "descending polygon corner count, most complex near UV origin",
+      "tile_to_poly_sha256": "6b5d4ac5a2d128ceb59b59ff05b50d4edb85528559e0a1e18679100134f850f2",
+      "uv_min": [
+        0.0001408838725183159,
+        0.00014084507711231709
+      ],
+      "uv_max": [
+        0.9997128844261169,
+        0.998432457447052
+      ],
+      "triangle_count": 1218762,
+      "degenerate_uv_triangles": 0,
+      "min_abs_uv_triangle_determinant": 3.0897250497029585e-11
+    },
+    "geometry_before_and_after_uv_identical": {
+      "positions": "df537eb22bf8d075158c5d0870258cfcec07e4663d60210aafd604986ac6bf4a",
+      "vertex_normals": "72f286569da76b83b392c5f9e07ca89232308424bb27545ab257bdcbbdf234a8",
+      "loop_vertex_indices": "6bfbba93a1ed9aa3e293b14158095c14eb9ab1192e0ec7ca5772f1452101bcb0",
+      "polygon_loop_starts": "f6ba1f9e978b91043d603f3ea14a6c5a8af287e55a48030a60eceed8ddb359a7",
+      "polygon_loop_totals": "833c6f8535de41eefe0e9c196d92b39d6af293dead855061562a25b89cb84d65",
+      "vertices": 609383,
+      "polygons": 609060,
+      "corners": 2436882,
+      "has_custom_normals": false
+    },
+    "snap": {
+      "result": [
+        "FINISHED"
+      ],
+      "root_shift": {
+        "count": 180000,
+        "finite": true,
+        "max": 4.1674754469985017e-05,
+        "mean": 3.1683089220298875e-08,
+        "p50": 0.0,
+        "p95": 1.1934018492431453e-07,
+        "p99": 2.4027400458748785e-07
+      },
+      "all_point_shift": {
+        "count": 720000,
+        "finite": true,
+        "max": 4.1674754469985017e-05,
+        "mean": 3.168542684736751e-08,
+        "p50": 0.0,
+        "p95": 1.1926748300777466e-07,
+        "p99": 2.4027400458748785e-07
+      },
+      "root_uv_count": 180000,
+      "root_uv_type": "FLOAT2",
+      "root_uv_domain": "CURVE",
+      "root_uv_sha256": "1f9a1cc338430b1b43d79da430f0859896af308ab0872246de3ecdd80be7ac9a",
+      "miao_rest_position_unchanged": true
+    },
+    "root_uv_decode": {
+      "roots": 180000,
+      "assigned_triangles": 180000,
+      "worst_min_barycentric": -8.439530762089628e-05,
+      "root_poly_triangles_max": 124,
+      "outside_tolerance_0_005": 0,
+      "final_root_uv_sha256": "b29c7157e0fcb808dd513f4b3c068e51192496d3230e095dd9d51afce0420e46",
+      "bind_surface_target_error": {
+        "count": 180000,
+        "finite": true,
+        "max": 8.215265233678663e-05,
+        "mean": 4.588229152617782e-07,
+        "p50": 2.904493119197959e-07,
+        "p95": 9.634807824840219e-07,
+        "p99": 3.23472842044318e-06
+      }
+    },
+    "native_uv_validation_raw": {
+      "curves": 180000,
+      "valid": 179999,
+      "invalid_indices": [
+        139545
+      ]
+    },
+    "native_uv_interior_repair": {
+      "count": 1,
+      "barycentric_floor_before_normalize": 0.002,
+      "same_original_polygon_and_triangle": true,
+      "geometry_points_and_custom_rest_unchanged": true,
+      "roots": [
+        {
+          "curve": 139545,
+          "polygon": 597524,
+          "triangle": 1195205,
+          "raw_uv": [
+            0.026004213839769363,
+            0.9805068373680115
+          ],
+          "interior_uv": [
+            0.026003986597061157,
+            0.9805053472518921
+          ],
+          "uv_delta": 1.5073437888163373e-06,
+          "actual_min_barycentric": 0.0020254873829015107
+        }
+      ]
+    },
+    "native_uv_validation_final": {
+      "curves": 180000,
+      "valid": 180000,
+      "invalid_indices": []
+    },
+    "rest_evaluation": {
+      "all_point_error": {
+        "count": 720000,
+        "finite": true,
+        "max": 2.6656007498500226e-07,
+        "mean": 4.0749276217686045e-10,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 3.725290298461914e-09
+      },
+      "root_error": {
+        "count": 180000,
+        "finite": true,
+        "max": 0.0,
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0
+      },
+      "evaluated_rest_attribute_unchanged": true,
+      "all_180k_root_nearest_surface_error": {
+        "count": 180000,
+        "finite": true,
+        "max": 4.737084534000931e-05,
+        "mean": 1.50855740292206e-08,
+        "p50": 0.0,
+        "p95": 5.960464477539063e-08,
+        "p99": 1.3328003749250113e-07
+      }
+    },
+    "technical_shape": {
+      "name": "D0 technical only / local paw +0.02Z",
+      "requested_max_Z": 0.02,
+      "actual_max_Z": 0.011486649513244629,
+      "vertices_nonzero": 25421,
+      "definition": "compact ellipsoid smooth cubic falloff; no natural strum claim",
+      "coordinate_sha256": "22aee80489039eae58c7510385954e67a1f3949a3c2d0d80351ef13fd9ff8fc8"
+    },
+    "deformed_evaluation": {
+      "root_to_corresponding_uv_surface_error": {
+        "count": 180000,
+        "finite": true,
+        "max": 8.215265233678663e-05,
+        "mean": 4.5941591770405075e-07,
+        "p50": 2.9082819921946766e-07,
+        "p95": 9.635485197377825e-07,
+        "p99": 3.23472842044318e-06
+      },
+      "all_180k_root_nearest_surface_error": {
+        "count": 180000,
+        "finite": true,
+        "max": 4.737084534000931e-05,
+        "mean": 1.6427972843721473e-08,
+        "p50": 0.0,
+        "p95": 6.664001874625056e-08,
+        "p99": 1.6858739404357614e-07
+      },
+      "root_movement": {
+        "count": 180000,
+        "finite": true,
+        "max": 0.01143491268157959,
+        "mean": 0.000134315030451902,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.005685243606567414
+      },
+      "roots_moved_gt_1e_6": 6187,
+      "all_point_movement": {
+        "count": 720000,
+        "finite": true,
+        "max": 0.011458007020569878,
+        "mean": 0.00013419606784302295,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.005678985550772379
+      },
+      "evaluated_hair_rest_attribute_unchanged": true,
+      "body_rest_attribute_unchanged": true,
+      "curve_count": 180000,
+      "point_count": 720000
+    },
+    "renders": [
+      {
+        "tag": "baseline-attached",
+        "seconds": 7.252043008804321,
+        "sha256": "81b18969ecd11fdbae30478a8592315f84e240a3a014cc8e4267020c99218d16"
+      },
+      {
+        "tag": "local-paw-perturbation",
+        "seconds": 7.016339063644409,
+        "sha256": "389a9403e25c779f1888f11f870cc162f49addc4742954edde9839cb772dfe41"
+      }
+    ],
+    "input_unchanged": true,
+    "hair_rest_sha256": "7446e079f4e27239ba9c195f1db388a0e2f515a3a2c8269e80eb79693337b419",
+    "body_rest_sha256": "df537eb22bf8d075158c5d0870258cfcec07e4663d60210aafd604986ac6bf4a",
+    "limitations": [
+      "One small technical local shape key, not natural strumming or a rig.",
+      "No blink, head movement, phrase behavior, browser, audio sync or export.",
+      "High-density frozen mesh only; no claim for retopology or another model.",
+      "Custom hair shader lookup still lacks separate AOV proof from D0.1."
+    ],
+    "elapsed_seconds": 26.380080699920654
+  },
+  "reopened_native_uv_validation": {
+    "method": "Official GeometryNodeSampleUVSurface.Is Valid stored/evaluated on all curves; diagnostic group copy in memory only",
+    "curves": 180000,
+    "valid": 180000,
+    "invalid": 0,
+    "invalid_curve_indices": [],
+    "node": "GeometryNodeSampleUVSurface",
+    "renders_added": 0,
+    "saved_asset_modified": false
+  },
+  "existing_png_comparisons": {
+    "static_vs_D01": {
+      "left": "artifacts/character-sculpt-d0/named-rest-position.png",
+      "right": "artifacts/character-sculpt-d0-groom/baseline-attached.png",
+      "regions": {
+        "full": {
+          "rect_xyxy": [
+            0,
+            0,
+            512,
+            512
+          ],
+          "pixels": 262144,
+          "mean_abs_RGBA_8bit": 0.0043010711669921875,
+          "mean_abs_RGB_8bit": 0.005734761555989583,
+          "max_abs_RGB_8bit": 6,
+          "pixels_any_RGB_difference": 4274,
+          "pixels_RGB_diff_gt3": 6,
+          "pixels_RGB_diff_gt12": 0,
+          "max_abs_alpha_8bit": 0
+        },
+        "face_lids": {
+          "rect_xyxy": [
+            175,
+            75,
+            300,
+            160
+          ],
+          "pixels": 10625,
+          "mean_abs_RGBA_8bit": 0.005600000000000001,
+          "mean_abs_RGB_8bit": 0.0074666666666666675,
+          "max_abs_RGB_8bit": 2,
+          "pixels_any_RGB_difference": 226,
+          "pixels_RGB_diff_gt3": 0,
+          "pixels_RGB_diff_gt12": 0,
+          "max_abs_alpha_8bit": 0
+        },
+        "picking_arm_wrist": {
+          "rect_xyxy": [
+            55,
+            200,
+            205,
+            335
+          ],
+          "pixels": 20250,
+          "mean_abs_RGBA_8bit": 0.0061234567901234565,
+          "mean_abs_RGB_8bit": 0.008164609053497942,
+          "max_abs_RGB_8bit": 5,
+          "pixels_any_RGB_difference": 464,
+          "pixels_RGB_diff_gt3": 1,
+          "pixels_RGB_diff_gt12": 0,
+          "max_abs_alpha_8bit": 0
+        },
+        "cream_belly_fur": {
+          "rect_xyxy": [
+            220,
+            355,
+            335,
+            405
+          ],
+          "pixels": 5750,
+          "mean_abs_RGBA_8bit": 0.007565217391304348,
+          "mean_abs_RGB_8bit": 0.01008695652173913,
+          "max_abs_RGB_8bit": 1,
+          "pixels_any_RGB_difference": 174,
+          "pixels_RGB_diff_gt3": 0,
+          "pixels_RGB_diff_gt12": 0,
+          "max_abs_alpha_8bit": 0
+        },
+        "holding_paw": {
+          "rect_xyxy": [
+            350,
+            205,
+            420,
+            300
+          ],
+          "pixels": 6650,
+          "mean_abs_RGBA_8bit": 0.011541353383458648,
+          "mean_abs_RGB_8bit": 0.015388471177944863,
+          "max_abs_RGB_8bit": 4,
+          "pixels_any_RGB_difference": 291,
+          "pixels_RGB_diff_gt3": 1,
+          "pixels_RGB_diff_gt12": 0,
+          "max_abs_alpha_8bit": 0
+        },
+        "outside_paw_upper": {
+          "rect_xyxy": [
+            0,
+            0,
+            512,
+            195
+          ],
+          "pixels": 99840,
+          "mean_abs_RGBA_8bit": 0.002185997596153846,
+          "mean_abs_RGB_8bit": 0.0029146634615384616,
+          "max_abs_RGB_8bit": 6,
+          "pixels_any_RGB_difference": 807,
+          "pixels_RGB_diff_gt3": 4,
+          "pixels_RGB_diff_gt12": 0,
+          "max_abs_alpha_8bit": 0
+        }
+      }
+    },
+    "local_perturbation": {
+      "left": "artifacts/character-sculpt-d0-groom/baseline-attached.png",
+      "right": "artifacts/character-sculpt-d0-groom/local-paw-perturbation.png",
+      "regions": {
+        "full": {
+          "rect_xyxy": [
+            0,
+            0,
+            512,
+            512
+          ],
+          "pixels": 262144,
+          "mean_abs_RGBA_8bit": 0.03682136535644531,
+          "mean_abs_RGB_8bit": 0.04909515380859375,
+          "max_abs_RGB_8bit": 38,
+          "pixels_any_RGB_difference": 18179,
+          "pixels_RGB_diff_gt3": 813,
+          "pixels_RGB_diff_gt12": 133,
+          "max_abs_alpha_8bit": 0
+        },
+        "face_lids": {
+          "rect_xyxy": [
+            175,
+            75,
+            300,
+            160
+          ],
+          "pixels": 10625,
+          "mean_abs_RGBA_8bit": 0.014705882352941176,
+          "mean_abs_RGB_8bit": 0.0196078431372549,
+          "max_abs_RGB_8bit": 7,
+          "pixels_any_RGB_difference": 554,
+          "pixels_RGB_diff_gt3": 3,
+          "pixels_RGB_diff_gt12": 0,
+          "max_abs_alpha_8bit": 0
+        },
+        "picking_arm_wrist": {
+          "rect_xyxy": [
+            55,
+            200,
+            205,
+            335
+          ],
+          "pixels": 20250,
+          "mean_abs_RGBA_8bit": 0.293358024691358,
+          "mean_abs_RGB_8bit": 0.3911440329218107,
+          "max_abs_RGB_8bit": 38,
+          "pixels_any_RGB_difference": 7197,
+          "pixels_RGB_diff_gt3": 766,
+          "pixels_RGB_diff_gt12": 133,
+          "max_abs_alpha_8bit": 0
+        },
+        "cream_belly_fur": {
+          "rect_xyxy": [
+            220,
+            355,
+            335,
+            405
+          ],
+          "pixels": 5750,
+          "mean_abs_RGBA_8bit": 0.023,
+          "mean_abs_RGB_8bit": 0.030666666666666665,
+          "max_abs_RGB_8bit": 2,
+          "pixels_any_RGB_difference": 495,
+          "pixels_RGB_diff_gt3": 0,
+          "pixels_RGB_diff_gt12": 0,
+          "max_abs_alpha_8bit": 0
+        },
+        "holding_paw": {
+          "rect_xyxy": [
+            350,
+            205,
+            420,
+            300
+          ],
+          "pixels": 6650,
+          "mean_abs_RGBA_8bit": 0.016578947368421054,
+          "mean_abs_RGB_8bit": 0.02210526315789474,
+          "max_abs_RGB_8bit": 4,
+          "pixels_any_RGB_difference": 393,
+          "pixels_RGB_diff_gt3": 1,
+          "pixels_RGB_diff_gt12": 0,
+          "max_abs_alpha_8bit": 0
+        },
+        "outside_paw_upper": {
+          "rect_xyxy": [
+            0,
+            0,
+            512,
+            195
+          ],
+          "pixels": 99840,
+          "mean_abs_RGBA_8bit": 0.0025540865384615385,
+          "mean_abs_RGB_8bit": 0.003405448717948718,
+          "max_abs_RGB_8bit": 7,
+          "pixels_any_RGB_difference": 934,
+          "pixels_RGB_diff_gt3": 3,
+          "pixels_RGB_diff_gt12": 0,
+          "max_abs_alpha_8bit": 0
+        }
+      }
+    },
+    "limits": [
+      "No additional render; reuses actual PNGs.",
+      "Static snap/curve evaluation/Monte Carlo differences are not separated by this pair.",
+      "Differences in technical local deformation are not an aesthetic score or natural-strum proof."
+    ]
+  },
+  "files": [
+    {
+      "path": "design/character-sculpt-v2/d0-groom-binding.py",
+      "bytes": 18968,
+      "sha256": "4f096be8a6bf97cfe945f65d106ff7413b7f72e24d75bb3c54cdf0cd40a70726"
+    },
+    {
+      "path": "artifacts/character-sculpt-d0-groom/baseline-attached.png",
+      "bytes": 358365,
+      "sha256": "81b18969ecd11fdbae30478a8592315f84e240a3a014cc8e4267020c99218d16"
+    },
+    {
+      "path": "artifacts/character-sculpt-d0-groom/local-paw-perturbation.png",
+      "bytes": 358233,
+      "sha256": "389a9403e25c779f1888f11f870cc162f49addc4742954edde9839cb772dfe41"
+    },
+    {
+      "path": "artifacts/character-sculpt-d0-groom/baseline-attached.blend",
+      "bytes": 66408380,
+      "sha256": "71dd111471361f5b748dd921ee48845619212d6cfd135b07af52e0e9b15b460f"
+    },
+    {
+      "path": "artifacts/character-sculpt-d0-groom/local-paw-perturbation.blend",
+      "bytes": 66408352,
+      "sha256": "337e686dde082d260a465e97aa0848bb633fdee49120d509ddf3dc42e5376b64"
+    },
+    {
+      "path": "artifacts/character-sculpt-d0-groom/native-root-uv.raw.npy",
+      "bytes": 1440128,
+      "sha256": "92cf2e26de8aeacf15a4212d1dbfe08fe99d683dbc0e896bcf0bb4bceabbbc1a"
+    },
+    {
+      "path": "artifacts/character-sculpt-d0-groom/native-root-uv.npy",
+      "bytes": 1440128,
+      "sha256": "d15fbadd2b2f81fe3d16e647ab40acc35097cf632480f8bdd9b0830d8990c79a"
+    },
+    {
+      "path": "artifacts/character-sculpt-d0-groom/tile-to-polygon.npy",
+      "bytes": 4872608,
+      "sha256": "30e035819263de327a8e0a3ef4881372976b7fe2dfbc3ca511d0249c291912bc"
+    },
+    {
+      "path": "artifacts/character-sculpt-d0-groom/root-uv-decode.npz",
+      "bytes": 4807831,
+      "sha256": "ddb55995caa1fe7c055b30e1798dbd475440a3829f0e52d04be6834b4340b13f"
+    }
+  ],
+  "not_verified": [
+    "Natural strumming",
+    "Rig and large shoulder/elbow deformation",
+    "Retopology transfer",
+    "Blink/head/hand combinations",
+    "Independent hair shader AOV proof",
+    "Browser performance/input/audio synchronization",
+    "Recording and media export",
+    "Full D0 or art acceptance"
+  ],
+  "barycentric_field_note": "root_uv_decode.worst_min_barycentric is the raw decode before the one-root native-validity repair; repaired UV data and final 180000/0 native lookup are separately preserved."
+}

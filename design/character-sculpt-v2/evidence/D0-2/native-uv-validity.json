@@ -1,0 +1,10 @@
+{
+  "method": "Official GeometryNodeSampleUVSurface.Is Valid stored/evaluated on all curves; diagnostic group copy in memory only",
+  "curves": 180000,
+  "valid": 180000,
+  "invalid": 0,
+  "invalid_curve_indices": [],
+  "node": "GeometryNodeSampleUVSurface",
+  "renders_added": 0,
+  "saved_asset_modified": false
+}

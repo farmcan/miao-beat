@@ -1,0 +1,431 @@
+{
+  "status": "D0.1-static-pair-recorded-pending-independent-review",
+  "actual_gpu_render_count": 2,
+  "source_unchanged": true,
+  "generation_receipt": {
+    "stage": "D0.1-rest-binding-unreviewed",
+    "source_sha256": "d380a830212e3939d6276d4e575f0c11bcbbd4dae50ccfabf6e885112cbfe706",
+    "source_unchanged": true,
+    "blender": "5.2.3 LTS",
+    "renders": [
+      {
+        "tag": "baseline-position",
+        "seconds": 7.093565940856934,
+        "beauty_sha256": "3cdb1c464ff10e363aee21499e7ee0ab2bba5672388de5fbedb78846c455e4b0"
+      },
+      {
+        "tag": "named-rest-position",
+        "seconds": 7.198406934738159,
+        "beauty_sha256": "7806ff62a94fa84a46a1fafdc8221ea271ba219fe84068fd2a44866fee3e08db"
+      }
+    ],
+    "seed": 17,
+    "samples": 32,
+    "size": 512,
+    "targets": [
+      {
+        "name": "Miao / continuous pear and rounded-square face",
+        "type": "MESH",
+        "points": 609383,
+        "frozen_modifiers": [
+          [
+            "Palm clearance around neck",
+            "BOOLEAN"
+          ],
+          [
+            "Picking toe crease 1",
+            "BOOLEAN"
+          ],
+          [
+            "Picking toe crease 2",
+            "BOOLEAN"
+          ],
+          [
+            "Holding toe crease 1",
+            "BOOLEAN"
+          ],
+          [
+            "Holding toe crease 2",
+            "BOOLEAN"
+          ],
+          [
+            "Foot toe crease",
+            "BOOLEAN"
+          ],
+          [
+            "Foot toe crease.001",
+            "BOOLEAN"
+          ],
+          [
+            "Foot toe crease.002",
+            "BOOLEAN"
+          ],
+          [
+            "Foot toe crease.003",
+            "BOOLEAN"
+          ],
+          [
+            "Smooth final sculpt surface",
+            "SUBSURF"
+          ],
+          [
+            "Inset ear pocket",
+            "BOOLEAN"
+          ],
+          [
+            "Inset ear pocket.001",
+            "BOOLEAN"
+          ]
+        ],
+        "world_rest_sha256": "df537eb22bf8d075158c5d0870258cfcec07e4663d60210aafd604986ac6bf4a",
+        "rest_attribute_type": "FLOAT_VECTOR",
+        "rest_attribute_domain": "POINT",
+        "rest_readback_max_error": 0.0,
+        "world_min": [
+          -1.8214805126190186,
+          -1.371713399887085,
+          0.00013785294140689075
+        ],
+        "world_max": [
+          1.450645089149475,
+          0.7767598628997803,
+          3.465536594390869
+        ]
+      },
+      {
+        "name": "Face / integrated upper eyelid",
+        "type": "MESH",
+        "points": 3281,
+        "frozen_modifiers": [
+          [
+            "Soft upper lid",
+            "SUBSURF"
+          ]
+        ],
+        "world_rest_sha256": "e87fbf2bf1eda3fa45188e6761d40ce5ddf64ea93621d9116a801d0eb112ee75",
+        "rest_attribute_type": "FLOAT_VECTOR",
+        "rest_attribute_domain": "POINT",
+        "rest_readback_max_error": 0.0,
+        "world_min": [
+          -0.3000498116016388,
+          -0.40277060866355896,
+          2.9858901500701904
+        ],
+        "world_max": [
+          -0.019950225949287415,
+          -0.36580532789230347,
+          3.0939273834228516
+        ]
+      },
+      {
+        "name": "Face / integrated upper eyelid.001",
+        "type": "MESH",
+        "points": 3281,
+        "frozen_modifiers": [
+          [
+            "Soft upper lid",
+            "SUBSURF"
+          ]
+        ],
+        "world_rest_sha256": "e91693689616c546cfaedc958c92d4ff164e5a6aa25414db80d64e282be5e1f3",
+        "rest_attribute_type": "FLOAT_VECTOR",
+        "rest_attribute_domain": "POINT",
+        "rest_readback_max_error": 0.0,
+        "world_min": [
+          0.16995024681091309,
+          -0.38491830229759216,
+          2.9858901500701904
+        ],
+        "world_max": [
+          0.45004984736442566,
+          -0.30588528513908386,
+          3.0939273834228516
+        ]
+      },
+      {
+        "name": "Miao / native short plush",
+        "type": "CURVES",
+        "points": 720000,
+        "frozen_modifiers": [],
+        "world_rest_sha256": "7446e079f4e27239ba9c195f1db388a0e2f515a3a2c8269e80eb79693337b419",
+        "rest_attribute_type": "FLOAT_VECTOR",
+        "rest_attribute_domain": "POINT",
+        "rest_readback_max_error": 0.0,
+        "world_min": [
+          -1.8295968770980835,
+          -1.3805220127105713,
+          -0.00812928844243288
+        ],
+        "world_max": [
+          1.4588053226470947,
+          0.7856655716896057,
+          3.4733235836029053
+        ]
+      }
+    ],
+    "camera_lights_unchanged": true,
+    "aov_setup_error": "TypeError('bpy_struct: item.attr = val: enum \"OPEN_EXR\" not found in (\\'OPEN_EXR_MULTILAYER\\')')",
+    "aov_files": [],
+    "elapsed_seconds": 44.21324801445007,
+    "limits": [
+      "Rest-pose shader binding only; no deformation or anti-swim motion test.",
+      "No rig, eyelid closure, string contact, browser or export verification.",
+      "Unconnected micro-noise Vector input remains as C5; not converted in this experiment.",
+      "Baseline and rest use the same frozen evaluated geometry; not a third C5 render."
+    ]
+  },
+  "pixel_difference": {
+    "comparison": "same frozen evaluated scene, Geometry.Position vs named rest, fixed seed17/512px/32samples",
+    "metrics_8bit_range": [
+      0,
+      255
+    ],
+    "regions": {
+      "full": {
+        "rect_xyxy": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "pixels": 262144,
+        "mean_abs_RGBA_8bit": 0.0002651214599609375,
+        "mean_abs_RGB_8bit": 0.0003534952799479167,
+        "max_abs_RGB_8bit": 2,
+        "pixel_max_q95": 0,
+        "pixel_max_q99": 0,
+        "pixels_any_RGB_difference": 272,
+        "pixels_RGB_diff_gt3": 0,
+        "pixels_RGB_diff_gt12": 0,
+        "max_abs_alpha_8bit": 0
+      },
+      "face_and_lids": {
+        "rect_xyxy": [
+          175,
+          75,
+          300,
+          160
+        ],
+        "pixels": 10625,
+        "mean_abs_RGBA_8bit": 0.0005647058823529411,
+        "mean_abs_RGB_8bit": 0.0007529411764705882,
+        "max_abs_RGB_8bit": 1,
+        "pixel_max_q95": 0,
+        "pixel_max_q99": 0,
+        "pixels_any_RGB_difference": 24,
+        "pixels_RGB_diff_gt3": 0,
+        "pixels_RGB_diff_gt12": 0,
+        "max_abs_alpha_8bit": 0
+      },
+      "picking_arm_and_wrist": {
+        "rect_xyxy": [
+          55,
+          200,
+          205,
+          335
+        ],
+        "pixels": 20250,
+        "mean_abs_RGBA_8bit": 0.0006296296296296296,
+        "mean_abs_RGB_8bit": 0.0008395061728395061,
+        "max_abs_RGB_8bit": 2,
+        "pixel_max_q95": 0,
+        "pixel_max_q99": 0,
+        "pixels_any_RGB_difference": 49,
+        "pixels_RGB_diff_gt3": 0,
+        "pixels_RGB_diff_gt12": 0,
+        "max_abs_alpha_8bit": 0
+      },
+      "picking_arm_stripes": {
+        "rect_xyxy": [
+          65,
+          210,
+          180,
+          275
+        ],
+        "pixels": 7475,
+        "mean_abs_RGBA_8bit": 0.0014381270903010034,
+        "mean_abs_RGB_8bit": 0.0019175027870680045,
+        "max_abs_RGB_8bit": 2,
+        "pixel_max_q95": 0,
+        "pixel_max_q99": 0,
+        "pixels_any_RGB_difference": 41,
+        "pixels_RGB_diff_gt3": 0,
+        "pixels_RGB_diff_gt12": 0,
+        "max_abs_alpha_8bit": 0
+      },
+      "holding_paw": {
+        "rect_xyxy": [
+          350,
+          205,
+          420,
+          300
+        ],
+        "pixels": 6650,
+        "mean_abs_RGBA_8bit": 0.002030075187969925,
+        "mean_abs_RGB_8bit": 0.0027067669172932333,
+        "max_abs_RGB_8bit": 2,
+        "pixel_max_q95": 0,
+        "pixel_max_q99": 0,
+        "pixels_any_RGB_difference": 50,
+        "pixels_RGB_diff_gt3": 0,
+        "pixels_RGB_diff_gt12": 0,
+        "max_abs_alpha_8bit": 0
+      },
+      "cream_belly_and_short_fur": {
+        "rect_xyxy": [
+          220,
+          355,
+          335,
+          405
+        ],
+        "pixels": 5750,
+        "mean_abs_RGBA_8bit": 4.347826086956522e-05,
+        "mean_abs_RGB_8bit": 5.797101449275363e-05,
+        "max_abs_RGB_8bit": 1,
+        "pixel_max_q95": 0,
+        "pixel_max_q99": 0,
+        "pixels_any_RGB_difference": 1,
+        "pixels_RGB_diff_gt3": 0,
+        "pixels_RGB_diff_gt12": 0,
+        "max_abs_alpha_8bit": 0
+      }
+    },
+    "image_sha256": {
+      "baseline-position.png": "3cdb1c464ff10e363aee21499e7ee0ab2bba5672388de5fbedb78846c455e4b0",
+      "named-rest-position.png": "7806ff62a94fa84a46a1fafdc8221ea271ba219fe84068fd2a44866fee3e08db"
+    },
+    "limits": [
+      "This pair does not independently measure repeat-render noise.",
+      "Small beauty differences alone do not independently prove native-hair shader attribute lookup.",
+      "No deformation, anti-swim motion, root binding, contact, browser or export was tested."
+    ]
+  },
+  "nonbeauty_cleanup": [
+    {
+      "file": "miao-d0-position-baseline.blend",
+      "pre_cleanup_sha256": "74a50af1ed3694ae922ed65f3187432f84071cad63a918bafde44d6957139f58",
+      "post_cleanup_sha256": "dc5bc867813e27629852ef8ebad11a23a068889a527b9394abf476209069c024",
+      "removed_nonbeauty_diagnostics": [
+        "D0 audit / D0RestError",
+        "Curves Info",
+        "Vector Math",
+        "Vector Math.001",
+        "D0RestError",
+        "D0RestMagnitude",
+        "D0Hair",
+        "D0RestAlpha",
+        "ViewLayer AOV / D0RestError",
+        "ViewLayer AOV / D0RestMagnitude",
+        "ViewLayer AOV / D0Hair",
+        "ViewLayer AOV / D0RestAlpha"
+      ],
+      "surface_ancestry_sha256_unchanged": "c046a80bb4d5355dba083423860afe3ff14cb991dbe56596bb5b8ee6f3811b6d",
+      "compositor_image_ancestry_sha256_unchanged": "cee60de4d3ae23c09f3edf3f12b727bc21ffeab9820279329712ea7d2bd4a648",
+      "gpu_renders_added": 0
+    },
+    {
+      "file": "miao-d0-rest-bound.blend",
+      "pre_cleanup_sha256": "2450bc074009eb76470f100f3b414c82c0d61f157b3ec00748d951731886c0fc",
+      "post_cleanup_sha256": "25d7d95ff1b21dfafbded4e0fb673faa1f45eb7234d2e010dd48f3c0125f15b6",
+      "removed_nonbeauty_diagnostics": [
+        "D0 audit / D0RestError",
+        "Curves Info",
+        "Vector Math",
+        "Vector Math.001",
+        "D0RestError",
+        "D0RestMagnitude",
+        "D0Hair",
+        "D0RestAlpha",
+        "ViewLayer AOV / D0RestError",
+        "ViewLayer AOV / D0RestMagnitude",
+        "ViewLayer AOV / D0Hair",
+        "ViewLayer AOV / D0RestAlpha"
+      ],
+      "surface_ancestry_sha256_unchanged": "f630f571e775d6208641ce952b70696552763f42a474c90a3902ed23c793ff9b",
+      "compositor_image_ancestry_sha256_unchanged": "cee60de4d3ae23c09f3edf3f12b727bc21ffeab9820279329712ea7d2bd4a648",
+      "gpu_renders_added": 0
+    }
+  ],
+  "stored_attribute_verification": {
+    "status": "stored_attribute_and_shader_graph_verified_cpu_only",
+    "targets": [
+      {
+        "name": "Miao / continuous pear and rounded-square face",
+        "points": 609383,
+        "attribute_sha256": "df537eb22bf8d075158c5d0870258cfcec07e4663d60210aafd604986ac6bf4a",
+        "matches_render_time_values": true
+      },
+      {
+        "name": "Face / integrated upper eyelid",
+        "points": 3281,
+        "attribute_sha256": "e87fbf2bf1eda3fa45188e6761d40ce5ddf64ea93621d9116a801d0eb112ee75",
+        "matches_render_time_values": true
+      },
+      {
+        "name": "Face / integrated upper eyelid.001",
+        "points": 3281,
+        "attribute_sha256": "e91693689616c546cfaedc958c92d4ff164e5a6aa25414db80d64e282be5e1f3",
+        "matches_render_time_values": true
+      },
+      {
+        "name": "Miao / native short plush",
+        "points": 720000,
+        "attribute_sha256": "7446e079f4e27239ba9c195f1db388a0e2f515a3a2c8269e80eb79693337b419",
+        "matches_render_time_values": true
+      }
+    ],
+    "pigment_mask_input": [
+      [
+        "ShaderNodeAttribute",
+        "miao_rest_position",
+        "Vector",
+        "Separate XYZ",
+        "Vector"
+      ]
+    ],
+    "aov_fileoutput_leftovers": 0,
+    "renders_added": 0,
+    "hair_renderer_attribute_lookup": "not_independently_verified; AOV setup failed; CPU storage and near-identical static beauty only"
+  },
+  "artifacts": [
+    {
+      "path": "artifacts/character-sculpt-d0/baseline-position.png",
+      "bytes": 358487,
+      "sha256": "3cdb1c464ff10e363aee21499e7ee0ab2bba5672388de5fbedb78846c455e4b0"
+    },
+    {
+      "path": "artifacts/character-sculpt-d0/named-rest-position.png",
+      "bytes": 358553,
+      "sha256": "7806ff62a94fa84a46a1fafdc8221ea271ba219fe84068fd2a44866fee3e08db"
+    },
+    {
+      "path": "artifacts/character-sculpt-d0/miao-d0-position-baseline.blend",
+      "bytes": 46209408,
+      "sha256": "dc5bc867813e27629852ef8ebad11a23a068889a527b9394abf476209069c024"
+    },
+    {
+      "path": "artifacts/character-sculpt-d0/miao-d0-rest-bound.blend",
+      "bytes": 46209689,
+      "sha256": "25d7d95ff1b21dfafbded4e0fb673faa1f45eb7234d2e010dd48f3c0125f15b6"
+    },
+    {
+      "path": "design/character-sculpt-v2/d0-rest-binding.py",
+      "bytes": 9107,
+      "sha256": "d9e61329839516e3dc2903db95f25a327559c3b6dec27bcfc2c12224c92a6999"
+    },
+    {
+      "path": "artifacts/character-sculpt-d0/d0-rest-binding.executed.py",
+      "bytes": 8619,
+      "sha256": "675d583cdd34edeed3bb670536f4fb947df27a634dd469be34b2e93447dc8d3d"
+    }
+  ],
+  "not_achieved": [
+    "Full D0 acceptance",
+    "independent hair shader attribute lookup proof",
+    "anti-swim deformation test",
+    "groom root binding",
+    "rig or eyelid closure",
+    "string contact",
+    "browser or media export"
+  ]
+}

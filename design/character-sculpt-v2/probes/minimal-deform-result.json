@@ -1,0 +1,222 @@
+{
+  "blender": "5.2.3 LTS",
+  "node": "GeometryNodeDeformCurvesOnSurface",
+  "hair_surface": "ProbeSurface",
+  "surface_uv_map": "BindUV",
+  "root_attribute": {
+    "name": "surface_uv_coordinate",
+    "data_type": "FLOAT2",
+    "domain": "CURVE",
+    "count": 2
+  },
+  "add_rest_position_attribute": true,
+  "evaluated_surface_attributes": [
+    [
+      ".select_vert",
+      "BOOLEAN",
+      "POINT"
+    ],
+    [
+      "position",
+      "FLOAT_VECTOR",
+      "POINT"
+    ],
+    [
+      ".corner_vert",
+      "INT",
+      "CORNER"
+    ],
+    [
+      ".corner_edge",
+      "INT",
+      "CORNER"
+    ],
+    [
+      ".select_poly",
+      "BOOLEAN",
+      "FACE"
+    ],
+    [
+      "sharp_face",
+      "BOOLEAN",
+      "FACE"
+    ],
+    [
+      ".edge_verts",
+      "INT32_2D",
+      "EDGE"
+    ],
+    [
+      ".select_edge",
+      "BOOLEAN",
+      "EDGE"
+    ],
+    [
+      "BindUV",
+      "FLOAT2",
+      "CORNER"
+    ],
+    [
+      "rest_position",
+      "FLOAT_VECTOR",
+      "POINT"
+    ]
+  ],
+  "input_points": [
+    [
+      0.25,
+      0.25,
+      0.0
+    ],
+    [
+      0.25,
+      0.25,
+      0.03
+    ],
+    [
+      0.25,
+      0.25,
+      0.06
+    ],
+    [
+      0.25,
+      0.25,
+      0.09
+    ],
+    [
+      0.75,
+      0.75,
+      0.0
+    ],
+    [
+      0.75,
+      0.75,
+      0.03
+    ],
+    [
+      0.75,
+      0.75,
+      0.06
+    ],
+    [
+      0.75,
+      0.75,
+      0.09
+    ]
+  ],
+  "evaluated_points": [
+    [
+      0.35657694935798645,
+      0.18000000715255737,
+      0.09434546530246735
+    ],
+    [
+      0.3692554831504822,
+      0.18000000715255737,
+      0.12153469771146774
+    ],
+    [
+      0.3819340467453003,
+      0.18000000715255737,
+      0.14872393012046814
+    ],
+    [
+      0.394612580537796,
+      0.18000000715255737,
+      0.17591316998004913
+    ],
+    [
+      0.8097308874130249,
+      0.6800000071525574,
+      -0.11696363985538483
+    ],
+    [
+      0.822409451007843,
+      0.6800000071525574,
+      -0.08977441489696503
+    ],
+    [
+      0.8350879549980164,
+      0.6800000071525574,
+      -0.06258516013622284
+    ],
+    [
+      0.8477665185928345,
+      0.6800000071525574,
+      -0.03539593517780304
+    ]
+  ],
+  "expected_points": [
+    [
+      0.35657694935798645,
+      0.18000000715255737,
+      0.09434545785188675
+    ],
+    [
+      0.3692554831504822,
+      0.18000000715255737,
+      0.12153469026088715
+    ],
+    [
+      0.3819340467453003,
+      0.18000000715255737,
+      0.14872393012046814
+    ],
+    [
+      0.394612580537796,
+      0.18000000715255737,
+      0.17591315507888794
+    ],
+    [
+      0.8097308874130249,
+      0.6800000071525574,
+      -0.11696363985538483
+    ],
+    [
+      0.822409451007843,
+      0.6800000071525574,
+      -0.08977441489696503
+    ],
+    [
+      0.8350879549980164,
+      0.6800000071525574,
+      -0.06258516013622284
+    ],
+    [
+      0.8477665185928345,
+      0.6800000071525574,
+      -0.03539593517780304
+    ]
+  ],
+  "max_position_error": 1.4901161193847656e-08,
+  "curve_count": 2,
+  "point_count": 8,
+  "pass": true,
+  "operator_props": {
+    "surface_set": [
+      {
+        "id": "rna_type",
+        "type": "POINTER",
+        "description": "RNA type definition",
+        "enums": null
+      }
+    ],
+    "snap_curves_to_surface": [
+      {
+        "id": "rna_type",
+        "type": "POINTER",
+        "description": "RNA type definition",
+        "enums": null
+      },
+      {
+        "id": "attach_mode",
+        "type": "ENUM",
+        "description": "How to find the point on the surface to attach to",
+        "enums": [
+          "NEAREST",
+          "DEFORM"
+        ]
+      }
+    ]
+  }
+}

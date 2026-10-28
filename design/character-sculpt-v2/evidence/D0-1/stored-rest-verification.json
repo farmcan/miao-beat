@@ -1,0 +1,41 @@
+{
+  "status": "stored_attribute_and_shader_graph_verified_cpu_only",
+  "targets": [
+    {
+      "name": "Miao / continuous pear and rounded-square face",
+      "points": 609383,
+      "attribute_sha256": "df537eb22bf8d075158c5d0870258cfcec07e4663d60210aafd604986ac6bf4a",
+      "matches_render_time_values": true
+    },
+    {
+      "name": "Face / integrated upper eyelid",
+      "points": 3281,
+      "attribute_sha256": "e87fbf2bf1eda3fa45188e6761d40ce5ddf64ea93621d9116a801d0eb112ee75",
+      "matches_render_time_values": true
+    },
+    {
+      "name": "Face / integrated upper eyelid.001",
+      "points": 3281,
+      "attribute_sha256": "e91693689616c546cfaedc958c92d4ff164e5a6aa25414db80d64e282be5e1f3",
+      "matches_render_time_values": true
+    },
+    {
+      "name": "Miao / native short plush",
+      "points": 720000,
+      "attribute_sha256": "7446e079f4e27239ba9c195f1db388a0e2f515a3a2c8269e80eb79693337b419",
+      "matches_render_time_values": true
+    }
+  ],
+  "pigment_mask_input": [
+    [
+      "ShaderNodeAttribute",
+      "miao_rest_position",
+      "Vector",
+      "Separate XYZ",
+      "Vector"
+    ]
+  ],
+  "aov_fileoutput_leftovers": 0,
+  "renders_added": 0,
+  "hair_renderer_attribute_lookup": "not_independently_verified; AOV setup failed; CPU storage and near-identical static beauty only"
+}

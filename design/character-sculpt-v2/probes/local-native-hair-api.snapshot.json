@@ -1,0 +1,190 @@
+{
+  "blender": "5.2.3 LTS",
+  "build_hash": "e13b728c6880",
+  "rna": {
+    "Curves": [
+      {
+        "id": "surface",
+        "type": "POINTER",
+        "description": "Mesh object that the curves can be attached to"
+      },
+      {
+        "id": "surface_uv_map",
+        "type": "STRING",
+        "description": "The name of the attribute on the surface mesh used to define the attachment of each curve"
+      },
+      {
+        "id": "surface_collision_distance",
+        "type": "FLOAT",
+        "description": "Distance to keep the curves away from the surface"
+      }
+    ],
+    "Object": [
+      {
+        "id": "add_rest_position_attribute",
+        "type": "BOOLEAN",
+        "description": "Add a \"rest_position\" attribute that is a copy of the position attribute before shape keys and modifiers are evaluated"
+      },
+      {
+        "id": "hide_surface_pick",
+        "type": "BOOLEAN",
+        "description": "Disable surface influence during selection, snapping and depth-picking operators. Usually used to avoid semi-transparent objects to affect scene navigation"
+      }
+    ],
+    "GeometryNodeDeformCurvesOnSurface": []
+  },
+  "operators": {
+    "surface_set": "<bpy_struct, Struct(\"CURVES_OT_surface_set\") at 0x927cbd400>",
+    "snap_curves_to_surface": "<bpy_struct, Struct(\"CURVES_OT_snap_curves_to_surface\") at 0x927cbc900>"
+  },
+  "asset_file": "/Applications/Blender.app/Contents/Resources/5.2/datafiles/assets/nodes/procedural_hair_node_assets.blend",
+  "attach_interface": [
+    {
+      "name": "Geometry",
+      "identifier": "Output_1",
+      "direction": "OUTPUT",
+      "socket_type": "NodeSocketGeometry",
+      "default": "None"
+    },
+    {
+      "name": "Surface UV Coordinate",
+      "identifier": "Output_9",
+      "direction": "OUTPUT",
+      "socket_type": "NodeSocketVector",
+      "default": "<bpy_float[3], NodeTreeInterfaceSocketVector.default_value>"
+    },
+    {
+      "name": "Surface Normal",
+      "identifier": "Output_11",
+      "direction": "OUTPUT",
+      "socket_type": "NodeSocketVector",
+      "default": "<bpy_float[3], NodeTreeInterfaceSocketVector.default_value>"
+    },
+    {
+      "name": "Geometry",
+      "identifier": "Input_0",
+      "direction": "INPUT",
+      "socket_type": "NodeSocketGeometry",
+      "default": "None"
+    },
+    {
+      "name": "Surface Source",
+      "identifier": "Socket_2",
+      "direction": "INPUT",
+      "socket_type": "NodeSocketMenu",
+      "default": "Object"
+    },
+    {
+      "name": "Surface Geometry",
+      "identifier": "Input_3",
+      "direction": "INPUT",
+      "socket_type": "NodeSocketGeometry",
+      "default": "None"
+    },
+    {
+      "name": "Surface Object",
+      "identifier": "Input_4",
+      "direction": "INPUT",
+      "socket_type": "NodeSocketObject",
+      "default": "None"
+    },
+    {
+      "name": "Surface UV Map",
+      "identifier": "Input_2",
+      "direction": "INPUT",
+      "socket_type": "NodeSocketVector",
+      "default": "<bpy_float[3], NodeTreeInterfaceSocketVector.default_value>"
+    },
+    {
+      "name": "Resting Surface",
+      "identifier": "Input_6",
+      "direction": "INPUT",
+      "socket_type": "NodeSocketBool",
+      "default": "False"
+    },
+    {
+      "name": "Use Existing Attachment",
+      "identifier": "Input_10",
+      "direction": "INPUT",
+      "socket_type": "NodeSocketBool",
+      "default": "False"
+    },
+    {
+      "name": "Snap to Surface",
+      "identifier": "Input_8",
+      "direction": "INPUT",
+      "socket_type": "NodeSocketBool",
+      "default": "True"
+    },
+    {
+      "name": "Blend along Curve",
+      "identifier": "Input_12",
+      "direction": "INPUT",
+      "socket_type": "NodeSocketFloat",
+      "default": "0.0"
+    },
+    {
+      "name": "Align to Surface Normal",
+      "identifier": "Input_7",
+      "direction": "INPUT",
+      "socket_type": "NodeSocketBool",
+      "default": "False"
+    }
+  ],
+  "attachment_named_attributes": [
+    {
+      "name": "Store Named Attribute",
+      "type": "GeometryNodeStoreNamedAttribute",
+      "group": null,
+      "inputs": [
+        {
+          "name": "Geometry",
+          "identifier": "Geometry",
+          "default": "None"
+        },
+        {
+          "name": "Selection",
+          "identifier": "Selection",
+          "default": "True"
+        },
+        {
+          "name": "Name",
+          "identifier": "Name",
+          "default": "surface_uv_coordinate"
+        },
+        {
+          "name": "Value",
+          "identifier": "Value",
+          "default": "<bpy_float[3], NodeSocketVector.default_value>"
+        }
+      ]
+    },
+    {
+      "name": "Store Named Attribute.001",
+      "type": "GeometryNodeStoreNamedAttribute",
+      "group": null,
+      "inputs": [
+        {
+          "name": "Geometry",
+          "identifier": "Geometry",
+          "default": "None"
+        },
+        {
+          "name": "Selection",
+          "identifier": "Selection",
+          "default": "True"
+        },
+        {
+          "name": "Name",
+          "identifier": "Name",
+          "default": "surface_normal"
+        },
+        {
+          "name": "Value",
+          "identifier": "Value",
+          "default": "<bpy_float[3], NodeSocketVector.default_value>"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "static_vs_D01": {
+    "left": "artifacts/character-sculpt-d0/named-rest-position.png",
+    "right": "artifacts/character-sculpt-d0-groom/baseline-attached.png",
+    "regions": {
+      "full": {
+        "rect_xyxy": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "pixels": 262144,
+        "mean_abs_RGBA_8bit": 0.0043010711669921875,
+        "mean_abs_RGB_8bit": 0.005734761555989583,
+        "max_abs_RGB_8bit": 6,
+        "pixels_any_RGB_difference": 4274,
+        "pixels_RGB_diff_gt3": 6,
+        "pixels_RGB_diff_gt12": 0,
+        "max_abs_alpha_8bit": 0
+      },
+      "face_lids": {
+        "rect_xyxy": [
+          175,
+          75,
+          300,
+          160
+        ],
+        "pixels": 10625,
+        "mean_abs_RGBA_8bit": 0.005600000000000001,
+        "mean_abs_RGB_8bit": 0.0074666666666666675,
+        "max_abs_RGB_8bit": 2,
+        "pixels_any_RGB_difference": 226,
+        "pixels_RGB_diff_gt3": 0,
+        "pixels_RGB_diff_gt12": 0,
+        "max_abs_alpha_8bit": 0
+      },
+      "picking_arm_wrist": {
+        "rect_xyxy": [
+          55,
+          200,
+          205,
+          335
+        ],
+        "pixels": 20250,
+        "mean_abs_RGBA_8bit": 0.0061234567901234565,
+        "mean_abs_RGB_8bit": 0.008164609053497942,
+        "max_abs_RGB_8bit": 5,
+        "pixels_any_RGB_difference": 464,
+        "pixels_RGB_diff_gt3": 1,
+        "pixels_RGB_diff_gt12": 0,
+        "max_abs_alpha_8bit": 0
+      },
+      "cream_belly_fur": {
+        "rect_xyxy": [
+          220,
+          355,
+          335,
+          405
+        ],
+        "pixels": 5750,
+        "mean_abs_RGBA_8bit": 0.007565217391304348,
+        "mean_abs_RGB_8bit": 0.01008695652173913,
+        "max_abs_RGB_8bit": 1,
+        "pixels_any_RGB_difference": 174,
+        "pixels_RGB_diff_gt3": 0,
+        "pixels_RGB_diff_gt12": 0,
+        "max_abs_alpha_8bit": 0
+      },
+      "holding_paw": {
+        "rect_xyxy": [
+          350,
+          205,
+          420,
+          300
+        ],
+        "pixels": 6650,
+        "mean_abs_RGBA_8bit": 0.011541353383458648,
+        "mean_abs_RGB_8bit": 0.015388471177944863,
+        "max_abs_RGB_8bit": 4,
+        "pixels_any_RGB_difference": 291,
+        "pixels_RGB_diff_gt3": 1,
+        "pixels_RGB_diff_gt12": 0,
+        "max_abs_alpha_8bit": 0
+      },
+      "outside_paw_upper": {
+        "rect_xyxy": [
+          0,
+          0,
+          512,
+          195
+        ],
+        "pixels": 99840,
+        "mean_abs_RGBA_8bit": 0.002185997596153846,
+        "mean_abs_RGB_8bit": 0.0029146634615384616,
+        "max_abs_RGB_8bit": 6,
+        "pixels_any_RGB_difference": 807,
+        "pixels_RGB_diff_gt3": 4,
+        "pixels_RGB_diff_gt12": 0,
+        "max_abs_alpha_8bit": 0
+      }
+    }
+  },
+  "local_perturbation": {
+    "left": "artifacts/character-sculpt-d0-groom/baseline-attached.png",
+    "right": "artifacts/character-sculpt-d0-groom/local-paw-perturbation.png",
+    "regions": {
+      "full": {
+        "rect_xyxy": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "pixels": 262144,
+        "mean_abs_RGBA_8bit": 0.03682136535644531,
+        "mean_abs_RGB_8bit": 0.04909515380859375,
+        "max_abs_RGB_8bit": 38,
+        "pixels_any_RGB_difference": 18179,
+        "pixels_RGB_diff_gt3": 813,
+        "pixels_RGB_diff_gt12": 133,
+        "max_abs_alpha_8bit": 0
+      },
+      "face_lids": {
+        "rect_xyxy": [
+          175,
+          75,
+          300,
+          160
+        ],
+        "pixels": 10625,
+        "mean_abs_RGBA_8bit": 0.014705882352941176,
+        "mean_abs_RGB_8bit": 0.0196078431372549,
+        "max_abs_RGB_8bit": 7,
+        "pixels_any_RGB_difference": 554,
+        "pixels_RGB_diff_gt3": 3,
+        "pixels_RGB_diff_gt12": 0,
+        "max_abs_alpha_8bit": 0
+      },
+      "picking_arm_wrist": {
+        "rect_xyxy": [
+          55,
+          200,
+          205,
+          335
+        ],
+        "pixels": 20250,
+        "mean_abs_RGBA_8bit": 0.293358024691358,
+        "mean_abs_RGB_8bit": 0.3911440329218107,
+        "max_abs_RGB_8bit": 38,
+        "pixels_any_RGB_difference": 7197,
+        "pixels_RGB_diff_gt3": 766,
+        "pixels_RGB_diff_gt12": 133,
+        "max_abs_alpha_8bit": 0
+      },
+      "cream_belly_fur": {
+        "rect_xyxy": [
+          220,
+          355,
+          335,
+          405
+        ],
+        "pixels": 5750,
+        "mean_abs_RGBA_8bit": 0.023,
+        "mean_abs_RGB_8bit": 0.030666666666666665,
+        "max_abs_RGB_8bit": 2,
+        "pixels_any_RGB_difference": 495,
+        "pixels_RGB_diff_gt3": 0,
+        "pixels_RGB_diff_gt12": 0,
+        "max_abs_alpha_8bit": 0
+      },
+      "holding_paw": {
+        "rect_xyxy": [
+          350,
+          205,
+          420,
+          300
+        ],
+        "pixels": 6650,
+        "mean_abs_RGBA_8bit": 0.016578947368421054,
+        "mean_abs_RGB_8bit": 0.02210526315789474,
+        "max_abs_RGB_8bit": 4,
+        "pixels_any_RGB_difference": 393,
+        "pixels_RGB_diff_gt3": 1,
+        "pixels_RGB_diff_gt12": 0,
+        "max_abs_alpha_8bit": 0
+      },
+      "outside_paw_upper": {
+        "rect_xyxy": [
+          0,
+          0,
+          512,
+          195
+        ],
+        "pixels": 99840,
+        "mean_abs_RGBA_8bit": 0.0025540865384615385,
+        "mean_abs_RGB_8bit": 0.003405448717948718,
+        "max_abs_RGB_8bit": 7,
+        "pixels_any_RGB_difference": 934,
+        "pixels_RGB_diff_gt3": 3,
+        "pixels_RGB_diff_gt12": 0,
+        "max_abs_alpha_8bit": 0
+      }
+    }
+  },
+  "limits": [
+    "No additional render; reuses actual PNGs.",
+    "Static snap/curve evaluation/Monte Carlo differences are not separated by this pair.",
+    "Differences in technical local deformation are not an aesthetic score or natural-strum proof."
+  ]
+}

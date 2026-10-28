@@ -58,3 +58,9 @@ P1仍包括眼角接缝／鼻圆润度、掌体与指沟、琴位置／包边、
 毛色先改`create-coat-map.py`，再运行它与`shade.py`重建C工程；勿直接改被打包图片而不保存来源。几何以`scene.py`的实测截面与连接面改形，重生灰模后先重新评审，再应用材质。保存你修改的副本；本目录原工程保留作hash对照。
 
 Blender5合成使用独立`CompositorNodeTree`与Group Output；本机已实际验证节点图及成片，参见[官方迁移说明](https://developer.blender.org/docs/release_notes/5.0/migration/compositor_migration/)。ShadowCatcher仅接收真实阴影，再合成奶油背景，避免200m地板铺满画面变灰。
+
+## D0技术小项（静态版之后）
+
+[D0.1 rest材质对照](d0-rest-binding-README.md)实际两张512图近似保持，三方未见新增P0；[D0.2真实短毛绑定](d0-groom-binding-README.md)实际180k native roots官方有效，小局部爪形变有6187根随动，三方仅允许继续下一窄验证。失败与修复未省略，仍不代表完整D0／自然演奏／网页已完成。已有[内建节点与小平面probe](probes/README.md)可复现，但不与实际猫体混为同一证据。
+
+新电脑若Cycles报告没有可用GPU，可先在Render Properties把Device设为CPU；本机Metal仅是已实测环境，其他设备性能未测。原生工程已内嵌参考／色图，作者视口为相机Solid；彩色结果用F12查看，不要将Solid灰模当材质丢失。

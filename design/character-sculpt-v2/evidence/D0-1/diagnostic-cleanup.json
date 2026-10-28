@@ -1,0 +1,46 @@
+[
+  {
+    "file": "miao-d0-position-baseline.blend",
+    "pre_cleanup_sha256": "74a50af1ed3694ae922ed65f3187432f84071cad63a918bafde44d6957139f58",
+    "post_cleanup_sha256": "dc5bc867813e27629852ef8ebad11a23a068889a527b9394abf476209069c024",
+    "removed_nonbeauty_diagnostics": [
+      "D0 audit / D0RestError",
+      "Curves Info",
+      "Vector Math",
+      "Vector Math.001",
+      "D0RestError",
+      "D0RestMagnitude",
+      "D0Hair",
+      "D0RestAlpha",
+      "ViewLayer AOV / D0RestError",
+      "ViewLayer AOV / D0RestMagnitude",
+      "ViewLayer AOV / D0Hair",
+      "ViewLayer AOV / D0RestAlpha"
+    ],
+    "surface_ancestry_sha256_unchanged": "c046a80bb4d5355dba083423860afe3ff14cb991dbe56596bb5b8ee6f3811b6d",
+    "compositor_image_ancestry_sha256_unchanged": "cee60de4d3ae23c09f3edf3f12b727bc21ffeab9820279329712ea7d2bd4a648",
+    "gpu_renders_added": 0
+  },
+  {
+    "file": "miao-d0-rest-bound.blend",
+    "pre_cleanup_sha256": "2450bc074009eb76470f100f3b414c82c0d61f157b3ec00748d951731886c0fc",
+    "post_cleanup_sha256": "25d7d95ff1b21dfafbded4e0fb673faa1f45eb7234d2e010dd48f3c0125f15b6",
+    "removed_nonbeauty_diagnostics": [
+      "D0 audit / D0RestError",
+      "Curves Info",
+      "Vector Math",
+      "Vector Math.001",
+      "D0RestError",
+      "D0RestMagnitude",
+      "D0Hair",
+      "D0RestAlpha",
+      "ViewLayer AOV / D0RestError",
+      "ViewLayer AOV / D0RestMagnitude",
+      "ViewLayer AOV / D0Hair",
+      "ViewLayer AOV / D0RestAlpha"
+    ],
+    "surface_ancestry_sha256_unchanged": "f630f571e775d6208641ce952b70696552763f42a474c90a3902ed23c793ff9b",
+    "compositor_image_ancestry_sha256_unchanged": "cee60de4d3ae23c09f3edf3f12b727bc21ffeab9820279329712ea7d2bd4a648",
+    "gpu_renders_added": 0
+  }
+]
