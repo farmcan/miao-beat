@@ -1,0 +1,186 @@
+[
+  {
+    "pixel": [
+      313,
+      550
+    ],
+    "body_point": [
+      -0.6167773008346558,
+      -1.321298599243164,
+      1.6752512454986572
+    ],
+    "near_object": "Miao / continuous pear and rounded-square face",
+    "scene_hit": [
+      -0.6167773008346558,
+      -1.321298599243164,
+      1.6752512454986572
+    ],
+    "texture_buffer_rgb": [
+      0.9686275124549866,
+      0.45098042488098145,
+      0.12941177189350128
+    ],
+    "note": "RNA image-buffer RGB; source sRGB conversion not assumed. Closest visible object confirms surface pigment issue, not guitar geometry."
+  },
+  {
+    "pixel": [
+      312,
+      560
+    ],
+    "body_point": [
+      -0.6207812428474426,
+      -1.3449010848999023,
+      1.6370065212249756
+    ],
+    "near_object": "Miao / continuous pear and rounded-square face",
+    "scene_hit": [
+      -0.6207812428474426,
+      -1.3449010848999023,
+      1.6370065212249756
+    ],
+    "texture_buffer_rgb": [
+      1.0,
+      0.501960813999176,
+      0.16078431904315948
+    ],
+    "note": "RNA image-buffer RGB; source sRGB conversion not assumed. Closest visible object confirms surface pigment issue, not guitar geometry."
+  },
+  {
+    "pixel": [
+      310,
+      570
+    ],
+    "body_point": [
+      -0.6287890076637268,
+      -1.3608407974243164,
+      1.5981357097625732
+    ],
+    "near_object": "Miao / continuous pear and rounded-square face",
+    "scene_hit": [
+      -0.6287890076637268,
+      -1.3608407974243164,
+      1.5981357097625732
+    ],
+    "texture_buffer_rgb": [
+      1.0,
+      0.5098039507865906,
+      0.1725490242242813
+    ],
+    "note": "RNA image-buffer RGB; source sRGB conversion not assumed. Closest visible object confirms surface pigment issue, not guitar geometry."
+  },
+  {
+    "pixel": [
+      308,
+      580
+    ],
+    "body_point": [
+      -0.6367968320846558,
+      -1.3694257736206055,
+      1.5586645603179932
+    ],
+    "near_object": "Miao / continuous pear and rounded-square face",
+    "scene_hit": [
+      -0.6367968320846558,
+      -1.3694257736206055,
+      1.5586645603179932
+    ],
+    "texture_buffer_rgb": [
+      1.0,
+      0.5098039507865906,
+      0.1725490242242813
+    ],
+    "note": "RNA image-buffer RGB; source sRGB conversion not assumed. Closest visible object confirms surface pigment issue, not guitar geometry."
+  },
+  {
+    "pixel": [
+      306,
+      590
+    ],
+    "body_point": [
+      -0.6448046565055847,
+      -1.3713750839233398,
+      1.5186514854431152
+    ],
+    "near_object": "Miao / continuous pear and rounded-square face",
+    "scene_hit": [
+      -0.6448046565055847,
+      -1.3713750839233398,
+      1.5186514854431152
+    ],
+    "texture_buffer_rgb": [
+      1.0,
+      0.49803924560546875,
+      0.1568627506494522
+    ],
+    "note": "RNA image-buffer RGB; source sRGB conversion not assumed. Closest visible object confirms surface pigment issue, not guitar geometry."
+  },
+  {
+    "pixel": [
+      306,
+      604
+    ],
+    "body_point": [
+      -0.6448046565055847,
+      -1.3641672134399414,
+      1.4618213176727295
+    ],
+    "near_object": "Miao / continuous pear and rounded-square face",
+    "scene_hit": [
+      -0.6448046565055847,
+      -1.3641672134399414,
+      1.4618213176727295
+    ],
+    "texture_buffer_rgb": [
+      1.0,
+      0.5647059082984924,
+      0.24705883860588074
+    ],
+    "note": "RNA image-buffer RGB; source sRGB conversion not assumed. Closest visible object confirms surface pigment issue, not guitar geometry."
+  },
+  {
+    "pixel": [
+      315,
+      575
+    ],
+    "body_point": [
+      -0.6087694764137268,
+      -1.3639965057373047,
+      1.5783073902130127
+    ],
+    "near_object": "Miao / continuous pear and rounded-square face",
+    "scene_hit": [
+      -0.6087694764137268,
+      -1.3639965057373047,
+      1.5783073902130127
+    ],
+    "texture_buffer_rgb": [
+      1.0,
+      0.7960785031318665,
+      0.5490196347236633
+    ],
+    "note": "RNA image-buffer RGB; source sRGB conversion not assumed. Closest visible object confirms surface pigment issue, not guitar geometry."
+  },
+  {
+    "pixel": [
+      301,
+      575
+    ],
+    "body_point": [
+      -0.6648241877555847,
+      -1.366220474243164,
+      1.578489065170288
+    ],
+    "near_object": "Miao / continuous pear and rounded-square face",
+    "scene_hit": [
+      -0.6648241877555847,
+      -1.366220474243164,
+      1.578489065170288
+    ],
+    "texture_buffer_rgb": [
+      1.0,
+      0.4862745404243469,
+      0.1411764770746231
+    ],
+    "note": "RNA image-buffer RGB; source sRGB conversion not assumed. Closest visible object confirms surface pigment issue, not guitar geometry."
+  }
+]

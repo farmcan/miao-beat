@@ -1,0 +1,46 @@
+[
+  {
+    "file": "miao-reference-gray.blend",
+    "source_sha256": "b4cf068ecac7e3ab24b47d2e611656b32b4d9b7d8f79a738faf3da9e6fa0301d",
+    "packaged_sha256": "ea841df8fed40ce6dd2956976df6842befb6c833934823c25dc0696f6f37bdfc",
+    "geometry_sha256_unchanged": "c9dcdfa8a839354d3394ae252531cdcc87f782adf8abd6598f0f5fba449255cb",
+    "packed_image_sha256": {
+      "idle.jpg": "4418fd737891283f42568306cb427b1f7604a86cae5513b1d6c49b3c31f338d1"
+    },
+    "changes": [
+      "relative render path",
+      "relative names for already packed images",
+      "camera solid authoring viewport",
+      "16 preview samples",
+      "compressed .blend"
+    ],
+    "not_changed": [
+      "mesh/hair coordinates",
+      "camera world matrix",
+      "shading nodes/materials"
+    ]
+  },
+  {
+    "file": "miao-plush-static-study.blend",
+    "source_sha256": "fa84cc6cc26163c212ca50eb82c52253826dae69419b781d7450a90927a4b0dc",
+    "packaged_sha256": "d380a830212e3939d6276d4e575f0c11bcbbd4dae50ccfabf6e885112cbfe706",
+    "geometry_sha256_unchanged": "e4b4bf983ecef3bfd36158bdd9084cfec0eac097788627e6983c2e1aa911acec",
+    "packed_image_sha256": {
+      "coat-arm-pigment.png": "6488d0329bd1a81d9b8176480cc632631f7709d77b5511ed9e22ce31bfab54b5",
+      "coat-pigment.png": "a91075e0deb9bb3d569ca1edfc99e34ce4b99090868c3178188d28fca5995c97",
+      "idle.jpg": "4418fd737891283f42568306cb427b1f7604a86cae5513b1d6c49b3c31f338d1"
+    },
+    "changes": [
+      "relative render path",
+      "relative names for already packed images",
+      "camera solid authoring viewport",
+      "16 preview samples",
+      "compressed .blend"
+    ],
+    "not_changed": [
+      "mesh/hair coordinates",
+      "camera world matrix",
+      "shading nodes/materials"
+    ]
+  }
+]

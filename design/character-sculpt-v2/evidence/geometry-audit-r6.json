@@ -1,0 +1,454 @@
+{
+  "stage": "static-geometry-audit",
+  "evaluated_vertices": 610764,
+  "evaluated_faces": 610762,
+  "connected_component_vertex_counts": [
+    610764
+  ],
+  "picking_probes": [
+    {
+      "string": 1,
+      "x": -0.57,
+      "z": 1.05095,
+      "string_y": -1.052451,
+      "ray_body_intersections_y": [
+        -0.677309,
+        0.737309
+      ],
+      "paw_intervals": [],
+      "string_inside_paw": false,
+      "note": "ray-classified local volume, not physical cloth/string simulation"
+    },
+    {
+      "string": 1,
+      "x": -0.52,
+      "z": 1.072484,
+      "string_y": -1.051527,
+      "ray_body_intersections_y": [
+        -0.684006,
+        0.744006
+      ],
+      "paw_intervals": [],
+      "string_inside_paw": false,
+      "note": "ray-classified local volume, not physical cloth/string simulation"
+    },
+    {
+      "string": 1,
+      "x": -0.47,
+      "z": 1.094017,
+      "string_y": -1.050603,
+      "ray_body_intersections_y": [
+        -0.689547,
+        0.749546
+      ],
+      "paw_intervals": [],
+      "string_inside_paw": false,
+      "note": "ray-classified local volume, not physical cloth/string simulation"
+    },
+    {
+      "string": 1,
+      "x": -0.42,
+      "z": 1.115551,
+      "string_y": -1.049678,
+      "ray_body_intersections_y": [
+        -0.694,
+        0.754
+      ],
+      "paw_intervals": [],
+      "string_inside_paw": false,
+      "note": "ray-classified local volume, not physical cloth/string simulation"
+    },
+    {
+      "string": 1,
+      "x": -0.37,
+      "z": 1.137084,
+      "string_y": -1.048754,
+      "ray_body_intersections_y": [
+        -0.697362,
+        0.757362
+      ],
+      "paw_intervals": [],
+      "string_inside_paw": false,
+      "note": "ray-classified local volume, not physical cloth/string simulation"
+    },
+    {
+      "string": 2,
+      "x": -0.57,
+      "z": 1.09889,
+      "string_y": -1.052129,
+      "ray_body_intersections_y": [
+        -0.674887,
+        0.73489
+      ],
+      "paw_intervals": [],
+      "string_inside_paw": false,
+      "note": "ray-classified local volume, not physical cloth/string simulation"
+    },
+    {
+      "string": 2,
+      "x": -0.52,
+      "z": 1.120423,
+      "string_y": -1.051205,
+      "ray_body_intersections_y": [
+        -0.681233,
+        0.741232
+      ],
+      "paw_intervals": [],
+      "string_inside_paw": false,
+      "note": "ray-classified local volume, not physical cloth/string simulation"
+    },
+    {
+      "string": 2,
+      "x": -0.47,
+      "z": 1.141957,
+      "string_y": -1.050281,
+      "ray_body_intersections_y": [
+        -0.686488,
+        0.746488
+      ],
+      "paw_intervals": [],
+      "string_inside_paw": false,
+      "note": "ray-classified local volume, not physical cloth/string simulation"
+    },
+    {
+      "string": 2,
+      "x": -0.42,
+      "z": 1.16349,
+      "string_y": -1.049356,
+      "ray_body_intersections_y": [
+        -0.690711,
+        0.750711
+      ],
+      "paw_intervals": [],
+      "string_inside_paw": false,
+      "note": "ray-classified local volume, not physical cloth/string simulation"
+    },
+    {
+      "string": 2,
+      "x": -0.37,
+      "z": 1.185024,
+      "string_y": -1.048432,
+      "ray_body_intersections_y": [
+        -0.693657,
+        0.753657
+      ],
+      "paw_intervals": [],
+      "string_inside_paw": false,
+      "note": "ray-classified local volume, not physical cloth/string simulation"
+    },
+    {
+      "string": 3,
+      "x": -0.57,
+      "z": 1.14683,
+      "string_y": -1.051807,
+      "ray_body_intersections_y": [
+        -0.671643,
+        0.731642
+      ],
+      "paw_intervals": [],
+      "string_inside_paw": false,
+      "note": "ray-classified local volume, not physical cloth/string simulation"
+    },
+    {
+      "string": 3,
+      "x": -0.52,
+      "z": 1.168363,
+      "string_y": -1.050883,
+      "ray_body_intersections_y": [
+        -0.677719,
+        0.737718
+      ],
+      "paw_intervals": [],
+      "string_inside_paw": false,
+      "note": "ray-classified local volume, not physical cloth/string simulation"
+    },
+    {
+      "string": 3,
+      "x": -0.47,
+      "z": 1.189897,
+      "string_y": -1.049959,
+      "ray_body_intersections_y": [
+        -0.682593,
+        0.742593
+      ],
+      "paw_intervals": [],
+      "string_inside_paw": false,
+      "note": "ray-classified local volume, not physical cloth/string simulation"
+    },
+    {
+      "string": 3,
+      "x": -0.42,
+      "z": 1.21143,
+      "string_y": -1.049035,
+      "ray_body_intersections_y": [
+        -0.686298,
+        0.746297
+      ],
+      "paw_intervals": [],
+      "string_inside_paw": false,
+      "note": "ray-classified local volume, not physical cloth/string simulation"
+    },
+    {
+      "string": 3,
+      "x": -0.37,
+      "z": 1.232963,
+      "string_y": -1.04811,
+      "ray_body_intersections_y": [
+        -0.688798,
+        0.748797
+      ],
+      "paw_intervals": [],
+      "string_inside_paw": false,
+      "note": "ray-classified local volume, not physical cloth/string simulation"
+    },
+    {
+      "string": 4,
+      "x": -0.57,
+      "z": 1.194769,
+      "string_y": -1.051485,
+      "ray_body_intersections_y": [
+        -0.667474,
+        0.727473
+      ],
+      "paw_intervals": [],
+      "string_inside_paw": false,
+      "note": "ray-classified local volume, not physical cloth/string simulation"
+    },
+    {
+      "string": 4,
+      "x": -0.52,
+      "z": 1.216303,
+      "string_y": -1.050561,
+      "ray_body_intersections_y": [
+        -0.673096,
+        0.733095
+      ],
+      "paw_intervals": [],
+      "string_inside_paw": false,
+      "note": "ray-classified local volume, not physical cloth/string simulation"
+    },
+    {
+      "string": 4,
+      "x": -0.47,
+      "z": 1.237836,
+      "string_y": -1.049637,
+      "ray_body_intersections_y": [
+        -0.6775,
+        0.737499
+      ],
+      "paw_intervals": [],
+      "string_inside_paw": false,
+      "note": "ray-classified local volume, not physical cloth/string simulation"
+    },
+    {
+      "string": 4,
+      "x": -0.42,
+      "z": 1.25937,
+      "string_y": -1.048713,
+      "ray_body_intersections_y": [
+        -0.680717,
+        0.740717
+      ],
+      "paw_intervals": [],
+      "string_inside_paw": false,
+      "note": "ray-classified local volume, not physical cloth/string simulation"
+    },
+    {
+      "string": 4,
+      "x": -0.37,
+      "z": 1.280903,
+      "string_y": -1.047788,
+      "ray_body_intersections_y": [
+        -0.682744,
+        0.742744
+      ],
+      "paw_intervals": [],
+      "string_inside_paw": false,
+      "note": "ray-classified local volume, not physical cloth/string simulation"
+    },
+    {
+      "string": 5,
+      "x": -0.57,
+      "z": 1.242709,
+      "string_y": -1.051163,
+      "ray_body_intersections_y": [
+        -0.662048,
+        0.722047
+      ],
+      "paw_intervals": [],
+      "string_inside_paw": false,
+      "note": "ray-classified local volume, not physical cloth/string simulation"
+    },
+    {
+      "string": 5,
+      "x": -0.52,
+      "z": 1.264242,
+      "string_y": -1.050239,
+      "ray_body_intersections_y": [
+        -0.667219,
+        0.727218
+      ],
+      "paw_intervals": [],
+      "string_inside_paw": false,
+      "note": "ray-classified local volume, not physical cloth/string simulation"
+    },
+    {
+      "string": 5,
+      "x": -0.47,
+      "z": 1.285776,
+      "string_y": -1.049315,
+      "ray_body_intersections_y": [
+        -0.671222,
+        0.731221
+      ],
+      "paw_intervals": [],
+      "string_inside_paw": false,
+      "note": "ray-classified local volume, not physical cloth/string simulation"
+    },
+    {
+      "string": 5,
+      "x": -0.42,
+      "z": 1.307309,
+      "string_y": -1.048391,
+      "ray_body_intersections_y": [
+        -1.292769,
+        -1.164281,
+        -0.674092,
+        0.734091
+      ],
+      "paw_intervals": [
+        [
+          -1.2927687168121338,
+          -1.1642813682556152
+        ]
+      ],
+      "string_inside_paw": false,
+      "note": "ray-classified local volume, not physical cloth/string simulation"
+    },
+    {
+      "string": 5,
+      "x": -0.37,
+      "z": 1.328843,
+      "string_y": -1.047467,
+      "ray_body_intersections_y": [
+        -1.284528,
+        -1.13349,
+        -0.675791,
+        0.73579
+      ],
+      "paw_intervals": [
+        [
+          -1.2845284938812256,
+          -1.1334900856018066
+        ]
+      ],
+      "string_inside_paw": false,
+      "note": "ray-classified local volume, not physical cloth/string simulation"
+    },
+    {
+      "string": 6,
+      "x": -0.57,
+      "z": 1.290649,
+      "string_y": -1.050841,
+      "ray_body_intersections_y": [
+        -1.270299,
+        -1.11261,
+        -0.655416,
+        0.715415
+      ],
+      "paw_intervals": [
+        [
+          -1.270298957824707,
+          -1.112610101699829
+        ]
+      ],
+      "string_inside_paw": false,
+      "note": "ray-classified local volume, not physical cloth/string simulation"
+    },
+    {
+      "string": 6,
+      "x": -0.52,
+      "z": 1.312182,
+      "string_y": -1.049917,
+      "ray_body_intersections_y": [
+        -1.307445,
+        -1.201123,
+        -0.660306,
+        0.720305
+      ],
+      "paw_intervals": [
+        [
+          -1.3074452877044678,
+          -1.2011229991912842
+        ]
+      ],
+      "string_inside_paw": false,
+      "note": "ray-classified local volume, not physical cloth/string simulation"
+    },
+    {
+      "string": 6,
+      "x": -0.47,
+      "z": 1.333715,
+      "string_y": -1.048993,
+      "ray_body_intersections_y": [
+        -1.323888,
+        -1.189047,
+        -0.664004,
+        0.724003
+      ],
+      "paw_intervals": [
+        [
+          -1.3238883018493652,
+          -1.1890467405319214
+        ]
+      ],
+      "string_inside_paw": false,
+      "note": "ray-classified local volume, not physical cloth/string simulation"
+    },
+    {
+      "string": 6,
+      "x": -0.42,
+      "z": 1.355249,
+      "string_y": -1.048069,
+      "ray_body_intersections_y": [
+        -1.325786,
+        -1.123972,
+        -0.66654,
+        0.72654
+      ],
+      "paw_intervals": [
+        [
+          -1.3257858753204346,
+          -1.1239721775054932
+        ]
+      ],
+      "string_inside_paw": false,
+      "note": "ray-classified local volume, not physical cloth/string simulation"
+    },
+    {
+      "string": 6,
+      "x": -0.37,
+      "z": 1.376782,
+      "string_y": -1.047145,
+      "ray_body_intersections_y": [
+        -1.303579,
+        -1.104881,
+        -0.668026,
+        0.728025
+      ],
+      "paw_intervals": [
+        [
+          -1.3035794496536255,
+          -1.1048814058303833
+        ]
+      ],
+      "string_inside_paw": false,
+      "note": "ray-classified local volume, not physical cloth/string simulation"
+    }
+  ],
+  "limits": [
+    "Does not prove art fidelity, natural grasp, skin deformation, animation or web behavior.",
+    "Torso behind the instrument is excluded heuristically from paw intervals; inspect cuts visually.",
+    "Rendered beauty may reveal defects that these measurements cannot detect."
+  ]
+}

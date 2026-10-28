@@ -1,0 +1,29 @@
+name: MiaoShapeCLI
+options:
+  deploymentTarget:
+    macOS: '14.0'
+packages:
+  Hy3DMLX:
+    path: Packages/Hy3DMLX
+targets:
+  MiaoShapeCLI:
+    type: tool
+    platform: macOS
+    deploymentTarget: '14.0'
+    sources:
+      - TrialCLI
+      - Sources/BackgroundRemover.swift
+    dependencies:
+      - package: Hy3DMLX
+        product: Hy3DMLX
+    settings:
+      base:
+        SWIFT_VERSION: '5.0'
+        ARCHS: arm64
+        CODE_SIGNING_ALLOWED: NO
+        PRODUCT_BUNDLE_IDENTIFIER: local.miao.shapecli
+schemes:
+  MiaoShapeCLI:
+    build:
+      targets:
+        MiaoShapeCLI: all

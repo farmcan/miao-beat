@@ -1,10 +1,12 @@
 # Miao Beat 研究与交付索引
 
-更新：2026-10-26。当前读物按“决策 → 证据 → 实现与验收 → 早期归档”组织。网页阅读包由 `scripts/export-review.py` 导出到所有者配置的站点；产品与公开 README 不回链个人入口。
+更新：2026-10-28。当前读物按“决策 → 证据 → 实现与验收 → 早期归档”组织。网页阅读包由 `scripts/export-review.py` 导出到所有者配置的站点；产品与公开 README 不回链个人入口。
 
 ## 当前重点：角色精致度与原图一致性
 
 当前Blender样机美术未通过。先执行[精修计划与阶段门槛](character-quality-plan-2026-10-28.md)，阅读[原图差距评审](research/blender-original-gap-review-2026-10-28.md)、[图生3D候选](research/image-to-3d-options-2026-10-28.md)和[专业制作方法](research/character-quality-method-2026-10-28.md)。包含头眼/身体微动作及每轮独立subagent评估要求。
+
+新增实际证据：[C5可编辑静态工程／操作说明](../design/character-sculpt-v2/README.md)与三方灰模、彩色复评已记录。C5仅清除静态P0、可进入窄D0，尚未完成动作或替换正式站。[Modelr本机真实试验](../design/modelr-static-trial/README.md)已生成并导入Blender，三方判断只适合本地清理底稿。
 
 ## Blender 技术样机 · 0.16.0（美术否决）
 

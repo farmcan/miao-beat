@@ -1,0 +1,28 @@
+{
+  "stage": "C5-static-conditional-pass-for-narrow-D0-only",
+  "groom": "180000 native 4-point hair curves, fixed seed17, .004-.009 scene units",
+  "texture": "flat hand-authored pigment only; no source image pixel projection",
+  "not_verified": [
+    "identity/materials independent C reviews",
+    "eye closure deformation",
+    "retopology/rig",
+    "strum contacts/animation",
+    "web/export"
+  ],
+  "packaged_blend_sha256": "d380a830212e3939d6276d4e575f0c11bcbbd4dae50ccfabf6e885112cbfe706",
+  "shader_source_sha256": "fc41f5e9e998448ca3219302af1593b1def7295ed4d4dd7cac8cbc316b2fb4bf",
+  "pigment_sources": {
+    "coat-pigment.png": "a91075e0deb9bb3d569ca1edfc99e34ce4b99090868c3178188d28fca5995c97",
+    "coat-arm-pigment.png": "6488d0329bd1a81d9b8176480cc632631f7709d77b5511ed9e22ce31bfab54b5"
+  },
+  "renders": {
+    "front": "608c683b30bc75df1cddf09dfc0098e64aeb776607955a6510fd6a511e31ea7d",
+    "three-quarter": "4113d335d4311cb09debc42e8116044fda6792fac031d540acb06285f97a06a9"
+  },
+  "gate": "Identity, craft and contact three independent non-builder reviews clear static P0; P1 and all dynamic/runtime/export limits remain.",
+  "reviews": [
+    "docs/research/character-sculpt-v2-color-identity-review-2026-10-28.md",
+    "docs/research/character-sculpt-v2-color-craft-review-2026-10-28.md",
+    "docs/research/character-sculpt-v2-color-contact-review-2026-10-28.md"
+  ]
+}

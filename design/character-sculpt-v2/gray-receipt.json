@@ -1,0 +1,26 @@
+{
+  "stage": "B-gray-conditional-pass-for-C-only",
+  "reference_sha256": "4418fd737891283f42568306cb427b1f7604a86cae5513b1d6c49b3c31f338d1",
+  "body_method": "custom reference silhouette loft + swept arms, voxel fused anatomy; no separate head or limb plates",
+  "body_vertices": 151016,
+  "body_faces": 151014,
+  "guitar_reuse": "project instrument construction from design/blender-guitar-v1/scene.py; no old character construction",
+  "camera": "orthographic 4.1, near-front, target (.18,0,1.72)",
+  "unverified": [
+    "art fidelity",
+    "topology suitable for deformation",
+    "hand string contacts",
+    "all animation",
+    "color/plush materials",
+    "web rendering"
+  ],
+  "source_sha256": "787ea929cd93662d85a86b8b6ab6f8df1c04632ec4f8aaa5412fd9ec584193a0",
+  "blend_sha256": "b4cf068ecac7e3ab24b47d2e611656b32b4d9b7d8f79a738faf3da9e6fa0301d",
+  "reviews": [
+    "docs/research/character-sculpt-v2-gray-identity-review-2026-10-28.md",
+    "docs/research/character-sculpt-v2-gray-craft-review-2026-10-28.md",
+    "docs/research/character-sculpt-v2-gray-contact-review-2026-10-28.md"
+  ],
+  "gate": "r7 identity and craft P0 cleared; contact P0 cleared on r6, unchanged paws in r7. Allowed to create C still; not final art/rig/motion approval.",
+  "packaged_blend_sha256": "ea841df8fed40ce6dd2956976df6842befb6c833934823c25dc0696f6f37bdfc"
+}
