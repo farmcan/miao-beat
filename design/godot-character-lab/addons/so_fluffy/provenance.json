@@ -1,0 +1,14 @@
+{
+  "repository": "https://github.com/maxvolumedev/sofluffy",
+  "commit": "09af7e68c17db7b85a4780220b28dc015da28a91",
+  "license": "MIT",
+  "copyright": "Copyright (c) 2024 Max Muermann",
+  "scope": "Minimal unchanged local shell addon only; no third-party bee model or sample art",
+  "sha256": {
+    "addons/so_fluffy/so_fluffy.gd": "6a8bc5c953c28cd4c5750d4ffc28467c9f9fe2941963a1e36afc5978df68c958",
+    "addons/so_fluffy/shell_material.tres": "1848ff24b447864184d4fab4fb14b208b5630fff597189431511413ae3becb99",
+    "addons/so_fluffy/turbulence_default.tres": "2a5f58500e465775f8845b376ebd85e32951661347ff933724bc2fafa1d03fd7",
+    "addons/so_fluffy/density_default.tres": "4fc8a8ba17a5adce3125b6b318fb8ceef969fbb7a3e448f4639acd51f3ad97b0",
+    "addons/so_fluffy/so_fluffy.gdshader": "5454f4eb2cdecf0f935430a9927f2f8f2806f8adf69c9b1c51191b0a74a18891"
+  }
+}

@@ -88,3 +88,10 @@ C制作已执行：C2因粉桃色／单色前臂／木材与灰背景未过；C4
 Modelr单次试验现已真实完成：精确权重SHA通过，固定seed17、fp16/30步/256octree，在M1 Pro上69.93秒生成213650顶点／427384面；MLX peak5.076GB、time峰值RSS4.173GB，无swap，随后Blender真实导入并渲染1024正／侧／背图。三位非builder的[B身份](research/modelr-static-gray-identity-review-2026-10-28.md)、[B工艺](research/modelr-static-gray-craft-review-2026-10-28.md)、[B接触](research/modelr-static-gray-contact-review-2026-10-28.md)均未放行：保留自然梨体／抱琴底稿价值，面部浮雕、弦网粘连和猫琴未分离阻止直接rig。未跑paint，未公开该权重输出；本机可用性现在有实测证据，美术／可动画性不能随之算成功。
 
 D0已有两项窄实测与独立复核：[rest材质静态对照](research/blender-d0-rest-review-2026-10-28.md)与[真实180k短毛跟随](research/blender-d0-groom-review-2026-10-28.md)。前者最大差2／255仅支持静态外观保持；后者保留1根native UV invalid的发现与修复、最终全180k有效及很小局部形变结果。均不外推正式触弦／眨眼／头动／网页／导出。下一项实际眼睑闭合小样已交builder，尚待图／短片与独立评审；整体目标继续。
+
+D0.3已经实际执行并在两轮有目的修复后失败停止：上／下睑包覆旧凸眼球仍呈橘帽，正确world-space抽样有72个眼首命中反例；旧local/world错误的零结果保留INVALID。14张历史、最终三图、可操作失败ShapeKey工程及失败门已留存，未制作最终clip。三份[身份](research/blender-blink-failed-identity-review-2026-10-28.md)／[工艺](research/blender-blink-failed-craft-review-2026-10-28.md)／[动作结构](research/blender-blink-failed-motion-review-2026-10-28.md)独立评审均阻止交付。下一条不同路线先改眼部静态浅嵌合：保原2D锚点／左右眼差异与向右视线，白眼有真实曲面、iris贴其表面，降低前凸而非隐藏眼睛；先回B灰模／C彩色双gate，不在失败盖帽上继续扩动画。
+
+
+## 2026-10-28 用户再次要求整体现实质量与引擎对比
+
+C8r2已实际修正相机/琴锚点和连体抱持，B三角色允许C静态，不代表用户接受。用户明确仍嫌粗糙，新增手指/头/耳方法与免费GitHub/skills调研、Godot安装、克制随机动作和Blender/Godot可看版本对比。执行入口转到 [分步对比计划](character-engine-comparison-plan-2026-10-28.md)。旧失败/评审不删除；未做出动作的项不算完成。

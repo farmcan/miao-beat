@@ -1,0 +1,101 @@
+{
+  "0": {
+    "visible_eye_front_grid_rays": {
+      "Face / ivory eye": 0,
+      "Face / ivory eye.001": 0,
+      "Face / sideward iris": 0,
+      "Face / sideward iris.001": 0
+    },
+    "skin_hits": 1613,
+    "grid_per_eye": 6561,
+    "ray_direction": "world +Y; fixed frontal orthographic geometric sample, not all camera viewpoints"
+  },
+  "0.125": {
+    "visible_eye_front_grid_rays": {
+      "Face / ivory eye": 0,
+      "Face / ivory eye.001": 0,
+      "Face / sideward iris": 0,
+      "Face / sideward iris.001": 0
+    },
+    "skin_hits": 2182,
+    "grid_per_eye": 6561,
+    "ray_direction": "world +Y; fixed frontal orthographic geometric sample, not all camera viewpoints"
+  },
+  "0.25": {
+    "visible_eye_front_grid_rays": {
+      "Face / ivory eye": 0,
+      "Face / ivory eye.001": 0,
+      "Face / sideward iris": 0,
+      "Face / sideward iris.001": 0
+    },
+    "skin_hits": 2772,
+    "grid_per_eye": 6561,
+    "ray_direction": "world +Y; fixed frontal orthographic geometric sample, not all camera viewpoints"
+  },
+  "0.375": {
+    "visible_eye_front_grid_rays": {
+      "Face / ivory eye": 0,
+      "Face / ivory eye.001": 0,
+      "Face / sideward iris": 0,
+      "Face / sideward iris.001": 0
+    },
+    "skin_hits": 5077,
+    "grid_per_eye": 6561,
+    "ray_direction": "world +Y; fixed frontal orthographic geometric sample, not all camera viewpoints"
+  },
+  "0.5": {
+    "visible_eye_front_grid_rays": {
+      "Face / ivory eye": 0,
+      "Face / ivory eye.001": 0,
+      "Face / sideward iris": 0,
+      "Face / sideward iris.001": 0
+    },
+    "skin_hits": 6969,
+    "grid_per_eye": 6561,
+    "ray_direction": "world +Y; fixed frontal orthographic geometric sample, not all camera viewpoints"
+  },
+  "0.625": {
+    "visible_eye_front_grid_rays": {
+      "Face / ivory eye": 0,
+      "Face / ivory eye.001": 0,
+      "Face / sideward iris": 0,
+      "Face / sideward iris.001": 0
+    },
+    "skin_hits": 7902,
+    "grid_per_eye": 6561,
+    "ray_direction": "world +Y; fixed frontal orthographic geometric sample, not all camera viewpoints"
+  },
+  "0.75": {
+    "visible_eye_front_grid_rays": {
+      "Face / ivory eye": 0,
+      "Face / ivory eye.001": 0,
+      "Face / sideward iris": 0,
+      "Face / sideward iris.001": 0
+    },
+    "skin_hits": 8705,
+    "grid_per_eye": 6561,
+    "ray_direction": "world +Y; fixed frontal orthographic geometric sample, not all camera viewpoints"
+  },
+  "0.875": {
+    "visible_eye_front_grid_rays": {
+      "Face / ivory eye": 0,
+      "Face / ivory eye.001": 0,
+      "Face / sideward iris": 0,
+      "Face / sideward iris.001": 0
+    },
+    "skin_hits": 9432,
+    "grid_per_eye": 6561,
+    "ray_direction": "world +Y; fixed frontal orthographic geometric sample, not all camera viewpoints"
+  },
+  "1": {
+    "visible_eye_front_grid_rays": {
+      "Face / ivory eye": 0,
+      "Face / ivory eye.001": 0,
+      "Face / sideward iris": 0,
+      "Face / sideward iris.001": 0
+    },
+    "skin_hits": 10640,
+    "grid_per_eye": 6561,
+    "ray_direction": "world +Y; fixed frontal orthographic geometric sample, not all camera viewpoints"
+  }
+}

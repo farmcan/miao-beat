@@ -1,0 +1,123 @@
+{
+  "stage": "C9-primary-form-gray-unreviewed",
+  "upstream_commit": "d44410f058991f677ccf733a8e86ce95110857eb",
+  "sculpt_helper_sha256": "3921f0a2fde493be94ae0c454d3e5cafc1433e0dc5be08adc6763d78a3d4f603",
+  "input_sha256": "2432d199edeae964631cb79d96b1d06a5ba2fb908143532fc5bb0a86f600f33e",
+  "input_unchanged": true,
+  "operations": [
+    {
+      "part": "muzzle/cheek/chin mass",
+      "point": [
+        -0.05999999865889549,
+        -0.3920564651489258,
+        2.7750000953674316
+      ],
+      "radius": 0.215,
+      "height": 0.029,
+      "changed_vertices": 2490
+    },
+    {
+      "part": "muzzle/cheek/chin mass",
+      "point": [
+        0.2199999988079071,
+        -0.38682079315185547,
+        2.7750000953674316
+      ],
+      "radius": 0.215,
+      "height": 0.029,
+      "changed_vertices": 2656
+    },
+    {
+      "part": "muzzle/cheek/chin mass",
+      "point": [
+        0.07500000298023224,
+        -0.3937206268310547,
+        2.6549999713897705
+      ],
+      "radius": 0.235,
+      "height": 0.021,
+      "changed_vertices": 3200
+    },
+    {
+      "part": "shorten lower palm pad",
+      "changed_vertices": 7303
+    },
+    {
+      "part": "palm back soft volume",
+      "changed_vertices": 6359
+    },
+    {
+      "part": "curled toe mass",
+      "point": [
+        1.1636115312576294,
+        -1.204851508140564,
+        2.018296241760254
+      ],
+      "changed_vertices": 4599
+    },
+    {
+      "part": "curled toe mass",
+      "point": [
+        1.225000023841858,
+        -1.1664800643920898,
+        2.244999885559082
+      ],
+      "changed_vertices": 3672
+    },
+    {
+      "part": "ear primary shell/rim",
+      "changed_vertices": 776
+    },
+    {
+      "part": "ear primary shell/rim",
+      "changed_vertices": 768
+    }
+  ],
+  "maximum_delta": 0.049935717787977695,
+  "body_vertices": 609383,
+  "groom_curves": 180000,
+  "new_shape_key": "C9 / primary mouth paw ear sculpt",
+  "mouth_curve_skin_targets": [
+    [
+      0.07695333659648895,
+      -0.4039163589477539,
+      2.8506202697753906
+    ],
+    [
+      0.07812332361936569,
+      -0.4226209223270416,
+      2.7602481842041016
+    ],
+    [
+      -0.015433485619723797,
+      -0.4267682731151581,
+      2.772256851196289
+    ],
+    [
+      0.031421318650245667,
+      -0.4249351918697357,
+      2.7532262802124023
+    ],
+    [
+      0.07815050333738327,
+      -0.4229203760623932,
+      2.7572481632232666
+    ],
+    [
+      0.12499556690454483,
+      -0.42337509989738464,
+      2.7532198429107666
+    ],
+    [
+      0.1609242856502533,
+      -0.42258521914482117,
+      2.7752788066864014
+    ]
+  ],
+  "limits": [
+    "Primary local forms with local numpy brushes, not live GUI surface polish.",
+    "No clean finger retopology, full eyelid closure, bone rig, Godot character or motion acceptance.",
+    "Three independent actual-image gray reviews required before colored gate/animation.",
+    "All delivered frames show the full connected cat and instrument; no separate arm image/geometry composition."
+  ]
+}

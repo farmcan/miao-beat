@@ -1,0 +1,27 @@
+{
+  "repository": "https://github.com/scenario-labs/skills",
+  "commit": "d44410f058991f677ccf733a8e86ce95110857eb",
+  "license": "MIT",
+  "copyright": "Copyright (c) 2026 Scenario Inc.",
+  "scope": "Local-only Blender helpers; no Scenario hosted API, key, model or MCP server.",
+  "files": [
+    {
+      "file": "bx_sculpt.py",
+      "upstream_path": "skills/dcc/blender/scenario-blender-sculpting/scripts/bx_sculpt.py",
+      "sha256": "3921f0a2fde493be94ae0c454d3e5cafc1433e0dc5be08adc6763d78a3d4f603",
+      "modified": false
+    },
+    {
+      "file": "bx_retopo.py",
+      "upstream_path": "skills/dcc/blender/scenario-blender-retopology/scripts/bx_retopo.py",
+      "sha256": "81bc2063c7c9ebe69c80b54041d1b70ce7c2fd47538a1d475cc0943f785f3266",
+      "modified": false
+    },
+    {
+      "file": "bx_audit.py",
+      "upstream_path": "skills/dcc/blender/scenario-blender-expert/scripts/bx_audit.py",
+      "sha256": "a2c99225730b1b44eade7033ae600f17c29c94ce9992a6cf7030d2dfcbaebf6b",
+      "modified": false
+    }
+  ]
+}

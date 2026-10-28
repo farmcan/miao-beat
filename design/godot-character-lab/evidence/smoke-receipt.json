@@ -1,0 +1,19 @@
+{
+	"engine": {
+		"build": "official",
+		"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+		"hex": 263938,
+		"major": 4,
+		"minor": 7,
+		"patch": 2,
+		"status": "stable",
+		"string": "4.7.2-stable (official)",
+		"timestamp": 0
+	},
+	"image_height": 480,
+	"image_width": 640,
+	"renderer": "gl_compatibility",
+	"save_error": 0,
+	"scope": "Real local GPU render only. No character, rig, random motion or web acceptance.",
+	"video_adapter": "Apple M1 Pro"
+}

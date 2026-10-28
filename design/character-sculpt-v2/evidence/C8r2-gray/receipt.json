@@ -1,0 +1,81 @@
+{
+  "stage": "C8-static-gray-unreviewed",
+  "source_sha256": "125ae2250f18328c4716ce92379b00f9869e8de402bc9a3fcb7866ce674710f7",
+  "input_sha256": "493adabe107d0a12653539a00f029ab880f41b52541766d4a7f093448b1659c5",
+  "camera": {
+    "before": [
+      0.18000000715255737,
+      -12.0,
+      2.700000047683716
+    ],
+    "before_scale": 4.099999904632568,
+    "after": [
+      0.09881033003330231,
+      -12.008593559265137,
+      2.5947763919830322
+    ],
+    "after_scale": 4.20027650942405
+  },
+  "guitar": {
+    "origin": [
+      -0.1950536246756659,
+      -0.85,
+      1.5567366254980208
+    ],
+    "u_vector": [
+      1.0169595357706245,
+      0.0,
+      0.40048756408789304
+    ],
+    "scale": 1.0929762057720462,
+    "angle_degrees": 21.49495429678046,
+    "anchors": [
+      {
+        "object": "Guitar / bridge",
+        "target": [
+          391,
+          728
+        ],
+        "actual": [
+          390.4950347542763,
+          726.8283863067627
+        ]
+      },
+      {
+        "object": "Guitar / soundhole chamber",
+        "target": [
+          575,
+          652
+        ],
+        "actual": [
+          575.7001984119415,
+          653.6246775984764
+        ]
+      },
+      {
+        "object": "Guitar / nut",
+        "target": [
+          1055,
+          467
+        ],
+        "actual": [
+          1054.8048477172852,
+          466.54717111587524
+        ]
+      }
+    ]
+  },
+  "body": {
+    "vertices": 609383,
+    "continuous_mesh": true,
+    "new_shape_key": "C8 / reference hold sculpt",
+    "maximum_displacement": 0.31092020869255066,
+    "native_groom_preserved": true
+  },
+  "limits": [
+    "Static hold is a smooth sculpt, not an articulated motion rig.",
+    "Gray and colored independent three-role gates pending.",
+    "No animation or browser acceptance yet."
+  ],
+  "input_unchanged": true
+}

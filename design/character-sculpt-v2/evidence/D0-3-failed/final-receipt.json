@@ -1,0 +1,101 @@
+{
+  "stage": "D0.3 bounded actual 3D eyelid study",
+  "status": "failed-keypose-gate-no-final-clip",
+  "keypose_gate_passed": false,
+  "independent_review_status": "builder failure evidence only; no independent approval",
+  "input": {
+    "path": "artifacts/character-sculpt-d0-groom/baseline-attached.blend",
+    "sha256": "71dd111471361f5b748dd921ee48845619212d6cfd135b07af52e0e9b15b460f",
+    "unchanged": true
+  },
+  "C5_master": {
+    "sha256": "d380a830212e3939d6276d4e575f0c11bcbbd4dae50ccfabf6e885112cbfe706",
+    "unchanged": true
+  },
+  "blender": "5.2.3 LTS",
+  "actual_final_keypose_renders": 3,
+  "actual_total_gpu_renders": 14,
+  "total_complete_rendered_clip_frames_in_failed_attempt": 5,
+  "final_video_exists": false,
+  "intended_visual_correction_rounds": 2,
+  "closed_world_ray_sample": {
+    "visible_eye_front_grid_rays": {
+      "Face / ivory eye": 1,
+      "Face / ivory eye.001": 5,
+      "Face / sideward iris": 33,
+      "Face / sideward iris.001": 33
+    },
+    "skin_hits": 11830,
+    "grid_per_eye": 6561,
+    "ray_direction": "world +Y; fixed frontal orthographic geometric sample, not all camera viewpoints"
+  },
+  "open_pixel_difference": {
+    "pixels": 262144,
+    "changed_rgb_pixels": 8,
+    "mean_rgba_abs_255": 7.62939453125e-06,
+    "max_rgb_abs_255": 1
+  },
+  "groom": {
+    "curves": 180000,
+    "points": 720000,
+    "native_uv_valid": 180000,
+    "native_uv_invalid": 0,
+    "rest_sha256": "7446e079f4e27239ba9c195f1db388a0e2f515a3a2c8269e80eb79693337b419",
+    "rest_unchanged": true
+  },
+  "body_hands_guitar_eyes_iris_geometry_unchanged": true,
+  "artifacts": {
+    "artifacts/character-sculpt-d0-blink/open.png": {
+      "bytes": 358387,
+      "sha256": "3539754f0184c7796f0aa644deab446b09c227b1bd1ba6c87eeef0356006faf8"
+    },
+    "artifacts/character-sculpt-d0-blink/half.png": {
+      "bytes": 358082,
+      "sha256": "e473749a038801c224b10b5fd674cb2ee4f3d295dbae1cfad2197ad1064393b9"
+    },
+    "artifacts/character-sculpt-d0-blink/closed.png": {
+      "bytes": 356903,
+      "sha256": "d8e739dc7e065646da156315080f58cf453ea7c6f6d2b6fd84e4486effc0bd63"
+    },
+    "artifacts/character-sculpt-d0-blink/miao-d0-blink-study.blend": {
+      "bytes": 67176410,
+      "sha256": "f3e0223bc0cb21a5b7f113bcf68eeb5ef56a01dc6bb1d369318a802e584c34f7"
+    },
+    "artifacts/character-sculpt-d0-blink/geometry-check.json": {
+      "bytes": 3198,
+      "sha256": "74cb04f63c753b0c4f664e612699972cbc5115ee29d48febfda88d68945ae7fd"
+    },
+    "artifacts/character-sculpt-d0-blink/run.log": {
+      "bytes": 685,
+      "sha256": "3a1749e167dba8c51e5099aa7c616e2be3a12969b74cf94e564733e26023f3c3"
+    },
+    "design/character-sculpt-v2/d0-blink-study.py": {
+      "bytes": 12897,
+      "sha256": "4deeded2dd452ce49f8e535ceb1718256f62cbe77a5a84599fbc24ca5f989e8a"
+    },
+    "design/character-sculpt-v2/d0-blink-geometry-check.py": {
+      "bytes": 1782,
+      "sha256": "19f63ee636382ff76c720b791da2bf26a67519599bc23c1b551f8332a2e4cb75"
+    },
+    "design/character-sculpt-v2/d0-blink-study-README.md": {
+      "bytes": 5343,
+      "sha256": "4b027363ffc17486310a2920652065e202f0682027e91de9a430568aaa86d4de"
+    }
+  },
+  "failure_history": [
+    "attempt-0-scalar-error: Python scalar error before any render; fixed r[k].",
+    "attempt-1-upper-only: orange full cap and white edge; 3 keyposes.",
+    "attempt-2-seam-gap: added true lower skin; 3 keyposes; original ray test mistakenly used eye-local BVHs with world rays (INVALID retained). Correct world/local test showed 236 visible eye samples total at closed, interrupted clip after 5 completed full-scene frames.",
+    "final correction2: overlap and broaden lower skin; 3 keyposes. Still 72 visible eye/iris samples at closed and orange raised-cap look. Stop."
+  ],
+  "limitations": [
+    "No accepted natural blink or video; no final clip encoded.",
+    "Ray sample is finite orthographic front sampling, not complete analytic collision or every camera angle.",
+    "Blink is real lid mesh shape deformation; eye/iris meshes were not scaled, hidden, moved or retouched.",
+    "No body/paw/guitar/groom topology or pose changes.",
+    "Native 180k valid UV/rest preservation remains a narrow prior technical result; it is not full animation/anti-swim/website success.",
+    "Eye-socket depth and eyelid integration need a separately bounded next iteration before more motion."
+  ],
+  "finished_unix": 1793188252.207794,
+  "render_count_scope": "14 completed PNG renders. Clip termination may interrupt another render call; an incomplete call is not counted as a completed image."
+}

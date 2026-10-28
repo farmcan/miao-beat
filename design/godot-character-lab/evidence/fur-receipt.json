@@ -1,0 +1,44 @@
+{
+	"density": 0.15,
+	"godot": "4.7.2-stable (official)",
+	"limits": [
+		"Neutral sphere only, not Miao, skinned geometry, web export or a quality pass.",
+		"Actual draw counters are diagnostic; no FPS benchmark under shared concurrent work.",
+		"Native Compatibility only; WebGL2 browser must still be tested."
+	],
+	"macro_camera_ortho_size": 1.5,
+	"renderer": "gl_compatibility",
+	"renders": [
+		{
+			"actual_material_count": 0,
+			"draw_calls_in_frame": 1.0,
+			"image_height": 640,
+			"image_width": 640,
+			"png_save_error": 0,
+			"rendered_primitives_in_frame": 3168.0,
+			"shells": 0
+		},
+		{
+			"actual_material_count": 8,
+			"draw_calls_in_frame": 9.0,
+			"image_height": 640,
+			"image_width": 640,
+			"png_save_error": 0,
+			"rendered_primitives_in_frame": 28512.0,
+			"shells": 8
+		},
+		{
+			"actual_material_count": 16,
+			"draw_calls_in_frame": 17.0,
+			"image_height": 640,
+			"image_width": 640,
+			"png_save_error": 0,
+			"rendered_primitives_in_frame": 53856.0,
+			"shells": 16
+		}
+	],
+	"root_gradient": 0.55,
+	"seed": 17,
+	"upstream_commit": "09af7e68c17db7b85a4780220b28dc015da28a91",
+	"video_adapter": "Apple M1 Pro"
+}
