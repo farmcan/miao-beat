@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>吉他拨弦 · Blender 测试版 · Miao Beat</title><link rel="icon" href="../../icon.svg"><link rel="stylesheet" href="./style.css"><script type="module" src="./pilot.js"></script></head>
+<body><main>
+<header><a class="brand" href="../../?instrument=guitar">MIAO / BEAT</a><span class="badge">BLENDER · 第一期测试</span></header>
+<section class="intro"><div><p class="eyebrow">一只猫，一把吉他。</p><h1>这次，认真拨一下。</h1></div><p>先试一个音，再连着弹。<br>看爪子有没有碰到弦、收手是否自然。</p></section>
+<div class="workspace">
+<section class="stage" aria-label="完整猫与吉他的 Blender 演奏画面"><canvas id="scene" width="640" height="640" role="img" aria-label="Blender 渲染的完整橘猫、相连双爪和吉他"></canvas><p id="artStatus" class="art-status" role="status">正在加载完整画面…</p><div class="stage-caption"><span>固定机位 · 完整画面</span><span id="frameInfo">准备中</span></div></section>
+<section class="controls" aria-label="演奏与测试"><div class="control-top"><span class="overline">尼龙弦吉他</span><button id="enableAudio" type="button">打开声音</button></div><p id="status" class="status" role="status">先打开声音，再按键盘或点琴键。</p>
+<div class="section-title"><h2>扫个和弦</h2><span>1 — 4</span></div><div id="chords" class="chord-grid"></div>
+<div class="section-title"><h2>弹个单音</h2><span>A S D F G H J K</span></div><div id="notes" class="note-grid"></div>
+<div class="preview-row"><label for="speed">动作查看</label><select id="speed"><option value="1">正常速度</option><option value="0.5">0.5 倍慢看</option></select></div>
+<div class="test-row"><button id="slowTest" type="button">试试慢按</button><button id="burstTest" type="button">试试连续弹</button><button id="fastTest" type="button">更快一点</button><button id="stop" type="button" disabled>停止</button></div><p class="hint">按住一个键只弹一次。极快连按时，声音照常发出，动作先向前完成离弦回收，再接下一下；极快输入合并为最新一次，不排队补旧动作。</p><div class="stats" aria-label="本次演奏计数"><span>声音 <b id="hits">0</b></span><span>触弦 <b id="contacts">0</b></span><span>合并 <b id="merged">0</b></span></div>
+</section></div>
+<section class="recording" aria-label="演奏录制与导出"><div><p class="eyebrow">留下一段</p><h2>声音和猫，一起带走。</h2><p id="recordInfo">还没有录制。</p></div><div class="record-actions"><button id="record" type="button" aria-pressed="false">● 开始录制</button><button id="replay" type="button" disabled>回放</button><button id="exportVideo" type="button" disabled>导出视频</button><button id="exportAudio" type="button" disabled>导出音频</button><button id="cancel" type="button" hidden>取消</button></div><p class="hint">只录你的按键；上面的演示不会写进录制。每段最多 60 秒。导出会重新播放一遍，请留在此页；文件不上传。</p></section>
+<section id="results" class="results" aria-label="导出结果" hidden><p id="mediaStatus" role="status"></p><div class="downloads"><a id="downloadVideo" hidden>保存视频</a><a id="downloadAudio" hidden>保存音频</a></div><video id="video" controls playsinline preload="metadata" hidden aria-label="导出的视频"></video><audio id="audio" controls preload="metadata" hidden aria-label="导出的音频"></audio></section>
+<footer><p>第一期只验证拨弦。不同音符共用这段右爪动作，左爪暂不展示真实品位变化。</p><a href="../../?instrument=guitar">回到正式版 ↗</a></footer>
+</main></body></html>

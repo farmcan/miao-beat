@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "width": 640,
+  "height": 640,
+  "columns": 6,
+  "rows": 4,
+  "frames": 24,
+  "contactFrame": 2,
+  "fps": 60,
+  "atlas": "atlas.webp",
+  "completeScene": true,
+  "generator": "Blender 5.2.3 LTS",
+  "sourceScriptSha256": "88a70b250ff1cf8a0ce787ce0ab0d84568676007a8f1fe9b638f9d8cf61152f7",
+  "atlasSha256": "70afc183f750915e10b30daf4f69c6037bdc528a9b949f22c1fb51a55daf202d",
+  "atlasBytes": 618476,
+  "seamMaxChannelDifference": 1,
+  "seamMaxChannelMean": 3.90625e-05,
+  "modelLicense": "Original Miao Beat scene; no external models or textures",
+  "scope": "One complete-scene right-paw strum study. Fixed left paw; no per-note fingering. Fast inputs may merge visible strokes.",
+  "sourceFrames": [
+    {
+      "frame": 0,
+      "file": "frame-000.png",
+      "sha256": "22c26f1a5cca3d49abcdb7ad0ef3f24b15d74521b6059da891fbe88c4b843351"
+    },
+    {
+      "frame": 1,
+      "file": "frame-001.png",
+      "sha256": "87db1c55acb880f604baf2a7fe0f1dc55023f7db5bfa7b488dff7551aac7c1ac"
+    },
+    {
+      "frame": 2,
+      "file": "frame-002.png",
+      "sha256": "2359682711d7b8a24b6fdbbe53175795e57e0a11c315421a4dae8c8d9d45a5bb"
+    },
+    {
+      "frame": 3,
+      "file": "frame-003.png",
+      "sha256": "59460e7244263a4c1e189b66e85b24f6846d8035d280c8297d6640d6ec587314"
+    },
+    {
+      "frame": 4,
+      "file": "frame-004.png",
+      "sha256": "828a1eb060206867683ee49eea0de63b91391df96928bb446645e1f27b576b79"
+    },
+    {
+      "frame": 5,
+      "file": "frame-005.png",
+      "sha256": "b020fcaef8d68c50e9902dcc8e78f54b857d729dc622b3a63810002ce4b7d243"
+    },
+    {
+      "frame": 6,
+      "file": "frame-006.png",
+      "sha256": "c77701b549cdaf1ac2b0d82bcad2d7ce6bf64ce29fc48dd698dedb2f383c5c9d"
+    },
+    {
+      "frame": 7,
+      "file": "frame-007.png",
+      "sha256": "5a70d48d46a362a474eb8f0ff3e2bc348a1827d8470a89ad53d048e59e8b5220"
+    },
+    {
+      "frame": 8,
+      "file": "frame-008.png",
+      "sha256": "8c42bff7fc38e690308c049ac126f6d3757a4e4f18d7397e7a2e7fb0b089cb39"
+    },
+    {
+      "frame": 9,
+      "file": "frame-009.png",
+      "sha256": "081aa7e9cb1b8cacf1bfeda74662932892798f84296f87024894b4091ea78339"
+    },
+    {
+      "frame": 10,
+      "file": "frame-010.png",
+      "sha256": "890f81f62d0450f792922b11e429152cf4813a39b48dc66eecd6ae7f00624cbb"
+    },
+    {
+      "frame": 11,
+      "file": "frame-011.png",
+      "sha256": "a49959e3da49a6a364dbd7b5e8d77f13f98932c6c6c2c38f461ea2dfb6179ca9"
+    },
+    {
+      "frame": 12,
+      "file": "frame-012.png",
+      "sha256": "6a021e2db43426eacdfba0e9715f3bc7af7d2712cd2978674dacee3037faf7e3"
+    },
+    {
+      "frame": 13,
+      "file": "frame-013.png",
+      "sha256": "748408305a03d14e2279aae4ef7f8be0a99f3e08d41690ce604487577772de57"
+    },
+    {
+      "frame": 14,
+      "file": "frame-014.png",
+      "sha256": "ad0395197efd8f28bebd348f9cda80f422e97c80bc3829271c782dd4296d1a00"
+    },
+    {
+      "frame": 15,
+      "file": "frame-015.png",
+      "sha256": "9e67de2292510f81221945824d1b6f96e9c82bf0fecf885ec7161cedbce5bac1"
+    },
+    {
+      "frame": 16,
+      "file": "frame-016.png",
+      "sha256": "4d42482ffa6c13a871b97874696d1b520b0492630cefaf3b401ad45cc5926b87"
+    },
+    {
+      "frame": 17,
+      "file": "frame-017.png",
+      "sha256": "8bd8dbd8e677a89044a90cd5357b84a023e4480e6a0faa9d9ff3fae1810bdf78"
+    },
+    {
+      "frame": 18,
+      "file": "frame-018.png",
+      "sha256": "73a66bbd5fa4d889b2dd6f7f4584df9be85757821fc8a6aa837f358885a8c453"
+    },
+    {
+      "frame": 19,
+      "file": "frame-019.png",
+      "sha256": "3e83585691d3363cb67ac5d80d9918048d53d1d1631ead126dc8ef21c2bf7093"
+    },
+    {
+      "frame": 20,
+      "file": "frame-020.png",
+      "sha256": "3afbe48ca8911ba2341c59bd1ea4a270fb08dd9d91c938e3e6243b32338d2da0"
+    },
+    {
+      "frame": 21,
+      "file": "frame-021.png",
+      "sha256": "c953131637fc97ead376934ba9e844a1e04d49f33821600536a6b2cea70c6f1a"
+    },
+    {
+      "frame": 22,
+      "file": "frame-022.png",
+      "sha256": "e8a94cf4bb5d115a34ce5c51dad1087b7a13420052d24d27d29baed4f539dc2b"
+    },
+    {
+      "frame": 23,
+      "file": "frame-023.png",
+      "sha256": "581cabc80e35dd64314eab2c76eb339539fcdf357d88fb57757da355e418e44c"
+    }
+  ]
+}

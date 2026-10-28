@@ -10,6 +10,12 @@ const vendor=(await fs.readFile(path.join(root,'node_modules/smplr/dist/index.mj
 await fs.writeFile(path.join(root,'public/vendor/smplr.mjs'),vendor);
 await fs.copyFile(path.join(root,'scripts/smplr-LICENSE.txt'),path.join(root,'public/vendor/smplr-LICENSE.txt'));
 const allowed=['index.html','style.css','icon.svg','support-alipay-qr.jpg','app.js','audio.js','sampled-audio.js','bindings.js','clock.js','recording.js','scores.js','UPSTREAM-LICENSE.txt','_headers','vendor/smplr.mjs','vendor/smplr-LICENSE.txt','samples/manifest.json','samples/LICENSES.txt','samples/CC0-1.0.txt','character.js','performance.js','guidance.js','character/plush-atlas-v1.png','character/indie-atlas-v2.png','character/orange-components-v3.png','character/orange-instruments-v3.png','character/rig.css','character/manifest.json','character/README.md','labs/orange-guitar/index.html','labs/orange-guitar/pilot.js','labs/orange-guitar/style.css','labs/orange-guitar/atlas-v1.png','whole-character.js','keyboard-navigation.js','character/whole.css','character/keyboard-poses-v1.jpg','character/keyboard-motion-v1.json','character/keyboard-demo-v1.mp4','labs/keyboard-motion/index.html','labs/keyboard-motion/style.css'];
+const blenderLab=JSON.parse(await fs.readFile(path.join(root,'public/labs/blender-guitar/manifest.json')));
+if(blenderLab.version!==1||blenderLab.frames!==24||blenderLab.width!==640||blenderLab.height!==640||blenderLab.columns!==6||blenderLab.rows!==4||blenderLab.contactFrame!==2||blenderLab.fps!==60||!blenderLab.completeScene)throw Error('Unreviewed Blender test scene');
+const blenderAtlas=await fs.readFile(path.join(root,'public/labs/blender-guitar/atlas.webp'));
+if(blenderAtlas.length!==blenderLab.atlasBytes||createHash('sha256').update(blenderAtlas).digest('hex')!==blenderLab.atlasSha256)throw Error('Blender atlas differs');
+if(createHash('sha256').update(await fs.readFile(path.join(root,'design/blender-guitar-v1/scene.py'))).digest('hex')!==blenderLab.sourceScriptSha256)throw Error('Blender authoring source differs');
+allowed.push(...['index.html','style.css','pilot.js','motion.js','manifest.json','atlas.webp','poster.webp'].map(file=>'labs/blender-guitar/'+file));
 allowed.push('media-export.js','site-counter.js','_worker.js','_routes.json','character/guitar-whole-still-v1.jpg','character/drums-whole-still-v1.jpg');
 const wholeFrames=JSON.parse(await fs.readFile(path.join(root,'public/character/whole-piano-v3/manifest.json')));
 const {validateFrameManifest,validateInstrumentManifest}=await import('../public/full-frame-character.js');validateFrameManifest(wholeFrames);
@@ -41,10 +47,10 @@ await fs.rm(path.join(root,'dist'),{recursive:true,force:true});await fs.mkdir(p
 const files={};for(const name of allowed){
  const content=await fs.readFile(path.join(root,'public',name));
  const text=/\.(mp3|png|jpg|mp4|webp)$/.test(name)?'':content.toString();
- const maxBytes=/^character\/.*\.mp4$/.test(name)?8000000:/^(?:character\/|labs\/orange-guitar\/).*\.(png|jpg|webp)$/.test(name)?2000000:256000;
+ const maxBytes=/^labs\/blender-guitar\/.*\.webp$/.test(name)?3000000:/^character\/.*\.mp4$/.test(name)?8000000:/^(?:character\/|labs\/orange-guitar\/).*\.(png|jpg|webp)$/.test(name)?2000000:256000;
  if(content.length>maxBytes||/\/Users\/|oauth_token|BEGIN PRIVATE KEY|farmcan(?:-seed)?\.pages\.dev/.test(text))throw Error('Invalid public file: '+name);
  await fs.mkdir(path.dirname(path.join(root,'dist',name)),{recursive:true});await fs.writeFile(path.join(root,'dist',name),content);files[name]=createHash('sha256').update(content).digest('hex');
 }
 let commit='local';try{commit=execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8',stdio:['ignore','pipe','ignore']}).trim();}catch{}
-await fs.writeFile(path.join(root,'dist/release.json'),JSON.stringify({project:'miao-beat',version:'0.15.0-media-metronome',commit,files},null,2)+'\n');
+await fs.writeFile(path.join(root,'dist/release.json'),JSON.stringify({project:'miao-beat',version:'0.16.0-blender-pilot',commit,files},null,2)+'\n');
 console.log('Built '+allowed.length+' explicit public files; whole-scene piano, guitar and drum poses, four sampled sounds and a visit counter.');

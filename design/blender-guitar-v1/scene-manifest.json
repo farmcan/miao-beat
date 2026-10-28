@@ -1,0 +1,13 @@
+{
+  "generator": "scene.py",
+  "original_model": true,
+  "external_assets": [],
+  "complete_scene": true,
+  "fps": 60,
+  "frames": 24,
+  "contact_frame": 2,
+  "frame_size": 640,
+  "engine": "CYCLES",
+  "samples": 32,
+  "note": "Short one-shot right-paw study; stationary fretting paw. Visual and input acceptance still required."
+}

@@ -2,7 +2,11 @@
 
 更新：2026-10-26。当前读物按“决策 → 证据 → 实现与验收 → 早期归档”组织。网页阅读包由 `scripts/export-review.py` 导出到所有者配置的站点；产品与公开 README 不回链个人入口。
 
-## 最新：媒体导出与节拍器 · 0.15.0
+## 最新：Blender 吉他一期测试 · 0.16.0
+
+[执行计划与验收](blender-guitar-v1-plan.md) · [场景/动作/资产参考](research/blender-guitar-v1-references.md) · [网页项目源码对照](research/blender-web-input-references.md) · [可编辑Blender工程与复现](../design/blender-guitar-v1/README.md)
+
+## 媒体导出与节拍器 · 0.15.0
 
 - [视频/音频文件、三种节拍音色与验收](media-metronome-release-2026-10-27.md)
 

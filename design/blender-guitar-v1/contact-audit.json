@@ -1,0 +1,420 @@
+{
+  "units": "Blender scene units",
+  "paw_radii": [
+    0.255,
+    0.19,
+    0.22
+  ],
+  "soundboard_front_y": -0.9349999928474426,
+  "meaning": "positive clearance; small negative value = contact with compliant string; all soundboard_clearance must stay positive",
+  "frames": [
+    {
+      "frame": 0,
+      "paw_center": [
+        -0.33000001311302185,
+        -1.2339999675750732,
+        1.8799999952316284
+      ],
+      "soundboard_clearance": 0.109,
+      "string_surface_gaps": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "frame": 1,
+      "paw_center": [
+        -0.33000001311302185,
+        -1.1999999284744263,
+        1.7899999618530273
+      ],
+      "soundboard_clearance": 0.075,
+      "string_surface_gaps": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        0.166538
+      ]
+    },
+    {
+      "frame": 2,
+      "paw_center": [
+        -0.33000001311302185,
+        -1.1639999151229858,
+        1.7000000476837158
+      ],
+      "soundboard_clearance": 0.039,
+      "string_surface_gaps": [
+        null,
+        null,
+        null,
+        0.084029,
+        0.025378,
+        -0.005759
+      ]
+    },
+    {
+      "frame": 3,
+      "paw_center": [
+        -0.33000001311302185,
+        -1.2029999494552612,
+        1.590000033378601
+      ],
+      "soundboard_clearance": 0.078,
+      "string_surface_gaps": [
+        0.144438,
+        0.071609,
+        0.037304,
+        0.016202,
+        0.003624,
+        -0.002171
+      ]
+    },
+    {
+      "frame": 4,
+      "paw_center": [
+        -0.33000001311302185,
+        -1.2039999961853027,
+        1.4800000190734863
+      ],
+      "soundboard_clearance": 0.079,
+      "string_surface_gaps": [
+        0.019732,
+        0.005725,
+        -0.001279,
+        -0.002084,
+        0.003202,
+        0.015109
+      ]
+    },
+    {
+      "frame": 5,
+      "paw_center": [
+        -0.33000001311302185,
+        -1.2059999704360962,
+        1.3776469230651855
+      ],
+      "soundboard_clearance": 0.081,
+      "string_surface_gaps": [
+        -0.001161,
+        0.001758,
+        0.011009,
+        0.027643,
+        0.05431,
+        0.099386
+      ]
+    },
+    {
+      "frame": 6,
+      "paw_center": [
+        -0.33000001311302185,
+        -1.21999990940094,
+        1.3299999237060547
+      ],
+      "soundboard_clearance": 0.095,
+      "string_surface_gaps": [
+        0.016897,
+        0.027629,
+        0.046133,
+        0.075691,
+        0.128211,
+        null
+      ]
+    },
+    {
+      "frame": 7,
+      "paw_center": [
+        -0.33000001311302185,
+        -1.2538124322891235,
+        1.3312499523162842
+      ],
+      "soundboard_clearance": 0.128812,
+      "string_surface_gaps": [
+        0.050485,
+        0.060997,
+        0.079218,
+        0.108327,
+        0.159583,
+        null
+      ]
+    },
+    {
+      "frame": 8,
+      "paw_center": [
+        -0.33000001311302185,
+        -1.284999966621399,
+        1.3399999141693115
+      ],
+      "soundboard_clearance": 0.16,
+      "string_surface_gaps": [
+        0.080288,
+        0.089285,
+        0.105605,
+        0.131805,
+        0.175808,
+        null
+      ]
+    },
+    {
+      "frame": 9,
+      "paw_center": [
+        -0.33000001311302185,
+        -1.2994531393051147,
+        1.3733124732971191
+      ],
+      "soundboard_clearance": 0.174453,
+      "string_surface_gaps": [
+        0.092289,
+        0.095884,
+        0.105883,
+        0.123452,
+        0.151544,
+        0.200094
+      ]
+    },
+    {
+      "frame": 10,
+      "paw_center": [
+        -0.33000001311302185,
+        -1.3068749904632568,
+        1.435499906539917
+      ],
+      "soundboard_clearance": 0.181875,
+      "string_surface_gaps": [
+        0.106959,
+        0.100835,
+        0.100858,
+        0.107005,
+        0.119907,
+        0.141267
+      ]
+    },
+    {
+      "frame": 11,
+      "paw_center": [
+        -0.33000001311302185,
+        -1.309609293937683,
+        1.5149375200271606
+      ],
+      "soundboard_clearance": 0.184609,
+      "string_surface_gaps": [
+        0.145628,
+        0.123688,
+        0.1105,
+        0.104185,
+        0.104027,
+        0.109984
+      ]
+    },
+    {
+      "frame": 12,
+      "paw_center": [
+        -0.33000001311302185,
+        -1.309999942779541,
+        1.600000023841858
+      ],
+      "soundboard_clearance": 0.185,
+      "string_surface_gaps": [
+        null,
+        0.191051,
+        0.15156,
+        0.127741,
+        0.113215,
+        0.10578
+      ]
+    },
+    {
+      "frame": 13,
+      "paw_center": [
+        -0.33000001311302185,
+        -1.3080813884735107,
+        1.6805555820465088
+      ],
+      "soundboard_clearance": 0.183081,
+      "string_surface_gaps": [
+        null,
+        null,
+        null,
+        0.192824,
+        0.151947,
+        0.127459
+      ]
+    },
+    {
+      "frame": 14,
+      "paw_center": [
+        -0.33000001311302185,
+        -1.3028606176376343,
+        1.7524445056915283
+      ],
+      "soundboard_clearance": 0.177861,
+      "string_surface_gaps": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        0.179602
+      ]
+    },
+    {
+      "frame": 15,
+      "paw_center": [
+        -0.33000001311302185,
+        -1.2951397895812988,
+        1.812999963760376
+      ],
+      "soundboard_clearance": 0.17014,
+      "string_surface_gaps": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "frame": 16,
+      "paw_center": [
+        -0.33000001311302185,
+        -1.2857211828231812,
+        1.8595556020736694
+      ],
+      "soundboard_clearance": 0.160721,
+      "string_surface_gaps": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "frame": 17,
+      "paw_center": [
+        -0.33000001311302185,
+        -1.2754071950912476,
+        1.8894444704055786
+      ],
+      "soundboard_clearance": 0.150407,
+      "string_surface_gaps": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "frame": 18,
+      "paw_center": [
+        -0.33000001311302185,
+        -1.2649999856948853,
+        1.899999976158142
+      ],
+      "soundboard_clearance": 0.14,
+      "string_surface_gaps": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "frame": 19,
+      "paw_center": [
+        -0.33000001311302185,
+        -1.2552566528320312,
+        1.89792001247406
+      ],
+      "soundboard_clearance": 0.130257,
+      "string_surface_gaps": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "frame": 20,
+      "paw_center": [
+        -0.33000001311302185,
+        -1.2467538118362427,
+        1.8929599523544312
+      ],
+      "soundboard_clearance": 0.121754,
+      "string_surface_gaps": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "frame": 21,
+      "paw_center": [
+        -0.33000001311302185,
+        -1.2400225400924683,
+        1.8870400190353394
+      ],
+      "soundboard_clearance": 0.115023,
+      "string_surface_gaps": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "frame": 22,
+      "paw_center": [
+        -0.33000001311302185,
+        -1.2355941534042358,
+        1.8820799589157104
+      ],
+      "soundboard_clearance": 0.110594,
+      "string_surface_gaps": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "frame": 23,
+      "paw_center": [
+        -0.33000001311302185,
+        -1.2339999675750732,
+        1.8799999952316284
+      ],
+      "soundboard_clearance": 0.109,
+      "string_surface_gaps": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ]
+}

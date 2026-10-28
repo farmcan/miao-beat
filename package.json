@@ -1,6 +1,6 @@
 {
   "name": "miao-beat",
-  "version": "0.15.0-media-metronome",
+  "version": "0.16.0-blender-pilot",
   "private": true,
   "type": "module",
   "description": "A small browser instrument playground, with a metronome and a cat.",
