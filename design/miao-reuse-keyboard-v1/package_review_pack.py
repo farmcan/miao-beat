@@ -17,7 +17,7 @@ ROOT=Path(__file__).resolve().parents[2]
 PREVIOUS={item['path']:item for item in json.loads((ROOT/'PACKAGE_MANIFEST.json').read_text())['files']} if (ROOT/'PACKAGE_MANIFEST.json').is_file() else {}
 parser=argparse.ArgumentParser()
 parser.add_argument('--output',type=Path,default=ROOT/'artifacts/handoff')
-parser.add_argument('--kind',choices=['keyboard','guitar','both'],default='keyboard')
+parser.add_argument('--kind',choices=['keyboard','guitar','both','eight-key-prop'],default='keyboard')
 args=parser.parse_args()
 args.output.mkdir(parents=True,exist_ok=True)
 sha=lambda data:hashlib.sha256(data).hexdigest()
@@ -180,7 +180,42 @@ Validate after extraction: python3 design/miao-reuse-keyboard-v1/verify_review_p
     return pack('miao-thin-electric-clean-prop-2026-10-30',payload,{'status':'CLEAN_PROP_CRAFT_GO_OFFLINE_ONLY','raw_materials_or_original_hh_included':False,'model_assets':'CC0 geometry + project PBR','no_cat_assembly':True,'native_format':'Blender5.2.3; use GLB for3.6'})
 
 
+def eight_key_prop():
+    payload={}
+    base='artifacts/miao-eight-key-prop-probe-2026-10-30/prop-export/'
+    for name in ['eight-key-cc0-prop.glb','eight-key-cc0-prop-native36.blend','note-map.json','prop-reimport-three-quarter.png','reimport-verification.json','minimal-native-verification.json']:
+        file_entry(payload,'model/'+name,base+name)
+    file_entry(payload,'README.md','docs/character-eight-key-prop-handoff.md')
+    file_entry(payload,'model/README.md',base+'README.md')
+    for name in ['KEYFORTY-SOURCE.json','KEYFORTY-CC0-EVIDENCE.txt']:
+        file_entry(payload,'licenses/'+name,'artifacts/miao-reuse-keyboard-v1/licenses/'+name)
+    file_entry(payload,'licenses/CC0-1.0-legalcode.html','artifacts/upstream-guitar-candidates/blenderkit-classic/CC0-1.0-legalcode.html')
+    file_entry(payload,'licenses/PROJECT-MIT.txt','LICENSE')
+    reports=[f'miao-eight-key-{stage}-{role}-judge-2026-10-30.md' for stage in ['gray','color'] for role in ['identity','craft','motion']]
+    reports+=['miao-eight-key-prop-transport-craft-2026-10-30.md']
+    for name in reports:file_entry(payload,'docs/research/'+name,'docs/research/'+name)
+    file_entry(payload,'design/miao-reuse-keyboard-v1/verify_review_pack.py','design/miao-reuse-keyboard-v1/verify_review_pack.py')
+    assert sha(payload['model/eight-key-cc0-prop.glb']['data'])=='d4f3ea60171f8275f02b59d9c3c8754234287f058b09cfd2fb047c6eaf6ceae6'
+    assert sha(payload['model/eight-key-cc0-prop-native36.blend']['data'])=='a37df130055401bcadfb2e7096763bfd5685143235873aeb1c92e77fd44bf150'
+    assert not any(path.endswith('.log') or 'cat.blend' in path for path in payload)
+    return pack('miao-eight-key-cc0-instrument-2026-10-30',payload,{
+        'status':'STATIC_INSTRUMENT_AUTHORING_COMPONENT_GO_ONLY',
+        'model_and_maps_license':'CC0, derived from Innerscene Key Forty complete-file CC0',
+        'cat_table_rig_actions_embedded_scripts_included':False,
+        'complete_character_approved':False,'motion_or_mechanical_safety_approved':False,
+        'production_replacement':False,'native_format':'Blender3.6.23 data-only asset library; Append the scene or import GLB',
+        'mesh_count':18,'triangles':5560,'all_four_images_embedded':True,
+        'glb_sha256':'d4f3ea60171f8275f02b59d9c3c8754234287f058b09cfd2fb047c6eaf6ceae6',
+        'native_sha256':'a37df130055401bcadfb2e7096763bfd5685143235873aeb1c92e77fd44bf150',
+        'world_fit_coordinates_retained':True,
+        'scope':'Only the static instrument is handed off. Full Miao identity/craft remains HOLD. No new playing animation is authorized by this package.',
+        'review_evidence':'Seven independent reports included; their full cat-scene images remain repository research evidence, not CC0 model contents.',
+    })
+
+
 archives=[]
+if args.kind=='eight-key-prop':
+    archives.append(eight_key_prop())
 if args.kind in ['keyboard','both']:
     archives.append(keyboard())
 if args.kind in ['guitar','both']:

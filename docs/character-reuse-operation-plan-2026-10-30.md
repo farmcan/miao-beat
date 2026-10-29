@@ -8,7 +8,7 @@
 |---|---|---|
 | Classic Guitar声学琴 | CC0原生模型、兼容GLB、真实源渲染与独立prop craft | WingIt整合持琴接触 |
 | HH薄电吉他干净衍生物 | CC0源几何；旧royalty-free材质全部清除，以新PBR替换；独立prop craft GO | .70与最后一次.55整合仍穿模，当前持琴分支冻结 |
-| KeyForty键盘+COMMON280桌 | 完整文件CC0，真实导入/渲染；完整猫/双手/乐器共同一帧；灰模和彩色均三评GO | 实际单键动作尚未验收 |
+| KeyForty键盘+COMMON280桌 | 完整文件CC0，真实导入/渲染；完整猫/双手/乐器共同一帧；灰模和彩色均三评GO | v2已完成A/C4有限真实试弹；全八键/最终角色仍未验收 |
 | WingIt猫 | 成熟CC BY4.0原生rig与手指；原始mesh保留；Blender3.6.23真实运行 | 与原橘猫暖短绒、温和神态仍有差距；不能叫最终原图复刻 |
 
 默认色实际图和三评见 `miao-keyboard-default-color-static-2026-10-30.md` 与 `miao-keyboard-color-{identity,craft,motion}-judge-2026-10-30.md`。每份评审仅签署自己的范围，三者都GO才启动动作。原生作者smile-close pose只做隔离兼容性试验，出现眼鼻P0，不采用；不得覆盖已经审查的默认色scene。
@@ -61,3 +61,10 @@ v2若获诊断支持，需先交新灰/色完整图与手近景重新三评；�
 v1 STOP 历史不改。v2通过原键组/腕控制器上移2mm、左腕横向校正，在固定1.5mm行程内通过三角色灰模与彩色静态门禁；原生49帧单次按下/接触/松开复开核验通过。接着验证同一场景的手部morph与真实键14，在浏览器接入A/C4采样音。三独立网页评审仅允许独立实验页，不替换主站；全景动作小、原形象差距仍P1。
 
 当前可复现入口、各阶段证据和生产验收边界见 [单键网页交付说明](research/miao-keyboard-one-key-web-release-2026-10-30.md)。接下来应先依据用户试弹反馈改善手部可见性与身份对齐，不能把一个键的有限成功扩写为八键或吉他完成。
+
+
+## 当前身份路线纠正与八键静态组件
+
+[原生只读检查](research/miao-native-identity-adaptation-probe-2026-10-30.md)已证明Wing It制服就是躯干/四肢表面，不存在可直接露出的完整裸毛猫。整角色仍HOLD，不再以改色/隐藏配饰掩盖头身与身份差距。继续寻找匹配成熟模板；本轮新增公开源码、付费预览、PKO胖猫候选和取得源后停止条件见[补充核验与决策](research/cat-source-supplement-and-decision-2026-10-30.md)。尚无新猫源包取得/最终模型通过。
+
+八键适配仅复用原KeyForty八白五黑，白键宽15.39→52.33mm、原case宽504mm，原native腕刚体X位移。灰与同pose彩色均由identity/craft/motion独立实看六图，仅prop/准备位静态GO；完整角色原图身份/精致度HOLD，不放行动作/网页扩展。来源、native SHA和有限几何证据见[八键probe](research/miao-eight-key-prop-probe-2026-10-30.md)与[同姿态原色](research/miao-eight-key-color-static-2026-10-30.md)。线上A/C4实验保留原字节，不用此静态组件替换或冒称八键完成。
