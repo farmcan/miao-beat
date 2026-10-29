@@ -1,35 +1,12 @@
-# Miao reuse v1 · local static compatibility experiment
+# Miao reuse v1 · current reproducible baseline and frozen contact study
 
-This stage reuses Blender Studio's mature Wing It! Cat geometry, rig and received colors. It does not build a new cat, remove its outfit, expand animation, or publish production assets.
+The source-only original-color rest baseline is verified. Guitar-contact adaptation remains **FAIL**, frozen for independent review. No animation or product publication is authorized by these results.
 
-## Fixed upstream asset
+## Current recommended source-only render
 
-- Original author page: https://studio.blender.org/characters/cat/v1/
-- Credit: Cat Rig (CC-BY) Blender Foundation | studio.blender.org
-- Asset license: CC BY 4.0 https://creativecommons.org/licenses/by/4.0/
-- Licensed redistribution: https://github.com/move-ai/Move_API_and_retargeting_Blender_addon/blob/f449af53ccc71a7c66079b7a52e133a163a41fb7/data/rigs/wingit_cat.blend
-- Required source SHA256: `42d5c51c758e7f5427622375381058afa8dc398bec637f4822f5636b6b9a41e1`
-- Source path: `artifacts/upstream-cat-candidates/scout-a/wingit_cat.blend`
-- MoveAI's changes: optimization, including simplified Principled/Emission materials. This working render cannot assert original movie toon shader fidelity. No MoveAI addon is used.
+Use `scripts/render_source_rest_baseline.py`. It reads the immutable upstream file directly, preserves source Quality=1, head/pupil/mouth, the complete rest pose, received materials and geometry. It does not require a failed hold derivative.
 
-## Portable author-supported runtime
-
-Existing user installation `/Applications/Blender.app` remains Blender 5.2.3 and is not replaced.
-
-- Version: official Blender 3.6.23, macOS arm64, build `e467db79ca8c`.
-- Index: https://download.blender.org/release/Blender3.6/
-- Runtime DMG: https://download.blender.org/release/Blender3.6/blender-3.6.23-macos-arm64.dmg
-- Official hashes: https://download.blender.org/release/Blender3.6/blender-3.6.23.sha256
-- Verified DMG SHA256: `ecbeaef4abbeb045de8465e78b3f97aec9b67faf2fc71b20e5eca37bf1caf874`
-- Portable binary: `artifacts/runtime/blender-3.6.23/Blender.app/Contents/MacOS/Blender`
-- Download and checksum receipt: `artifacts/runtime/blender-3.6.23-runtime-receipt.json`.
-- The DMG is verified before mounting read-only; the app is copied to the project runtime directory with `ditto`, never installed into `/Applications`. No user preferences are saved. Runtime licenses remain inside the app; GPL and copyright copies are also under the compatibility evidence folder.
-
-On another platform, obtain Blender 3.6.23 for that platform from the same official index and verify against the matching line of the official `.sha256`; do not use the arm64 checksum for other packages. The rendering Python uses portable bpy/mathutils/pathlib APIs.
-
-## Reproduce the actual colored static render
-
-Run from the repository root after obtaining and verifying the fixed source asset and runtime:
+From the repository root:
 
 ```sh
 artifacts/runtime/blender-3.6.23/Blender.app/Contents/MacOS/Blender \
@@ -39,32 +16,43 @@ artifacts/runtime/blender-3.6.23/Blender.app/Contents/MacOS/Blender \
   artifacts/miao-reuse-v1/source-rest-baseline
 ```
 
-Outputs:
+Actual outputs: `source-rest-original-three-quarter.png`, `source-rest-native36.blend`, `source-rest-baseline-receipt.json`. Source pose hash before/after is identical; camera helper local Euler is synchronized from the source formula's camera WORLD Euler before rendering and all three axis errors were zero. The original asset is unchanged.
 
-- `wingit-received-materials-color.png`: complete cat in the source rest pose, with the materials/colors/texture received from the licensed redistribution.
-- `wingit-working-native36.blend`: separate local working scene, with the original cat, received materials, temporary inspection camera/lights/world and limited compatibility patch.
-- `native-color-receipt.json`: version, source/working-copy SHA, exact limited changes and provenance boundary.
+The self-contained `source-pack/`, archived at `artifacts/miao-reuse-v1/handoff/miao-reuse-source-rest-pack.zip`, includes the exact source asset, the same script, license/provenance and official runtime hashes. It was actually run from its copied script with default relative paths. Unpack it elsewhere, supply official Blender 3.6, and run:
 
-## Execution and modification boundary
+```sh
+/path/to/blender-3.6 --background --factory-startup --disable-autoexec \
+  --python-exit-code 1 --python scripts/render_source_rest_baseline.py
+```
 
-`extract_upstream_texts.py` extracts native scripts without executing them and lists imports/calls. `inspect_native_shading.py` records material topology and lighting properties. Static findings are documented in `artifacts/miao-reuse-v1/compat/EMBEDDED-CODE-REVIEW.md`.
+Default paths resolve from the script location. No failed scene, owner filesystem path, account, MoveAI addon or external Python library is required. The runtime is intentionally not inside the source pack; use the official package for the destination operating system.
 
-No upstream Python module executes. All autoexecution stays disabled. CloudRig UI's eval paths, registration, rig generation and UV repair helpers remain unused. For the three exactly matched `HLP-scene_camera_dummy.rotation_euler` expressions, the working copy uses a simple named transform driver referencing the actual inspection camera's world-space XYZ Euler. Other drivers are preserved. Embedded text module autoload flags are disabled in the new working copy. Source bytes are checked before and after rendering.
+## Immutable upstream and separate licenses
 
-The only scene additions are inspection camera, area lights and background world. Geometry, hand/finger topology, rig pose and received materials are unchanged. There are no added keyframes, new animation clips, recoloring, outfit removal or guitar assembly in this stage.
+- Cat original: https://studio.blender.org/characters/cat/v1/
+- Credit: Cat Rig (CC-BY) Blender Foundation | studio.blender.org
+- Asset license: CC BY 4.0 https://creativecommons.org/licenses/by/4.0/
+- Licensed redistribution: https://github.com/move-ai/Move_API_and_retargeting_Blender_addon/blob/f449af53ccc71a7c66079b7a52e133a163a41fb7/data/rigs/wingit_cat.blend
+- Source SHA256: `42d5c51c758e7f5427622375381058afa8dc398bec637f4822f5636b6b9a41e1`.
+- The received materials are optimized Principled/Emission with packed texture, not proof of original film toon shader fidelity.
+- Embedded CloudRig code is retained unchanged and never executed. Its current official extension is separately GPL-3.0-or-later; source pack notices and GPL text retain that boundary. No MoveAI addon is installed or run.
 
-This is a compatibility/static experiment awaiting the project review gates; it is not final character approval or animation acceptance.
+Official runtime index: https://download.blender.org/release/Blender3.6/ ; hashes: https://download.blender.org/release/Blender3.6/blender-3.6.23.sha256 . Actual tested runtime is macOS arm64 Blender 3.6.23 build `e467db79ca8c`, DMG SHA256 `ecbeaef4abbeb045de8465e78b3f97aec9b67faf2fc71b20e5eca37bf1caf874`. It is portable under `artifacts/runtime/blender-3.6.23/`; the user's `/Applications/Blender.app` 5.2.3 was not replaced. Verify the corresponding official hash for other operating systems.
 
-## Superseding failure notice
+## Historical error and bounded face recovery
 
-The static hold/color experiment is now **FAIL and frozen**, not an accepted implementation. See `docs/research/miao-reuse-static-hold-builder-2026-10-29.md` and `artifacts/miao-reuse-v1/static-hold/inspection-manifest.json`. Mouth disappearance, an eye triangle, invalid hand contact and guitar proportions block delivery and animation. The simple camera-driver replacement also failed semantic equivalence on read-only reopening (world rotation difference 1.08858 radians) despite valid/simple driver flags; do not call it a completed compatibility fix. Official portable runtime/download and safe asset-read/color-render evidence remain valid. These are integration defects, not grounds to reject the mature licensed source model.
+`render_native_color.py` is historical evidence of a rejected camera TRANSFORMS-driver replacement. Its simple/valid flags did not establish equivalence: helper local Euler differed from the original expression by up to1.08804 radians. Do not recommend or run it for fresh renders.
 
-### Limited face-baseline correction after failure freeze
+The supported static fallback mutes only the three reviewed camera rotation expressions, then explicitly assigns `camera.matrix_world.to_euler()` into helper local XYZ Euler before every still and asserts each axis error<1e-6. Autoexecution stays disabled, upstream Python does not run, and derivative text autoload flags are off.
 
-The failed hold scenes and images remain frozen. A separate authorized technical recovery restores upstream face control matrices, SealedMouth=False and source Quality=1, then mutes the three non-equivalent camera rotation drivers and assigns `camera.matrix_world.to_euler()` to the helper's local Euler before each render. Both two-angle face images recover a readable native mouth with no eye triangle, and every axis error is zero. Use `scripts/recover_face_baseline.py` and the receipt under `artifacts/miao-reuse-v1/face-baseline-recovery/`; this is a supported static fallback, not a functioning general camera driver or animation claim. Hand contact/proportions remain failed and awaiting a measured plan and independent review.
+A separate limited recovery restored source SealedMouth=False and exact source head/pupil/Quality controls. Two angles recovered readable original mouth and removed the eye triangle. See `docs/research/miao-reuse-face-baseline-recovery-2026-10-29.md`. This technical recovery did not pass guitar contact or final art.
 
-## Current recommended source-only handoff
+## Contact study remains FAIL and frozen
 
-Use `scripts/render_source_rest_baseline.py` or the self-contained `source-pack/` / `artifacts/miao-reuse-v1/handoff/miao-reuse-source-rest-pack.zip`. It was actually run from the copied pack with default relative input/output paths. It requires only the packed immutable upstream source and official Blender 3.6, never a failed hold derivative. The correct outputs are `source-rest-original-three-quarter.png`, `source-rest-native36.blend` and `source-rest-baseline-receipt.json` under the selected output folder. Camera per-axis errors were all zero and source pose hash was unchanged.
+The first one-pose-plus-repair/color trial is retained under `artifacts/miao-reuse-v1/static-hold/` with its three-role failure and builder diagnosis. A later evidence-led single enlarged-guitar/real-hand-frame proposal was actually placed through calibrated ORG-Hand↔IK-MSTR-Hand mapping, not copied blind into the master controller. Actual arm reach was91.4556%/97.07645%, with original segment lengths preserved.
 
-The older `render_native_color.py` is historical evidence of the rejected TRANSFORMS-driver compatibility implementation. Do not use or recommend it for fresh renders. Earlier output/receipt names in this document describe historical runs, not the current source-only command.
+`check_contact_candidate.py` initially exposed an invalid empty wrist selection: DEF-Hand's maximum weight is only .448, and real palm/wrist support also comes from Carpal/Sleeve/Forearm. The empty-set clear label was withdrawn and preserved as invalid historical evidence. Corrected nonzero skin selection and the final fixed-support-weight check reject this candidate.
+
+`solve_keypads_diagnostic.py` ran only three actual continuous-skin triangle pad targets with1° finite difference, ≤5° steps, ≤15updates/pad and3 no-improvement stop. Left index improved to.0155mm target error; left proximal thumb remained14.747mm after the limit; right thumb was.128mm from the requested hover target. Final fixed palm/wrist skin still enters the guitar, including86 right-side fixed-support vertices and up to42.50mm envelope depth. These are rejection measurements, not a complete collision acceptance method.
+
+The sole current diagnostic full-frame image is `artifacts/miao-reuse-v1/contact-correction/diagnostic-front-FAIL-NOT-ACCEPTED.png`, visibly marked TECHNICAL STUDY / NOT ACCEPTED. Native, numeric trace and exact hashes are in that folder's `inspection-manifest.json`. No additional pose, palette or animation search continues. Independent reviewers decide next steps; integration failures are not a reason to discard the professional source geometry or start another bespoke cat.
