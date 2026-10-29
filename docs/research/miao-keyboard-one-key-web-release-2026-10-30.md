@@ -25,3 +25,13 @@
 ## 可复现与发布
 
 `python3 scripts/prepare-reuse-keyboard-public.py` 默认生成待审门禁；只有三角色网页评审完成后显式使用 `--web-gate experimental-page-go`。已实测待审状态构建被拒；构建核对精确模型SHA、内嵌纹理、无COLOR_0、唯一目标key/morph、资产指纹、公开文件白名单和隐私检查。仅 dist/ 发布到 miao-beat；正文和索引不得把本机路径/原始资料带到产品。Production active commit、正常与cache-busted canonical字节、CSP下真实载入/按压/松开/停止另记本机生产验收receipt；部署命令本身不算完成。
+
+## 正式站验收完成
+
+2026-10-30：生产 Active `d58c1711-de64-4e6c-8d6d-824c08c0c3f7`，source `8fd64a623a66f324e83d37c62cb17606635a15ef`（实现提交 `2809d69500fb545cad1890632afbbacb20ff555b`）。[正式单键试弹](https://miao-beat.pages.dev/labs/reuse-keyboard/)和[原对比入口](https://miao-beat.pages.dev/labs/character-compare/)已发布。
+
+293个构建文件中290个公开source URL全部SHA匹配；配置文件 `_headers/_worker.js/_routes.json`不当作公开内容读取。六个正常/带版本查询URL（含17,144,124字节GLB、metadata、release与页面）字节一致。线上CSP仍self脚本/样式，仅本实验页允许blob图片/连接以解码内嵌glTF纹理；实际加载无控制台error/warn。首次旧verify helper未跟随Cloudflare的`.html`重定向，得到空redirect body导致误报；随后的验收明确跟随正常重定向并逐文件比对，全部通过。未用跳过失败路径来签验收。
+
+IAB在正式URL重新开琴：短点击 inputCount1、maxRenderedAmount .999128、PCM peak .0155103、接触CPU绘制提交47.6ms，随后回0；持住 count2/Down1/theta−.013393259，松开归0；800ms物理A只增加为count3，PCM peak .0160851，松开回0；停止后latch=false、amount/weights/theta0、电平scaleX(0)。这证明当前单音功能闭环，不替代主观扬声器试听或最终动作美术验收。
+
+本机证据在 `artifacts/miao-reuse-keyboard-v1/web-final/{canonical-acceptance.json,browser-production-acceptance.json,production-held.png}`；公开状态事件沿用既有Seed机制，独立交付，不宣布整个角色优化完成。
