@@ -30,7 +30,7 @@
 
 2026-10-30：生产 Active `d58c1711-de64-4e6c-8d6d-824c08c0c3f7`，source `8fd64a623a66f324e83d37c62cb17606635a15ef`（实现提交 `2809d69500fb545cad1890632afbbacb20ff555b`）。[正式单键试弹](https://miao-beat.pages.dev/labs/reuse-keyboard/)和[原对比入口](https://miao-beat.pages.dev/labs/character-compare/)已发布。
 
-293个构建文件中290个公开source URL全部SHA匹配；配置文件 `_headers/_worker.js/_routes.json`不当作公开内容读取。六个正常/带版本查询URL（含17,144,124字节GLB、metadata、release与页面）字节一致。线上CSP仍self脚本/样式，仅本实验页允许blob图片/连接以解码内嵌glTF纹理；实际加载无控制台error/warn。首次旧verify helper未跟随Cloudflare的`.html`重定向，得到空redirect body导致误报；随后的验收明确跟随正常重定向并逐文件比对，全部通过。未用跳过失败路径来签验收。
+293个构建文件中290个公开source URL全部SHA匹配；配置文件 `_headers/_worker.js/_routes.json`不当作公开内容读取。六个正常/带版本查询URL（含17,144,124字节GLB、metadata、release与页面）字节一致。线上CSP仍self脚本/样式，仅本实验页允许blob图片/连接以解码内嵌glTF纹理；实际加载无控制台error/warn。首次旧verify helper未跟随Cloudflare的`.html`重定向，得到空redirect body导致误报；随后的验收明确跟随正常重定向并逐文件比对，全部通过。未用跳过失败路径来签验收。`scripts/verify-production.py`也已补上相同的`--location`，后续不再把正常canonical重定向误报为内容缺失。
 
 IAB在正式URL重新开琴：短点击 inputCount1、maxRenderedAmount .999128、PCM peak .0155103、接触CPU绘制提交47.6ms，随后回0；持住 count2/Down1/theta−.013393259，松开归0；800ms物理A只增加为count3，PCM peak .0160851，松开回0；停止后latch=false、amount/weights/theta0、电平scaleX(0)。这证明当前单音功能闭环，不替代主观扬声器试听或最终动作美术验收。
 

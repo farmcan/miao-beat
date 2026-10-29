@@ -3,7 +3,7 @@ from pathlib import Path
 root=Path(__file__).resolve().parents[1]
 local=json.loads((root/'dist/release.json').read_text())
 def get(name):
- return subprocess.check_output(['curl','--fail','--silent','--show-error','--max-time','25','https://miao-beat.pages.dev/'+name+'?v='+local['commit'][:12]])
+ return subprocess.check_output(['curl','--location','--fail','--silent','--show-error','--max-time','25','https://miao-beat.pages.dev/'+name+'?v='+local['commit'][:12]])
 assert json.loads(get('release.json'))==local,'Production commit/manifest differs'
 def check(item):
  name,digest=item
