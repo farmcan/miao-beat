@@ -1,0 +1,1224 @@
+{
+  "stage": "C35-three-fixed-quads-explicit-tessellation",
+  "source_C33_native_sha256": "bae5552b97cf890c0ceab4a2368cf7665cc3defe60a3ec26234f38c7f9a361f4",
+  "source_C33_unchanged": true,
+  "script_sha256": "95d38c93c380db2a6230774fceb4c876ab1352e107ee3171b11eab173dd1b211",
+  "selected_finite_combo": {
+    "order": 5,
+    "combo": [
+      1,
+      0,
+      0
+    ],
+    "legal": true,
+    "diagonal_changes": 2,
+    "minimum_triangle_vs_original_quad_normal_dot": -0.8773652843267727,
+    "actual_skin_triangle_self_pairs": 0,
+    "actual_guitar_triangle_intersections": {
+      "Guitar / ebony fretboard": 0,
+      "Guitar / neck": 0,
+      "Guitar / string 1": 0,
+      "Guitar / string 2": 0,
+      "Guitar / string 3": 0,
+      "Guitar / string 4": 0,
+      "Guitar / string 5": 0,
+      "Guitar / string 6": 0
+    },
+    "actual_fixed_target_rays": [
+      {
+        "kind": "toe",
+        "u": 1.2456666666666667,
+        "target_world": [
+          1.0799086093902588,
+          -1.0514957904815674,
+          2.0348658561706543
+        ],
+        "hit": true,
+        "expected_source": 2,
+        "fallback_used": false,
+        "source": 2,
+        "source_original_polygon": 590033,
+        "actual_hit_world": [
+          1.0799086093902588,
+          -1.054823875427246,
+          2.0348658561706543
+        ],
+        "normal": [
+          0.1445373147726059,
+          0.9246720671653748,
+          -0.35226520895957947
+        ],
+        "normal_condition": 0.9246720671653748,
+        "gap": 0.0005280850455164909
+      },
+      {
+        "kind": "toe",
+        "u": 1.355,
+        "target_world": [
+          1.1910821199417114,
+          -1.0518748760223389,
+          2.078688144683838
+        ],
+        "hit": true,
+        "expected_source": 2,
+        "fallback_used": false,
+        "source": 2,
+        "source_original_polygon": 589877,
+        "actual_hit_world": [
+          1.1910821199417114,
+          -1.0566749572753906,
+          2.078688144683838
+        ],
+        "normal": [
+          -0.6770248413085938,
+          0.6624240279197693,
+          0.3206739127635956
+        ],
+        "normal_condition": 0.6624240279197693,
+        "gap": 0.002000081352889538
+      },
+      {
+        "kind": "toe",
+        "u": 1.4643333333333335,
+        "target_world": [
+          1.3021504878997803,
+          -1.0500400066375732,
+          2.122777223587036
+        ],
+        "hit": true,
+        "expected_source": 2,
+        "fallback_used": false,
+        "source": 2,
+        "source_original_polygon": 589159,
+        "actual_hit_world": [
+          1.3021504878997803,
+          -1.0531131029129028,
+          2.122777223587036
+        ],
+        "normal": [
+          0.0326220765709877,
+          0.9921125769615173,
+          -0.12103122472763062
+        ],
+        "normal_condition": 0.9921125769615173,
+        "gap": 0.00027309637516736984
+      },
+      {
+        "kind": "support",
+        "u": 1.28,
+        "target_world": [
+          1.1450207233428955,
+          -0.9830000400543213,
+          1.9719377756118774
+        ],
+        "hit": true,
+        "expected_source": 1,
+        "fallback_used": false,
+        "source": 1,
+        "source_original_polygon": 586181,
+        "actual_hit_world": [
+          1.1457535028457642,
+          -0.9830000400543213,
+          1.9700770378112793
+        ],
+        "normal": [
+          -0.44284769892692566,
+          0.03918022662401199,
+          0.8957404494285583
+        ],
+        "normal_condition": 0.9957094937562943,
+        "gap": 0.001999827742110938
+      },
+      {
+        "kind": "support",
+        "u": 1.4,
+        "target_world": [
+          1.267055869102478,
+          -0.9830000400543213,
+          2.019996166229248
+        ],
+        "hit": true,
+        "expected_source": 1,
+        "fallback_used": false,
+        "source": 1,
+        "source_original_polygon": 585759,
+        "actual_hit_world": [
+          1.2677886486053467,
+          -0.9830000400543213,
+          2.0181350708007812
+        ],
+        "normal": [
+          0.11112300306558609,
+          -0.34341809153556824,
+          0.9325855374336243
+        ],
+        "normal_condition": 0.8270064480602741,
+        "gap": 0.002000160457100719
+      }
+    ],
+    "strict_nominal_contact_band_pass": false,
+    "authorized_positive_gap_roundoff_pass": true,
+    "eligible": true
+  },
+  "all_original_vertices_bit_exact": true,
+  "maximum_original_vertex_displacement": 0.0,
+  "only_three_quad_faces_replaced_by_explicit_triangles": [
+    590434,
+    590446,
+    590443
+  ],
+  "applied_triangles": [
+    {
+      "source_original_polygon": 590434,
+      "pattern": 1,
+      "vertex_ids": [
+        589648,
+        589642,
+        589629
+      ],
+      "int_face_attributes": {
+        "C23 source face id": 0,
+        "C23 construction region": 2,
+        "C23 C11 upper face local id": 31,
+        "C35 original polygon id": 590435
+      },
+      "material_index": 0,
+      "smooth": true
+    },
+    {
+      "source_original_polygon": 590434,
+      "pattern": 1,
+      "vertex_ids": [
+        589648,
+        589629,
+        589639
+      ],
+      "int_face_attributes": {
+        "C23 source face id": 0,
+        "C23 construction region": 2,
+        "C23 C11 upper face local id": 31,
+        "C35 original polygon id": 590435
+      },
+      "material_index": 0,
+      "smooth": true
+    },
+    {
+      "source_original_polygon": 590446,
+      "pattern": 0,
+      "vertex_ids": [
+        589628,
+        589641,
+        589613
+      ],
+      "int_face_attributes": {
+        "C23 source face id": 0,
+        "C23 construction region": 2,
+        "C23 C11 upper face local id": 19,
+        "C35 original polygon id": 590447
+      },
+      "material_index": 0,
+      "smooth": true
+    },
+    {
+      "source_original_polygon": 590446,
+      "pattern": 0,
+      "vertex_ids": [
+        589628,
+        589613,
+        589605
+      ],
+      "int_face_attributes": {
+        "C23 source face id": 0,
+        "C23 construction region": 2,
+        "C23 C11 upper face local id": 19,
+        "C35 original polygon id": 590447
+      },
+      "material_index": 0,
+      "smooth": true
+    },
+    {
+      "source_original_polygon": 590443,
+      "pattern": 0,
+      "vertex_ids": [
+        589627,
+        589629,
+        589628
+      ],
+      "int_face_attributes": {
+        "C23 source face id": 0,
+        "C23 construction region": 2,
+        "C23 C11 upper face local id": 22,
+        "C35 original polygon id": 590444
+      },
+      "material_index": 0,
+      "smooth": true
+    },
+    {
+      "source_original_polygon": 590443,
+      "pattern": 0,
+      "vertex_ids": [
+        589627,
+        589628,
+        589626
+      ],
+      "int_face_attributes": {
+        "C23 source face id": 0,
+        "C23 construction region": 2,
+        "C23 C11 upper face local id": 22,
+        "C35 original polygon id": 590444
+      },
+      "material_index": 0,
+      "smooth": true
+    }
+  ],
+  "face_attribute_checks": [
+    {
+      "original_polygon": 590434,
+      "new_triangle_count": 2,
+      "materials_preserved": true,
+      "face_int_attributes_preserved": true
+    },
+    {
+      "original_polygon": 590446,
+      "new_triangle_count": 2,
+      "materials_preserved": true,
+      "face_int_attributes_preserved": true
+    },
+    {
+      "original_polygon": 590443,
+      "new_triangle_count": 2,
+      "materials_preserved": true,
+      "face_int_attributes_preserved": true
+    }
+  ],
+  "before_topology": {
+    "vertices": 590793,
+    "faces": 590465,
+    "components": 1,
+    "boundary_edges": 0,
+    "non_manifold_edges": 0
+  },
+  "final_topology": {
+    "vertices": 590793,
+    "faces": 590468,
+    "components": 1,
+    "boundary_edges": 0,
+    "non_manifold_edges": 0
+  },
+  "fixed_world_targets_unchanged": true,
+  "before_actual_target_rays": [
+    {
+      "kind": "toe",
+      "digit": 1,
+      "u": 1.2456666666666667,
+      "actual_target_world": [
+        1.0799086093902588,
+        -1.0514957904815674,
+        2.0348658561706543
+      ],
+      "radius": 0.00279999990016222,
+      "ray_origin": [
+        1.0799086093902588,
+        -0.8799999952316284,
+        2.0348658561706543
+      ],
+      "ray_direction": [
+        0,
+        -1,
+        0
+      ],
+      "hit": true,
+      "expected_source": 2,
+      "fallback_used": false,
+      "face_index": 590033,
+      "source": 2,
+      "skin": [
+        1.0799086093902588,
+        -1.054823875427246,
+        2.0348658561706543
+      ],
+      "normal": [
+        0.1445373147726059,
+        0.9246720671653748,
+        -0.35226520895957947
+      ],
+      "normal_condition": 0.9246720671653748,
+      "gap": 0.0005280850455164909
+    },
+    {
+      "kind": "toe",
+      "digit": 2,
+      "u": 1.355,
+      "actual_target_world": [
+        1.1910821199417114,
+        -1.0518748760223389,
+        2.078688144683838
+      ],
+      "radius": 0.00279999990016222,
+      "ray_origin": [
+        1.1910821199417114,
+        -0.8799999952316284,
+        2.078688144683838
+      ],
+      "ray_direction": [
+        0,
+        -1,
+        0
+      ],
+      "hit": true,
+      "expected_source": 2,
+      "fallback_used": false,
+      "face_index": 589877,
+      "source": 2,
+      "skin": [
+        1.1910821199417114,
+        -1.0566749572753906,
+        2.078688144683838
+      ],
+      "normal": [
+        -0.6770248413085938,
+        0.6624240279197693,
+        0.3206739127635956
+      ],
+      "normal_condition": 0.6624240279197693,
+      "gap": 0.002000081352889538
+    },
+    {
+      "kind": "toe",
+      "digit": 3,
+      "u": 1.4643333333333335,
+      "actual_target_world": [
+        1.3021504878997803,
+        -1.0500400066375732,
+        2.122777223587036
+      ],
+      "radius": 0.00279999990016222,
+      "ray_origin": [
+        1.3021504878997803,
+        -0.8799999952316284,
+        2.122777223587036
+      ],
+      "ray_direction": [
+        0,
+        -1,
+        0
+      ],
+      "hit": true,
+      "expected_source": 2,
+      "fallback_used": false,
+      "face_index": 589159,
+      "source": 2,
+      "skin": [
+        1.3021504878997803,
+        -1.0531131029129028,
+        2.122777223587036
+      ],
+      "normal": [
+        0.0326220765709877,
+        0.9921125769615173,
+        -0.12103122472763062
+      ],
+      "normal_condition": 0.9921125769615173,
+      "gap": 0.00027309637516736984
+    },
+    {
+      "kind": "support",
+      "u": 1.28,
+      "actual_target_world": [
+        1.1450207233428955,
+        -0.9830000400543213,
+        1.9719377756118774
+      ],
+      "calibrated_depth_y": -0.9830000102519989,
+      "board_front_hit": [
+        1.1066546440124512,
+        -1.0130000114440918,
+        2.0693607330322266
+      ],
+      "board_back_hit": [
+        1.1066546440124512,
+        -0.953000009059906,
+        2.0693607330322266
+      ],
+      "board_ray_origin": [
+        1.2268009185791016,
+        -0.9830000400543213,
+        1.764272928237915
+      ],
+      "board_ray_direction": [
+        -0.3664192855358124,
+        0.0,
+        0.9304498434066772
+      ],
+      "ray_origin": [
+        1.1157071590423584,
+        -0.9830000400543213,
+        2.0463738441467285
+      ],
+      "ray_direction": [
+        0.3664192855358124,
+        -0.0,
+        -0.9304498434066772
+      ],
+      "hit": true,
+      "expected_source": 1,
+      "fallback_used": false,
+      "face_index": 586181,
+      "source": 1,
+      "skin": [
+        1.1457535028457642,
+        -0.9830000400543213,
+        1.9700770378112793
+      ],
+      "normal": [
+        -0.44284769892692566,
+        0.03918022662401199,
+        0.8957404494285583
+      ],
+      "normal_condition": 0.9957094937562943,
+      "gap": 0.001999827742110938,
+      "ray_origin_rule": "actual board lower edge + .08u V"
+    },
+    {
+      "kind": "support",
+      "u": 1.4,
+      "actual_target_world": [
+        1.267055869102478,
+        -0.9830000400543213,
+        2.019996166229248
+      ],
+      "calibrated_depth_y": -0.9830000400543213,
+      "board_front_hit": [
+        1.2286897897720337,
+        -1.0130000114440918,
+        2.117419481277466
+      ],
+      "board_back_hit": [
+        1.2286897897720337,
+        -0.9530000686645508,
+        2.117419481277466
+      ],
+      "board_ray_origin": [
+        1.348836064338684,
+        -0.9830000400543213,
+        1.8123314380645752
+      ],
+      "board_ray_direction": [
+        -0.3664192855358124,
+        0.0,
+        0.9304498434066772
+      ],
+      "ray_origin": [
+        1.237742304801941,
+        -0.9830000400543213,
+        2.0944321155548096
+      ],
+      "ray_direction": [
+        0.3664192855358124,
+        -0.0,
+        -0.9304498434066772
+      ],
+      "hit": true,
+      "expected_source": 1,
+      "fallback_used": false,
+      "face_index": 585759,
+      "source": 1,
+      "skin": [
+        1.2677886486053467,
+        -0.9830000400543213,
+        2.0181350708007812
+      ],
+      "normal": [
+        0.11112300306558609,
+        -0.34341809153556824,
+        0.9325855374336243
+      ],
+      "normal_condition": 0.8270064480602741,
+      "gap": 0.002000160457100719,
+      "ray_origin_rule": "actual board lower edge + .08u V"
+    }
+  ],
+  "after_actual_target_rays": [
+    {
+      "kind": "toe",
+      "digit": 1,
+      "u": 1.2456666666666667,
+      "actual_target_world": [
+        1.0799086093902588,
+        -1.0514957904815674,
+        2.0348658561706543
+      ],
+      "radius": 0.00279999990016222,
+      "ray_origin": [
+        1.0799086093902588,
+        -0.8799999952316284,
+        2.0348658561706543
+      ],
+      "ray_direction": [
+        0,
+        -1,
+        0
+      ],
+      "hit": true,
+      "expected_source": 2,
+      "fallback_used": false,
+      "face_index": 590033,
+      "source": 2,
+      "skin": [
+        1.0799086093902588,
+        -1.054823875427246,
+        2.0348658561706543
+      ],
+      "normal": [
+        0.1445373147726059,
+        0.9246720671653748,
+        -0.35226520895957947
+      ],
+      "normal_condition": 0.9246720671653748,
+      "gap": 0.0005280850455164909
+    },
+    {
+      "kind": "toe",
+      "digit": 2,
+      "u": 1.355,
+      "actual_target_world": [
+        1.1910821199417114,
+        -1.0518748760223389,
+        2.078688144683838
+      ],
+      "radius": 0.00279999990016222,
+      "ray_origin": [
+        1.1910821199417114,
+        -0.8799999952316284,
+        2.078688144683838
+      ],
+      "ray_direction": [
+        0,
+        -1,
+        0
+      ],
+      "hit": true,
+      "expected_source": 2,
+      "fallback_used": false,
+      "face_index": 589877,
+      "source": 2,
+      "skin": [
+        1.1910821199417114,
+        -1.0566749572753906,
+        2.078688144683838
+      ],
+      "normal": [
+        -0.6770248413085938,
+        0.6624240279197693,
+        0.3206739127635956
+      ],
+      "normal_condition": 0.6624240279197693,
+      "gap": 0.002000081352889538
+    },
+    {
+      "kind": "toe",
+      "digit": 3,
+      "u": 1.4643333333333335,
+      "actual_target_world": [
+        1.3021504878997803,
+        -1.0500400066375732,
+        2.122777223587036
+      ],
+      "radius": 0.00279999990016222,
+      "ray_origin": [
+        1.3021504878997803,
+        -0.8799999952316284,
+        2.122777223587036
+      ],
+      "ray_direction": [
+        0,
+        -1,
+        0
+      ],
+      "hit": true,
+      "expected_source": 2,
+      "fallback_used": false,
+      "face_index": 589159,
+      "source": 2,
+      "skin": [
+        1.3021504878997803,
+        -1.0531131029129028,
+        2.122777223587036
+      ],
+      "normal": [
+        0.0326220765709877,
+        0.9921125769615173,
+        -0.12103122472763062
+      ],
+      "normal_condition": 0.9921125769615173,
+      "gap": 0.00027309637516736984
+    },
+    {
+      "kind": "support",
+      "u": 1.28,
+      "actual_target_world": [
+        1.1450207233428955,
+        -0.9830000400543213,
+        1.9719377756118774
+      ],
+      "calibrated_depth_y": -0.9830000102519989,
+      "board_front_hit": [
+        1.1066546440124512,
+        -1.0130000114440918,
+        2.0693607330322266
+      ],
+      "board_back_hit": [
+        1.1066546440124512,
+        -0.953000009059906,
+        2.0693607330322266
+      ],
+      "board_ray_origin": [
+        1.2268009185791016,
+        -0.9830000400543213,
+        1.764272928237915
+      ],
+      "board_ray_direction": [
+        -0.3664192855358124,
+        0.0,
+        0.9304498434066772
+      ],
+      "ray_origin": [
+        1.1157071590423584,
+        -0.9830000400543213,
+        2.0463738441467285
+      ],
+      "ray_direction": [
+        0.3664192855358124,
+        -0.0,
+        -0.9304498434066772
+      ],
+      "hit": true,
+      "expected_source": 1,
+      "fallback_used": false,
+      "face_index": 586181,
+      "source": 1,
+      "skin": [
+        1.1457535028457642,
+        -0.9830000400543213,
+        1.9700770378112793
+      ],
+      "normal": [
+        -0.44284769892692566,
+        0.03918022662401199,
+        0.8957404494285583
+      ],
+      "normal_condition": 0.9957094937562943,
+      "gap": 0.001999827742110938,
+      "ray_origin_rule": "actual board lower edge + .08u V"
+    },
+    {
+      "kind": "support",
+      "u": 1.4,
+      "actual_target_world": [
+        1.267055869102478,
+        -0.9830000400543213,
+        2.019996166229248
+      ],
+      "calibrated_depth_y": -0.9830000400543213,
+      "board_front_hit": [
+        1.2286897897720337,
+        -1.0130000114440918,
+        2.117419481277466
+      ],
+      "board_back_hit": [
+        1.2286897897720337,
+        -0.9530000686645508,
+        2.117419481277466
+      ],
+      "board_ray_origin": [
+        1.348836064338684,
+        -0.9830000400543213,
+        1.8123314380645752
+      ],
+      "board_ray_direction": [
+        -0.3664192855358124,
+        0.0,
+        0.9304498434066772
+      ],
+      "ray_origin": [
+        1.237742304801941,
+        -0.9830000400543213,
+        2.0944321155548096
+      ],
+      "ray_direction": [
+        0.3664192855358124,
+        -0.0,
+        -0.9304498434066772
+      ],
+      "hit": true,
+      "expected_source": 1,
+      "fallback_used": false,
+      "face_index": 585759,
+      "source": 1,
+      "skin": [
+        1.2677886486053467,
+        -0.9830000400543213,
+        2.0181350708007812
+      ],
+      "normal": [
+        0.11112300306558609,
+        -0.34341809153556824,
+        0.9325855374336243
+      ],
+      "normal_condition": 0.8270064480602741,
+      "gap": 0.002000160457100719,
+      "ray_origin_rule": "actual board lower edge + .08u V"
+    }
+  ],
+  "strict_nominal_contact_band_pass": false,
+  "authorized_positive_gap_roundoff_pass": true,
+  "positive_only_roundoff_limit": 2.5e-07,
+  "roundoff_scope": "Nominal gap [0,.002] plus 2.5e-7u only for positive fp32 ceiling error, authorized parent; no wood/tube/self crossing tolerance.",
+  "actual_geometry_audit": {
+    "local_audit": {
+      "object": "C27 authoring / actual hand plus retained collar",
+      "verts": 10531,
+      "edges": 20879,
+      "faces": 10350,
+      "tris_equivalent": 20694,
+      "tris": 42,
+      "quads": 10272,
+      "ngons": 36,
+      "quads_pct": 99.25,
+      "valence_hist_interior": {
+        "2": 40,
+        "3": 466,
+        "4": 9238,
+        "5": 378,
+        "6": 39,
+        "7": 4,
+        "9": 1,
+        "89": 1
+      },
+      "poles_e3": 466,
+      "poles_e5plus": 423,
+      "valence_6plus": 45,
+      "non_manifold_edges": 0,
+      "boundary_loops": [
+        338,
+        26
+      ],
+      "loose_verts": 0,
+      "loose_edges": 0,
+      "zero_area_faces": 0,
+      "duplicate_verts": 2,
+      "flipped_faces": 0,
+      "self_intersections": 0,
+      "edge_len_mean": 0.012365,
+      "edge_len_cv": 1.107,
+      "symmetry_pct": 0.0,
+      "dimensions": [
+        0.6673,
+        0.621,
+        0.9191
+      ],
+      "ngon_faces_sample": [
+        199,
+        1212,
+        1404,
+        1681,
+        1839,
+        2086,
+        2462,
+        2764,
+        2876,
+        3048,
+        3063,
+        3435,
+        3496,
+        5057,
+        5059,
+        5060,
+        5063,
+        5069,
+        5070,
+        5074,
+        5076,
+        5077,
+        5078,
+        5079,
+        5082
+      ],
+      "pole_e5_sample": [
+        [
+          0.7566,
+          -0.6026,
+          1.3276
+        ],
+        [
+          0.9371,
+          -0.7134,
+          1.708
+        ],
+        [
+          0.9308,
+          -0.7127,
+          1.7256
+        ],
+        [
+          0.9225,
+          -0.7132,
+          1.7566
+        ],
+        [
+          0.9187,
+          -0.7123,
+          1.7855
+        ],
+        [
+          0.9278,
+          -0.7046,
+          1.7908
+        ],
+        [
+          0.9882,
+          -0.6517,
+          1.6341
+        ],
+        [
+          0.9112,
+          -0.6678,
+          1.7869
+        ],
+        [
+          0.9064,
+          -0.6673,
+          1.8328
+        ],
+        [
+          0.9062,
+          -0.6674,
+          1.8483
+        ],
+        [
+          0.9157,
+          -0.6733,
+          1.8398
+        ],
+        [
+          0.9151,
+          -0.6719,
+          1.8482
+        ],
+        [
+          0.9119,
+          -0.6533,
+          1.7752
+        ],
+        [
+          0.9076,
+          -0.6514,
+          1.7927
+        ],
+        [
+          0.9135,
+          -0.6377,
+          1.7647
+        ],
+        [
+          0.9082,
+          -0.6367,
+          1.7821
+        ],
+        [
+          0.9013,
+          -0.6374,
+          1.8281
+        ],
+        [
+          0.9154,
+          -0.6078,
+          1.7557
+        ],
+        [
+          0.9023,
+          -0.6216,
+          1.7991
+        ],
+        [
+          0.9091,
+          -0.6078,
+          1.7697
+        ],
+        [
+          0.8965,
+          -0.6214,
+          1.8265
+        ],
+        [
+          0.888,
+          -0.6072,
+          1.8525
+        ],
+        [
+          0.9583,
+          -0.6986,
+          1.664
+        ],
+        [
+          0.9462,
+          -0.6831,
+          1.6862
+        ],
+        [
+          0.955,
+          -0.6831,
+          1.6707
+        ]
+      ],
+      "pole_e3_sample": [
+        [
+          0.7658,
+          -0.6007,
+          1.3222
+        ],
+        [
+          0.9636,
+          -0.704,
+          1.6556
+        ],
+        [
+          0.9345,
+          -0.7185,
+          1.7164
+        ],
+        [
+          0.9365,
+          -0.7023,
+          1.7073
+        ],
+        [
+          0.9335,
+          -0.7074,
+          1.7165
+        ],
+        [
+          0.9201,
+          -0.7193,
+          1.7789
+        ],
+        [
+          0.9309,
+          -0.7195,
+          1.7911
+        ],
+        [
+          0.9216,
+          -0.7029,
+          1.7546
+        ],
+        [
+          0.9202,
+          -0.7065,
+          1.7648
+        ],
+        [
+          0.9823,
+          -0.6572,
+          1.6386
+        ],
+        [
+          0.9825,
+          -0.646,
+          1.6421
+        ],
+        [
+          0.9082,
+          -0.673,
+          1.8252
+        ],
+        [
+          0.9083,
+          -0.673,
+          1.853
+        ],
+        [
+          0.9086,
+          -0.6609,
+          1.7948
+        ],
+        [
+          0.9102,
+          -0.6577,
+          1.7846
+        ],
+        [
+          0.9112,
+          -0.6428,
+          1.7737
+        ],
+        [
+          0.9091,
+          -0.6471,
+          1.7834
+        ],
+        [
+          0.9127,
+          -0.6135,
+          1.764
+        ],
+        [
+          0.9116,
+          -0.6024,
+          1.7611
+        ],
+        [
+          0.9102,
+          -0.6319,
+          1.7733
+        ],
+        [
+          0.8989,
+          -0.6149,
+          1.8042
+        ],
+        [
+          0.8994,
+          -0.6282,
+          1.8221
+        ],
+        [
+          0.8984,
+          -0.6303,
+          1.8326
+        ],
+        [
+          0.9627,
+          -0.6929,
+          1.6572
+        ],
+        [
+          0.9509,
+          -0.6889,
+          1.6771
+        ]
+      ]
+    },
+    "guitar_surface_intersections": [
+      {
+        "object": "Guitar / ebony fretboard",
+        "actual_evaluated_vertices": 152,
+        "actual_evaluated_triangles": 300,
+        "surface_intersection_pairs": 0,
+        "sample_pairs": [],
+        "method": "Actual evaluated mesh triangle BVH overlap; no primitive radius guess or U/V extrapolation."
+      },
+      {
+        "object": "Guitar / neck",
+        "actual_evaluated_vertices": 152,
+        "actual_evaluated_triangles": 300,
+        "surface_intersection_pairs": 0,
+        "sample_pairs": [],
+        "method": "Actual evaluated mesh triangle BVH overlap; no primitive radius guess or U/V extrapolation."
+      },
+      {
+        "object": "Guitar / string 1",
+        "actual_evaluated_vertices": 900,
+        "actual_evaluated_triangles": 1748,
+        "surface_intersection_pairs": 0,
+        "sample_pairs": [],
+        "method": "Actual evaluated mesh triangle BVH overlap; no primitive radius guess or U/V extrapolation."
+      },
+      {
+        "object": "Guitar / string 2",
+        "actual_evaluated_vertices": 900,
+        "actual_evaluated_triangles": 1748,
+        "surface_intersection_pairs": 0,
+        "sample_pairs": [],
+        "method": "Actual evaluated mesh triangle BVH overlap; no primitive radius guess or U/V extrapolation."
+      },
+      {
+        "object": "Guitar / string 3",
+        "actual_evaluated_vertices": 900,
+        "actual_evaluated_triangles": 1748,
+        "surface_intersection_pairs": 0,
+        "sample_pairs": [],
+        "method": "Actual evaluated mesh triangle BVH overlap; no primitive radius guess or U/V extrapolation."
+      },
+      {
+        "object": "Guitar / string 4",
+        "actual_evaluated_vertices": 900,
+        "actual_evaluated_triangles": 1748,
+        "surface_intersection_pairs": 0,
+        "sample_pairs": [],
+        "method": "Actual evaluated mesh triangle BVH overlap; no primitive radius guess or U/V extrapolation."
+      },
+      {
+        "object": "Guitar / string 5",
+        "actual_evaluated_vertices": 900,
+        "actual_evaluated_triangles": 1748,
+        "surface_intersection_pairs": 0,
+        "sample_pairs": [],
+        "method": "Actual evaluated mesh triangle BVH overlap; no primitive radius guess or U/V extrapolation."
+      },
+      {
+        "object": "Guitar / string 6",
+        "actual_evaluated_vertices": 900,
+        "actual_evaluated_triangles": 1748,
+        "surface_intersection_pairs": 0,
+        "sample_pairs": [],
+        "method": "Actual evaluated mesh triangle BVH overlap; no primitive radius guess or U/V extrapolation."
+      }
+    ],
+    "limits": [
+      "Surface-overlap count is a triangle intersection test, not a complete solid-containment proof.",
+      "All same-source hand+collar faces self-tested separately; additional explicit ray inside-solid probes supplied."
+    ]
+  },
+  "wood_parity_probes": [
+    {
+      "object": "Guitar / ebony fretboard",
+      "changed_vertices_tested": 5359,
+      "inside_by_two_independent_parity_rays": 0,
+      "inside_vertex_sample": [],
+      "ambiguous_ray_votes": 0,
+      "directions": [
+        [
+          0.37114498019218445,
+          0.6132395267486572,
+          0.6972724199295044
+        ],
+        [
+          0.7393420338630676,
+          0.22310319542884827,
+          0.6352938413619995
+        ]
+      ],
+      "limits": "Finite vertex probes, not continuous volume proof; combined with actual triangle intersection audit."
+    },
+    {
+      "object": "Guitar / neck",
+      "changed_vertices_tested": 5359,
+      "inside_by_two_independent_parity_rays": 0,
+      "inside_vertex_sample": [],
+      "ambiguous_ray_votes": 0,
+      "directions": [
+        [
+          0.37114498019218445,
+          0.6132395267486572,
+          0.6972724199295044
+        ],
+        [
+          0.7393420338630676,
+          0.22310319542884827,
+          0.6352938413619995
+        ]
+      ],
+      "limits": "Finite vertex probes, not continuous volume proof; combined with actual triangle intersection audit."
+    }
+  ],
+  "actual_wood_and_six_tube_collision_pass": true,
+  "render_gate_passed": true,
+  "seconds_before_render": 10.482496976852417,
+  "limits": [
+    "Engineering gate and fixed-target ray pass are not independent art approval.",
+    "No changes to C33 vertices, whole-hand proportions, targets, QP weights or U bounds.",
+    "UV/groom/shape binding invalid after topology changes; no rig/animation/color/engine/deploy."
+  ],
+  "native_sha256": "3097d74a3f932d6dd61e60b7ab12bd40c5c53cd09b7c94aaf93170a03ec25cce"
+}

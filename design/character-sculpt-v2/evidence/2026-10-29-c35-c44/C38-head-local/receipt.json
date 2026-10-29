@@ -1,0 +1,662 @@
+{
+  "stage": "C38 one coupled head/face gray candidate, art review pending",
+  "source": {
+    "path": "artifacts/character-alignment-c36/repaired/miao-c36-reference-alignment-gray.blend",
+    "sha256": "d3bdc3d312fa5ef1f8832d2a4283ad2761bf2bf3bf9f4d622bfa8528d063fb5f"
+  },
+  "native_sha256": "f481e8a0c00eb4ec5baf5d9c43a6bc250f5a28c4475d9d9cba0ea360ca1c8439",
+  "script_sha256": "1c52d873245f0e6755d20c34b19d40aff60af1d9c897ec559395df152948f243",
+  "reference": "public/character/instrument-scenes-v1/guitar/idle.jpg",
+  "fitted_head_yaw_degrees": 7.5,
+  "separately_fitted_head_lean_u": 0.04,
+  "body_gate": {
+    "minimum_normal_dot": 0.9484743475914001,
+    "minimum_area_ratio": 0.8900508880615234,
+    "negative_source_to_new_normal_dots": 0,
+    "minimum_field_jacobian_determinant": 0.9999059995860013,
+    "minimum_actual_vs_transported_normal_dot": 0.9954189053042947,
+    "minimum_transport_counterexample": {
+      "dot": 0.9954189053042947,
+      "old_cross_area": 9.68947033719303e-10,
+      "source": [
+        [
+          -0.4612327814102173,
+          -0.24250316619873047,
+          3.1792232990264893
+        ],
+        [
+          -0.45760414004325867,
+          -0.2472691386938095,
+          3.1791462898254395
+        ],
+        [
+          -0.4575878083705902,
+          -0.24729038774967194,
+          3.1791460514068604
+        ]
+      ],
+      "new": [
+        [
+          -0.38171806931495667,
+          -0.300374835729599,
+          3.1792232990264893
+        ],
+        [
+          -0.3774983882904053,
+          -0.30462637543678284,
+          3.1791462898254395
+        ],
+        [
+          -0.3774794340133667,
+          -0.3046453297138214,
+          3.1791460514068604
+        ]
+      ]
+    },
+    "new_flipped_triangles_against_transported_orientation": 0,
+    "collapsed_triangles": 0,
+    "thin_ear_triangle_subpixel_reflow": [],
+    "changed_vertices": 86840,
+    "max_displacement": 0.10546576976776123,
+    "counterexamples": [
+      {
+        "index": 63441,
+        "normal_dot": 0.9484743475914001,
+        "before": [
+          [
+            -0.49380913376808167,
+            0.37498530745506287,
+            2.5680761337280273
+          ],
+          [
+            -0.4975407123565674,
+            0.372589647769928,
+            2.567368268966675
+          ],
+          [
+            -0.4982990622520447,
+            0.3721066117286682,
+            2.573631763458252
+          ]
+        ],
+        "after": [
+          [
+            -0.4953531324863434,
+            0.33666080236434937,
+            2.5680761337280273
+          ],
+          [
+            -0.49889370799064636,
+            0.33427703380584717,
+            2.567368268966675
+          ],
+          [
+            -0.4995986223220825,
+            0.33120423555374146,
+            2.573631763458252
+          ]
+        ]
+      },
+      {
+        "index": 63435,
+        "normal_dot": 0.948476254940033,
+        "before": [
+          [
+            -0.49356183409690857,
+            0.37515854835510254,
+            2.564122200012207
+          ],
+          [
+            -0.49610936641693115,
+            0.3735911250114441,
+            2.5622098445892334
+          ],
+          [
+            -0.4975407123565674,
+            0.372589647769928,
+            2.567368268966675
+          ]
+        ],
+        "after": [
+          [
+            -0.4951132535934448,
+            0.33844733238220215,
+            2.564122200012207
+          ],
+          [
+            -0.49753811955451965,
+            0.3374761641025543,
+            2.5622098445892334
+          ],
+          [
+            -0.49889370799064636,
+            0.33427703380584717,
+            2.567368268966675
+          ]
+        ]
+      },
+      {
+        "index": 63439,
+        "normal_dot": 0.9484859704971313,
+        "before": [
+          [
+            -0.4975407123565674,
+            0.372589647769928,
+            2.567368268966675
+          ],
+          [
+            -0.5017441511154175,
+            0.36982905864715576,
+            2.5660886764526367
+          ],
+          [
+            -0.5025713443756104,
+            0.3692050874233246,
+            2.5731005668640137
+          ]
+        ],
+        "after": [
+          [
+            -0.49889370799064636,
+            0.33427703380584717,
+            2.567368268966675
+          ],
+          [
+            -0.502882182598114,
+            0.3317323625087738,
+            2.5660886764526367
+          ],
+          [
+            -0.5036284923553467,
+            0.32818618416786194,
+            2.5731005668640137
+          ]
+        ]
+      },
+      {
+        "index": 63437,
+        "normal_dot": 0.9485440850257874,
+        "before": [
+          [
+            -0.49610936641693115,
+            0.3735911250114441,
+            2.5622098445892334
+          ],
+          [
+            -0.5003772974014282,
+            0.37108564376831055,
+            2.5583701133728027
+          ],
+          [
+            -0.5017441511154175,
+            0.36982905864715576,
+            2.5660886764526367
+          ]
+        ],
+        "after": [
+          [
+            -0.49753811955451965,
+            0.3374761641025543,
+            2.5622098445892334
+          ],
+          [
+            -0.5016176104545593,
+            0.3362477123737335,
+            2.5583701133728027
+          ],
+          [
+            -0.502882182598114,
+            0.3317323625087738,
+            2.5660886764526367
+          ]
+        ]
+      },
+      {
+        "index": 58571,
+        "normal_dot": 0.9487141370773315,
+        "before": [
+          [
+            -0.5017441511154175,
+            0.36982905864715576,
+            2.5660886764526367
+          ],
+          [
+            -0.5066206455230713,
+            0.36648669838905334,
+            2.565427541732788
+          ],
+          [
+            -0.507209300994873,
+            0.365948885679245,
+            2.5727548599243164
+          ]
+        ],
+        "after": [
+          [
+            -0.502882182598114,
+            0.3317323625087738,
+            2.5660886764526367
+          ],
+          [
+            -0.507501482963562,
+            0.32831117510795593,
+            2.565427541732788
+          ],
+          [
+            -0.5079959034919739,
+            0.32471320033073425,
+            2.5727548599243164
+          ]
+        ]
+      },
+      {
+        "index": 63511,
+        "normal_dot": 0.948951780796051,
+        "before": [
+          [
+            -0.4899658262729645,
+            0.3774231970310211,
+            2.5673680305480957
+          ],
+          [
+            -0.49006009101867676,
+            0.37742283940315247,
+            2.5736312866210938
+          ],
+          [
+            -0.4854796230792999,
+            0.38022521138191223,
+            2.573108434677124
+          ]
+        ],
+        "after": [
+          [
+            -0.49170300364494324,
+            0.33966562151908875,
+            2.5673680305480957
+          ],
+          [
+            -0.49181067943573,
+            0.3371618688106537,
+            2.5736312866210938
+          ],
+          [
+            -0.4874667823314667,
+            0.34052684903144836,
+            2.573108434677124
+          ]
+        ]
+      }
+    ],
+    "source_conditioning": {
+      "source_cross_area_over_longest_edge_squared_threshold": 0.02,
+      "stable_triangles": 173953,
+      "near_collinear_triangles": 417,
+      "minimum_stable_transported_normal_dot": 0.9998904593304533,
+      "near_collinear_counterexamples": [
+        {
+          "condition": 2.6759629690786824e-05,
+          "old_cross_area": 9.68947033719303e-10,
+          "trans_dot": 0.9954189053042947
+        },
+        {
+          "condition": 0.35163432359695435,
+          "old_cross_area": 4.006964809377678e-05,
+          "trans_dot": 0.9998904593304533
+        },
+        {
+          "condition": 0.3614111840724945,
+          "old_cross_area": 3.7744601286249235e-05,
+          "trans_dot": 0.9999000496629756
+        },
+        {
+          "condition": 0.35696592926979065,
+          "old_cross_area": 4.06606741307769e-05,
+          "trans_dot": 0.9999072983590896
+        },
+        {
+          "condition": 0.3615236282348633,
+          "old_cross_area": 3.4281256375834346e-05,
+          "trans_dot": 0.9999079276263172
+        },
+        {
+          "condition": 0.33797869086265564,
+          "old_cross_area": 3.9726139220874757e-05,
+          "trans_dot": 0.999910113620495
+        },
+        {
+          "condition": 0.3398095369338989,
+          "old_cross_area": 4.16073999076616e-05,
+          "trans_dot": 0.9999136718011582
+        },
+        {
+          "condition": 0.3792608380317688,
+          "old_cross_area": 3.2571912015555426e-05,
+          "trans_dot": 0.9999137660259464
+        },
+        {
+          "condition": 0.3741273880004883,
+          "old_cross_area": 3.249559085816145e-05,
+          "trans_dot": 0.9999138105994788
+        },
+        {
+          "condition": 0.33615246415138245,
+          "old_cross_area": 4.036342215840705e-05,
+          "trans_dot": 0.9999144421981833
+        },
+        {
+          "condition": 0.3613278567790985,
+          "old_cross_area": 3.4392400266369805e-05,
+          "trans_dot": 0.9999145531942901
+        },
+        {
+          "condition": 0.34882867336273193,
+          "old_cross_area": 3.8809168472653255e-05,
+          "trans_dot": 0.9999157489407849
+        }
+      ]
+    },
+    "actual_ear_softening_max_delta": 0.0
+  },
+  "head_self_pairs": 0,
+  "ocular_actual_geometry_checks": [
+    {
+      "side": "L",
+      "white_front_interior_samples": 2113,
+      "minimum_white_front_interior_skin_gap": 0.0029768049716949463,
+      "maximum_white_front_skin_protrusion": 0.011760801076889038,
+      "iris_caps": [
+        {
+          "name": "C6 / iris L",
+          "all_vertices": 2305,
+          "minimum_distance_in_front_of_white": 0.00033664703369140625,
+          "maximum": 0.0006387233734130859
+        },
+        {
+          "name": "C7 / clear cornea L",
+          "all_vertices": 4610,
+          "minimum_distance_in_front_of_white": 0.0003833472728729248,
+          "maximum": 0.004939138889312744
+        }
+      ]
+    },
+    {
+      "side": "R",
+      "white_front_interior_samples": 2118,
+      "minimum_white_front_interior_skin_gap": 0.001608043909072876,
+      "maximum_white_front_skin_protrusion": 0.011760860681533813,
+      "iris_caps": [
+        {
+          "name": "C6 / iris R",
+          "all_vertices": 2305,
+          "minimum_distance_in_front_of_white": 0.00033664703369140625,
+          "maximum": 0.0006504952907562256
+        },
+        {
+          "name": "C7 / clear cornea R",
+          "all_vertices": 4610,
+          "minimum_distance_in_front_of_white": 0.00038233399391174316,
+          "maximum": 0.004946768283843994
+        }
+      ]
+    }
+  ],
+  "all_head_parts_transformed": [
+    {
+      "name": "Face / thick curved brow",
+      "type": "CURVE",
+      "all_controls_and_handles_transformed": true,
+      "old_bevel_depth": 0.026000000536441803,
+      "new_bevel_depth": 0.022099999710917473,
+      "hide_render": false
+    },
+    {
+      "name": "Face / thick curved brow.001",
+      "type": "CURVE",
+      "all_controls_and_handles_transformed": true,
+      "old_bevel_depth": 0.026000000536441803,
+      "new_bevel_depth": 0.022099999710917473,
+      "hide_render": false
+    },
+    {
+      "name": "Face / smile stem",
+      "type": "CURVE",
+      "all_controls_and_handles_transformed": true,
+      "old_bevel_depth": 0.005499999970197678,
+      "new_bevel_depth": 0.005499999970197678,
+      "hide_render": false
+    },
+    {
+      "name": "Face / smile",
+      "type": "CURVE",
+      "all_controls_and_handles_transformed": true,
+      "old_bevel_depth": 0.005499999970197678,
+      "new_bevel_depth": 0.005499999970197678,
+      "hide_render": false
+    },
+    {
+      "name": "Miao / fine whisker",
+      "type": "CURVE",
+      "all_controls_and_handles_transformed": true,
+      "old_bevel_depth": 0.0017999999690800905,
+      "new_bevel_depth": 0.0017999999690800905,
+      "hide_render": false
+    },
+    {
+      "name": "Miao / fine whisker.001",
+      "type": "CURVE",
+      "all_controls_and_handles_transformed": true,
+      "old_bevel_depth": 0.0017999999690800905,
+      "new_bevel_depth": 0.0017999999690800905,
+      "hide_render": false
+    },
+    {
+      "name": "Miao / fine whisker.002",
+      "type": "CURVE",
+      "all_controls_and_handles_transformed": true,
+      "old_bevel_depth": 0.0017999999690800905,
+      "new_bevel_depth": 0.0017999999690800905,
+      "hide_render": false
+    },
+    {
+      "name": "Miao / fine whisker.003",
+      "type": "CURVE",
+      "all_controls_and_handles_transformed": true,
+      "old_bevel_depth": 0.0017999999690800905,
+      "new_bevel_depth": 0.0017999999690800905,
+      "hide_render": false
+    },
+    {
+      "name": "C6 / sclera L",
+      "type": "MESH",
+      "all_vertices_yawed": 4610,
+      "hide_render": false
+    },
+    {
+      "name": "C6 / iris L",
+      "type": "MESH",
+      "all_vertices_yawed": 2305,
+      "hide_render": false
+    },
+    {
+      "name": "C6 / upper lid L",
+      "type": "MESH",
+      "all_vertices_yawed": 585,
+      "hide_render": false
+    },
+    {
+      "name": "C6 / lower lid L",
+      "type": "MESH",
+      "all_vertices_yawed": 585,
+      "hide_render": false
+    },
+    {
+      "name": "C6 / sclera R",
+      "type": "MESH",
+      "all_vertices_yawed": 4610,
+      "hide_render": false
+    },
+    {
+      "name": "C6 / iris R",
+      "type": "MESH",
+      "all_vertices_yawed": 2305,
+      "hide_render": false
+    },
+    {
+      "name": "C6 / upper lid R",
+      "type": "MESH",
+      "all_vertices_yawed": 585,
+      "hide_render": false
+    },
+    {
+      "name": "C6 / lower lid R",
+      "type": "MESH",
+      "all_vertices_yawed": 585,
+      "hide_render": false
+    },
+    {
+      "name": "C7 / clear cornea L",
+      "type": "MESH",
+      "all_vertices_yawed": 4610,
+      "hide_render": false
+    },
+    {
+      "name": "C7 / clear cornea R",
+      "type": "MESH",
+      "all_vertices_yawed": 4610,
+      "hide_render": false
+    },
+    {
+      "name": "Face / rounded triangular nose",
+      "type": "MESH",
+      "all_vertices_yawed": 4226,
+      "hide_render": false
+    }
+  ],
+  "C35_new_points_and_broad_paw_lock_bit_exact": true,
+  "locked_vertices": 90151,
+  "source_ids_and_body_topology_preserved": true,
+  "no_eye_or_lid_hidden": true,
+  "renders": [
+    {
+      "file": "gray-front.png",
+      "sha256": "9e022b2edd95fbbfe97fa5fd28c46059ec07c2259a6afa4ab9fed98faf0b6e9c",
+      "camera_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.09881033003330231
+        ],
+        [
+          0.0,
+          0.08139567822217941,
+          -0.9966818690299988,
+          -12.008593559265137
+        ],
+        [
+          0.0,
+          0.9966818690299988,
+          0.08139567822217941,
+          2.5947763919830322
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 4.2002763748168945
+    },
+    {
+      "file": "gray-face.png",
+      "sha256": "c140351eb61497f32b307672e37d4a12305c29a6800af4905e4d42822a1dfb2d",
+      "camera_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0033332803286612034,
+          -0.9999944567680359,
+          -6.0
+        ],
+        [
+          0.0,
+          0.9999944567680359,
+          0.0033332803286612034,
+          3.049999952316284
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 1.7000000476837158
+    },
+    {
+      "file": "gray-three-quarter.png",
+      "sha256": "2c612f388a16af3f5d4114b0976638bf7f6e86230cb3fd42f95daa032efd71d2",
+      "camera_matrix": [
+        [
+          0.8362634181976318,
+          -0.11416733264923096,
+          0.5363108515739441,
+          6.0
+        ],
+        [
+          0.5483279228210449,
+          0.17411832511425018,
+          -0.8179360032081604,
+          -9.0
+        ],
+        [
+          2.7329075891202592e-08,
+          0.978084146976471,
+          0.20820991694927216,
+          3.9000000953674316
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 4.2002763748168945
+    }
+  ],
+  "limits": [
+    "Ear P0 is explicitly unresolved; all attempted ear-cavity/soft-edge repairs were rejected and not included.",
+    "Gray candidate, not approved character; source C36 P0 is not erased by numerical gates.",
+    "Shoulders/body/feet and C37 right paw are outside this candidate; whole-character P0 may remain.",
+    "Static iris/white/head ordering checked before common yaw, not blink/rig/animation acceptance.",
+    "Mouth/whisker final all-angle attachment and ear craft require actual image review.",
+    "No groom rebind, materials redesign, production outputs or deployment."
+  ],
+  "status": "head-expression-only-candidate-ear-and-whole-character-P0-unresolved",
+  "builder_visual_readback": {
+    "opened": [
+      "gray-front.png",
+      "gray-face.png",
+      "gray-three-quarter.png"
+    ],
+    "observed_improvements": [
+      "No new neck collar, horizontal forehead band or vertical forehead partition in this final set.",
+      "Eye protrusion and whole circular eye-seat reading reduced; sideward head/face offset is stronger."
+    ],
+    "remaining": [
+      "Original ear hard cavity/thick lip is unchanged apart from common head yaw; P0 remains.",
+      "Long lower-face wall, shoulder/arm tubular connections and body support relationship may remain overall P0.",
+      "Depth reduction may read too flat or card-like; independent art reviewers must judge against the actual original."
+    ],
+    "no_art_pass_claimed": true
+  },
+  "ear_method": "No cavity deformation, smoothing, custom-normal edit or extra point reflow; source ear shape follows common rigid head yaw only."
+}

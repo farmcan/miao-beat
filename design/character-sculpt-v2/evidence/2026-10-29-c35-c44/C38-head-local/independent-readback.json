@@ -1,0 +1,97 @@
+{
+  "source_sha256": "d3bdc3d312fa5ef1f8832d2a4283ad2761bf2bf3bf9f4d622bfa8528d063fb5f",
+  "candidate_sha256": "f481e8a0c00eb4ec5baf5d9c43a6bc250f5a28c4475d9d9cba0ea360ca1c8439",
+  "separate_process_native_reopen": true,
+  "source_canonical_ids_bit_exact": true,
+  "body_ordered_topology_bit_exact": "b2ad62d521898e3a4db839d7b559b4ce6bb1e1ff3023669014b6cbca4955570f",
+  "C35_new_vertices_locked": 5359,
+  "broad_paw_lock_count": 90151,
+  "locked_positions_bit_exact": true,
+  "all_unowned_objects_geometry_curves_skeleton_world_matrices_bit_exact": true,
+  "unowned_count": 72,
+  "all_eyes_lids_nose_vertex_face_material_visibility_checks": [
+    {
+      "name": "Face / rounded triangular nose",
+      "vertex_count_unchanged": 4226,
+      "ordered_faces_unchanged": true,
+      "materials_unchanged": true,
+      "still_visible": true
+    },
+    {
+      "name": "C6 / sclera L",
+      "vertex_count_unchanged": 4610,
+      "ordered_faces_unchanged": true,
+      "materials_unchanged": true,
+      "still_visible": true
+    },
+    {
+      "name": "C6 / iris L",
+      "vertex_count_unchanged": 2305,
+      "ordered_faces_unchanged": true,
+      "materials_unchanged": true,
+      "still_visible": true
+    },
+    {
+      "name": "C6 / upper lid L",
+      "vertex_count_unchanged": 585,
+      "ordered_faces_unchanged": true,
+      "materials_unchanged": true,
+      "still_visible": true
+    },
+    {
+      "name": "C6 / lower lid L",
+      "vertex_count_unchanged": 585,
+      "ordered_faces_unchanged": true,
+      "materials_unchanged": true,
+      "still_visible": true
+    },
+    {
+      "name": "C6 / sclera R",
+      "vertex_count_unchanged": 4610,
+      "ordered_faces_unchanged": true,
+      "materials_unchanged": true,
+      "still_visible": true
+    },
+    {
+      "name": "C6 / iris R",
+      "vertex_count_unchanged": 2305,
+      "ordered_faces_unchanged": true,
+      "materials_unchanged": true,
+      "still_visible": true
+    },
+    {
+      "name": "C6 / upper lid R",
+      "vertex_count_unchanged": 585,
+      "ordered_faces_unchanged": true,
+      "materials_unchanged": true,
+      "still_visible": true
+    },
+    {
+      "name": "C6 / lower lid R",
+      "vertex_count_unchanged": 585,
+      "ordered_faces_unchanged": true,
+      "materials_unchanged": true,
+      "still_visible": true
+    },
+    {
+      "name": "C7 / clear cornea L",
+      "vertex_count_unchanged": 4610,
+      "ordered_faces_unchanged": true,
+      "materials_unchanged": true,
+      "still_visible": true
+    },
+    {
+      "name": "C7 / clear cornea R",
+      "vertex_count_unchanged": 4610,
+      "ordered_faces_unchanged": true,
+      "materials_unchanged": true,
+      "still_visible": true
+    }
+  ],
+  "no_custom_normal_data_written_by_builder": true,
+  "limits": [
+    "Independent data readback is not independent art approval.",
+    "Unresolved original ear/long lower-face/body P0 remain.",
+    "No dynamic groom/UV/rig/engine acceptance."
+  ]
+}

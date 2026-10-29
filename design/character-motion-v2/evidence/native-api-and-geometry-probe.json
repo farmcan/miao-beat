@@ -1,0 +1,39 @@
+{
+  "blender_version": "5.2.3 LTS",
+  "bone_names": [
+    "DEF-root",
+    "DEF-head",
+    "DEF-right-upper",
+    "DEF-right-forearm",
+    "DEF-right-paw",
+    "DEF-left-upper",
+    "DEF-left-forearm",
+    "DEF-left-paw"
+  ],
+  "ik_type": "IK",
+  "ik_chain_count": 2,
+  "ik_stretch_disabled": true,
+  "unbound_rest_forearm_endpoint_error_u": {
+    "right": 1.7647026899944261e-07,
+    "left": 3.5762786865234375e-07
+  },
+  "target_objects": [
+    "right",
+    "left"
+  ],
+  "left_contact_copy_constraints": [
+    "COPY_ROTATION",
+    "COPY_LOCATION"
+  ],
+  "skin_bound": false,
+  "animation_created": false,
+  "source_mesh_coordinates_bit_exact_in_memory": true,
+  "source_mesh_modifiers_unchanged": true,
+  "source_file_hash_unchanged": true,
+  "actual_six_surface_hit_error_max_u": 5.734527803724632e-07,
+  "lifted_return_actual_six_tube_distance_min_u": 0.07468797266483307,
+  "return_samples": 101,
+  "sweep_samples": 217,
+  "scope": "Point-path feasibility and bpy API construction only; not bound rig or animation quality.",
+  "profile_sha256": "d0819636e7fae463a67b6aa8431996134e59028b675bcd0ac41ce3217d25d01e"
+}

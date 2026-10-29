@@ -1,0 +1,26 @@
+[
+  {
+    "file": "three-CCDIKSolver.reference.js",
+    "url": "https://raw.githubusercontent.com/mrdoob/three.js/4c39d071ab7bca531d464d00c8b738fe1981e812/examples/jsm/animation/CCDIKSolver.js",
+    "license": "MIT",
+    "bytes": 14297,
+    "sha256": "c744fbec7107e2adecab5b7410db484134e12a48379331f7db77767bf902100a",
+    "runtime_imported": false
+  },
+  {
+    "file": "three-LICENSE.txt",
+    "url": "https://raw.githubusercontent.com/mrdoob/three.js/4c39d071ab7bca531d464d00c8b738fe1981e812/LICENSE",
+    "license": "MIT",
+    "bytes": 1081,
+    "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+    "runtime_imported": false
+  },
+  {
+    "file": "godot-skeleton_modifier_3d.reference.cpp",
+    "url": "https://raw.githubusercontent.com/godotengine/godot/cafc17a192acf67903910a68aeb3c076c0907a4b/scene/3d/skeleton_modifier_3d.cpp",
+    "license": "MIT",
+    "bytes": 13035,
+    "sha256": "8f0aced19666a5d56bffa329b49d2cf592caff6b63823550cd5a54f50eddd0ec",
+    "runtime_imported": false
+  }
+]

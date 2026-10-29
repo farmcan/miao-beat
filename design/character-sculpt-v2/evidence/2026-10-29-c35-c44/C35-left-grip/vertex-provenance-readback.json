@@ -1,0 +1,83 @@
+{
+  "stage": "C35-readonly-saved-native-point-provenance",
+  "source_C33_native_sha256": "bae5552b97cf890c0ceab4a2368cf7665cc3defe60a3ec26234f38c7f9a361f4",
+  "C35_native_sha256": "3097d74a3f932d6dd61e60b7ab12bd40c5c53cd09b7c94aaf93170a03ec25cce",
+  "old_unchanged": true,
+  "new_unchanged": true,
+  "ordered_all_vertex_coordinates_bit_exact": true,
+  "point_integer_attribute_checks": {
+    "C23 source vertex id": true,
+    "C23 source opening local id": true,
+    "C23 actual upper local id": true,
+    "C23 C11 source vertex id": true,
+    ".select_vert": true
+  },
+  "all_point_int_source_ids_preserved": true,
+  "source_head_merge_key": "C23 source vertex id remains integer-value exact; no nearest mapping needed.",
+  "scenes": [
+    {
+      "scene": "C33",
+      "body_vertex_count": 590793,
+      "ordered_float32_coordinate_sha256": "82f56eb54a6d2fcb328d5ec0ced9527b9d7459c5c39136ccd52985127bd472b9",
+      "point_integer_attributes": {
+        "C23 source vertex id": {
+          "count": 590793,
+          "sha256_integer_values": "804941c5c532c9aac720cca6f1c13b6b7e852c65de788f0be7fa0b05a7672b59",
+          "positive_count": 585434
+        },
+        "C23 source opening local id": {
+          "count": 590793,
+          "sha256_integer_values": "beae3931216f5f7f68a4b34428db3dd9c892a17c23004c2c5e9929ba3a561a09",
+          "positive_count": 198
+        },
+        "C23 actual upper local id": {
+          "count": 590793,
+          "sha256_integer_values": "7414e39e8ee835edfc2b6169862da7a9f3c009d44e6fac968757d20a6bac24db",
+          "positive_count": 1419
+        },
+        "C23 C11 source vertex id": {
+          "count": 590793,
+          "sha256_integer_values": "f29fe64c5db180db3e58eac9d6f302028d5ecd53305d811fa05a80c94ff2afd6",
+          "positive_count": 0
+        },
+        ".select_vert": {
+          "count": 590793,
+          "sha256_integer_values": "95149a60f504c6e149d8c982fc66a86ce58f3a013c4737f356bd31aefd53b593",
+          "positive_count": 8908
+        }
+      }
+    },
+    {
+      "scene": "C35",
+      "body_vertex_count": 590793,
+      "ordered_float32_coordinate_sha256": "82f56eb54a6d2fcb328d5ec0ced9527b9d7459c5c39136ccd52985127bd472b9",
+      "point_integer_attributes": {
+        "C23 source vertex id": {
+          "count": 590793,
+          "sha256_integer_values": "804941c5c532c9aac720cca6f1c13b6b7e852c65de788f0be7fa0b05a7672b59",
+          "positive_count": 585434
+        },
+        "C23 source opening local id": {
+          "count": 590793,
+          "sha256_integer_values": "beae3931216f5f7f68a4b34428db3dd9c892a17c23004c2c5e9929ba3a561a09",
+          "positive_count": 198
+        },
+        "C23 actual upper local id": {
+          "count": 590793,
+          "sha256_integer_values": "7414e39e8ee835edfc2b6169862da7a9f3c009d44e6fac968757d20a6bac24db",
+          "positive_count": 1419
+        },
+        "C23 C11 source vertex id": {
+          "count": 590793,
+          "sha256_integer_values": "f29fe64c5db180db3e58eac9d6f302028d5ecd53305d811fa05a80c94ff2afd6",
+          "positive_count": 0
+        },
+        ".select_vert": {
+          "count": 590793,
+          "sha256_integer_values": "95149a60f504c6e149d8c982fc66a86ce58f3a013c4737f356bd31aefd53b593",
+          "positive_count": 8908
+        }
+      }
+    }
+  ]
+}

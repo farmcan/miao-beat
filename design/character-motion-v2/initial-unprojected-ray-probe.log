@@ -1,0 +1,15 @@
+00:01.241  blend            | Read blend: "/Users/levi/wrksp/miao-beat/artifacts/character-paw-grip-c35/miao-c35-fixed-vertex-tessellation.blend"
+PROBE_BEFORE_GATE {"blender_version": "5.2.3 LTS", "bone_names": ["DEF-root", "DEF-head", "DEF-right-upper", "DEF-right-forearm", "DEF-right-paw", "DEF-left-upper", "DEF-left-forearm", "DEF-left-paw"], "ik_type": "IK", "ik_chain_count": 2, "ik_stretch_disabled": true, "target_objects": ["right", "left"], "left_contact_copy_constraints": ["COPY_ROTATION", "COPY_LOCATION"], "skin_bound": false, "animation_created": false, "source_mesh_coordinates_bit_exact_in_memory": true, "source_mesh_modifiers_unchanged": true, "source_file_hash_unchanged": true, "actual_six_surface_hit_error_max_u": 1.0662403155947686e-06, "lifted_return_actual_six_tube_distance_min_u": 0.07468797266483307, "return_samples": 101, "sweep_samples": 217, "scope": "Point-path feasibility and bpy API construction only; not bound rig or animation quality.", "profile_sha256": "f45cd3b41c7bba04f8f47d01b986cc52f13896d0621d07fc98faf939adb78a39"}
+Traceback (most recent call last):
+  File "/Users/levi/wrksp/miao-beat/design/character-motion-v2/extract-c35-profile.py", line 198, in <module>
+    main()
+    ~~~~^^
+  File "/Users/levi/wrksp/miao-beat/design/character-motion-v2/extract-c35-profile.py", line 188, in main
+    assert max(contact_errors) < 1e-6 and min(return_clearance) > .07
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+Error: script failed, file: 'design/character-motion-v2/extract-c35-profile.py', exiting.
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:31:22)
+
+Blender quit

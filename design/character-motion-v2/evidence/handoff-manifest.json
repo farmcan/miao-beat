@@ -1,0 +1,111 @@
+{
+  "status": "technical-preparation-complete-not-static-or-animation-acceptance",
+  "source_native_sha256": "3097d74a3f932d6dd61e60b7ab12bd40c5c53cd09b7c94aaf93170a03ec25cce",
+  "native_source_unchanged": true,
+  "skin_bound": false,
+  "new_character_animation_created": false,
+  "public_changed": false,
+  "new_cash_service_calls": false,
+  "files": [
+    {
+      "file": "README.md",
+      "bytes": 2999,
+      "sha256": "3a05f733a0c4e42a21bf384352beed1db5db69e802c9a9bdfa41c595e9af2ecb"
+    },
+    {
+      "file": "contact-motion.mjs",
+      "bytes": 6721,
+      "sha256": "6669516186561688bb0515668ab04e104420e5a6219a62f987bbd1d98ea50055"
+    },
+    {
+      "file": "evidence/c35-rig-profile.json",
+      "bytes": 31324,
+      "sha256": "d0819636e7fae463a67b6aa8431996134e59028b675bcd0ac41ce3217d25d01e"
+    },
+    {
+      "file": "evidence/controller-validation.json",
+      "bytes": 6128,
+      "sha256": "3b016fad952778fd1f0fe7133b77cf0b261dbc4837ee2d347f4269ce5b1237c7"
+    },
+    {
+      "file": "evidence/controller-validation.log",
+      "bytes": 6128,
+      "sha256": "3b016fad952778fd1f0fe7133b77cf0b261dbc4837ee2d347f4269ce5b1237c7"
+    },
+    {
+      "file": "evidence/native-api-and-geometry-probe.json",
+      "bytes": 1119,
+      "sha256": "eaf97421ee9ff1783be9324351825f8d7d9699330a6112615370cbb4262d6865"
+    },
+    {
+      "file": "evidence/path-geometry-probe.json",
+      "bytes": 8755,
+      "sha256": "78bb0c89e97d7c8c807ba5fe90ac905e126b58337c66e6a8112354727c990ad2"
+    },
+    {
+      "file": "evidence/path-geometry-validation.log",
+      "bytes": 6640,
+      "sha256": "10204ac0ecf0ae9048d529821c03d2681570b4bec9984fdfecdba253b8438e84"
+    },
+    {
+      "file": "evidence/target-path-samples.json",
+      "bytes": 194419,
+      "sha256": "af53c71b8696c26ed73a52b65d0f7c8d1bf4105217f2d07d6ab191652f3ebf8d"
+    },
+    {
+      "file": "evidence-probe.log",
+      "bytes": 2263,
+      "sha256": "839f99e6e5587967a93805677842721ce6a43ca68e3e1cc7f6df992737f5519b"
+    },
+    {
+      "file": "extract-c35-profile.py",
+      "bytes": 16395,
+      "sha256": "c30dacf820bedc0386491eac24258f0fb472a2e7070bf7448cbb38e35578cf1d"
+    },
+    {
+      "file": "initial-unprojected-ray-probe.log",
+      "bytes": 1661,
+      "sha256": "f11c1cd6c9436fb546122bc9e78cb99df62902b91cb217a7938cec227d46826c"
+    },
+    {
+      "file": "native_rig_scaffold.py",
+      "bytes": 3668,
+      "sha256": "47a35616fb8491dbfd458aff8dae42bd4ee15d608a086b02ea309159f0ed40aa"
+    },
+    {
+      "file": "remap-contact-bindings.mjs",
+      "bytes": 1749,
+      "sha256": "c165678ee6e4f15e6409ef36ed5af6e90aa037daa9f9e5e070ecfc550d47d262"
+    },
+    {
+      "file": "sources/godot-skeleton_modifier_3d.reference.cpp",
+      "bytes": 13035,
+      "sha256": "8f0aced19666a5d56bffa329b49d2cf592caff6b63823550cd5a54f50eddd0ec"
+    },
+    {
+      "file": "sources/provenance.json",
+      "bytes": 1023,
+      "sha256": "555794f80e6c0efc0af0ebb250a9846efc741569c5f2bd34fcb2ffd3b8bcf5e5"
+    },
+    {
+      "file": "sources/three-CCDIKSolver.reference.js",
+      "bytes": 14297,
+      "sha256": "c744fbec7107e2adecab5b7410db484134e12a48379331f7db77767bf902100a"
+    },
+    {
+      "file": "sources/three-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    },
+    {
+      "file": "validate-motion.mjs",
+      "bytes": 6270,
+      "sha256": "16df13f5606cb841145c6c8411367066dfb525d58852c4a1af880212225db625"
+    },
+    {
+      "file": "validate-path-geometry.py",
+      "bytes": 4077,
+      "sha256": "8f5c71c4a82a8e8305261c37e3b030ec2dcdc09f5831cd3bd482b6e78a507a3b"
+    }
+  ]
+}

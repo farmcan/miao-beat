@@ -1,0 +1,22 @@
+"""Read-only attribution of the one failed C37 operation; no new candidate/save/render."""
+import bpy,numpy as np,json,hashlib
+from pathlib import Path
+from mathutils.bvhtree import BVHTree
+R=Path(__file__).resolve().parents[2];O=R/'artifacts/character-strum-paw-c37';src=R/'artifacts/character-paw-grip-c35/miao-c35-fixed-vertex-tessellation.blend';native=O/'diagnostic-c37-gate-failed.blend';sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();frozen={'source':sha(src),'failed':sha(native),'receipt':sha(O/'receipt.json')};bpy.ops.wm.open_mainfile(filepath=str(src));b=bpy.data.objects['Miao / continuous pear and rounded-square face'];me=b.data;P=np.array([v.co[:] for v in me.vertices]);p=np.load(O/'authored-delta-and-locks.npz');ids=p['edit_ids'];mask=np.zeros(len(P));mask[ids]=p['edit_weight'];edit=mask>0;mapping=np.full(len(P),-1,np.int32);mapping[ids]=np.arange(len(ids));edges=np.array([tuple(e.vertices) for e in me.edges]);edges=edges[edit[edges].any(1)];ii=np.r_[edges[:,0],edges[:,1]];jj=np.r_[edges[:,1],edges[:,0]];keep=edit[ii];ii=ii[keep];jj=jj[keep];count=np.bincount(mapping[ii],minlength=len(ids));C=p['origin'];D=p['palm_axis'];ss=(P-C)@D
+
+def smooth(t):
+ t=np.clip(t,0,1);return t*t*(3-2*t)
+Q=P.copy();fw=mask*smooth((ss+.02)/.16)
+for k in range(80):
+ sums=np.stack([np.bincount(mapping[ii],weights=Q[jj,d],minlength=len(ids)) for d in range(3)],axis=1);Q[ids]+=.35*fw[ids,None]*(sums/count[:,None]-Q[ids])
+fair=Q.copy();me.calc_loop_triangles();tri=np.array([tuple(t.vertices) for t in me.loop_triangles]);fi=np.array([t.polygon_index for t in me.loop_triangles]);changed=np.any(edit[tri],axis=1);ti=np.flatnonzero(changed);n0=np.cross(P[tri[:,1]]-P[tri[:,0]],P[tri[:,2]]-P[tri[:,0]]);source=np.array([x.value for x in me.attributes['C23 source vertex id'].data]);rows=[]
+for name,co in [('baseline',P),('fairing_component_only_readonly',fair),('frozen_final_reconstructed',P+p['delta'])]:
+ whole=BVHTree.FromPolygons(co,tri.tolist(),all_triangles=True);sub=BVHTree.FromPolygons(co,tri[changed].tolist(),all_triangles=True);pairs=[]
+ for i,j in sub.overlap(whole):
+  k=int(ti[i])
+  if k==j or set(tri[k])&set(tri[j]) or (changed[j] and k>j):continue
+  pairs.append((k,j))
+ n=np.cross(co[tri[:,1]]-co[tri[:,0]],co[tri[:,2]]-co[tri[:,0]]);lengths=np.linalg.norm(n0,axis=1)*np.linalg.norm(n,axis=1);flip=np.flatnonzero(changed&(lengths>1e-24)&((n0*n).sum(1)<=0));imp=sorted({int(v) for a,c in pairs for v in tri[[a,c]].ravel()});fv=sorted(set(tri[flip].ravel().tolist()));rows.append({'component':name,'actual_non_neighbour_triangle_self_pairs':len(pairs),'self_polygon_pairs':len({tuple(sorted([int(fi[a]),int(fi[c])])) for a,c in pairs}),'triangle_normal_reversals':len(flip),'self_region_bbox':[co[imp].min(0).tolist(),co[imp].max(0).tolist()] if imp else None,'normal_reversal_region_bbox':[co[fv].min(0).tolist(),co[fv].max(0).tolist()] if fv else None,'self_pairs':[{'triangles':[a,c],'polygon_ids':[int(fi[a]),int(fi[c])],'vertex_ids':[tri[a].tolist(),tri[c].tolist()],'original_source_ids':[source[tri[a]].tolist(),source[tri[c]].tolist()],'original_triangle_area2':[float(np.linalg.norm(n0[a])),float(np.linalg.norm(n0[c]))]} for a,c in pairs],'reversed_triangle_source_ids_sample':[source[tri[k]].tolist() for k in flip[:20]],'minimum_area2_before_of_reversed':float(np.linalg.norm(n0[flip],axis=1).min()) if len(flip) else None})
+# Saved candidate readback: do not use float32 delta reconstruction as native proof.
+bpy.ops.wm.open_mainfile(filepath=str(native));actual=np.array([v.co[:] for v in bpy.data.objects['Miao / continuous pear and rounded-square face'].data.vertices]);unchanged=all(sha(src if k=='source' else native if k=='failed' else O/'receipt.json')==v for k,v in frozen.items());assert unchanged
+r={'scope':'Read-only decomposition of one operation, not new candidates. No geometry was saved or rendered.','frozen_hashes_before_after':frozen,'all_frozen_files_unchanged':unchanged,'reconstructed_float32_delta_vs_native_max_error':float(np.max(np.abs(actual-(P+p['delta'])))),'component_evidence':rows,'interpretation':'Baseline already has local actual self; isolate fair-only vs final counts before selecting a different topology method. Decomposition is not an alternate saved candidate.'};(O/'failure-attribution.json').write_text(json.dumps(r,indent=2)+'\n');print('ATTRIBUTION '+json.dumps([{k:q[k] for k in ['component','actual_non_neighbour_triangle_self_pairs','self_polygon_pairs','triangle_normal_reversals','self_region_bbox']} for q in rows]),flush=True)

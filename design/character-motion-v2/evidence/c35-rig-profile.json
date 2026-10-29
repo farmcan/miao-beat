@@ -1,0 +1,1100 @@
+{
+  "schema": "miao-contact-rig-v2",
+  "status": "unbound-technical-profile-static-art-gates-pending",
+  "source_native": "artifacts/character-paw-grip-c35/miao-c35-fixed-vertex-tessellation.blend",
+  "source_native_sha256": "3097d74a3f932d6dd61e60b7ab12bd40c5c53cd09b7c94aaf93170a03ec25cce",
+  "coordinate_system": "Blender Z-up world, scene units; engine adapter must transform positions and directions",
+  "whole_frame_required": true,
+  "mesh_may_be_split": false,
+  "strike": {
+    "logical_u": 0.05,
+    "normal_world": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "cross_axis_world": [
+      -0.3664192855358124,
+      0.0,
+      0.9304498434066772
+    ],
+    "clearance_u": 0.075,
+    "edge_margin_u": 0.035,
+    "duration_ms": 140,
+    "sweep_surface_world": [
+      [
+        -0.09433502703905106,
+        -1.0461633205413818,
+        1.4501253366470337
+      ],
+      [
+        -0.10715970396995544,
+        -1.0461633205413818,
+        1.4826910495758057
+      ],
+      [
+        -0.12197756767272949,
+        -1.0461632013320923,
+        1.5203189849853516
+      ],
+      [
+        -0.13679614663124084,
+        -1.0461633205413818,
+        1.5579462051391602
+      ],
+      [
+        -0.15161365270614624,
+        -1.0454643964767456,
+        1.5955740213394165
+      ],
+      [
+        -0.16643325984477997,
+        -1.0454645156860352,
+        1.6332006454467773
+      ],
+      [
+        -0.1812507063150406,
+        -1.0454643964767456,
+        1.6708287000656128
+      ],
+      [
+        -0.19407537579536438,
+        -1.0454643964767456,
+        1.7033944129943848
+      ]
+    ],
+    "rest_world": [
+      -0.09433502703905106,
+      -1.1211633682250977,
+      1.4501253366470337
+    ],
+    "strings": [
+      {
+        "name": "Guitar / string 1",
+        "source_index": 1,
+        "authored_conventional_string": 6,
+        "u": 0.05,
+        "center_world": [
+          -0.1071600615978241,
+          -1.0433634519577026,
+          1.4826909303665161
+        ],
+        "surface_world": [
+          -0.10715970396995544,
+          -1.0461633205413818,
+          1.4826910495758057
+        ],
+        "surface_normal": [
+          -0.08129482716321945,
+          -0.9619559049606323,
+          0.2608294188976288
+        ],
+        "radius_u": 0.00279999990016222,
+        "actual_evaluated_triangles": 1748,
+        "surface_triangle_index": 342,
+        "v": -0.09250124778510581,
+        "surface_ray_distance_u": 0.07720020413398743,
+        "ray_to_actual_triangle_projection_u": 3.769728732309794e-07
+      },
+      {
+        "name": "Guitar / string 2",
+        "source_index": 2,
+        "authored_conventional_string": 5,
+        "u": 0.05,
+        "center_world": [
+          -0.12197816371917725,
+          -1.0433635711669922,
+          1.5203187465667725
+        ],
+        "surface_world": [
+          -0.12197756767272949,
+          -1.0461632013320923,
+          1.5203189849853516
+        ],
+        "surface_normal": [
+          -0.08129408955574036,
+          -0.9619559049606323,
+          0.26082974672317505
+        ],
+        "radius_u": 0.00279999990016222,
+        "actual_evaluated_triangles": 1748,
+        "surface_triangle_index": 342,
+        "v": -0.05550096259668331,
+        "surface_ray_distance_u": 0.07720036804676056,
+        "ray_to_actual_triangle_projection_u": 6.419616707723741e-07
+      },
+      {
+        "name": "Guitar / string 3",
+        "source_index": 3,
+        "authored_conventional_string": 4,
+        "u": 0.05,
+        "center_world": [
+          -0.13679622113704681,
+          -1.0433635711669922,
+          1.5579462051391602
+        ],
+        "surface_world": [
+          -0.13679614663124084,
+          -1.0461633205413818,
+          1.5579462051391602
+        ],
+        "surface_normal": [
+          -0.08129337430000305,
+          -0.9619557857513428,
+          0.26082998514175415
+        ],
+        "radius_u": 0.00279999990016222,
+        "actual_evaluated_triangles": 1748,
+        "surface_triangle_index": 342,
+        "v": -0.018500994418119258,
+        "surface_ray_distance_u": 0.07720033824443817,
+        "ray_to_actual_triangle_projection_u": 7.450580596923828e-08
+      },
+      {
+        "name": "Guitar / string 4",
+        "source_index": 4,
+        "authored_conventional_string": 3,
+        "u": 0.05,
+        "center_world": [
+          -0.15161427855491638,
+          -1.0433634519577026,
+          1.5955736637115479
+        ],
+        "surface_world": [
+          -0.15161365270614624,
+          -1.0454643964767456,
+          1.5955740213394165
+        ],
+        "surface_normal": [
+          -0.08133737742900848,
+          -0.9619249701499939,
+          0.26093047857284546
+        ],
+        "radius_u": 0.002099999925121665,
+        "actual_evaluated_triangles": 1748,
+        "surface_triangle_index": 342,
+        "v": 0.018498970057286287,
+        "surface_ray_distance_u": 0.0778990164399147,
+        "ray_to_actual_triangle_projection_u": 7.30612914093212e-07
+      },
+      {
+        "name": "Guitar / string 5",
+        "source_index": 5,
+        "authored_conventional_string": 2,
+        "u": 0.05,
+        "center_world": [
+          -0.16643230617046356,
+          -1.0433635711669922,
+          1.6332011222839355
+        ],
+        "surface_world": [
+          -0.16643325984477997,
+          -1.0454645156860352,
+          1.6332006454467773
+        ],
+        "surface_normal": [
+          -0.08133871108293533,
+          -0.9619244337081909,
+          0.2609317898750305
+        ],
+        "radius_u": 0.002099999925121665,
+        "actual_evaluated_triangles": 1748,
+        "surface_triangle_index": 342,
+        "v": 0.055498927808535596,
+        "surface_ray_distance_u": 0.07789912074804306,
+        "ray_to_actual_triangle_projection_u": 1.066240299940009e-06
+      },
+      {
+        "name": "Guitar / string 6",
+        "source_index": 6,
+        "authored_conventional_string": 1,
+        "u": 0.05,
+        "center_world": [
+          -0.18125037848949432,
+          -1.0433635711669922,
+          1.6708288192749023
+        ],
+        "surface_world": [
+          -0.1812507063150406,
+          -1.0454643964767456,
+          1.6708287000656128
+        ],
+        "surface_normal": [
+          -0.08132696896791458,
+          -0.9619328379631042,
+          0.26090437173843384
+        ],
+        "radius_u": 0.002099999925121665,
+        "actual_evaluated_triangles": 1748,
+        "surface_triangle_index": 342,
+        "v": 0.09249910346142755,
+        "surface_ray_distance_u": 0.07789916545152664,
+        "ray_to_actual_triangle_projection_u": 3.488272401904948e-07
+      }
+    ]
+  },
+  "left_hold": {
+    "mode": "freeze_existing_world_contact",
+    "anchors": [
+      {
+        "kind": "toe",
+        "world": [
+          1.0799086093902588,
+          -1.054823875427246,
+          2.0348658561706543
+        ],
+        "actual_target_world": [
+          1.0799086093902588,
+          -1.0514957904815674,
+          2.0348658561706543
+        ],
+        "signed_gap_u": 0.0005280850455164909,
+        "expected_source": 2,
+        "polygon_index": 590033,
+        "triangle_vertex_indices": [
+          589743,
+          589753,
+          589752
+        ],
+        "source_vertex_ids": [
+          0,
+          0,
+          0
+        ],
+        "vertex_provenance": [
+          {
+            "source_native_vertex_index": 589743,
+            "source_rest_world": [
+              1.0901645421981812,
+              -1.0550975799560547,
+              2.0383553504943848
+            ],
+            "all_integer_point_attributes": {
+              "C23 source vertex id": 0,
+              "C23 source opening local id": 0,
+              "C23 actual upper local id": 1050,
+              "C23 C11 source vertex id": 0
+            },
+            "matching_source_vertices": 1,
+            "unique_tuple": true
+          },
+          {
+            "source_native_vertex_index": 589753,
+            "source_rest_world": [
+              1.0790892839431763,
+              -1.0550483465194702,
+              2.033940315246582
+            ],
+            "all_integer_point_attributes": {
+              "C23 source vertex id": 0,
+              "C23 source opening local id": 0,
+              "C23 actual upper local id": 1040,
+              "C23 C11 source vertex id": 0
+            },
+            "matching_source_vertices": 1,
+            "unique_tuple": true
+          },
+          {
+            "source_native_vertex_index": 589752,
+            "source_rest_world": [
+              1.075830340385437,
+              -1.0520159006118774,
+              2.0405631065368652
+            ],
+            "all_integer_point_attributes": {
+              "C23 source vertex id": 0,
+              "C23 source opening local id": 0,
+              "C23 actual upper local id": 1041,
+              "C23 C11 source vertex id": 0
+            },
+            "matching_source_vertices": 1,
+            "unique_tuple": true
+          }
+        ],
+        "merge_remap_required": true,
+        "barycentric": [
+          0.09622447267661115,
+          0.8281749634484304,
+          0.0756005638749584
+        ],
+        "reconstruction_error_u": 0.0
+      },
+      {
+        "kind": "toe",
+        "world": [
+          1.1910821199417114,
+          -1.0566749572753906,
+          2.078688144683838
+        ],
+        "actual_target_world": [
+          1.1910821199417114,
+          -1.0518748760223389,
+          2.078688144683838
+        ],
+        "signed_gap_u": 0.002000081352889538,
+        "expected_source": 2,
+        "polygon_index": 589877,
+        "triangle_vertex_indices": [
+          590286,
+          590312,
+          590291
+        ],
+        "source_vertex_ids": [
+          0,
+          0,
+          0
+        ],
+        "vertex_provenance": [
+          {
+            "source_native_vertex_index": 590286,
+            "source_rest_world": [
+              1.1934900283813477,
+              -1.0510121583938599,
+              2.0720739364624023
+            ],
+            "all_integer_point_attributes": {
+              "C23 source vertex id": 0,
+              "C23 source opening local id": 0,
+              "C23 actual upper local id": 507,
+              "C23 C11 source vertex id": 0
+            },
+            "matching_source_vertices": 1,
+            "unique_tuple": true
+          },
+          {
+            "source_native_vertex_index": 590312,
+            "source_rest_world": [
+              1.169285774230957,
+              -1.0755043029785156,
+              2.071566581726074
+            ],
+            "all_integer_point_attributes": {
+              "C23 source vertex id": 0,
+              "C23 source opening local id": 0,
+              "C23 actual upper local id": 481,
+              "C23 C11 source vertex id": 0
+            },
+            "matching_source_vertices": 1,
+            "unique_tuple": true
+          },
+          {
+            "source_native_vertex_index": 590291,
+            "source_rest_world": [
+              1.1904081106185913,
+              -1.0582605600357056,
+              2.080540418624878
+            ],
+            "all_integer_point_attributes": {
+              "C23 source vertex id": 0,
+              "C23 source opening local id": 0,
+              "C23 actual upper local id": 502,
+              "C23 C11 source vertex id": 0
+            },
+            "matching_source_vertices": 1,
+            "unique_tuple": true
+          }
+        ],
+        "merge_remap_required": true,
+        "barycentric": [
+          0.21876942195506166,
+          9.000667841608104e-06,
+          0.7812215773770967
+        ],
+        "reconstruction_error_u": 0.0
+      },
+      {
+        "kind": "toe",
+        "world": [
+          1.3021504878997803,
+          -1.0531131029129028,
+          2.122777223587036
+        ],
+        "actual_target_world": [
+          1.3021504878997803,
+          -1.0500400066375732,
+          2.122777223587036
+        ],
+        "signed_gap_u": 0.00027309637516736984,
+        "expected_source": 2,
+        "polygon_index": 589159,
+        "triangle_vertex_indices": [
+          589490,
+          589493,
+          589496
+        ],
+        "source_vertex_ids": [
+          0,
+          0,
+          0
+        ],
+        "vertex_provenance": [
+          {
+            "source_native_vertex_index": 589490,
+            "source_rest_world": [
+              1.3037855625152588,
+              -1.0531048774719238,
+              2.1232855319976807
+            ],
+            "all_integer_point_attributes": {
+              "C23 source vertex id": 0,
+              "C23 source opening local id": 0,
+              "C23 actual upper local id": 1303,
+              "C23 C11 source vertex id": 0
+            },
+            "matching_source_vertices": 1,
+            "unique_tuple": true
+          },
+          {
+            "source_native_vertex_index": 589493,
+            "source_rest_world": [
+              1.2909603118896484,
+              -1.0533454418182373,
+              2.117856740951538
+            ],
+            "all_integer_point_attributes": {
+              "C23 source vertex id": 0,
+              "C23 source opening local id": 0,
+              "C23 actual upper local id": 1300,
+              "C23 C11 source vertex id": 0
+            },
+            "matching_source_vertices": 1,
+            "unique_tuple": true
+          },
+          {
+            "source_native_vertex_index": 589496,
+            "source_rest_world": [
+              1.2867940664291382,
+              -1.0522595643997192,
+              2.1256349086761475
+            ],
+            "all_integer_point_attributes": {
+              "C23 source vertex id": 0,
+              "C23 source opening local id": 0,
+              "C23 actual upper local id": 1297,
+              "C23 C11 source vertex id": 0
+            },
+            "matching_source_vertices": 1,
+            "unique_tuple": true
+          }
+        ],
+        "merge_remap_required": true,
+        "barycentric": [
+          0.8787688493094051,
+          0.10196790762270437,
+          0.01926324306789055
+        ],
+        "reconstruction_error_u": 1.1920928955078125e-07
+      },
+      {
+        "kind": "support",
+        "world": [
+          1.1457535028457642,
+          -0.9830000400543213,
+          1.9700770378112793
+        ],
+        "actual_target_world": [
+          1.1450207233428955,
+          -0.9830000400543213,
+          1.9719377756118774
+        ],
+        "signed_gap_u": 0.001999827742110938,
+        "expected_source": 1,
+        "polygon_index": 586181,
+        "triangle_vertex_indices": [
+          586683,
+          586484,
+          586485
+        ],
+        "source_vertex_ids": [
+          0,
+          0,
+          0
+        ],
+        "vertex_provenance": [
+          {
+            "source_native_vertex_index": 586683,
+            "source_rest_world": [
+              1.1561317443847656,
+              -0.9751109480857849,
+              1.974862813949585
+            ],
+            "all_integer_point_attributes": {
+              "C23 source vertex id": 0,
+              "C23 source opening local id": 0,
+              "C23 actual upper local id": 0,
+              "C23 C11 source vertex id": 0
+            },
+            "matching_source_vertices": 3742,
+            "unique_tuple": false
+          },
+          {
+            "source_native_vertex_index": 586484,
+            "source_rest_world": [
+              1.0792620182037354,
+              -1.02008056640625,
+              1.9388259649276733
+            ],
+            "all_integer_point_attributes": {
+              "C23 source vertex id": 0,
+              "C23 source opening local id": 0,
+              "C23 actual upper local id": 0,
+              "C23 C11 source vertex id": 0
+            },
+            "matching_source_vertices": 3742,
+            "unique_tuple": false
+          },
+          {
+            "source_native_vertex_index": 586485,
+            "source_rest_world": [
+              1.1600092649459839,
+              -0.9895305633544922,
+              1.9774105548858643
+            ],
+            "all_integer_point_attributes": {
+              "C23 source vertex id": 0,
+              "C23 source opening local id": 0,
+              "C23 actual upper local id": 0,
+              "C23 C11 source vertex id": 0
+            },
+            "matching_source_vertices": 3742,
+            "unique_tuple": false
+          }
+        ],
+        "merge_remap_required": true,
+        "barycentric": [
+          0.7505708501491662,
+          0.14050481392403263,
+          0.10892433592680117
+        ],
+        "reconstruction_error_u": 1.1920928955078125e-07
+      },
+      {
+        "kind": "support",
+        "world": [
+          1.2677886486053467,
+          -0.9830000400543213,
+          2.0181350708007812
+        ],
+        "actual_target_world": [
+          1.267055869102478,
+          -0.9830000400543213,
+          2.019996166229248
+        ],
+        "signed_gap_u": 0.002000160457100719,
+        "expected_source": 1,
+        "polygon_index": 585759,
+        "triangle_vertex_indices": [
+          586290,
+          586049,
+          586147
+        ],
+        "source_vertex_ids": [
+          0,
+          0,
+          0
+        ],
+        "vertex_provenance": [
+          {
+            "source_native_vertex_index": 586290,
+            "source_rest_world": [
+              1.281067967414856,
+              -0.967787504196167,
+              2.0221548080444336
+            ],
+            "all_integer_point_attributes": {
+              "C23 source vertex id": 0,
+              "C23 source opening local id": 0,
+              "C23 actual upper local id": 0,
+              "C23 C11 source vertex id": 0
+            },
+            "matching_source_vertices": 3742,
+            "unique_tuple": false
+          },
+          {
+            "source_native_vertex_index": 586049,
+            "source_rest_world": [
+              1.2591420412063599,
+              -0.9912115931510925,
+              2.016141653060913
+            ],
+            "all_integer_point_attributes": {
+              "C23 source vertex id": 0,
+              "C23 source opening local id": 0,
+              "C23 actual upper local id": 0,
+              "C23 C11 source vertex id": 0
+            },
+            "matching_source_vertices": 3742,
+            "unique_tuple": false
+          },
+          {
+            "source_native_vertex_index": 586147,
+            "source_rest_world": [
+              1.2831392288208008,
+              -1.0061390399932861,
+              2.0077853202819824
+            ],
+            "all_integer_point_attributes": {
+              "C23 source vertex id": 0,
+              "C23 source opening local id": 0,
+              "C23 actual upper local id": 0,
+              "C23 C11 source vertex id": 0
+            },
+            "matching_source_vertices": 3742,
+            "unique_tuple": false
+          }
+        ],
+        "merge_remap_required": true,
+        "barycentric": [
+          0.3666756561676604,
+          0.6080331172341438,
+          0.02529122659819583
+        ],
+        "reconstruction_error_u": 5.960464477539063e-08
+      }
+    ],
+    "fret_changes_enabled": false,
+    "strict_nominal_contact_band_pass": false,
+    "authorized_positive_gap_roundoff_pass": true
+  },
+  "rig": {
+    "anchors_approved": false,
+    "anchors_note": "Unbound authoring landmarks only; replace shoulder/elbow/head anchors after complete static art approval, preserve contact rails in instrument space.",
+    "root": [
+      0,
+      0,
+      0.3
+    ],
+    "chest": [
+      0,
+      0,
+      2.1
+    ],
+    "head_base": [
+      0,
+      0,
+      2.65
+    ],
+    "head_tip": [
+      0,
+      0,
+      3.3
+    ],
+    "right_shoulder": [
+      -0.8,
+      -0.28,
+      2.25
+    ],
+    "right_elbow": [
+      -1.25,
+      -0.64,
+      1.94
+    ],
+    "right_effector": [
+      -0.09433502703905106,
+      -1.1211633682250977,
+      1.4501253366470337
+    ],
+    "left_shoulder": [
+      0.8,
+      -0.28,
+      2.25
+    ],
+    "left_elbow": [
+      1.37,
+      -0.65,
+      1.65
+    ],
+    "left_effector": [
+      1.1973366737365723,
+      -1.0261224031448364,
+      2.0449086666107177
+    ]
+  },
+  "limits": [
+    "Surface point path only: no paw volume, skinning, deformation, string force, audio, browser or visual motion verification.",
+    "Native whole connected skin is unchanged and not bound; no arm textures or detached limb meshes created.",
+    "Left anchors are source-native-specific; remap by exact retained provenance and verify after merged body changes."
+  ],
+  "note_targets": {
+    "assignment": "Authoring proposal: source indices 1..6 assigned E2,A2,D3,G3,B3,E4; source mesh stores no pitch metadata. Source 1..3 are thicker; conventional numbering is reversed (source 6 = high E/string 1).",
+    "assignment_is_source_fact": false,
+    "orientation_warning": "Source low-to-high index increases along +guitar-V; source thick strings occupy -V. Final instrument orientation/string semantics need review before musical visual acceptance.",
+    "tuning_primary_source": "https://www.fender.com/articles/setup/standard-tuning-how-eadgbe-came-to-be",
+    "nut": {
+      "object": "Guitar / nut",
+      "center_world": [
+        1.5317437648773193,
+        -1.0219999551773071,
+        2.236764430999756
+      ],
+      "u": 1.697999942645481
+    },
+    "frets_actual_nut_to_body": [
+      {
+        "object": "Guitar / silver fret",
+        "u": 1.5765439277050655,
+        "center_world": [
+          1.4082279205322266,
+          -1.0199999809265137,
+          2.1881227493286133
+        ],
+        "fret_number": 1
+      },
+      {
+        "object": "Guitar / silver fret.001",
+        "u": 1.4619048927608331,
+        "center_world": [
+          1.29164457321167,
+          -1.0199999809265137,
+          2.142211437225342
+        ],
+        "fret_number": 2
+      },
+      {
+        "object": "Guitar / silver fret.002",
+        "u": 1.3536997675046385,
+        "center_world": [
+          1.1816043853759766,
+          -1.0199999809265137,
+          2.098876476287842
+        ],
+        "fret_number": 3
+      },
+      {
+        "object": "Guitar / silver fret.003",
+        "u": 1.2515680217796488,
+        "center_world": [
+          1.0777404308319092,
+          -1.0199999809265137,
+          2.057974100112915
+        ],
+        "fret_number": 4
+      },
+      {
+        "object": "Guitar / silver fret.004",
+        "u": 1.155168210338555,
+        "center_world": [
+          0.979705810546875,
+          -1.0199999809265137,
+          2.019367218017578
+        ],
+        "fret_number": 5
+      },
+      {
+        "object": "Guitar / silver fret.005",
+        "u": 1.0641789582735397,
+        "center_world": [
+          0.8871734142303467,
+          -1.0199999809265137,
+          1.9829270839691162
+        ],
+        "fret_number": 6
+      },
+      {
+        "object": "Guitar / silver fret.006",
+        "u": 0.9782967032590077,
+        "center_world": [
+          0.7998345494270325,
+          -1.0199999809265137,
+          1.948532223701477
+        ],
+        "fret_number": 7
+      },
+      {
+        "object": "Guitar / silver fret.007",
+        "u": 0.897234547962255,
+        "center_world": [
+          0.7173976302146912,
+          -1.0199999809265137,
+          1.9160679578781128
+        ],
+        "fret_number": 8
+      },
+      {
+        "object": "Guitar / silver fret.008",
+        "u": 0.8207221103579031,
+        "center_world": [
+          0.6395875811576843,
+          -1.0199999809265137,
+          1.8854255676269531
+        ],
+        "fret_number": 9
+      },
+      {
+        "object": "Guitar / silver fret.009",
+        "u": 0.7485039333187731,
+        "center_world": [
+          0.566144585609436,
+          -1.0199999809265137,
+          1.8565031290054321
+        ],
+        "fret_number": 10
+      },
+      {
+        "object": "Guitar / silver fret.010",
+        "u": 0.6803391166388715,
+        "center_world": [
+          0.49682366847991943,
+          -1.0199999809265137,
+          1.8292040824890137
+        ],
+        "fret_number": 11
+      },
+      {
+        "object": "Guitar / silver fret.011",
+        "u": 0.6159999761002048,
+        "center_world": [
+          0.43139344453811646,
+          -1.0199999809265137,
+          1.8034369945526123
+        ],
+        "fret_number": 12
+      },
+      {
+        "object": "Guitar / silver fret.012",
+        "u": 0.555271981103794,
+        "center_world": [
+          0.36963552236557007,
+          -1.0199999809265137,
+          1.779116153717041
+        ],
+        "fret_number": 13
+      }
+    ],
+    "melody": [
+      {
+        "key": "KeyA",
+        "note": "C4",
+        "midi": 60,
+        "standard_string": 2,
+        "source_string_index": 5,
+        "source_object": "Guitar / string 5",
+        "fret": 1,
+        "open_string": false,
+        "press_required": true,
+        "target_u": 1.5984060103943403,
+        "actual_fret_interval_u": [
+          1.5765439277050655,
+          1.697999942645481
+        ],
+        "left_target_surface_world": [
+          1.4072399139404297,
+          -1.0465707778930664,
+          2.2558367252349854
+        ],
+        "open_string_clear_target_world": null,
+        "right_pluck_surface_world": [
+          -0.16643325984477997,
+          -1.0454645156860352,
+          1.6332006454467773
+        ],
+        "pitch_formula_verified": true,
+        "paw_pose_verified": false
+      },
+      {
+        "key": "KeyS",
+        "note": "D4",
+        "midi": 62,
+        "standard_string": 2,
+        "source_string_index": 5,
+        "source_object": "Guitar / string 5",
+        "fret": 3,
+        "open_string": false,
+        "press_required": true,
+        "target_u": 1.3731766900507536,
+        "actual_fret_interval_u": [
+          1.3536997675046385,
+          1.4619048927608331
+        ],
+        "left_target_surface_world": [
+          1.1769849061965942,
+          -1.0537775754928589,
+          2.168703317642212
+        ],
+        "open_string_clear_target_world": null,
+        "right_pluck_surface_world": [
+          -0.16643325984477997,
+          -1.0454645156860352,
+          1.6332006454467773
+        ],
+        "pitch_formula_verified": true,
+        "paw_pose_verified": false
+      },
+      {
+        "key": "KeyD",
+        "note": "E4",
+        "midi": 64,
+        "standard_string": 1,
+        "source_string_index": 6,
+        "source_object": "Guitar / string 6",
+        "fret": 0,
+        "open_string": true,
+        "press_required": false,
+        "target_u": 1.697999942645481,
+        "actual_fret_interval_u": [
+          1.697999942645481,
+          1.697999942645481
+        ],
+        "left_target_surface_world": null,
+        "open_string_clear_target_world": [
+          1.4946622848510742,
+          -1.0702351331710815,
+          2.3309249877929688
+        ],
+        "right_pluck_surface_world": [
+          -0.1812507063150406,
+          -1.0454643964767456,
+          1.6708287000656128
+        ],
+        "pitch_formula_verified": true,
+        "paw_pose_verified": false
+      },
+      {
+        "key": "KeyF",
+        "note": "F4",
+        "midi": 65,
+        "standard_string": 1,
+        "source_string_index": 6,
+        "source_object": "Guitar / string 6",
+        "fret": 1,
+        "open_string": false,
+        "press_required": true,
+        "target_u": 1.5984060103943403,
+        "actual_fret_interval_u": [
+          1.5765439277050655,
+          1.697999942645481
+        ],
+        "left_target_surface_world": [
+          1.391762137413025,
+          -1.0465567111968994,
+          2.295140504837036
+        ],
+        "open_string_clear_target_world": null,
+        "right_pluck_surface_world": [
+          -0.1812507063150406,
+          -1.0454643964767456,
+          1.6708287000656128
+        ],
+        "pitch_formula_verified": true,
+        "paw_pose_verified": false
+      },
+      {
+        "key": "KeyG",
+        "note": "G4",
+        "midi": 67,
+        "standard_string": 1,
+        "source_string_index": 6,
+        "source_object": "Guitar / string 6",
+        "fret": 3,
+        "open_string": false,
+        "press_required": true,
+        "target_u": 1.3731766900507536,
+        "actual_fret_interval_u": [
+          1.3536997675046385,
+          1.4619048927608331
+        ],
+        "left_target_surface_world": [
+          1.1607061624526978,
+          -1.053745985031128,
+          2.2100391387939453
+        ],
+        "open_string_clear_target_world": null,
+        "right_pluck_surface_world": [
+          -0.1812507063150406,
+          -1.0454643964767456,
+          1.6708287000656128
+        ],
+        "pitch_formula_verified": true,
+        "paw_pose_verified": false
+      },
+      {
+        "key": "KeyH",
+        "note": "A4",
+        "midi": 69,
+        "standard_string": 1,
+        "source_string_index": 6,
+        "source_object": "Guitar / string 6",
+        "fret": 5,
+        "open_string": false,
+        "press_required": true,
+        "target_u": 1.1725201763979518,
+        "actual_fret_interval_u": [
+          1.155168210338555,
+          1.2515680217796488
+        ],
+        "left_target_surface_world": [
+          0.9567228555679321,
+          -1.0522171258926392,
+          2.129486560821533
+        ],
+        "open_string_clear_target_world": null,
+        "right_pluck_surface_world": [
+          -0.1812507063150406,
+          -1.0454643964767456,
+          1.6708287000656128
+        ],
+        "pitch_formula_verified": true,
+        "paw_pose_verified": false
+      },
+      {
+        "key": "KeyJ",
+        "note": "B4",
+        "midi": 71,
+        "standard_string": 1,
+        "source_string_index": 6,
+        "source_object": "Guitar / string 6",
+        "fret": 7,
+        "open_string": false,
+        "press_required": true,
+        "target_u": 0.9937555091616235,
+        "actual_fret_interval_u": [
+          0.9782967032590077,
+          1.0641789582735397
+        ],
+        "left_target_surface_world": [
+          0.7760087847709656,
+          -1.0469568967819214,
+          2.0551464557647705
+        ],
+        "open_string_clear_target_world": null,
+        "right_pluck_surface_world": [
+          -0.1812507063150406,
+          -1.0454643964767456,
+          1.6708287000656128
+        ],
+        "pitch_formula_verified": true,
+        "paw_pose_verified": false
+      },
+      {
+        "key": "KeyK",
+        "note": "C5",
+        "midi": 72,
+        "standard_string": 1,
+        "source_string_index": 6,
+        "source_object": "Guitar / string 6",
+        "fret": 8,
+        "open_string": false,
+        "press_required": true,
+        "target_u": 0.9118257359156705,
+        "actual_fret_interval_u": [
+          0.897234547962255,
+          0.9782967032590077
+        ],
+        "left_target_surface_world": [
+          0.6933084726333618,
+          -1.0442200899124146,
+          2.020761013031006
+        ],
+        "open_string_clear_target_world": null,
+        "right_pluck_surface_world": [
+          -0.1812507063150406,
+          -1.0454643964767456,
+          1.6708287000656128
+        ],
+        "pitch_formula_verified": true,
+        "paw_pose_verified": false
+      }
+    ],
+    "left_pose_status": "Target data only; C35 existing hold stays frozen. Future fretting poses require individual contact/wood/tube/self/deformation gates."
+  }
+}

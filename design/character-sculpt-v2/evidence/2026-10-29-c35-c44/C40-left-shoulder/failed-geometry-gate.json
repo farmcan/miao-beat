@@ -1,0 +1,855 @@
+{
+  "max_displacement_u": 0.044862452894449234,
+  "changed_vertices": 22074,
+  "changed_bounds": {
+    "min": [
+      0.42026108503341675,
+      -0.6912168264389038,
+      1.8300466537475586
+    ],
+    "max": [
+      1.1997337341308594,
+      0.15876750648021698,
+      2.399912118911743
+    ]
+  },
+  "touched_actual_candidate_triangles": 44911,
+  "fixed_original_triangle_minimum_old_new_normal_dot": -0.9986684918403625,
+  "fixed_original_triangle_minimum_area_ratio": 0.2117420881986618,
+  "actual_candidate_collapsed_triangles": 0,
+  "fixed_original_triangle_direction_reversals": 67,
+  "local_neighborhood_triangles": 79955,
+  "local_self_pairs_before": 18,
+  "local_self_pairs_after": 0,
+  "introduced_local_self_pairs": 0,
+  "introduced_self_examples": [],
+  "actual_winding_closedness_parity": {
+    "components": 1,
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "inconsistent_winding_edges": 0,
+    "signed_volume_u3": 6.615734259023728,
+    "actual_candidate_normal_side_probes": 626,
+    "normal_side_probe_failures": 20,
+    "normal_side_probe_examples": [
+      {
+        "vertices": [
+          389321,
+          389314,
+          389312
+        ],
+        "outside_normal_votes": [
+          0,
+          1
+        ],
+        "inside_normal_votes": [
+          1,
+          1
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          389321,
+          389312,
+          389320
+        ],
+        "outside_normal_votes": [
+          0,
+          1
+        ],
+        "inside_normal_votes": [
+          1,
+          1
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392444,
+          392457,
+          392459
+        ],
+        "outside_normal_votes": [
+          0,
+          0
+        ],
+        "inside_normal_votes": [
+          1,
+          0
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392444,
+          392459,
+          392445
+        ],
+        "outside_normal_votes": [
+          0,
+          1
+        ],
+        "inside_normal_votes": [
+          1,
+          1
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392449,
+          392446,
+          392443
+        ],
+        "outside_normal_votes": [
+          0,
+          1
+        ],
+        "inside_normal_votes": [
+          1,
+          1
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392449,
+          392443,
+          392445
+        ],
+        "outside_normal_votes": [
+          0,
+          0
+        ],
+        "inside_normal_votes": [
+          1,
+          0
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392445,
+          392459,
+          392450
+        ],
+        "outside_normal_votes": [
+          1,
+          0
+        ],
+        "inside_normal_votes": [
+          1,
+          1
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392445,
+          392450,
+          392449
+        ],
+        "outside_normal_votes": [
+          0,
+          0
+        ],
+        "inside_normal_votes": [
+          1,
+          0
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392498,
+          392452,
+          392462
+        ],
+        "outside_normal_votes": [
+          1,
+          0
+        ],
+        "inside_normal_votes": [
+          1,
+          1
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392498,
+          392462,
+          392490
+        ],
+        "outside_normal_votes": [
+          1,
+          0
+        ],
+        "inside_normal_votes": [
+          1,
+          1
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392462,
+          392450,
+          392459
+        ],
+        "outside_normal_votes": [
+          0,
+          0
+        ],
+        "inside_normal_votes": [
+          1,
+          0
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392462,
+          392459,
+          392463
+        ],
+        "outside_normal_votes": [
+          0,
+          0
+        ],
+        "inside_normal_votes": [
+          1,
+          0
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392490,
+          392462,
+          392463
+        ],
+        "outside_normal_votes": [
+          0,
+          0
+        ],
+        "inside_normal_votes": [
+          1,
+          0
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392490,
+          392463,
+          392464
+        ],
+        "outside_normal_votes": [
+          1,
+          0
+        ],
+        "inside_normal_votes": [
+          1,
+          1
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392460,
+          392459,
+          392457
+        ],
+        "outside_normal_votes": [
+          0,
+          0
+        ],
+        "inside_normal_votes": [
+          1,
+          0
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392459,
+          392460,
+          392461
+        ],
+        "outside_normal_votes": [
+          0,
+          0
+        ],
+        "inside_normal_votes": [
+          1,
+          0
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392463,
+          392461,
+          392465
+        ],
+        "outside_normal_votes": [
+          1,
+          0
+        ],
+        "inside_normal_votes": [
+          1,
+          1
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392491,
+          392494,
+          392495
+        ],
+        "outside_normal_votes": [
+          0,
+          0
+        ],
+        "inside_normal_votes": [
+          0,
+          1
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392464,
+          392465,
+          392491
+        ],
+        "outside_normal_votes": [
+          0,
+          0
+        ],
+        "inside_normal_votes": [
+          1,
+          0
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392464,
+          392491,
+          392490
+        ],
+        "outside_normal_votes": [
+          0,
+          0
+        ],
+        "inside_normal_votes": [
+          0,
+          1
+        ],
+        "outward_correct": false
+      }
+    ],
+    "normal_side_probe_method": "Full candidate actual-triangle BVH; +/-2e-5u around triangle centroid; two independent parity directions. Finite probes, not all-point proof."
+  },
+  "original_total_volume_u3": 6.615726581715795,
+  "smoothed_total_volume_u3": 6.615317458355748,
+  "normal_volume_correction_u": 0.0009012768786807062,
+  "candidate_total_volume_u3": 6.6157262233597605,
+  "pre_trust_region_maximum_displacement_u": 0.04925432397016701,
+  "smooth_trust_region_radius_u": 0.09,
+  "guitar_actual_surfaces": [
+    {
+      "object": "Guitar / rosewood body",
+      "actual_evaluated_vertices": 1120,
+      "actual_evaluated_triangles": 2236,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / spruce soundboard",
+      "actual_evaluated_vertices": 1120,
+      "actual_evaluated_triangles": 2236,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / continuous binding",
+      "actual_evaluated_vertices": 40356,
+      "actual_evaluated_triangles": 80660,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / continuous binding.001",
+      "actual_evaluated_vertices": 40356,
+      "actual_evaluated_triangles": 80660,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / rosette ring",
+      "actual_evaluated_vertices": 27684,
+      "actual_evaluated_triangles": 55316,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / rosette ring.001",
+      "actual_evaluated_vertices": 27684,
+      "actual_evaluated_triangles": 55316,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / rosette ring.002",
+      "actual_evaluated_vertices": 27684,
+      "actual_evaluated_triangles": 55316,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / rosette ring.003",
+      "actual_evaluated_vertices": 27684,
+      "actual_evaluated_triangles": 55316,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / tuner shaft",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / tuner shaft.001",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / tuner shaft.002",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / tuner shaft.003",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / tuner shaft.004",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / tuner shaft.005",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / silver fret",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / silver fret.001",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / silver fret.002",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / silver fret.003",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / silver fret.004",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / silver fret.005",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / silver fret.006",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / silver fret.007",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / silver fret.008",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / silver fret.009",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / silver fret.010",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / silver fret.011",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / silver fret.012",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / string 1",
+      "actual_evaluated_vertices": 900,
+      "actual_evaluated_triangles": 1748,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / string 2",
+      "actual_evaluated_vertices": 900,
+      "actual_evaluated_triangles": 1748,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / string 3",
+      "actual_evaluated_vertices": 900,
+      "actual_evaluated_triangles": 1748,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / string 4",
+      "actual_evaluated_vertices": 900,
+      "actual_evaluated_triangles": 1748,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / string 5",
+      "actual_evaluated_vertices": 900,
+      "actual_evaluated_triangles": 1748,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / string 6",
+      "actual_evaluated_vertices": 900,
+      "actual_evaluated_triangles": 1748,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / soundhole chamber",
+      "actual_evaluated_vertices": 192,
+      "actual_evaluated_triangles": 380,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / neck",
+      "actual_evaluated_vertices": 152,
+      "actual_evaluated_triangles": 300,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / ebony fretboard",
+      "actual_evaluated_vertices": 152,
+      "actual_evaluated_triangles": 300,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / bridge",
+      "actual_evaluated_vertices": 152,
+      "actual_evaluated_triangles": 300,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / bridge saddle",
+      "actual_evaluated_vertices": 152,
+      "actual_evaluated_triangles": 300,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / nut",
+      "actual_evaluated_vertices": 152,
+      "actual_evaluated_triangles": 300,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / headstock",
+      "actual_evaluated_vertices": 152,
+      "actual_evaluated_triangles": 300,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / headstock dark slot",
+      "actual_evaluated_vertices": 152,
+      "actual_evaluated_triangles": 300,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / ivory tuning peg",
+      "actual_evaluated_vertices": 362,
+      "actual_evaluated_triangles": 720,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / ivory tuning peg.001",
+      "actual_evaluated_vertices": 362,
+      "actual_evaluated_triangles": 720,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / ivory tuning peg.002",
+      "actual_evaluated_vertices": 362,
+      "actual_evaluated_triangles": 720,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / headstock dark slot.001",
+      "actual_evaluated_vertices": 152,
+      "actual_evaluated_triangles": 300,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / ivory tuning peg.003",
+      "actual_evaluated_vertices": 362,
+      "actual_evaluated_triangles": 720,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / ivory tuning peg.004",
+      "actual_evaluated_vertices": 362,
+      "actual_evaluated_triangles": 720,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / ivory tuning peg.005",
+      "actual_evaluated_vertices": 362,
+      "actual_evaluated_triangles": 720,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / bridge tie",
+      "actual_evaluated_vertices": 178,
+      "actual_evaluated_triangles": 352,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / bridge tie.001",
+      "actual_evaluated_vertices": 178,
+      "actual_evaluated_triangles": 352,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / bridge tie.002",
+      "actual_evaluated_vertices": 178,
+      "actual_evaluated_triangles": 352,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / bridge tie.003",
+      "actual_evaluated_vertices": 178,
+      "actual_evaluated_triangles": 352,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / bridge tie.004",
+      "actual_evaluated_vertices": 178,
+      "actual_evaluated_triangles": 352,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    },
+    {
+      "object": "Guitar / bridge tie.005",
+      "actual_evaluated_vertices": 178,
+      "actual_evaluated_triangles": 352,
+      "baseline_surface_pairs": 0,
+      "candidate_surface_pairs": 0,
+      "introduced_surface_pairs": 0,
+      "introduced_examples": []
+    }
+  ],
+  "all_locks_bit_exact": true,
+  "non_edit_region_bit_exact": true,
+  "seconds_before_save": 8.934259176254272
+}

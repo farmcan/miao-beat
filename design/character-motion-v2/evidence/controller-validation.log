@@ -1,0 +1,313 @@
+{
+  "status": "technical-data-validation-pass-not-character-animation-acceptance",
+  "melody": [
+    {
+      "key": "KeyA",
+      "note": "C4",
+      "midi": 60,
+      "string": 2,
+      "sourceString": 5,
+      "fret": 1,
+      "strings": [
+        {
+          "sourceString": 1,
+          "crossings": 0
+        },
+        {
+          "sourceString": 2,
+          "crossings": 0
+        },
+        {
+          "sourceString": 3,
+          "crossings": 0
+        },
+        {
+          "sourceString": 4,
+          "crossings": 0
+        },
+        {
+          "sourceString": 5,
+          "crossings": 1
+        },
+        {
+          "sourceString": 6,
+          "crossings": 0
+        }
+      ],
+      "returnsAtMs": 140
+    },
+    {
+      "key": "KeyS",
+      "note": "D4",
+      "midi": 62,
+      "string": 2,
+      "sourceString": 5,
+      "fret": 3,
+      "strings": [
+        {
+          "sourceString": 1,
+          "crossings": 0
+        },
+        {
+          "sourceString": 2,
+          "crossings": 0
+        },
+        {
+          "sourceString": 3,
+          "crossings": 0
+        },
+        {
+          "sourceString": 4,
+          "crossings": 0
+        },
+        {
+          "sourceString": 5,
+          "crossings": 1
+        },
+        {
+          "sourceString": 6,
+          "crossings": 0
+        }
+      ],
+      "returnsAtMs": 290
+    },
+    {
+      "key": "KeyD",
+      "note": "E4",
+      "midi": 64,
+      "string": 1,
+      "sourceString": 6,
+      "fret": 0,
+      "strings": [
+        {
+          "sourceString": 1,
+          "crossings": 0
+        },
+        {
+          "sourceString": 2,
+          "crossings": 0
+        },
+        {
+          "sourceString": 3,
+          "crossings": 0
+        },
+        {
+          "sourceString": 4,
+          "crossings": 0
+        },
+        {
+          "sourceString": 5,
+          "crossings": 0
+        },
+        {
+          "sourceString": 6,
+          "crossings": 1
+        }
+      ],
+      "returnsAtMs": 440
+    },
+    {
+      "key": "KeyF",
+      "note": "F4",
+      "midi": 65,
+      "string": 1,
+      "sourceString": 6,
+      "fret": 1,
+      "strings": [
+        {
+          "sourceString": 1,
+          "crossings": 0
+        },
+        {
+          "sourceString": 2,
+          "crossings": 0
+        },
+        {
+          "sourceString": 3,
+          "crossings": 0
+        },
+        {
+          "sourceString": 4,
+          "crossings": 0
+        },
+        {
+          "sourceString": 5,
+          "crossings": 0
+        },
+        {
+          "sourceString": 6,
+          "crossings": 1
+        }
+      ],
+      "returnsAtMs": 590
+    },
+    {
+      "key": "KeyG",
+      "note": "G4",
+      "midi": 67,
+      "string": 1,
+      "sourceString": 6,
+      "fret": 3,
+      "strings": [
+        {
+          "sourceString": 1,
+          "crossings": 0
+        },
+        {
+          "sourceString": 2,
+          "crossings": 0
+        },
+        {
+          "sourceString": 3,
+          "crossings": 0
+        },
+        {
+          "sourceString": 4,
+          "crossings": 0
+        },
+        {
+          "sourceString": 5,
+          "crossings": 0
+        },
+        {
+          "sourceString": 6,
+          "crossings": 1
+        }
+      ],
+      "returnsAtMs": 740
+    },
+    {
+      "key": "KeyH",
+      "note": "A4",
+      "midi": 69,
+      "string": 1,
+      "sourceString": 6,
+      "fret": 5,
+      "strings": [
+        {
+          "sourceString": 1,
+          "crossings": 0
+        },
+        {
+          "sourceString": 2,
+          "crossings": 0
+        },
+        {
+          "sourceString": 3,
+          "crossings": 0
+        },
+        {
+          "sourceString": 4,
+          "crossings": 0
+        },
+        {
+          "sourceString": 5,
+          "crossings": 0
+        },
+        {
+          "sourceString": 6,
+          "crossings": 1
+        }
+      ],
+      "returnsAtMs": 890
+    },
+    {
+      "key": "KeyJ",
+      "note": "B4",
+      "midi": 71,
+      "string": 1,
+      "sourceString": 6,
+      "fret": 7,
+      "strings": [
+        {
+          "sourceString": 1,
+          "crossings": 0
+        },
+        {
+          "sourceString": 2,
+          "crossings": 0
+        },
+        {
+          "sourceString": 3,
+          "crossings": 0
+        },
+        {
+          "sourceString": 4,
+          "crossings": 0
+        },
+        {
+          "sourceString": 5,
+          "crossings": 0
+        },
+        {
+          "sourceString": 6,
+          "crossings": 1
+        }
+      ],
+      "returnsAtMs": 1040
+    },
+    {
+      "key": "KeyK",
+      "note": "C5",
+      "midi": 72,
+      "string": 1,
+      "sourceString": 6,
+      "fret": 8,
+      "strings": [
+        {
+          "sourceString": 1,
+          "crossings": 0
+        },
+        {
+          "sourceString": 2,
+          "crossings": 0
+        },
+        {
+          "sourceString": 3,
+          "crossings": 0
+        },
+        {
+          "sourceString": 4,
+          "crossings": 0
+        },
+        {
+          "sourceString": 5,
+          "crossings": 0
+        },
+        {
+          "sourceString": 6,
+          "crossings": 1
+        }
+      ],
+      "returnsAtMs": 1190
+    }
+  ],
+  "melodyTotalCrossings": 8,
+  "inputIntervalMs": 150,
+  "strokeDurationMs": 140,
+  "queueLength": 0,
+  "fasterInput": {
+    "testedIntervalMs": 70,
+    "positionContinuous": true,
+    "interruptedStrokes": 1,
+    "queueLength": 0,
+    "velocityContinuityVerified": false,
+    "fullStrokePerInputGuaranteed": false
+  },
+  "chord": {
+    "oneSweep": true,
+    "sixStringsEachCrossedOnce": true,
+    "noReturnSweep": true
+  },
+  "leftFrozenAnchorsInvariant": true,
+  "fastNotesDoNotResetHeadOrBlinkClock": true,
+  "contactRemap": {
+    "explicitIndexMapRequired": true,
+    "noNearestFallback": true,
+    "sixSupportVertexProvenanceTuplesAmbiguous": true,
+    "syntheticMapTestOnly": true,
+    "syntheticReconstructionMaxErrorU": 1.264304049533283e-7,
+    "mergedBodyContactPassInherited": false
+  },
+  "actualTriangleValidation": "See validate-path-geometry.py and path-geometry-probe.json; these tests inspect target points, not skin volume."
+}

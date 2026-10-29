@@ -1,0 +1,10 @@
+# Local external CPU solver; tested CPython 3.14.2, macOS arm64.
+# Blender's Python ABI remains separate: exchange NPZ data only.
+cloudpickle==3.1.2
+Jinja2==3.1.6
+joblib==1.6.0
+MarkupSafe==3.0.4
+numpy==2.5.4
+osqp==1.1.1
+scipy==1.17.1
+setuptools==84.2.1

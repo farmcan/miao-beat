@@ -1,0 +1,718 @@
+{
+  "status": "readonly-normal-side-adjudication",
+  "source_sha256": "6dbc4183a57117079c1479b0c1361e52995f66ff3eaef3f2d3e00e1cba8bdc00",
+  "source_unchanged": true,
+  "actual_triangles": 1181582,
+  "tetrahedron_check": {
+    "inside": 1.0,
+    "outside": 1.1043592643970545e-18
+  },
+  "ambiguous_probes": 20,
+  "control_probes": 7,
+  "resolved_correct": 20,
+  "unresolved_or_counterexamples": 0,
+  "method": "Signed triangle solid angles, float64 sum / 4pi; three declared normal offsets; no ray stepping",
+  "scope": "Only the previously sampled candidate triangles. Not a global collision, art, or animation acceptance.",
+  "seconds": 27.531806375132874,
+  "rows": [
+    {
+      "vertices": [
+        389321,
+        389314,
+        389312
+      ],
+      "previously_ambiguous": true,
+      "samples": [
+        {
+          "offset_u": 2e-06,
+          "outside_winding": -7.219748690995744e-17,
+          "inside_winding": 1.0000000000000002,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 1e-05,
+          "outside_winding": -1.1278268987654917e-16,
+          "inside_winding": 0.9999999999999996,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 2e-05,
+          "outside_winding": 8.834874115176435e-16,
+          "inside_winding": 0.9999999999999999,
+          "outward_correct": true
+        }
+      ],
+      "all_offsets_correct": true
+    },
+    {
+      "vertices": [
+        389321,
+        389312,
+        389320
+      ],
+      "previously_ambiguous": true,
+      "samples": [
+        {
+          "offset_u": 2e-06,
+          "outside_winding": -3.103249532955723e-16,
+          "inside_winding": 0.9999999999999993,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 1e-05,
+          "outside_winding": 7.149345787890431e-16,
+          "inside_winding": 1.0000000000000002,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 2e-05,
+          "outside_winding": 6.529524150747584e-17,
+          "inside_winding": 1.0000000000000004,
+          "outward_correct": true
+        }
+      ],
+      "all_offsets_correct": true
+    },
+    {
+      "vertices": [
+        392444,
+        392457,
+        392459
+      ],
+      "previously_ambiguous": true,
+      "samples": [
+        {
+          "offset_u": 2e-06,
+          "outside_winding": 1.4853632106140383e-16,
+          "inside_winding": 1.0000000000000009,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 1e-05,
+          "outside_winding": 3.727212517340059e-16,
+          "inside_winding": 0.9999999999999999,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 2e-05,
+          "outside_winding": 9.773579489913932e-17,
+          "inside_winding": 1.0,
+          "outward_correct": true
+        }
+      ],
+      "all_offsets_correct": true
+    },
+    {
+      "vertices": [
+        392444,
+        392459,
+        392445
+      ],
+      "previously_ambiguous": true,
+      "samples": [
+        {
+          "offset_u": 2e-06,
+          "outside_winding": 9.1109639312757e-17,
+          "inside_winding": 1.0,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 1e-05,
+          "outside_winding": 6.722787022017069e-16,
+          "inside_winding": 1.0000000000000002,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 2e-05,
+          "outside_winding": 2.6753103180018645e-16,
+          "inside_winding": 0.9999999999999991,
+          "outward_correct": true
+        }
+      ],
+      "all_offsets_correct": true
+    },
+    {
+      "vertices": [
+        392449,
+        392446,
+        392443
+      ],
+      "previously_ambiguous": true,
+      "samples": [
+        {
+          "offset_u": 2e-06,
+          "outside_winding": 1.7172786561374197e-16,
+          "inside_winding": 1.0,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 1e-05,
+          "outside_winding": 1.8994979347629337e-16,
+          "inside_winding": 1.0,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 2e-05,
+          "outside_winding": -3.746538804467007e-16,
+          "inside_winding": 1.0000000000000002,
+          "outward_correct": true
+        }
+      ],
+      "all_offsets_correct": true
+    },
+    {
+      "vertices": [
+        392449,
+        392443,
+        392445
+      ],
+      "previously_ambiguous": true,
+      "samples": [
+        {
+          "offset_u": 2e-06,
+          "outside_winding": -7.896168740438939e-17,
+          "inside_winding": 1.0,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 1e-05,
+          "outside_winding": -1.7614530267133018e-16,
+          "inside_winding": 0.999999999999999,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 2e-05,
+          "outside_winding": 1.4991677014190015e-16,
+          "inside_winding": 0.9999999999999999,
+          "outward_correct": true
+        }
+      ],
+      "all_offsets_correct": true
+    },
+    {
+      "vertices": [
+        392445,
+        392459,
+        392450
+      ],
+      "previously_ambiguous": true,
+      "samples": [
+        {
+          "offset_u": 2e-06,
+          "outside_winding": 2.0927608060324182e-16,
+          "inside_winding": 0.9999999999999997,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 1e-05,
+          "outside_winding": -2.921030254330209e-16,
+          "inside_winding": 1.0000000000000007,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 2e-05,
+          "outside_winding": 2.926552050652194e-16,
+          "inside_winding": 1.0000000000000002,
+          "outward_correct": true
+        }
+      ],
+      "all_offsets_correct": true
+    },
+    {
+      "vertices": [
+        392445,
+        392450,
+        392449
+      ],
+      "previously_ambiguous": true,
+      "samples": [
+        {
+          "offset_u": 2e-06,
+          "outside_winding": 4.1303036488449835e-16,
+          "inside_winding": 1.0000000000000007,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 1e-05,
+          "outside_winding": -3.2357726446833696e-16,
+          "inside_winding": 0.9999999999999993,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 2e-05,
+          "outside_winding": -2.192153139828153e-16,
+          "inside_winding": 0.9999999999999991,
+          "outward_correct": true
+        }
+      ],
+      "all_offsets_correct": true
+    },
+    {
+      "vertices": [
+        392498,
+        392452,
+        392462
+      ],
+      "previously_ambiguous": true,
+      "samples": [
+        {
+          "offset_u": 2e-06,
+          "outside_winding": -1.3914926731402886e-16,
+          "inside_winding": 1.0000000000000002,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 1e-05,
+          "outside_winding": 3.125336718243664e-16,
+          "inside_winding": 1.0000000000000013,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 2e-05,
+          "outside_winding": -3.4179919233088834e-16,
+          "inside_winding": 0.9999999999999997,
+          "outward_correct": true
+        }
+      ],
+      "all_offsets_correct": true
+    },
+    {
+      "vertices": [
+        392498,
+        392462,
+        392490
+      ],
+      "previously_ambiguous": true,
+      "samples": [
+        {
+          "offset_u": 2e-06,
+          "outside_winding": -2.9320738469741797e-16,
+          "inside_winding": 1.0000000000000007,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 1e-05,
+          "outside_winding": -3.829365749296786e-16,
+          "inside_winding": 0.9999999999999993,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 2e-05,
+          "outside_winding": 3.1142931255996934e-16,
+          "inside_winding": 1.0000000000000002,
+          "outward_correct": true
+        }
+      ],
+      "all_offsets_correct": true
+    },
+    {
+      "vertices": [
+        392462,
+        392450,
+        392459
+      ],
+      "previously_ambiguous": true,
+      "samples": [
+        {
+          "offset_u": 2e-06,
+          "outside_winding": -2.7332891793827096e-17,
+          "inside_winding": 0.9999999999999999,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 1e-05,
+          "outside_winding": -1.852562666026059e-16,
+          "inside_winding": 1.0000000000000007,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 2e-05,
+          "outside_winding": -8.978440819548053e-16,
+          "inside_winding": 1.0,
+          "outward_correct": true
+        }
+      ],
+      "all_offsets_correct": true
+    },
+    {
+      "vertices": [
+        392462,
+        392459,
+        392463
+      ],
+      "previously_ambiguous": true,
+      "samples": [
+        {
+          "offset_u": 2e-06,
+          "outside_winding": -1.9712812869487423e-16,
+          "inside_winding": 1.0000000000000007,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 1e-05,
+          "outside_winding": 4.340131909080424e-16,
+          "inside_winding": 1.0,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 2e-05,
+          "outside_winding": -5.353381534164721e-16,
+          "inside_winding": 0.9999999999999999,
+          "outward_correct": true
+        }
+      ],
+      "all_offsets_correct": true
+    },
+    {
+      "vertices": [
+        392490,
+        392462,
+        392463
+      ],
+      "previously_ambiguous": true,
+      "samples": [
+        {
+          "offset_u": 2e-06,
+          "outside_winding": -7.269444857893611e-16,
+          "inside_winding": 0.9999999999999999,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 1e-05,
+          "outside_winding": -9.1109639312757e-17,
+          "inside_winding": 1.0000000000000007,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 2e-05,
+          "outside_winding": 3.302034200547193e-16,
+          "inside_winding": 0.9999999999999999,
+          "outward_correct": true
+        }
+      ],
+      "all_offsets_correct": true
+    },
+    {
+      "vertices": [
+        392490,
+        392463,
+        392464
+      ],
+      "previously_ambiguous": true,
+      "samples": [
+        {
+          "offset_u": 2e-06,
+          "outside_winding": 2.3191544552338144e-17,
+          "inside_winding": 1.000000000000001,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 1e-05,
+          "outside_winding": -2.274980084657932e-16,
+          "inside_winding": 0.9999999999999997,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 2e-05,
+          "outside_winding": -3.5173842571046185e-16,
+          "inside_winding": 0.9999999999999997,
+          "outward_correct": true
+        }
+      ],
+      "all_offsets_correct": true
+    },
+    {
+      "vertices": [
+        392460,
+        392459,
+        392457
+      ],
+      "previously_ambiguous": true,
+      "samples": [
+        {
+          "offset_u": 2e-06,
+          "outside_winding": 6.791809476041885e-17,
+          "inside_winding": 1.0000000000000007,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 1e-05,
+          "outside_winding": 2.0761954170664623e-16,
+          "inside_winding": 1.0,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 2e-05,
+          "outside_winding": 1.7117568598154344e-17,
+          "inside_winding": 0.9999999999999994,
+          "outward_correct": true
+        }
+      ],
+      "all_offsets_correct": true
+    },
+    {
+      "vertices": [
+        392459,
+        392460,
+        392461
+      ],
+      "previously_ambiguous": true,
+      "samples": [
+        {
+          "offset_u": 2e-06,
+          "outside_winding": 2.965204624906091e-16,
+          "inside_winding": 0.9999999999999996,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 1e-05,
+          "outside_winding": 2.926552050652194e-17,
+          "inside_winding": 1.0,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 2e-05,
+          "outside_winding": 2.3467634368437407e-17,
+          "inside_winding": 1.0000000000000002,
+          "outward_correct": true
+        }
+      ],
+      "all_offsets_correct": true
+    },
+    {
+      "vertices": [
+        392463,
+        392461,
+        392465
+      ],
+      "previously_ambiguous": true,
+      "samples": [
+        {
+          "offset_u": 2e-06,
+          "outside_winding": -9.33183578415511e-17,
+          "inside_winding": 1.0000000000000013,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 1e-05,
+          "outside_winding": 1.0629457919821649e-16,
+          "inside_winding": 0.9999999999999994,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 2e-05,
+          "outside_winding": -4.754266633229319e-16,
+          "inside_winding": 0.9999999999999999,
+          "outward_correct": true
+        }
+      ],
+      "all_offsets_correct": true
+    },
+    {
+      "vertices": [
+        392491,
+        392494,
+        392495
+      ],
+      "previously_ambiguous": true,
+      "samples": [
+        {
+          "offset_u": 2e-06,
+          "outside_winding": -1.2147951908367599e-17,
+          "inside_winding": 0.9999999999999997,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 1e-05,
+          "outside_winding": 1.0657066901431575e-16,
+          "inside_winding": 0.9999999999999999,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 2e-05,
+          "outside_winding": 8.917701060006214e-16,
+          "inside_winding": 1.0000000000000004,
+          "outward_correct": true
+        }
+      ],
+      "all_offsets_correct": true
+    },
+    {
+      "vertices": [
+        392464,
+        392465,
+        392491
+      ],
+      "previously_ambiguous": true,
+      "samples": [
+        {
+          "offset_u": 2e-06,
+          "outside_winding": -2.2363275104040355e-16,
+          "inside_winding": 0.9999999999999993,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 1e-05,
+          "outside_winding": 8.365521427807687e-17,
+          "inside_winding": 0.9999999999999994,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 2e-05,
+          "outside_winding": -9.607925600254374e-17,
+          "inside_winding": 0.9999999999999994,
+          "outward_correct": true
+        }
+      ],
+      "all_offsets_correct": true
+    },
+    {
+      "vertices": [
+        392464,
+        392491,
+        392490
+      ],
+      "previously_ambiguous": true,
+      "samples": [
+        {
+          "offset_u": 2e-06,
+          "outside_winding": -2.170065954540212e-16,
+          "inside_winding": 0.9999999999999996,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 1e-05,
+          "outside_winding": 3.8873446106776316e-16,
+          "inside_winding": 1.0,
+          "outward_correct": true
+        },
+        {
+          "offset_u": 2e-05,
+          "outside_winding": -3.542232340553552e-16,
+          "inside_winding": 0.9999999999999999,
+          "outward_correct": true
+        }
+      ],
+      "all_offsets_correct": true
+    },
+    {
+      "vertices": [
+        389302,
+        389305,
+        389194
+      ],
+      "previously_ambiguous": false,
+      "samples": [
+        {
+          "offset_u": 2e-05,
+          "outside_winding": 7.03338806512874e-16,
+          "inside_winding": 1.0000000000000004,
+          "outward_correct": true
+        }
+      ],
+      "all_offsets_correct": true
+    },
+    {
+      "vertices": [
+        389445,
+        389378,
+        389375
+      ],
+      "previously_ambiguous": false,
+      "samples": [
+        {
+          "offset_u": 2e-05,
+          "outside_winding": 6.619253340979845e-16,
+          "inside_winding": 0.9999999999999994,
+          "outward_correct": true
+        }
+      ],
+      "all_offsets_correct": true
+    },
+    {
+      "vertices": [
+        389079,
+        391599,
+        389080
+      ],
+      "previously_ambiguous": false,
+      "samples": [
+        {
+          "offset_u": 2e-05,
+          "outside_winding": 3.289610158822726e-16,
+          "inside_winding": 0.9999999999999997,
+          "outward_correct": true
+        }
+      ],
+      "all_offsets_correct": true
+    },
+    {
+      "vertices": [
+        391718,
+        391716,
+        391893
+      ],
+      "previously_ambiguous": false,
+      "samples": [
+        {
+          "offset_u": 2e-05,
+          "outside_winding": -7.65597060043258e-16,
+          "inside_winding": 1.0,
+          "outward_correct": true
+        }
+      ],
+      "all_offsets_correct": true
+    },
+    {
+      "vertices": [
+        392437,
+        392446,
+        392439
+      ],
+      "previously_ambiguous": false,
+      "samples": [
+        {
+          "offset_u": 2e-05,
+          "outside_winding": -6.350065770283064e-17,
+          "inside_winding": 0.9999999999999996,
+          "outward_correct": true
+        }
+      ],
+      "all_offsets_correct": true
+    },
+    {
+      "vertices": [
+        394661,
+        394658,
+        394617
+      ],
+      "previously_ambiguous": false,
+      "samples": [
+        {
+          "offset_u": 2e-05,
+          "outside_winding": -3.724451619179066e-16,
+          "inside_winding": 1.0000000000000002,
+          "outward_correct": true
+        }
+      ],
+      "all_offsets_correct": true
+    },
+    {
+      "vertices": [
+        394617,
+        394616,
+        394725
+      ],
+      "previously_ambiguous": false,
+      "samples": [
+        {
+          "offset_u": 2e-05,
+          "outside_winding": 8.931505550811178e-16,
+          "inside_winding": 1.0,
+          "outward_correct": true
+        }
+      ],
+      "all_offsets_correct": true
+    }
+  ]
+}

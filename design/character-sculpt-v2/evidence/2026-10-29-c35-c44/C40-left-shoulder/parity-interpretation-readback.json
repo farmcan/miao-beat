@@ -1,0 +1,10 @@
+{
+  "scope": "Clarifies existing strict parity gate without changing candidate or passing it.",
+  "native_sha256": "6dbc4183a57117079c1479b0c1361e52995f66ff3eaef3f2d3e00e1cba8bdc00",
+  "actual_candidate_triangle_probes": 626,
+  "strict_correct": 606,
+  "direction_disagreement_unknown": 20,
+  "consistent_wrong_side_votes": 0,
+  "geometry_gate_passed": false,
+  "interpretation": "20 disagreeing parity directions are unresolved, not a demonstrated inside-out surface. Local self0 and winding0 do not alone override the failed strict normal-side agreement gate."
+}

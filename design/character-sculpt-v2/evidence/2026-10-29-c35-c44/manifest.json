@@ -1,0 +1,144 @@
+{
+  "status": "partial-modeling-research-not-art-release",
+  "original_reference": "public/character/instrument-scenes-v1/guitar/idle.jpg",
+  "reference_sha256": "4418fd737891283f42568306cb427b1f7604a86cae5513b1d6c49b3c31f338d1",
+  "production_changed": false,
+  "whole_character_approved": false,
+  "actual_skin_animation_created": false,
+  "native_blends_included": false,
+  "cross_machine_native_handoff_complete": false,
+  "files": [
+    {
+      "file": "C35-left-grip/gray-front.png",
+      "source": "artifacts/character-paw-grip-c35/gray-front.png",
+      "bytes": 632973,
+      "sha256": "cb03b3d7ab90f1ab8199c33728ef4f4e9fd26edb5b8591b6c359fad6f2814d54"
+    },
+    {
+      "file": "C35-left-grip/gray-inside.png",
+      "source": "artifacts/character-paw-grip-c35/gray-inside.png",
+      "bytes": 689395,
+      "sha256": "f70774fa5aeadd10f8ca176069018018eb03790a9ed45dec1081183fedbcdd74"
+    },
+    {
+      "file": "C35-left-grip/receipt.json",
+      "source": "artifacts/character-paw-grip-c35/receipt.json",
+      "bytes": 28580,
+      "sha256": "b0b834ab4a9d228034885998dd0d5b7190d25339c7ec4fd06d58f624b0b5662d"
+    },
+    {
+      "file": "C35-left-grip/vertex-provenance-readback.json",
+      "source": "artifacts/character-paw-grip-c35/vertex-provenance-readback.json",
+      "bytes": 3282,
+      "sha256": "a0c0edf4362aeecd0c4032d03f49d32760b96b1cca72e7729059755001b84f66"
+    },
+    {
+      "file": "C38-head-local/gray-front.png",
+      "source": "artifacts/character-alignment-c38/head-expression-only/gray-front.png",
+      "bytes": 634090,
+      "sha256": "9e022b2edd95fbbfe97fa5fd28c46059ec07c2259a6afa4ab9fed98faf0b6e9c"
+    },
+    {
+      "file": "C38-head-local/gray-face.png",
+      "source": "artifacts/character-alignment-c38/head-expression-only/gray-face.png",
+      "bytes": 591493,
+      "sha256": "c140351eb61497f32b307672e37d4a12305c29a6800af4905e4d42822a1dfb2d"
+    },
+    {
+      "file": "C38-head-local/gray-three-quarter.png",
+      "source": "artifacts/character-alignment-c38/head-expression-only/gray-three-quarter.png",
+      "bytes": 627249,
+      "sha256": "2c612f388a16af3f5d4114b0976638bf7f6e86230cb3fd42f95daa032efd71d2"
+    },
+    {
+      "file": "C38-head-local/receipt.json",
+      "source": "artifacts/character-alignment-c38/head-expression-only/receipt.json",
+      "bytes": 17968,
+      "sha256": "f23bc58745e66e54a367a998f3d0c0b642153b351c6672550436dbf8a493bd5f"
+    },
+    {
+      "file": "C38-head-local/pre-gate.json",
+      "source": "artifacts/character-alignment-c38/head-expression-only/pre-gate.json",
+      "bytes": 10156,
+      "sha256": "d1ba186df0b86ab6880198352db651b4c20454cdb4f80280e8cbbd64d9f3e48f"
+    },
+    {
+      "file": "C38-head-local/independent-readback.json",
+      "source": "artifacts/character-alignment-c38/head-expression-only/independent-readback.json",
+      "bytes": 2954,
+      "sha256": "5665fae455f93b5a4181e3abd77659c75cbed6f0d452a446538673d5eb466c95"
+    },
+    {
+      "file": "C39-right-arm-rejected/receipt.json",
+      "source": "artifacts/character-strum-paw-c39/receipt.json",
+      "bytes": 16102,
+      "sha256": "0ca3796446f05c1dbdf672ab93f8f22eeb01d9530d908a38e4178ed532be8f00"
+    },
+    {
+      "file": "C40-left-shoulder/diagnostic-left-shoulder-front.png",
+      "source": "artifacts/character-shoulder-c40/diagnostic-left-shoulder-front.png",
+      "bytes": 309568,
+      "sha256": "83fbb22c12b2e12968f0e65688927d0e76898834cd7b591353b6e5075e9221f5"
+    },
+    {
+      "file": "C40-left-shoulder/diagnostic-left-shoulder-three-quarter.png",
+      "source": "artifacts/character-shoulder-c40/diagnostic-left-shoulder-three-quarter.png",
+      "bytes": 312746,
+      "sha256": "128c4825e8c90cbf99ed6b1305ac0cb76b1826907931e8b0cbd1a0407fb2d2ee"
+    },
+    {
+      "file": "C40-left-shoulder/read-only-left-shoulder-front.png",
+      "source": "artifacts/character-shoulder-c40/read-only-left-shoulder-front.png",
+      "bytes": 309236,
+      "sha256": "9be247be4376c8bae03664d4beb7f239beb86db4a5df37615945b8efde6674a6"
+    },
+    {
+      "file": "C40-left-shoulder/failed-geometry-gate.json",
+      "source": "artifacts/character-shoulder-c40/failed-geometry-gate.json",
+      "bytes": 22220,
+      "sha256": "3506d0d1b1bafd906c5a848b0a473921069311e59d66f658bb1db1032582c9ff"
+    },
+    {
+      "file": "C40-left-shoulder/actual-normal-side-parity.json",
+      "source": "artifacts/character-shoulder-c40/actual-normal-side-parity.json",
+      "bytes": 157509,
+      "sha256": "4367c4063d6d325268b6eafee729d67f23d8402cabca9d643b3b108ce8b4fb9b"
+    },
+    {
+      "file": "C40-left-shoulder/parity-interpretation-readback.json",
+      "source": "artifacts/character-shoulder-c40/parity-interpretation-readback.json",
+      "bytes": 565,
+      "sha256": "c3b51dfe9cc688e47b72a924f596c8c75b9e3484d0e524b81793ef7f2560d119"
+    },
+    {
+      "file": "C44-readonly/receipt.json",
+      "source": "artifacts/character-shoulder-c44-readback/receipt.json",
+      "bytes": 17901,
+      "sha256": "da727f90b2244da98e8552d2dc2b13abbfd25728d25d0ae8873685586a66846a"
+    },
+    {
+      "file": "C39-right-arm-rejected/diagnostic-failed-gray-front.png",
+      "source": "artifacts/character-strum-paw-c39/diagnostic-failed-gray-front.png",
+      "bytes": 633637,
+      "sha256": "79943d9bcdd113a223e42fa556ce76c6c1b6b674f6ce494136e3026a749378c6"
+    },
+    {
+      "file": "C39-right-arm-rejected/diagnostic-failed-gray-right-paw.png",
+      "source": "artifacts/character-strum-paw-c39/diagnostic-failed-gray-right-paw.png",
+      "bytes": 664098,
+      "sha256": "82772be1858b24c6b1b6c677d668cb7e48d05a9c9e59626704fed333e94bebb2"
+    },
+    {
+      "file": "C39-right-arm-rejected/failure-attribution.json",
+      "source": "artifacts/character-strum-paw-c39/failure-attribution.json",
+      "bytes": 106285,
+      "sha256": "fad91a41648a53810009652f56661bd0c07662f67291a3dd175e274f3e937832"
+    },
+    {
+      "file": "C39-right-arm-rejected/gap-and-arm-layers-readonly.json",
+      "source": "artifacts/character-strum-paw-c39/gap-and-arm-layers-readonly.json",
+      "bytes": 6143,
+      "sha256": "c5d2fdec703b55c02a87f6ddc1c0e53da37960baa932a96b9bc9d416cf56270c"
+    }
+  ]
+}

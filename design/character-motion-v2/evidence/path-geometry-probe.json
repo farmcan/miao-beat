@@ -1,0 +1,288 @@
+{
+  "status": "sampled-effector-point-geometry-feasible-not-skin-animation-approval",
+  "source_sha256": "3097d74a3f932d6dd61e60b7ab12bd40c5c53cd09b7c94aaf93170a03ec25cce",
+  "source_file_unchanged": true,
+  "melody": [
+    {
+      "note": "C4",
+      "actual_six_tube_sweep_distances": [
+        {
+          "source_string": 1,
+          "minimum_sample_distance_u": 0.15020202100276947
+        },
+        {
+          "source_string": 2,
+          "minimum_sample_distance_u": 0.10976707190275192
+        },
+        {
+          "source_string": 3,
+          "minimum_sample_distance_u": 0.0693383514881134
+        },
+        {
+          "source_string": 4,
+          "minimum_sample_distance_u": 0.02958335354924202
+        },
+        {
+          "source_string": 5,
+          "minimum_sample_distance_u": 5.734527803724632e-07
+        },
+        {
+          "source_string": 6,
+          "minimum_sample_distance_u": 0.029621176421642303
+        }
+      ],
+      "selected_string_surface_near_u": 5.734527803724632e-07,
+      "unselected_tube_minimum_u": 0.02958335354924202,
+      "lifted_return_actual_tube_minimum_u": 0.0750172808766365,
+      "sweep_samples": 40,
+      "return_samples": 40
+    },
+    {
+      "note": "D4",
+      "actual_six_tube_sweep_distances": [
+        {
+          "source_string": 1,
+          "minimum_sample_distance_u": 0.15020202100276947
+        },
+        {
+          "source_string": 2,
+          "minimum_sample_distance_u": 0.10976707190275192
+        },
+        {
+          "source_string": 3,
+          "minimum_sample_distance_u": 0.0693383514881134
+        },
+        {
+          "source_string": 4,
+          "minimum_sample_distance_u": 0.02958335354924202
+        },
+        {
+          "source_string": 5,
+          "minimum_sample_distance_u": 5.734527803724632e-07
+        },
+        {
+          "source_string": 6,
+          "minimum_sample_distance_u": 0.029621176421642303
+        }
+      ],
+      "selected_string_surface_near_u": 5.734527803724632e-07,
+      "unselected_tube_minimum_u": 0.02958335354924202,
+      "lifted_return_actual_tube_minimum_u": 0.0750172808766365,
+      "sweep_samples": 40,
+      "return_samples": 40
+    },
+    {
+      "note": "E4",
+      "actual_six_tube_sweep_distances": [
+        {
+          "source_string": 1,
+          "minimum_sample_distance_u": 0.1906394362449646
+        },
+        {
+          "source_string": 2,
+          "minimum_sample_distance_u": 0.15020212531089783
+        },
+        {
+          "source_string": 3,
+          "minimum_sample_distance_u": 0.10976733267307281
+        },
+        {
+          "source_string": 4,
+          "minimum_sample_distance_u": 0.06998146325349808
+        },
+        {
+          "source_string": 5,
+          "minimum_sample_distance_u": 0.029583660885691643
+        },
+        {
+          "source_string": 6,
+          "minimum_sample_distance_u": 1.6858739115832577e-07
+        }
+      ],
+      "selected_string_surface_near_u": 1.6858739115832577e-07,
+      "unselected_tube_minimum_u": 0.029583660885691643,
+      "lifted_return_actual_tube_minimum_u": 0.07500527799129486,
+      "sweep_samples": 40,
+      "return_samples": 40
+    },
+    {
+      "note": "F4",
+      "actual_six_tube_sweep_distances": [
+        {
+          "source_string": 1,
+          "minimum_sample_distance_u": 0.1906394362449646
+        },
+        {
+          "source_string": 2,
+          "minimum_sample_distance_u": 0.15020212531089783
+        },
+        {
+          "source_string": 3,
+          "minimum_sample_distance_u": 0.10976733267307281
+        },
+        {
+          "source_string": 4,
+          "minimum_sample_distance_u": 0.06998146325349808
+        },
+        {
+          "source_string": 5,
+          "minimum_sample_distance_u": 0.029583660885691643
+        },
+        {
+          "source_string": 6,
+          "minimum_sample_distance_u": 1.6858739115832577e-07
+        }
+      ],
+      "selected_string_surface_near_u": 1.6858739115832577e-07,
+      "unselected_tube_minimum_u": 0.029583660885691643,
+      "lifted_return_actual_tube_minimum_u": 0.07500527799129486,
+      "sweep_samples": 40,
+      "return_samples": 40
+    },
+    {
+      "note": "G4",
+      "actual_six_tube_sweep_distances": [
+        {
+          "source_string": 1,
+          "minimum_sample_distance_u": 0.1906394362449646
+        },
+        {
+          "source_string": 2,
+          "minimum_sample_distance_u": 0.15020212531089783
+        },
+        {
+          "source_string": 3,
+          "minimum_sample_distance_u": 0.10976733267307281
+        },
+        {
+          "source_string": 4,
+          "minimum_sample_distance_u": 0.06998146325349808
+        },
+        {
+          "source_string": 5,
+          "minimum_sample_distance_u": 0.029583660885691643
+        },
+        {
+          "source_string": 6,
+          "minimum_sample_distance_u": 1.6858739115832577e-07
+        }
+      ],
+      "selected_string_surface_near_u": 1.6858739115832577e-07,
+      "unselected_tube_minimum_u": 0.029583660885691643,
+      "lifted_return_actual_tube_minimum_u": 0.07500527799129486,
+      "sweep_samples": 40,
+      "return_samples": 40
+    },
+    {
+      "note": "A4",
+      "actual_six_tube_sweep_distances": [
+        {
+          "source_string": 1,
+          "minimum_sample_distance_u": 0.1906394362449646
+        },
+        {
+          "source_string": 2,
+          "minimum_sample_distance_u": 0.15020212531089783
+        },
+        {
+          "source_string": 3,
+          "minimum_sample_distance_u": 0.10976733267307281
+        },
+        {
+          "source_string": 4,
+          "minimum_sample_distance_u": 0.06998146325349808
+        },
+        {
+          "source_string": 5,
+          "minimum_sample_distance_u": 0.029583660885691643
+        },
+        {
+          "source_string": 6,
+          "minimum_sample_distance_u": 1.6858739115832577e-07
+        }
+      ],
+      "selected_string_surface_near_u": 1.6858739115832577e-07,
+      "unselected_tube_minimum_u": 0.029583660885691643,
+      "lifted_return_actual_tube_minimum_u": 0.07500527799129486,
+      "sweep_samples": 40,
+      "return_samples": 40
+    },
+    {
+      "note": "B4",
+      "actual_six_tube_sweep_distances": [
+        {
+          "source_string": 1,
+          "minimum_sample_distance_u": 0.1906394362449646
+        },
+        {
+          "source_string": 2,
+          "minimum_sample_distance_u": 0.15020212531089783
+        },
+        {
+          "source_string": 3,
+          "minimum_sample_distance_u": 0.10976733267307281
+        },
+        {
+          "source_string": 4,
+          "minimum_sample_distance_u": 0.06998146325349808
+        },
+        {
+          "source_string": 5,
+          "minimum_sample_distance_u": 0.029583660885691643
+        },
+        {
+          "source_string": 6,
+          "minimum_sample_distance_u": 1.6858739115832577e-07
+        }
+      ],
+      "selected_string_surface_near_u": 1.6858739115832577e-07,
+      "unselected_tube_minimum_u": 0.029583660885691643,
+      "lifted_return_actual_tube_minimum_u": 0.07500527799129486,
+      "sweep_samples": 40,
+      "return_samples": 40
+    },
+    {
+      "note": "C5",
+      "actual_six_tube_sweep_distances": [
+        {
+          "source_string": 1,
+          "minimum_sample_distance_u": 0.1906394362449646
+        },
+        {
+          "source_string": 2,
+          "minimum_sample_distance_u": 0.15020212531089783
+        },
+        {
+          "source_string": 3,
+          "minimum_sample_distance_u": 0.10976733267307281
+        },
+        {
+          "source_string": 4,
+          "minimum_sample_distance_u": 0.06998146325349808
+        },
+        {
+          "source_string": 5,
+          "minimum_sample_distance_u": 0.029583660885691643
+        },
+        {
+          "source_string": 6,
+          "minimum_sample_distance_u": 1.6858739115832577e-07
+        }
+      ],
+      "selected_string_surface_near_u": 1.6858739115832577e-07,
+      "unselected_tube_minimum_u": 0.029583660885691643,
+      "lifted_return_actual_tube_minimum_u": 0.07500527799129486,
+      "sweep_samples": 40,
+      "return_samples": 40
+    }
+  ],
+  "all_seven_fretted_note_targets_distinct": true,
+  "fretted_targets_strictly_inside_actual_fret_intervals": true,
+  "open_E4_uses_no_press_target": true,
+  "limits": [
+    "Finite target samples against evaluated tube triangles, not swept paw-volume collisions or finger deformation.",
+    "Single-note point remains >.025u from other five tubes during sweep; real paw/pick size can invalidate this.",
+    "A front-surface near hit within 2e-6u is a numeric path diagnostic, not force/pressure or strict C35 contact certification.",
+    "Chord loop controller crossings validated in JS, not animated chord fingering or audio."
+  ]
+}

@@ -1,0 +1,18 @@
+"""Read-only baseline SAT axes for actual C29 skin-skin intersecting triangles."""
+import bpy,json,hashlib,numpy as np
+from pathlib import Path
+from mathutils import Vector
+from mathutils.bvhtree import BVHTree
+root=Path(__file__).resolve().parents[1];out=root/'artifacts/character-paw-grip-c32';out.mkdir(exist_ok=True);bad=root/'artifacts/character-paw-grip-c29/diagnostic-c29-infeasible-or-collision.blend';source=root/'artifacts/character-paw-shared-surface-c25/miao-c25-shared-surface-diagnostic.blend';sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();bh=sha(bad);sh=sha(source)
+def sat_axes(A,B):
+ edgesA=[A[(i+1)%3]-A[i] for i in range(3)];edgesB=[B[(i+1)%3]-B[i] for i in range(3)];na=np.cross(edgesA[0],edgesA[1]);nb=np.cross(edgesB[0],edgesB[1]);axes=[na,nb]+[np.cross(a,b) for a in edgesA for b in edgesB]+[np.cross(n,e) for n in [na,nb] for e in edgesA+edgesB];records=[]
+ for axis in axes:
+  length=np.linalg.norm(axis)
+  if length<1e-12:continue
+  axis/=length;pa=A@axis;pb=B@axis;g1=float(pb.min()-pa.max());g2=float(pa.min()-pb.max());gap=max(g1,g2);axis=axis if g1>=g2 else -axis
+  if gap>1e-5:records.append({'normal_A_to_B':axis.tolist(),'baseline_separation_gap':gap,'upper_Y_coefficient_abs':float(abs(axis[1]))})
+ return sorted(records,key=lambda r:r['baseline_separation_gap'],reverse=True)
+bpy.ops.wm.open_mainfile(filepath=str(bad));me=bpy.data.objects['Miao / continuous pear and rounded-square face'].data;me.calc_loop_triangles();triangles=[(tuple(t.vertices),t.polygon_index) for t in me.loop_triangles if me.attributes['C23 C11 upper face local id'].data[t.polygon_index].value>0];coords=np.array([v.co[:] for v in me.vertices]);tree=BVHTree.FromPolygons([v.co[:] for v in me.vertices],[r[0] for r in triangles],all_triangles=True);pairs=[(a,b) for a,b in tree.overlap(tree) if a<b and not(set(triangles[a][0])&set(triangles[b][0]))];bpy.ops.wm.open_mainfile(filepath=str(source));original=np.array([v.co[:] for v in bpy.data.objects['Miao / continuous pear and rounded-square face'].data.vertices]);rows=[]
+for a,b in pairs:
+ ia,fa=triangles[a];ib,fb=triangles[b];axes=sat_axes(original[list(ia)],original[list(ib)]);rows.append({'C29_actual_triangle_vertex_ids':[list(ia),list(ib)],'actual_body_polygons':[fa,fb],'source_region_pair':[2,2],'baseline_reliable_positive_SAT_axes':axes,'chosen_original_safe_axis':axes[0] if axes else None,'maximum_baseline_gap':axes[0]['baseline_separation_gap'] if axes else None,'safe_margin':min(.0002,axes[0]['baseline_separation_gap']*.25) if axes else None})
+result={'stage':'C32-readonly-baseline-SAT-preflight','C29_native_sha256':bh,'source_C25_native_sha256':sh,'source_and_C29_unchanged':sha(bad)==bh and sha(source)==sh,'actual_C29_upper_non_neighbor_triangle_pairs':len(rows),'pairs_with_reliable_baseline_gap_over_1e_minus5':sum(bool(r['baseline_reliable_positive_SAT_axes']) for r in rows),'pairs_without_reliable_baseline_separation':sum(not r['baseline_reliable_positive_SAT_axes'] for r in rows),'minimum_reliable_gap':min((r['maximum_baseline_gap'] for r in rows if r['maximum_baseline_gap'] is not None),default=None),'rows':rows,'limits':['Read-only geometry; no candidate, solver or model changes.','Axes use the same source vertex triples in C25; loop tessellation may differ between nonplanar quad evaluations, so exact source triples are retained.','A reliable baseline separation does not prove five contacts plus all external/self constraints are jointly feasible.']};(out/'baseline-SAT-preflight.json').write_text(json.dumps(result,indent=2)+'\n');print('RESULT '+json.dumps({k:v for k,v in result.items() if k not in ['rows','limits']}))

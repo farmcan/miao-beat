@@ -1,0 +1,835 @@
+{
+  "stage": "C39-one-actual-Q-flow-and-exterior-underarm-topology-candidate",
+  "source_native_sha256": "3097d74a3f932d6dd61e60b7ab12bd40c5c53cd09b7c94aaf93170a03ec25cce",
+  "script_sha256": "825e786efa51ed68117eec5441ce6e3de2501b8ccb852145a4cee67df3812c9f",
+  "C37_helper_sha256": "226aba92e359250a3ce0ebfd487969805f6978993a64758783c04673078cd8b1",
+  "fair_only_diagnostic_is_not_art_pass": true,
+  "direction": "anatomical right arm = screen left; anatomical left C35 = screen right",
+  "design": {
+    "single_candidate": true,
+    "actual_Q_flow_steps": 128,
+    "maximum_flow_step": 0.0002453469647758726,
+    "shoulder_fairing_steps": 50,
+    "max_shoulder_fair_delta": 0.006655325147508209,
+    "right_repair_allowance": "x<-.17,y<.055,z1.46..2.431; actual sources explicitly mapped; all head z>=2.43 exact",
+    "clearance_preflight": {
+      "scope": "One fixed actual-wood clearance preflight, not an art variant",
+      "cutter_topology": {
+        "vertices": 650,
+        "edges": 1944,
+        "faces": 1296,
+        "components": 1,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0
+      },
+      "cutter_volume": {
+        "signed_volume": 0.28038640918167307,
+        "euler": 2
+      },
+      "cutter_boundary_samples_outside_original_skin": 30,
+      "outside_sample_ids": [
+        0,
+        34,
+        68,
+        85,
+        102,
+        119,
+        136,
+        153,
+        187,
+        204,
+        238,
+        272,
+        289,
+        306,
+        323,
+        340,
+        357,
+        374,
+        408,
+        425,
+        442,
+        476,
+        493,
+        510,
+        544,
+        561,
+        578,
+        595,
+        612,
+        646
+      ],
+      "front_definition": "rounded arm-back Y=-1.095-.080*min(1,(lateral/.30)^2); true tube global front min -1.0588 gives >=.0362u front clearance at plane center",
+      "back_y": -0.62,
+      "actual_guitar_outline_radial_padding": 0.065,
+      "clip_window": {
+        "x_max": -0.18,
+        "z_min": 1.475,
+        "z_max": 2.3
+      },
+      "cannot_be_closed_internal_shell": true
+    }
+  },
+  "before_topology": {
+    "vertices": 590793,
+    "edges": 1181259,
+    "faces": 590468,
+    "components": 1,
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0
+  },
+  "after_topology": {
+    "vertices": 573187,
+    "edges": 1145314,
+    "faces": 572129,
+    "components": 1,
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0
+  },
+  "before_volume": {
+    "signed_volume": 6.628889124724423,
+    "euler": 2
+  },
+  "before_clearance_volume": {
+    "signed_volume": 6.628756806247858,
+    "euler": 2
+  },
+  "after_volume": {
+    "signed_volume": 6.5450405886879786,
+    "euler": 2
+  },
+  "new_points": 1720,
+  "retained_original_points": 571467,
+  "removed_original_points": 19326,
+  "removed_original_points_outside_allowance": [
+    258051,
+    258069,
+    258071,
+    258131,
+    258213,
+    517478,
+    517607,
+    517653,
+    517662,
+    518096,
+    519179,
+    520070
+  ],
+  "canonical_point_identity": "Miao_C35_vertex_id = frozen C35 original index+1; every retained original identity reconstructed by bit-exact pre-Boolean Q coordinate; every generated point0, including no interpolation inheritance",
+  "canonical_nonzero_retained_ids_unique": true,
+  "new_original_source_ids_zero": true,
+  "protected_original_points_exact_and_present": false,
+  "left_C35_points_exact_and_present": false,
+  "head_points_exact_and_present": false,
+  "guitar_exact": true,
+  "maximum_preboolean_old_point_displacement": 0.041490256786346436,
+  "local_audit": {
+    "object": "C37 temporary audit",
+    "verts": 76042,
+    "edges": 150920,
+    "faces": 74879,
+    "tris_equivalent": 151248,
+    "tris": 390,
+    "quads": 73791,
+    "ngons": 698,
+    "quads_pct": 98.55,
+    "valence_hist_interior": {
+      "2": 356,
+      "3": 6476,
+      "4": 63855,
+      "5": 3483,
+      "6": 998,
+      "7": 20,
+      "8": 11,
+      "9": 3,
+      "10": 1,
+      "19": 3,
+      "20": 1,
+      "22": 1
+    },
+    "poles_e3": 6476,
+    "poles_e5plus": 4521,
+    "valence_6plus": 1038,
+    "non_manifold_edges": 0,
+    "boundary_loops": [
+      834
+    ],
+    "loose_verts": 0,
+    "loose_edges": 0,
+    "zero_area_faces": 0,
+    "duplicate_verts": 13,
+    "flipped_faces": 0,
+    "self_intersections": 63,
+    "edge_len_mean": 0.006225,
+    "edge_len_cv": 1.457,
+    "symmetry_pct": 0.0,
+    "dimensions": [
+      1.203,
+      1.4185,
+      0.9818
+    ],
+    "ngon_faces_sample": [
+      2977,
+      2979,
+      2981,
+      2984,
+      2986,
+      3186,
+      3188,
+      3190,
+      3192,
+      3250,
+      3295,
+      3297,
+      3679,
+      3682,
+      3696,
+      3697,
+      3710,
+      3711,
+      3713,
+      3720,
+      3733,
+      3734,
+      3748,
+      3754,
+      3760
+    ],
+    "pole_e5_sample": [
+      [
+        -1.2161,
+        -0.7113,
+        1.7288
+      ],
+      [
+        -1.2557,
+        -0.6677,
+        1.7225
+      ],
+      [
+        -1.2414,
+        -0.6674,
+        1.711
+      ],
+      [
+        -1.2774,
+        -0.6524,
+        1.731
+      ],
+      [
+        -1.2637,
+        -0.6528,
+        1.7187
+      ],
+      [
+        -1.2258,
+        -0.6678,
+        1.7015
+      ],
+      [
+        -1.2265,
+        -0.6527,
+        1.6934
+      ],
+      [
+        -1.2378,
+        -0.5767,
+        1.6787
+      ],
+      [
+        -1.216,
+        -0.6073,
+        1.6712
+      ],
+      [
+        -1.218,
+        -0.5927,
+        1.6694
+      ],
+      [
+        -1.2014,
+        -0.6074,
+        1.6656
+      ],
+      [
+        -1.2026,
+        -0.5928,
+        1.6638
+      ],
+      [
+        -1.1866,
+        -0.5932,
+        1.6595
+      ],
+      [
+        -1.2219,
+        -0.62,
+        1.6936
+      ],
+      [
+        -1.2165,
+        -0.62,
+        1.7079
+      ],
+      [
+        -1.2112,
+        -0.62,
+        1.7222
+      ],
+      [
+        -1.2228,
+        -0.5767,
+        1.6716
+      ],
+      [
+        -1.1697,
+        -0.5932,
+        1.6555
+      ],
+      [
+        -1.1605,
+        -0.62,
+        1.717
+      ],
+      [
+        -1.1756,
+        -0.5622,
+        1.6571
+      ],
+      [
+        -1.1397,
+        -0.5781,
+        1.6505
+      ],
+      [
+        -1.1581,
+        -0.5628,
+        1.6538
+      ],
+      [
+        -1.0854,
+        -0.6081,
+        1.6493
+      ],
+      [
+        -1.1215,
+        -0.5793,
+        1.6491
+      ],
+      [
+        -1.1256,
+        -0.5628,
+        1.6511
+      ]
+    ],
+    "pole_e3_sample": [
+      [
+        -1.2106,
+        -0.7093,
+        1.7234
+      ],
+      [
+        -1.2263,
+        -0.7059,
+        1.7313
+      ],
+      [
+        -1.2124,
+        -0.7024,
+        1.7189
+      ],
+      [
+        -1.2112,
+        -0.7071,
+        1.722
+      ],
+      [
+        -1.2112,
+        -0.7074,
+        1.7222
+      ],
+      [
+        -1.2139,
+        -0.6964,
+        1.715
+      ],
+      [
+        -1.2145,
+        -0.6938,
+        1.7133
+      ],
+      [
+        -1.2144,
+        -0.6944,
+        1.7137
+      ],
+      [
+        -1.2071,
+        -0.7207,
+        1.7309
+      ],
+      [
+        -1.2078,
+        -0.7187,
+        1.7295
+      ],
+      [
+        -1.2088,
+        -0.7154,
+        1.7273
+      ],
+      [
+        -1.2091,
+        -0.7144,
+        1.7267
+      ],
+      [
+        -1.2683,
+        -0.6586,
+        1.7267
+      ],
+      [
+        -1.2511,
+        -0.6619,
+        1.7143
+      ],
+      [
+        -1.2473,
+        -0.673,
+        1.7196
+      ],
+      [
+        -1.2718,
+        -0.6474,
+        1.7222
+      ],
+      [
+        -1.2186,
+        -0.6755,
+        1.7023
+      ],
+      [
+        -1.2165,
+        -0.6852,
+        1.7079
+      ],
+      [
+        -1.2155,
+        -0.6898,
+        1.7107
+      ],
+      [
+        -1.2171,
+        -0.6827,
+        1.7064
+      ],
+      [
+        -1.2349,
+        -0.662,
+        1.7033
+      ],
+      [
+        -1.22,
+        -0.6684,
+        1.6986
+      ],
+      [
+        -1.2206,
+        -0.6652,
+        1.6971
+      ],
+      [
+        -1.2212,
+        -0.6619,
+        1.6955
+      ],
+      [
+        -1.2316,
+        -0.6731,
+        1.7082
+      ]
+    ]
+  },
+  "actual_right_vs_whole_non_neighbour_triangle_self_pairs": 173,
+  "self_pair_sample": [
+    [
+      203718,
+      1146366,
+      101582,
+      572127
+    ],
+    [
+      203718,
+      1146368,
+      101582,
+      572127
+    ],
+    [
+      103053,
+      1144636,
+      51406,
+      571679
+    ],
+    [
+      103053,
+      1144639,
+      51406,
+      571679
+    ],
+    [
+      103053,
+      1144638,
+      51406,
+      571679
+    ],
+    [
+      106734,
+      1145174,
+      53216,
+      571861
+    ],
+    [
+      106738,
+      1145173,
+      53217,
+      571860
+    ],
+    [
+      106891,
+      1145140,
+      53280,
+      571847
+    ],
+    [
+      106891,
+      1145135,
+      53280,
+      571847
+    ],
+    [
+      106891,
+      1145134,
+      53280,
+      571847
+    ],
+    [
+      106916,
+      1144592,
+      53289,
+      571665
+    ],
+    [
+      106916,
+      1144587,
+      53289,
+      571665
+    ],
+    [
+      106630,
+      1145294,
+      53172,
+      571935
+    ],
+    [
+      106630,
+      1145291,
+      53172,
+      571935
+    ],
+    [
+      106630,
+      1145292,
+      53172,
+      571935
+    ],
+    [
+      106630,
+      1145286,
+      53172,
+      571935
+    ],
+    [
+      106630,
+      1145295,
+      53172,
+      571936
+    ],
+    [
+      253955,
+      1144824,
+      126683,
+      571702
+    ],
+    [
+      253953,
+      1144824,
+      126683,
+      571702
+    ],
+    [
+      253948,
+      1144584,
+      126680,
+      571663
+    ],
+    [
+      253948,
+      1144581,
+      126680,
+      571663
+    ],
+    [
+      253948,
+      1144585,
+      126680,
+      571663
+    ],
+    [
+      106879,
+      1145109,
+      53275,
+      571845
+    ],
+    [
+      106879,
+      1145139,
+      53275,
+      571847
+    ],
+    [
+      84860,
+      1145295,
+      42352,
+      571936
+    ],
+    [
+      84860,
+      1145321,
+      42352,
+      571936
+    ],
+    [
+      84860,
+      1145334,
+      42352,
+      571936
+    ],
+    [
+      84860,
+      1145341,
+      42352,
+      571936
+    ],
+    [
+      84860,
+      1145359,
+      42352,
+      571937
+    ],
+    [
+      84860,
+      1145335,
+      42352,
+      571936
+    ]
+  ],
+  "actual_evaluated_guitar_triangle_intersections": {
+    "Guitar / bridge": 0,
+    "Guitar / bridge saddle": 0,
+    "Guitar / bridge tie": 0,
+    "Guitar / bridge tie.001": 0,
+    "Guitar / bridge tie.002": 0,
+    "Guitar / bridge tie.003": 0,
+    "Guitar / bridge tie.004": 0,
+    "Guitar / bridge tie.005": 0,
+    "Guitar / continuous binding": 0,
+    "Guitar / continuous binding.001": 0,
+    "Guitar / ebony fretboard": 0,
+    "Guitar / headstock": 0,
+    "Guitar / headstock dark slot": 0,
+    "Guitar / headstock dark slot.001": 0,
+    "Guitar / ivory tuning peg": 0,
+    "Guitar / ivory tuning peg.001": 0,
+    "Guitar / ivory tuning peg.002": 0,
+    "Guitar / ivory tuning peg.003": 0,
+    "Guitar / ivory tuning peg.004": 0,
+    "Guitar / ivory tuning peg.005": 0,
+    "Guitar / neck": 0,
+    "Guitar / nut": 0,
+    "Guitar / rosette ring": 0,
+    "Guitar / rosette ring.001": 0,
+    "Guitar / rosette ring.002": 0,
+    "Guitar / rosette ring.003": 0,
+    "Guitar / rosewood body": 33,
+    "Guitar / silver fret": 0,
+    "Guitar / silver fret.001": 0,
+    "Guitar / silver fret.002": 0,
+    "Guitar / silver fret.003": 0,
+    "Guitar / silver fret.004": 0,
+    "Guitar / silver fret.005": 0,
+    "Guitar / silver fret.006": 0,
+    "Guitar / silver fret.007": 0,
+    "Guitar / silver fret.008": 0,
+    "Guitar / silver fret.009": 0,
+    "Guitar / silver fret.010": 0,
+    "Guitar / silver fret.011": 0,
+    "Guitar / silver fret.012": 0,
+    "Guitar / soundhole chamber": 0,
+    "Guitar / spruce soundboard": 0,
+    "Guitar / string 1": 0,
+    "Guitar / string 2": 0,
+    "Guitar / string 3": 0,
+    "Guitar / string 4": 0,
+    "Guitar / string 5": 0,
+    "Guitar / string 6": 0,
+    "Guitar / tuner shaft": 0,
+    "Guitar / tuner shaft.001": 0,
+    "Guitar / tuner shaft.002": 0,
+    "Guitar / tuner shaft.003": 0,
+    "Guitar / tuner shaft.004": 0,
+    "Guitar / tuner shaft.005": 0
+  },
+  "wood_skin_parity": [
+    {
+      "object": "Guitar / spruce soundboard",
+      "tested_right_skin_points": 76000,
+      "inside": 0,
+      "ambiguous": 0,
+      "inside_sample": []
+    },
+    {
+      "object": "Guitar / rosewood body",
+      "tested_right_skin_points": 76000,
+      "inside": 156,
+      "ambiguous": 0,
+      "inside_sample": [
+        57430,
+        58669,
+        58674,
+        58675,
+        58677,
+        58679,
+        58680,
+        58682,
+        58683,
+        58686,
+        58687,
+        58688,
+        58689,
+        58690,
+        58691,
+        58692,
+        58693,
+        58694,
+        58695,
+        58696
+      ]
+    },
+    {
+      "object": "Guitar / neck",
+      "tested_right_skin_points": 76000,
+      "inside": 0,
+      "ambiguous": 0,
+      "inside_sample": []
+    },
+    {
+      "object": "Guitar / ebony fretboard",
+      "tested_right_skin_points": 76000,
+      "inside": 0,
+      "ambiguous": 0,
+      "inside_sample": []
+    }
+  ],
+  "all_actual_wood_and_tube_clearance_pass": false,
+  "actual_closest_six_tube_vertex_probes": [
+    {
+      "string": 1,
+      "minimum_skin_vertex_to_actual_tube_distance": 0.22373086214065552,
+      "skin_vertex": 23098,
+      "skin": [
+        -0.34135034680366516,
+        -1.1686139106750488,
+        1.5958484411239624
+      ]
+    },
+    {
+      "string": 2,
+      "minimum_skin_vertex_to_actual_tube_distance": 0.18981397151947021,
+      "skin_vertex": 23472,
+      "skin": [
+        -0.34340646862983704,
+        -1.1577644348144531,
+        1.6024553775787354
+      ]
+    },
+    {
+      "string": 3,
+      "minimum_skin_vertex_to_actual_tube_distance": 0.15748262405395508,
+      "skin_vertex": 23477,
+      "skin": [
+        -0.3453179597854614,
+        -1.1480189561843872,
+        1.6095315217971802
+      ]
+    },
+    {
+      "string": 4,
+      "minimum_skin_vertex_to_actual_tube_distance": 0.12865637242794037,
+      "skin_vertex": 23479,
+      "skin": [
+        -0.3453862965106964,
+        -1.144004464149475,
+        1.6135752201080322
+      ]
+    },
+    {
+      "string": 5,
+      "minimum_skin_vertex_to_actual_tube_distance": 0.0962517186999321,
+      "skin_vertex": 19827,
+      "skin": [
+        -0.5700864791870117,
+        -1.111514687538147,
+        1.5584479570388794
+      ]
+    },
+    {
+      "string": 6,
+      "minimum_skin_vertex_to_actual_tube_distance": 0.06827250123023987,
+      "skin_vertex": 19827,
+      "skin": [
+        -0.5700864791870117,
+        -1.111514687538147,
+        1.5584479570388794
+      ]
+    }
+  ],
+  "idle_closest_any_string_vertex_gap_02_04_pass": false,
+  "idle_gap_limit": "closest actual sampled skin vertex to any six actual string tube, not six pressed contacts and not a motion path",
+  "positive_volume_same_euler_single_surface_pass": true,
+  "engineering_gate_passed": false,
+  "limits": [
+    "Independent identity/craft/motion static reviews pending. No full-character approval.",
+    "Vertex nearest gap is finite sampling; triangle intersections and wood parity independently audited.",
+    "Topology new back surface may look unnatural: actual diagnostic images must decide.",
+    "No groom/UV/rig/animation/color/public/export/deploy or paid service."
+  ],
+  "seconds_before_render": 20.39870285987854,
+  "native_sha256": "59a97e06dca5b6f405fb912a47939a36f550ce9ac0827a458312a6dbd2e09ce6",
+  "renders": [
+    {
+      "file": "diagnostic-failed-gray-front.png",
+      "sha256": "79943d9bcdd113a223e42fa556ce76c6c1b6b674f6ce494136e3026a749378c6",
+      "diagnostic_known_geometry_fail": true
+    },
+    {
+      "file": "diagnostic-failed-gray-right-paw.png",
+      "sha256": "82772be1858b24c6b1b6c677d668cb7e48d05a9c9e59626704fed333e94bebb2",
+      "diagnostic_known_geometry_fail": true
+    },
+    {
+      "file": "diagnostic-failed-gray-right-side.png",
+      "sha256": "2c14d3dbe37bd36d7daf6a0c48937e25aa56fa8e039eb71d5041bef70f3f6e62",
+      "diagnostic_known_geometry_fail": true
+    }
+  ]
+}

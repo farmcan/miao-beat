@@ -1,0 +1,10352 @@
+{
+  "summary": {
+    "components": 1,
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "inconsistent_winding_edges": 0,
+    "signed_volume_u3": 6.615734259023728,
+    "actual_candidate_normal_side_probes": 626,
+    "normal_side_probe_failures": 20,
+    "normal_side_probe_examples": [
+      {
+        "vertices": [
+          389321,
+          389314,
+          389312
+        ],
+        "outside_normal_votes": [
+          0,
+          1
+        ],
+        "inside_normal_votes": [
+          1,
+          1
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          389321,
+          389312,
+          389320
+        ],
+        "outside_normal_votes": [
+          0,
+          1
+        ],
+        "inside_normal_votes": [
+          1,
+          1
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392444,
+          392457,
+          392459
+        ],
+        "outside_normal_votes": [
+          0,
+          0
+        ],
+        "inside_normal_votes": [
+          1,
+          0
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392444,
+          392459,
+          392445
+        ],
+        "outside_normal_votes": [
+          0,
+          1
+        ],
+        "inside_normal_votes": [
+          1,
+          1
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392449,
+          392446,
+          392443
+        ],
+        "outside_normal_votes": [
+          0,
+          1
+        ],
+        "inside_normal_votes": [
+          1,
+          1
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392449,
+          392443,
+          392445
+        ],
+        "outside_normal_votes": [
+          0,
+          0
+        ],
+        "inside_normal_votes": [
+          1,
+          0
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392445,
+          392459,
+          392450
+        ],
+        "outside_normal_votes": [
+          1,
+          0
+        ],
+        "inside_normal_votes": [
+          1,
+          1
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392445,
+          392450,
+          392449
+        ],
+        "outside_normal_votes": [
+          0,
+          0
+        ],
+        "inside_normal_votes": [
+          1,
+          0
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392498,
+          392452,
+          392462
+        ],
+        "outside_normal_votes": [
+          1,
+          0
+        ],
+        "inside_normal_votes": [
+          1,
+          1
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392498,
+          392462,
+          392490
+        ],
+        "outside_normal_votes": [
+          1,
+          0
+        ],
+        "inside_normal_votes": [
+          1,
+          1
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392462,
+          392450,
+          392459
+        ],
+        "outside_normal_votes": [
+          0,
+          0
+        ],
+        "inside_normal_votes": [
+          1,
+          0
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392462,
+          392459,
+          392463
+        ],
+        "outside_normal_votes": [
+          0,
+          0
+        ],
+        "inside_normal_votes": [
+          1,
+          0
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392490,
+          392462,
+          392463
+        ],
+        "outside_normal_votes": [
+          0,
+          0
+        ],
+        "inside_normal_votes": [
+          1,
+          0
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392490,
+          392463,
+          392464
+        ],
+        "outside_normal_votes": [
+          1,
+          0
+        ],
+        "inside_normal_votes": [
+          1,
+          1
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392460,
+          392459,
+          392457
+        ],
+        "outside_normal_votes": [
+          0,
+          0
+        ],
+        "inside_normal_votes": [
+          1,
+          0
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392459,
+          392460,
+          392461
+        ],
+        "outside_normal_votes": [
+          0,
+          0
+        ],
+        "inside_normal_votes": [
+          1,
+          0
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392463,
+          392461,
+          392465
+        ],
+        "outside_normal_votes": [
+          1,
+          0
+        ],
+        "inside_normal_votes": [
+          1,
+          1
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392491,
+          392494,
+          392495
+        ],
+        "outside_normal_votes": [
+          0,
+          0
+        ],
+        "inside_normal_votes": [
+          0,
+          1
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392464,
+          392465,
+          392491
+        ],
+        "outside_normal_votes": [
+          0,
+          0
+        ],
+        "inside_normal_votes": [
+          1,
+          0
+        ],
+        "outward_correct": false
+      },
+      {
+        "vertices": [
+          392464,
+          392491,
+          392490
+        ],
+        "outside_normal_votes": [
+          0,
+          0
+        ],
+        "inside_normal_votes": [
+          0,
+          1
+        ],
+        "outward_correct": false
+      }
+    ],
+    "normal_side_probe_method": "Full candidate actual-triangle BVH; +/-2e-5u around triangle centroid; two independent parity directions. Finite probes, not all-point proof."
+  },
+  "rows": [
+    {
+      "vertices": [
+        389302,
+        389305,
+        389194
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389193,
+        389195,
+        389244
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389194,
+        389305,
+        389195
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389194,
+        389195,
+        389193
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389309,
+        389306,
+        389304
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389302,
+        389304,
+        389306
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389302,
+        389306,
+        389305
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389083,
+        389082,
+        391601
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389083,
+        391601,
+        389081
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389088,
+        389089,
+        389082
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389088,
+        389082,
+        389083
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389089,
+        389077,
+        389075
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389089,
+        389075,
+        389082
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389081,
+        389084,
+        389086
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389081,
+        389086,
+        389083
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389084,
+        389085,
+        389087
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389084,
+        389087,
+        389086
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389086,
+        389087,
+        389091
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389086,
+        389091,
+        389090
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389083,
+        389086,
+        389090
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389083,
+        389090,
+        389088
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389709,
+        389088,
+        389090
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389085,
+        389078,
+        389101
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389085,
+        389101,
+        389087
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389078,
+        389079,
+        389102
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389079,
+        389080,
+        389103
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389079,
+        389103,
+        389102
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389430,
+        389429,
+        389436
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389430,
+        389436,
+        389435
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389073,
+        389076,
+        389434
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389073,
+        389434,
+        389429
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389076,
+        389077,
+        389431
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389076,
+        389431,
+        389434
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389434,
+        389431,
+        389433
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389434,
+        389433,
+        389432
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389429,
+        389434,
+        389432
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389429,
+        389432,
+        389436
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389425,
+        389432,
+        389433
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389425,
+        389433,
+        389426
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389427,
+        389425,
+        389426
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389425,
+        389427,
+        389424
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389425,
+        389424,
+        389423
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389423,
+        389436,
+        389432
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389423,
+        389432,
+        389425
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389705,
+        389431,
+        389077
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389705,
+        389077,
+        389089
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389706,
+        389705,
+        389089
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389706,
+        389089,
+        389088
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389708,
+        389707,
+        389705
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389708,
+        389705,
+        389706
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389431,
+        389705,
+        389707
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389431,
+        389707,
+        389433
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389707,
+        389426,
+        389433
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389690,
+        389706,
+        389088
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389690,
+        389088,
+        389709
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389244,
+        389195,
+        389310
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389244,
+        389310,
+        389252
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389195,
+        389305,
+        389310
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389305,
+        389311,
+        389310
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389310,
+        389311,
+        389313
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389310,
+        389313,
+        389365
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389252,
+        389310,
+        389365
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389252,
+        389365,
+        389366
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389309,
+        389315,
+        389320
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389320,
+        389315,
+        389319
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389320,
+        389319,
+        389321
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389321,
+        389314,
+        389312
+      ],
+      "outside_normal_votes": [
+        0,
+        1
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": false
+    },
+    {
+      "vertices": [
+        389321,
+        389312,
+        389320
+      ],
+      "outside_normal_votes": [
+        0,
+        1
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": false
+    },
+    {
+      "vertices": [
+        389314,
+        389313,
+        389311
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389314,
+        389311,
+        389312
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389305,
+        389306,
+        389312
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389305,
+        389312,
+        389311
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389320,
+        389312,
+        389306
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389320,
+        389306,
+        389309
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389367,
+        389365,
+        389313
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389367,
+        389313,
+        389314
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389314,
+        389321,
+        389322
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389314,
+        389322,
+        389367
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389367,
+        389322,
+        389373
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389367,
+        389373,
+        389368
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389365,
+        389367,
+        389368
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389365,
+        389368,
+        389366
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389352,
+        389323,
+        389349
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389323,
+        389321,
+        389319
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389323,
+        389319,
+        389349
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389321,
+        389323,
+        389324
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389321,
+        389324,
+        389322
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389353,
+        389324,
+        389323
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389353,
+        389323,
+        389352
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389324,
+        389353,
+        389442
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389324,
+        389442,
+        389374
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389322,
+        389324,
+        389374
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389322,
+        389374,
+        389373
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389355,
+        389353,
+        389352
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389355,
+        389447,
+        389438
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389353,
+        389355,
+        389438
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389353,
+        389438,
+        389442
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389376,
+        389368,
+        389373
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389373,
+        389374,
+        389375
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389373,
+        389375,
+        389376
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389374,
+        389442,
+        389443
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389374,
+        389443,
+        389375
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389445,
+        389378,
+        389375
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389445,
+        389375,
+        389443
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389376,
+        389375,
+        389378
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389446,
+        389378,
+        389445
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389462,
+        389446,
+        389445
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389462,
+        389445,
+        389444
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389418,
+        389419,
+        389450
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389418,
+        389450,
+        389448
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389449,
+        389418,
+        389448
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389449,
+        389448,
+        389447
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389442,
+        389438,
+        389439
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389442,
+        389439,
+        389443
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389448,
+        389439,
+        389438
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389448,
+        389438,
+        389447
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389450,
+        389440,
+        389439
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389450,
+        389439,
+        389448
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389443,
+        389439,
+        389440
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389443,
+        389440,
+        389445
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389422,
+        389435,
+        389420
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389422,
+        389420,
+        389419
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389435,
+        389436,
+        389437
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389435,
+        389437,
+        389420
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389420,
+        389437,
+        389453
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389420,
+        389453,
+        389451
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389451,
+        389450,
+        389419
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389451,
+        389419,
+        389420
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389445,
+        389440,
+        389441
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389445,
+        389441,
+        389444
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389440,
+        389450,
+        389451
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389440,
+        389451,
+        389441
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389441,
+        389451,
+        389453
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389441,
+        389453,
+        389456
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389456,
+        389444,
+        389441
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389456,
+        389453,
+        389437
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389456,
+        389437,
+        389455
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389455,
+        389437,
+        389436
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389455,
+        389436,
+        389423
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389454,
+        389455,
+        389423
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389454,
+        389423,
+        389424
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387526,
+        387545,
+        387558
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387546,
+        387525,
+        387526
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387546,
+        387526,
+        387558
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387529,
+        387525,
+        387546
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387529,
+        387546,
+        387559
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387539,
+        387565,
+        387566
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387557,
+        387540,
+        387539
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387557,
+        387539,
+        387566
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387542,
+        387540,
+        387557
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387542,
+        387557,
+        387583
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387582,
+        387737,
+        387542
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387563,
+        387543,
+        387542
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387563,
+        387542,
+        387737
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391607,
+        391596,
+        391474
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391607,
+        391474,
+        391500
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391473,
+        391474,
+        391596
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391473,
+        391596,
+        391595
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391472,
+        391511,
+        391500
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391472,
+        391500,
+        391474
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391501,
+        391608,
+        391513
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391501,
+        391513,
+        391518
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391608,
+        391607,
+        391500
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391608,
+        391500,
+        391513
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391513,
+        391500,
+        391511
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391513,
+        391511,
+        391512
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391518,
+        391513,
+        391512
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391518,
+        391512,
+        391514
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391604,
+        391607,
+        391608
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391604,
+        391608,
+        391602
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391602,
+        391608,
+        391501
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391584,
+        389084,
+        389081
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391584,
+        389081,
+        391581
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391582,
+        391584,
+        391581
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391583,
+        391585,
+        391584
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391583,
+        391584,
+        391582
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391585,
+        389085,
+        389084
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391585,
+        389084,
+        391584
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391590,
+        391589,
+        391587
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391590,
+        391587,
+        391586
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391577,
+        391590,
+        391586
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391577,
+        391586,
+        391583
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391597,
+        391586,
+        391587
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391597,
+        391587,
+        391598
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389078,
+        391597,
+        391598
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389078,
+        391598,
+        389079
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389085,
+        391585,
+        391597
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389085,
+        391597,
+        389078
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391585,
+        391583,
+        391586
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391585,
+        391586,
+        391597
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391592,
+        391594,
+        391593
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391592,
+        391593,
+        391591
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391589,
+        391592,
+        391591
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391589,
+        391591,
+        391587
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391595,
+        391596,
+        391592
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391595,
+        391592,
+        391589
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391594,
+        391592,
+        391596
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391594,
+        391596,
+        391607
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391593,
+        391600,
+        391599
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391593,
+        391599,
+        391591
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389080,
+        391599,
+        391600
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389079,
+        391598,
+        391599
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        389079,
+        391599,
+        389080
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391598,
+        391587,
+        391591
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391598,
+        391591,
+        391599
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391600,
+        391593,
+        391594
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391600,
+        391594,
+        391603
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391603,
+        391594,
+        391607
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391603,
+        391607,
+        391604
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391512,
+        391509,
+        391514
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387738,
+        387543,
+        387563
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387595,
+        387744,
+        387745
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387741,
+        387596,
+        387595
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387741,
+        387595,
+        387745
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387753,
+        387596,
+        387741
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391515,
+        391518,
+        391514
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391515,
+        391514,
+        391516
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391524,
+        391515,
+        391516
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391524,
+        391516,
+        391517
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391519,
+        391502,
+        391515
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391519,
+        391515,
+        391524
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391502,
+        391501,
+        391518
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391502,
+        391518,
+        391515
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391543,
+        391549,
+        391566
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391543,
+        391566,
+        391508
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391510,
+        391516,
+        391514
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391510,
+        391514,
+        391509
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391509,
+        391508,
+        391510
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391510,
+        391508,
+        391566
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391510,
+        391566,
+        391520
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391520,
+        391517,
+        391516
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391520,
+        391516,
+        391510
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391517,
+        391520,
+        391525
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391517,
+        391525,
+        391524
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391521,
+        391525,
+        391520
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391521,
+        391520,
+        391566
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391526,
+        391527,
+        391525
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391526,
+        391525,
+        391521
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391524,
+        391525,
+        391527
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391524,
+        391527,
+        391519
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391521,
+        391522,
+        391528
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391521,
+        391528,
+        391526
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391566,
+        391567,
+        391522
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391566,
+        391522,
+        391521
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391523,
+        391522,
+        391567
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391523,
+        391567,
+        391568
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391687,
+        391523,
+        391568
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391687,
+        391568,
+        391719
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391551,
+        391553,
+        391550
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391549,
+        391551,
+        391550
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391549,
+        391550,
+        391566
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391558,
+        391556,
+        391557
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391556,
+        391553,
+        391554
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391556,
+        391554,
+        391557
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391566,
+        391550,
+        391555
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391566,
+        391555,
+        391567
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391556,
+        391555,
+        391550
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391556,
+        391550,
+        391553
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391555,
+        391556,
+        391558
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391555,
+        391558,
+        391569
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391569,
+        391568,
+        391567
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391569,
+        391567,
+        391555
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391699,
+        391698,
+        391706
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391699,
+        391706,
+        391707
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391698,
+        391558,
+        391565
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391698,
+        391565,
+        391706
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391707,
+        391706,
+        391700
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391707,
+        391700,
+        391702
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391568,
+        391569,
+        391721
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391568,
+        391721,
+        391719
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391569,
+        391558,
+        391698
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391569,
+        391698,
+        391721
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391721,
+        391698,
+        391699
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391721,
+        391699,
+        391722
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391719,
+        391721,
+        391722
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391719,
+        391722,
+        391720
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391711,
+        391710,
+        391709
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391711,
+        391709,
+        391713
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391710,
+        391699,
+        391707
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391710,
+        391707,
+        391709
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391709,
+        391707,
+        391702
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391709,
+        391702,
+        391708
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391713,
+        391709,
+        391708
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391713,
+        391708,
+        391712
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391725,
+        391720,
+        391722
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391722,
+        391699,
+        391710
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391722,
+        391710,
+        391725
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391704,
+        391889,
+        391890
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391704,
+        391890,
+        391705
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391708,
+        391704,
+        391705
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391708,
+        391705,
+        391712
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391704,
+        391708,
+        391702
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391714,
+        391713,
+        391712
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391714,
+        391712,
+        391705
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391893,
+        391714,
+        391705
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391893,
+        391705,
+        391890
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391716,
+        391715,
+        391714
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391716,
+        391714,
+        391893
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391715,
+        391711,
+        391713
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391715,
+        391713,
+        391714
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391897,
+        391898,
+        391899
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391897,
+        391899,
+        391718
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391718,
+        391716,
+        391893
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391718,
+        391893,
+        391897
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391890,
+        391895,
+        391897
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391890,
+        391897,
+        391893
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391898,
+        391897,
+        391895
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391898,
+        391895,
+        391896
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391901,
+        391898,
+        391896
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391901,
+        391896,
+        391902
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391904,
+        391901,
+        391902
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391904,
+        391902,
+        391903
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391892,
+        391890,
+        391889
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391906,
+        387924,
+        387927
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391906,
+        387927,
+        387928
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391890,
+        391892,
+        391894
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391890,
+        391894,
+        391895
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391892,
+        387924,
+        391894
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391894,
+        387924,
+        391906
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391894,
+        391906,
+        391905
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391895,
+        391894,
+        391905
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391895,
+        391905,
+        391896
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391896,
+        391905,
+        391907
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391896,
+        391907,
+        391902
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391905,
+        391906,
+        391908
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391905,
+        391908,
+        391907
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391907,
+        391908,
+        391910
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391907,
+        391910,
+        391911
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391911,
+        391903,
+        391902
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391911,
+        391902,
+        391907
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391912,
+        391903,
+        391911
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391916,
+        391912,
+        391911
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391916,
+        391911,
+        391910
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391919,
+        391916,
+        391910
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391919,
+        391910,
+        391920
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391922,
+        391919,
+        391920
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391922,
+        391920,
+        391921
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387928,
+        387929,
+        391906
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387969,
+        387971,
+        387972
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387969,
+        387972,
+        387968
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391909,
+        391908,
+        391906
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391909,
+        391906,
+        387929
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387929,
+        387968,
+        391909
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391909,
+        387968,
+        387972
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391909,
+        387972,
+        391914
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391908,
+        391909,
+        391914
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391908,
+        391914,
+        391910
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391954,
+        391955,
+        391952
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391954,
+        391952,
+        391953
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391955,
+        391921,
+        391920
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391955,
+        391920,
+        391952
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391910,
+        391914,
+        391952
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391910,
+        391952,
+        391920
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391914,
+        387972,
+        391953
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391914,
+        391953,
+        391952
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391956,
+        391921,
+        391955
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391957,
+        391956,
+        391955
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391957,
+        391955,
+        391954
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391961,
+        391957,
+        391954
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391961,
+        391954,
+        391960
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391962,
+        391961,
+        391960
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391962,
+        391960,
+        391967
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387982,
+        387972,
+        387971
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387987,
+        387986,
+        387985
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387987,
+        387985,
+        388145
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387972,
+        387982,
+        391963
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387972,
+        391963,
+        391953
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387982,
+        387986,
+        391963
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391963,
+        387986,
+        387987
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391963,
+        387987,
+        391964
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391964,
+        391954,
+        391953
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391964,
+        391953,
+        391963
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391954,
+        391964,
+        391965
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391954,
+        391965,
+        391960
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391964,
+        387987,
+        391966
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391964,
+        391966,
+        391965
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391965,
+        391966,
+        391970
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391965,
+        391970,
+        391968
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391960,
+        391965,
+        391968
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391960,
+        391968,
+        391967
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391974,
+        391968,
+        391970
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        388148,
+        387987,
+        388145
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387987,
+        388148,
+        392431
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387987,
+        392431,
+        391966
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392431,
+        392441,
+        392432
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391966,
+        392431,
+        392432
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391966,
+        392432,
+        391970
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391976,
+        391974,
+        391970
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        391976,
+        391970,
+        392434
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392436,
+        392434,
+        392435
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392433,
+        392434,
+        391970
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392433,
+        391970,
+        392432
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392432,
+        392441,
+        392442
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392432,
+        392442,
+        392433
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392433,
+        392442,
+        392443
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392433,
+        392443,
+        392437
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392434,
+        392433,
+        392437
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392434,
+        392437,
+        392435
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392440,
+        392439,
+        392446
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392439,
+        392436,
+        392435
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392439,
+        392435,
+        392437
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392437,
+        392443,
+        392446
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392437,
+        392446,
+        392439
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392444,
+        392457,
+        392459
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        0
+      ],
+      "outward_correct": false
+    },
+    {
+      "vertices": [
+        392444,
+        392459,
+        392445
+      ],
+      "outside_normal_votes": [
+        0,
+        1
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": false
+    },
+    {
+      "vertices": [
+        392442,
+        392444,
+        392445
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392442,
+        392445,
+        392443
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392451,
+        392447,
+        392449
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392451,
+        392449,
+        392450
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392446,
+        392449,
+        392447
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392446,
+        392447,
+        392440
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392449,
+        392446,
+        392443
+      ],
+      "outside_normal_votes": [
+        0,
+        1
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": false
+    },
+    {
+      "vertices": [
+        392449,
+        392443,
+        392445
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        0
+      ],
+      "outward_correct": false
+    },
+    {
+      "vertices": [
+        392445,
+        392459,
+        392450
+      ],
+      "outside_normal_votes": [
+        1,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": false
+    },
+    {
+      "vertices": [
+        392445,
+        392450,
+        392449
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        0
+      ],
+      "outward_correct": false
+    },
+    {
+      "vertices": [
+        392498,
+        392452,
+        392462
+      ],
+      "outside_normal_votes": [
+        1,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": false
+    },
+    {
+      "vertices": [
+        392498,
+        392462,
+        392490
+      ],
+      "outside_normal_votes": [
+        1,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": false
+    },
+    {
+      "vertices": [
+        392452,
+        392451,
+        392450
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392452,
+        392450,
+        392462
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392462,
+        392450,
+        392459
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        0
+      ],
+      "outward_correct": false
+    },
+    {
+      "vertices": [
+        392462,
+        392459,
+        392463
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        0
+      ],
+      "outward_correct": false
+    },
+    {
+      "vertices": [
+        392490,
+        392462,
+        392463
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        0
+      ],
+      "outward_correct": false
+    },
+    {
+      "vertices": [
+        392490,
+        392463,
+        392464
+      ],
+      "outside_normal_votes": [
+        1,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": false
+    },
+    {
+      "vertices": [
+        392447,
+        392451,
+        392452
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392460,
+        392459,
+        392457
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        0
+      ],
+      "outward_correct": false
+    },
+    {
+      "vertices": [
+        392459,
+        392460,
+        392461
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        0
+      ],
+      "outward_correct": false
+    },
+    {
+      "vertices": [
+        392459,
+        392461,
+        392463
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392463,
+        392461,
+        392465
+      ],
+      "outside_normal_votes": [
+        1,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": false
+    },
+    {
+      "vertices": [
+        392463,
+        392465,
+        392464
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392491,
+        392494,
+        392495
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        0,
+        1
+      ],
+      "outward_correct": false
+    },
+    {
+      "vertices": [
+        392491,
+        392495,
+        392492
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392492,
+        392498,
+        392490
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392492,
+        392490,
+        392491
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392464,
+        392465,
+        392491
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        0
+      ],
+      "outward_correct": false
+    },
+    {
+      "vertices": [
+        392464,
+        392491,
+        392490
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        0,
+        1
+      ],
+      "outward_correct": false
+    },
+    {
+      "vertices": [
+        392494,
+        392491,
+        392465
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392501,
+        392498,
+        392492
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392492,
+        392495,
+        392508
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392492,
+        392508,
+        392501
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392501,
+        392508,
+        392510
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392494,
+        392497,
+        392495
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392600,
+        392511,
+        392509
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392600,
+        392509,
+        392591
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392511,
+        392510,
+        392508
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392511,
+        392508,
+        392509
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392495,
+        392497,
+        392509
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392495,
+        392509,
+        392508
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        392591,
+        392509,
+        392497
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        395707,
+        395702,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        395707,
+        394617,
+        395704
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        395700,
+        395701,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        395700,
+        394617,
+        395702
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        395706,
+        394731,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        395706,
+        394617,
+        395701
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394729,
+        394730,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394729,
+        394617,
+        394731
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        395715,
+        394728,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        395715,
+        394617,
+        394730
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394727,
+        394726,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394727,
+        394617,
+        394728
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        395711,
+        394759,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        395711,
+        394617,
+        394726
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394758,
+        394757,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394758,
+        394617,
+        394759
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        395710,
+        394755,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        395710,
+        394617,
+        394757
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394617,
+        394755,
+        394754
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394617,
+        394754,
+        394756
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394762,
+        394741,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394762,
+        394617,
+        394756
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394740,
+        394739,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394740,
+        394617,
+        394741
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394761,
+        394738,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394761,
+        394617,
+        394739
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394737,
+        394732,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394737,
+        394617,
+        394738
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394760,
+        394735,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394760,
+        394617,
+        394732
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394733,
+        394734,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394733,
+        394617,
+        394735
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394742,
+        394713,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394742,
+        394617,
+        394734
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394711,
+        394712,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394711,
+        394617,
+        394713
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394736,
+        394710,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394736,
+        394617,
+        394712
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394708,
+        394709,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394708,
+        394617,
+        394710
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394720,
+        394707,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394720,
+        394617,
+        394709
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394705,
+        394706,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394705,
+        394617,
+        394707
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394719,
+        394692,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394719,
+        394617,
+        394706
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394691,
+        394690,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394691,
+        394617,
+        394692
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394714,
+        394689,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394714,
+        394617,
+        394690
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394617,
+        394689,
+        394688
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394617,
+        394688,
+        394696
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394617,
+        394696,
+        394701
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394617,
+        394701,
+        394695
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394694,
+        394693,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394694,
+        394617,
+        394695
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394697,
+        394679,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394697,
+        394617,
+        394693
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394677,
+        394678,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394677,
+        394617,
+        394679
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394680,
+        394674,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394680,
+        394617,
+        394678
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394672,
+        394673,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394672,
+        394617,
+        394674
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394676,
+        394671,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394676,
+        394617,
+        394673
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394667,
+        394666,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394667,
+        394617,
+        394671
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394668,
+        394665,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394668,
+        394617,
+        394666
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394659,
+        394660,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394659,
+        394617,
+        394665
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394661,
+        394658,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394661,
+        394617,
+        394660
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394657,
+        394647,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394657,
+        394617,
+        394658
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394648,
+        394646,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394648,
+        394617,
+        394647
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394643,
+        394642,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394643,
+        394617,
+        394646
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394636,
+        394624,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394636,
+        394617,
+        394642
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394634,
+        394623,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394634,
+        394617,
+        394624
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394622,
+        394621,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394622,
+        394617,
+        394623
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387794,
+        394620,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387794,
+        394617,
+        394621
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394619,
+        394618,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394619,
+        394617,
+        394620
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387792,
+        387791,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387792,
+        394617,
+        394618
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387781,
+        387790,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387781,
+        394617,
+        387791
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387789,
+        387788,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387789,
+        394617,
+        387790
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387780,
+        387765,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387780,
+        394617,
+        387788
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387764,
+        387763,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387764,
+        394617,
+        387765
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387759,
+        387762,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387759,
+        394617,
+        387763
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387761,
+        387760,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387761,
+        394617,
+        387762
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387758,
+        387757,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387758,
+        394617,
+        387760
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387747,
+        387756,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387747,
+        394617,
+        387757
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387754,
+        387755,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387754,
+        394617,
+        387756
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387746,
+        387753,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387746,
+        394617,
+        387755
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387741,
+        387745,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387741,
+        394617,
+        387753
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387744,
+        387743,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387744,
+        394617,
+        387745
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387598,
+        387742,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387598,
+        394617,
+        387743
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387740,
+        387739,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387740,
+        394617,
+        387742
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387597,
+        387738,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387597,
+        394617,
+        387739
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387563,
+        387737,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387563,
+        394617,
+        387738
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387582,
+        387583,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387582,
+        394617,
+        387737
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387557,
+        387566,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387557,
+        394617,
+        387583
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387565,
+        387564,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387565,
+        394617,
+        387566
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387556,
+        387562,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387556,
+        394617,
+        387564
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387561,
+        387560,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387561,
+        394617,
+        387562
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387555,
+        387559,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387555,
+        394617,
+        387560
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387546,
+        387558,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387546,
+        394617,
+        387559
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387545,
+        387554,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387545,
+        394617,
+        387558
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387553,
+        387552,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387553,
+        394617,
+        387554
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387533,
+        387551,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387533,
+        394617,
+        387552
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387549,
+        387550,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387549,
+        394617,
+        387551
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387507,
+        387548,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387507,
+        394617,
+        387550
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387547,
+        387522,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387547,
+        394617,
+        387548
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387506,
+        387521,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387506,
+        394617,
+        387522
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387520,
+        387519,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387520,
+        394617,
+        387521
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387502,
+        387518,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387502,
+        394617,
+        387519
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387501,
+        387513,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387501,
+        394617,
+        387518
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394617,
+        387513,
+        387500
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394617,
+        387500,
+        387516
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387514,
+        387515,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387514,
+        394617,
+        387516
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387499,
+        387512,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387499,
+        394617,
+        387515
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387511,
+        387510,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        387511,
+        394617,
+        387512
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        343769,
+        387509,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        343769,
+        394617,
+        387510
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394617,
+        387509,
+        387508
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394617,
+        387508,
+        387517
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394617,
+        387517,
+        387581
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394617,
+        387581,
+        394616
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394617,
+        394616,
+        394725
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394617,
+        394725,
+        395699
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394617,
+        395699,
+        395709
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        394617,
+        395709,
+        395703
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        395708,
+        395704,
+        394617
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    },
+    {
+      "vertices": [
+        395708,
+        394617,
+        395703
+      ],
+      "outside_normal_votes": [
+        0,
+        0
+      ],
+      "inside_normal_votes": [
+        1,
+        1
+      ],
+      "outward_correct": true
+    }
+  ]
+}
