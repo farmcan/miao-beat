@@ -18,7 +18,7 @@ if(createHash('sha256').update(await fs.readFile(path.join(root,'design/blender-
 allowed.push(...['index.html','style.css','pilot.js','motion.js','manifest.json','atlas.webp','poster.webp'].map(file=>'labs/blender-guitar/'+file));
 allowed.push('media-export.js','site-counter.js','_worker.js','_routes.json','character/guitar-whole-still-v1.jpg','character/drums-whole-still-v1.jpg');
 const compareFiles=['index.html','stills.html','play.css','play.js','three-renderer.js','motion-controller.js','model/miao-playable.glb','model/manifest.json','vendor/three-runtime.mjs','vendor/three-LICENSE.txt','vendor/three-provenance.json','evidence.json','images/original.jpg','images/blender-color.png','images/godot-static.png','images/blender-hand-gray.png','images/blender-gray-three-quarter.png'];
-const godotFiles=['index.html','index.js','index.pck','index.png','index.wasm.gz','index.audio.worklet.js','index.audio.position.worklet.js','compressed-wasm.js','export-evidence.json','GODOT-LICENSE.txt','GODOT-COPYRIGHT.txt'];
+const godotFiles=['godot-page.css','godot-start.js','index.html','index.js','index.pck','index.png','index.wasm.gz','index.audio.worklet.js','index.audio.position.worklet.js','compressed-wasm.js','export-evidence.json','GODOT-LICENSE.txt','GODOT-COPYRIGHT.txt'];
 const godotEvidence=JSON.parse(await fs.readFile(path.join(root,'public/labs/character-compare/godot/export-evidence.json')));
 for(const file of godotEvidence.files){
  if(!godotFiles.includes(file.name))throw Error('Unexpected Godot asset');

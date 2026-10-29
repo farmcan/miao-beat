@@ -86,7 +86,15 @@ func _ready() -> void:
 		window.miaoGodotPose = pose_callback
 		window.miaoGodotView = view_callback
 		window.miaoGodotOrbit = orbit_callback
-		JavaScriptBridge.eval("window.miaoGodotReady=true;document.body.dataset.miaoGodotReady='true';document.body.dataset.miaoMorphMeshes='20';window.parent.postMessage({type:'miao-godot-ready'},window.location.origin);", true)
+		# Direct bridge calls remain compatible with script-src 'wasm-unsafe-eval':
+		# no ordinary JavaScript eval or inline script is required.
+		window.miaoGodotReady = true
+		var document := JavaScriptBridge.get_interface("document")
+		document.body.dataset.miaoGodotReady = "true"
+		document.body.dataset.miaoMorphMeshes = "20"
+		var message := JavaScriptBridge.create_object("Object")
+		message.type = "miao-godot-ready"
+		window.parent.postMessage(message, window.location.origin)
 	print("MIAO_GODOT_READY ", JSON.stringify({"renderer": RenderingServer.get_current_rendering_method(), "morph_meshes": morph_instances.size(), "negative_pluck_api_value": native_negative_value, "targets": TARGETS, "web": OS.has_feature("web")}))
 	if "--diagnostic" in OS.get_cmdline_user_args():
 		await get_tree().process_frame

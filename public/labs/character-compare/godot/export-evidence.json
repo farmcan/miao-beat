@@ -23,6 +23,16 @@
       "sha256": "e4f06861c29f46dd9d2d4bd229ad8aa8e1fa7edd80103aecf971fefb577f8ab4"
     },
     {
+      "name": "godot-page.css",
+      "bytes": 1188,
+      "sha256": "6e0bcf9c82a6edbfe4764cdb98bb2cfdda4dcf7c76c6a5bc19722565048a2779"
+    },
+    {
+      "name": "godot-start.js",
+      "bytes": 3431,
+      "sha256": "2267740553111a45d828ce1bce79f4ca804fa5491c95a8c941167b5b3a97af87"
+    },
+    {
       "name": "index.audio.position.worklet.js",
       "bytes": 2973,
       "sha256": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8"
@@ -34,8 +44,8 @@
     },
     {
       "name": "index.html",
-      "bytes": 5357,
-      "sha256": "466bebdd4df981c3365a2b88e65662fef2cc4255df54e254111aff332f0b10a4"
+      "bytes": 783,
+      "sha256": "af3cc3e4362e0d0a6574c71c1e19dd71c1fd7b53a50de25e3b273064eb29f836"
     },
     {
       "name": "index.js",
@@ -44,8 +54,8 @@
     },
     {
       "name": "index.pck",
-      "bytes": 14774840,
-      "sha256": "0c327e114920d000d102d07629c8c954f6ff1b1cae73f0923cb81e0b26526340"
+      "bytes": 14774984,
+      "sha256": "dccb15900900b55021f3a1c312ddc95120524152c840a3b565a6dc11ab979afa"
     },
     {
       "name": "index.png",

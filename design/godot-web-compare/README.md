@@ -18,6 +18,8 @@ python3 design/godot-web-compare/prepare_web.py
 
 Expected source GLB SHA256: `1a384c0a9a13ed60710469b7d9a4de646a8599fe3dcff5ef85d1f42c825cedf9` (7,483,568 bytes). The duplicate imported GLB and `.godot/` are ignored. The canonical GLB remains in the public comparison model directory.
 
+`prepare_web.py` also extracts generated inline CSS/JavaScript into `godot-page.css` and `godot-start.js`. Ready notification uses direct JavaScriptBridge object calls, with no ordinary JavaScript eval. The intended scoped CSP needs `script-src self wasm-unsafe-eval`, `style-src self`, and same-origin iframe permission; no inline-script exception.
+
 `prepare_web.py` must run after every export: Godot overwrites the HTML and recreates the raw 39.5 MB engine WASM. The postprocess makes an exact gzip copy, verifies the roundtrip, retains raw WASM in local artifacts, and publishes only the compressed 10.1 MB file. The iframe's `compressed-wasm.js` intercepts only its own `index.wasm` request, decompresses the official binary in the browser, and returns an `application/wasm` response. It does not substitute a renderer or require Worker/header changes. Modern `DecompressionStream` support is required.
 
 ## Parent interface
