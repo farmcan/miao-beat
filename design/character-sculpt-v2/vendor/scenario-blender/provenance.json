@@ -22,6 +22,14 @@
       "upstream_path": "skills/dcc/blender/scenario-blender-expert/scripts/bx_audit.py",
       "sha256": "a2c99225730b1b44eade7033ae600f17c29c94ce9992a6cf7030d2dfcbaebf6b",
       "modified": false
+    },
+    {
+      "file": "bx_hair.py",
+      "upstream_path": "skills/dcc/blender/scenario-blender-hair/scripts/bx_hair.py",
+      "sha256": "903ab71cc8ad4a45b90fa1c639f981a6c9ddbc29c91627296675e5d203e22512",
+      "git_blob": "2a9ade25985c5981887f36a78637a68a16c300cf",
+      "modified": false,
+      "scope": "Local add_asset/set_inputs for official Essentials Rotate Hair Curves only; no cloud/API/MCP."
     }
   ]
 }

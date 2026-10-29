@@ -1,0 +1,173 @@
+{
+  "scope": "Frozen rejected gray/partial fur diagnostics; no art or motion acceptance",
+  "files": [
+    {
+      "file": "c23r2-gray-front.png",
+      "source": "artifacts/character-paw-plane-source-c23/r2/gray-front.png",
+      "sha256": "217d062506fcffebf3aff9df55f12343b3c3430ae3f136053c2fe87c868562a3",
+      "bytes": 633076
+    },
+    {
+      "file": "c23r2-gray-inside.png",
+      "source": "artifacts/character-paw-plane-source-c23/r2/gray-inside.png",
+      "sha256": "8a447b782a632697a9e9bad023a5d002f6195db564303036be15dc1fe504d5c4",
+      "bytes": 689992
+    },
+    {
+      "file": "c23r2-gray-three-quarter.png",
+      "source": "artifacts/character-paw-plane-source-c23/r2/gray-three-quarter.png",
+      "sha256": "5ec72128c8f1b283e2f878c3e0f494a3f3e76e009aae24463912f5777694e862",
+      "bytes": 629417
+    },
+    {
+      "file": "c23r2-receipt.json",
+      "source": "artifacts/character-paw-plane-source-c23/r2/receipt.json",
+      "sha256": "c6f3a49011997cf6bad6709f04c0e9f0c089f7c9ac18b54e720fa325f0ddfeae",
+      "bytes": 113678
+    },
+    {
+      "file": "c24-denoised.png",
+      "source": "artifacts/character-plush-flow-c24/controlled-native-run/render/same-bufferdenoised.png",
+      "sha256": "ca44001db9a7d72bf055168185aa25f5a00182d44339e5092907c2e5aae6769c",
+      "bytes": 253689
+    },
+    {
+      "file": "c24-noisy.png",
+      "source": "artifacts/character-plush-flow-c24/controlled-native-run/render/same-buffernoisy.png",
+      "sha256": "0fa5cf1d7ebfa0b2e9f9ac64939f5f893f2817e629d83b6106f9c32f1851955c",
+      "bytes": 340947
+    },
+    {
+      "file": "c21-control-denoised.png",
+      "source": "artifacts/character-plush-coverage-diagnostic/same-bufferdenoised.png",
+      "sha256": "2270870fcfa5cf1c1f5dfd8433d327421d994b1e25f3fc3e312b237b0fa519c1",
+      "bytes": 253365
+    },
+    {
+      "file": "c24-receipt.json",
+      "source": "artifacts/character-plush-flow-c24/controlled-native-run/receipt.json",
+      "sha256": "a7f57f88ea8a8563930ba2c91aaeeb449248946b125acd5d2cf54b519a3a2d4b",
+      "bytes": 4663
+    },
+    {
+      "file": "c24-render-receipt.json",
+      "source": "artifacts/character-plush-flow-c24/controlled-native-run/render/receipt.json",
+      "sha256": "89f939ba5f01514dca96db49edd0602b8a942f0a0fc9e8ae215e13e0e3f56e3c",
+      "bytes": 1642
+    },
+    {
+      "file": "c24-zero-angle-control.json",
+      "source": "artifacts/character-plush-flow-c24/controlled-native-run/zero-angle-geometry-control.json",
+      "sha256": "25ccea770a4c507449b396049398f3fc04c14b6845e0e6ecabd5c637da8850d3",
+      "bytes": 985
+    },
+    {
+      "file": "c24-executed-source.py",
+      "source": "artifacts/character-plush-flow-c24/controlled-native-run/executed-script.py",
+      "sha256": "7961e588e9a482d479ed1ca444be00c437b9bc27529e9c9e1e4450976406026b",
+      "bytes": 15136
+    },
+    {
+      "file": "c24-render-source.py",
+      "source": "artifacts/character-plush-flow-c24/controlled-native-run/render/executed-script.py",
+      "sha256": "f8aefc12cae9f8340ed94f4b82f017dd0072926c5a3ce8816d57f0ef387e0d75",
+      "bytes": 7177
+    },
+    {
+      "file": "c23r2-executed-source.py",
+      "source": "artifacts/character-paw-plane-source-c23/r2/executed-script.py",
+      "sha256": "8b3713eaab4278886430b7b85405fc377545ccdaa9861c9bb5dabf1fb9976e2e",
+      "bytes": 31888
+    },
+    {
+      "file": "c23r2-contact.json",
+      "source": "artifacts/character-paw-plane-source-c23/r2/contact-audit.json",
+      "sha256": "e4138a26732bc10450ee70253722425df28cd1aba4818024d6845f1ebdd871e7",
+      "bytes": 51926
+    },
+    {
+      "file": "c25-gray-front.png",
+      "source": "artifacts/character-paw-shared-surface-c25/gray-front.png",
+      "sha256": "7368379b67a37e14be199e58871679bf6c36009f41b0062703bb89e8f55c9b51",
+      "bytes": 632732
+    },
+    {
+      "file": "c25-gray-inside.png",
+      "source": "artifacts/character-paw-shared-surface-c25/gray-inside.png",
+      "sha256": "cf38bfeca7d253715869b82b52932a3efac9413a70dcf1fae8b1ae1300751773",
+      "bytes": 689419
+    },
+    {
+      "file": "c25-receipt.json",
+      "source": "artifacts/character-paw-shared-surface-c25/receipt.json",
+      "sha256": "0fed932bb427ba8818d6f23590f8c780d683856c2cfede2bcaca1d1adce32d19",
+      "bytes": 28984
+    },
+    {
+      "file": "c25-engineering-exception.json",
+      "source": "artifacts/character-paw-shared-surface-c25/engineering-exception.json",
+      "sha256": "2d52eedadb0ac37e8cf4cfc897f8e010c5cf78156512038e2cb65b7df5e6d223",
+      "bytes": 1869
+    },
+    {
+      "file": "c25-diagnostic-assembly-receipt.json",
+      "source": "artifacts/character-paw-shared-surface-c25/diagnostic-assembly-receipt.json",
+      "sha256": "3ecb845bc713aacf99ebcbb8b5f4ecb8f98025bca60d1930f5cdb97287aa735f",
+      "bytes": 5291
+    },
+    {
+      "file": "c25-contact-audit.json",
+      "source": "artifacts/character-paw-shared-surface-c25/contact-audit.json",
+      "sha256": "bb03e70f8361c6fb57bab7699fa5cb88516e3987609d14788a03ae19aecb1701",
+      "bytes": 52819
+    },
+    {
+      "file": "c25-mapping-and-lock-plan.json",
+      "source": "artifacts/character-paw-shared-surface-c25/mapping-and-lock-plan.json",
+      "sha256": "e3249fb81b7f2160393a8b495db988c4ce9f6d310ed7da5e37ce969c237c9409",
+      "bytes": 20564
+    },
+    {
+      "file": "c25-locked-face-triangulation-diagnostic.json",
+      "source": "artifacts/character-paw-shared-surface-c25/locked-face-triangulation-diagnostic.json",
+      "sha256": "f471082c08cbccb4f0bedaeb736a58a0de92c9b6eb439fc8f5bedd7e0ec651b9",
+      "bytes": 5251
+    },
+    {
+      "file": "c26-same-bufferdenoised.png",
+      "source": "artifacts/character-plush-coverage-c26/controlled-native-run/render/same-bufferdenoised.png",
+      "sha256": "f813278683b6ae0f148870e8344765a971b27e57871da4935fc28780531375f4",
+      "bytes": 258781
+    },
+    {
+      "file": "c26-same-buffernoisy.png",
+      "source": "artifacts/character-plush-coverage-c26/controlled-native-run/render/same-buffernoisy.png",
+      "sha256": "08ecd6f150db7ea5477b48a4b4a449749993a671656a13a5f61f081154f53494",
+      "bytes": 343814
+    },
+    {
+      "file": "c26-render-receipt.json",
+      "source": "artifacts/character-plush-coverage-c26/controlled-native-run/render/receipt.json",
+      "sha256": "0643548f736e400dc60ca3d27fcc4f0e17d4e773128fbc740826d25baf05c90d",
+      "bytes": 1632
+    },
+    {
+      "file": "c26-receipt.json",
+      "source": "artifacts/character-plush-coverage-c26/controlled-native-run/receipt.json",
+      "sha256": "67416b6d9e3e157963ad400439f7e893ddf1a0713bbd7fe4f28b2ea8c97bad9d",
+      "bytes": 5082
+    },
+    {
+      "file": "c26-executed-source.py",
+      "source": "artifacts/character-plush-coverage-c26/controlled-native-run/executed-script.py",
+      "sha256": "ec45cbd99cb63af27218ef89ae47a62d41591e6c62d0d30ff9bb0620cecd6167",
+      "bytes": 17800
+    },
+    {
+      "file": "c26-render-source.py",
+      "source": "artifacts/character-plush-coverage-c26/controlled-native-run/render/executed-script.py",
+      "sha256": "b255d15238ac4a10ae73b19cb35c55e5a04d347edf9b97836b52b1167c51b0c2",
+      "bytes": 7185
+    }
+  ]
+}

@@ -1,0 +1,242 @@
+[
+  {
+    "digit": 1,
+    "locked_face_vertices_bit_exact": true,
+    "saved_native_face_order_as_local_indices": [
+      1247,
+      1237,
+      1238,
+      1248
+    ],
+    "new_patch_polygon_order": [
+      1247,
+      1237,
+      1238,
+      1248
+    ],
+    "saved_native_ray_hit_y": -1.047594666481018,
+    "two_triangulation_ray_y": [
+      [
+        {
+          "triangle": [
+            1247,
+            1237,
+            1238
+          ],
+          "barycentric": [
+            0.0962246418252299,
+            0.8281719280257172,
+            0.07560343014905291
+          ],
+          "inside": true,
+          "y": -1.0475946806717638
+        },
+        {
+          "triangle": [
+            1247,
+            1238,
+            1248
+          ],
+          "barycentric": [
+            0.9659763969075746,
+            0.7806805429963336,
+            -0.7466569399039082
+          ],
+          "inside": false,
+          "y": -1.0476637494135899
+        }
+      ],
+      [
+        {
+          "triangle": [
+            1237,
+            1238,
+            1248
+          ],
+          "barycentric": [
+            0.9197964021107852,
+            -0.0024024976877622894,
+            0.08260609557697712
+          ],
+          "inside": false,
+          "y": -1.0475870392787978
+        },
+        {
+          "triangle": [
+            1237,
+            1248,
+            1247
+          ],
+          "barycentric": [
+            0.9169744680189004,
+            0.08006191772893038,
+            0.002963614252169247
+          ],
+          "inside": true,
+          "y": -1.0475872746253854
+        }
+      ]
+    ],
+    "scope": "Exact locked four vertex positions, analytic ray intersection of the two quad triangulations. Does not waive preset gate."
+  },
+  {
+    "digit": 2,
+    "locked_face_vertices_bit_exact": true,
+    "saved_native_face_order_as_local_indices": [
+      704,
+      693,
+      678,
+      699
+    ],
+    "new_patch_polygon_order": [
+      704,
+      693,
+      678,
+      699
+    ],
+    "saved_native_ray_hit_y": -1.1083922386169434,
+    "two_triangulation_ray_y": [
+      [
+        {
+          "triangle": [
+            704,
+            693,
+            678
+          ],
+          "barycentric": [
+            1.0064981205226946,
+            -0.7786162503909093,
+            0.7721181298682147
+          ],
+          "inside": false,
+          "y": -1.1081539976457695
+        },
+        {
+          "triangle": [
+            704,
+            678,
+            699
+          ],
+          "barycentric": [
+            0.2187683148179497,
+            7.85595477583252e-06,
+            0.7812238292272745
+          ],
+          "inside": true,
+          "y": -1.10839229168694
+        }
+      ],
+      [
+        {
+          "triangle": [
+            693,
+            678,
+            699
+          ],
+          "barycentric": [
+            0.216237298315122,
+            -0.21442260262937005,
+            0.9981853043142481
+          ],
+          "inside": false,
+          "y": -1.1084584707059901
+        },
+        {
+          "triangle": [
+            693,
+            699,
+            704
+          ],
+          "barycentric": [
+            7.922150834486917e-06,
+            0.7812317779093211,
+            0.21876029993984447
+          ],
+          "inside": true,
+          "y": -1.1083922941114994
+        }
+      ]
+    ],
+    "scope": "Exact locked four vertex positions, analytic ray intersection of the two quad triangulations. Does not waive preset gate."
+  },
+  {
+    "digit": 3,
+    "locked_face_vertices_bit_exact": true,
+    "saved_native_face_order_as_local_indices": [
+      1500,
+      1497,
+      1494,
+      1501
+    ],
+    "new_patch_polygon_order": [
+      1500,
+      1497,
+      1494,
+      1501
+    ],
+    "saved_native_ray_hit_y": -1.0454598665237427,
+    "two_triangulation_ray_y": [
+      [
+        {
+          "triangle": [
+            1500,
+            1497,
+            1494
+          ],
+          "barycentric": [
+            0.8787688050152174,
+            0.10196825022621532,
+            0.01926294475856731
+          ],
+          "inside": true,
+          "y": -1.045459855601153
+        },
+        {
+          "triangle": [
+            1500,
+            1494,
+            1501
+          ],
+          "barycentric": [
+            0.9781118038826042,
+            0.11009402285848453,
+            -0.08820582674108875
+          ],
+          "inside": false,
+          "y": -1.0454539213013978
+        }
+      ],
+      [
+        {
+          "triangle": [
+            1497,
+            1494,
+            1501
+          ],
+          "barycentric": [
+            1.003959517073311,
+            -0.7842110682079556,
+            0.7802515511346445
+          ],
+          "inside": false,
+          "y": -1.045512349260131
+        },
+        {
+          "triangle": [
+            1497,
+            1501,
+            1500
+          ],
+          "barycentric": [
+            0.12359310388120183,
+            0.018706196198929687,
+            0.8577006999198685
+          ],
+          "inside": true,
+          "y": -1.0454611141141064
+        }
+      ]
+    ],
+    "scope": "Exact locked four vertex positions, analytic ray intersection of the two quad triangulations. Does not waive preset gate."
+  }
+]

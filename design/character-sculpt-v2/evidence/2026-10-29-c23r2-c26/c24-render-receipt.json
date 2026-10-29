@@ -1,0 +1,57 @@
+{
+  "scope": "One-buffer noisy/denoised diagnostic, no art correction",
+  "blender": "5.2.3 LTS",
+  "source_sha256": "f8aefc12cae9f8340ed94f4b82f017dd0072926c5a3ce8816d57f0ef387e0d75",
+  "input_sha256": "430b5a9be23c8806bc584df9c71e9d0a6d63a8dfbea95d2db27b4f3e13c0a875",
+  "render_calls": 1,
+  "samples": 128,
+  "seed": 17,
+  "border": [
+    0.25,
+    0.75,
+    0.3,
+    0.7
+  ],
+  "seconds": 21.700109750032425,
+  "outputs": [
+    {
+      "path": "same-bufferdenoised.png",
+      "sha256": "ca44001db9a7d72bf055168185aa25f5a00182d44339e5092907c2e5aae6769c"
+    },
+    {
+      "path": "same-buffernoisy.png",
+      "sha256": "0fa5cf1d7ebfa0b2e9f9ac64939f5f893f2817e629d83b6106f9c32f1851955c"
+    }
+  ],
+  "geometry_beauty_shaders_lights_and_source_unchanged": true,
+  "limits": [
+    "No new groom/shader candidate or quality pass.",
+    "Raw sampling noise is not proof of fine hair geometry.",
+    "One fixed diagnostic crop; no full character/motion validation."
+  ],
+  "fiber_aov": {
+    "file": "linear-fiber-coverage.exr",
+    "sha256": "be1b8f09f8c2b2196e6fc1023c7dff424966aa22135f49c63bec1cd077631eef",
+    "definition": "Hair shader writes white AOV; skin/material/background default black. Antialiased coverage estimate, not fur beauty quality.",
+    "png_size": [
+      512,
+      409
+    ],
+    "forehead_roi_top_origin": [
+      0.25,
+      0.75,
+      0.14,
+      0.28
+    ],
+    "whole_crop_mean": 0.0043425969779491425,
+    "forehead_mean": 0.004610494710505009,
+    "forehead_fraction_over_half": 0.0,
+    "forehead_percentiles": [
+      0.0,
+      0.0,
+      0.008928571827709675,
+      0.09375,
+      0.2890625
+    ]
+  }
+}

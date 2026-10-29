@@ -1,0 +1,128 @@
+{
+  "stage": "C24-one-native-direction-patch",
+  "status": "one-patch-rendered-awaiting-independent-reviews",
+  "input_sha256": "edf1bc40172c5f9bbd459ccf4ba9314a9dd5ccb28b67617de49ace533dc4bb1f",
+  "source_sha256": "7961e588e9a482d479ed1ca444be00c437b9bc27529e9c9e1e4450976406026b",
+  "native_sha256": "430b5a9be23c8806bc584df9c71e9d0a6d63a8dfbea95d2db27b4f3e13c0a875",
+  "helper_sha256": "903ab71cc8ad4a45b90fa1c639f981a6c9ddbc29c91627296675e5d203e22512",
+  "native_asset_path": "/Applications/Blender.app/Contents/Resources/5.2/datafiles/assets/nodes/procedural_hair_node_assets.blend",
+  "native_asset_file_sha256": "b69d8bd8975b9db7f89693f8f19dd7fcb241f5a3786d2edfb0a243e91c1109bb",
+  "asset_inputs": {
+    "Factor": 1.0,
+    "Axis": "attr:c24_flow_axis",
+    "Angle": "attr:c24_flow_angle",
+    "Random Offset": 0.0,
+    "Lock Ends": false,
+    "Seed": 17
+  },
+  "mask": {
+    "root_roi_normalized": [
+      0.375,
+      0.625,
+      0.588,
+      0.644
+    ],
+    "fade_x": 0.025,
+    "fade_y": 0.006,
+    "visible_body_ray_tolerance": 0.0001,
+    "projected_roots": 1507,
+    "visible_roots": 549,
+    "changed_curves": 549,
+    "fully_45_degree_curves": 307,
+    "tangent_design": "world +X projected onto actual body-root tangent plane; single-patch artistic flow hypothesis, not proven full anatomy"
+  },
+  "geometry_checks": {
+    "curves": 180000,
+    "points": 720000,
+    "root_displacement": {
+      "count": 180000,
+      "min": 0.0,
+      "mean": 0.0,
+      "median": 0.0,
+      "p90": 0.0,
+      "max": 0.0
+    },
+    "relative_polyline_length_error": {
+      "count": 180000,
+      "min": 0.0,
+      "mean": 2.3183935075193868e-08,
+      "median": 0.0,
+      "p90": 0.0,
+      "max": 5.106018015662814e-05
+    },
+    "rigid_rotation_residual_max": 1.1987686830211082e-07,
+    "outside_patch_point_displacement_max": 2.3283064365386963e-10,
+    "radii_exactly_unchanged": true,
+    "type_rest_and_uv_hashes_unchanged": true,
+    "metadata_hashes_after_zero_angle_control": {
+      "curve_type": null,
+      "resolution": "17538e1b3eb02fa2954accb878469ef9b74a181d3ce6bc46cbc92bea26fa56a8",
+      "miao_rest_position": "7446e079f4e27239ba9c195f1db388a0e2f515a3a2c8269e80eb79693337b419",
+      "surface_uv_coordinate": "b29c7157e0fcb808dd513f4b3c068e51192496d3230e095dd9d51afce0420e46"
+    },
+    "native_asset_metadata_control": {
+      "attribute": "resolution",
+      "before": "absent",
+      "after": "INT CURVE, all 12",
+      "zero_angle_position_max_error": 2.3283064365386963e-10,
+      "zero_angle_position_tolerance": 1e-08,
+      "zero_angle_radii_bit_exact": true,
+      "zero_angle_type_rest_uv_exact": true
+    },
+    "skin_clearance_samples": 6588,
+    "minimum_signed_skin_clearance": 8.727656273066486e-05,
+    "eye_segment_hits": []
+  },
+  "projection_before": {
+    "projected_polyline_pixels_at_1024": {
+      "count": 549,
+      "min": 0.06725722737517685,
+      "mean": 0.5627574209030616,
+      "median": 0.4876488466915224,
+      "p90": 1.004078897532833,
+      "max": 1.7898972026110098
+    },
+    "strand_angle_to_view_degrees": {
+      "count": 549,
+      "min": 3.142360138224456,
+      "mean": 27.36866496767557,
+      "median": 23.029879385761422,
+      "p90": 50.08962290980796,
+      "max": 89.7512111709474
+    },
+    "fraction_under_one_pixel": 0.8979963570127505
+  },
+  "projection_after": {
+    "projected_polyline_pixels_at_1024": {
+      "count": 549,
+      "min": 0.11274773563516383,
+      "mean": 0.9287948658874746,
+      "median": 0.9297679137282872,
+      "p90": 1.322992540781962,
+      "max": 1.7898944279406246
+    },
+    "strand_angle_to_view_degrees": {
+      "count": 549,
+      "min": 3.456297059477557,
+      "mean": 47.54318391947679,
+      "median": 47.54856985439539,
+      "p90": 65.51889427494875,
+      "max": 89.78395960702966
+    },
+    "fraction_under_one_pixel": 0.5846994535519126
+  },
+  "body_material_lights_unchanged": true,
+  "limits": [
+    "Only one forehead patch; counts/length/radius/shader/light fixed.",
+    "Same old C21 eye stack solely for fur control; independently passed C20 unchanged.",
+    "No whole-character/plush pass, motion, Web, Cloudflare, fees, commit or push."
+  ],
+  "render_recovery": {
+    "previous_status": "geometry-valid-rendering-diagnostic",
+    "previous_error": "derived renderer ROOT resolved into artifacts; candidate geometry not rebuilt",
+    "render_script_sha256": "f8aefc12cae9f8340ed94f4b82f017dd0072926c5a3ce8816d57f0ef387e0d75",
+    "render_receipt_sha256": "89f939ba5f01514dca96db49edd0602b8a942f0a0fc9e8ae215e13e0e3f56e3c",
+    "status": "same-native-render-completed-awaiting-independent-reviews",
+    "native_unchanged": true
+  }
+}

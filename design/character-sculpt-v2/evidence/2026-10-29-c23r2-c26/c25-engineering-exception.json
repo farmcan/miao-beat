@@ -1,0 +1,34 @@
+{
+  "stage": "C25-engineering-numerical-exception-diagnostic-only",
+  "strict_receipt_sha256": "0fed932bb427ba8818d6f23590f8c780d683856c2cfede2bcaca1d1adce32d19",
+  "strict_gate_retained": "Failed original 1e-6u ray-hit stability test; not waived as contact pass",
+  "source_native_sha256": "5f3f235aa0ea51f40c264ed80d91f9147e74e514002d85956fc66d026d5bfdda",
+  "once_tested_frozen_patch_scene_sha256": "5aaa6c75c1659f63160bb7b16255d3739f4d0ded11cabeef2c609e480b33e136",
+  "maximum_ray_hit_difference_scene_units": 7.3909759521484375e-06,
+  "render_resolution_px": 768,
+  "front_ortho_scale": 4.2002763748168945,
+  "inside_ortho_scale": 1.25,
+  "conservative_world_error_to_pixel_bound": 0.004541015625,
+  "difference_fraction_of_original_point05_gap": 0.00014781951904296875,
+  "locked_faces": [
+    {
+      "digit": 1,
+      "face_vertices_bit_exact_in_frozen_blend": true,
+      "face_order_preserved": true
+    },
+    {
+      "digit": 2,
+      "face_vertices_bit_exact_in_frozen_blend": true,
+      "face_order_preserved": true
+    },
+    {
+      "digit": 3,
+      "face_vertices_bit_exact_in_frozen_blend": true,
+      "face_order_preserved": true
+    }
+  ],
+  "cause": "All four face vertices and polygon cyclic order exact. Saved native evaluated BVH vs BVHTree.FromPolygons choose different triangulations of the same nonplanar quads; analytic two-diagonal ray results reproduce the difference. See locked-face-triangulation-diagnostic.json.",
+  "authorization": "Parent instruction permits diagnostic images only if locked faces exact, self0/flipped0 and projected error below .01px; received 2026-10-29.",
+  "geometry_changes": "No new candidate or fair solve. Identity-stitch the frozen patch to original source opening only; float vertex positions preserved.",
+  "contact_status": "Existing real hold failures remain P0. No color/animation/engine/deploy."
+}

@@ -1,0 +1,36 @@
+{
+  "count_before": 180000,
+  "count_after": 180000,
+  "shape_before": [
+    180000,
+    4,
+    3
+  ],
+  "shape_after": [
+    180000,
+    4,
+    3
+  ],
+  "position_max_error": 2.3283064365386963e-10,
+  "position_error": {
+    "count": 720000,
+    "min": 0.0,
+    "mean": 1.558899182580515e-14,
+    "median": 0.0,
+    "p90": 0.0,
+    "max": 2.3283064365386963e-10
+  },
+  "radii_exact": true,
+  "metadata_before": {
+    "curve_type": null,
+    "resolution": null,
+    "miao_rest_position": "7446e079f4e27239ba9c195f1db388a0e2f515a3a2c8269e80eb79693337b419",
+    "surface_uv_coordinate": "b29c7157e0fcb808dd513f4b3c068e51192496d3230e095dd9d51afce0420e46"
+  },
+  "metadata_after": {
+    "curve_type": null,
+    "resolution": "17538e1b3eb02fa2954accb878469ef9b74a181d3ce6bc46cbc92bea26fa56a8",
+    "miao_rest_position": "7446e079f4e27239ba9c195f1db388a0e2f515a3a2c8269e80eb79693337b419",
+    "surface_uv_coordinate": "b29c7157e0fcb808dd513f4b3c068e51192496d3230e095dd9d51afce0420e46"
+  }
+}

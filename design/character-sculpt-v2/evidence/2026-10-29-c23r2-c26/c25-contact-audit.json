@@ -1,0 +1,1793 @@
+{
+  "stage": "C25-static-contact-diagnostic-not-contact-pass",
+  "known_local_new_wrist_upper_and_collar_self_pairs": 0,
+  "native_scene_sha256": "59c4a6c37594209e740f0b41b148b11d41776c015b4e1e40aabb8bf4c49be8db",
+  "source_scene_unchanged": true,
+  "strict_C25_receipt_is_not_modified": true,
+  "script_sha256": "0254a1a040655aacfc0b0163dcc33792caefe29b1b9d7ab68f641afb71d2dee7",
+  "method": "Actual saved six string Bezier controls/handles and matrices, 512 samples/segment; compare256. Skin rays startY=-.88 in front of torso and target toward viewer, explicithit/miss only. Only +Y backface normals permit a gap. Evaluated fingerboard separately raycast.",
+  "legacy_receipt_contacts_status": "C10 old extrapolated table remains INVALID. This C23 audit uses saved actual Bezier controls and explicit BVH rays only.",
+  "sampling": {
+    "total": 36,
+    "valid_backface_samples": 29,
+    "misses": 7,
+    "invalid_frontface_hits": 0,
+    "minimum_valid_near_surface_clearance_y": -0.00694431085139513,
+    "maximum_valid_near_surface_clearance_y": 0.06117533426731825,
+    "strictly_negative_gap_count": 3,
+    "negative_below_minus_005_count": 2,
+    "positive_gap_count": 26
+  },
+  "records": [
+    {
+      "string": 1,
+      "actual_object": "Guitar / string 1",
+      "u": 1.22,
+      "actual_bezier_centerline_world": [
+        1.086422324180603,
+        -1.0510755777359009,
+        1.941765546798706
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 2.2206230175730177e-06,
+      "ray_origin_world": [
+        1.086422324180603,
+        -0.8799999952316284,
+        1.941765546798706
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_region_id": 1,
+      "surface_source": "C25 rebuilt shared wrist band",
+      "actual_skin_world": [
+        1.086422324180603,
+        -1.0562701225280762,
+        1.941765546798706
+      ],
+      "actual_skin_normal_world": [
+        -0.2929600179195404,
+        0.7579241394996643,
+        0.5828597545623779
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.005194544792175293,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.002394544892013073,
+      "board_hit": false
+    },
+    {
+      "string": 1,
+      "actual_object": "Guitar / string 1",
+      "u": 1.25,
+      "actual_bezier_centerline_world": [
+        1.116989016532898,
+        -1.0514976978302002,
+        1.9536328315734863
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 2.448873351117866e-06,
+      "ray_origin_world": [
+        1.116989016532898,
+        -0.8799999952316284,
+        1.9536328315734863
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_region_id": 1,
+      "surface_source": "C25 rebuilt shared wrist band",
+      "actual_skin_world": [
+        1.116989016532898,
+        -1.0555285215377808,
+        1.9536328315734863
+      ],
+      "actual_skin_normal_world": [
+        -0.26564815640449524,
+        0.8286725878715515,
+        0.492679238319397
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.004030823707580566,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.0012308238074183464,
+      "board_hit": false
+    },
+    {
+      "string": 1,
+      "actual_object": "Guitar / string 1",
+      "u": 1.33,
+      "actual_bezier_centerline_world": [
+        1.1983294486999512,
+        -1.0519243478775024,
+        1.9857137203216553
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 2.44597012146511e-06,
+      "ray_origin_world": [
+        1.1983294486999512,
+        -0.8799999952316284,
+        1.9857137203216553
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_region_id": 1,
+      "surface_source": "C25 rebuilt shared wrist band",
+      "actual_skin_world": [
+        1.1983294486999512,
+        -1.0619125366210938,
+        1.9857137203216553
+      ],
+      "actual_skin_normal_world": [
+        -0.19238980114459991,
+        0.8317986130714417,
+        0.5206701159477234
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.009988188743591309,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.007188188843429089,
+      "board_hit": false
+    },
+    {
+      "string": 1,
+      "actual_object": "Guitar / string 1",
+      "u": 1.36,
+      "actual_bezier_centerline_world": [
+        1.2287629842758179,
+        -1.051795482635498,
+        1.9979193210601807
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 3.1017331674713345e-06,
+      "ray_origin_world": [
+        1.2287629842758179,
+        -0.8799999952316284,
+        1.9979193210601807
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_region_id": 1,
+      "surface_source": "C25 rebuilt shared wrist band",
+      "actual_skin_world": [
+        1.2287629842758179,
+        -1.0597798824310303,
+        1.9979193210601807
+      ],
+      "actual_skin_normal_world": [
+        -0.05042193830013275,
+        0.9968298673629761,
+        -0.06154525652527809
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.007984399795532227,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.0051843998953700066,
+      "board_hit": false
+    },
+    {
+      "string": 1,
+      "actual_object": "Guitar / string 1",
+      "u": 1.44,
+      "actual_bezier_centerline_world": [
+        1.3097217082977295,
+        -1.0506141185760498,
+        2.03096866607666
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 2.7624679151192826e-06,
+      "ray_origin_world": [
+        1.3097217082977295,
+        -0.8799999952316284,
+        2.03096866607666
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_region_id": 1,
+      "surface_source": "C25 rebuilt shared wrist band",
+      "actual_skin_world": [
+        1.3097217082977295,
+        -1.0610791444778442,
+        2.03096866607666
+      ],
+      "actual_skin_normal_world": [
+        -0.05088523030281067,
+        0.9847939610481262,
+        0.16610737144947052
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.010465025901794434,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.007665026001632214,
+      "board_hit": false
+    },
+    {
+      "string": 1,
+      "actual_object": "Guitar / string 1",
+      "u": 1.47,
+      "actual_bezier_centerline_world": [
+        1.3400057554244995,
+        -1.0498459339141846,
+        2.0435543060302734
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 3.0648613291221717e-06,
+      "ray_origin_world": [
+        1.3400057554244995,
+        -0.8799999952316284,
+        2.0435543060302734
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_region_id": 1,
+      "surface_source": "C25 rebuilt shared wrist band",
+      "actual_skin_world": [
+        1.3400057554244995,
+        -1.0647788047790527,
+        2.0435543060302734
+      ],
+      "actual_skin_normal_world": [
+        0.17649959027767181,
+        0.9834799766540527,
+        0.040188610553741455
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.014932870864868164,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.012132870964705944,
+      "board_hit": false
+    },
+    {
+      "string": 2,
+      "actual_object": "Guitar / string 2",
+      "u": 1.22,
+      "actual_bezier_centerline_world": [
+        1.0701124668121338,
+        -1.0511085987091064,
+        1.9831812381744385
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 7.633118912497578e-07,
+      "ray_origin_world": [
+        1.0701124668121338,
+        -0.8799999952316284,
+        1.9831812381744385
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_region_id": 2,
+      "surface_source": "C11-derived upper palm/toes with editable base and locked pad/tips",
+      "actual_skin_world": [
+        1.0701124668121338,
+        -1.0745877027511597,
+        1.9831812381744385
+      ],
+      "actual_skin_normal_world": [
+        -0.42300647497177124,
+        0.8457803130149841,
+        0.3251478672027588
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.023479104042053223,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.020679104141891003,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.0701123476028442,
+        -1.0130000114440918,
+        1.9831814765930176
+      ],
+      "board_front_minus_skin_back_y": 0.06158769130706787
+    },
+    {
+      "string": 2,
+      "actual_object": "Guitar / string 2",
+      "u": 1.25,
+      "actual_bezier_centerline_world": [
+        1.1006559133529663,
+        -1.0515309572219849,
+        1.995107650756836
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 9.757700886574328e-07,
+      "ray_origin_world": [
+        1.1006559133529663,
+        -0.8799999952316284,
+        1.995107650756836
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_region_id": 2,
+      "surface_source": "C11-derived upper palm/toes with editable base and locked pad/tips",
+      "actual_skin_world": [
+        1.1006559133529663,
+        -1.0694782733917236,
+        1.995107650756836
+      ],
+      "actual_skin_normal_world": [
+        -0.1372242420911789,
+        0.7663451433181763,
+        0.6276022791862488
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.01794731616973877,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.01514731626957655,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.1006559133529663,
+        -1.0130000114440918,
+        1.9951077699661255
+      ],
+      "board_front_minus_skin_back_y": 0.056478261947631836
+    },
+    {
+      "string": 2,
+      "actual_object": "Guitar / string 2",
+      "u": 1.33,
+      "actual_bezier_centerline_world": [
+        1.1820026636123657,
+        -1.0519556999206543,
+        2.027172088623047
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 1.018524616398517e-06,
+      "ray_origin_world": [
+        1.1820026636123657,
+        -0.8799999952316284,
+        2.027172088623047
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_region_id": 2,
+      "surface_source": "C11-derived upper palm/toes with editable base and locked pad/tips",
+      "actual_skin_world": [
+        1.1820026636123657,
+        -1.071338415145874,
+        2.027172088623047
+      ],
+      "actual_skin_normal_world": [
+        -0.3910428583621979,
+        0.8010499477386475,
+        0.45321574807167053
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.019382715225219727,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.016582715325057507,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.1820026636123657,
+        -1.0130000114440918,
+        2.027172327041626
+      ],
+      "board_front_minus_skin_back_y": 0.05833840370178223
+    },
+    {
+      "string": 2,
+      "actual_object": "Guitar / string 2",
+      "u": 1.36,
+      "actual_bezier_centerline_world": [
+        1.2124660015106201,
+        -1.0518256425857544,
+        2.039301872253418
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 7.996802249550068e-07,
+      "ray_origin_world": [
+        1.2124660015106201,
+        -0.8799999952316284,
+        2.039301872253418
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_region_id": 2,
+      "surface_source": "C11-derived upper palm/toes with editable base and locked pad/tips",
+      "actual_skin_world": [
+        1.2124660015106201,
+        -1.0683859586715698,
+        2.039301872253418
+      ],
+      "actual_skin_normal_world": [
+        -0.11896175891160965,
+        0.7579156756401062,
+        0.6414141058921814
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.01656031608581543,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.01376031618565321,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.2124660015106201,
+        -1.0130000114440918,
+        2.039302110671997
+      ],
+      "board_front_minus_skin_back_y": 0.05538594722747803
+    },
+    {
+      "string": 2,
+      "actual_object": "Guitar / string 2",
+      "u": 1.44,
+      "actual_bezier_centerline_world": [
+        1.2935833930969238,
+        -1.0506393909454346,
+        2.071949005126953
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 6.848052318737541e-07,
+      "ray_origin_world": [
+        1.2935833930969238,
+        -0.8799999952316284,
+        2.071949005126953
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_region_id": 2,
+      "surface_source": "C11-derived upper palm/toes with editable base and locked pad/tips",
+      "actual_skin_world": [
+        1.2935833930969238,
+        -1.072192907333374,
+        2.071949005126953
+      ],
+      "actual_skin_normal_world": [
+        -0.29138436913490295,
+        0.8076300024986267,
+        0.5126684904098511
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.021553516387939453,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.018753516487777233,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.2935833930969238,
+        -1.0130000114440918,
+        2.0719492435455322
+      ],
+      "board_front_minus_skin_back_y": 0.05919289588928223
+    },
+    {
+      "string": 2,
+      "actual_object": "Guitar / string 2",
+      "u": 1.47,
+      "actual_bezier_centerline_world": [
+        1.323956847190857,
+        -1.0498688220977783,
+        2.0843071937561035
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 7.152557373046875e-07,
+      "ray_origin_world": [
+        1.323956847190857,
+        -0.8799999952316284,
+        2.0843071937561035
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_region_id": 2,
+      "surface_source": "C11-derived upper palm/toes with editable base and locked pad/tips",
+      "actual_skin_world": [
+        1.323956847190857,
+        -1.0724079608917236,
+        2.0843071937561035
+      ],
+      "actual_skin_normal_world": [
+        0.06308150291442871,
+        0.8531128764152527,
+        0.5178989768028259
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.022539138793945312,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.019739138893783092,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.3239569664001465,
+        -1.0130000114440918,
+        2.0843071937561035
+      ],
+      "board_front_minus_skin_back_y": 0.059407949447631836
+    },
+    {
+      "string": 3,
+      "actual_object": "Guitar / string 3",
+      "u": 1.22,
+      "actual_bezier_centerline_world": [
+        1.0537962913513184,
+        -1.0511263608932495,
+        2.0246126651763916
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 1.1980385328675377e-06,
+      "ray_origin_world": [
+        1.0537962913513184,
+        -0.8799999952316284,
+        2.0246126651763916
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_region_id": 2,
+      "surface_source": "C11-derived upper palm/toes with editable base and locked pad/tips",
+      "actual_skin_world": [
+        1.0537962913513184,
+        -1.0565545558929443,
+        2.0246126651763916
+      ],
+      "actual_skin_normal_world": [
+        -0.20091569423675537,
+        0.655308187007904,
+        -0.7281512022018433
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.005428194999694824,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.0026281950995326042,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.0537961721420288,
+        -1.0130000114440918,
+        2.0246129035949707
+      ],
+      "board_front_minus_skin_back_y": 0.04355454444885254
+    },
+    {
+      "string": 3,
+      "actual_object": "Guitar / string 3",
+      "u": 1.25,
+      "actual_bezier_centerline_world": [
+        1.0843167304992676,
+        -1.0515486001968384,
+        2.036597967147827
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 1.0925711858167266e-06,
+      "ray_origin_world": [
+        1.0843167304992676,
+        -0.8799999952316284,
+        2.036597967147827
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_region_id": 2,
+      "surface_source": "C11-derived upper palm/toes with editable base and locked pad/tips",
+      "actual_skin_world": [
+        1.0843167304992676,
+        -1.0480693578720093,
+        2.036597967147827
+      ],
+      "actual_skin_normal_world": [
+        0.19759580492973328,
+        0.9498013854026794,
+        -0.24255576729774475
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": -0.0034792423248291016,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": -0.0062792422249913216,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.0843167304992676,
+        -1.0130000114440918,
+        2.0365982055664062
+      ],
+      "board_front_minus_skin_back_y": 0.03506934642791748
+    },
+    {
+      "string": 3,
+      "actual_object": "Guitar / string 3",
+      "u": 1.33,
+      "actual_bezier_centerline_world": [
+        1.1656701564788818,
+        -1.0519722700119019,
+        2.068645477294922
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 1.1246181883879427e-06,
+      "ray_origin_world": [
+        1.1656701564788818,
+        -0.8799999952316284,
+        2.068645477294922
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_region_id": 2,
+      "surface_source": "C11-derived upper palm/toes with editable base and locked pad/tips",
+      "actual_skin_world": [
+        1.1656701564788818,
+        -1.1159476041793823,
+        2.068645477294922
+      ],
+      "actual_skin_normal_world": [
+        -0.6674771308898926,
+        0.6797837018966675,
+        0.3039216697216034
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.06397533416748047,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.06117533426731825,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.1656701564788818,
+        -1.0130000114440918,
+        2.068645477294922
+      ],
+      "board_front_minus_skin_back_y": 0.10294759273529053
+    },
+    {
+      "string": 3,
+      "actual_object": "Guitar / string 3",
+      "u": 1.36,
+      "actual_bezier_centerline_world": [
+        1.1961636543273926,
+        -1.0518414974212646,
+        2.0806984901428223
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 1.7398023032339124e-06,
+      "ray_origin_world": [
+        1.1961636543273926,
+        -0.8799999952316284,
+        2.0806984901428223
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_region_id": 2,
+      "surface_source": "C11-derived upper palm/toes with editable base and locked pad/tips",
+      "actual_skin_world": [
+        1.1961636543273926,
+        -1.1097357273101807,
+        2.0806984901428223
+      ],
+      "actual_skin_normal_world": [
+        -0.055775076150894165,
+        0.7641077637672424,
+        0.6426728963851929
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.057894229888916016,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.055094229988753796,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.1961636543273926,
+        -1.0130000114440918,
+        2.0806987285614014
+      ],
+      "board_front_minus_skin_back_y": 0.09673571586608887
+    },
+    {
+      "string": 3,
+      "actual_object": "Guitar / string 3",
+      "u": 1.44,
+      "actual_bezier_centerline_world": [
+        1.2774405479431152,
+        -1.0506523847579956,
+        2.112940788269043
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 1.0115243642614567e-06,
+      "ray_origin_world": [
+        1.2774405479431152,
+        -0.8799999952316284,
+        2.112940788269043
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_region_id": 2,
+      "surface_source": "C11-derived upper palm/toes with editable base and locked pad/tips",
+      "actual_skin_world": [
+        1.2774405479431152,
+        -1.0544074773788452,
+        2.112940788269043
+      ],
+      "actual_skin_normal_world": [
+        -0.4477677047252655,
+        0.7812716960906982,
+        -0.43487775325775146
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.0037550926208496094,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.0009550927206873894,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.2774405479431152,
+        -1.0130000114440918,
+        2.112941026687622
+      ],
+      "board_front_minus_skin_back_y": 0.04140746593475342
+    },
+    {
+      "string": 3,
+      "actual_object": "Guitar / string 3",
+      "u": 1.47,
+      "actual_bezier_centerline_world": [
+        1.3079041242599487,
+        -1.0498803853988647,
+        2.1250698566436768
+      ],
+      "bevel_radius_scene_units": 0.00279999990016222,
+      "centerline_sampling_256_vs_512_error": 1.215700987241932e-06,
+      "ray_origin_world": [
+        1.3079041242599487,
+        -0.8799999952316284,
+        2.1250698566436768
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_region_id": 2,
+      "surface_source": "C11-derived upper palm/toes with editable base and locked pad/tips",
+      "actual_skin_world": [
+        1.3079041242599487,
+        -1.0457360744476318,
+        2.1250698566436768
+      ],
+      "actual_skin_normal_world": [
+        0.1051991656422615,
+        0.9944382905960083,
+        0.005060394294559956
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": -0.00414431095123291,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": -0.00694431085139513,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.3079041242599487,
+        -1.0130000114440918,
+        2.125070095062256
+      ],
+      "board_front_minus_skin_back_y": 0.03273606300354004
+    },
+    {
+      "string": 4,
+      "actual_object": "Guitar / string 4",
+      "u": 1.22,
+      "actual_bezier_centerline_world": [
+        1.0374782085418701,
+        -1.0511263608932495,
+        2.066049575805664
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 1.5125963140069866e-06,
+      "ray_origin_world": [
+        1.0374782085418701,
+        -0.8799999952316284,
+        2.066049575805664
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_region_id": 2,
+      "surface_source": "C11-derived upper palm/toes with editable base and locked pad/tips",
+      "actual_skin_world": [
+        1.0374782085418701,
+        -1.059743046760559,
+        2.066049575805664
+      ],
+      "actual_skin_normal_world": [
+        -0.4844230115413666,
+        0.8350497484207153,
+        0.26081836223602295
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.00861668586730957,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.006516685942187905,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.0374782085418701,
+        -1.0130000114440918,
+        2.066049814224243
+      ],
+      "board_front_minus_skin_back_y": 0.046743035316467285
+    },
+    {
+      "string": 4,
+      "actual_object": "Guitar / string 4",
+      "u": 1.25,
+      "actual_bezier_centerline_world": [
+        1.0679752826690674,
+        -1.0515486001968384,
+        2.0780935287475586
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 1.3953089607619793e-06,
+      "ray_origin_world": [
+        1.0679752826690674,
+        -0.8799999952316284,
+        2.0780935287475586
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_region_id": 2,
+      "surface_source": "C11-derived upper palm/toes with editable base and locked pad/tips",
+      "actual_skin_world": [
+        1.0679752826690674,
+        -1.0565983057022095,
+        2.0780935287475586
+      ],
+      "actual_skin_normal_world": [
+        -0.08107683062553406,
+        0.8658323884010315,
+        0.4937213957309723
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.005049705505371094,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.0029497055802494287,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.0679752826690674,
+        -1.0130000114440918,
+        2.0780935287475586
+      ],
+      "board_front_minus_skin_back_y": 0.043598294258117676
+    },
+    {
+      "string": 4,
+      "actual_object": "Guitar / string 4",
+      "u": 1.33,
+      "actual_bezier_centerline_world": [
+        1.1493353843688965,
+        -1.0519722700119019,
+        2.110124111175537
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 1.215700987241932e-06,
+      "ray_origin_world": [
+        1.1493353843688965,
+        -0.8799999952316284,
+        2.110124111175537
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_region_id": 2,
+      "surface_source": "C11-derived upper palm/toes with editable base and locked pad/tips",
+      "actual_skin_world": [
+        1.1493353843688965,
+        -1.0548477172851562,
+        2.110124111175537
+      ],
+      "actual_skin_normal_world": [
+        -0.4390103220939636,
+        0.8841255307197571,
+        0.1599748730659485
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.0028754472732543945,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.0007754473481327295,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.1493353843688965,
+        -1.0130000114440918,
+        2.110124349594116
+      ],
+      "board_front_minus_skin_back_y": 0.04184770584106445
+    },
+    {
+      "string": 4,
+      "actual_object": "Guitar / string 4",
+      "u": 1.36,
+      "actual_bezier_centerline_world": [
+        1.1798593997955322,
+        -1.0518416166305542,
+        2.122100353240967
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 1.8659205248950158e-06,
+      "ray_origin_world": [
+        1.1798593997955322,
+        -0.8799999952316284,
+        2.122100353240967
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_region_id": 2,
+      "surface_source": "C11-derived upper palm/toes with editable base and locked pad/tips",
+      "actual_skin_world": [
+        1.1798593997955322,
+        -1.0496900081634521,
+        2.122100353240967
+      ],
+      "actual_skin_normal_world": [
+        -0.03377626836299896,
+        0.9277565479278564,
+        0.37165433168411255
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": -0.0021516084671020508,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": -0.004251608392223716,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.1798593997955322,
+        -1.0130000114440918,
+        2.122100353240967
+      ],
+      "board_front_minus_skin_back_y": 0.03668999671936035
+    },
+    {
+      "string": 4,
+      "actual_object": "Guitar / string 4",
+      "u": 1.44,
+      "actual_bezier_centerline_world": [
+        1.2612959146499634,
+        -1.0506523847579956,
+        2.1539368629455566
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 1.1055014724130278e-06,
+      "ray_origin_world": [
+        1.2612959146499634,
+        -0.8799999952316284,
+        2.1539368629455566
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_region_id": 2,
+      "surface_source": "C11-derived upper palm/toes with editable base and locked pad/tips",
+      "actual_skin_world": [
+        1.2612959146499634,
+        -1.067543864250183,
+        2.1539368629455566
+      ],
+      "actual_skin_normal_world": [
+        -0.5331150889396667,
+        0.7605158686637878,
+        0.37068045139312744
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.0168914794921875,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.014791479567065835,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.2612959146499634,
+        -1.0130000114440918,
+        2.1539368629455566
+      ],
+      "board_front_minus_skin_back_y": 0.05454385280609131
+    },
+    {
+      "string": 4,
+      "actual_object": "Guitar / string 4",
+      "u": 1.47,
+      "actual_bezier_centerline_world": [
+        1.2918498516082764,
+        -1.0498803853988647,
+        2.165836811065674
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 9.610960183499514e-07,
+      "ray_origin_world": [
+        1.2918498516082764,
+        -0.8799999952316284,
+        2.165836811065674
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_region_id": 2,
+      "surface_source": "C11-derived upper palm/toes with editable base and locked pad/tips",
+      "actual_skin_world": [
+        1.2918498516082764,
+        -1.0596239566802979,
+        2.165836811065674
+      ],
+      "actual_skin_normal_world": [
+        -0.11158615350723267,
+        0.8101040720939636,
+        0.5755691528320312
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.009743571281433105,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.0076435713563114405,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.2918498516082764,
+        -1.0130001306533813,
+        2.165837049484253
+      ],
+      "board_front_minus_skin_back_y": 0.046623826026916504
+    },
+    {
+      "string": 5,
+      "actual_object": "Guitar / string 5",
+      "u": 1.22,
+      "actual_bezier_centerline_world": [
+        1.0211620330810547,
+        -1.0511085987091064,
+        2.1074812412261963
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 1.3058723390225556e-06,
+      "ray_origin_world": [
+        1.0211620330810547,
+        -0.8799999952316284,
+        2.1074812412261963
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_region_id": 2,
+      "surface_source": "C11-derived upper palm/toes with editable base and locked pad/tips",
+      "actual_skin_world": [
+        1.0211620330810547,
+        -1.1032118797302246,
+        2.1074812412261963
+      ],
+      "actual_skin_normal_world": [
+        -0.4244731068611145,
+        0.453559935092926,
+        0.7836491465568542
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.052103281021118164,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.0500032810959965,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.0211620330810547,
+        -1.0130000114440918,
+        2.1074812412261963
+      ],
+      "board_front_minus_skin_back_y": 0.09021186828613281
+    },
+    {
+      "string": 5,
+      "actual_object": "Guitar / string 5",
+      "u": 1.25,
+      "actual_bezier_centerline_world": [
+        1.051635980606079,
+        -1.0515309572219849,
+        2.119584321975708
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 1.0794860289260646e-06,
+      "ray_origin_world": [
+        1.051635980606079,
+        -0.8799999952316284,
+        2.119584321975708
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_region_id": 2,
+      "surface_source": "C11-derived upper palm/toes with editable base and locked pad/tips",
+      "actual_skin_world": [
+        1.051635980606079,
+        -1.1007864475250244,
+        2.119584321975708
+      ],
+      "actual_skin_normal_world": [
+        -0.22495749592781067,
+        0.4472288191318512,
+        0.8656675815582275
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.04925549030303955,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.047155490377917886,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.051635980606079,
+        -1.0130000114440918,
+        2.119584560394287
+      ],
+      "board_front_minus_skin_back_y": 0.08778643608093262
+    },
+    {
+      "string": 5,
+      "actual_object": "Guitar / string 5",
+      "u": 1.33,
+      "actual_bezier_centerline_world": [
+        1.1330028772354126,
+        -1.0519556999206543,
+        2.151597499847412
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 1.2839233415447482e-06,
+      "ray_origin_world": [
+        1.1330028772354126,
+        -0.8799999952316284,
+        2.151597499847412
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_region_id": 2,
+      "surface_source": "C11-derived upper palm/toes with editable base and locked pad/tips",
+      "actual_skin_world": [
+        1.1330028772354126,
+        -1.0878074169158936,
+        2.151597499847412
+      ],
+      "actual_skin_normal_world": [
+        -0.60551518201828,
+        0.5781919956207275,
+        0.5468503832817078
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.03585171699523926,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.03375171707011759,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.1330028772354126,
+        -1.0130000114440918,
+        2.151597499847412
+      ],
+      "board_front_minus_skin_back_y": 0.07480740547180176
+    },
+    {
+      "string": 5,
+      "actual_object": "Guitar / string 5",
+      "u": 1.36,
+      "actual_bezier_centerline_world": [
+        1.1635570526123047,
+        -1.0518256425857544,
+        2.163496732711792
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 1.1246181883879427e-06,
+      "ray_origin_world": [
+        1.1635570526123047,
+        -0.8799999952316284,
+        2.163496732711792
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_region_id": 2,
+      "surface_source": "C11-derived upper palm/toes with editable base and locked pad/tips",
+      "actual_skin_world": [
+        1.1635570526123047,
+        -1.0820622444152832,
+        2.163496732711792
+      ],
+      "actual_skin_normal_world": [
+        -0.1636190116405487,
+        0.6862590312957764,
+        0.7087152600288391
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.03023660182952881,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.028136601904407144,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.1635571718215942,
+        -1.0130000114440918,
+        2.163496732711792
+      ],
+      "board_front_minus_skin_back_y": 0.0690622329711914
+    },
+    {
+      "string": 5,
+      "actual_object": "Guitar / string 5",
+      "u": 1.44,
+      "actual_bezier_centerline_world": [
+        1.2451534271240234,
+        -1.0506393909454346,
+        2.19492769241333
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 1.1246181883879427e-06,
+      "ray_origin_world": [
+        1.2451534271240234,
+        -0.8799999952316284,
+        2.19492769241333
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": false,
+      "fallback_used": false,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.2451534271240234,
+        -1.0130000114440918,
+        2.19492769241333
+      ]
+    },
+    {
+      "string": 5,
+      "actual_object": "Guitar / string 5",
+      "u": 1.47,
+      "actual_bezier_centerline_world": [
+        1.2757974863052368,
+        -1.0498688220977783,
+        2.2065985202789307
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 1.8000207985092997e-06,
+      "ray_origin_world": [
+        1.2757974863052368,
+        -0.8799999952316284,
+        2.2065985202789307
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": true,
+      "fallback_used": false,
+      "provenance_region_id": 2,
+      "surface_source": "C11-derived upper palm/toes with editable base and locked pad/tips",
+      "actual_skin_world": [
+        1.2757974863052368,
+        -1.108837366104126,
+        2.2065985202789307
+      ],
+      "actual_skin_normal_world": [
+        -0.4231279790401459,
+        0.44742855429649353,
+        0.7878898978233337
+      ],
+      "surface_back_facing": true,
+      "centerline_minus_skin_y": 0.058968544006347656,
+      "valid_back_surface_gap": true,
+      "string_near_surface_clearance_y": 0.05686854408122599,
+      "board_hit": true,
+      "actual_board_front_world": [
+        1.2757974863052368,
+        -1.0130000114440918,
+        2.2065987586975098
+      ],
+      "board_front_minus_skin_back_y": 0.09583735466003418
+    },
+    {
+      "string": 6,
+      "actual_object": "Guitar / string 6",
+      "u": 1.22,
+      "actual_bezier_centerline_world": [
+        1.0048524141311646,
+        -1.0510755777359009,
+        2.1488962173461914
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 8.344650268554688e-07,
+      "ray_origin_world": [
+        1.0048524141311646,
+        -0.8799999952316284,
+        2.1488962173461914
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": false,
+      "fallback_used": false,
+      "board_hit": false
+    },
+    {
+      "string": 6,
+      "actual_object": "Guitar / string 6",
+      "u": 1.25,
+      "actual_bezier_centerline_world": [
+        1.0353032350540161,
+        -1.0514976978302002,
+        2.161057949066162
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 9.684608464999152e-07,
+      "ray_origin_world": [
+        1.0353032350540161,
+        -0.8799999952316284,
+        2.161057949066162
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": false,
+      "fallback_used": false,
+      "board_hit": false
+    },
+    {
+      "string": 6,
+      "actual_object": "Guitar / string 6",
+      "u": 1.33,
+      "actual_bezier_centerline_world": [
+        1.1166764497756958,
+        -1.051924228668213,
+        2.1930553913116455
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 6.419616707723741e-07,
+      "ray_origin_world": [
+        1.1166764497756958,
+        -0.8799999952316284,
+        2.1930553913116455
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": false,
+      "fallback_used": false,
+      "board_hit": false
+    },
+    {
+      "string": 6,
+      "actual_object": "Guitar / string 6",
+      "u": 1.36,
+      "actual_bezier_centerline_world": [
+        1.1472605466842651,
+        -1.051795482635498,
+        2.204878807067871
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 5.057621821307283e-07,
+      "ray_origin_world": [
+        1.1472605466842651,
+        -0.8799999952316284,
+        2.204878807067871
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": false,
+      "fallback_used": false,
+      "board_hit": false
+    },
+    {
+      "string": 6,
+      "actual_object": "Guitar / string 6",
+      "u": 1.44,
+      "actual_bezier_centerline_world": [
+        1.2290153503417969,
+        -1.0506141185760498,
+        2.2359070777893066
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 2.6656007498500226e-07,
+      "ray_origin_world": [
+        1.2290153503417969,
+        -0.8799999952316284,
+        2.2359070777893066
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": false,
+      "fallback_used": false,
+      "board_hit": false
+    },
+    {
+      "string": 6,
+      "actual_object": "Guitar / string 6",
+      "u": 1.47,
+      "actual_bezier_centerline_world": [
+        1.2597488164901733,
+        -1.0498459339141846,
+        2.2473509311676025
+      ],
+      "bevel_radius_scene_units": 0.002099999925121665,
+      "centerline_sampling_256_vs_512_error": 3.5762786865234375e-07,
+      "ray_origin_world": [
+        1.2597488164901733,
+        -0.8799999952316284,
+        2.2473509311676025
+      ],
+      "ray_world_direction": [
+        0,
+        -1,
+        0
+      ],
+      "ray_maximum_distance": 1.5,
+      "skin_hit": false,
+      "fallback_used": false,
+      "board_hit": false
+    }
+  ],
+  "declared_toe_pad_targets": [
+    {
+      "intent": "relaxed short toe pad near string 3; not all-string fingering",
+      "digit": 1,
+      "u": 1.2456666666666667,
+      "expected_source": "C11-derived upper patch, locked actual toe pads",
+      "expected_source_id": 2,
+      "target_string": 3,
+      "target_world": [
+        1.0799086093902588,
+        -1.0514957904815674,
+        2.0348658561706543
+      ],
+      "hit": true,
+      "fallback_used": false,
+      "provenance_region_id": 2,
+      "surface_source": "C11-derived upper palm/toes with editable base and locked pad/tips",
+      "hit_world": [
+        1.0799086093902588,
+        -1.047594666481018,
+        2.0348658561706543
+      ],
+      "normal_world": [
+        0.19759580492973328,
+        0.9498013854026794,
+        -0.24255576729774475
+      ],
+      "valid_back_surface": true,
+      "source_matches_declared_intent": true,
+      "signed_near_string_y_gap": -0.006701123900711536
+    },
+    {
+      "intent": "relaxed short toe pad near string 3; not all-string fingering",
+      "digit": 2,
+      "u": 1.355,
+      "expected_source": "C11-derived upper patch, locked actual toe pads",
+      "expected_source_id": 2,
+      "target_string": 3,
+      "target_world": [
+        1.1910821199417114,
+        -1.0518748760223389,
+        2.078688144683838
+      ],
+      "hit": true,
+      "fallback_used": false,
+      "provenance_region_id": 2,
+      "surface_source": "C11-derived upper palm/toes with editable base and locked pad/tips",
+      "hit_world": [
+        1.1910821199417114,
+        -1.1083922386169434,
+        2.078688144683838
+      ],
+      "normal_world": [
+        -0.3588431775569916,
+        0.7653771042823792,
+        0.5342559814453125
+      ],
+      "valid_back_surface": true,
+      "source_matches_declared_intent": true,
+      "signed_near_string_y_gap": 0.05371736269444227
+    },
+    {
+      "intent": "relaxed short toe pad near string 3; not all-string fingering",
+      "digit": 3,
+      "u": 1.4643333333333335,
+      "expected_source": "C11-derived upper patch, locked actual toe pads",
+      "expected_source_id": 2,
+      "target_string": 3,
+      "target_world": [
+        1.3021504878997803,
+        -1.0500400066375732,
+        2.122777223587036
+      ],
+      "hit": true,
+      "fallback_used": false,
+      "provenance_region_id": 2,
+      "surface_source": "C11-derived upper palm/toes with editable base and locked pad/tips",
+      "hit_world": [
+        1.3021504878997803,
+        -1.0454598665237427,
+        2.122777223587036
+      ],
+      "normal_world": [
+        -0.08367540687322617,
+        0.9946451783180237,
+        -0.06065791845321655
+      ],
+      "valid_back_surface": true,
+      "source_matches_declared_intent": true,
+      "signed_near_string_y_gap": -0.007380140013992786
+    }
+  ],
+  "declared_hold_support_targets": [
+    {
+      "intent": "palm interior under lower fingerboard edge supports relaxed hold",
+      "u": 1.28,
+      "calibrated_world_y": -0.9830000102519989,
+      "board_depth_front_world": [
+        1.1066546440124512,
+        -1.0130000114440918,
+        2.0693607330322266
+      ],
+      "board_depth_back_world": [
+        1.1066546440124512,
+        -0.953000009059906,
+        2.0693607330322266
+      ],
+      "depth_rule": "midpoint of explicit front/back board ray hits at logical V=0; no nearest fallback",
+      "expected_skin_source": "shared palm inner supporting surface",
+      "expected_source_ids": [
+        1
+      ],
+      "board_ray_origin_world": [
+        1.2268009185791016,
+        -0.9830000400543213,
+        1.764272928237915
+      ],
+      "board_ray_direction_world": [
+        -0.3664192855358124,
+        0.0,
+        0.9304498434066772
+      ],
+      "board_hit": true,
+      "fallback_used": false,
+      "skin_ray_origin_world": [
+        1.1507083177566528,
+        -0.9830000400543213,
+        1.9574952125549316
+      ],
+      "skin_ray_direction_world": [
+        0.3664192855358124,
+        -0.0,
+        -0.9304498434066772
+      ],
+      "skin_hit": true,
+      "board_lower_edge_world": [
+        1.1450207233428955,
+        -0.9830000400543213,
+        1.9719377756118774
+      ],
+      "provenance_region_id": 1,
+      "surface_source": "C25 rebuilt shared wrist band",
+      "skin_world": [
+        1.1628210544586182,
+        -0.9830000400543213,
+        1.9267371892929077
+      ],
+      "skin_normal_world": [
+        -0.24076372385025024,
+        0.3033798933029175,
+        0.9219509959220886
+      ],
+      "valid_upward_facing_support_surface": true,
+      "source_matches_declared_intent": true,
+      "signed_lower_edge_gap_along_v": 0.048579261638224125
+    },
+    {
+      "intent": "palm interior under lower fingerboard edge supports relaxed hold",
+      "u": 1.4,
+      "calibrated_world_y": -0.9830000400543213,
+      "board_depth_front_world": [
+        1.2286897897720337,
+        -1.0130000114440918,
+        2.117419481277466
+      ],
+      "board_depth_back_world": [
+        1.2286897897720337,
+        -0.9530000686645508,
+        2.117419481277466
+      ],
+      "depth_rule": "midpoint of explicit front/back board ray hits at logical V=0; no nearest fallback",
+      "expected_skin_source": "shared palm inner supporting surface",
+      "expected_source_ids": [
+        1
+      ],
+      "board_ray_origin_world": [
+        1.348836064338684,
+        -0.9830000400543213,
+        1.8123314380645752
+      ],
+      "board_ray_direction_world": [
+        -0.3664192855358124,
+        0.0,
+        0.9304498434066772
+      ],
+      "board_hit": true,
+      "fallback_used": false,
+      "skin_ray_origin_world": [
+        1.2727434635162354,
+        -0.9830000400543213,
+        2.005553722381592
+      ],
+      "skin_ray_direction_world": [
+        0.3664192855358124,
+        -0.0,
+        -0.9304498434066772
+      ],
+      "skin_hit": true,
+      "board_lower_edge_world": [
+        1.267055869102478,
+        -0.9830000400543213,
+        2.019996166229248
+      ],
+      "provenance_region_id": 1,
+      "surface_source": "C25 rebuilt shared wrist band",
+      "skin_world": [
+        1.292643666267395,
+        -0.9830000400543213,
+        1.9550211429595947
+      ],
+      "skin_normal_world": [
+        -0.15721836686134338,
+        0.3152168095111847,
+        0.9359064698219299
+      ],
+      "valid_upward_facing_support_surface": true,
+      "source_matches_declared_intent": true,
+      "signed_lower_edge_gap_along_v": 0.06983186304569244
+    }
+  ],
+  "hold_intent": "relaxed static support; all-six-string pressing is not required; declared source IDs must match actual hits; no animation/contact pass inferred",
+  "limits": [
+    "Finite samples, not full collision or dynamics proof.",
+    "Source face attributes identify actual C11 upper and new wrist. The local wrist/upper/collar passed self0; finite contacts remain diagnostic and do not certify grip or dynamics.",
+    "Positive clearance indicates a gap; it must not be called pressing a string. Negative means potential plush/string overlap at that sample.",
+    "No actual playing or per-note fingering has been built or passed."
+  ]
+}

@@ -35,6 +35,10 @@
 
 复现说明：[Godot Web工程README](../../design/godot-web-compare/README.md)。最新产物大小与hash：[导出证据](../../public/labs/character-compare/godot/export-evidence.json)。源 GLB SHA256 `1a384c0a9a13ed60710469b7d9a4de646a8599fe3dcff5ef85d1f42c825cedf9`。发布和线上验收由主任务进行；此子任务没有部署或新增费用。
 
+## 发布前 CSP 修复
+
+Godot默认shell有inline CSS/启动JS，现已抽取为同源 `godot-page.css` 与 `godot-start.js`；`index.html` 没有inline script/style/event handler。ready桥从普通 `JavaScriptBridge.eval` 改为直接对象调用。重新真实导出后PCK为14,774,984字节，SHA256 `dccb15900900b55021f3a1c312ddc95120524152c840a3b565a6dc11ab979afa`。此变更后的严格CSP浏览器验收由主任务继续，本子线程复测时IAB不可用；不把无CSP旧验收当作严格CSP通过。
+
 ## 下一步最便宜的验证
 
 先用同一输入在三栏检查：单次按下只一次动作，150ms连按仍看得见手部往返，左手按弦位置与音符组一致，停止无残留排队，转角后仍是立体模型。视觉不过时继续改美术/接触，不用更换引擎掩盖问题。
