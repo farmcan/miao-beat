@@ -43,3 +43,11 @@
 - 开音后一次点击输入计数只加1；150ms快演示共8次，停止显示无排队动作；再点击旧3D按钮实际WebGL就绪，之后一次输入提示两路同步。
 - 旧自建3D明确标为已弃用。该性能修复不代表新复用角色已经上线或美术通过。
 - 无移动设备扬声器听音结论，未测冷网下载时间。
+
+## 生产验收
+
+- commit `1330fa0a5eeec5e767e4588977601d40916f10fb`，Cloudflare Production部署 `59543d6e-bc1c-4486-981b-4102a7fe03e7`。
+- canonical `release.json`与四个修改的公开文件逐字节SHA均匹配dist；普通canonical URL实际浏览器显示新两路页、旧模型弃用提示、3D默认未加载。
+- 线上开音后150ms演示共8次输入，停止成功；截图 `artifacts/compare-load-fix/production-final.png`。没有把开发server速度当生产冷网耗时。
+- `/api/site-counter`路由与worker代码未改；当前comparison为静态路由。
+- 公开状态事件已持久化到Seed现有pending事件入口；Seed状态页尚未补发，覆盖缺口保留。

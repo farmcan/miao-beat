@@ -28,3 +28,5 @@
 先读 `design/miao-reuse-v1/README.md` 和 `docs/character-reuse-plan-2026-10-29.md`。官方3.6.23运行时没有放进本包，平台下载/校验见README；不会覆盖现有5.2。
 
 脸部有限诊断已恢复原始嘴/眼外观；手与琴接触仍FAIL。完整静态猫+琴必须再次通过identity/craft/contact三评，才允许增加演奏、头眼动作和上线替换。不要把首次失败hold脚本作为生产方案。本包不含失败hold工作工程。
+
+发布验收：GitHub公开附件大小与服务端SHA256均与本地一致，匿名canonical receipt下载逐字节匹配；代码/研究文档已commit并push（030607d），大模型原文件在Release附件内。
