@@ -1,0 +1,12 @@
+"""One bounded source-render-subdivision diagnostic, no pose/mesh edit."""
+import bpy,json,hashlib
+from pathlib import Path
+from mathutils import Vector
+R=Path(__file__).resolve().parents[2];S=R/'artifacts/miao-reuse-keyboard-v1/gray-static/keyboard-gray-native36.blend';O=R/'artifacts/miao-reuse-keyboard-v1/render-quality-diagnostic';sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();before=sha(S)
+bpy.ops.wm.open_mainfile(filepath=str(S),load_ui=False,use_scripts=False);sc=bpy.context.scene;rig=bpy.data.objects['RIG-Cat'];pose=lambda:hashlib.sha256(json.dumps([(b.name,[list(v) for v in b.matrix_basis]) for b in rig.pose.bones]).encode()).hexdigest();ph=pose();assert ph=='4fb6d4c171f6aa36efa9f0e550048d037e91057225bd9856edf7670b8b1913be';quality=rig.pose.bones['Properties_Character_Cat']['Quality'];assert quality==1
+old=sc.render.use_simplify;sc.render.use_simplify=False
+cam=sc.camera;cam.location=(0,-3,1.5);cam.rotation_euler=(Vector((0,-.13,.53))-cam.location).to_track_quat('-Z','Y').to_euler();cam.data.type='ORTHO';cam.data.ortho_scale=1.38;sc.render.resolution_x=1400;sc.render.resolution_y=1400;sc.render.resolution_percentage=100;sc.render.filepath=str(O/'native-render2-front.png');bpy.context.view_layer.update();h=bpy.data.objects['HLP-scene_camera_dummy'];h.rotation_euler=cam.matrix_world.to_euler();h.update_tag(refresh={'OBJECT'});bpy.context.view_layer.update();err=max(abs(h.rotation_euler[i]-cam.matrix_world.to_euler()[i]) for i in range(3));assert err<1e-6
+bpy.ops.render.render(write_still=True);assert pose()==ph;assert rig.pose.bones['Properties_Character_Cat']['Quality']==quality
+bpy.ops.wm.save_as_mainfile(filepath=str(O/'native-render2-working36.blend'))
+r={'source':str(S),'source_sha_before':before,'source_sha_after':sha(S),'only_quality_setting_change':{'use_simplify_before':old,'use_simplify_after':sc.render.use_simplify},'Quality_unchanged':quality,'pose_sha256_before':ph,'pose_sha256_after':pose(),'camera_helper_max_error':err,'geometry_modified':False,'new_actions':0,'new_keyframes':0,'image':sc.render.filepath,'native':str(O/'native-render2-working36.blend'),'render_geometry_direct_depsgraph':'not captured; matched render-level proxy required before contact claims','visual_gate':'pending actual inspection; no supported batch images yet'}
+assert before==sha(S);(O/'native-render2-diagnostic-receipt.json').write_text(json.dumps(r,indent=2)+'\n');print('NATIVE_RENDER2_DIAGNOSTIC',json.dumps(r))
