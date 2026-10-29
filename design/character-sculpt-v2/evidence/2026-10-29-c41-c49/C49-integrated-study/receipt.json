@@ -1,0 +1,125 @@
+{
+  "status": "partial-static-branch-integration-not-art-or-animation-acceptance",
+  "sources": {
+    "shoulder": {
+      "path": "artifacts/character-shoulder-c40/diagnostic-c40-left-shoulder-failed.blend",
+      "sha256": "6dbc4183a57117079c1479b0c1361e52995f66ff3eaef3f2d3e00e1cba8bdc00"
+    },
+    "base": {
+      "path": "artifacts/character-integrated-gray-c31/miao-c31-head-hand-gray.blend",
+      "sha256": "13cbb1da83dfa23c0581ccfe7c07e893b9d0bca6a63244887ad0955f7d0c9c5d"
+    },
+    "head_eyes": {
+      "path": "artifacts/character-eye-optical-c47/miao-c47-physical-optical-relight.blend",
+      "sha256": "1ab25c94d05b91f7cd11480d752dbed2154577f30c45a7c420d6d1a2dc77f146"
+    }
+  },
+  "shoulder_changed_points": 22074,
+  "topology_exact": true,
+  "premerge_shoulders_match_base_exact": true,
+  "whole_character_approved": false,
+  "production_changed": false,
+  "skin_bound": false,
+  "shoulder_coordinates_exact": true,
+  "head_paws_and_all_other_body_points_exact": true,
+  "all_other_object_world_transforms_exact": true,
+  "C44_scope": "20 previously ambiguous sample normals cleared by actual-triangle solid angles; not a global art gate",
+  "limits": [
+    "Right arm/ears/plush remain P0; this integration is not a production character.",
+    "Groom remains hidden pending new skin binding.",
+    "No new animation, GLB, browser or release created."
+  ],
+  "native_sha256": "0ea1505e0368ab01ed5dac5ba5a07cb4772426e25db8faeffcf35cee8ac7ad6b",
+  "renders": [
+    {
+      "file": "c49-full.png",
+      "sha256": "2d9d35d99d0028dcaf65a2fc5d5fe81723507ae320c96397e1a5c37d351c03b9",
+      "camera_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.09881033003330231
+        ],
+        [
+          0.0,
+          0.08139567822217941,
+          -0.9966818690299988,
+          -12.008593559265137
+        ],
+        [
+          0.0,
+          0.9966818690299988,
+          0.08139567822217941,
+          2.5947763919830322
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "file": "c49-face.png",
+      "sha256": "2a7f15fc513657a4c1a224993fe44e9169c6c1198268b4dd13f285a5d218939b",
+      "camera_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0033332803286612034,
+          -0.9999944567680359,
+          -6.0
+        ],
+        [
+          0.0,
+          0.9999944567680359,
+          0.0033332803286612034,
+          3.049999952316284
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "file": "c49-three-quarter.png",
+      "sha256": "546f8c276075de370ddddaabbe6123ca12d34c752172d6eaec0b36aba52364e8",
+      "camera_matrix": [
+        [
+          0.8278316855430603,
+          0.11567363142967224,
+          -0.5489210486412048,
+          -6.0
+        ],
+        [
+          -0.5609765648841858,
+          0.170699343085289,
+          -0.8100413680076599,
+          -9.0
+        ],
+        [
+          3.025754224950106e-08,
+          0.978509783744812,
+          0.2062005251646042,
+          3.9000000953674316
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ]
+}

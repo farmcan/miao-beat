@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "changed_geometry_only": [
+    "C7 / clear cornea L",
+    "C7 / clear cornea R"
+  ],
+  "all_other_mesh_and_curve_geometry_exact": true,
+  "all_material_slots_exact": true,
+  "all_lights_and_receiver_links_exact": true,
+  "native_reopened_actual_intersections": [
+    {
+      "cap": "C7 / clear cornea L",
+      "other": "C6 / iris L",
+      "triangle_overlap_pairs": 0
+    },
+    {
+      "cap": "C7 / clear cornea L",
+      "other": "C6 / sclera L",
+      "triangle_overlap_pairs": 0
+    },
+    {
+      "cap": "C7 / clear cornea L",
+      "other": "Miao / continuous pear and rounded-square face",
+      "triangle_overlap_pairs": 0
+    },
+    {
+      "cap": "C7 / clear cornea R",
+      "other": "C6 / iris R",
+      "triangle_overlap_pairs": 0
+    },
+    {
+      "cap": "C7 / clear cornea R",
+      "other": "C6 / sclera R",
+      "triangle_overlap_pairs": 0
+    },
+    {
+      "cap": "C7 / clear cornea R",
+      "other": "Miao / continuous pear and rounded-square face",
+      "triangle_overlap_pairs": 0
+    }
+  ],
+  "native_sha256": "2ca04f2f8a8e82471fa2a14d81b0efa007be1096505b632c068db26c1ef4a9b3",
+  "art_gate_passed": false
+}

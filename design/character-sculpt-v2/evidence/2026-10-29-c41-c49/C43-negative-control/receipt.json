@@ -1,0 +1,1177 @@
+{
+  "scope": "C43 opaque C20 iris-cap receiver routing A/B, restored C20 colors on exact C38 geometry; no final art pass",
+  "sources": {
+    "C38": {
+      "path": "artifacts/character-alignment-c38/head-expression-only/miao-c38-coupled-head-gray.blend",
+      "sha256": "f481e8a0c00eb4ec5baf5d9c43a6bc250f5a28c4475d9d9cba0ea360ca1c8439"
+    },
+    "C20_materials": {
+      "path": "artifacts/character-eye-wet-iris-c20/miao-c20-wet-iris.blend",
+      "sha256": "5f66fb066a49dff3d856e70a70d374e58eb1b1cca76fc42404d2b9246c2116c2"
+    }
+  },
+  "material_restoration": [
+    {
+      "object": "Studio / floor",
+      "before": [
+        "Studio / neutral shadow receiver"
+      ],
+      "restored_C20_materials": [
+        "Studio / neutral shadow receiver.001"
+      ]
+    },
+    {
+      "object": "Miao / native short plush",
+      "before": [
+        "Miao / warm short plush"
+      ],
+      "restored_C20_materials": [
+        "Miao / warm short plush.001"
+      ]
+    },
+    {
+      "object": "Miao / fine whisker.003",
+      "before": [
+        "C23 gray body"
+      ],
+      "restored_C20_materials": [
+        "Miao / fine cream whisker"
+      ]
+    },
+    {
+      "object": "Miao / fine whisker.002",
+      "before": [
+        "C23 gray body"
+      ],
+      "restored_C20_materials": [
+        "Miao / fine cream whisker"
+      ]
+    },
+    {
+      "object": "Miao / fine whisker.001",
+      "before": [
+        "C23 gray body"
+      ],
+      "restored_C20_materials": [
+        "Miao / fine cream whisker"
+      ]
+    },
+    {
+      "object": "Miao / fine whisker",
+      "before": [
+        "C23 gray body"
+      ],
+      "restored_C20_materials": [
+        "Miao / fine cream whisker"
+      ]
+    },
+    {
+      "object": "Miao / continuous pear and rounded-square face",
+      "before": [
+        "C23 gray body"
+      ],
+      "restored_C20_materials": [
+        "Miao / warm short plush.001",
+        "Clay / body.001",
+        "Miao / ear velvet.001"
+      ]
+    },
+    {
+      "object": "Guitar / tuner shaft.005",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / satin nickel"
+      ]
+    },
+    {
+      "object": "Guitar / tuner shaft.004",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / satin nickel"
+      ]
+    },
+    {
+      "object": "Guitar / tuner shaft.003",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / satin nickel"
+      ]
+    },
+    {
+      "object": "Guitar / tuner shaft.002",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / satin nickel"
+      ]
+    },
+    {
+      "object": "Guitar / tuner shaft.001",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / satin nickel"
+      ]
+    },
+    {
+      "object": "Guitar / tuner shaft",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / satin nickel"
+      ]
+    },
+    {
+      "object": "Guitar / string 6",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / nylon"
+      ]
+    },
+    {
+      "object": "Guitar / string 5",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / nylon"
+      ]
+    },
+    {
+      "object": "Guitar / string 4",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / nylon"
+      ]
+    },
+    {
+      "object": "Guitar / string 3",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / nylon"
+      ]
+    },
+    {
+      "object": "Guitar / string 2",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / nylon"
+      ]
+    },
+    {
+      "object": "Guitar / string 1",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / nylon"
+      ]
+    },
+    {
+      "object": "Guitar / spruce soundboard",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / fine spruce"
+      ]
+    },
+    {
+      "object": "Guitar / soundhole chamber",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / sound chamber"
+      ]
+    },
+    {
+      "object": "Guitar / silver fret.012",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / satin nickel"
+      ]
+    },
+    {
+      "object": "Guitar / silver fret.011",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / satin nickel"
+      ]
+    },
+    {
+      "object": "Guitar / silver fret.010",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / satin nickel"
+      ]
+    },
+    {
+      "object": "Guitar / silver fret.009",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / satin nickel"
+      ]
+    },
+    {
+      "object": "Guitar / silver fret.008",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / satin nickel"
+      ]
+    },
+    {
+      "object": "Guitar / silver fret.007",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / satin nickel"
+      ]
+    },
+    {
+      "object": "Guitar / silver fret.006",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / satin nickel"
+      ]
+    },
+    {
+      "object": "Guitar / silver fret.005",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / satin nickel"
+      ]
+    },
+    {
+      "object": "Guitar / silver fret.004",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / satin nickel"
+      ]
+    },
+    {
+      "object": "Guitar / silver fret.003",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / satin nickel"
+      ]
+    },
+    {
+      "object": "Guitar / silver fret.002",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / satin nickel"
+      ]
+    },
+    {
+      "object": "Guitar / silver fret.001",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / satin nickel"
+      ]
+    },
+    {
+      "object": "Guitar / silver fret",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / satin nickel"
+      ]
+    },
+    {
+      "object": "Guitar / rosewood body",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / warm rosewood"
+      ]
+    },
+    {
+      "object": "Guitar / rosette ring.003",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / warm rosewood"
+      ]
+    },
+    {
+      "object": "Guitar / rosette ring.002",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / warm rosewood"
+      ]
+    },
+    {
+      "object": "Guitar / rosette ring.001",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / warm rosewood"
+      ]
+    },
+    {
+      "object": "Guitar / rosette ring",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / warm rosewood"
+      ]
+    },
+    {
+      "object": "Guitar / nut",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / thin cream binding"
+      ]
+    },
+    {
+      "object": "Guitar / neck",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / warm rosewood"
+      ]
+    },
+    {
+      "object": "Guitar / ivory tuning peg.005",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Eye / warm ivory"
+      ]
+    },
+    {
+      "object": "Guitar / ivory tuning peg.004",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Eye / warm ivory"
+      ]
+    },
+    {
+      "object": "Guitar / ivory tuning peg.003",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Eye / warm ivory"
+      ]
+    },
+    {
+      "object": "Guitar / ivory tuning peg.002",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Eye / warm ivory"
+      ]
+    },
+    {
+      "object": "Guitar / ivory tuning peg.001",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Eye / warm ivory"
+      ]
+    },
+    {
+      "object": "Guitar / ivory tuning peg",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Eye / warm ivory"
+      ]
+    },
+    {
+      "object": "Guitar / headstock dark slot.001",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / sound chamber"
+      ]
+    },
+    {
+      "object": "Guitar / headstock dark slot",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / sound chamber"
+      ]
+    },
+    {
+      "object": "Guitar / headstock",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / warm rosewood"
+      ]
+    },
+    {
+      "object": "Guitar / ebony fretboard",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / dark fingerboard"
+      ]
+    },
+    {
+      "object": "Guitar / continuous binding.001",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / thin cream binding"
+      ]
+    },
+    {
+      "object": "Guitar / continuous binding",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / thin cream binding"
+      ]
+    },
+    {
+      "object": "Guitar / bridge tie.005",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / warm rosewood"
+      ]
+    },
+    {
+      "object": "Guitar / bridge tie.004",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / warm rosewood"
+      ]
+    },
+    {
+      "object": "Guitar / bridge tie.003",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / warm rosewood"
+      ]
+    },
+    {
+      "object": "Guitar / bridge tie.002",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / warm rosewood"
+      ]
+    },
+    {
+      "object": "Guitar / bridge tie.001",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / warm rosewood"
+      ]
+    },
+    {
+      "object": "Guitar / bridge tie",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / warm rosewood"
+      ]
+    },
+    {
+      "object": "Guitar / bridge saddle",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / thin cream binding"
+      ]
+    },
+    {
+      "object": "Guitar / bridge",
+      "before": [
+        "C23 gray wood"
+      ],
+      "restored_C20_materials": [
+        "Guitar / warm rosewood"
+      ]
+    },
+    {
+      "object": "Face / thick curved brow.001",
+      "before": [
+        "C23 gray dark"
+      ],
+      "restored_C20_materials": [
+        "Face / ink blue"
+      ]
+    },
+    {
+      "object": "Face / thick curved brow",
+      "before": [
+        "C23 gray dark"
+      ],
+      "restored_C20_materials": [
+        "Face / ink blue"
+      ]
+    },
+    {
+      "object": "Face / smile stem",
+      "before": [
+        "C23 gray dark"
+      ],
+      "restored_C20_materials": [
+        "Face / ink blue"
+      ]
+    },
+    {
+      "object": "Face / smile",
+      "before": [
+        "C23 gray dark"
+      ],
+      "restored_C20_materials": [
+        "Face / ink blue"
+      ]
+    },
+    {
+      "object": "Face / rounded triangular nose",
+      "before": [
+        "C23 gray dark"
+      ],
+      "restored_C20_materials": [
+        "Face / ink blue"
+      ]
+    },
+    {
+      "object": "C7 / clear cornea R",
+      "before": [
+        "C20 / opaque wet convex iris"
+      ],
+      "restored_C20_materials": [
+        "C20 / opaque wet convex iris.001"
+      ]
+    },
+    {
+      "object": "C7 / clear cornea L",
+      "before": [
+        "C20 / opaque wet convex iris"
+      ],
+      "restored_C20_materials": [
+        "C20 / opaque wet convex iris.001"
+      ]
+    },
+    {
+      "object": "C6 / upper lid R",
+      "before": [
+        "C23 gray body"
+      ],
+      "restored_C20_materials": [
+        "Miao / warm short plush.001"
+      ]
+    },
+    {
+      "object": "C6 / upper lid L",
+      "before": [
+        "C23 gray body"
+      ],
+      "restored_C20_materials": [
+        "Miao / warm short plush.001"
+      ]
+    },
+    {
+      "object": "C6 / sclera R",
+      "before": [
+        "C23 gray white"
+      ],
+      "restored_C20_materials": [
+        "C6 / warm sclera"
+      ]
+    },
+    {
+      "object": "C6 / sclera L",
+      "before": [
+        "C23 gray white"
+      ],
+      "restored_C20_materials": [
+        "C6 / warm sclera"
+      ]
+    },
+    {
+      "object": "C6 / lower lid R",
+      "before": [
+        "C23 gray body"
+      ],
+      "restored_C20_materials": [
+        "Miao / warm short plush.001"
+      ]
+    },
+    {
+      "object": "C6 / lower lid L",
+      "before": [
+        "C23 gray body"
+      ],
+      "restored_C20_materials": [
+        "Miao / warm short plush.001"
+      ]
+    },
+    {
+      "object": "C6 / iris R",
+      "before": [
+        "C23 gray dark"
+      ],
+      "restored_C20_materials": [
+        "C6 / attached navy iris"
+      ]
+    },
+    {
+      "object": "C6 / iris L",
+      "before": [
+        "C23 gray dark"
+      ],
+      "restored_C20_materials": [
+        "C6 / attached navy iris"
+      ]
+    },
+    {
+      "object": "Authoring / Picking toe crease 2",
+      "before": [
+        "Clay / body"
+      ],
+      "restored_C20_materials": [
+        "Clay / body.001"
+      ]
+    },
+    {
+      "object": "Authoring / Picking toe crease 1",
+      "before": [
+        "Clay / body"
+      ],
+      "restored_C20_materials": [
+        "Clay / body.001"
+      ]
+    },
+    {
+      "object": "Authoring / Holding toe crease 2",
+      "before": [
+        "Clay / body"
+      ],
+      "restored_C20_materials": [
+        "Clay / body.001"
+      ]
+    },
+    {
+      "object": "Authoring / Holding toe crease 1",
+      "before": [
+        "Clay / body"
+      ],
+      "restored_C20_materials": [
+        "Clay / body.001"
+      ]
+    },
+    {
+      "object": "Authoring / fretting clearance",
+      "before": [
+        "Clay / body"
+      ],
+      "restored_C20_materials": [
+        "Clay / body.001"
+      ]
+    },
+    {
+      "object": "Authoring / Foot toe crease.003",
+      "before": [
+        "Clay / body"
+      ],
+      "restored_C20_materials": [
+        "Clay / body.001"
+      ]
+    },
+    {
+      "object": "Authoring / Foot toe crease.002",
+      "before": [
+        "Clay / body"
+      ],
+      "restored_C20_materials": [
+        "Clay / body.001"
+      ]
+    },
+    {
+      "object": "Authoring / Foot toe crease.001",
+      "before": [
+        "Clay / body"
+      ],
+      "restored_C20_materials": [
+        "Clay / body.001"
+      ]
+    },
+    {
+      "object": "Authoring / Foot toe crease",
+      "before": [
+        "Clay / body"
+      ],
+      "restored_C20_materials": [
+        "Clay / body.001"
+      ]
+    },
+    {
+      "object": "Authoring / ear pocket.001",
+      "before": [
+        "Miao / ear velvet"
+      ],
+      "restored_C20_materials": [
+        "Miao / ear velvet.001"
+      ]
+    },
+    {
+      "object": "Authoring / ear pocket",
+      "before": [
+        "Miao / ear velvet"
+      ],
+      "restored_C20_materials": [
+        "Miao / ear velvet.001"
+      ]
+    }
+  ],
+  "geometry_sha256_before": {
+    "Miao / continuous pear and rounded-square face": "12d4afb3fe6db4fb2a78a8a9bf59fdc1348e13735a9b54f8c0d0926eedffb93a",
+    "Face / thick curved brow": "4f1dec33eb054337e0fbc8b4d8dfb4ec69bfc1877a310ca0fdb51931455ae718",
+    "Face / thick curved brow.001": "32420a205161a4241b63cf074a0ee60f7abee85ae4db442ade14a895a10701d5",
+    "Face / rounded triangular nose": "618bd37a05a33fd69183c16cc7abd2cad2a84537dbbc655b879189a22ecd45ed",
+    "Face / smile stem": "56c5b877bec6c72846540c14cf2bc775d47c2e91027b11d6f36338f4ba7a132d",
+    "Face / smile": "bee451fecdfd49105a81b435813027c8c9c452ec282581e5ea4f252f022d1442",
+    "Guitar / rosewood body": "627ac0b813173aa6b60c61dada7bdb33957224d363aa9587bbd3fe3a5c3729b5",
+    "Guitar / spruce soundboard": "86e54a0c5458ad301320e14af96b2bc74d7282221ff440a6f280c99f0881e2d1",
+    "Guitar / continuous binding": "8dfe3369419f2b4ddfb1a7ce78992920a96f5c241d6a5b7937a7e958fa5c7c47",
+    "Guitar / continuous binding.001": "bdb4fff3827f0409c30ac8676f7e1e716797c98913287a1359a788ce42da95c3",
+    "Guitar / rosette ring": "5aa7612249f6f572d5de584ea2eb2c72d0787e2e562b489db258de5b471870cc",
+    "Guitar / rosette ring.001": "1d4f190ba263226f4c5346513dc56a23e343dabad6290e6ed802ca4504338c33",
+    "Guitar / rosette ring.002": "8c3d8722c4f797a2832b395bee0e806736549d839d2551a10ddce60a699aeadb",
+    "Guitar / rosette ring.003": "28b4a85ad582b01193dc859ea478e8b88010befbefcc44d56e7e0f2c697caa3a",
+    "Guitar / tuner shaft": "bdaa5aed9baf5348a06b5d7f471666881b7421b247434f4dfa395e0574df0000",
+    "Guitar / tuner shaft.001": "d0436e1bf6b5b02cc9d0075fd4bd768e64ec932db66498768fb37a2509186e1b",
+    "Guitar / tuner shaft.002": "7932bb16300cafc6d32cc6243600a70a650c31d714d3e0f4030a0f9a4389f094",
+    "Guitar / tuner shaft.003": "e0d6ffca59ea1718e974774da3f7b242467931e1adb5642a3adfee0a7f1279a3",
+    "Guitar / tuner shaft.004": "df0476eb347c3ce7e3329ad6ff359488e96ba0501a684267dbf8eeaccbe79a5e",
+    "Guitar / tuner shaft.005": "601a6ff1dcaaa782decb67821a2191f83a2465bef776f443243407c1f713b334",
+    "Guitar / silver fret": "88aea8818d485bbb8bbf82314eec798c39b06e71fe8704e118fdad85fddb717e",
+    "Guitar / silver fret.001": "cbb25bb343d8e4f87634fc65f111d71b2df6524668db8b6d429b429d20093400",
+    "Guitar / silver fret.002": "3080d5fae398eb7a88af69393f165df4b37a9606edcf88743fdee72da2811021",
+    "Guitar / silver fret.003": "0e35b89b6f4889ba80182870c9324c5e1e45943e811d3707d8eadc78596d1f7d",
+    "Guitar / silver fret.004": "e78a7a0b5add34110e4bfc42a754c0a90cde3c864837c922a39dbc133dc5df23",
+    "Guitar / silver fret.005": "f974b73208be2b37e4358a8680e42eae68b01cea62146c153821e548a47f83bb",
+    "Guitar / silver fret.006": "7d8732365a93c8eadfddbccc7835de1823a3ee9ead824aa733bba0650866b646",
+    "Guitar / silver fret.007": "55d518265b8f2c617b03d46e353e91ddcb9379cbc1715bf3299d0a97b33e3620",
+    "Guitar / silver fret.008": "c5279a1ba596b5b740e7865039dda46aa3bbc38dd07388356c273508733bb97f",
+    "Guitar / silver fret.009": "093ec6186ac0c273957a1e466260d05857a79b74727d0ab51e30901f3d39a5ed",
+    "Guitar / silver fret.010": "785ec44e323d164e429a3be7c9cc2878d4570ec81d47030a77519fba1e571903",
+    "Guitar / silver fret.011": "2a87514efb4de76a8f51e5568e56a36a163b5d36fc94da35f0dcfe068528866d",
+    "Guitar / silver fret.012": "500710194f0dd4e69669228a01de2cfbada1034754cfbfc4ee03b4e1c67a7fb6",
+    "Guitar / string 1": "85be07cf18abf10b432100d872d4ecf10146927b31be44fc61d427ae054f70fa",
+    "Guitar / string 2": "6c3ade3a29c49185c579e73d8467a1b6623e5cbf31c23baab18c50fa525aec3e",
+    "Guitar / string 3": "1be543758b226d7da805a2e8119f3884d5e2f9dd0b9be3f9e09f06ec9c18b4bf",
+    "Guitar / string 4": "74291e03443c4e1fff04933ac93ae61790fe6b9b2d059ff189cd8f35a743dcc0",
+    "Guitar / string 5": "30b9ed2ed49fafe5395ca12bc2236c77c2be45637a8b3d8572682b18019bf412",
+    "Guitar / string 6": "90603fbe8cd1f3e35be27efdec33727472c400e147ec851646e9af872a454e65",
+    "Authoring / Picking toe crease 1": "e48f38870fd5670b65228a8b35b5f6437abe126008c600040e09f2a7f3a4a2d7",
+    "Authoring / Picking toe crease 2": "17ab4040870cbda56246ae603cbfe8e7a8e810f1c2ff2e0b89d323abcdae7fb8",
+    "Authoring / Holding toe crease 1": "78ec53fa5f1b41e7542f456aeff9c613b07bcabf702447d7bed10c5efdebc29a",
+    "Authoring / Holding toe crease 2": "0a1eb202039148c91bf3d97ab25c513b4384958d542b966cd53a366a658db4cd",
+    "Authoring / Foot toe crease": "70991593a147f9e3c17f443a5e5d787eafcd261e0ad227dbf8c0a46279bca3ae",
+    "Authoring / Foot toe crease.001": "8777768f18325b177a247bac8814dc1c5e366ddae735d18b5226511eead01baf",
+    "Authoring / Foot toe crease.002": "b3f7a062236c2c4416bf66a06452029b55e97936e52dce37bcd355319a99f722",
+    "Authoring / Foot toe crease.003": "b0abc78d3382bce653b5405b9eae31bb3260d9c0132ff8200cb5ca9235917b89",
+    "Authoring / ear pocket": "a1d87ee5d535fa41506fa95237e5dea1ff32aa5f9d9c11061e9d2d9376760262",
+    "Authoring / ear pocket.001": "2155179343bdc35b77a14ddd7b4e06ff1a0ff02ed802ca631f308fb0c5393b2b",
+    "Miao / fine whisker": "e3dd409681284b9d6b9ea93afcda4695e85a43dc6179de80c7aefc5adb40f7ba",
+    "Miao / fine whisker.001": "2e40fe82a5e6c9d2d473df87c32d5cac7582c2acdce7d517f952bf3dd2cb576d",
+    "Miao / fine whisker.002": "d906900e459bce1e942eef0ebcaaf48eeccca1c2abf924ced87cd6fbc188c9af",
+    "Miao / fine whisker.003": "b75822d63ac5d3c7aa3e0ab76ddb4411be496961c44c0a7105016e85ab9977fd",
+    "C6 / sclera L": "761a7bead2bb062da9de5361723612a0083663462997474cfdb4f2dfa05599ee",
+    "C6 / iris L": "456c072be0c39eb13c0a8c2c118e2e303244494e5cdfb01b125ac1c7cfb84f94",
+    "C6 / upper lid L": "dc5e967ff4e6e278207d7131449df93b04419884378a6a7af2d8b85140e1a822",
+    "C6 / lower lid L": "8ce162fe491e229a6f68de2fe9a34f536774a9465cbfc00cba5445d2e97bd81f",
+    "C6 / sclera R": "72f528f34c5de9b2467ec1b4982df37b10a25ef677f4c1a2f538303b78ccee65",
+    "C6 / iris R": "0c8ef3a7b1115c31c8e8f01220eb10fc5bc65e913521bb874e5264f5f3baacea",
+    "C6 / upper lid R": "d877898f4ea96f651df3257a3d315d0c8f06cfb4a307d7bd4b1c36440897d2ed",
+    "C6 / lower lid R": "ddb85a770e36c2ee245c1b99599539766d5603a139ef4ee89fe414a41ca5d87c",
+    "C7 / clear cornea L": "97b20245c4afa4c4d9f89cba56b1131166b94b5ca133691c09e26ac5c6a9ae55",
+    "C7 / clear cornea R": "d4a155c71c2fd92a3cb7c66af8ab46944b50473ac412e779a95579a9c044995d",
+    "Guitar / soundhole chamber": "a909c46d3626bcb811e2023c3a4974c4e8f65113e57e93209d89d76878ce54eb",
+    "Guitar / neck": "b1975146dab690917e302cce982f59c1ba6c853ceaff88434d5bf25ad546ede7",
+    "Guitar / ebony fretboard": "cf0e7084f15a460f43ee6edecc58b42e32beafff86851fba973b9d23fb7cdb9b",
+    "Guitar / bridge": "9791d0cad83b35e398fdf65c2a54824825786d46a698f0e0e78431ebbc2ecd92",
+    "Guitar / bridge saddle": "31c25e1307da411f0691701135bcd95f472dcadc4b0371e81f0ede0845624dd3",
+    "Guitar / nut": "ad60fcaed94a0d30774e97441480d70955cbb249a68c514b37c376a1d8450d90",
+    "Guitar / headstock": "f772031ddaf70042abf2843d2c686ea3294fe9430892a4a33bd6eea459a41f26",
+    "Guitar / headstock dark slot": "d89a2db7eab7c4cadea09e7cf299e232b71e04f6d03429584bbc9af6aa7d8027",
+    "Guitar / ivory tuning peg": "04ca4817c5e4f664eb1352e9094ce9d03926608d6f3eaa4826913a8ff974326e",
+    "Guitar / ivory tuning peg.001": "cf27a223808af7a367efbfb21d7d09db7754c84fb89e16f1a76b19dfa7c85c3f",
+    "Guitar / ivory tuning peg.002": "737f59fec76e4668085e78dd0638a2082e78a33548d385a1c64e3c39722ed980",
+    "Guitar / headstock dark slot.001": "6f7dac4c59dc9117352ad7e7f6f7ee75ab7876b81699703c0c74c8b64dd52c08",
+    "Guitar / ivory tuning peg.003": "d453ad38c2246fd4e2495f7eff7949108f0509586e4d5d29de3d776b9ba44cbd",
+    "Guitar / ivory tuning peg.004": "db345478a29b36d71dd839ad422419c3d550620eaa1581fabef61952cff56146",
+    "Guitar / ivory tuning peg.005": "7a2efd0b06b89b05f4521607976d4e07b6d0a14bbda9740cd4dc6fc78906e4b5",
+    "Guitar / bridge tie": "b2be24d894ff5a900f38dba7aa1d069f3834c773542df4c9a0115ba1776bd0a6",
+    "Guitar / bridge tie.001": "e0a29593ef2572112e9f33dfcc6e55667677cf144b1eb5445ab01c0618749406",
+    "Guitar / bridge tie.002": "9217dfd7887bb1f0f09cca2ec729f380f23514d6ce982e497522a37325f23824",
+    "Guitar / bridge tie.003": "edbad33f50ac57199856186977c25c69330815f0ae4caaee404fba8dc7096bc9",
+    "Guitar / bridge tie.004": "36cbb4519a0d2eaa387d813372a7a0c55758bb4007040045892e6194e389876c",
+    "Guitar / bridge tie.005": "53de3cd68f1959eff6dbb52cb8a2d7560664c28818eb9c855677eb94dd6432bf",
+    "Authoring / fretting clearance": "b8ff856e8d42a4b0c6ac2c21ef2864879e6747bcf24e12589862f8d4b66f1385",
+    "Studio / floor": "8939be025b57290acf29bef45efa31be84e93034bb738d4ceab979a0ca37d225"
+  },
+  "groom_hidden_in_both": [
+    "Miao / native short plush"
+  ],
+  "render": {
+    "engine": "CYCLES",
+    "device": "CPU",
+    "samples": 128,
+    "seed": 17,
+    "resolution": 768
+  },
+  "lights": {
+    "Studio / broad key": {
+      "energy": 650.0,
+      "diffuse": 1.0,
+      "specular": 1.0,
+      "matrix": [
+        [
+          0.8320502638816833,
+          0.3955146372318268,
+          -0.3889222741127014,
+          -3.0
+        ],
+        [
+          -0.5547002553939819,
+          0.5932719111442566,
+          -0.583383321762085,
+          -4.5
+        ],
+        [
+          1.4343604526345644e-08,
+          0.701139509677887,
+          0.7130240797996521,
+          7.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "Studio / broad fill": {
+      "energy": 110.0,
+      "diffuse": 1.0,
+      "specular": 1.0,
+      "matrix": [
+        [
+          0.44721364974975586,
+          -0.4364358186721802,
+          0.7807199954986572,
+          4.0
+        ],
+        [
+          0.8944271802902222,
+          0.2182178646326065,
+          -0.39036011695861816,
+          -2.0
+        ],
+        [
+          9.319929006323946e-08,
+          0.8728715181350708,
+          0.48795005679130554,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "C7 / optical area L": {
+      "energy": 100.0,
+      "diffuse": 0.0,
+      "specular": 1.0,
+      "matrix": [
+        [
+          0.9914448857307434,
+          -0.13052617013454437,
+          0.0,
+          0.0
+        ],
+        [
+          0.13052617013454437,
+          0.9914448857307434,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "C7 / optical area R": {
+      "energy": 100.0,
+      "diffuse": 0.0,
+      "specular": 1.0,
+      "matrix": [
+        [
+          0.9914448857307434,
+          -0.13052617013454437,
+          0.0,
+          0.0
+        ],
+        [
+          0.13052617013454437,
+          0.9914448857307434,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  },
+  "conditions": [
+    {
+      "variant": "A-original-routing",
+      "native_sha256": "bfb04604ba2a6e805b05eccd5cd506211d25b182f7ad23f46fc9797c177edcfc",
+      "receiver_caps": [],
+      "renders": [
+        {
+          "file": "A-original-routing-full.png",
+          "sha256": "5d85615df7d33c96fbddc22395419de18c4bd94411ae00485b6c6e06e59a6e6b",
+          "camera_matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.09881033003330231
+            ],
+            [
+              0.0,
+              0.08139567822217941,
+              -0.9966818690299988,
+              -12.008593559265137
+            ],
+            [
+              0.0,
+              0.9966818690299988,
+              0.08139567822217941,
+              2.5947763919830322
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "ortho_scale": 4.2002763748168945
+        },
+        {
+          "file": "A-original-routing-face.png",
+          "sha256": "1bb8cb310b9da3c5473c9cfe2e64ea2c91319dd164a4397d6d1d519dc1aaeed0",
+          "camera_matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0033332803286612034,
+              -0.9999944567680359,
+              -6.0
+            ],
+            [
+              0.0,
+              0.9999944567680359,
+              0.0033332803286612034,
+              3.049999952316284
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "ortho_scale": 1.7000000476837158
+        }
+      ]
+    },
+    {
+      "variant": "B-cap-studio-receivers",
+      "native_sha256": "bc3b9ae31e5a0ed6747d95a57951a2e817aa0202cf5c4a5b42612e02f0fde8bc",
+      "receiver_caps": [
+        "C7 / clear cornea L",
+        "C7 / clear cornea R"
+      ],
+      "renders": [
+        {
+          "file": "B-cap-studio-receivers-full.png",
+          "sha256": "4c2ea3eb3881758ae16389475cd89e05aadcfaa516cdc0f59861d6da79c160d1",
+          "camera_matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.09881033003330231
+            ],
+            [
+              0.0,
+              0.08139567822217941,
+              -0.9966818690299988,
+              -12.008593559265137
+            ],
+            [
+              0.0,
+              0.9966818690299988,
+              0.08139567822217941,
+              2.5947763919830322
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "ortho_scale": 4.2002763748168945
+        },
+        {
+          "file": "B-cap-studio-receivers-face.png",
+          "sha256": "0f31e3533c0d3272075eac31705a41d542f291a3ce5d6d37b8aecc03376fa894",
+          "camera_matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0033332803286612034,
+              -0.9999944567680359,
+              -6.0
+            ],
+            [
+              0.0,
+              0.9999944567680359,
+              0.0033332803286612034,
+              3.049999952316284
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "ortho_scale": 1.7000000476837158
+        }
+      ]
+    }
+  ],
+  "production_changed": false,
+  "character_gate_passed": false,
+  "limits": [
+    "No new model or animation.",
+    "C38 whole-character P0 remains.",
+    "Groom is hidden until valid rebinding; this is not final plush material acceptance.",
+    "Only two cap objects join the existing shared studio receiver collection in B."
+  ],
+  "script_sha256": "6ddb55d47d00ed422f4a00de4885a55a467461584105447604622a38ecf8db30",
+  "geometry_unchanged": true
+}

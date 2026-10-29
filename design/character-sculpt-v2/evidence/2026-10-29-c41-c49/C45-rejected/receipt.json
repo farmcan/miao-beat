@@ -1,0 +1,178 @@
+{
+  "scope": "C45 only cap curvature restoration; current C38 white/lids/iris/head/lighting unchanged",
+  "source": {
+    "path": "artifacts/character-eye-lighting-c43/controlled-ab/A-original-routing.blend",
+    "sha256": "bfb04604ba2a6e805b05eccd5cd506211d25b182f7ad23f46fc9797c177edcfc"
+  },
+  "curvature_source": {
+    "path": "artifacts/character-eye-wet-iris-c20/miao-c20-wet-iris.blend",
+    "sha256": "5f66fb066a49dff3d856e70a70d374e58eb1b1cca76fc42404d2b9246c2116c2"
+  },
+  "eyes": [
+    {
+      "side": "L",
+      "vertices": 4610,
+      "cap_only_max_displacement_u": 0.011652858927845955,
+      "source_cap_relative_rim_original_depth_restored": true,
+      "source_to_candidate_affine_shear_determinant": 1.0,
+      "actual_layer_clearance_forward_translation_u": 0.0010799703751318158,
+      "source_rim_plane": [
+        0.11773701314816157,
+        0.017322205757788194,
+        -0.43831246460517304
+      ],
+      "target_rim_plane": [
+        0.019586274338192353,
+        0.04081811641955287,
+        -0.508446668878254
+      ],
+      "volume": 6.962974194925325e-05,
+      "nonmanifold_edges": 0,
+      "self_intersections": 0,
+      "actual_layer_checks": [
+        {
+          "object": "C6 / iris L",
+          "triangle_overlap_pairs": 0,
+          "ray_hit_count": 4610,
+          "ray_misses": 0,
+          "min_cap_in_front_distance": 3.9766496740867296e-05,
+          "max_cap_in_front_distance": 0.015953200083458796
+        },
+        {
+          "object": "C6 / sclera L",
+          "triangle_overlap_pairs": 0,
+          "ray_hit_count": 4610,
+          "ray_misses": 0,
+          "min_cap_in_front_distance": 0.00040481208452547435,
+          "max_cap_in_front_distance": 0.016588116879574955
+        },
+        {
+          "object": "Miao / continuous pear and rounded-square face",
+          "triangle_overlap_pairs": 0,
+          "ray_hit_count": 4610,
+          "ray_misses": 0,
+          "min_cap_in_front_distance": 0.0043269150773994625,
+          "max_cap_in_front_distance": 0.026936966693028808
+        }
+      ]
+    },
+    {
+      "side": "R",
+      "vertices": 4610,
+      "cap_only_max_displacement_u": 0.0113354017958045,
+      "source_cap_relative_rim_original_depth_restored": true,
+      "source_to_candidate_affine_shear_determinant": 1.0,
+      "actual_layer_clearance_forward_translation_u": 0.0009041176664241357,
+      "source_rim_plane": [
+        0.651279027324345,
+        0.06831389491222659,
+        -0.7863179544994062
+      ],
+      "target_rim_plane": [
+        0.5284851690425798,
+        0.08405887326275233,
+        -0.7783839291376874
+      ],
+      "volume": 6.076805849432485e-05,
+      "nonmanifold_edges": 0,
+      "self_intersections": 0,
+      "actual_layer_checks": [
+        {
+          "object": "C6 / iris R",
+          "triangle_overlap_pairs": 0,
+          "ray_hit_count": 4610,
+          "ray_misses": 0,
+          "min_cap_in_front_distance": 3.952774494564437e-05,
+          "max_cap_in_front_distance": 0.015634539508027956
+        },
+        {
+          "object": "C6 / sclera R",
+          "triangle_overlap_pairs": 0,
+          "ray_hit_count": 4610,
+          "ray_misses": 0,
+          "min_cap_in_front_distance": 0.0003838883849311969,
+          "max_cap_in_front_distance": 0.016274657886242494
+        },
+        {
+          "object": "Miao / continuous pear and rounded-square face",
+          "triangle_overlap_pairs": 0,
+          "ray_hit_count": 4610,
+          "ray_misses": 0,
+          "min_cap_in_front_distance": 0.003807519213296473,
+          "max_cap_in_front_distance": 0.026297721691662446
+        }
+      ]
+    }
+  ],
+  "geometry_gate_passed": true,
+  "art_gate_passed": false,
+  "production_changed": false,
+  "all_other_mesh_positions_exact": true,
+  "failures": [],
+  "script_sha256": "ba585937534833f058f4d5d396b1be174c9039c90903c5d6e292e53473ffedcb",
+  "native_sha256": "2ca04f2f8a8e82471fa2a14d81b0efa007be1096505b632c068db26c1ef4a9b3",
+  "renders": [
+    {
+      "file": "c45-full.png",
+      "sha256": "085409a9ded36da677e650aec8dec079c807be12e529ab4d0076f8e4b7148826",
+      "camera_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.09881033003330231
+        ],
+        [
+          0.0,
+          0.08139567822217941,
+          -0.9966818690299988,
+          -12.008593559265137
+        ],
+        [
+          0.0,
+          0.9966818690299988,
+          0.08139567822217941,
+          2.5947763919830322
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 4.2002763748168945
+    },
+    {
+      "file": "c45-face.png",
+      "sha256": "7478ddfd555744138c42aa2be9305838092e5c61698b174ba404afa7d3ba3adf",
+      "camera_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0033332803286612034,
+          -0.9999944567680359,
+          -6.0
+        ],
+        [
+          0.0,
+          0.9999944567680359,
+          0.0033332803286612034,
+          3.049999952316284
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 1.7000000476837158
+    }
+  ]
+}

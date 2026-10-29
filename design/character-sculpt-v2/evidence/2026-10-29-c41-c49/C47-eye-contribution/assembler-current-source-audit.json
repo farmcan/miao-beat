@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "scope": "Executed exact capture and transfer fragments extracted from current corrected assembler; omitted body merge/render/save only",
+  "source_script_sha256": "0d8de3cb75565b2c5c0cb0092147d00d9aa2d32d09df7ffecd2516977fa95e7f",
+  "features_world_hide_and_native_channels_bit_exact": 17,
+  "light_data_and_target_receiver_identity": [
+    {
+      "name": "C7 / optical area L",
+      "world_matrix_bit_exact": true,
+      "native_transform_channels_bit_exact": true,
+      "values": {
+        "energy": 100.0,
+        "diffuse_factor": 0.0,
+        "specular_factor": 1.0,
+        "size": 0.550000011920929,
+        "shape": "DISK"
+      },
+      "receiver_identity_preserved": true,
+      "actual_target_members": [
+        "C7 / clear cornea L",
+        "C6 / iris L"
+      ]
+    },
+    {
+      "name": "C7 / optical area R",
+      "world_matrix_bit_exact": true,
+      "native_transform_channels_bit_exact": true,
+      "values": {
+        "energy": 100.0,
+        "diffuse_factor": 0.0,
+        "specular_factor": 1.0,
+        "size": 0.550000011920929,
+        "shape": "DISK"
+      },
+      "receiver_identity_preserved": true,
+      "actual_target_members": [
+        "C7 / clear cornea R",
+        "C6 / iris R"
+      ]
+    }
+  ],
+  "body_positions_and_data_pointer_exact": true,
+  "production_changed": false,
+  "limits": [
+    "Does not rerun full C31 body merge or render; historical C31 native is unchanged.",
+    "Previous world-matrix-only roundtrip fp32 difference remains in its separate audit."
+  ]
+}

@@ -22,6 +22,16 @@ for tag in ['base','head']:
 assert records['base']['ordered_topology_sha256']==records['head']['ordered_topology_sha256']
 assert records['base']['matrix_world']==records['head']['matrix_world']
 features=[o.name for o in bpy.context.scene.objects if o.name.startswith(('Face /','C6 /','C7 /'))]
+# Library-loaded objects are not linked/evaluated: their matrix_world may still
+# be identity although location/rotation are populated. Snapshot the evaluated
+# donor scene before opening the hand file; never infer world transforms from
+# the subsequently unlinked library objects (C47's lost optical-light cause).
+bpy.context.view_layer.update()
+feature_world={name:bpy.data.objects[name].matrix_world.copy() for name in features}
+feature_hidden={name:bpy.data.objects[name].hide_render for name in features}
+transform_channels=('location','rotation_mode','rotation_euler','rotation_quaternion','rotation_axis_angle','scale','delta_location','delta_rotation_euler','delta_rotation_quaternion','delta_scale')
+assert all(bpy.data.objects[name].parent is None and not bpy.data.objects[name].constraints for name in features),'This assembler requires unparented, unconstrained source face/light objects'
+feature_channels={name:{key:getattr(bpy.data.objects[name],key).copy() if hasattr(getattr(bpy.data.objects[name],key),'copy') else tuple(getattr(bpy.data.objects[name],key)) if key=='rotation_axis_angle' else getattr(bpy.data.objects[name],key) for key in transform_channels} for name in features}
 bpy.ops.wm.open_mainfile(filepath=str(paths['hand']));s=bpy.context.scene;body=bpy.data.objects[NAME]
 assert not body.modifiers and not body.data.shape_keys,'Assembly expects saved evaluated hand mesh'
 assert list(map(list,body.matrix_world))==records['base']['matrix_world']
@@ -37,7 +47,11 @@ previous={name:list(getattr(bpy.data.objects[name].data,'materials',[])) for nam
 with bpy.data.libraries.load(str(paths['head']),link=False) as (src,dst):
  assert set(features)<=set(src.objects);dst.objects=list(features)
 for name,donor in zip(features,dst.objects):
- target=bpy.data.objects[name];target.data=donor.data;target.matrix_world=donor.matrix_world.copy();target.hide_render=donor.hide_render
+ target=bpy.data.objects[name];target.data=donor.data;target.hide_render=feature_hidden[name]
+ assert target.parent is None and not target.constraints
+ # Preserve native channels rather than decompose matrix_world into float32
+ # Euler channels, which measurably perturbs area-light rotation on readback.
+ for key,value in feature_channels[name].items():setattr(target,key,value)
  # Preserve neutral gray slots, except the explicit C20 wet iris approximation.
  if hasattr(target.data,'materials') and not name.startswith('C7 / clear cornea '):
   target.data.materials.clear()
@@ -48,6 +62,9 @@ for ob in s.objects:
  if ob.type=='CURVES' and 'plush' in ob.name.lower():hidden.append(ob.name);ob.hide_render=True
 bpy.context.view_layer.update();actual,records['assembled']=snap(body)
 assert np.array_equal(actual,merged)
+assert all(bpy.data.objects[name].matrix_world==feature_world[name] for name in features),'Face/light world transforms must match evaluated source snapshot'
+records['feature_world_transform_source']='Evaluated original head scene, captured before library loading'
+records['feature_world_transforms']={name:list(map(list,matrix)) for name,matrix in feature_world.items()}
 s.cycles.samples=a.samples;s.cycles.seed=17;s.cycles.use_animated_seed=False;s.render.resolution_x=s.render.resolution_y=a.size;s.render.resolution_percentage=100;s.render.use_border=False;s.render.use_crop_to_border=False;s.render.image_settings.file_format='PNG'
 bpy.context.preferences.filepaths.save_version=0;native=out/'miao-c31-head-hand-gray.blend';bpy.ops.wm.save_as_mainfile(filepath=str(native),compress=True)
 r={'scope':'Exact complete gray-scene branch assembly; input grip quality not inherited as a pass','sources':{k:{'path':str(p.relative_to(ROOT)),'sha256':checks[k]} for k,p in paths.items()},'records':records,'changed_head_vertices':int(changed.sum()),'retained_source_vertices':int(keep.sum()),'head_missing_delta_vertices':0,'new_hand_vertices_bit_exact':True,'head_retained_positions_bit_exact':True,'copied_complete_face_features':features,'groom_hidden_until_rebinding':hidden,'wet_iris':'C20 original colored convex cap, not anatomical glass; retained for readable gaze','native_sha256':sha(native),'script_sha256':sha(__file__),'renders':[],'limits':['Not an independent gray/colored/motion pass.','No new hand UV/groom/shape binding claimed.','All connected hand skin remains the same body mesh, not separate limb plates.']}

@@ -1,0 +1,73 @@
+{
+  "stage": "C42 welded short ear loft diagnostic; art pending",
+  "source_sha": "f481e8a0c00eb4ec5baf5d9c43a6bc250f5a28c4475d9d9cba0ea360ca1c8439",
+  "cuts": [
+    {
+      "side": -1,
+      "count": 276,
+      "local_bounds": [
+        [
+          -0.5391711063623483,
+          -0.2675479536395504,
+          3.1500403881073
+        ],
+        [
+          -0.239156145243659,
+          0.3066801492382953,
+          3.3000478744506836
+        ]
+      ],
+      "mean": [
+        -0.3839297454442358,
+        0.05240008277831168,
+        3.2276610939399055
+      ],
+      "cut_parameter": 3.42,
+      "ordered_boundary_one_loop": true,
+      "new_faces": 6900,
+      "apex_local": [
+        -0.4756085325217272,
+        -0.06259991722168833,
+        3.411018668094888
+      ]
+    },
+    {
+      "side": 1,
+      "count": 269,
+      "local_bounds": [
+        [
+          0.24223366404003227,
+          -0.2658016015148321,
+          3.1506097316741943
+        ],
+        [
+          0.5395291296778232,
+          0.30317457842790463,
+          3.299257755279541
+        ]
+      ],
+      "mean": [
+        0.3845926559898962,
+        0.0525888932812491,
+        3.228078060433767
+      ],
+      "cut_parameter": 3.42,
+      "ordered_boundary_one_loop": true,
+      "new_faces": 6725,
+      "apex_local": [
+        0.4762714430673876,
+        -0.06241110671875091,
+        3.4114356345887495
+      ]
+    }
+  ],
+  "deleted_old_vertices": 14206,
+  "new_boundary_vertices": 13627,
+  "all_surviving_source_vertices_exact": true,
+  "outside_cut_deleted": 0,
+  "nonmanifold_edges": 0,
+  "signed_volume": 6.459399546418359,
+  "head_ear_self_pairs": 15,
+  "new_material_UV_and_groom_binding": "not rebuilt; gray diagnostic only",
+  "native_sha256": "2e4588991d532da6c4cd4e16c04004a5c9c931ee7b5ce909385b553ede997288"
+}

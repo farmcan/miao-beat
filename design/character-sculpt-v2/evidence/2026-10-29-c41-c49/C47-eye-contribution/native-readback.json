@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "all_mesh_geometry_exact": true,
+  "all_curve_geometry_exact": true,
+  "all_used_material_nodes_and_links_sha256": "26b82e614a5e4ae8a08d94e7151464099e612a7ce23e51d81ac541c91a510864",
+  "only_light_transforms_changed": [
+    "C7 / optical area L",
+    "C7 / optical area R"
+  ],
+  "all_light_nontransform_data_and_receivers_exact": true,
+  "native_sha256": "1ab25c94d05b91f7cd11480d752dbed2154577f30c45a7c420d6d1a2dc77f146",
+  "art_gate_passed": false,
+  "limits": [
+    "Independent process native readback, not independent art review.",
+    "Loader causal probe shows the unlinked world matrix state; historical assembly source must be interpreted alongside it."
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "stage": "C48 head-roof/short-ear graph candidate; independent visual review pending",
+  "source_sha256": "f481e8a0c00eb4ec5baf5d9c43a6bc250f5a28c4475d9d9cba0ea360ca1c8439",
+  "actual_source_boundary_count": 700,
+  "pre_weld_boundary_count": 700,
+  "new_interior_chart_vertices": 2293,
+  "new_patch_triangles": 5284,
+  "minimum_chart_triangle_signed_double_area": 7.98852236944101e-08,
+  "screened_harmonic_iterations": 726,
+  "screened_harmonic_delta": 9.942272450203654e-11,
+  "prototype_below_retained_cut_count": 0,
+  "prototype_min_cut_clearance": 0.003704121791033632,
+  "ear_targets": [
+    {
+      "side": -1,
+      "peak_target_z": 3.425,
+      "half_width_reference_u": 0.11,
+      "half_depth_reference_u": 0.1,
+      "shallow_cup_max_u": 0.018
+    },
+    {
+      "side": 1,
+      "peak_target_z": 3.425,
+      "half_width_reference_u": 0.11,
+      "half_depth_reference_u": 0.1,
+      "shallow_cup_max_u": 0.018
+    }
+  ],
+  "source_fit": {
+    "source_samples": 11367,
+    "coef": [
+      3.3228204086698763,
+      -0.27025993536467874,
+      -0.8331625640376883,
+      0.049926770261999986,
+      -2.745874275178212,
+      -2.5554330477814524
+    ],
+    "rms": 0.00565104264706022,
+    "max_abs_error": 0.025731465354824845,
+    "predictions": [
+      {
+        "y": -0.3,
+        "z_x0_2_3_4_5": [
+          3.2956935342884717,
+          3.2724186104152886,
+          3.2395757240356393,
+          3.186597117566214,
+          3.1064842254690967
+        ]
+      },
+      {
+        "y": -0.15,
+        "z_x0_2_3_4_5": [
+          3.3215555270472543,
+          3.306100228300282,
+          3.283031873328397,
+          3.2437376108298412,
+          3.1812188752666994
+        ]
+      },
+      {
+        "y": 0,
+        "z_x0_2_3_4_5": [
+          3.322863118604949,
+          3.3106276654981817,
+          3.2915841175765523,
+          3.2579245849483547,
+          3.2026505020756733
+        ]
+      },
+      {
+        "y": 0.15,
+        "z_x0_2_3_4_5": [
+          3.322969969671948,
+          3.3093545827193784,
+          3.288586117490497,
+          3.252511700632146,
+          3.1941327666064097
+        ]
+      },
+      {
+        "y": 0.3,
+        "z_x0_2_3_4_5": [
+          3.3118673685152262,
+          3.2922722682308483,
+          3.2640291613372057,
+          3.2174902461481896,
+          3.145656957125884
+        ]
+      }
+    ]
+  },
+  "art_pass": false,
+  "limits": [
+    "Fresh cap UV, pigment, fur bind, rig, color and animation not rebuilt or accepted.",
+    "Source eyes/brows/nose/other objects preserved. Static gray is not a character art pass."
+  ],
+  "all_retained_source_positions_bit_exact": true,
+  "protected_below_cut_margin_all_present": true,
+  "C35_new_hand_5359_all_present": true,
+  "deleted_source_vertices": 31051,
+  "new_zero_canonical_points": 2993,
+  "nonmanifold_edges": 0,
+  "loose_vertices": 0,
+  "signed_volume": 6.440888002365049,
+  "minimum_new_patch_normal_z": 0.1859046071767807,
+  "head_ear_self_pairs": 0,
+  "geometry_gate": true,
+  "native_sha256": "3a57fe876312d2297f83c84088a07d8d7877979e21c89cdf05f440bc022d9ded"
+}

@@ -1,0 +1,165 @@
+{
+  "status": "partial-reference-alignment-not-art-release",
+  "whole_character_approved": false,
+  "production_changed": false,
+  "new_skin_animation_created": false,
+  "native_blends_included": false,
+  "files": [
+    {
+      "file": "C41-rejected/diagnostic-shared-root-full-front.png",
+      "source": "artifacts/character-right-arm-c41/diagnostic-shared-root-full-front.png",
+      "bytes": 633034,
+      "sha256": "41116eabc809e24886908fc0eccef535d66c4f2570a0c95a7b3ae6c0fab7f979"
+    },
+    {
+      "file": "C41-rejected/loft-preflight-receipt.json",
+      "source": "artifacts/character-right-arm-c41/loft-preflight-receipt.json",
+      "bytes": 30316,
+      "sha256": "e10ea7bd5ef9acf7bdf012178b6fb905b2f93ffea7f89f5f1729a2ad2aa3f858"
+    },
+    {
+      "file": "C42-rejected/gray-face.png",
+      "source": "artifacts/character-ear-c42/loft-r1/gray-face.png",
+      "bytes": 591765,
+      "sha256": "f26e94602e2e6544ea03b67e69529cec14c377bba7e9df1237b1799a65452d05"
+    },
+    {
+      "file": "C42-rejected/receipt.json",
+      "source": "artifacts/character-ear-c42/loft-r1/receipt.json",
+      "bytes": 1807,
+      "sha256": "f298e35c01ab445ed5a278f9544397109a13308620ce03d3d5ec95beac868154"
+    },
+    {
+      "file": "C43-negative-control/receipt.json",
+      "source": "artifacts/character-eye-lighting-c43/controlled-ab/receipt.json",
+      "bytes": 31335,
+      "sha256": "0361fb570ac5a803e2d565a0bf4e0638014329f2002e8465ca8845602f41c6e5"
+    },
+    {
+      "file": "C45-rejected/c45-face.png",
+      "source": "artifacts/character-eye-cap-c45/r2-layer-clearance/c45-face.png",
+      "bytes": 593310,
+      "sha256": "7478ddfd555744138c42aa2be9305838092e5c61698b174ba404afa7d3ba3adf"
+    },
+    {
+      "file": "C45-rejected/receipt.json",
+      "source": "artifacts/character-eye-cap-c45/r2-layer-clearance/receipt.json",
+      "bytes": 5204,
+      "sha256": "3e7396a131729e896473649fe0edb638b3650257fbd149787fc1863642527cd7"
+    },
+    {
+      "file": "C45-rejected/native-readback.json",
+      "source": "artifacts/character-eye-cap-c45/r2-layer-clearance/native-readback.json",
+      "bytes": 1157,
+      "sha256": "92c2d7150177689d154ba9ea1f7781d0ea7b2aa5ec902406ba61812639a5ba8e"
+    },
+    {
+      "file": "C47-eye-contribution/c47-face.png",
+      "source": "artifacts/character-eye-optical-c47/c47-face.png",
+      "bytes": 594915,
+      "sha256": "28a44920bda16effe5d03e68c74c1ffcd12ac72585d9c7e81d7ca8d8921e8293"
+    },
+    {
+      "file": "C47-eye-contribution/c47-full.png",
+      "source": "artifacts/character-eye-optical-c47/c47-full.png",
+      "bytes": 701550,
+      "sha256": "2b4a5c485551a0e482c00d458d389729c8a1e0df3efc9eaa17cead7faac6aaa1"
+    },
+    {
+      "file": "C47-eye-contribution/receipt.json",
+      "source": "artifacts/character-eye-optical-c47/receipt.json",
+      "bytes": 5184,
+      "sha256": "f58ef146ac3b90a56dbf6725d9d85edfb2385f950404f12cf77ffce9d84a38a9"
+    },
+    {
+      "file": "C47-eye-contribution/native-readback.json",
+      "source": "artifacts/character-eye-optical-c47/native-readback.json",
+      "bytes": 692,
+      "sha256": "43ad3b253fb0471d4035f04a31dfe614afe06c7e419f3bc7bfa4062b351545b0"
+    },
+    {
+      "file": "C47-eye-contribution/loader-transform-causal-probe.json",
+      "source": "artifacts/character-eye-optical-c47/loader-transform-causal-probe.json",
+      "bytes": 9389,
+      "sha256": "f7a8eb57cde1ba6d5521be63c64eb42cdc9cc66601717737fe87f463d4282e1d"
+    },
+    {
+      "file": "C47-eye-contribution/assembler-current-source-audit.json",
+      "source": "artifacts/character-eye-optical-c47/assembler-current-source-audit.json",
+      "bytes": 1543,
+      "sha256": "a1434513fabe4f1e64d7d76d1d73e80de26eb9590f2be0cb2975e5c90e7222e9"
+    },
+    {
+      "file": "C47-eye-contribution/assembler-transform-strategy-audit.json",
+      "source": "artifacts/character-eye-optical-c47/assembler-transform-strategy-audit.json",
+      "bytes": 19202,
+      "sha256": "1f3e55b60f17c7fd2c7f3f99f5718d26bed549a88528b14ffc913f98d2049d3a"
+    },
+    {
+      "file": "C48-rejected/gray-front.png",
+      "source": "artifacts/character-ear-c48/candidate-1/gray-front.png",
+      "bytes": 632183,
+      "sha256": "f0120e30cfa51dfd1f6c5ab5b32aa0b2e7004626daf5de4e913e08c8cf8654ff"
+    },
+    {
+      "file": "C48-rejected/receipt.json",
+      "source": "artifacts/character-ear-c48/candidate-1/receipt.json",
+      "bytes": 3087,
+      "sha256": "5d1c4efb8f06151bf010f4b1379b973f468ca4febf9d7768edda128d2fead35b"
+    },
+    {
+      "file": "C48-boundary-attribution/boundary-normal-attribution.json",
+      "source": "artifacts/character-ear-c48/boundary-normal-attribution.json",
+      "bytes": 1242,
+      "sha256": "f69ad9d9b82e718cb92535dbecda770170a6fed633c7630e0bea7c6634b368e2"
+    },
+    {
+      "file": "C49-integrated-study/c49-full.png",
+      "source": "artifacts/character-local-merge-c49/c49-full.png",
+      "bytes": 702996,
+      "sha256": "2d9d35d99d0028dcaf65a2fc5d5fe81723507ae320c96397e1a5c37d351c03b9"
+    },
+    {
+      "file": "C49-integrated-study/c49-face.png",
+      "source": "artifacts/character-local-merge-c49/c49-face.png",
+      "bytes": 595530,
+      "sha256": "2a7f15fc513657a4c1a224993fe44e9169c6c1198268b4dd13f285a5d218939b"
+    },
+    {
+      "file": "C49-integrated-study/c49-three-quarter.png",
+      "source": "artifacts/character-local-merge-c49/c49-three-quarter.png",
+      "bytes": 714342,
+      "sha256": "546f8c276075de370ddddaabbe6123ca12d34c752172d6eaec0b36aba52364e8"
+    },
+    {
+      "file": "C49-integrated-study/receipt.json",
+      "source": "artifacts/character-local-merge-c49/receipt.json",
+      "bytes": 3276,
+      "sha256": "a0a45745133536598df3a71ab9486af6e39e8eb5a33d7d03a08b43accc16ee87"
+    },
+    {
+      "file": "C49-integrated-study/preflight.json",
+      "source": "artifacts/character-local-merge-c49/preflight.json",
+      "bytes": 896,
+      "sha256": "91c45a12a295b210d941478b6e13a2eb1232756b493da1bf2a0a8ef0b0ce32bf"
+    },
+    {
+      "file": "C41-rejected/readback-attribution.json",
+      "source": "artifacts/character-right-arm-c41/readback-attribution.json",
+      "bytes": 81619,
+      "sha256": "efff68676eee881bed51840daaae742022c66505f2e87d498cd179a008b3cdbf"
+    },
+    {
+      "file": "C43-negative-control/A-original-routing-face.png",
+      "source": "artifacts/character-eye-lighting-c43/controlled-ab/A-original-routing-face.png",
+      "bytes": 592582,
+      "sha256": "1bb8cb310b9da3c5473c9cfe2e64ea2c91319dd164a4397d6d1d519dc1aaeed0"
+    },
+    {
+      "file": "C43-negative-control/B-cap-studio-receivers-face.png",
+      "source": "artifacts/character-eye-lighting-c43/controlled-ab/B-cap-studio-receivers-face.png",
+      "bytes": 593152,
+      "sha256": "0f31e3533c0d3272075eac31705a41d542f291a3ce5d6d37b8aecc03376fa894"
+    }
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "scope": "C47 physical specular re-aim of existing two optical areas only; art review pending",
+  "source": "artifacts/character-eye-cap-c45/r2-layer-clearance/miao-c45-cap-curvature.blend",
+  "source_sha256": "2ca04f2f8a8e82471fa2a14d81b0efa007be1096505b632c068db26c1ef4a9b3",
+  "native_sha256": "1ab25c94d05b91f7cd11480d752dbed2154577f30c45a7c420d6d1a2dc77f146",
+  "script_sha256": "a24557baf1626b53015744d84504005c2a811f85ce981dc1db9ac3b27fa52d00",
+  "all_mesh_curve_geometry_exact": true,
+  "all_material_slots_exact": true,
+  "all_light_nontransform_parameters_exact": true,
+  "studio_receivers_unchanged_no_caps_added": true,
+  "placements": [
+    {
+      "light": "C7 / optical area L",
+      "target_actual_vertex": 801,
+      "point": [
+        -0.022813864052295685,
+        -0.4184623658657074,
+        2.986219644546509
+      ],
+      "actual_smooth_normal": [
+        0.03488254247656766,
+        -0.9784568753154809,
+        0.20348304936341982
+      ],
+      "mirror_direction": [
+        0.06919112056493759,
+        -0.9441320896148682,
+        0.3222222626209259
+      ],
+      "preserved_source_to_target_distance": 3.0154832705672385,
+      "old_matrix": [
+        [
+          0.9914448857307434,
+          -0.13052617013454437,
+          0.0,
+          0.0
+        ],
+        [
+          0.13052617013454437,
+          0.9914448857307434,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "new_matrix": [
+        [
+          0.9973254203796387,
+          -0.023551037535071373,
+          0.06919112056493759,
+          0.18583080172538757
+        ],
+        [
+          0.07308941334486008,
+          0.32136037945747375,
+          -0.9441320896148682,
+          -3.265476942062378
+        ],
+        [
+          6.166437138688252e-09,
+          0.946664035320282,
+          0.32222220301628113,
+          3.9578754901885986
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "light": "C7 / optical area R",
+      "target_actual_vertex": 801,
+      "point": [
+        0.4405973255634308,
+        -0.30953696370124817,
+        2.986219644546509
+      ],
+      "actual_smooth_normal": [
+        0.45869292166164627,
+        -0.8625909937603403,
+        0.21339536335415385
+      ],
+      "mirror_direction": [
+        0.8046375513076782,
+        -0.5164722800254822,
+        0.29294171929359436
+      ],
+      "preserved_source_to_target_distance": 3.0343775750668853,
+      "old_matrix": [
+        [
+          0.9914448857307434,
+          -0.13052617013454437,
+          0.0,
+          0.0
+        ],
+        [
+          0.13052617013454437,
+          0.9914448857307434,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "new_matrix": [
+        [
+          0.5401691794395447,
+          -0.246526837348938,
+          0.8046376705169678,
+          2.882171392440796
+        ],
+        [
+          0.8415564298629761,
+          0.15823790431022644,
+          -0.5164721608161926,
+          -1.8767088651657104
+        ],
+        [
+          7.254889311525403e-08,
+          0.9561303853988647,
+          0.29294148087501526,
+          3.875115394592285
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "renders": [
+    {
+      "file": "c47-full.png",
+      "sha256": "2b4a5c485551a0e482c00d458d389729c8a1e0df3efc9eaa17cead7faac6aaa1",
+      "camera_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.09881033003330231
+        ],
+        [
+          0.0,
+          0.08139567822217941,
+          -0.9966818690299988,
+          -12.008593559265137
+        ],
+        [
+          0.0,
+          0.9966818690299988,
+          0.08139567822217941,
+          2.5947763919830322
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 4.2002763748168945
+    },
+    {
+      "file": "c47-face.png",
+      "sha256": "28a44920bda16effe5d03e68c74c1ffcd12ac72585d9c7e81d7ca8d8921e8293",
+      "camera_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0033332803286612034,
+          -0.9999944567680359,
+          -6.0
+        ],
+        [
+          0.0,
+          0.9999944567680359,
+          0.0033332803286612034,
+          3.049999952316284
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 1.7000000476837158
+    }
+  ],
+  "art_gate_passed": false,
+  "production_changed": false,
+  "limits": [
+    "Uses actual smooth vertex normals and orthographic camera rays; full path-traced images remain the appearance evidence.",
+    "Finite area disk occlusion and full BRDF are not reduced to an angular threshold.",
+    "Both prior studies and their failures are retained."
+  ]
+}
