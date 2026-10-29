@@ -6,3 +6,6 @@ artifacts/
 .DS_Store
 assets-source/
 public/vendor/
+
+# Local assembled source handoff, distributed via release attachments
+design/miao-reuse-v1/source-pack/

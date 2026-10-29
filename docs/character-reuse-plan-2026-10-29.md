@@ -33,3 +33,11 @@
 `static-hold/inspection-manifest.json`已锁定原色/暖色完整、3Q和脸/双手共10张。identity/craft/motion三方全部FAIL：左眼伪影、嘴不可读、握颈处不自然肉色块与右掌压琴。
 
 已确认builder将`Sealed Mouth`从False误置True（这是封口实现开关，不是普通闭嘴pose）；相关9条driver有效，不能说缺失。camera helper兼容driver虽然valid，但方向行为尚未证实等价。下一步仅做源脸属性/相机helper有限基线诊断与握姿几何测量。禁止动画和生产猫替换。报告见`docs/research/miao-reuse-static-{identity,craft,motion}-judge-2026-10-29.md`。
+
+## 6. 有限恢复与持琴量测
+
+2026-10-29追加：恢复源mouth/head/pupil/Quality与每次render显式相机helper同步后，两角度真实渲染嘴与眼部恢复，identity与craft独立确认。该项关闭，不重建眼嘴；持琴仍未通过。
+
+新持琴候选仅由真实mesh、皮肤proxy和原臂长量测得出；使用整琴统一0.70比例、15°颈轴上倾。左/右腕距分别0.223846m / 0.237603m，原两段臂长0.244759m；右侧仅约7mm余量，任何过伸立即阻止继续。量测不是实际姿态/碰撞通过。下一步是唯一builder按真实frame与指腹目标作有限静态纠错，先验eval皮肤再出主图，不拉长手臂或改手指网格，不提前改色或加动作。
+
+跨机原素材包和说明见 `docs/character-licensed-assets-handoff.md`。

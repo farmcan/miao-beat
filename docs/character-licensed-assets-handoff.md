@@ -30,3 +30,5 @@
 脸部有限诊断已恢复原始嘴/眼外观；手与琴接触仍FAIL。完整静态猫+琴必须再次通过identity/craft/contact三评，才允许增加演奏、头眼动作和上线替换。不要把首次失败hold脚本作为生产方案。本包不含失败hold工作工程。
 
 发布验收：GitHub公开附件大小与服务端SHA256均与本地一致，匿名canonical receipt下载逐字节匹配；代码/研究文档已commit并push（030607d），大模型原文件在Release附件内。
+
+另有 `miao-reuse-source-rest-pack.zip`：自带猫原包和最小rest脚本，解压后用官方3.6运行即可，不依赖失败hold工程。新camera同步已逐轴验0，原pose hash不变；不是持琴或动画成品。大小6288279字节，SHA256 `0f565bbdcfe0a21a1fa31bc525d4967c25b82b8e2dd026a6bacb5cdae0097e8f`。GPL文本与模型署名均保留。

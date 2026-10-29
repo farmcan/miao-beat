@@ -34,9 +34,9 @@ Run from the repository root after obtaining and verifying the fixed source asse
 ```sh
 artifacts/runtime/blender-3.6.23/Blender.app/Contents/MacOS/Blender \
   -b --factory-startup --disable-autoexec --python-exit-code 1 \
-  -P design/miao-reuse-v1/scripts/render_native_color.py -- \
+  -P design/miao-reuse-v1/scripts/render_source_rest_baseline.py -- \
   artifacts/upstream-cat-candidates/scout-a/wingit_cat.blend \
-  artifacts/miao-reuse-v1/compat
+  artifacts/miao-reuse-v1/source-rest-baseline
 ```
 
 Outputs:
@@ -62,3 +62,9 @@ The static hold/color experiment is now **FAIL and frozen**, not an accepted imp
 ### Limited face-baseline correction after failure freeze
 
 The failed hold scenes and images remain frozen. A separate authorized technical recovery restores upstream face control matrices, SealedMouth=False and source Quality=1, then mutes the three non-equivalent camera rotation drivers and assigns `camera.matrix_world.to_euler()` to the helper's local Euler before each render. Both two-angle face images recover a readable native mouth with no eye triangle, and every axis error is zero. Use `scripts/recover_face_baseline.py` and the receipt under `artifacts/miao-reuse-v1/face-baseline-recovery/`; this is a supported static fallback, not a functioning general camera driver or animation claim. Hand contact/proportions remain failed and awaiting a measured plan and independent review.
+
+## Current recommended source-only handoff
+
+Use `scripts/render_source_rest_baseline.py` or the self-contained `source-pack/` / `artifacts/miao-reuse-v1/handoff/miao-reuse-source-rest-pack.zip`. It was actually run from the copied pack with default relative input/output paths. It requires only the packed immutable upstream source and official Blender 3.6, never a failed hold derivative. The correct outputs are `source-rest-original-three-quarter.png`, `source-rest-native36.blend` and `source-rest-baseline-receipt.json` under the selected output folder. Camera per-axis errors were all zero and source pose hash was unchanged.
+
+The older `render_native_color.py` is historical evidence of the rejected TRANSFORMS-driver compatibility implementation. Do not use or recommend it for fresh renders. Earlier output/receipt names in this document describe historical runs, not the current source-only command.
