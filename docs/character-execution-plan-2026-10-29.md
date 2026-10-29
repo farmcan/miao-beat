@@ -124,3 +124,27 @@ C28/C30/C34的纤维可读性或材质接线有技术进展，但三评未确认
 C43的加Studio受光与C45的恢复cap曲率分别未达到艺术通过。C47进一步实际计算镜面方向，发现C31合并器在尚未link的library donor上读取world matrix，导致两盏光学灯位置变成世界原点。改为先在真实源scene冻结原transform channels、跨scene只取data后恢复全部native通道；独立实际执行当前源码验证17feature world/channels/hide exact、receiver对象正确。C47仅重新摆放原两灯，蓝色层次与真实小高光恢复，仍待三角色局部评审；不反推曲率修改必不可少。
 
 C49把C40左肩的22074个实际点无冲突地合入C47，完整三视彩图已输出，整体P0未放行。C41右臂共享皮肤有真实结构进展，但细管/平袖口/stub趾及碰撞被明确拒绝；C46先按原图轮廓与厚度标注，改丰满圆掌的连续front/back面。C42耳的两方案也被拒绝；C48完整移除旧槽底/厚唇，用实际单一头顶边界和未污染头顶截面重建连续短圆耳。两项均先实际看完整灰图，不在错误形态上继续微调。
+
+### 停止在旧病态拓扑上缝补：C51/C52 重拓扑验证
+
+C46的两张形态候选均已拒绝：r1肌肉球/拳套腕，r2虽消除平端盖，但肩根黑口与深度场皱褶仍P0。C48/C50的高度图/XYZ接面也失败，后者共享带fairing后仍有V带与实际自交；没有把这些灰图合入C49。
+
+新实验改变方法，先验证最便宜的原生重拓扑，不继续同类拟合：
+
+- C51：只对真实原头临时局部voxel remesh，使用均匀拓扑重做浅耳；先检外形身份，最终仍需桥回同一connected body。临时分头是作者过程，不是production资产。
+- C52：在独立分支对C49完整body做固定分辨率voxel retopology与一次轻relax，观察能否保形并消除病态表面。此分支所有新body点ID0，旧C35接触证明、UV/groom/rig一律不继承。原native及其他眼脸/琴物件保持，不把新网格伪装成旧点exact。
+- C53：仅准备单音/和弦目标路径的中断速度连续性，旧v2只有位置连续。安全距离、一次接触、无队列与独立phrase时钟同时测试，失败保留；不绑定角色，不制作新动画，不能把target连续说成真实爪子自然。
+
+以上均未通过美术门禁。任何实验丢失原图身份或出现新接痕即拒绝；重拓扑构建成功不算优化完成。下一次可用灰模必须重新由三个非builder实际对原图评审。
+
+方法来源：[Blender官方重拓扑说明](https://docs.blender.org/manual/en/5.0/modeling/meshes/retopology.html)与[原生voxel remesh发布说明](https://developer.blender.org/docs/release_notes/2.81/sculpt/)。上游说明其通过体积重建均匀面来处理交叠、准备雕刻；这只是选择实验的依据，不能保证Miao保形或美术通过，仍以本机完整实图为准。
+
+### 可观看的当前状态
+
+- 线上可弹奏：[原版 / Three 3D / Godot](https://miao-beat.pages.dev/labs/character-compare/)。本轮重新读取HTTP200，HTML与仓库public文件逐字节一致；仍为此前已验输入的技术样机，未换成新研究角色。
+- 新静帧对照：[下载单文件HTML](https://github.com/farmcan/miao-beat/releases/download/authoring-study-2026-10-29-c49/miao-reference-progress-c59.html)，包含原图、C49彩色进展与C59灰模。离线可切整身、看脸、看手；脸图重新按统一相机渲染，不用低清整身像素放大。机位未经严格标定，不能当像素误差评分。
+- 可换电脑打开的作者文件：[C49 packed Blender包](character-authoring-download.md)，整体美术仍未通过。
+
+C59已把C35完整5359手点接回新body，真实全body self0/winding0，无明显腕缝；但扩测发现原C35手与两根品丝各28对真实交线，旧C35木体/六弦gate未涵盖品丝。保留身体也有旧穿琴，不能将“精确复用旧手”当成整琴接触通过。C56耳浅化/软化、C58掌背丰满经三评确认局部贡献，但厚耳底框/薄片、三短趾不清仍P0。C62把细节放到Smooth之后，确实更可辨但法线crease新增真实self，已拒绝不合入。C61改以实际内腔填充保外壳，仍在诊断中，不写成完成。
+
+C53纯目标路径的accepted接管有C1位置/速度连续和有限tube/wood采样证据，独立审查允许保留研究；同刻/极近knot可能拒绝视觉接管、数值域和profile校验仍有P2。没有绑定新皮肤、生成新角色动画或接入audio/recording，不得从target测试反推手已自然。

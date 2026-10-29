@@ -1,0 +1,1054 @@
+{
+  "status": "C53-analytic-and-sampled-controller-bench-not-character-animation",
+  "profileSha256": "d0819636e7fae463a67b6aa8431996134e59028b675bcd0ac41ce3217d25d01e",
+  "reusedClockSourceSha256": "6669516186561688bb0515668ab04e104420e5a6219a62f987bbd1d98ea50055",
+  "C53SourceSha256": "ca27e7a736c16e08ac1ad6016290ddb39ba2deffd4f7900601bcb0310614e3f8",
+  "boundaryTimesMs": [
+    0,
+    10,
+    30,
+    45,
+    70,
+    85,
+    100,
+    139
+  ],
+  "uninterrupted": [
+    {
+      "event": {
+        "mode": "melody",
+        "noteIndex": 0
+      },
+      "crossings": [
+        {
+          "sourceString": 1,
+          "count": 0
+        },
+        {
+          "sourceString": 2,
+          "count": 0
+        },
+        {
+          "sourceString": 3,
+          "count": 0
+        },
+        {
+          "sourceString": 4,
+          "count": 0
+        },
+        {
+          "sourceString": 5,
+          "count": 1
+        },
+        {
+          "sourceString": 6,
+          "count": 0
+        }
+      ]
+    },
+    {
+      "event": {
+        "mode": "melody",
+        "noteIndex": 1
+      },
+      "crossings": [
+        {
+          "sourceString": 1,
+          "count": 0
+        },
+        {
+          "sourceString": 2,
+          "count": 0
+        },
+        {
+          "sourceString": 3,
+          "count": 0
+        },
+        {
+          "sourceString": 4,
+          "count": 0
+        },
+        {
+          "sourceString": 5,
+          "count": 1
+        },
+        {
+          "sourceString": 6,
+          "count": 0
+        }
+      ]
+    },
+    {
+      "event": {
+        "mode": "melody",
+        "noteIndex": 2
+      },
+      "crossings": [
+        {
+          "sourceString": 1,
+          "count": 0
+        },
+        {
+          "sourceString": 2,
+          "count": 0
+        },
+        {
+          "sourceString": 3,
+          "count": 0
+        },
+        {
+          "sourceString": 4,
+          "count": 0
+        },
+        {
+          "sourceString": 5,
+          "count": 0
+        },
+        {
+          "sourceString": 6,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "event": {
+        "mode": "melody",
+        "noteIndex": 3
+      },
+      "crossings": [
+        {
+          "sourceString": 1,
+          "count": 0
+        },
+        {
+          "sourceString": 2,
+          "count": 0
+        },
+        {
+          "sourceString": 3,
+          "count": 0
+        },
+        {
+          "sourceString": 4,
+          "count": 0
+        },
+        {
+          "sourceString": 5,
+          "count": 0
+        },
+        {
+          "sourceString": 6,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "event": {
+        "mode": "melody",
+        "noteIndex": 4
+      },
+      "crossings": [
+        {
+          "sourceString": 1,
+          "count": 0
+        },
+        {
+          "sourceString": 2,
+          "count": 0
+        },
+        {
+          "sourceString": 3,
+          "count": 0
+        },
+        {
+          "sourceString": 4,
+          "count": 0
+        },
+        {
+          "sourceString": 5,
+          "count": 0
+        },
+        {
+          "sourceString": 6,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "event": {
+        "mode": "melody",
+        "noteIndex": 5
+      },
+      "crossings": [
+        {
+          "sourceString": 1,
+          "count": 0
+        },
+        {
+          "sourceString": 2,
+          "count": 0
+        },
+        {
+          "sourceString": 3,
+          "count": 0
+        },
+        {
+          "sourceString": 4,
+          "count": 0
+        },
+        {
+          "sourceString": 5,
+          "count": 0
+        },
+        {
+          "sourceString": 6,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "event": {
+        "mode": "melody",
+        "noteIndex": 6
+      },
+      "crossings": [
+        {
+          "sourceString": 1,
+          "count": 0
+        },
+        {
+          "sourceString": 2,
+          "count": 0
+        },
+        {
+          "sourceString": 3,
+          "count": 0
+        },
+        {
+          "sourceString": 4,
+          "count": 0
+        },
+        {
+          "sourceString": 5,
+          "count": 0
+        },
+        {
+          "sourceString": 6,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "event": {
+        "mode": "melody",
+        "noteIndex": 7
+      },
+      "crossings": [
+        {
+          "sourceString": 1,
+          "count": 0
+        },
+        {
+          "sourceString": 2,
+          "count": 0
+        },
+        {
+          "sourceString": 3,
+          "count": 0
+        },
+        {
+          "sourceString": 4,
+          "count": 0
+        },
+        {
+          "sourceString": 5,
+          "count": 0
+        },
+        {
+          "sourceString": 6,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "event": {
+        "mode": "chord",
+        "sourceStrings": [
+          1
+        ]
+      },
+      "crossings": [
+        {
+          "sourceString": 1,
+          "count": 1
+        },
+        {
+          "sourceString": 2,
+          "count": 0
+        },
+        {
+          "sourceString": 3,
+          "count": 0
+        },
+        {
+          "sourceString": 4,
+          "count": 0
+        },
+        {
+          "sourceString": 5,
+          "count": 0
+        },
+        {
+          "sourceString": 6,
+          "count": 0
+        }
+      ]
+    },
+    {
+      "event": {
+        "mode": "chord",
+        "sourceStrings": [
+          1,
+          2
+        ]
+      },
+      "crossings": [
+        {
+          "sourceString": 1,
+          "count": 1
+        },
+        {
+          "sourceString": 2,
+          "count": 1
+        },
+        {
+          "sourceString": 3,
+          "count": 0
+        },
+        {
+          "sourceString": 4,
+          "count": 0
+        },
+        {
+          "sourceString": 5,
+          "count": 0
+        },
+        {
+          "sourceString": 6,
+          "count": 0
+        }
+      ]
+    },
+    {
+      "event": {
+        "mode": "chord",
+        "sourceStrings": [
+          1,
+          2,
+          3
+        ]
+      },
+      "crossings": [
+        {
+          "sourceString": 1,
+          "count": 1
+        },
+        {
+          "sourceString": 2,
+          "count": 1
+        },
+        {
+          "sourceString": 3,
+          "count": 1
+        },
+        {
+          "sourceString": 4,
+          "count": 0
+        },
+        {
+          "sourceString": 5,
+          "count": 0
+        },
+        {
+          "sourceString": 6,
+          "count": 0
+        }
+      ]
+    },
+    {
+      "event": {
+        "mode": "chord",
+        "sourceStrings": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "crossings": [
+        {
+          "sourceString": 1,
+          "count": 1
+        },
+        {
+          "sourceString": 2,
+          "count": 1
+        },
+        {
+          "sourceString": 3,
+          "count": 1
+        },
+        {
+          "sourceString": 4,
+          "count": 1
+        },
+        {
+          "sourceString": 5,
+          "count": 0
+        },
+        {
+          "sourceString": 6,
+          "count": 0
+        }
+      ]
+    },
+    {
+      "event": {
+        "mode": "chord",
+        "sourceStrings": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "crossings": [
+        {
+          "sourceString": 1,
+          "count": 1
+        },
+        {
+          "sourceString": 2,
+          "count": 1
+        },
+        {
+          "sourceString": 3,
+          "count": 1
+        },
+        {
+          "sourceString": 4,
+          "count": 1
+        },
+        {
+          "sourceString": 5,
+          "count": 1
+        },
+        {
+          "sourceString": 6,
+          "count": 0
+        }
+      ]
+    },
+    {
+      "event": {
+        "mode": "chord",
+        "sourceStrings": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "crossings": [
+        {
+          "sourceString": 1,
+          "count": 1
+        },
+        {
+          "sourceString": 2,
+          "count": 1
+        },
+        {
+          "sourceString": 3,
+          "count": 1
+        },
+        {
+          "sourceString": 4,
+          "count": 1
+        },
+        {
+          "sourceString": 5,
+          "count": 1
+        },
+        {
+          "sourceString": 6,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "event": {
+        "mode": "chord",
+        "sourceStrings": [
+          2
+        ]
+      },
+      "crossings": [
+        {
+          "sourceString": 1,
+          "count": 0
+        },
+        {
+          "sourceString": 2,
+          "count": 1
+        },
+        {
+          "sourceString": 3,
+          "count": 0
+        },
+        {
+          "sourceString": 4,
+          "count": 0
+        },
+        {
+          "sourceString": 5,
+          "count": 0
+        },
+        {
+          "sourceString": 6,
+          "count": 0
+        }
+      ]
+    },
+    {
+      "event": {
+        "mode": "chord",
+        "sourceStrings": [
+          2,
+          3
+        ]
+      },
+      "crossings": [
+        {
+          "sourceString": 1,
+          "count": 0
+        },
+        {
+          "sourceString": 2,
+          "count": 1
+        },
+        {
+          "sourceString": 3,
+          "count": 1
+        },
+        {
+          "sourceString": 4,
+          "count": 0
+        },
+        {
+          "sourceString": 5,
+          "count": 0
+        },
+        {
+          "sourceString": 6,
+          "count": 0
+        }
+      ]
+    },
+    {
+      "event": {
+        "mode": "chord",
+        "sourceStrings": [
+          2,
+          3,
+          4
+        ]
+      },
+      "crossings": [
+        {
+          "sourceString": 1,
+          "count": 0
+        },
+        {
+          "sourceString": 2,
+          "count": 1
+        },
+        {
+          "sourceString": 3,
+          "count": 1
+        },
+        {
+          "sourceString": 4,
+          "count": 1
+        },
+        {
+          "sourceString": 5,
+          "count": 0
+        },
+        {
+          "sourceString": 6,
+          "count": 0
+        }
+      ]
+    },
+    {
+      "event": {
+        "mode": "chord",
+        "sourceStrings": [
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "crossings": [
+        {
+          "sourceString": 1,
+          "count": 0
+        },
+        {
+          "sourceString": 2,
+          "count": 1
+        },
+        {
+          "sourceString": 3,
+          "count": 1
+        },
+        {
+          "sourceString": 4,
+          "count": 1
+        },
+        {
+          "sourceString": 5,
+          "count": 1
+        },
+        {
+          "sourceString": 6,
+          "count": 0
+        }
+      ]
+    },
+    {
+      "event": {
+        "mode": "chord",
+        "sourceStrings": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "crossings": [
+        {
+          "sourceString": 1,
+          "count": 0
+        },
+        {
+          "sourceString": 2,
+          "count": 1
+        },
+        {
+          "sourceString": 3,
+          "count": 1
+        },
+        {
+          "sourceString": 4,
+          "count": 1
+        },
+        {
+          "sourceString": 5,
+          "count": 1
+        },
+        {
+          "sourceString": 6,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "event": {
+        "mode": "chord",
+        "sourceStrings": [
+          3
+        ]
+      },
+      "crossings": [
+        {
+          "sourceString": 1,
+          "count": 0
+        },
+        {
+          "sourceString": 2,
+          "count": 0
+        },
+        {
+          "sourceString": 3,
+          "count": 1
+        },
+        {
+          "sourceString": 4,
+          "count": 0
+        },
+        {
+          "sourceString": 5,
+          "count": 0
+        },
+        {
+          "sourceString": 6,
+          "count": 0
+        }
+      ]
+    },
+    {
+      "event": {
+        "mode": "chord",
+        "sourceStrings": [
+          3,
+          4
+        ]
+      },
+      "crossings": [
+        {
+          "sourceString": 1,
+          "count": 0
+        },
+        {
+          "sourceString": 2,
+          "count": 0
+        },
+        {
+          "sourceString": 3,
+          "count": 1
+        },
+        {
+          "sourceString": 4,
+          "count": 1
+        },
+        {
+          "sourceString": 5,
+          "count": 0
+        },
+        {
+          "sourceString": 6,
+          "count": 0
+        }
+      ]
+    },
+    {
+      "event": {
+        "mode": "chord",
+        "sourceStrings": [
+          3,
+          4,
+          5
+        ]
+      },
+      "crossings": [
+        {
+          "sourceString": 1,
+          "count": 0
+        },
+        {
+          "sourceString": 2,
+          "count": 0
+        },
+        {
+          "sourceString": 3,
+          "count": 1
+        },
+        {
+          "sourceString": 4,
+          "count": 1
+        },
+        {
+          "sourceString": 5,
+          "count": 1
+        },
+        {
+          "sourceString": 6,
+          "count": 0
+        }
+      ]
+    },
+    {
+      "event": {
+        "mode": "chord",
+        "sourceStrings": [
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "crossings": [
+        {
+          "sourceString": 1,
+          "count": 0
+        },
+        {
+          "sourceString": 2,
+          "count": 0
+        },
+        {
+          "sourceString": 3,
+          "count": 1
+        },
+        {
+          "sourceString": 4,
+          "count": 1
+        },
+        {
+          "sourceString": 5,
+          "count": 1
+        },
+        {
+          "sourceString": 6,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "event": {
+        "mode": "chord",
+        "sourceStrings": [
+          4
+        ]
+      },
+      "crossings": [
+        {
+          "sourceString": 1,
+          "count": 0
+        },
+        {
+          "sourceString": 2,
+          "count": 0
+        },
+        {
+          "sourceString": 3,
+          "count": 0
+        },
+        {
+          "sourceString": 4,
+          "count": 1
+        },
+        {
+          "sourceString": 5,
+          "count": 0
+        },
+        {
+          "sourceString": 6,
+          "count": 0
+        }
+      ]
+    },
+    {
+      "event": {
+        "mode": "chord",
+        "sourceStrings": [
+          4,
+          5
+        ]
+      },
+      "crossings": [
+        {
+          "sourceString": 1,
+          "count": 0
+        },
+        {
+          "sourceString": 2,
+          "count": 0
+        },
+        {
+          "sourceString": 3,
+          "count": 0
+        },
+        {
+          "sourceString": 4,
+          "count": 1
+        },
+        {
+          "sourceString": 5,
+          "count": 1
+        },
+        {
+          "sourceString": 6,
+          "count": 0
+        }
+      ]
+    },
+    {
+      "event": {
+        "mode": "chord",
+        "sourceStrings": [
+          4,
+          5,
+          6
+        ]
+      },
+      "crossings": [
+        {
+          "sourceString": 1,
+          "count": 0
+        },
+        {
+          "sourceString": 2,
+          "count": 0
+        },
+        {
+          "sourceString": 3,
+          "count": 0
+        },
+        {
+          "sourceString": 4,
+          "count": 1
+        },
+        {
+          "sourceString": 5,
+          "count": 1
+        },
+        {
+          "sourceString": 6,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "event": {
+        "mode": "chord",
+        "sourceStrings": [
+          5
+        ]
+      },
+      "crossings": [
+        {
+          "sourceString": 1,
+          "count": 0
+        },
+        {
+          "sourceString": 2,
+          "count": 0
+        },
+        {
+          "sourceString": 3,
+          "count": 0
+        },
+        {
+          "sourceString": 4,
+          "count": 0
+        },
+        {
+          "sourceString": 5,
+          "count": 1
+        },
+        {
+          "sourceString": 6,
+          "count": 0
+        }
+      ]
+    },
+    {
+      "event": {
+        "mode": "chord",
+        "sourceStrings": [
+          5,
+          6
+        ]
+      },
+      "crossings": [
+        {
+          "sourceString": 1,
+          "count": 0
+        },
+        {
+          "sourceString": 2,
+          "count": 0
+        },
+        {
+          "sourceString": 3,
+          "count": 0
+        },
+        {
+          "sourceString": 4,
+          "count": 0
+        },
+        {
+          "sourceString": 5,
+          "count": 1
+        },
+        {
+          "sourceString": 6,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "event": {
+        "mode": "chord",
+        "sourceStrings": [
+          6
+        ]
+      },
+      "crossings": [
+        {
+          "sourceString": 1,
+          "count": 0
+        },
+        {
+          "sourceString": 2,
+          "count": 0
+        },
+        {
+          "sourceString": 3,
+          "count": 0
+        },
+        {
+          "sourceString": 4,
+          "count": 0
+        },
+        {
+          "sourceString": 5,
+          "count": 0
+        },
+        {
+          "sourceString": 6,
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "analyticInterruptions": {
+    "accepted": 5040,
+    "limited": 0,
+    "maxJoinPositionErrorU": 0,
+    "maxJoinVelocityErrorUPerMs": 0,
+    "finiteDifferenceChecks": 5040,
+    "maxFiniteDifferenceVelocityMismatchUPerMs": 3.175237850427948e-8
+  },
+  "nearKnotLimit": {
+    "accepted": false,
+    "reason": "C1_ESCAPE_BELOW_NUMERIC_TIME_FLOOR",
+    "queued": 0,
+    "activeStrokeUnchanged": true,
+    "minBrakeMs": 0.000001
+  },
+  "repeatIntervalsMs": [
+    150,
+    70
+  ],
+  "traces": 79,
+  "traceSamples": 70404,
+  "queueLength": 0,
+  "durationMs": 140,
+  "headBlinkPhraseClockUnchanged": true,
+  "leftFrozen": true,
+  "accelerationBoundVerified": false,
+  "geometryStatus": "pending-native-actual-triangle-probe",
+  "skinBound": false,
+  "audio": false,
+  "modelAnimation": false,
+  "publicChanged": false
+}

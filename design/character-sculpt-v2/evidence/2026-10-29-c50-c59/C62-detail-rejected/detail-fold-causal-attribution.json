@@ -1,0 +1,601 @@
+{
+  "scope": "Read-only stored-phase ablation of the one frozen C62 candidate. No new authoring mesh, render, candidate or parameter choice.",
+  "native_sha256": "1ee98ee509f7b685ca2be10cb1df3d729b179b68ccc360f350f215560310289a",
+  "phases": [
+    {
+      "phase": "source",
+      "self_pairs": 75,
+      "new_vs_source": 0,
+      "normal_reversal_vs_source": 0,
+      "min_normal_dot": 0.9999998807907104
+    },
+    {
+      "phase": "broad_after4smooth",
+      "self_pairs": 75,
+      "new_vs_source": 0,
+      "normal_reversal_vs_source": 0,
+      "min_normal_dot": 0.23833142220973969
+    },
+    {
+      "phase": "broad_plus_web_only_readonly",
+      "self_pairs": 75,
+      "new_vs_source": 0,
+      "normal_reversal_vs_source": 0,
+      "min_normal_dot": 0.22147402370097485
+    },
+    {
+      "phase": "broad_plus_crease_only_readonly",
+      "self_pairs": 124,
+      "new_vs_source": 49,
+      "normal_reversal_vs_source": 29,
+      "min_normal_dot": -0.9114590287208557,
+      "fold_vertex_source_C52_indices": [
+        274134,
+        274135,
+        274145,
+        274146,
+        274155,
+        274156,
+        274158,
+        274168,
+        274171,
+        274507,
+        274522,
+        274523,
+        274524,
+        274528,
+        274529,
+        274546,
+        274547,
+        274548,
+        274549,
+        274550,
+        274551,
+        274552,
+        274553,
+        274554,
+        274564,
+        274565,
+        274571,
+        274572,
+        274573,
+        274574,
+        274577,
+        274578,
+        274579,
+        274580,
+        274581,
+        274583,
+        274584,
+        274585,
+        274828,
+        274829,
+        274830,
+        274831,
+        274832,
+        274833,
+        274834,
+        274850,
+        274851,
+        274852,
+        274853
+      ],
+      "bbox": [
+        [
+          -0.5187863707542419,
+          -1.310654878616333,
+          1.625510811805725
+        ],
+        [
+          -0.45628175139427185,
+          -1.0302404165267944,
+          1.6784899234771729
+        ]
+      ],
+      "palm_axis_range": [
+        0.13971880270179723,
+        0.19087879814806105
+      ],
+      "lateral_range": [
+        -0.09384769000903441,
+        -0.039456336906466806
+      ]
+    },
+    {
+      "phase": "actual_main_web_and_crease",
+      "self_pairs": 127,
+      "new_vs_source": 52,
+      "normal_reversal_vs_source": 57,
+      "min_normal_dot": -0.9556186199188232,
+      "fold_vertex_source_C52_indices": [
+        274129,
+        274135,
+        274142,
+        274145,
+        274146,
+        274155,
+        274156,
+        274158,
+        274168,
+        274171,
+        274507,
+        274518,
+        274519,
+        274522,
+        274523,
+        274524,
+        274529,
+        274546,
+        274547,
+        274548,
+        274549,
+        274551,
+        274552,
+        274553,
+        274564,
+        274565,
+        274566,
+        274571,
+        274572,
+        274573,
+        274574,
+        274577,
+        274578,
+        274579,
+        274580,
+        274828,
+        274829,
+        274830,
+        274832,
+        274833,
+        274834,
+        274850,
+        274851,
+        274852,
+        274853,
+        274937,
+        274941
+      ],
+      "bbox": [
+        [
+          -0.519052267074585,
+          -1.3114193677902222,
+          1.6269301176071167
+        ],
+        [
+          -0.4659683406352997,
+          -1.0306752920150757,
+          1.6790159940719604
+        ]
+      ],
+      "palm_axis_range": [
+        0.1376936146231798,
+        0.17846613286338273
+      ],
+      "lateral_range": [
+        -0.0938477132661865,
+        -0.039456323936131986
+      ]
+    }
+  ],
+  "actual_new_pair_segment_confirmation": [
+    {
+      "triangles": [
+        546976,
+        547026
+      ],
+      "intersection_span": 0.0013603241505108705,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        546978,
+        546997
+      ],
+      "intersection_span": 0.0017237520192569507,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        546978,
+        547026
+      ],
+      "intersection_span": 0.0005733212116005909,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        546978,
+        547028
+      ],
+      "intersection_span": 0.0005535812982710324,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        546978,
+        547029
+      ],
+      "intersection_span": 0.0005480130132602724,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        546979,
+        546997
+      ],
+      "intersection_span": 0.0012334272962832259,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        546979,
+        547029
+      ],
+      "intersection_span": 0.0019118571639986678,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        546996,
+        547026
+      ],
+      "intersection_span": 0.0019511270041725403,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        546996,
+        547028
+      ],
+      "intersection_span": 0.0012066178736384054,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548144,
+        548191
+      ],
+      "intersection_span": 0.0008813228559031389,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548144,
+        548249
+      ],
+      "intersection_span": 0.0013922363103437514,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548145,
+        548191
+      ],
+      "intersection_span": 0.0007639577080370444,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548145,
+        548249
+      ],
+      "intersection_span": 0.0005431700868180564,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548190,
+        548356
+      ],
+      "intersection_span": 0.00038438774315179,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548190,
+        548359
+      ],
+      "intersection_span": 0.00025904642176441265,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548191,
+        548359
+      ],
+      "intersection_span": 0.00025766222048224984,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548192,
+        548358
+      ],
+      "intersection_span": 0.0060095481812003785,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548192,
+        548359
+      ],
+      "intersection_span": 0.00031701650828714153,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548192,
+        548361
+      ],
+      "intersection_span": 0.0008653107707873819,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548192,
+        548969
+      ],
+      "intersection_span": 0.00029277675921368006,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548193,
+        548356
+      ],
+      "intersection_span": 0.00038192980187196014,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548193,
+        548359
+      ],
+      "intersection_span": 0.0011939973638807541,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548235,
+        548360
+      ],
+      "intersection_span": 0.002388806467002074,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548235,
+        548361
+      ],
+      "intersection_span": 8.219653405078688e-05,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548235,
+        548969
+      ],
+      "intersection_span": 0.00014886735847914425,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548248,
+        548356
+      ],
+      "intersection_span": 0.0013593249580338674,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548249,
+        548356
+      ],
+      "intersection_span": 0.0015682050502907488,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548249,
+        548359
+      ],
+      "intersection_span": 0.0005545375906717109,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548356,
+        548971
+      ],
+      "intersection_span": 0.0005334962402031909,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548360,
+        548976
+      ],
+      "intersection_span": 0.0023408097825897193,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548360,
+        548977
+      ],
+      "intersection_span": 0.0022395296132358693,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548416,
+        548969
+      ],
+      "intersection_span": 0.0008597953625304746,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548416,
+        548970
+      ],
+      "intersection_span": 0.002044489615936529,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548416,
+        548971
+      ],
+      "intersection_span": 0.005508378705147656,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548417,
+        548971
+      ],
+      "intersection_span": 0.001701669851123361,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548420,
+        548965
+      ],
+      "intersection_span": 0.0020754577953306383,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548420,
+        548968
+      ],
+      "intersection_span": 0.0027505549015502226,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548420,
+        548969
+      ],
+      "intersection_span": 0.0009491384437198444,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548421,
+        548969
+      ],
+      "intersection_span": 0.0009757448202540828,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548426,
+        548965
+      ],
+      "intersection_span": 0.004342285430614082,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548426,
+        548976
+      ],
+      "intersection_span": 0.00016461586795076398,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548427,
+        548965
+      ],
+      "intersection_span": 0.0023466222171428077,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548427,
+        548976
+      ],
+      "intersection_span": 0.00023512630215360067,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548428,
+        548965
+      ],
+      "intersection_span": 0.0011379138391557013,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548428,
+        548976
+      ],
+      "intersection_span": 0.0009945656746560495,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548429,
+        548965
+      ],
+      "intersection_span": 0.0035875879647404704,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548429,
+        548976
+      ],
+      "intersection_span": 0.006345532156760168,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548435,
+        548970
+      ],
+      "intersection_span": 0.003261162760114529,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548435,
+        548971
+      ],
+      "intersection_span": 0.0009025066374496728,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548729,
+        548931
+      ],
+      "intersection_span": 0.004754322820130048,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548730,
+        548931
+      ],
+      "intersection_span": 0.0003817122217648062,
+      "confirmed_gt1e_minus6": true
+    },
+    {
+      "triangles": [
+        548731,
+        548931
+      ],
+      "intersection_span": 0.0003069392444358653,
+      "confirmed_gt1e_minus6": true
+    }
+  ],
+  "new_pairs_confirmed_over1e_minus6": 52,
+  "no_native_mutation": true
+}

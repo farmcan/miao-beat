@@ -1,0 +1,538 @@
+{
+  "scope": "Read-only C58r2 actual source/result body self and affected palm triangle vs actual evaluated guitar; not a static contact or art pass.",
+  "source_sha256": "630c27d7de8d94f0fb85201e0a216bb7055c223bb85b6d05b704fd6ba0ad40bc",
+  "native_sha256": "8c0c0250c79aec59eff64d7f77e1d66e5ace1dd0eabde98f516130d9f98e92e9",
+  "source_all_object_count": 95,
+  "protected_all_object_count": 94,
+  "all_protected_objects_exact": true,
+  "non_exact_names": [],
+  "source_body_self_pairs": 75,
+  "result_body_self_pairs": 75,
+  "new_global_self_pairs": 0,
+  "right_palm_non_neighbour_self_pairs": 0,
+  "new_self_pairs_sample": [],
+  "topology": {
+    "vertices": 297850,
+    "edges": 595696,
+    "faces": 297848,
+    "components": 1,
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0
+  },
+  "changed_vertices": 6668,
+  "affected_triangles": 13539,
+  "triangle_normal_reversals": 0,
+  "minimum_normal_dot": 0.2382066249847412,
+  "area_ratio_quantiles_0_1_50_99_100": [
+    0.28902748227119446,
+    0.5410447990894317,
+    1.0017575025558472,
+    1.1831927347183226,
+    2.3044445514678955
+  ],
+  "actual_guitar_triangle_intersections": [
+    {
+      "object": "Guitar / bridge",
+      "actual_evaluated_triangles": 300,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / bridge saddle",
+      "actual_evaluated_triangles": 300,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / bridge tie",
+      "actual_evaluated_triangles": 352,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / bridge tie.001",
+      "actual_evaluated_triangles": 352,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / bridge tie.002",
+      "actual_evaluated_triangles": 352,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / bridge tie.003",
+      "actual_evaluated_triangles": 352,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / bridge tie.004",
+      "actual_evaluated_triangles": 352,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / bridge tie.005",
+      "actual_evaluated_triangles": 352,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / continuous binding",
+      "actual_evaluated_triangles": 80660,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / continuous binding.001",
+      "actual_evaluated_triangles": 80660,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / ebony fretboard",
+      "actual_evaluated_triangles": 300,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / headstock",
+      "actual_evaluated_triangles": 300,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / headstock dark slot",
+      "actual_evaluated_triangles": 300,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / headstock dark slot.001",
+      "actual_evaluated_triangles": 300,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / ivory tuning peg",
+      "actual_evaluated_triangles": 720,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / ivory tuning peg.001",
+      "actual_evaluated_triangles": 720,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / ivory tuning peg.002",
+      "actual_evaluated_triangles": 720,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / ivory tuning peg.003",
+      "actual_evaluated_triangles": 720,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / ivory tuning peg.004",
+      "actual_evaluated_triangles": 720,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / ivory tuning peg.005",
+      "actual_evaluated_triangles": 720,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / neck",
+      "actual_evaluated_triangles": 300,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / nut",
+      "actual_evaluated_triangles": 300,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / rosette ring",
+      "actual_evaluated_triangles": 55316,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / rosette ring.001",
+      "actual_evaluated_triangles": 55316,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / rosette ring.002",
+      "actual_evaluated_triangles": 55316,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / rosette ring.003",
+      "actual_evaluated_triangles": 55316,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / rosewood body",
+      "actual_evaluated_triangles": 2236,
+      "affected_triangle_pairs_before": 71,
+      "affected_triangle_pairs_after": 71,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / silver fret",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / silver fret.001",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / silver fret.002",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / silver fret.003",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / silver fret.004",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / silver fret.005",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / silver fret.006",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / silver fret.007",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / silver fret.008",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / silver fret.009",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / silver fret.010",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / silver fret.011",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / silver fret.012",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / soundhole chamber",
+      "actual_evaluated_triangles": 380,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / spruce soundboard",
+      "actual_evaluated_triangles": 2236,
+      "affected_triangle_pairs_before": 141,
+      "affected_triangle_pairs_after": 141,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / string 1",
+      "actual_evaluated_triangles": 1748,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / string 2",
+      "actual_evaluated_triangles": 1748,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / string 3",
+      "actual_evaluated_triangles": 1748,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / string 4",
+      "actual_evaluated_triangles": 1748,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / string 5",
+      "actual_evaluated_triangles": 1748,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / string 6",
+      "actual_evaluated_triangles": 1748,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / tuner shaft",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / tuner shaft.001",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / tuner shaft.002",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / tuner shaft.003",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / tuner shaft.004",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / tuner shaft.005",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    }
+  ],
+  "actual_wood_solid_parity": [
+    {
+      "object": "Guitar / bridge",
+      "nonmanifold_edges": 0,
+      "rule": "Three oblique parity rays per changed actual body vertex, unanimous odd=inside, mixed=unknown; no nearest fallback.",
+      "samples": 6668,
+      "inside_before": 0,
+      "inside_after": 0,
+      "unknown_before": 0,
+      "unknown_after": 0,
+      "new_inside_count": 0,
+      "new_inside_source_C52_index_sample": []
+    },
+    {
+      "object": "Guitar / ebony fretboard",
+      "nonmanifold_edges": 0,
+      "rule": "Three oblique parity rays per changed actual body vertex, unanimous odd=inside, mixed=unknown; no nearest fallback.",
+      "samples": 6668,
+      "inside_before": 0,
+      "inside_after": 0,
+      "unknown_before": 24,
+      "unknown_after": 26,
+      "new_inside_count": 0,
+      "new_inside_source_C52_index_sample": []
+    },
+    {
+      "object": "Guitar / neck",
+      "nonmanifold_edges": 0,
+      "rule": "Three oblique parity rays per changed actual body vertex, unanimous odd=inside, mixed=unknown; no nearest fallback.",
+      "samples": 6668,
+      "inside_before": 0,
+      "inside_after": 0,
+      "unknown_before": 38,
+      "unknown_after": 33,
+      "new_inside_count": 0,
+      "new_inside_source_C52_index_sample": []
+    },
+    {
+      "object": "Guitar / rosewood body",
+      "nonmanifold_edges": 0,
+      "rule": "Three oblique parity rays per changed actual body vertex, unanimous odd=inside, mixed=unknown; no nearest fallback.",
+      "samples": 6668,
+      "inside_before": 53,
+      "inside_after": 53,
+      "unknown_before": 3,
+      "unknown_after": 6,
+      "new_inside_count": 0,
+      "new_inside_source_C52_index_sample": []
+    },
+    {
+      "object": "Guitar / spruce soundboard",
+      "nonmanifold_edges": 0,
+      "rule": "Three oblique parity rays per changed actual body vertex, unanimous odd=inside, mixed=unknown; no nearest fallback.",
+      "samples": 6668,
+      "inside_before": 103,
+      "inside_after": 103,
+      "unknown_before": 1,
+      "unknown_after": 0,
+      "new_inside_count": 0,
+      "new_inside_source_C52_index_sample": []
+    }
+  ],
+  "all_C52_indices_exact": true,
+  "all_legacy_C35_integer_attributes_stay0": true,
+  "elapsed_seconds": 7.809279203414917,
+  "limits": [
+    "Actual triangle pairs count crossings, not penetration volume. No parity claim for open wood surfaces.",
+    "No continuous motion/string contact paths, per-note response, dynamics or natural playing pass.",
+    "Source75 self pairs in unchanged left-hand/right-ear regions remain external static blockers.",
+    "No UV/groom/rig/deformation approval."
+  ]
+}

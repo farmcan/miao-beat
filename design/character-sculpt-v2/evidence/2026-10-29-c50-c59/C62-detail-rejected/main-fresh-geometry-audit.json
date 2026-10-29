@@ -1,0 +1,1177 @@
+{
+  "scope": "Read-only C62-main actual source/result body self and affected palm triangle vs actual evaluated guitar; not a static contact or art pass.",
+  "source_sha256": "630c27d7de8d94f0fb85201e0a216bb7055c223bb85b6d05b704fd6ba0ad40bc",
+  "native_sha256": "1ee98ee509f7b685ca2be10cb1df3d729b179b68ccc360f350f215560310289a",
+  "source_all_object_count": 95,
+  "protected_all_object_count": 94,
+  "all_protected_objects_exact": true,
+  "non_exact_names": [],
+  "source_body_self_pairs": 75,
+  "result_body_self_pairs": 127,
+  "new_global_self_pairs": 52,
+  "right_palm_non_neighbour_self_pairs": 52,
+  "new_self_pairs_sample": [
+    [
+      548730,
+      548931
+    ],
+    [
+      548429,
+      548976
+    ],
+    [
+      548249,
+      548359
+    ],
+    [
+      548192,
+      548969
+    ],
+    [
+      548417,
+      548971
+    ],
+    [
+      548428,
+      548965
+    ],
+    [
+      548416,
+      548969
+    ],
+    [
+      548235,
+      548360
+    ],
+    [
+      548360,
+      548977
+    ],
+    [
+      548435,
+      548970
+    ],
+    [
+      546996,
+      547026
+    ],
+    [
+      546976,
+      547026
+    ],
+    [
+      546979,
+      547029
+    ],
+    [
+      548191,
+      548359
+    ],
+    [
+      548426,
+      548976
+    ],
+    [
+      548145,
+      548191
+    ],
+    [
+      548145,
+      548249
+    ],
+    [
+      548192,
+      548358
+    ],
+    [
+      548729,
+      548931
+    ],
+    [
+      548420,
+      548969
+    ]
+  ],
+  "topology": {
+    "vertices": 297850,
+    "edges": 595696,
+    "faces": 297848,
+    "components": 1,
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0
+  },
+  "changed_vertices": 6668,
+  "affected_triangles": 13539,
+  "triangle_normal_reversals": 57,
+  "minimum_normal_dot": -0.9556186199188232,
+  "area_ratio_quantiles_0_1_50_99_100": [
+    0.047322049736976624,
+    0.4365025478601456,
+    1.0024300813674927,
+    1.5602235960960371,
+    8.099184036254883
+  ],
+  "actual_guitar_triangle_intersections": [
+    {
+      "object": "Guitar / bridge",
+      "actual_evaluated_triangles": 300,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / bridge saddle",
+      "actual_evaluated_triangles": 300,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / bridge tie",
+      "actual_evaluated_triangles": 352,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / bridge tie.001",
+      "actual_evaluated_triangles": 352,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / bridge tie.002",
+      "actual_evaluated_triangles": 352,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / bridge tie.003",
+      "actual_evaluated_triangles": 352,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / bridge tie.004",
+      "actual_evaluated_triangles": 352,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / bridge tie.005",
+      "actual_evaluated_triangles": 352,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / continuous binding",
+      "actual_evaluated_triangles": 80660,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / continuous binding.001",
+      "actual_evaluated_triangles": 80660,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / ebony fretboard",
+      "actual_evaluated_triangles": 300,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / headstock",
+      "actual_evaluated_triangles": 300,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / headstock dark slot",
+      "actual_evaluated_triangles": 300,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / headstock dark slot.001",
+      "actual_evaluated_triangles": 300,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / ivory tuning peg",
+      "actual_evaluated_triangles": 720,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / ivory tuning peg.001",
+      "actual_evaluated_triangles": 720,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / ivory tuning peg.002",
+      "actual_evaluated_triangles": 720,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / ivory tuning peg.003",
+      "actual_evaluated_triangles": 720,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / ivory tuning peg.004",
+      "actual_evaluated_triangles": 720,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / ivory tuning peg.005",
+      "actual_evaluated_triangles": 720,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / neck",
+      "actual_evaluated_triangles": 300,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / nut",
+      "actual_evaluated_triangles": 300,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / rosette ring",
+      "actual_evaluated_triangles": 55316,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / rosette ring.001",
+      "actual_evaluated_triangles": 55316,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / rosette ring.002",
+      "actual_evaluated_triangles": 55316,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / rosette ring.003",
+      "actual_evaluated_triangles": 55316,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / rosewood body",
+      "actual_evaluated_triangles": 2236,
+      "affected_triangle_pairs_before": 71,
+      "affected_triangle_pairs_after": 71,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / silver fret",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / silver fret.001",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / silver fret.002",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / silver fret.003",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / silver fret.004",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / silver fret.005",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / silver fret.006",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / silver fret.007",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / silver fret.008",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / silver fret.009",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / silver fret.010",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / silver fret.011",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / silver fret.012",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / soundhole chamber",
+      "actual_evaluated_triangles": 380,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / spruce soundboard",
+      "actual_evaluated_triangles": 2236,
+      "affected_triangle_pairs_before": 141,
+      "affected_triangle_pairs_after": 141,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / string 1",
+      "actual_evaluated_triangles": 1748,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / string 2",
+      "actual_evaluated_triangles": 1748,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / string 3",
+      "actual_evaluated_triangles": 1748,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / string 4",
+      "actual_evaluated_triangles": 1748,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / string 5",
+      "actual_evaluated_triangles": 1748,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / string 6",
+      "actual_evaluated_triangles": 1748,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / tuner shaft",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / tuner shaft.001",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / tuner shaft.002",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / tuner shaft.003",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / tuner shaft.004",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    },
+    {
+      "object": "Guitar / tuner shaft.005",
+      "actual_evaluated_triangles": 596,
+      "affected_triangle_pairs_before": 0,
+      "affected_triangle_pairs_after": 0,
+      "new_triangle_pair_ids": 0,
+      "removed_triangle_pair_ids": 0
+    }
+  ],
+  "actual_wood_solid_parity": [
+    {
+      "object": "Guitar / bridge",
+      "nonmanifold_edges": 0,
+      "rule": "Three oblique parity rays per changed actual body vertex, unanimous odd=inside, mixed=unknown; no nearest fallback.",
+      "samples": 6668,
+      "inside_before": 0,
+      "inside_after": 0,
+      "unknown_before": 0,
+      "unknown_after": 0,
+      "new_inside_count": 0,
+      "new_inside_source_C52_index_sample": [],
+      "source_inside_attribution": {
+        "n": 0
+      },
+      "result_inside_attribution": {
+        "n": 0
+      }
+    },
+    {
+      "object": "Guitar / ebony fretboard",
+      "nonmanifold_edges": 0,
+      "rule": "Three oblique parity rays per changed actual body vertex, unanimous odd=inside, mixed=unknown; no nearest fallback.",
+      "samples": 6668,
+      "inside_before": 0,
+      "inside_after": 0,
+      "unknown_before": 24,
+      "unknown_after": 19,
+      "new_inside_count": 0,
+      "new_inside_source_C52_index_sample": [],
+      "source_inside_attribution": {
+        "n": 0
+      },
+      "result_inside_attribution": {
+        "n": 0
+      }
+    },
+    {
+      "object": "Guitar / neck",
+      "nonmanifold_edges": 0,
+      "rule": "Three oblique parity rays per changed actual body vertex, unanimous odd=inside, mixed=unknown; no nearest fallback.",
+      "samples": 6668,
+      "inside_before": 0,
+      "inside_after": 0,
+      "unknown_before": 38,
+      "unknown_after": 34,
+      "new_inside_count": 0,
+      "new_inside_source_C52_index_sample": [],
+      "source_inside_attribution": {
+        "n": 0
+      },
+      "result_inside_attribution": {
+        "n": 0
+      }
+    },
+    {
+      "object": "Guitar / rosewood body",
+      "nonmanifold_edges": 0,
+      "rule": "Three oblique parity rays per changed actual body vertex, unanimous odd=inside, mixed=unknown; no nearest fallback.",
+      "samples": 6668,
+      "inside_before": 53,
+      "inside_after": 53,
+      "unknown_before": 3,
+      "unknown_after": 6,
+      "new_inside_count": 0,
+      "new_inside_source_C52_index_sample": [],
+      "source_inside_attribution": {
+        "n": 53,
+        "source_C52_indices": [
+          114377,
+          114378,
+          114389,
+          114390,
+          114391,
+          114392,
+          114404,
+          114405,
+          114406,
+          114407,
+          114416,
+          114417,
+          114418,
+          114419,
+          114420,
+          114421,
+          114422,
+          114431,
+          114432,
+          114433,
+          114434,
+          114435,
+          114436,
+          115295,
+          115296,
+          115302,
+          115303,
+          115304,
+          115305,
+          115321,
+          115322,
+          115323,
+          115324,
+          115325,
+          115329,
+          115330,
+          115345,
+          115346,
+          115347,
+          272646,
+          273114,
+          273118,
+          273119,
+          273121,
+          273122,
+          273123,
+          276346,
+          276349,
+          276352,
+          276790,
+          276793,
+          276798,
+          276800
+        ],
+        "source_coordinate_bbox": [
+          [
+            -0.6656082272529602,
+            -0.9495129585266113,
+            1.6599847078323364
+          ],
+          [
+            -0.538374125957489,
+            -0.9341742396354675,
+            1.8151451349258423
+          ]
+        ],
+        "source_palm_axis_quantiles_0_25_50_75_100": [
+          0.020745256126164652,
+          0.03396898238773618,
+          0.04079751719793569,
+          0.04637876318921823,
+          0.054630827727853444
+        ],
+        "source_lateral_quantiles_0_25_50_75_100": [
+          -0.16279645254872885,
+          -0.09858389095718664,
+          -0.05702719730607402,
+          -0.013636263652872823,
+          0.03784783183632721
+        ],
+        "source_normal_y_quantiles_0_25_50_75_100": [
+          0.6091832518577576,
+          0.700798749923706,
+          0.7206737399101257,
+          0.7304211258888245,
+          0.741605818271637
+        ],
+        "source_shell_direction_counts": {
+          "front_normal_y_lt_minus025": 0,
+          "back_normal_y_gt025": 53,
+          "side_or_shoulder_normal": 0
+        },
+        "geometric_axial_region_counts": {
+          "proximal_s_lt_minus003": 0,
+          "central_s_minus003_to014": 53,
+          "distal_s_gt014": 0
+        },
+        "displacement_quantiles_0_25_50_75_100": [
+          5.960464477539063e-08,
+          1.3328003944934608e-07,
+          2.980232238769531e-07,
+          7.952251621645701e-07,
+          3.684415787574835e-06
+        ],
+        "displacement_gt001_count": 0,
+        "semantic_limit": "Axial region and surface normal are measured; source C52 has no retained anatomical face provenance. Do not automatically label every rear shell sample torso or tip."
+      },
+      "result_inside_attribution": {
+        "n": 53,
+        "source_C52_indices": [
+          114377,
+          114378,
+          114389,
+          114390,
+          114391,
+          114392,
+          114404,
+          114405,
+          114406,
+          114407,
+          114416,
+          114417,
+          114418,
+          114419,
+          114420,
+          114421,
+          114422,
+          114431,
+          114432,
+          114433,
+          114434,
+          114435,
+          114436,
+          115295,
+          115296,
+          115302,
+          115303,
+          115304,
+          115305,
+          115321,
+          115322,
+          115323,
+          115324,
+          115325,
+          115329,
+          115330,
+          115345,
+          115346,
+          115347,
+          272646,
+          273114,
+          273118,
+          273119,
+          273121,
+          273122,
+          273123,
+          276346,
+          276349,
+          276352,
+          276790,
+          276793,
+          276798,
+          276800
+        ],
+        "source_coordinate_bbox": [
+          [
+            -0.6656082272529602,
+            -0.9495129585266113,
+            1.6599847078323364
+          ],
+          [
+            -0.538374125957489,
+            -0.9341742396354675,
+            1.8151451349258423
+          ]
+        ],
+        "source_palm_axis_quantiles_0_25_50_75_100": [
+          0.020745256126164652,
+          0.03396898238773618,
+          0.04079751719793569,
+          0.04637876318921823,
+          0.054630827727853444
+        ],
+        "source_lateral_quantiles_0_25_50_75_100": [
+          -0.16279645254872885,
+          -0.09858389095718664,
+          -0.05702719730607402,
+          -0.013636263652872823,
+          0.03784783183632721
+        ],
+        "source_normal_y_quantiles_0_25_50_75_100": [
+          0.6091832518577576,
+          0.700798749923706,
+          0.7206737399101257,
+          0.7304211258888245,
+          0.741605818271637
+        ],
+        "source_shell_direction_counts": {
+          "front_normal_y_lt_minus025": 0,
+          "back_normal_y_gt025": 53,
+          "side_or_shoulder_normal": 0
+        },
+        "geometric_axial_region_counts": {
+          "proximal_s_lt_minus003": 0,
+          "central_s_minus003_to014": 53,
+          "distal_s_gt014": 0
+        },
+        "displacement_quantiles_0_25_50_75_100": [
+          5.960464477539063e-08,
+          1.3328003944934608e-07,
+          2.980232238769531e-07,
+          7.952251621645701e-07,
+          3.684415787574835e-06
+        ],
+        "displacement_gt001_count": 0,
+        "semantic_limit": "Axial region and surface normal are measured; source C52 has no retained anatomical face provenance. Do not automatically label every rear shell sample torso or tip."
+      }
+    },
+    {
+      "object": "Guitar / spruce soundboard",
+      "nonmanifold_edges": 0,
+      "rule": "Three oblique parity rays per changed actual body vertex, unanimous odd=inside, mixed=unknown; no nearest fallback.",
+      "samples": 6668,
+      "inside_before": 103,
+      "inside_after": 103,
+      "unknown_before": 1,
+      "unknown_after": 0,
+      "new_inside_count": 0,
+      "new_inside_source_C52_index_sample": [],
+      "source_inside_attribution": {
+        "n": 103,
+        "source_C52_indices": [
+          114223,
+          114224,
+          114389,
+          114390,
+          114403,
+          114404,
+          114413,
+          114414,
+          114415,
+          114416,
+          114417,
+          114427,
+          114428,
+          114429,
+          114430,
+          114431,
+          114432,
+          114949,
+          114950,
+          114964,
+          114965,
+          114979,
+          115034,
+          115038,
+          115039,
+          115040,
+          115041,
+          115042,
+          115043,
+          115137,
+          115290,
+          115291,
+          115292,
+          115293,
+          115294,
+          115295,
+          115296,
+          115297,
+          115298,
+          115299,
+          115300,
+          115301,
+          115319,
+          115320,
+          115321,
+          115322,
+          115323,
+          115324,
+          115336,
+          115337,
+          115338,
+          115339,
+          115340,
+          115341,
+          115342,
+          115344,
+          115345,
+          115346,
+          115347,
+          115350,
+          115351,
+          115352,
+          115353,
+          115354,
+          115355,
+          115356,
+          273123,
+          276315,
+          276330,
+          276341,
+          276344,
+          276345,
+          276346,
+          276347,
+          276348,
+          276349,
+          276350,
+          276351,
+          276352,
+          276684,
+          276699,
+          276718,
+          276778,
+          276779,
+          276787,
+          276788,
+          276789,
+          276790,
+          276791,
+          276792,
+          276793,
+          276794,
+          276795,
+          276796,
+          276797,
+          276798,
+          276799,
+          276800,
+          276801,
+          276802,
+          276803,
+          276804,
+          276805
+        ],
+        "source_coordinate_bbox": [
+          [
+            -0.675650954246521,
+            -0.9649927616119385,
+            1.6499090194702148
+          ],
+          [
+            -0.5239107608795166,
+            -0.9440218806266785,
+            1.8447320461273193
+          ]
+        ],
+        "source_palm_axis_quantiles_0_25_50_75_100": [
+          0.015155093700573517,
+          0.03634090717248784,
+          0.04931505556795724,
+          0.05811772364090374,
+          0.07210741406879345
+        ],
+        "source_lateral_quantiles_0_25_50_75_100": [
+          -0.17693909005930844,
+          -0.11186621942773442,
+          -0.05295452648504431,
+          0.006395804098428335,
+          0.06946431730727264
+        ],
+        "source_normal_y_quantiles_0_25_50_75_100": [
+          0.5633870363235474,
+          0.6787265837192535,
+          0.7106822729110718,
+          0.7255819439888,
+          0.741605818271637
+        ],
+        "source_shell_direction_counts": {
+          "front_normal_y_lt_minus025": 0,
+          "back_normal_y_gt025": 103,
+          "side_or_shoulder_normal": 0
+        },
+        "geometric_axial_region_counts": {
+          "proximal_s_lt_minus003": 0,
+          "central_s_minus003_to014": 103,
+          "distal_s_gt014": 0
+        },
+        "displacement_quantiles_0_25_50_75_100": [
+          5.960464477539063e-08,
+          5.543924999074079e-07,
+          1.4660804481536616e-06,
+          4.256116653778008e-06,
+          3.9391998143401e-05
+        ],
+        "displacement_gt001_count": 0,
+        "semantic_limit": "Axial region and surface normal are measured; source C52 has no retained anatomical face provenance. Do not automatically label every rear shell sample torso or tip."
+      },
+      "result_inside_attribution": {
+        "n": 103,
+        "source_C52_indices": [
+          114223,
+          114224,
+          114389,
+          114390,
+          114403,
+          114404,
+          114413,
+          114414,
+          114415,
+          114416,
+          114417,
+          114427,
+          114428,
+          114429,
+          114430,
+          114431,
+          114432,
+          114949,
+          114950,
+          114964,
+          114965,
+          114979,
+          115034,
+          115038,
+          115039,
+          115040,
+          115041,
+          115042,
+          115043,
+          115137,
+          115290,
+          115291,
+          115292,
+          115293,
+          115294,
+          115295,
+          115296,
+          115297,
+          115298,
+          115299,
+          115300,
+          115301,
+          115319,
+          115320,
+          115321,
+          115322,
+          115323,
+          115324,
+          115336,
+          115337,
+          115338,
+          115339,
+          115340,
+          115341,
+          115342,
+          115344,
+          115345,
+          115346,
+          115347,
+          115350,
+          115351,
+          115352,
+          115353,
+          115354,
+          115355,
+          115356,
+          273123,
+          276315,
+          276330,
+          276341,
+          276344,
+          276345,
+          276346,
+          276347,
+          276348,
+          276349,
+          276350,
+          276351,
+          276352,
+          276684,
+          276699,
+          276718,
+          276778,
+          276779,
+          276787,
+          276788,
+          276789,
+          276790,
+          276791,
+          276792,
+          276793,
+          276794,
+          276795,
+          276796,
+          276797,
+          276798,
+          276799,
+          276800,
+          276801,
+          276802,
+          276803,
+          276804,
+          276805
+        ],
+        "source_coordinate_bbox": [
+          [
+            -0.675650954246521,
+            -0.9649927616119385,
+            1.6499090194702148
+          ],
+          [
+            -0.5239107608795166,
+            -0.9440218806266785,
+            1.8447320461273193
+          ]
+        ],
+        "source_palm_axis_quantiles_0_25_50_75_100": [
+          0.015155093700573517,
+          0.03634090717248784,
+          0.04931505556795724,
+          0.05811772364090374,
+          0.07210741406879345
+        ],
+        "source_lateral_quantiles_0_25_50_75_100": [
+          -0.17693909005930844,
+          -0.11186621942773442,
+          -0.05295452648504431,
+          0.006395804098428335,
+          0.06946431730727264
+        ],
+        "source_normal_y_quantiles_0_25_50_75_100": [
+          0.5633870363235474,
+          0.6787265837192535,
+          0.7106822729110718,
+          0.7255819439888,
+          0.741605818271637
+        ],
+        "source_shell_direction_counts": {
+          "front_normal_y_lt_minus025": 0,
+          "back_normal_y_gt025": 103,
+          "side_or_shoulder_normal": 0
+        },
+        "geometric_axial_region_counts": {
+          "proximal_s_lt_minus003": 0,
+          "central_s_minus003_to014": 103,
+          "distal_s_gt014": 0
+        },
+        "displacement_quantiles_0_25_50_75_100": [
+          5.960464477539063e-08,
+          5.543924999074079e-07,
+          1.4660804481536616e-06,
+          4.256116653778008e-06,
+          3.9391998143401e-05
+        ],
+        "displacement_gt001_count": 0,
+        "semantic_limit": "Axial region and surface normal are measured; source C52 has no retained anatomical face provenance. Do not automatically label every rear shell sample torso or tip."
+      }
+    }
+  ],
+  "all_C52_indices_exact": true,
+  "all_legacy_C35_integer_attributes_stay0": true,
+  "elapsed_seconds": 7.8587939739227295,
+  "limits": [
+    "Actual triangle pairs count crossings, not penetration volume. No parity claim for open wood surfaces.",
+    "No continuous motion/string contact paths, per-note response, dynamics or natural playing pass.",
+    "Source75 self pairs in unchanged left-hand/right-ear regions remain external static blockers.",
+    "No UV/groom/rig/deformation approval."
+  ]
+}

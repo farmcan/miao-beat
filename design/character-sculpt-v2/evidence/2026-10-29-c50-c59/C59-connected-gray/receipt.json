@@ -1,0 +1,2985 @@
+{
+  "stage": "C59-one-real-finite-wrist-zipper-graft-appearance-gate",
+  "sources_sha256": {
+    "body": "2af4802f996c61badb0883385d6be2048ec3f63494648042e11b0594ac9f463a",
+    "hand": "3097d74a3f932d6dd61e60b7ab12bd40c5c53cd09b7c94aaf93170a03ec25cce",
+    "C52": "630c27d7de8d94f0fb85201e0a216bb7055c223bb85b6d05b704fd6ba0ad40bc"
+  },
+  "script_sha256": "07f61f51d205d007d76ab41c48c51906ee70389d2fa19697d5fd083ece608c65",
+  "source_body_has_C52_ordered_topology_exact": true,
+  "body_planeY": -0.7,
+  "old_hand_planeY": -0.72,
+  "plane_change_reason": "Root authorized prioritize all5359 old hand vertices. Proposed-.74 would remove251 including198 root points; use original-.72 with positive.02u band.",
+  "actual_loops": {
+    "body_count": 177,
+    "hand_count": 198,
+    "old_hand_cyclic_offset": 0,
+    "zipper_triangle_count": 375,
+    "monotonic_arclength_order": true
+  },
+  "fairing": "none; no retained body or old hand vertices moved",
+  "body_cut_edge_provenance": [
+    {
+      "input_edge_index": 49480,
+      "input_vertex_indices": [
+        48067,
+        48071
+      ],
+      "edge_parameter": 0.4935443367842505,
+      "cut_world": [
+        0.9291576147079468,
+        -0.699999988079071,
+        1.727200984954834
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285705
+    },
+    {
+      "input_edge_index": 49486,
+      "input_vertex_indices": [
+        48096,
+        48099
+      ],
+      "edge_parameter": 0.49887118469314595,
+      "cut_world": [
+        0.934184193611145,
+        -0.699999988079071,
+        1.7131294012069702
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285706
+    },
+    {
+      "input_edge_index": 49510,
+      "input_vertex_indices": [
+        48177,
+        48179
+      ],
+      "edge_parameter": 0.4976649666842527,
+      "cut_world": [
+        0.9234355688095093,
+        -0.699999988079071,
+        1.7882298231124878
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285707
+    },
+    {
+      "input_edge_index": 50455,
+      "input_vertex_indices": [
+        48787,
+        48788
+      ],
+      "edge_parameter": 0.5570976599808978,
+      "cut_world": [
+        1.024999737739563,
+        -0.699999988079071,
+        1.8339606523513794
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285708
+    },
+    {
+      "input_edge_index": 50471,
+      "input_vertex_indices": [
+        48856,
+        48857
+      ],
+      "edge_parameter": 0.4603623762005971,
+      "cut_world": [
+        1.0379868745803833,
+        -0.699999988079071,
+        1.839532494544983
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285709
+    },
+    {
+      "input_edge_index": 51426,
+      "input_vertex_indices": [
+        192860,
+        192872
+      ],
+      "edge_parameter": 0.5733217690870714,
+      "cut_world": [
+        1.0834619998931885,
+        -0.699999988079071,
+        1.554235577583313
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285710
+    },
+    {
+      "input_edge_index": 51439,
+      "input_vertex_indices": [
+        43121,
+        43133
+      ],
+      "edge_parameter": 0.26200144873455233,
+      "cut_world": [
+        1.0589492321014404,
+        -0.699999988079071,
+        1.847802996635437
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285711
+    },
+    {
+      "input_edge_index": 51446,
+      "input_vertex_indices": [
+        43156,
+        43158
+      ],
+      "edge_parameter": 0.7908088435004618,
+      "cut_world": [
+        1.0816433429718018,
+        -0.699999988079071,
+        1.8569068908691406
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285712
+    },
+    {
+      "input_edge_index": 52413,
+      "input_vertex_indices": [
+        193060,
+        193061
+      ],
+      "edge_parameter": 0.2177050625241007,
+      "cut_world": [
+        1.1291239261627197,
+        -0.699999988079071,
+        1.5431056022644043
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285713
+    },
+    {
+      "input_edge_index": 52416,
+      "input_vertex_indices": [
+        193060,
+        193069
+      ],
+      "edge_parameter": 0.7204776445923158,
+      "cut_world": [
+        1.1349983215332031,
+        -0.699999988079071,
+        1.5420739650726318
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285714
+    },
+    {
+      "input_edge_index": 52447,
+      "input_vertex_indices": [
+        43284,
+        43292
+      ],
+      "edge_parameter": 0.2976065688329839,
+      "cut_world": [
+        1.1594051122665405,
+        -0.699999988079071,
+        1.887757658958435
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285715
+    },
+    {
+      "input_edge_index": 53710,
+      "input_vertex_indices": [
+        193356,
+        193357
+      ],
+      "edge_parameter": 0.1764684182179036,
+      "cut_world": [
+        1.2434366941452026,
+        -0.699999988079071,
+        1.5530797243118286
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285716
+    },
+    {
+      "input_edge_index": 58012,
+      "input_vertex_indices": [
+        43605,
+        43606
+      ],
+      "edge_parameter": 0.7490470541716093,
+      "cut_world": [
+        1.2862796783447266,
+        -0.699999988079071,
+        1.9354907274246216
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285717
+    },
+    {
+      "input_edge_index": 58999,
+      "input_vertex_indices": [
+        193911,
+        193914
+      ],
+      "edge_parameter": 0.529283526514924,
+      "cut_world": [
+        1.3650619983673096,
+        -0.699999988079071,
+        1.67393958568573
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285718
+    },
+    {
+      "input_edge_index": 59005,
+      "input_vertex_indices": [
+        44511,
+        44512
+      ],
+      "edge_parameter": 0.5312588028696605,
+      "cut_world": [
+        1.3755278587341309,
+        -0.699999988079071,
+        1.7035409212112427
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285719
+    },
+    {
+      "input_edge_index": 59024,
+      "input_vertex_indices": [
+        44583,
+        44591
+      ],
+      "edge_parameter": 0.49498397369187863,
+      "cut_world": [
+        1.384315013885498,
+        -0.699999988079071,
+        1.8047099113464355
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285720
+    },
+    {
+      "input_edge_index": 59038,
+      "input_vertex_indices": [
+        44639,
+        44642
+      ],
+      "edge_parameter": 0.4302822825629761,
+      "cut_world": [
+        1.3659987449645996,
+        -0.699999988079071,
+        1.8777028322219849
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285721
+    },
+    {
+      "input_edge_index": 123986,
+      "input_vertex_indices": [
+        48044,
+        48046
+      ],
+      "edge_parameter": 0.48307333499922656,
+      "cut_world": [
+        0.9223981499671936,
+        -0.699999988079071,
+        1.7501158714294434
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285722
+    },
+    {
+      "input_edge_index": 123993,
+      "input_vertex_indices": [
+        48068,
+        48072
+      ],
+      "edge_parameter": 0.48767763772314393,
+      "cut_world": [
+        0.9264804124832153,
+        -0.699999988079071,
+        1.735466718673706
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285723
+    },
+    {
+      "input_edge_index": 124021,
+      "input_vertex_indices": [
+        48178,
+        48180
+      ],
+      "edge_parameter": 0.6124981282075715,
+      "cut_world": [
+        0.9290066361427307,
+        -0.699999988079071,
+        1.7924277782440186
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285724
+    },
+    {
+      "input_edge_index": 124887,
+      "input_vertex_indices": [
+        192585,
+        192586
+      ],
+      "edge_parameter": 0.5790957099626179,
+      "cut_world": [
+        1.039379596710205,
+        -0.699999988079071,
+        1.5802075862884521
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285725
+    },
+    {
+      "input_edge_index": 124898,
+      "input_vertex_indices": [
+        192383,
+        192594
+      ],
+      "edge_parameter": 0.5143720033844129,
+      "cut_world": [
+        0.9902552366256714,
+        -0.699999988079071,
+        1.6201404333114624
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285726
+    },
+    {
+      "input_edge_index": 125847,
+      "input_vertex_indices": [
+        192889,
+        192890
+      ],
+      "edge_parameter": 0.6457162617791995,
+      "cut_world": [
+        1.1058275699615479,
+        -0.699999988079071,
+        1.5479521751403809
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285727
+    },
+    {
+      "input_edge_index": 125866,
+      "input_vertex_indices": [
+        43157,
+        43159
+      ],
+      "edge_parameter": 0.4720428882475062,
+      "cut_world": [
+        1.087855339050293,
+        -0.699999988079071,
+        1.8596999645233154
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285728
+    },
+    {
+      "input_edge_index": 125871,
+      "input_vertex_indices": [
+        43179,
+        43180
+      ],
+      "edge_parameter": 0.9126015791375479,
+      "cut_world": [
+        1.106441617012024,
+        -0.699999988079071,
+        1.8668649196624756
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285729
+    },
+    {
+      "input_edge_index": 126848,
+      "input_vertex_indices": [
+        193086,
+        193087
+      ],
+      "edge_parameter": 0.7137179770239376,
+      "cut_world": [
+        1.155348539352417,
+        -0.699999988079071,
+        1.5392553806304932
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285730
+    },
+    {
+      "input_edge_index": 132390,
+      "input_vertex_indices": [
+        193718,
+        193721
+      ],
+      "edge_parameter": 0.533439961372484,
+      "cut_world": [
+        1.3174067735671997,
+        -0.699999988079071,
+        1.6024930477142334
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285731
+    },
+    {
+      "input_edge_index": 132415,
+      "input_vertex_indices": [
+        43606,
+        43611
+      ],
+      "edge_parameter": 0.7436318046539967,
+      "cut_world": [
+        1.2934544086456299,
+        -0.699999988079071,
+        1.9380617141723633
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285732
+    },
+    {
+      "input_edge_index": 133396,
+      "input_vertex_indices": [
+        44584,
+        44592
+      ],
+      "edge_parameter": 0.4914585289886946,
+      "cut_world": [
+        1.383101463317871,
+        -0.699999988079071,
+        1.814576268196106
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285733
+    },
+    {
+      "input_edge_index": 133410,
+      "input_vertex_indices": [
+        44640,
+        44643
+      ],
+      "edge_parameter": 0.4372259302960393,
+      "cut_world": [
+        1.3631752729415894,
+        -0.699999988079071,
+        1.8845915794372559
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285734
+    },
+    {
+      "input_edge_index": 198325,
+      "input_vertex_indices": [
+        48045,
+        48047
+      ],
+      "edge_parameter": 0.4791379474259638,
+      "cut_world": [
+        0.9208089709281921,
+        -0.699999988079071,
+        1.7573952674865723
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285735
+    },
+    {
+      "input_edge_index": 198331,
+      "input_vertex_indices": [
+        48069,
+        48073
+      ],
+      "edge_parameter": 0.4849708950733134,
+      "cut_world": [
+        0.9242048859596252,
+        -0.699999988079071,
+        1.7432003021240234
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285736
+    },
+    {
+      "input_edge_index": 198369,
+      "input_vertex_indices": [
+        48199,
+        48200
+      ],
+      "edge_parameter": 0.49100265670902676,
+      "cut_world": [
+        0.946925699710846,
+        -0.699999988079071,
+        1.8012287616729736
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285737
+    },
+    {
+      "input_edge_index": 199294,
+      "input_vertex_indices": [
+        192564,
+        192566
+      ],
+      "edge_parameter": 0.5836743589122697,
+      "cut_world": [
+        1.0217031240463257,
+        -0.699999988079071,
+        1.5921003818511963
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285738
+    },
+    {
+      "input_edge_index": 199301,
+      "input_vertex_indices": [
+        192574,
+        192587
+      ],
+      "edge_parameter": 0.5850449123840377,
+      "cut_world": [
+        1.0334584712982178,
+        -0.699999988079071,
+        1.5840359926223755
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285739
+    },
+    {
+      "input_edge_index": 199307,
+      "input_vertex_indices": [
+        192352,
+        192354
+      ],
+      "edge_parameter": 0.5268672772550861,
+      "cut_world": [
+        0.9688509702682495,
+        -0.699999988079071,
+        1.647830843925476
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285740
+    },
+    {
+      "input_edge_index": 199316,
+      "input_vertex_indices": [
+        192384,
+        192385
+      ],
+      "edge_parameter": 0.5173412963039463,
+      "cut_world": [
+        0.9856252074241638,
+        -0.699999988079071,
+        1.6254974603652954
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285741
+    },
+    {
+      "input_edge_index": 200316,
+      "input_vertex_indices": [
+        192848,
+        192850
+      ],
+      "edge_parameter": 0.5410944963903888,
+      "cut_world": [
+        1.0702742338180542,
+        -0.699999988079071,
+        1.5610928535461426
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285742
+    },
+    {
+      "input_edge_index": 200319,
+      "input_vertex_indices": [
+        192861,
+        192862
+      ],
+      "edge_parameter": 0.5516571545414635,
+      "cut_world": [
+        1.0766525268554688,
+        -0.699999988079071,
+        1.5574594736099243
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285743
+    },
+    {
+      "input_edge_index": 200332,
+      "input_vertex_indices": [
+        48931,
+        48932
+      ],
+      "edge_parameter": 0.6016166362012524,
+      "cut_world": [
+        1.0471457242965698,
+        -0.699999988079071,
+        1.8428943157196045
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285744
+    },
+    {
+      "input_edge_index": 200355,
+      "input_vertex_indices": [
+        43180,
+        43190
+      ],
+      "edge_parameter": 0.24917256646866712,
+      "cut_world": [
+        1.1087939739227295,
+        -0.699999988079071,
+        1.8678138256072998
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285745
+    },
+    {
+      "input_edge_index": 201356,
+      "input_vertex_indices": [
+        43264,
+        43266
+      ],
+      "edge_parameter": 0.7956760798402466,
+      "cut_world": [
+        1.1316229104995728,
+        -0.699999988079071,
+        1.8769584894180298
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285746
+    },
+    {
+      "input_edge_index": 201364,
+      "input_vertex_indices": [
+        43292,
+        43293
+      ],
+      "edge_parameter": 0.25736141339137114,
+      "cut_world": [
+        1.1662027835845947,
+        -0.699999988079071,
+        1.8906056880950928
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285747
+    },
+    {
+      "input_edge_index": 202595,
+      "input_vertex_indices": [
+        43378,
+        43379
+      ],
+      "edge_parameter": 0.8214089729328884,
+      "cut_world": [
+        1.2067550420761108,
+        -0.699999988079071,
+        1.9056777954101562
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285748
+    },
+    {
+      "input_edge_index": 202597,
+      "input_vertex_indices": [
+        43384,
+        43385
+      ],
+      "edge_parameter": 0.188469415294734,
+      "cut_world": [
+        1.2165772914886475,
+        -0.699999988079071,
+        1.909688949584961
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285749
+    },
+    {
+      "input_edge_index": 202608,
+      "input_vertex_indices": [
+        43391,
+        43408
+      ],
+      "edge_parameter": 0.8953667834488294,
+      "cut_world": [
+        1.2362626791000366,
+        -0.699999988079071,
+        1.9168341159820557
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285750
+    },
+    {
+      "input_edge_index": 202611,
+      "input_vertex_indices": [
+        43415,
+        43416
+      ],
+      "edge_parameter": 0.27329221862118874,
+      "cut_world": [
+        1.2459837198257446,
+        -0.699999988079071,
+        1.920812964439392
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285751
+    },
+    {
+      "input_edge_index": 206848,
+      "input_vertex_indices": [
+        193743,
+        193745
+      ],
+      "edge_parameter": 0.5515892072639311,
+      "cut_world": [
+        1.331304669380188,
+        -0.699999988079071,
+        1.6182548999786377
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285752
+    },
+    {
+      "input_edge_index": 206861,
+      "input_vertex_indices": [
+        43591,
+        43594
+      ],
+      "edge_parameter": 0.4614148678190441,
+      "cut_world": [
+        1.3567997217178345,
+        -0.699999988079071,
+        1.8983254432678223
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285753
+    },
+    {
+      "input_edge_index": 206881,
+      "input_vertex_indices": [
+        43632,
+        43634
+      ],
+      "edge_parameter": 0.42100441208380546,
+      "cut_world": [
+        1.3341940641403198,
+        -0.699999988079071,
+        1.9345171451568604
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285754
+    },
+    {
+      "input_edge_index": 207870,
+      "input_vertex_indices": [
+        44537,
+        44543
+      ],
+      "edge_parameter": 0.5336361072947726,
+      "cut_world": [
+        1.3772879838943481,
+        -0.699999988079071,
+        1.7104287147521973
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285755
+    },
+    {
+      "input_edge_index": 207880,
+      "input_vertex_indices": [
+        44585,
+        44593
+      ],
+      "edge_parameter": 0.4871791822268738,
+      "cut_world": [
+        1.3814997673034668,
+        -0.699999988079071,
+        1.8242406845092773
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285756
+    },
+    {
+      "input_edge_index": 207896,
+      "input_vertex_indices": [
+        44641,
+        44644
+      ],
+      "edge_parameter": 0.45281275542235755,
+      "cut_world": [
+        1.3600223064422607,
+        -0.699999988079071,
+        1.8917419910430908
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285757
+    },
+    {
+      "input_edge_index": 272653,
+      "input_vertex_indices": [
+        192157,
+        192158
+      ],
+      "edge_parameter": 0.5069958108916817,
+      "cut_world": [
+        0.949627697467804,
+        -0.699999988079071,
+        1.6785331964492798
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285758
+    },
+    {
+      "input_edge_index": 272697,
+      "input_vertex_indices": [
+        48207,
+        48208
+      ],
+      "edge_parameter": 0.802868971417223,
+      "cut_world": [
+        0.9569940567016602,
+        -0.699999988079071,
+        1.8057199716567993
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285759
+    },
+    {
+      "input_edge_index": 273547,
+      "input_vertex_indices": [
+        192565,
+        192567
+      ],
+      "edge_parameter": 0.572914698730567,
+      "cut_world": [
+        1.0160751342773438,
+        -0.699999988079071,
+        1.596309781074524
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285760
+    },
+    {
+      "input_edge_index": 273554,
+      "input_vertex_indices": [
+        192353,
+        192355
+      ],
+      "edge_parameter": 0.5186252229360151,
+      "cut_world": [
+        0.9646921157836914,
+        -0.699999988079071,
+        1.6539674997329712
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285761
+    },
+    {
+      "input_edge_index": 273565,
+      "input_vertex_indices": [
+        192598,
+        192600
+      ],
+      "edge_parameter": 0.528124925752572,
+      "cut_world": [
+        1.0000169277191162,
+        -0.699999988079071,
+        1.6100544929504395
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285762
+    },
+    {
+      "input_edge_index": 273578,
+      "input_vertex_indices": [
+        48777,
+        48778
+      ],
+      "edge_parameter": 0.8996731261370756,
+      "cut_world": [
+        1.0062990188598633,
+        -0.699999988079071,
+        1.826708197593689
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285763
+    },
+    {
+      "input_edge_index": 273580,
+      "input_vertex_indices": [
+        48783,
+        48784
+      ],
+      "edge_parameter": 0.25147609724513237,
+      "cut_world": [
+        1.0159770250320435,
+        -0.699999988079071,
+        1.830626130104065
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285764
+    },
+    {
+      "input_edge_index": 273582,
+      "input_vertex_indices": [
+        48790,
+        48791
+      ],
+      "edge_parameter": 0.7850877589999367,
+      "cut_world": [
+        1.0317034721374512,
+        -0.699999988079071,
+        1.8368793725967407
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285765
+    },
+    {
+      "input_edge_index": 274531,
+      "input_vertex_indices": [
+        192849,
+        192851
+      ],
+      "edge_parameter": 0.5494212739222888,
+      "cut_world": [
+        1.0640771389007568,
+        -0.699999988079071,
+        1.5647624731063843
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285766
+    },
+    {
+      "input_edge_index": 274557,
+      "input_vertex_indices": [
+        43145,
+        43146
+      ],
+      "edge_parameter": 0.5702499962190529,
+      "cut_world": [
+        1.0749200582504272,
+        -0.699999988079071,
+        1.854128122329712
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285767
+    },
+    {
+      "input_edge_index": 275509,
+      "input_vertex_indices": [
+        193068,
+        193069
+      ],
+      "edge_parameter": 0.9492901614810283,
+      "cut_world": [
+        1.1368722915649414,
+        -0.699999988079071,
+        1.5417578220367432
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285768
+    },
+    {
+      "input_edge_index": 275516,
+      "input_vertex_indices": [
+        193095,
+        193096
+      ],
+      "edge_parameter": 0.6806376799481832,
+      "cut_world": [
+        1.165076494216919,
+        -0.699999988079071,
+        1.5386992692947388
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285769
+    },
+    {
+      "input_edge_index": 275523,
+      "input_vertex_indices": [
+        193122,
+        193123
+      ],
+      "edge_parameter": 0.9470729296628158,
+      "cut_world": [
+        1.1946594715118408,
+        -0.699999988079071,
+        1.541477084159851
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285770
+    },
+    {
+      "input_edge_index": 275530,
+      "input_vertex_indices": [
+        43265,
+        43267
+      ],
+      "edge_parameter": 0.4733763627211734,
+      "cut_world": [
+        1.1378507614135742,
+        -0.699999988079071,
+        1.8797296285629272
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285771
+    },
+    {
+      "input_edge_index": 275540,
+      "input_vertex_indices": [
+        43300,
+        43301
+      ],
+      "edge_parameter": 0.6129000417599939,
+      "cut_world": [
+        1.1759998798370361,
+        -0.699999988079071,
+        1.894075632095337
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285772
+    },
+    {
+      "input_edge_index": 275543,
+      "input_vertex_indices": [
+        43307,
+        43308
+      ],
+      "edge_parameter": 0.017357672210648545,
+      "cut_world": [
+        1.1858124732971191,
+        -0.699999988079071,
+        1.8978204727172852
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285773
+    },
+    {
+      "input_edge_index": 276764,
+      "input_vertex_indices": [
+        193326,
+        193327
+      ],
+      "edge_parameter": 0.3838514584123725,
+      "cut_world": [
+        1.2146073579788208,
+        -0.699999988079071,
+        1.5449796915054321
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285774
+    },
+    {
+      "input_edge_index": 276788,
+      "input_vertex_indices": [
+        43379,
+        43384
+      ],
+      "edge_parameter": 0.5035545519173671,
+      "cut_world": [
+        1.211722731590271,
+        -0.699999988079071,
+        1.9075896739959717
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285775
+    },
+    {
+      "input_edge_index": 281070,
+      "input_vertex_indices": [
+        193713,
+        193714
+      ],
+      "edge_parameter": 0.5262620863903601,
+      "cut_world": [
+        1.3125852346420288,
+        -0.699999988079071,
+        1.597438097000122
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285776
+    },
+    {
+      "input_edge_index": 281079,
+      "input_vertex_indices": [
+        193744,
+        193746
+      ],
+      "edge_parameter": 0.5382025122368344,
+      "cut_world": [
+        1.33582603931427,
+        -0.699999988079071,
+        1.6237471103668213
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285777
+    },
+    {
+      "input_edge_index": 281093,
+      "input_vertex_indices": [
+        43592,
+        43595
+      ],
+      "edge_parameter": 0.45076952376417934,
+      "cut_world": [
+        1.3533624410629272,
+        -0.699999988079071,
+        1.9046452045440674
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285778
+    },
+    {
+      "input_edge_index": 281110,
+      "input_vertex_indices": [
+        43633,
+        43635
+      ],
+      "edge_parameter": 0.4869358074222668,
+      "cut_world": [
+        1.3298088312149048,
+        -0.699999988079071,
+        1.9401456117630005
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285779
+    },
+    {
+      "input_edge_index": 282092,
+      "input_vertex_indices": [
+        44538,
+        44544
+      ],
+      "edge_parameter": 0.5284176991574396,
+      "cut_world": [
+        1.3789877891540527,
+        -0.699999988079071,
+        1.7176234722137451
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285780
+    },
+    {
+      "input_edge_index": 282102,
+      "input_vertex_indices": [
+        44586,
+        44594
+      ],
+      "edge_parameter": 0.4820323804193139,
+      "cut_world": [
+        1.3796236515045166,
+        -0.699999988079071,
+        1.833143949508667
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285781
+    },
+    {
+      "input_edge_index": 282117,
+      "input_vertex_indices": [
+        44663,
+        44667
+      ],
+      "edge_parameter": 0.47334289233039223,
+      "cut_world": [
+        1.375950813293457,
+        -0.699999988079071,
+        1.8476147651672363
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285782
+    },
+    {
+      "input_edge_index": 348044,
+      "input_vertex_indices": [
+        192367,
+        192369
+      ],
+      "edge_parameter": 0.5249169435215947,
+      "cut_world": [
+        0.981194257736206,
+        -0.699999988079071,
+        1.6309592723846436
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285783
+    },
+    {
+      "input_edge_index": 348053,
+      "input_vertex_indices": [
+        192599,
+        192601
+      ],
+      "edge_parameter": 0.5181280823049151,
+      "cut_world": [
+        0.9950506091117859,
+        -0.699999988079071,
+        1.6150163412094116
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285784
+    },
+    {
+      "input_edge_index": 348058,
+      "input_vertex_indices": [
+        192611,
+        192612
+      ],
+      "edge_parameter": 0.5423058160333893,
+      "cut_world": [
+        1.0051615238189697,
+        -0.699999988079071,
+        1.6052602529525757
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285785
+    },
+    {
+      "input_edge_index": 348063,
+      "input_vertex_indices": [
+        48208,
+        48750
+      ],
+      "edge_parameter": 0.5157267894968227,
+      "cut_world": [
+        0.9619368314743042,
+        -0.699999988079071,
+        1.807917594909668
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285786
+    },
+    {
+      "input_edge_index": 348064,
+      "input_vertex_indices": [
+        48750,
+        48751
+      ],
+      "edge_parameter": 0.18910651580179477,
+      "cut_world": [
+        0.9666048288345337,
+        -0.699999988079071,
+        1.809975504875183
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285787
+    },
+    {
+      "input_edge_index": 348074,
+      "input_vertex_indices": [
+        48778,
+        48783
+      ],
+      "edge_parameter": 0.28944789284547534,
+      "cut_world": [
+        1.0091031789779663,
+        -0.699999988079071,
+        1.8278125524520874
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285788
+    },
+    {
+      "input_edge_index": 349011,
+      "input_vertex_indices": [
+        192826,
+        192828
+      ],
+      "edge_parameter": 0.5878589934064314,
+      "cut_world": [
+        1.0516242980957031,
+        -0.699999988079071,
+        1.5724369287490845
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285789
+    },
+    {
+      "input_edge_index": 349017,
+      "input_vertex_indices": [
+        192839,
+        192840
+      ],
+      "edge_parameter": 0.5700163941419891,
+      "cut_world": [
+        1.0577090978622437,
+        -0.699999988079071,
+        1.5685820579528809
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285790
+    },
+    {
+      "input_edge_index": 349029,
+      "input_vertex_indices": [
+        192879,
+        192880
+      ],
+      "edge_parameter": 0.6718796971932989,
+      "cut_world": [
+        1.0979063510894775,
+        -0.699999988079071,
+        1.5499480962753296
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285791
+    },
+    {
+      "input_edge_index": 350059,
+      "input_vertex_indices": [
+        43301,
+        43307
+      ],
+      "edge_parameter": 0.9616530858608722,
+      "cut_world": [
+        1.1854339838027954,
+        -0.699999988079071,
+        1.8976495265960693
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285792
+    },
+    {
+      "input_edge_index": 350061,
+      "input_vertex_indices": [
+        43314,
+        43315
+      ],
+      "edge_parameter": 0.5490024582397414,
+      "cut_world": [
+        1.1962469816207886,
+        -0.699999988079071,
+        1.901940107345581
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285793
+    },
+    {
+      "input_edge_index": 351293,
+      "input_vertex_indices": [
+        193123,
+        193317
+      ],
+      "edge_parameter": 0.21444280321680617,
+      "cut_world": [
+        1.1967988014221191,
+        -0.699999988079071,
+        1.5418609380722046
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285794
+    },
+    {
+      "input_edge_index": 351304,
+      "input_vertex_indices": [
+        193346,
+        193347
+      ],
+      "edge_parameter": 0.8108354369874677,
+      "cut_world": [
+        1.2340455055236816,
+        -0.699999988079071,
+        1.549615740776062
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285795
+    },
+    {
+      "input_edge_index": 351318,
+      "input_vertex_indices": [
+        193389,
+        193390
+      ],
+      "edge_parameter": 0.5827356509493336,
+      "cut_world": [
+        1.2726531028747559,
+        -0.699999988079071,
+        1.5683603286743164
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285796
+    },
+    {
+      "input_edge_index": 351342,
+      "input_vertex_indices": [
+        43429,
+        43430
+      ],
+      "edge_parameter": 0.9860815483585089,
+      "cut_world": [
+        1.2659039497375488,
+        -0.699999988079071,
+        1.9280117750167847
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285797
+    },
+    {
+      "input_edge_index": 351346,
+      "input_vertex_indices": [
+        43437,
+        43438
+      ],
+      "edge_parameter": 0.3752567355321977,
+      "cut_world": [
+        1.2760874032974243,
+        -0.699999988079071,
+        1.9319171905517578
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285798
+    },
+    {
+      "input_edge_index": 355591,
+      "input_vertex_indices": [
+        193776,
+        193779
+      ],
+      "edge_parameter": 0.5358499610521901,
+      "cut_world": [
+        1.3479349613189697,
+        -0.699999988079071,
+        1.6411079168319702
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285799
+    },
+    {
+      "input_edge_index": 355596,
+      "input_vertex_indices": [
+        43593,
+        43596
+      ],
+      "edge_parameter": 0.4329184610288202,
+      "cut_world": [
+        1.3496726751327515,
+        -0.699999988079071,
+        1.911030650138855
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285800
+    },
+    {
+      "input_edge_index": 356593,
+      "input_vertex_indices": [
+        44539,
+        44545
+      ],
+      "edge_parameter": 0.5218236405827612,
+      "cut_world": [
+        1.3808166980743408,
+        -0.699999988079071,
+        1.72615385055542
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285801
+    },
+    {
+      "input_edge_index": 356604,
+      "input_vertex_indices": [
+        44579,
+        44587
+      ],
+      "edge_parameter": 0.5074055921485183,
+      "cut_world": [
+        1.385746717453003,
+        -0.699999988079071,
+        1.7651172876358032
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285802
+    },
+    {
+      "input_edge_index": 356625,
+      "input_vertex_indices": [
+        44664,
+        44668
+      ],
+      "edge_parameter": 0.4688391401037806,
+      "cut_world": [
+        1.3737695217132568,
+        -0.699999988079071,
+        1.8551888465881348
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285803
+    },
+    {
+      "input_edge_index": 421688,
+      "input_vertex_indices": [
+        192166,
+        192169
+      ],
+      "edge_parameter": 0.5138400650453165,
+      "cut_world": [
+        0.9607332348823547,
+        -0.699999988079071,
+        1.6599891185760498
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285804
+    },
+    {
+      "input_edge_index": 421713,
+      "input_vertex_indices": [
+        192185,
+        192187
+      ],
+      "edge_parameter": 0.503886173121683,
+      "cut_world": [
+        0.9461261034011841,
+        -0.699999988079071,
+        1.6853519678115845
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285805
+    },
+    {
+      "input_edge_index": 421729,
+      "input_vertex_indices": [
+        48154,
+        48157
+      ],
+      "edge_parameter": 0.4751432618061358,
+      "cut_world": [
+        0.9192952513694763,
+        -0.699999988079071,
+        1.7658580541610718
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285806
+    },
+    {
+      "input_edge_index": 421733,
+      "input_vertex_indices": [
+        48188,
+        48189
+      ],
+      "edge_parameter": 0.9287897465340516,
+      "cut_world": [
+        0.9371472001075745,
+        -0.699999988079071,
+        1.7965552806854248
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285807
+    },
+    {
+      "input_edge_index": 422615,
+      "input_vertex_indices": [
+        192559,
+        192560
+      ],
+      "edge_parameter": 0.5601792846906729,
+      "cut_world": [
+        1.010524034500122,
+        -0.699999988079071,
+        1.6006989479064941
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285808
+    },
+    {
+      "input_edge_index": 422617,
+      "input_vertex_indices": [
+        192575,
+        192576
+      ],
+      "edge_parameter": 0.5854375823952946,
+      "cut_world": [
+        1.0274572372436523,
+        -0.699999988079071,
+        1.5880399942398071
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285809
+    },
+    {
+      "input_edge_index": 422624,
+      "input_vertex_indices": [
+        192368,
+        192370
+      ],
+      "edge_parameter": 0.5305678409239124,
+      "cut_world": [
+        0.9769180417060852,
+        -0.699999988079071,
+        1.6365313529968262
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285810
+    },
+    {
+      "input_edge_index": 422643,
+      "input_vertex_indices": [
+        48758,
+        48759
+      ],
+      "edge_parameter": 0.5863504916136495,
+      "cut_world": [
+        0.9761868119239807,
+        -0.699999988079071,
+        1.8138645887374878
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285811
+    },
+    {
+      "input_edge_index": 422646,
+      "input_vertex_indices": [
+        48765,
+        48766
+      ],
+      "edge_parameter": 0.047522195318805485,
+      "cut_world": [
+        0.9856452941894531,
+        -0.699999988079071,
+        1.8184031248092651
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285812
+    },
+    {
+      "input_edge_index": 423582,
+      "input_vertex_indices": [
+        192827,
+        192829
+      ],
+      "edge_parameter": 0.5828635714804151,
+      "cut_world": [
+        1.0455445051193237,
+        -0.699999988079071,
+        1.576331377029419
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285813
+    },
+    {
+      "input_edge_index": 424601,
+      "input_vertex_indices": [
+        193077,
+        193078
+      ],
+      "edge_parameter": 0.7941745089631619,
+      "cut_world": [
+        1.145859956741333,
+        -0.699999988079071,
+        1.5403685569763184
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285814
+    },
+    {
+      "input_edge_index": 424608,
+      "input_vertex_indices": [
+        193104,
+        193105
+      ],
+      "edge_parameter": 0.6892373485388453,
+      "cut_world": [
+        1.1749099493026733,
+        -0.699999988079071,
+        1.538859248161316
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285815
+    },
+    {
+      "input_edge_index": 425881,
+      "input_vertex_indices": [
+        193347,
+        193356
+      ],
+      "edge_parameter": 0.5143158835235349,
+      "cut_world": [
+        1.2389020919799805,
+        -0.699999988079071,
+        1.5513778924942017
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285816
+    },
+    {
+      "input_edge_index": 425890,
+      "input_vertex_indices": [
+        193377,
+        193379
+      ],
+      "edge_parameter": 0.5176225722477477,
+      "cut_world": [
+        1.2597739696502686,
+        -0.699999988079071,
+        1.560511589050293
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285817
+    },
+    {
+      "input_edge_index": 425913,
+      "input_vertex_indices": [
+        43430,
+        43437
+      ],
+      "edge_parameter": 0.03638131088543713,
+      "cut_world": [
+        1.2662714719772339,
+        -0.699999988079071,
+        1.9281480312347412
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285818
+    },
+    {
+      "input_edge_index": 430195,
+      "input_vertex_indices": [
+        193777,
+        193780
+      ],
+      "edge_parameter": 0.5423163794040559,
+      "cut_world": [
+        1.3515244722366333,
+        -0.699999988079071,
+        1.6473379135131836
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285819
+    },
+    {
+      "input_edge_index": 430205,
+      "input_vertex_indices": [
+        43587,
+        43588
+      ],
+      "edge_parameter": 0.41808887789595184,
+      "cut_world": [
+        1.3460007905960083,
+        -0.699999988079071,
+        1.9171247482299805
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285820
+    },
+    {
+      "input_edge_index": 430215,
+      "input_vertex_indices": [
+        43616,
+        43617
+      ],
+      "edge_parameter": 0.39513772875330877,
+      "cut_world": [
+        1.305295705795288,
+        -0.699999988079071,
+        1.941954493522644
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285821
+    },
+    {
+      "input_edge_index": 430219,
+      "input_vertex_indices": [
+        43621,
+        43622
+      ],
+      "edge_parameter": 0.6296475866560532,
+      "cut_world": [
+        1.3145426511764526,
+        -0.699999988079071,
+        1.9445905685424805
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285822
+    },
+    {
+      "input_edge_index": 431209,
+      "input_vertex_indices": [
+        44540,
+        44546
+      ],
+      "edge_parameter": 0.5176833681238823,
+      "cut_world": [
+        1.3825801610946655,
+        -0.699999988079071,
+        1.7355891466140747
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285823
+    },
+    {
+      "input_edge_index": 431221,
+      "input_vertex_indices": [
+        44580,
+        44588
+      ],
+      "edge_parameter": 0.5041409660064607,
+      "cut_world": [
+        1.3859143257141113,
+        -0.699999988079071,
+        1.7750186920166016
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285824
+    },
+    {
+      "input_edge_index": 431241,
+      "input_vertex_indices": [
+        44665,
+        44669
+      ],
+      "edge_parameter": 0.4588990955675727,
+      "cut_world": [
+        1.371167778968811,
+        -0.699999988079071,
+        1.8634148836135864
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285825
+    },
+    {
+      "input_edge_index": 431247,
+      "input_vertex_indices": [
+        44693,
+        44694
+      ],
+      "edge_parameter": 0.477068921342557,
+      "cut_world": [
+        1.3777759075164795,
+        -0.699999988079071,
+        1.8407663106918335
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285826
+    },
+    {
+      "input_edge_index": 496369,
+      "input_vertex_indices": [
+        192167,
+        192170
+      ],
+      "edge_parameter": 0.5117359369294407,
+      "cut_world": [
+        0.9568766355514526,
+        -0.699999988079071,
+        1.6661813259124756
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285827
+    },
+    {
+      "input_edge_index": 496384,
+      "input_vertex_indices": [
+        48094,
+        48097
+      ],
+      "edge_parameter": 0.4972092078213893,
+      "cut_world": [
+        0.940172016620636,
+        -0.699999988079071,
+        1.6984285116195679
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285828
+    },
+    {
+      "input_edge_index": 496390,
+      "input_vertex_indices": [
+        192186,
+        192188
+      ],
+      "edge_parameter": 0.5004904834252492,
+      "cut_world": [
+        0.9430744647979736,
+        -0.699999988079071,
+        1.691863775253296
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285829
+    },
+    {
+      "input_edge_index": 496404,
+      "input_vertex_indices": [
+        48155,
+        48158
+      ],
+      "edge_parameter": 0.4792812874083771,
+      "cut_world": [
+        0.9180822372436523,
+        -0.699999988079071,
+        1.774711012840271
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285830
+    },
+    {
+      "input_edge_index": 496415,
+      "input_vertex_indices": [
+        48189,
+        48199
+      ],
+      "edge_parameter": 0.10309757230520988,
+      "cut_world": [
+        0.9381886720657349,
+        -0.699999988079071,
+        1.7970144748687744
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285831
+    },
+    {
+      "input_edge_index": 497362,
+      "input_vertex_indices": [
+        192351,
+        192371
+      ],
+      "edge_parameter": 0.5336478136319515,
+      "cut_world": [
+        0.9728350043296814,
+        -0.699999988079071,
+        1.6421335935592651
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285832
+    },
+    {
+      "input_edge_index": 497381,
+      "input_vertex_indices": [
+        48759,
+        48765
+      ],
+      "edge_parameter": 0.9010885633651391,
+      "cut_world": [
+        0.9846882224082947,
+        -0.699999988079071,
+        1.8179337978363037
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285833
+    },
+    {
+      "input_edge_index": 497382,
+      "input_vertex_indices": [
+        48772,
+        48773
+      ],
+      "edge_parameter": 0.571740914612127,
+      "cut_world": [
+        0.9961191415786743,
+        -0.699999988079071,
+        1.822299599647522
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285834
+    },
+    {
+      "input_edge_index": 498346,
+      "input_vertex_indices": [
+        192898,
+        192899
+      ],
+      "edge_parameter": 0.619837296620776,
+      "cut_world": [
+        1.114491581916809,
+        -0.699999988079071,
+        1.5459980964660645
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285835
+    },
+    {
+      "input_edge_index": 498356,
+      "input_vertex_indices": [
+        43133,
+        43134
+      ],
+      "edge_parameter": 0.26391145649358294,
+      "cut_world": [
+        1.0659488439559937,
+        -0.699999988079071,
+        1.8507941961288452
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285836
+    },
+    {
+      "input_edge_index": 498366,
+      "input_vertex_indices": [
+        43169,
+        43170
+      ],
+      "edge_parameter": 0.6131194822552847,
+      "cut_world": [
+        1.0970587730407715,
+        -0.699999988079071,
+        1.8630695343017578
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285837
+    },
+    {
+      "input_edge_index": 498372,
+      "input_vertex_indices": [
+        43190,
+        43191
+      ],
+      "edge_parameter": 0.27070491544175757,
+      "cut_world": [
+        1.1159114837646484,
+        -0.699999988079071,
+        1.8708995580673218
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285838
+    },
+    {
+      "input_edge_index": 499336,
+      "input_vertex_indices": [
+        43275,
+        43276
+      ],
+      "edge_parameter": 0.6126084904985916,
+      "cut_world": [
+        1.1470487117767334,
+        -0.699999988079071,
+        1.8831068277359009
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285839
+    },
+    {
+      "input_edge_index": 500564,
+      "input_vertex_indices": [
+        193317,
+        193318
+      ],
+      "edge_parameter": 0.19319007410516797,
+      "cut_world": [
+        1.204630732536316,
+        -0.699999988079071,
+        1.5433140993118286
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285840
+    },
+    {
+      "input_edge_index": 500570,
+      "input_vertex_indices": [
+        193335,
+        193336
+      ],
+      "edge_parameter": 0.5436236336357791,
+      "cut_world": [
+        1.2243685722351074,
+        -0.699999988079071,
+        1.5468021631240845
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285841
+    },
+    {
+      "input_edge_index": 500581,
+      "input_vertex_indices": [
+        193378,
+        193380
+      ],
+      "edge_parameter": 0.5387338685843759,
+      "cut_world": [
+        1.2662922143936157,
+        -0.699999988079071,
+        1.564395785331726
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285842
+    },
+    {
+      "input_edge_index": 500603,
+      "input_vertex_indices": [
+        43408,
+        43415
+      ],
+      "edge_parameter": 0.28071882569719053,
+      "cut_world": [
+        1.2389990091323853,
+        -0.699999988079071,
+        1.9178885221481323
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285843
+    },
+    {
+      "input_edge_index": 504850,
+      "input_vertex_indices": [
+        193676,
+        193678
+      ],
+      "edge_parameter": 0.5995848342389646,
+      "cut_world": [
+        1.2787339687347412,
+        -0.699999988079071,
+        1.5721160173416138
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285844
+    },
+    {
+      "input_edge_index": 504854,
+      "input_vertex_indices": [
+        193688,
+        193689
+      ],
+      "edge_parameter": 0.5888788200364864,
+      "cut_world": [
+        1.290939211845398,
+        -0.699999988079071,
+        1.5797151327133179
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285845
+    },
+    {
+      "input_edge_index": 504859,
+      "input_vertex_indices": [
+        193701,
+        193702
+      ],
+      "edge_parameter": 0.5476993160782039,
+      "cut_world": [
+        1.302375316619873,
+        -0.699999988079071,
+        1.5879267454147339
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285846
+    },
+    {
+      "input_edge_index": 504870,
+      "input_vertex_indices": [
+        193729,
+        193730
+      ],
+      "edge_parameter": 0.5467762023376126,
+      "cut_world": [
+        1.3221032619476318,
+        -0.699999988079071,
+        1.6076668500900269
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285847
+    },
+    {
+      "input_edge_index": 504881,
+      "input_vertex_indices": [
+        193759,
+        193761
+      ],
+      "edge_parameter": 0.5264408302207934,
+      "cut_world": [
+        1.340174913406372,
+        -0.699999988079071,
+        1.6292980909347534
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285848
+    },
+    {
+      "input_edge_index": 504886,
+      "input_vertex_indices": [
+        193778,
+        193781
+      ],
+      "edge_parameter": 0.5496621354017511,
+      "cut_world": [
+        1.3551762104034424,
+        -0.699999988079071,
+        1.6539056301116943
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285849
+    },
+    {
+      "input_edge_index": 504897,
+      "input_vertex_indices": [
+        43611,
+        43612
+      ],
+      "edge_parameter": 0.08496361475912738,
+      "cut_world": [
+        1.2959219217300415,
+        -0.699999988079071,
+        1.9389370679855347
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285850
+    },
+    {
+      "input_edge_index": 504910,
+      "input_vertex_indices": [
+        43626,
+        43627
+      ],
+      "edge_parameter": 0.6192780585726064,
+      "cut_world": [
+        1.3233561515808105,
+        -0.699999988079071,
+        1.9441561698913574
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285851
+    },
+    {
+      "input_edge_index": 504920,
+      "input_vertex_indices": [
+        43641,
+        43642
+      ],
+      "edge_parameter": 0.4129422691267902,
+      "cut_world": [
+        1.3421889543533325,
+        -0.699999988079071,
+        1.9231269359588623
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285852
+    },
+    {
+      "input_edge_index": 505870,
+      "input_vertex_indices": [
+        193909,
+        193912
+      ],
+      "edge_parameter": 0.5521652761223679,
+      "cut_world": [
+        1.3585138320922852,
+        -0.699999988079071,
+        1.6602230072021484
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285853
+    },
+    {
+      "input_edge_index": 505873,
+      "input_vertex_indices": [
+        193924,
+        193925
+      ],
+      "edge_parameter": 0.5191948710302668,
+      "cut_world": [
+        1.3678758144378662,
+        -0.699999988079071,
+        1.6804840564727783
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285854
+    },
+    {
+      "input_edge_index": 505879,
+      "input_vertex_indices": [
+        193934,
+        193936
+      ],
+      "edge_parameter": 0.5166043322888113,
+      "cut_world": [
+        1.3706157207489014,
+        -0.699999988079071,
+        1.6875427961349487
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285855
+    },
+    {
+      "input_edge_index": 505889,
+      "input_vertex_indices": [
+        44541,
+        44547
+      ],
+      "edge_parameter": 0.5141675940218496,
+      "cut_world": [
+        1.384081482887268,
+        -0.699999988079071,
+        1.7453577518463135
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285856
+    },
+    {
+      "input_edge_index": 505900,
+      "input_vertex_indices": [
+        44581,
+        44589
+      ],
+      "edge_parameter": 0.5010285428082498,
+      "cut_world": [
+        1.3857282400131226,
+        -0.699999988079071,
+        1.7849209308624268
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285857
+    },
+    {
+      "input_edge_index": 505917,
+      "input_vertex_indices": [
+        44666,
+        44670
+      ],
+      "edge_parameter": 0.4436261255965956,
+      "cut_world": [
+        1.3685553073883057,
+        -0.699999988079071,
+        1.87099027633667
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285858
+    },
+    {
+      "input_edge_index": 570819,
+      "input_vertex_indices": [
+        192168,
+        192171
+      ],
+      "edge_parameter": 0.509604046329273,
+      "cut_world": [
+        0.9531688690185547,
+        -0.699999988079071,
+        1.6723048686981201
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285859
+    },
+    {
+      "input_edge_index": 570828,
+      "input_vertex_indices": [
+        48066,
+        48070
+      ],
+      "edge_parameter": 0.49872784051665614,
+      "cut_world": [
+        0.9317238926887512,
+        -0.699999988079071,
+        1.7198163270950317
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285860
+    },
+    {
+      "input_edge_index": 570836,
+      "input_vertex_indices": [
+        48095,
+        48098
+      ],
+      "edge_parameter": 0.4967032967032967,
+      "cut_world": [
+        0.9370364546775818,
+        -0.699999988079071,
+        1.7058932781219482
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285861
+    },
+    {
+      "input_edge_index": 570855,
+      "input_vertex_indices": [
+        48156,
+        48159
+      ],
+      "edge_parameter": 0.45702074242333673,
+      "cut_world": [
+        0.9203900694847107,
+        -0.699999988079071,
+        1.7824106216430664
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285862
+    },
+    {
+      "input_edge_index": 572703,
+      "input_vertex_indices": [
+        192870,
+        192871
+      ],
+      "edge_parameter": 0.6005842707827235,
+      "cut_world": [
+        1.0907328128814697,
+        -0.699999988079071,
+        1.551932454109192
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285863
+    },
+    {
+      "input_edge_index": 572716,
+      "input_vertex_indices": [
+        43120,
+        43121
+      ],
+      "edge_parameter": 0.9084599397197659,
+      "cut_world": [
+        1.0564751625061035,
+        -0.699999988079071,
+        1.8468159437179565
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285864
+    },
+    {
+      "input_edge_index": 573708,
+      "input_vertex_indices": [
+        192897,
+        193061
+      ],
+      "edge_parameter": 0.6423777685440512,
+      "cut_world": [
+        1.1241018772125244,
+        -0.699999988079071,
+        1.5440703630447388
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285865
+    },
+    {
+      "input_edge_index": 573722,
+      "input_vertex_indices": [
+        193113,
+        193114
+      ],
+      "edge_parameter": 0.7672711539465734,
+      "cut_world": [
+        1.184774398803711,
+        -0.699999988079071,
+        1.539886713027954
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285866
+    },
+    {
+      "input_edge_index": 573727,
+      "input_vertex_indices": [
+        43255,
+        43256
+      ],
+      "edge_parameter": 0.5808794705651763,
+      "cut_world": [
+        1.124868392944336,
+        -0.699999988079071,
+        1.874281644821167
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285867
+    },
+    {
+      "input_edge_index": 573733,
+      "input_vertex_indices": [
+        43283,
+        43284
+      ],
+      "edge_parameter": 0.8947303372522363,
+      "cut_world": [
+        1.1565426588058472,
+        -0.699999988079071,
+        1.8866597414016724
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285868
+    },
+    {
+      "input_edge_index": 574959,
+      "input_vertex_indices": [
+        193367,
+        193368
+      ],
+      "edge_parameter": 0.5200141794500889,
+      "cut_world": [
+        1.2522000074386597,
+        -0.699999988079071,
+        1.5566866397857666
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285869
+    },
+    {
+      "input_edge_index": 574972,
+      "input_vertex_indices": [
+        43388,
+        43389
+      ],
+      "edge_parameter": 0.5527834653847296,
+      "cut_world": [
+        1.226410150527954,
+        -0.699999988079071,
+        1.9132806062698364
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285870
+    },
+    {
+      "input_edge_index": 574986,
+      "input_vertex_indices": [
+        43422,
+        43423
+      ],
+      "edge_parameter": 0.6343770799524369,
+      "cut_world": [
+        1.255933403968811,
+        -0.699999988079071,
+        1.9243757724761963
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285871
+    },
+    {
+      "input_edge_index": 579272,
+      "input_vertex_indices": [
+        193677,
+        193679
+      ],
+      "edge_parameter": 0.6008313389595666,
+      "cut_world": [
+        1.284873604774475,
+        -0.699999988079071,
+        1.5758795738220215
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285872
+    },
+    {
+      "input_edge_index": 579276,
+      "input_vertex_indices": [
+        193700,
+        193690
+      ],
+      "edge_parameter": 0.5726022471910113,
+      "cut_world": [
+        1.2967530488967896,
+        -0.699999988079071,
+        1.5836366415023804
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285873
+    },
+    {
+      "input_edge_index": 579279,
+      "input_vertex_indices": [
+        193712,
+        193703
+      ],
+      "edge_parameter": 0.5288384366563709,
+      "cut_world": [
+        1.3076047897338867,
+        -0.699999988079071,
+        1.592547059059143
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285874
+    },
+    {
+      "input_edge_index": 579286,
+      "input_vertex_indices": [
+        193742,
+        193731
+      ],
+      "edge_parameter": 0.5565321089976746,
+      "cut_world": [
+        1.3267319202423096,
+        -0.699999988079071,
+        1.6129133701324463
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285875
+    },
+    {
+      "input_edge_index": 579294,
+      "input_vertex_indices": [
+        193760,
+        193762
+      ],
+      "edge_parameter": 0.5276054645913749,
+      "cut_world": [
+        1.344287633895874,
+        -0.699999988079071,
+        1.635172963142395
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285876
+    },
+    {
+      "input_edge_index": 579332,
+      "input_vertex_indices": [
+        43631,
+        43643
+      ],
+      "edge_parameter": 0.411651041293924,
+      "cut_world": [
+        1.3381946086883545,
+        -0.699999988079071,
+        1.9289976358413696
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285877
+    },
+    {
+      "input_edge_index": 580285,
+      "input_vertex_indices": [
+        193910,
+        193913
+      ],
+      "edge_parameter": 0.5433432024462457,
+      "cut_world": [
+        1.3618314266204834,
+        -0.699999988079071,
+        1.6669420003890991
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285878
+    },
+    {
+      "input_edge_index": 580292,
+      "input_vertex_indices": [
+        193935,
+        193937
+      ],
+      "edge_parameter": 0.5224968994466704,
+      "cut_world": [
+        1.3733042478561401,
+        -0.699999988079071,
+        1.6956545114517212
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285879
+    },
+    {
+      "input_edge_index": 580301,
+      "input_vertex_indices": [
+        44542,
+        44548
+      ],
+      "edge_parameter": 0.5107257369831547,
+      "cut_world": [
+        1.3851646184921265,
+        -0.699999988079071,
+        1.7552227973937988
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285880
+    },
+    {
+      "input_edge_index": 580311,
+      "input_vertex_indices": [
+        44582,
+        44590
+      ],
+      "edge_parameter": 0.49807113005584197,
+      "cut_world": [
+        1.3851826190948486,
+        -0.699999988079071,
+        1.7948189973831177
+      ],
+      "witness_method": "actual original split-edge identity",
+      "old_source_id": 0,
+      "cut_output_vertex_index": 285881
+    }
+  ],
+  "old_hand_new_cut_points": 0,
+  "all_5359_old_hand_coordinates_bit_exact": true,
+  "all_retained_C56_body_coordinates_bit_exact": true,
+  "independent_C56_objects_geometry_transform_material_visibility_exact": true,
+  "excluded_hidden_unbound_curves": [
+    "Miao / native short plush"
+  ],
+  "guitar_contact_geometry_world_frame_exact_across_C35_C56": true,
+  "provenance_layers": {
+    "body": "C59 C52 source vertex id",
+    "hand": "C59 C35 source vertex id",
+    "body_faces": "C59 C52 source face id",
+    "hand_faces": "C59 C35 source face id",
+    "new_cut_band_source_ids": 0
+  },
+  "old_contact_faces": [
+    {
+      "kind": "toe",
+      "original_C35_face": 590033,
+      "cyclic_original_vertex_indices": [
+        589743,
+        589753,
+        589752,
+        589742
+      ],
+      "actual_target_world": [
+        1.0799086093902588,
+        -1.0514957904815674,
+        2.0348658561706543
+      ],
+      "source_gap_not_new_pass": 0.0005280850455164909
+    },
+    {
+      "kind": "toe",
+      "original_C35_face": 589877,
+      "cyclic_original_vertex_indices": [
+        590286,
+        590297,
+        590312,
+        590291
+      ],
+      "actual_target_world": [
+        1.1910821199417114,
+        -1.0518748760223389,
+        2.078688144683838
+      ],
+      "source_gap_not_new_pass": 0.002000081352889538
+    },
+    {
+      "kind": "toe",
+      "original_C35_face": 589159,
+      "cyclic_original_vertex_indices": [
+        589490,
+        589493,
+        589496,
+        589489
+      ],
+      "actual_target_world": [
+        1.3021504878997803,
+        -1.0500400066375732,
+        2.122777223587036
+      ],
+      "source_gap_not_new_pass": 0.00027309637516736984
+    },
+    {
+      "kind": "support",
+      "original_C35_face": 586181,
+      "cyclic_original_vertex_indices": [
+        586683,
+        586682,
+        586484,
+        586485
+      ],
+      "actual_target_world": [
+        1.1450207233428955,
+        -0.9830000400543213,
+        1.9719377756118774
+      ],
+      "source_gap_not_new_pass": 0.001999827742110938
+    },
+    {
+      "kind": "support",
+      "original_C35_face": 585759,
+      "cyclic_original_vertex_indices": [
+        586290,
+        586289,
+        586049,
+        586147
+      ],
+      "actual_target_world": [
+        1.267055869102478,
+        -0.9830000400543213,
+        2.019996166229248
+      ],
+      "source_gap_not_new_pass": 0.002000160457100719
+    }
+  ],
+  "topology": {
+    "vertices": 291241,
+    "edges": 582667,
+    "faces": 291428,
+    "components": 1,
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "euler": 2
+  },
+  "signed_volume": 6.460802010525829,
+  "new_zero_source_cut_points": 177,
+  "original_C52_source_points_retained": 285705,
+  "contact_art_status": "Original contact triangles/points protected, but no inherited pass. Full actual self/wood/tube/5rays audit only after actual images.",
+  "limits": [
+    "No new right-palm shape; C58 contribution is separate and may use explicit retained C52 indices.",
+    "No UV/groom/rig/animation/GLB/public/deploy/service cost."
+  ],
+  "native_sha256": "efef0cfde423e567fe1af221d39c8bed27034df9f1bf4b630bd60b776d9de6fb",
+  "seconds_before_render": 9.329049110412598,
+  "renders": [
+    {
+      "file": "gray-front.png",
+      "sha256": "50fafcda30088db97fc3dcd63670de409715a263793b2415b5b61715ca5c2715"
+    },
+    {
+      "file": "gray-three-quarter.png",
+      "sha256": "34356863b0c91acd658e871319d4a0820b6a8cfb323cc055f77a77600165b962"
+    },
+    {
+      "file": "gray-wrist.png",
+      "sha256": "a689e2dcc0ff10c4dba5d6d1b14f0c1da8952d80a2a6bd6501f10eb68b8fc975"
+    }
+  ]
+}

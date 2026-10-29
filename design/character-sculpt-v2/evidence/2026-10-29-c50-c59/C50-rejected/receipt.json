@@ -1,0 +1,42 @@
+{
+  "stage": "One shared two-sided surface fairing repair of C50 r2; art not passed",
+  "source_sha256": "9a75f5673401fffd488c45cdab104c3419e4862945abcbcc21238d01ab4ce8c3",
+  "authorized_source_release": "Only three mesh-neighbor layers each side of actual source/new head interface; old/new bound .012/.025u",
+  "editable_old_source_points": 2054,
+  "editable_new_points": 2798,
+  "old_canonical_release_unique": true,
+  "old_max_actual_move": 0.00564977154135704,
+  "new_max_actual_move": 0.005813688971102238,
+  "all_outside_release_bit_exact": true,
+  "nonmanifold_edges": 0,
+  "loose_vertices": 0,
+  "signed_body_volume": 6.454337466236928,
+  "opposite_winding_shared_edges": 0,
+  "fairing": "One 40-step Taubin .45/-.47 solve with graph-distance fade and source-specific displacement clamp",
+  "trace": [
+    {
+      "iteration": 1,
+      "max_old_move": 0.0006554163746137613,
+      "max_new_move": 0.0009528170358306402
+    },
+    {
+      "iteration": 10,
+      "max_old_move": 0.0025123637465744274,
+      "max_new_move": 0.003676382965646455
+    },
+    {
+      "iteration": 40,
+      "max_old_move": 0.00564976611321593,
+      "max_new_move": 0.005813626393723597
+    }
+  ],
+  "art_pass": false,
+  "closed_head_probe": {
+    "self_pairs": 17,
+    "nonmanifold": 0,
+    "signed_volume": 0.25342959318070285,
+    "opposite_winding_edges": 0
+  },
+  "limited_geometry_gate": false,
+  "native_sha256": "ec964e0e1e08140f5b7f0c967f1119c9da6d41eed879e7384909ca77094680e7"
+}

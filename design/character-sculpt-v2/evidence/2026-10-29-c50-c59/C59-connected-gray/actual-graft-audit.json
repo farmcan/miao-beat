@@ -1,0 +1,853 @@
+{
+  "stage": "C59-actual-frozen-graft-after-images-audit",
+  "native_sha256": "efef0cfde423e567fe1af221d39c8bed27034df9f1bf4b630bd60b776d9de6fb",
+  "source_hashes": {
+    "native": "efef0cfde423e567fe1af221d39c8bed27034df9f1bf4b630bd60b776d9de6fb",
+    "source_body": "2af4802f996c61badb0883385d6be2048ec3f63494648042e11b0594ac9f463a",
+    "source_hand": "3097d74a3f932d6dd61e60b7ab12bd40c5c53cd09b7c94aaf93170a03ec25cce"
+  },
+  "body_actual_triangles": 582478,
+  "actual_complete_body_non_neighbour_triangle_self_pairs": 0,
+  "self_pairs": [],
+  "inconsistent_winding_edges": 0,
+  "topology": {
+    "vertices": 291241,
+    "faces": 291428,
+    "components": 1,
+    "boundary_edges": 0,
+    "non_manifold_edges": 0,
+    "euler": 2
+  },
+  "signed_volume": 6.460802010525829,
+  "zipper_triangle_min_area": 8.005149914482678e-07,
+  "actual_evaluated_instrument_surface_tests": [
+    {
+      "object": "Guitar / bridge",
+      "actual_evaluated_vertices": 152,
+      "actual_evaluated_triangles": 300,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / bridge saddle",
+      "actual_evaluated_vertices": 152,
+      "actual_evaluated_triangles": 300,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / bridge tie",
+      "actual_evaluated_vertices": 178,
+      "actual_evaluated_triangles": 352,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / bridge tie.001",
+      "actual_evaluated_vertices": 178,
+      "actual_evaluated_triangles": 352,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / bridge tie.002",
+      "actual_evaluated_vertices": 178,
+      "actual_evaluated_triangles": 352,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / bridge tie.003",
+      "actual_evaluated_vertices": 178,
+      "actual_evaluated_triangles": 352,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / bridge tie.004",
+      "actual_evaluated_vertices": 178,
+      "actual_evaluated_triangles": 352,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / bridge tie.005",
+      "actual_evaluated_vertices": 178,
+      "actual_evaluated_triangles": 352,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / continuous binding",
+      "actual_evaluated_vertices": 40356,
+      "actual_evaluated_triangles": 80660,
+      "complete_body_surface_pairs": 97,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {
+        "1": 97
+      },
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / continuous binding.001",
+      "actual_evaluated_vertices": 40356,
+      "actual_evaluated_triangles": 80660,
+      "complete_body_surface_pairs": 356,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {
+        "1": 356
+      },
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / ebony fretboard",
+      "actual_evaluated_vertices": 152,
+      "actual_evaluated_triangles": 300,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / headstock",
+      "actual_evaluated_vertices": 152,
+      "actual_evaluated_triangles": 300,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / headstock dark slot",
+      "actual_evaluated_vertices": 152,
+      "actual_evaluated_triangles": 300,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / headstock dark slot.001",
+      "actual_evaluated_vertices": 152,
+      "actual_evaluated_triangles": 300,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / ivory tuning peg",
+      "actual_evaluated_vertices": 362,
+      "actual_evaluated_triangles": 720,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / ivory tuning peg.001",
+      "actual_evaluated_vertices": 362,
+      "actual_evaluated_triangles": 720,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / ivory tuning peg.002",
+      "actual_evaluated_vertices": 362,
+      "actual_evaluated_triangles": 720,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / ivory tuning peg.003",
+      "actual_evaluated_vertices": 362,
+      "actual_evaluated_triangles": 720,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / ivory tuning peg.004",
+      "actual_evaluated_vertices": 362,
+      "actual_evaluated_triangles": 720,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / ivory tuning peg.005",
+      "actual_evaluated_vertices": 362,
+      "actual_evaluated_triangles": 720,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / neck",
+      "actual_evaluated_vertices": 152,
+      "actual_evaluated_triangles": 300,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / nut",
+      "actual_evaluated_vertices": 152,
+      "actual_evaluated_triangles": 300,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / rosette ring",
+      "actual_evaluated_vertices": 27684,
+      "actual_evaluated_triangles": 55316,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / rosette ring.001",
+      "actual_evaluated_vertices": 27684,
+      "actual_evaluated_triangles": 55316,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / rosette ring.002",
+      "actual_evaluated_vertices": 27684,
+      "actual_evaluated_triangles": 55316,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / rosette ring.003",
+      "actual_evaluated_vertices": 27684,
+      "actual_evaluated_triangles": 55316,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / rosewood body",
+      "actual_evaluated_vertices": 1120,
+      "actual_evaluated_triangles": 2236,
+      "complete_body_surface_pairs": 1391,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {
+        "1": 1391
+      },
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / silver fret",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / silver fret.001",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / silver fret.002",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "complete_body_surface_pairs": 28,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {
+        "2": 28
+      },
+      "left_grip_band_and_proximal_collar_surface_pairs": 28,
+      "left_sample_actual_body_triangles": [
+        572362,
+        572362,
+        572362,
+        572362,
+        572362,
+        572362,
+        572361,
+        572361,
+        572361,
+        572361,
+        572361,
+        572361,
+        572361,
+        572361,
+        572361
+      ]
+    },
+    {
+      "object": "Guitar / silver fret.003",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "complete_body_surface_pairs": 28,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {
+        "2": 28
+      },
+      "left_grip_band_and_proximal_collar_surface_pairs": 28,
+      "left_sample_actual_body_triangles": [
+        573136,
+        573136,
+        573136,
+        573136,
+        573136,
+        573136,
+        573136,
+        573136,
+        573136,
+        573136,
+        573136,
+        573136,
+        573136,
+        573136,
+        573136
+      ]
+    },
+    {
+      "object": "Guitar / silver fret.004",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / silver fret.005",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / silver fret.006",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / silver fret.007",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / silver fret.008",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / silver fret.009",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / silver fret.010",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / silver fret.011",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / silver fret.012",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / soundhole chamber",
+      "actual_evaluated_vertices": 192,
+      "actual_evaluated_triangles": 380,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / spruce soundboard",
+      "actual_evaluated_vertices": 1120,
+      "actual_evaluated_triangles": 2236,
+      "complete_body_surface_pairs": 550,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {
+        "1": 550
+      },
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / string 1",
+      "actual_evaluated_vertices": 900,
+      "actual_evaluated_triangles": 1748,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / string 2",
+      "actual_evaluated_vertices": 900,
+      "actual_evaluated_triangles": 1748,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / string 3",
+      "actual_evaluated_vertices": 900,
+      "actual_evaluated_triangles": 1748,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / string 4",
+      "actual_evaluated_vertices": 900,
+      "actual_evaluated_triangles": 1748,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / string 5",
+      "actual_evaluated_vertices": 900,
+      "actual_evaluated_triangles": 1748,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / string 6",
+      "actual_evaluated_vertices": 900,
+      "actual_evaluated_triangles": 1748,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / tuner shaft",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / tuner shaft.001",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / tuner shaft.002",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / tuner shaft.003",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / tuner shaft.004",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    },
+    {
+      "object": "Guitar / tuner shaft.005",
+      "actual_evaluated_vertices": 324,
+      "actual_evaluated_triangles": 596,
+      "complete_body_surface_pairs": 0,
+      "whole_pairs_by_region_1retained_2oldHand_3band": {},
+      "left_grip_band_and_proximal_collar_surface_pairs": 0,
+      "left_sample_actual_body_triangles": []
+    }
+  ],
+  "left_grip_band_collar_wood_parity": [
+    {
+      "object": "Guitar / spruce soundboard",
+      "left_skin_points_tested": 8622,
+      "inside": 0,
+      "ambiguous": 0,
+      "inside_sample": [],
+      "ambiguous_sample": []
+    },
+    {
+      "object": "Guitar / rosewood body",
+      "left_skin_points_tested": 8622,
+      "inside": 0,
+      "ambiguous": 0,
+      "inside_sample": [],
+      "ambiguous_sample": []
+    },
+    {
+      "object": "Guitar / neck",
+      "left_skin_points_tested": 8622,
+      "inside": 0,
+      "ambiguous": 0,
+      "inside_sample": [],
+      "ambiguous_sample": []
+    },
+    {
+      "object": "Guitar / ebony fretboard",
+      "left_skin_points_tested": 8622,
+      "inside": 0,
+      "ambiguous": 0,
+      "inside_sample": [],
+      "ambiguous_sample": []
+    }
+  ],
+  "fixed_original_world_targets_unchanged": true,
+  "actual_current_five_rays": [
+    {
+      "kind": "toe",
+      "digit": 1,
+      "u": 1.2456666666666667,
+      "actual_target_world": [
+        1.0799086093902588,
+        -1.0514957904815674,
+        2.0348658561706543
+      ],
+      "radius": 0.00279999990016222,
+      "ray_origin": [
+        1.0799086093902588,
+        -0.8799999952316284,
+        2.0348658561706543
+      ],
+      "ray_direction": [
+        0,
+        -1,
+        0
+      ],
+      "hit": true,
+      "expected_source": 2,
+      "fallback_used": false,
+      "face_index": 290618,
+      "source": 2,
+      "skin": [
+        1.0799086093902588,
+        -1.054823875427246,
+        2.0348658561706543
+      ],
+      "normal": [
+        0.1445373147726059,
+        0.9246720671653748,
+        -0.35226520895957947
+      ],
+      "normal_condition": 0.9246720671653748,
+      "gap": 0.0005280850455164909,
+      "actual_C35_input_face_index": 590033,
+      "same_source_contact_face": true,
+      "gap_delta_from_actual_source_C35": 0.0
+    },
+    {
+      "kind": "toe",
+      "digit": 2,
+      "u": 1.355,
+      "actual_target_world": [
+        1.1910821199417114,
+        -1.0518748760223389,
+        2.078688144683838
+      ],
+      "radius": 0.00279999990016222,
+      "ray_origin": [
+        1.1910821199417114,
+        -0.8799999952316284,
+        2.078688144683838
+      ],
+      "ray_direction": [
+        0,
+        -1,
+        0
+      ],
+      "hit": true,
+      "expected_source": 2,
+      "fallback_used": false,
+      "face_index": 290462,
+      "source": 2,
+      "skin": [
+        1.1910821199417114,
+        -1.0566749572753906,
+        2.078688144683838
+      ],
+      "normal": [
+        -0.6770248413085938,
+        0.6624240279197693,
+        0.3206739127635956
+      ],
+      "normal_condition": 0.6624240279197693,
+      "gap": 0.002000081352889538,
+      "actual_C35_input_face_index": 589877,
+      "same_source_contact_face": true,
+      "gap_delta_from_actual_source_C35": 0.0
+    },
+    {
+      "kind": "toe",
+      "digit": 3,
+      "u": 1.4643333333333335,
+      "actual_target_world": [
+        1.3021504878997803,
+        -1.0500400066375732,
+        2.122777223587036
+      ],
+      "radius": 0.00279999990016222,
+      "ray_origin": [
+        1.3021504878997803,
+        -0.8799999952316284,
+        2.122777223587036
+      ],
+      "ray_direction": [
+        0,
+        -1,
+        0
+      ],
+      "hit": true,
+      "expected_source": 2,
+      "fallback_used": false,
+      "face_index": 289744,
+      "source": 2,
+      "skin": [
+        1.3021504878997803,
+        -1.0531131029129028,
+        2.122777223587036
+      ],
+      "normal": [
+        0.0326220765709877,
+        0.9921125769615173,
+        -0.12103122472763062
+      ],
+      "normal_condition": 0.9921125769615173,
+      "gap": 0.00027309637516736984,
+      "actual_C35_input_face_index": 589159,
+      "same_source_contact_face": true,
+      "gap_delta_from_actual_source_C35": 0.0
+    },
+    {
+      "kind": "support",
+      "u": 1.28,
+      "actual_target_world": [
+        1.1450207233428955,
+        -0.9830000400543213,
+        1.9719377756118774
+      ],
+      "calibrated_depth_y": -0.9830000102519989,
+      "board_front_hit": [
+        1.1066546440124512,
+        -1.0130000114440918,
+        2.0693607330322266
+      ],
+      "board_back_hit": [
+        1.1066546440124512,
+        -0.953000009059906,
+        2.0693607330322266
+      ],
+      "board_ray_origin": [
+        1.2268009185791016,
+        -0.9830000400543213,
+        1.764272928237915
+      ],
+      "board_ray_direction": [
+        -0.3664192855358124,
+        0.0,
+        0.9304498434066772
+      ],
+      "ray_origin": [
+        1.1157071590423584,
+        -0.9830000400543213,
+        2.0463738441467285
+      ],
+      "ray_direction": [
+        0.3664192855358124,
+        -0.0,
+        -0.9304498434066772
+      ],
+      "hit": true,
+      "expected_source": 1,
+      "fallback_used": false,
+      "face_index": 286766,
+      "source": 1,
+      "skin": [
+        1.1457535028457642,
+        -0.9830000400543213,
+        1.9700770378112793
+      ],
+      "normal": [
+        -0.44284769892692566,
+        0.03918022662401199,
+        0.8957404494285583
+      ],
+      "normal_condition": 0.9957094937562943,
+      "gap": 0.001999827742110938,
+      "ray_origin_rule": "Actual board lower edge +.08V, fixed C35 engineering target",
+      "actual_C35_input_face_index": 586181,
+      "same_source_contact_face": true,
+      "gap_delta_from_actual_source_C35": 0.0
+    },
+    {
+      "kind": "support",
+      "u": 1.4,
+      "actual_target_world": [
+        1.267055869102478,
+        -0.9830000400543213,
+        2.019996166229248
+      ],
+      "calibrated_depth_y": -0.9830000400543213,
+      "board_front_hit": [
+        1.2286897897720337,
+        -1.0130000114440918,
+        2.117419481277466
+      ],
+      "board_back_hit": [
+        1.2286897897720337,
+        -0.9530000686645508,
+        2.117419481277466
+      ],
+      "board_ray_origin": [
+        1.348836064338684,
+        -0.9830000400543213,
+        1.8123314380645752
+      ],
+      "board_ray_direction": [
+        -0.3664192855358124,
+        0.0,
+        0.9304498434066772
+      ],
+      "ray_origin": [
+        1.237742304801941,
+        -0.9830000400543213,
+        2.0944321155548096
+      ],
+      "ray_direction": [
+        0.3664192855358124,
+        -0.0,
+        -0.9304498434066772
+      ],
+      "hit": true,
+      "expected_source": 1,
+      "fallback_used": false,
+      "face_index": 286344,
+      "source": 1,
+      "skin": [
+        1.2677886486053467,
+        -0.9830000400543213,
+        2.0181350708007812
+      ],
+      "normal": [
+        0.11112300306558609,
+        -0.34341809153556824,
+        0.9325855374336243
+      ],
+      "normal_condition": 0.8270064480602741,
+      "gap": 0.002000160457100719,
+      "ray_origin_rule": "Actual board lower edge +.08V, fixed C35 engineering target",
+      "actual_C35_input_face_index": 585759,
+      "same_source_contact_face": true,
+      "gap_delta_from_actual_source_C35": 0.0
+    }
+  ],
+  "strict_nominal_gap_0_to_point002_pass": false,
+  "previously_authorized_C35_fixed_face_positive_fp32_ceiling_roundoff_pass": true,
+  "positive_only_ceiling_tolerance": 2.5e-07,
+  "roundoff_scope": "Parent previously accepted pure fixed C35 contact face positive overflow <=2.5e-7u; all5359 hand points/source contact faces exact here, targets unchanged. This is not strict <=.002 and never authorizes real wood/string/self penetration.",
+  "left_grip_band_surface_collision_pass": false,
+  "left_grip_band_solid_probe_pass": true,
+  "complete_body_all_instrument_surface_pass": false,
+  "graft_self_and_current_left_contact_engineering_pass": false,
+  "overall_character_or_animation_pass": false,
+  "seconds": 5.836233139038086,
+  "limits": [
+    "Whole retained body instrument intersections, if nonzero, remain blockers; left-grip contact pass does not certify the right strumming side/torso.",
+    "Current source frame/actual rays remeasured; no source pass merely inherited.",
+    "Source ear/body/graft geometry accepted numerically does not replace independent visual character reviews.",
+    "No native geometry/material/target changed by this readback."
+  ]
+}

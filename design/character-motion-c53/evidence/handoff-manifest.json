@@ -1,0 +1,95 @@
+{
+  "scope": "Unbound C53 analytic C1 and finite actual point-path technical preparation; builder not independent reviewer",
+  "created_utc": "2026-10-29T13:07:54.605266+00:00",
+  "controller_bench_pass": true,
+  "actual_sampled_point_path_pass": true,
+  "strict_continuous_solid_safety_proven": false,
+  "whole_character_approved": false,
+  "skin_bound": false,
+  "model_animation_created": false,
+  "audio_created": false,
+  "public_changed": false,
+  "numeric_floor_rejection_tested": true,
+  "old_v2_frozen_sha256": {
+    "design/character-motion-v2/contact-motion.mjs": "6669516186561688bb0515668ab04e104420e5a6219a62f987bbd1d98ea50055",
+    "design/character-motion-v2/evidence/c35-rig-profile.json": "d0819636e7fae463a67b6aa8431996134e59028b675bcd0ac41ce3217d25d01e"
+  },
+  "source_native_sha256": "3097d74a3f932d6dd61e60b7ab12bd40c5c53cd09b7c94aaf93170a03ec25cce",
+  "files": [
+    {
+      "path": "design/character-motion-c53/README.md",
+      "sha256": "5f232051ee531a9058368a315a1f89b7365925c770e52598055766234fd553af",
+      "bytes": 4445
+    },
+    {
+      "path": "design/character-motion-c53/contact-motion-c53.mjs",
+      "sha256": "7b90639f1353305380ed0a1400631d99f18af57c1a580f36b6b2c8f721ba090f",
+      "bytes": 7644
+    },
+    {
+      "path": "design/character-motion-c53/evidence/actual-geometry-validation.json",
+      "sha256": "211179ea9abc0cc1b0cf19c40ee018eb6b23881ab428b4d5326297b38a011302",
+      "bytes": 32270
+    },
+    {
+      "path": "design/character-motion-c53/evidence/actual-geometry-validation.log",
+      "sha256": "2054856c13f3dc0e5dbe09353b4fc1306e84f1dac8060e2aee1ecc3fdbfcd31e",
+      "bytes": 1347
+    },
+    {
+      "path": "design/character-motion-c53/evidence/controller-validation.json",
+      "sha256": "aa2ecaf74c67f2f061433b8abe54375a7ed1a5486d19b431169df277e9b0c84c",
+      "bytes": 18377
+    },
+    {
+      "path": "design/character-motion-c53/evidence/controller-validation.log",
+      "sha256": "0770692772c0264c45436e83ed4d6cd6aa6e7ef47f60216dc941d0d9b5eb4dd8",
+      "bytes": 1685
+    },
+    {
+      "path": "design/character-motion-c53/evidence/initial-flat-rail-failure/actual-geometry-validation.json",
+      "sha256": "cd05d4edde472cd7d09fd9759e2446bbbb00c643a88fde1eed776a97ff0e9bd3",
+      "bytes": 66732
+    },
+    {
+      "path": "design/character-motion-c53/evidence/initial-flat-rail-failure/actual-geometry-validation.log",
+      "sha256": "c75a18259c28ba56adf33d496ce626dc5a6fda9788edb50a107f292f43f454c8",
+      "bytes": 2153
+    },
+    {
+      "path": "design/character-motion-c53/evidence/initial-flat-rail-failure/controller-source.mjs",
+      "sha256": "ca27e7a736c16e08ac1ad6016290ddb39ba2deffd4f7900601bcb0310614e3f8",
+      "bytes": 7005
+    },
+    {
+      "path": "design/character-motion-c53/evidence/initial-flat-rail-failure/controller-validation.json",
+      "sha256": "53ccfac5fe50a9795ed52ea756009a8eed893230c747029797ca25223de9cbf0",
+      "bytes": 17983
+    },
+    {
+      "path": "design/character-motion-c53/evidence/initial-flat-rail-failure/target-path-samples.json.gz",
+      "sha256": "6c0e22cea983bbed177ce9b6c8a9b21d3f34ba7ef2d80c3e4f34b8d71a29023d",
+      "bytes": 2950218
+    },
+    {
+      "path": "design/character-motion-c53/evidence/target-path-samples.json",
+      "sha256": "7ffd68dd0784bb6f85e01df238ef9be94ae4081c352445b285096501be184540",
+      "bytes": 23996985
+    },
+    {
+      "path": "design/character-motion-c53/validate-actual-geometry.py",
+      "sha256": "9e63b1d22a222416888807c498c5eedf3c1793f945209735c496773531020f06",
+      "bytes": 6802
+    },
+    {
+      "path": "design/character-motion-c53/validate-c53.mjs",
+      "sha256": "6ac8db35d94c62522e2c1b1153c7f9da4390be49852ce7ee4db5f661f519ccdf",
+      "bytes": 10291
+    },
+    {
+      "path": "docs/research/contact-motion-c53-2026-10-29.md",
+      "sha256": "61107775717534e97d5803f03d020ad194615c28ed9d85cf90d0368afbfda04b",
+      "bytes": 5546
+    }
+  ]
+}

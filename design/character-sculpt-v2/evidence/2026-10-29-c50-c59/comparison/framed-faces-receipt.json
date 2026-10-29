@@ -1,0 +1,18 @@
+{
+  "renders": [
+    {
+      "file": "c49-review-face-framed.png",
+      "sha256": "ddf91e42f4fd75fef1dc4354674e986a5a58ab0924f8f1596dff46c2d01b35e4",
+      "source_native_sha256": "0ea1505e0368ab01ed5dac5ba5a07cb4772426e25db8faeffcf35cee8ac7ad6b",
+      "source_unchanged": true
+    },
+    {
+      "file": "c59-review-face-framed.png",
+      "sha256": "27f449c245361aba96d0958445f53fdcfcdbcfa814fc91c3f43b70d598c16a35",
+      "source_native_sha256": "efef0cfde423e567fe1af221d39c8bed27034df9f1bf4b630bd60b776d9de6fb",
+      "source_unchanged": true
+    }
+  ],
+  "new_geometry": false,
+  "art_approved": false
+}

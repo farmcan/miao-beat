@@ -1,0 +1,41 @@
+{
+  "status": "unapproved-static-review-comparison",
+  "bytes": 3485943,
+  "sha256": "bffd1bf15bb1bb9dc10fd698a6b8ca93f611360ad51e82b87e5f92900e12e9d6",
+  "images": [
+    {
+      "title": "\u539f\u56fe",
+      "view": "full",
+      "source": "public/character/instrument-scenes-v1/guitar/idle.jpg",
+      "sha256": "4418fd737891283f42568306cb427b1f7604a86cae5513b1d6c49b3c31f338d1"
+    },
+    {
+      "title": "\u5f69\u8272\u8fdb\u5c55",
+      "view": "full",
+      "source": "artifacts/character-local-merge-c49/c49-full.png",
+      "sha256": "2d9d35d99d0028dcaf65a2fc5d5fe81723507ae320c96397e1a5c37d351c03b9"
+    },
+    {
+      "title": "\u5f53\u524d\u7070\u6a21",
+      "view": "full",
+      "source": "artifacts/reference-progress-comparison/c59-review-full.png",
+      "sha256": "124673ac38b532cfdf0ea29b3c29068320df233902819a347f8a5656518e3615"
+    },
+    {
+      "title": "\u5f69\u8272\u8fdb\u5c55",
+      "view": "face",
+      "source": "artifacts/reference-progress-comparison/c49-review-face-framed.png",
+      "sha256": "ddf91e42f4fd75fef1dc4354674e986a5a58ab0924f8f1596dff46c2d01b35e4"
+    },
+    {
+      "title": "\u5f53\u524d\u7070\u6a21",
+      "view": "face",
+      "source": "artifacts/reference-progress-comparison/c59-review-face-framed.png",
+      "sha256": "27f449c245361aba96d0958445f53fdcfcdbcfa814fc91c3f43b70d598c16a35"
+    }
+  ],
+  "read_only_renders": true,
+  "new_model_animation": false,
+  "canonical_playable_page_unchanged_exact_bytes": true,
+  "whole_character_approved": false
+}

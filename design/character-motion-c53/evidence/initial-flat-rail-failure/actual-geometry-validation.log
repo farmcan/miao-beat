@@ -1,0 +1,15 @@
+00:01.236  blend            | Read blend: "/Users/levi/wrksp/miao-beat/artifacts/character-paw-grip-c35/miao-c35-fixed-vertex-tessellation.blend"
+RESULT {"status": "sampled-point-path-FAIL", "source_sha256": "3097d74a3f932d6dd61e60b7ab12bd40c5c53cd09b7c94aaf93170a03ec25cce", "source_unchanged": true, "controller_samples_sha256": "60ddd000afe14f99eec3fe217fd761d40ee995707f2a652f9a514104389f53cd", "trace_count": 79, "frame_count": 70404, "unique_sample_positions": 8906, "actual_tube_count": 6, "actual_wood_objects": ["Guitar / rosewood body", "Guitar / spruce soundboard", "Guitar / neck", "Guitar / ebony fretboard"], "surface_near_diagnostic_band_u": 2e-06, "unpermitted_tube_threshold_u": 0.025, "lifted_return_threshold_u": 0.07, "failure_count": 128, "limits": ["Finite actual target samples and straight chords between them, not the full analytic Hermite swept volume.", "Signed closest-normal tests are local orientation diagnostics, not full solid-angle containment proofs.", "Near-boundary samples inside 2e-6u are surface-near diagnostics, not strict nonpenetration/force certification.", "Only four named wooden objects, not all hardware/rosettes/guitar objects.", "No cat, paw volume, skin binding, deformation, audio, browser or animation acceptance."]}
+FIRST_FAILURE {"trace": "uninterrupted-0", "timeMs": 64.5, "kind": "tube_interior_local_normal", "signed": {"1": 0.1548100607469678, "2": 0.11560518405167386, "3": 0.07640322408406064, "4": 0.03782638703705743, "5": -2.3608925232565525e-06, "6": 0.037964759685564786}}
+Traceback (most recent call last):
+  File "/Users/levi/wrksp/miao-beat/design/character-motion-c53/validate-actual-geometry.py", line 119, in <module>
+    main()
+    ~~~~^^
+  File "/Users/levi/wrksp/miao-beat/design/character-motion-c53/validate-actual-geometry.py", line 115, in main
+    raise RuntimeError(f"C53 actual geometry finite path probe failed: {len(failures)}")
+RuntimeError: C53 actual geometry finite path probe failed: 128
+
+Error: script failed, file: 'design/character-motion-c53/validate-actual-geometry.py', exiting.
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:31:22)
+
+Blender quit

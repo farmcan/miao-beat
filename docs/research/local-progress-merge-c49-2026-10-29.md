@@ -7,3 +7,5 @@
 生成实际整身、脸与三分之四彩图。root已实际打开整身与三分之四：眼神恢复是可见进展；耳硬槽、右爪末端、塑料感与整体参考差距仍明确保留。三分之四没有借原图遮盖背面。毛发保持隐藏，等待新表面绑定，不能把平滑塑料表面称短绒完成。
 
 原生文件`artifacts/character-local-merge-c49/miao-c49-local-merge.blend`，实际渲染`c49-full.png`、`c49-face.png`、`c49-three-quarter.png`；逐来源SHA、实际合入断言和图像SHA见同目录`receipt.json`。源码`design/character-sculpt-v2/merge-local-progress-c49.py`。这是局部贡献整合，不是整体静态gate通过；新的C46右臂与C48耳还在独立工作，未经评审不得合入。
+
+后续补充：当前C49 native已提供[跨电脑作者文件下载](../character-authoring-download.md)。附件依赖与SHA已验，仍是同一未通过整体美术的静态研究稿，不是新的站点发布；本记录中的历史候选状态不据此改成通过。

@@ -1,0 +1,820 @@
+{
+  "status": "sampled-point-path-pass",
+  "source_sha256": "3097d74a3f932d6dd61e60b7ab12bd40c5c53cd09b7c94aaf93170a03ec25cce",
+  "source_unchanged": true,
+  "controller_samples_sha256": "7ffd68dd0784bb6f85e01df238ef9be94ae4081c352445b285096501be184540",
+  "trace_count": 79,
+  "frame_count": 70676,
+  "unique_sample_positions": 8931,
+  "actual_tube_count": 6,
+  "actual_wood_objects": [
+    "Guitar / rosewood body",
+    "Guitar / spruce soundboard",
+    "Guitar / neck",
+    "Guitar / ebony fretboard"
+  ],
+  "surface_near_diagnostic_band_u": 2e-06,
+  "unpermitted_tube_threshold_u": 0.025,
+  "lifted_return_threshold_u": 0.07,
+  "failure_count": 0,
+  "failures": [],
+  "traces": [
+    {
+      "trace": "uninterrupted-0",
+      "samples": 561,
+      "unpermitted_tube_minimum_u": 0.030835479497909546,
+      "wood_actual_triangle_minimum_u": 0.08046448230743408,
+      "lifted_return_minimum_u": 0.07497914135456085,
+      "tube_minimum_signed_nearest_normal_u": 1.9789542449188957e-08,
+      "tube_near_boundary_sample_count": 2,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "uninterrupted-1",
+      "samples": 561,
+      "unpermitted_tube_minimum_u": 0.030835479497909546,
+      "wood_actual_triangle_minimum_u": 0.08046448230743408,
+      "lifted_return_minimum_u": 0.07497914135456085,
+      "tube_minimum_signed_nearest_normal_u": 1.9789542449188957e-08,
+      "tube_near_boundary_sample_count": 2,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "uninterrupted-2",
+      "samples": 561,
+      "unpermitted_tube_minimum_u": 0.030839918181300163,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 2,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "uninterrupted-3",
+      "samples": 561,
+      "unpermitted_tube_minimum_u": 0.030839918181300163,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 2,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "uninterrupted-4",
+      "samples": 561,
+      "unpermitted_tube_minimum_u": 0.030839918181300163,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 2,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "uninterrupted-5",
+      "samples": 561,
+      "unpermitted_tube_minimum_u": 0.030839918181300163,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 2,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "uninterrupted-6",
+      "samples": 561,
+      "unpermitted_tube_minimum_u": 0.030839918181300163,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 2,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "uninterrupted-7",
+      "samples": 561,
+      "unpermitted_tube_minimum_u": 0.030839918181300163,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 2,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "uninterrupted-8",
+      "samples": 561,
+      "unpermitted_tube_minimum_u": 0.030392056331038475,
+      "wood_actual_triangle_minimum_u": 0.08116328716278076,
+      "lifted_return_minimum_u": 0.07497920095920563,
+      "tube_minimum_signed_nearest_normal_u": 1.1346269268575071e-07,
+      "tube_near_boundary_sample_count": 1,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "uninterrupted-9",
+      "samples": 568,
+      "unpermitted_tube_minimum_u": 0.030391748994588852,
+      "wood_actual_triangle_minimum_u": 0.08116316795349121,
+      "lifted_return_minimum_u": 0.07497920095920563,
+      "tube_minimum_signed_nearest_normal_u": 0.0,
+      "tube_near_boundary_sample_count": 4,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "uninterrupted-10",
+      "samples": 572,
+      "unpermitted_tube_minimum_u": 0.031025154516100883,
+      "wood_actual_triangle_minimum_u": 0.08116316795349121,
+      "lifted_return_minimum_u": 0.07497920095920563,
+      "tube_minimum_signed_nearest_normal_u": 8.077408963913513e-09,
+      "tube_near_boundary_sample_count": 6,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "uninterrupted-11",
+      "samples": 576,
+      "unpermitted_tube_minimum_u": 0.030835170298814774,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497907429933548,
+      "tube_minimum_signed_nearest_normal_u": -3.191014030790029e-08,
+      "tube_near_boundary_sample_count": 7,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "uninterrupted-12",
+      "samples": 580,
+      "unpermitted_tube_minimum_u": 0.030835479497909546,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497914135456085,
+      "tube_minimum_signed_nearest_normal_u": -3.191014030790029e-08,
+      "tube_near_boundary_sample_count": 6,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "uninterrupted-13",
+      "samples": 584,
+      "unpermitted_tube_minimum_u": 0.07497911155223846,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 6,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "uninterrupted-14",
+      "samples": 561,
+      "unpermitted_tube_minimum_u": 0.030391748994588852,
+      "wood_actual_triangle_minimum_u": 0.08116316795349121,
+      "lifted_return_minimum_u": 0.07497920095920563,
+      "tube_minimum_signed_nearest_normal_u": 3.614206711688439e-08,
+      "tube_near_boundary_sample_count": 2,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "uninterrupted-15",
+      "samples": 568,
+      "unpermitted_tube_minimum_u": 0.030397970229387283,
+      "wood_actual_triangle_minimum_u": 0.08116316795349121,
+      "lifted_return_minimum_u": 0.07497920095920563,
+      "tube_minimum_signed_nearest_normal_u": 8.077408963913513e-09,
+      "tube_near_boundary_sample_count": 4,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "uninterrupted-16",
+      "samples": 572,
+      "unpermitted_tube_minimum_u": 0.030397970229387283,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497907429933548,
+      "tube_minimum_signed_nearest_normal_u": -3.191014030790029e-08,
+      "tube_near_boundary_sample_count": 6,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "uninterrupted-17",
+      "samples": 576,
+      "unpermitted_tube_minimum_u": 0.030397970229387283,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497914135456085,
+      "tube_minimum_signed_nearest_normal_u": -3.191014030790029e-08,
+      "tube_near_boundary_sample_count": 7,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "uninterrupted-18",
+      "samples": 580,
+      "unpermitted_tube_minimum_u": 0.030397970229387283,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 6,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "uninterrupted-19",
+      "samples": 561,
+      "unpermitted_tube_minimum_u": 0.03039788082242012,
+      "wood_actual_triangle_minimum_u": 0.08116328716278076,
+      "lifted_return_minimum_u": 0.07497920095920563,
+      "tube_minimum_signed_nearest_normal_u": 8.077408963913513e-09,
+      "tube_near_boundary_sample_count": 2,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "uninterrupted-20",
+      "samples": 568,
+      "unpermitted_tube_minimum_u": 0.03039788082242012,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497907429933548,
+      "tube_minimum_signed_nearest_normal_u": -3.191014030790029e-08,
+      "tube_near_boundary_sample_count": 4,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "uninterrupted-21",
+      "samples": 572,
+      "unpermitted_tube_minimum_u": 0.03039788082242012,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497914135456085,
+      "tube_minimum_signed_nearest_normal_u": -3.191014030790029e-08,
+      "tube_near_boundary_sample_count": 6,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "uninterrupted-22",
+      "samples": 576,
+      "unpermitted_tube_minimum_u": 0.03039788082242012,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 6,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "uninterrupted-23",
+      "samples": 561,
+      "unpermitted_tube_minimum_u": 0.03021288476884365,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497907429933548,
+      "tube_minimum_signed_nearest_normal_u": -3.191014030790029e-08,
+      "tube_near_boundary_sample_count": 2,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "uninterrupted-24",
+      "samples": 568,
+      "unpermitted_tube_minimum_u": 0.03021288476884365,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497914135456085,
+      "tube_minimum_signed_nearest_normal_u": -3.191014030790029e-08,
+      "tube_near_boundary_sample_count": 4,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "uninterrupted-25",
+      "samples": 572,
+      "unpermitted_tube_minimum_u": 0.03021288476884365,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 6,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "uninterrupted-26",
+      "samples": 561,
+      "unpermitted_tube_minimum_u": 0.030835479497909546,
+      "wood_actual_triangle_minimum_u": 0.08046448230743408,
+      "lifted_return_minimum_u": 0.07497914135456085,
+      "tube_minimum_signed_nearest_normal_u": 1.9789542449188957e-08,
+      "tube_near_boundary_sample_count": 2,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "uninterrupted-27",
+      "samples": 568,
+      "unpermitted_tube_minimum_u": 0.030839698389172554,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 4,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "uninterrupted-28",
+      "samples": 561,
+      "unpermitted_tube_minimum_u": 0.030839918181300163,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 2,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "boundary-0-0",
+      "samples": 561,
+      "unpermitted_tube_minimum_u": 0.030839918181300163,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 2,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "boundary-0-10",
+      "samples": 601,
+      "unpermitted_tube_minimum_u": 0.030839918181300163,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 2,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "boundary-0-30",
+      "samples": 681,
+      "unpermitted_tube_minimum_u": 0.030839918181300163,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 2,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "boundary-0-45",
+      "samples": 741,
+      "unpermitted_tube_minimum_u": 0.030839698389172554,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 2,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "boundary-0-70",
+      "samples": 857,
+      "unpermitted_tube_minimum_u": 0.030839698389172554,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 4,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "boundary-0-85",
+      "samples": 901,
+      "unpermitted_tube_minimum_u": 0.030835479497909546,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 4,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "boundary-0-100",
+      "samples": 961,
+      "unpermitted_tube_minimum_u": 0.030835479497909546,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 4,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "boundary-0-139",
+      "samples": 1133,
+      "unpermitted_tube_minimum_u": 0.030835479497909546,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 4,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "boundary-1-0",
+      "samples": 561,
+      "unpermitted_tube_minimum_u": 0.030835479497909546,
+      "wood_actual_triangle_minimum_u": 0.08046448230743408,
+      "lifted_return_minimum_u": 0.07497914135456085,
+      "tube_minimum_signed_nearest_normal_u": 1.9789542449188957e-08,
+      "tube_near_boundary_sample_count": 2,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "boundary-1-10",
+      "samples": 601,
+      "unpermitted_tube_minimum_u": 0.030835479497909546,
+      "wood_actual_triangle_minimum_u": 0.08046448230743408,
+      "lifted_return_minimum_u": 0.07497914135456085,
+      "tube_minimum_signed_nearest_normal_u": 1.9789542449188957e-08,
+      "tube_near_boundary_sample_count": 2,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "boundary-1-30",
+      "samples": 681,
+      "unpermitted_tube_minimum_u": 0.030835479497909546,
+      "wood_actual_triangle_minimum_u": 0.08046448230743408,
+      "lifted_return_minimum_u": 0.07497914135456085,
+      "tube_minimum_signed_nearest_normal_u": 1.9789542449188957e-08,
+      "tube_near_boundary_sample_count": 2,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "boundary-1-45",
+      "samples": 741,
+      "unpermitted_tube_minimum_u": 0.030835479497909546,
+      "wood_actual_triangle_minimum_u": 0.08046448230743408,
+      "lifted_return_minimum_u": 0.07497914135456085,
+      "tube_minimum_signed_nearest_normal_u": 1.9789542449188957e-08,
+      "tube_near_boundary_sample_count": 2,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "boundary-1-70",
+      "samples": 857,
+      "unpermitted_tube_minimum_u": 0.030835479497909546,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497914135456085,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 4,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "boundary-1-85",
+      "samples": 901,
+      "unpermitted_tube_minimum_u": 0.030835479497909546,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497914135456085,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 4,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "boundary-1-100",
+      "samples": 961,
+      "unpermitted_tube_minimum_u": 0.030835479497909546,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497914135456085,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 4,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "boundary-1-139",
+      "samples": 1133,
+      "unpermitted_tube_minimum_u": 0.030835479497909546,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 4,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "boundary-2-0",
+      "samples": 561,
+      "unpermitted_tube_minimum_u": 0.030835479497909546,
+      "wood_actual_triangle_minimum_u": 0.08046448230743408,
+      "lifted_return_minimum_u": 0.07497914135456085,
+      "tube_minimum_signed_nearest_normal_u": 1.9789542449188957e-08,
+      "tube_near_boundary_sample_count": 2,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "boundary-2-10",
+      "samples": 601,
+      "unpermitted_tube_minimum_u": 0.030835479497909546,
+      "wood_actual_triangle_minimum_u": 0.08046448230743408,
+      "lifted_return_minimum_u": 0.07497914135456085,
+      "tube_minimum_signed_nearest_normal_u": 1.9789542449188957e-08,
+      "tube_near_boundary_sample_count": 2,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "boundary-2-30",
+      "samples": 681,
+      "unpermitted_tube_minimum_u": 0.030835479497909546,
+      "wood_actual_triangle_minimum_u": 0.08046448230743408,
+      "lifted_return_minimum_u": 0.07497914135456085,
+      "tube_minimum_signed_nearest_normal_u": 1.9789542449188957e-08,
+      "tube_near_boundary_sample_count": 2,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "boundary-2-45",
+      "samples": 741,
+      "unpermitted_tube_minimum_u": 0.030835479497909546,
+      "wood_actual_triangle_minimum_u": 0.08046448230743408,
+      "lifted_return_minimum_u": 0.07497914135456085,
+      "tube_minimum_signed_nearest_normal_u": 1.9789542449188957e-08,
+      "tube_near_boundary_sample_count": 2,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "boundary-2-70",
+      "samples": 871,
+      "unpermitted_tube_minimum_u": 0.030835479497909546,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497914135456085,
+      "tube_minimum_signed_nearest_normal_u": -3.191014030790029e-08,
+      "tube_near_boundary_sample_count": 6,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "boundary-2-85",
+      "samples": 924,
+      "unpermitted_tube_minimum_u": 0.030835479497909546,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497914135456085,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 8,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "boundary-2-100",
+      "samples": 984,
+      "unpermitted_tube_minimum_u": 0.030835479497909546,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497914135456085,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 8,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "boundary-2-139",
+      "samples": 1156,
+      "unpermitted_tube_minimum_u": 0.030835479497909546,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 8,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "boundary-3-0",
+      "samples": 584,
+      "unpermitted_tube_minimum_u": 0.07497911155223846,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 6,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "boundary-3-10",
+      "samples": 624,
+      "unpermitted_tube_minimum_u": 0.07497911155223846,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 6,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "boundary-3-30",
+      "samples": 704,
+      "unpermitted_tube_minimum_u": 0.0749790146946907,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 6,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "boundary-3-45",
+      "samples": 764,
+      "unpermitted_tube_minimum_u": 0.030839698389172554,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 6,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "boundary-3-70",
+      "samples": 880,
+      "unpermitted_tube_minimum_u": 0.030839698389172554,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 8,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "boundary-3-85",
+      "samples": 924,
+      "unpermitted_tube_minimum_u": 0.030835479497909546,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 8,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "boundary-3-100",
+      "samples": 984,
+      "unpermitted_tube_minimum_u": 0.030835479497909546,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 8,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "boundary-3-139",
+      "samples": 1156,
+      "unpermitted_tube_minimum_u": 0.030835479497909546,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 8,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "repeat-150ms",
+      "samples": 9561,
+      "unpermitted_tube_minimum_u": 0.030835479497909546,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 32,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "repeat-70ms",
+      "samples": 5001,
+      "unpermitted_tube_minimum_u": 0.030839698389172554,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 32,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "interior-11",
+      "samples": 621,
+      "unpermitted_tube_minimum_u": 0.030839918181300163,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 2,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "interior-29",
+      "samples": 693,
+      "unpermitted_tube_minimum_u": 0.030839918181300163,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 2,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "interior-31",
+      "samples": 701,
+      "unpermitted_tube_minimum_u": 0.030839918181300163,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 2,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "interior-44",
+      "samples": 753,
+      "unpermitted_tube_minimum_u": 0.030839918181300163,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 2,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "interior-46",
+      "samples": 762,
+      "unpermitted_tube_minimum_u": 0.030839918181300163,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 2,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "interior-54",
+      "samples": 799,
+      "unpermitted_tube_minimum_u": 0.030839918181300163,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 3,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "interior-64",
+      "samples": 844,
+      "unpermitted_tube_minimum_u": 0.030839918181300163,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 5,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "interior-65",
+      "samples": 849,
+      "unpermitted_tube_minimum_u": 0.030839918181300163,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 5,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "interior-66",
+      "samples": 853,
+      "unpermitted_tube_minimum_u": 0.030839918181300163,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 5,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "interior-69",
+      "samples": 867,
+      "unpermitted_tube_minimum_u": 0.030839918181300163,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 6,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "interior-71",
+      "samples": 876,
+      "unpermitted_tube_minimum_u": 0.030839918181300163,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 6,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "interior-84",
+      "samples": 935,
+      "unpermitted_tube_minimum_u": 0.030839918181300163,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 8,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "interior-86",
+      "samples": 944,
+      "unpermitted_tube_minimum_u": 0.030839918181300163,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 8,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "interior-99",
+      "samples": 996,
+      "unpermitted_tube_minimum_u": 0.030839918181300163,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 8,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "interior-101",
+      "samples": 1004,
+      "unpermitted_tube_minimum_u": 0.030839918181300163,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 8,
+      "wood_polyline_segment_hits": 0
+    },
+    {
+      "trace": "interior-138",
+      "samples": 1152,
+      "unpermitted_tube_minimum_u": 0.030839918181300163,
+      "wood_actual_triangle_minimum_u": 0.08046436309814453,
+      "lifted_return_minimum_u": 0.07497911155223846,
+      "tube_minimum_signed_nearest_normal_u": -1.2436626040113197e-07,
+      "tube_near_boundary_sample_count": 8,
+      "wood_polyline_segment_hits": 0
+    }
+  ],
+  "limits": [
+    "Finite actual target samples and straight chords between them, not the full analytic Hermite swept volume.",
+    "Signed closest-normal tests are local orientation diagnostics, not full solid-angle containment proofs.",
+    "Near-boundary samples inside 2e-6u are surface-near diagnostics, not strict nonpenetration/force certification.",
+    "Only four named wooden objects, not all hardware/rosettes/guitar objects.",
+    "No cat, paw volume, skin binding, deformation, audio, browser or animation acceptance."
+  ]
+}

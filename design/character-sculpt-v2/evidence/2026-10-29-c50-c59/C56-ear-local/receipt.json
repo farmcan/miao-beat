@@ -1,0 +1,57 @@
+{
+  "scope": "Separate geometry-identical gray-material QA; only four skin lid slots match body clay",
+  "source_native_sha256": "0ece323eadabc18f7d7f28a58b41d21f709fc3bbaeef15976e868c0bbb80f727",
+  "body_clay_material": "C52 / neutral geometry diagnostic",
+  "changed_skin_lids": [
+    {
+      "object": "C6 / upper lid L",
+      "old_materials": [
+        "Miao / warm short plush.001"
+      ],
+      "new_materials": [
+        "C52 / neutral geometry diagnostic"
+      ],
+      "visible": true
+    },
+    {
+      "object": "C6 / lower lid L",
+      "old_materials": [
+        "Miao / warm short plush.001"
+      ],
+      "new_materials": [
+        "C52 / neutral geometry diagnostic"
+      ],
+      "visible": true
+    },
+    {
+      "object": "C6 / upper lid R",
+      "old_materials": [
+        "Miao / warm short plush.001"
+      ],
+      "new_materials": [
+        "C52 / neutral geometry diagnostic"
+      ],
+      "visible": true
+    },
+    {
+      "object": "C6 / lower lid R",
+      "old_materials": [
+        "Miao / warm short plush.001"
+      ],
+      "new_materials": [
+        "C52 / neutral geometry diagnostic"
+      ],
+      "visible": true
+    }
+  ],
+  "all_mesh_curve_geometry_topology_and_world_exact": true,
+  "all_non_lid_material_slots_exact": true,
+  "no_mesh_hidden_or_eye_geometry_edited": true,
+  "all_ear_self_and_body_topology_results_geometry_identical_to_soft_stage": true,
+  "art_pass": false,
+  "limits": [
+    "Material consistency fixes a diagnostic mismatch, not a new eyelid design or automatic identity approval.",
+    "Actual images still decide whether any halo/depth mismatch persists."
+  ],
+  "native_sha256": "2af4802f996c61badb0883385d6be2048ec3f63494648042e11b0594ac9f463a"
+}

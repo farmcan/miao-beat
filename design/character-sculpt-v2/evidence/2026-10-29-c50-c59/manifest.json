@@ -1,0 +1,194 @@
+{
+  "status": "partial-research-not-production-art",
+  "whole_character_approved": false,
+  "new_skin_animation": false,
+  "production_changed": false,
+  "files": [
+    {
+      "file": "C50-rejected/gray-front.png",
+      "source": "artifacts/character-ear-c50/candidate-2-shared-band/gray-front.png",
+      "bytes": 633235,
+      "sha256": "854052d6764a5aac6baedbed8873a643b020c5a638d7646b99986ecdede84634"
+    },
+    {
+      "file": "C50-rejected/receipt.json",
+      "source": "artifacts/character-ear-c50/candidate-2-shared-band/receipt.json",
+      "bytes": 1475,
+      "sha256": "82284067dd8823cf5b6999e7141fd647f33979fb8734faa43b4ad7d65166b3fc"
+    },
+    {
+      "file": "C51-authoring-only/gray-front.png",
+      "source": "artifacts/character-head-retopology-c51/lighting-repair/gray-front.png",
+      "bytes": 634215,
+      "sha256": "b9fbf4ccc314e46ad7f2ab4f9973beb9e0b7b7463fa546f00b5f2fd0b0b09a64"
+    },
+    {
+      "file": "C52-retopo-baseline/c49-before-gray-front.png",
+      "source": "artifacts/character-body-voxel-c52/c49-before-gray-front.png",
+      "bytes": 145797,
+      "sha256": "82d79845585137c8ab892bbe81d52487c88e70afc6e211cc61d49379dced34f3"
+    },
+    {
+      "file": "C52-retopo-baseline/c52-after-gray-front.png",
+      "source": "artifacts/character-body-voxel-c52/c52-after-gray-front.png",
+      "bytes": 145736,
+      "sha256": "cff26c12b0ee403b3f740872866bcb234bfc6ece3f5ad74c7d4caaeb23df3cfd"
+    },
+    {
+      "file": "C52-retopo-baseline/receipt.json",
+      "source": "artifacts/character-body-voxel-c52/receipt.json",
+      "bytes": 7768,
+      "sha256": "34ab8eb2a8d34688d6ff68cb5c874d5b58443b0d9c4ae0b43d4702f1ced35b64"
+    },
+    {
+      "file": "C52-retopo-baseline/self-pair-attribution.json",
+      "source": "artifacts/character-body-voxel-c52/self-pair-attribution.json",
+      "bytes": 89905,
+      "sha256": "07b19c3bea868908f77fd1f3ef401e470bc4de8453ab8d79f34bcb54c7126fe7"
+    },
+    {
+      "file": "C56-ear-local/gray-front.png",
+      "source": "artifacts/character-ear-sculpt-c56/gray-material-consistency/gray-front.png",
+      "bytes": 367840,
+      "sha256": "7048c074555383782c66e0d92f7804d1160ac559741ce19021a7fab05681ac29"
+    },
+    {
+      "file": "C56-ear-local/gray-ears.png",
+      "source": "artifacts/character-ear-sculpt-c56/gray-material-consistency/gray-ears.png",
+      "bytes": 321896,
+      "sha256": "3c3a43f78f13ba3d4ecdc59cfa70f422a0cb9340adf4176cec327beb4a6e8a42"
+    },
+    {
+      "file": "C56-ear-local/gray-three-quarter.png",
+      "source": "artifacts/character-ear-sculpt-c56/gray-material-consistency/gray-three-quarter.png",
+      "bytes": 371680,
+      "sha256": "a1bd5661056c45239baf1ecba031ffecec19693867c857da2637ad96643a54ec"
+    },
+    {
+      "file": "C56-ear-local/receipt.json",
+      "source": "artifacts/character-ear-sculpt-c56/gray-material-consistency/receipt.json",
+      "bytes": 1722,
+      "sha256": "4d9abcdc1cdf8ef157719a6494ca9006351401a4fe9c27aff600fa5fde313f67"
+    },
+    {
+      "file": "C57-wrist-preflight/wrist-graft-preflight.json",
+      "source": "artifacts/character-body-voxel-c57/wrist-graft-preflight.json",
+      "bytes": 70053,
+      "sha256": "54a46c48136d6f38786bb0465ddfa2f16c6db6d3785bbdc1cfe6d08a2549501d"
+    },
+    {
+      "file": "C57-wrist-preflight/smooth-cause-receipt.json",
+      "source": "artifacts/character-body-voxel-c57/smooth-cause-receipt.json",
+      "bytes": 54862,
+      "sha256": "6ae92296cb1e91f6d55923fcc9a577e1199b779ee75e6ef7e23508b81353d07a"
+    },
+    {
+      "file": "C57-wrist-preflight/same-wrist-plane-loop-overlay.svg.png",
+      "source": "artifacts/character-body-voxel-c57/same-wrist-plane-loop-overlay.svg.png",
+      "bytes": 57794,
+      "sha256": "44cf28027780f5f12a65fa762580fa3aa8454cf82bd6771065c332a12a87cd95"
+    },
+    {
+      "file": "C58-palm-rejected/r2-gray-palm-front.png",
+      "source": "artifacts/character-palm-sculpt-c58/r2-gray-palm-front.png",
+      "bytes": 176787,
+      "sha256": "68f7c5a74bb8f3124db1c762a8f5e8850ae1b28cfe974d2294cb82e7da82dce5"
+    },
+    {
+      "file": "C58-palm-rejected/r2-fresh-geometry-audit.json",
+      "source": "artifacts/character-palm-sculpt-c58/r2-fresh-geometry-audit.json",
+      "bytes": 17475,
+      "sha256": "7d9f4531f4171a093d51a1c9faee57d83512f6bdb0dd637bb82203319ab2d56d"
+    },
+    {
+      "file": "C59-connected-gray/gray-front.png",
+      "source": "artifacts/character-wrist-graft-c59/gray-front.png",
+      "bytes": 173063,
+      "sha256": "50fafcda30088db97fc3dcd63670de409715a263793b2415b5b61715ca5c2715"
+    },
+    {
+      "file": "C59-connected-gray/gray-wrist.png",
+      "source": "artifacts/character-wrist-graft-c59/gray-wrist.png",
+      "bytes": 164453,
+      "sha256": "a689e2dcc0ff10c4dba5d6d1b14f0c1da8952d80a2a6bd6501f10eb68b8fc975"
+    },
+    {
+      "file": "C59-connected-gray/receipt.json",
+      "source": "artifacts/character-wrist-graft-c59/receipt.json",
+      "bytes": 76021,
+      "sha256": "1462e5138eeb938235c1c3c003f93c6561cd2d8b257bd5d2c396b15c6a8e1109"
+    },
+    {
+      "file": "C59-connected-gray/actual-graft-audit.json",
+      "source": "artifacts/character-wrist-graft-c59/actual-graft-audit.json",
+      "bytes": 28251,
+      "sha256": "9c2cbcb2754af9e9b6beaf0dea839cc89764409acabd58306c1926484b498c63"
+    },
+    {
+      "file": "C62-detail-rejected/main-gray-palm-front.png",
+      "source": "artifacts/character-palm-sculpt-c62/main-gray-palm-front.png",
+      "bytes": 177144,
+      "sha256": "0b0c1d8f46dbee14572e9c5c508176eadaf9fc32a52f1c52aa876f6660fbdfad"
+    },
+    {
+      "file": "C62-detail-rejected/main-fresh-geometry-audit.json",
+      "source": "artifacts/character-palm-sculpt-c62/main-fresh-geometry-audit.json",
+      "bytes": 31658,
+      "sha256": "1c8a2edc9094d851781dfd623bd18e502cb1d0a50be1ca48306e5e936126f175"
+    },
+    {
+      "file": "C62-detail-rejected/detail-fold-causal-attribution.json",
+      "source": "artifacts/character-palm-sculpt-c62/detail-fold-causal-attribution.json",
+      "bytes": 12124,
+      "sha256": "42cb04bbf003def7575120873c9562d47fc101a979c8fab13dd4a59b14abee60"
+    },
+    {
+      "file": "comparison/miao-reference-progress-c59.html",
+      "source": "artifacts/reference-progress-comparison/miao-reference-progress-c59.html",
+      "bytes": 3485943,
+      "sha256": "bffd1bf15bb1bb9dc10fd698a6b8ca93f611360ad51e82b87e5f92900e12e9d6"
+    },
+    {
+      "file": "comparison/receipt.json",
+      "source": "artifacts/reference-progress-comparison/receipt.json",
+      "bytes": 1512,
+      "sha256": "5ce42f4a0e1f227ae9c3bfeaae91681c5cca5abd7158a78c4ea3efd43f69b817"
+    },
+    {
+      "file": "comparison/progress-full.png",
+      "source": "artifacts/reference-progress-comparison/progress-full.png",
+      "bytes": 74669,
+      "sha256": "02ce6128d3cab3c299ccae8baececb7d6ffb9a4df39d6673da626e71932dbe82"
+    },
+    {
+      "file": "comparison/progress-face.png",
+      "source": "artifacts/reference-progress-comparison/progress-face.png",
+      "bytes": 75352,
+      "sha256": "b6c3b008051a0e0c1ebe5d32643e95397e2a7fb0a0f2a7633a7a3ed9d8c1bf9e"
+    },
+    {
+      "file": "comparison/progress-hands.png",
+      "source": "artifacts/reference-progress-comparison/progress-hands.png",
+      "bytes": 84218,
+      "sha256": "a6b67bfc4699ffe36ab9bd27ea491d84ccfd7f817dd77b43381c0800d247a031"
+    },
+    {
+      "file": "comparison/render-c59-review-receipt.json",
+      "source": "artifacts/reference-progress-comparison/render-c59-review-receipt.json",
+      "bytes": 1384,
+      "sha256": "19b3a52ba16fda00c85cf5fab91c4700255fc626b702740a26459dcabfa54932"
+    },
+    {
+      "file": "comparison/framed-faces-receipt.json",
+      "source": "artifacts/reference-progress-comparison/framed-faces-receipt.json",
+      "bytes": 612,
+      "sha256": "a3ecd2f709b720c9cbe0fd88aa5ba3cc68a87f8bc2be6a70ab52a1a64a37a257"
+    },
+    {
+      "file": "portable-C49/release-verified.json",
+      "source": "artifacts/c49-portable-handoff/release-verified.json",
+      "bytes": 689,
+      "sha256": "ea65e4a8619fdbcbc6dbc102c6f12206d4a34e584df22773f86907f4704378e9"
+    }
+  ]
+}

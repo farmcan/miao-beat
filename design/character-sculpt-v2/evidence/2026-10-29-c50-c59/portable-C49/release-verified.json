@@ -1,0 +1,14 @@
+{
+  "archive": "miao-authoring-study-c49.zip",
+  "bytes": 65969898,
+  "sha256": "12a9f38e9de3e0697cb162d9fec089d543000a78c7148302b1adcd6aa6fbca9c",
+  "native_sha256": "0ea1505e0368ab01ed5dac5ba5a07cb4772426e25db8faeffcf35cee8ac7ad6b",
+  "all_packed_dependencies_verified": true,
+  "whole_character_approved": false,
+  "production_changed": false,
+  "source_commit": "7c02830",
+  "github_release_url": "https://github.com/farmcan/miao-beat/releases/tag/authoring-study-2026-10-29-c49",
+  "anonymous_receipt_download_verified": true,
+  "github_archive_digest_matches": true,
+  "first_attempt_http_422_short_target_sha": "No release was created; full SHA target used for successful retry."
+}
