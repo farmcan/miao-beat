@@ -4,6 +4,7 @@ A small browser instrument playground. Follow a metronome, play your own music, 
 
 - Play: https://miao-beat.pages.dev/
 - Research & decisions: [research index](docs/README.md)
+- CC0 eight-key instrument: [Blender/GLB import handoff](docs/character-eight-key-prop-handoff.md). Static component only; the complete cat redesign remains unfinished.
 - Mature Blender models: [cross-computer review handoff](docs/character-keyboard-review-handoff.md) and [verified source downloads](docs/character-licensed-assets-handoff.md).
 - Generate the next motion video on another computer: [one-document handoff](docs/video-animation-handoff.md), with committed reference images and copyable prompts.
 - Public products never link back to the owner’s personal website or research hub.

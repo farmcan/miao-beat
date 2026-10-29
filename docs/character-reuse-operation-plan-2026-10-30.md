@@ -68,3 +68,15 @@ v1 STOP 历史不改。v2通过原键组/腕控制器上移2mm、左腕横向校
 [原生只读检查](research/miao-native-identity-adaptation-probe-2026-10-30.md)已证明Wing It制服就是躯干/四肢表面，不存在可直接露出的完整裸毛猫。整角色仍HOLD，不再以改色/隐藏配饰掩盖头身与身份差距。继续寻找匹配成熟模板；本轮新增公开源码、付费预览、PKO胖猫候选和取得源后停止条件见[补充核验与决策](research/cat-source-supplement-and-decision-2026-10-30.md)。尚无新猫源包取得/最终模型通过。
 
 八键适配仅复用原KeyForty八白五黑，白键宽15.39→52.33mm、原case宽504mm，原native腕刚体X位移。灰与同pose彩色均由identity/craft/motion独立实看六图，仅prop/准备位静态GO；完整角色原图身份/精致度HOLD，不放行动作/网页扩展。来源、native SHA和有限几何证据见[八键probe](research/miao-eight-key-prop-probe-2026-10-30.md)与[同姿态原色](research/miao-eight-key-color-static-2026-10-30.md)。线上A/C4实验保留原字节，不用此静态组件替换或冒称八键完成。
+
+
+## 八键组件已完成异机交接，整目标未完成
+
+同一CC0乐器本体导出GLB214,480字节、最小Blender3.6数据资产库176,270字节，18mesh/5,560tri/3材质/4内嵌图；原色重导图经独立transport craft GO。仅乐器资产含音符/节点映射、来源许可、验证回执和灰/彩六角色报告，封装为890,450字节的[作者包](https://github.com/farmcan/miao-beat/releases/download/licensed-source-assets-2026-10-29/miao-eight-key-cc0-instrument-2026-10-30.zip)，SHA256 `5dd2927cd9cb4e413d1abdb275011405d9f27a029e8edca27dcc533e02b9b6e4`。
+
+GitHub server digest及匿名canonical200/字节一致已核验，23成员精确白名单/CRC/SHA/解压后验证与确定性repack通过；[公开回执](https://github.com/farmcan/miao-beat/releases/download/licensed-source-assets-2026-10-29/miao-eight-key-cc0-instrument-2026-10-30.receipt.json)亦匿名逐字节匹配。[异机操作文档](character-eight-key-prop-handoff.md)已随源提交。组件源码/评审提交`f6fbab6`已push；打包不含猫、桌、骨架、动作、摄像机、灯或Text脚本。源安装交叠unknown仍在。
+
+这不是八键演奏上线；public/与现有A/C4实验没有修改。完整猫的原图身份与精致目标依然HOLD，所以本轮不进行新的八键/头部动作。下一步是取得匹配的成熟猫源，先验证真实前肢/分指/绑定；只有整角色灰/彩门禁通过才继续动作。采购预筛不能替代模型实物证据。
+
+
+补充实际兼容性：发布的同一个GLB在本机用户安装的Blender5.2.3 LTS也禁脚本真实导入通过，仍18mesh/5560tri/3PBR/4packed图，世界bounds最大误差4.66nm，源SHA不变；未把数值导入检查说成5.2新渲染美术通过。`verify_eight_key_prop_current_blender.py`支持指定已解压包的GLB/reference JSON与输出位置，避免另一台电脑需要复现完整猫场景才能检查这个静态组件。
