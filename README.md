@@ -4,8 +4,11 @@ A small browser instrument playground. Follow a metronome, play your own music, 
 
 - Play: https://miao-beat.pages.dev/
 - Research & decisions: [research index](docs/README.md)
+- Mature Blender models: [cross-computer review handoff](docs/character-keyboard-review-handoff.md) and [verified source downloads](docs/character-licensed-assets-handoff.md).
 - Generate the next motion video on another computer: [one-document handoff](docs/video-animation-handoff.md), with committed reference images and copyable prompts.
 - Public products never link back to the owner’s personal website or research hub.
+
+2026-10-30: Licensed stock cat, keyboard and support scene passed independent gray/color static reviews. A separate clean thin-guitar prop is also available in the source release. Single-key motion remains on hold after a key/chassis clearance check; these review packages are authoring assets, not a replacement production animation. [Operation plan and current evidence](docs/character-reuse-operation-plan-2026-10-30.md).
 
 2026-10-28 · 0.16.0: Independent [Blender guitar pilot](https://miao-beat.pages.dev/labs/blender-guitar/) uses 24 complete-scene renders and the existing guitar samples/media exporter. The owner rejected this model's visual fidelity: it is a technical study only, with fixed fretting hand and merged fast visual inputs. Character/art delivery is not complete. [Plan and measured limits](docs/blender-guitar-v1-plan.md).
 
