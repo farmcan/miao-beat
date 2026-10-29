@@ -43,3 +43,13 @@
 同时核对现行[Cloudflare Pages GitHub官方说明](https://developers.cloudflare.com/pages/configuration/git-integration/github-integration/#skipping-a-build-via-a-commit-message)：commit message以`[skip ci]`等指定标记开头会省略该次Pages部署，大小写不敏感；不是关闭长期自动化或总账单硬封顶。本次研究代码/文档Git同步采用这个前缀，既不调用wrangler，也不增加生产访问QA。同步后仅确认Git远端及GitHub运行记录；未将同步解释为已上线或整体费用恢复。
 
 这个窄路径只用于已有授权的研究checkpoint，不覆盖未来真正发布、Worker/D1执行或其他未知服务用量。新角色尚未通过美术/动作关，因此也没有理由触发生产替换。账户费用边界与状态页发布继续pending。
+
+## 2026-10-29：用户明确请求三版对比后的静态例外
+
+本次重新核对[Pages Functions定价](https://developers.cloudflare.com/pages/functions/pricing/)与[调用路由](https://developers.cloudflare.com/pages/functions/routing/)官方现行文档：不触发Functions的静态资产请求，在免费/付费方案下均不按请求收费。它不等于账户总账单硬封顶。
+
+允许的窄交付是 `/labs/character-compare/` 与5张拥有权实图、证据JSON，展示原版/Blender/Godot及制作中缺口。页面无访问计数script、无fetch/iframe/外部服务，不自动调用API；`_routes.json`仍仅include `/api/site-counter`，本对比页及图片均不在其中。Wrangler身份已核实，采用本地构建和直接上传，不启动Git CI；commit仍用`[skip ci]`。不调用D1、counter或更改套餐/绑定。
+
+发布前用静态 `release.json`核对原253个生产资产与本地构建全部hash一致，仅增7个静态对比文件，避免覆盖别处上线修改。普通Python UA读取该文件403，curl标准客户端成功；未使用鉴权绕过或关闭任何保护。
+
+这只核实本次静态对比页面的增量路径，不覆盖原应用计数API、Seed全站gate、其他应用共享用量或总账单。新模型仍未通过整体美术/动作关，比较页是用户请求的审阅入口，不替换正式角色。Seed状态事件仍先pending，不能因本页可静态发布便宣称所有服务成本问题解决。

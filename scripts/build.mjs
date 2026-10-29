@@ -17,6 +17,15 @@ if(blenderAtlas.length!==blenderLab.atlasBytes||createHash('sha256').update(blen
 if(createHash('sha256').update(await fs.readFile(path.join(root,'design/blender-guitar-v1/scene.py'))).digest('hex')!==blenderLab.sourceScriptSha256)throw Error('Blender authoring source differs');
 allowed.push(...['index.html','style.css','pilot.js','motion.js','manifest.json','atlas.webp','poster.webp'].map(file=>'labs/blender-guitar/'+file));
 allowed.push('media-export.js','site-counter.js','_worker.js','_routes.json','character/guitar-whole-still-v1.jpg','character/drums-whole-still-v1.jpg');
+const compareFiles=['index.html','evidence.json','images/original.jpg','images/blender-color.png','images/godot-static.png','images/blender-hand-gray.png','images/blender-gray-three-quarter.png'];
+const compareEvidence=JSON.parse(await fs.readFile(path.join(root,'public/labs/character-compare/evidence.json')));
+if(compareEvidence.images.length!==5)throw Error('Incomplete three-version comparison');
+for(const image of compareEvidence.images){
+ if(!compareFiles.includes(image.file))throw Error('Unexpected comparison image');
+ const bytes=await fs.readFile(path.join(root,'public/labs/character-compare',image.file));
+ if(createHash('sha256').update(bytes).digest('hex')!==image.sha256)throw Error('Comparison image provenance differs');
+}
+allowed.push(...compareFiles.map(file=>'labs/character-compare/'+file));
 const wholeFrames=JSON.parse(await fs.readFile(path.join(root,'public/character/whole-piano-v3/manifest.json')));
 const {validateFrameManifest,validateInstrumentManifest}=await import('../public/full-frame-character.js');validateFrameManifest(wholeFrames);
 allowed.push('full-frame-character.js','character/whole-piano-v3/manifest.json',...Object.values(wholeFrames.frames).map(name=>'character/whole-piano-v3/'+name));
@@ -47,7 +56,7 @@ await fs.rm(path.join(root,'dist'),{recursive:true,force:true});await fs.mkdir(p
 const files={};for(const name of allowed){
  const content=await fs.readFile(path.join(root,'public',name));
  const text=/\.(mp3|png|jpg|mp4|webp)$/.test(name)?'':content.toString();
- const maxBytes=/^labs\/blender-guitar\/.*\.webp$/.test(name)?3000000:/^character\/.*\.mp4$/.test(name)?8000000:/^(?:character\/|labs\/orange-guitar\/).*\.(png|jpg|webp)$/.test(name)?2000000:256000;
+ const maxBytes=/^labs\/blender-guitar\/.*\.webp$/.test(name)?3000000:/^character\/.*\.mp4$/.test(name)?8000000:/^(?:character\/|labs\/(?:orange-guitar|character-compare)\/).*\.(png|jpg|webp)$/.test(name)?2000000:256000;
  if(content.length>maxBytes||/\/Users\/|oauth_token|BEGIN PRIVATE KEY|farmcan(?:-seed)?\.pages\.dev/.test(text))throw Error('Invalid public file: '+name);
  await fs.mkdir(path.dirname(path.join(root,'dist',name)),{recursive:true});await fs.writeFile(path.join(root,'dist',name),content);files[name]=createHash('sha256').update(content).digest('hex');
 }

@@ -1,0 +1,31 @@
+{
+  "updated": "2026-10-29",
+  "scope": "Review comparison; original, C20 Blender shaded still, C8 Godot native import still. New C23 paw gray study is separate. No new animation clips or production acceptance.",
+  "images": [
+    {
+      "file": "images/original.jpg",
+      "source": "public/character/instrument-scenes-v1/guitar/idle.jpg",
+      "sha256": "4418fd737891283f42568306cb427b1f7604a86cae5513b1d6c49b3c31f338d1"
+    },
+    {
+      "file": "images/blender-color.png",
+      "source": "artifacts/character-eye-wet-iris-c20/c20-color-front.png",
+      "sha256": "156c0d3fa04a7c61dbaa7dfcd98d887aeb1f910bf4ffe544a7cda3f1bbdc2fb4"
+    },
+    {
+      "file": "images/godot-static.png",
+      "source": "artifacts/godot-cat-static/godot-static.png",
+      "sha256": "40f0a3f5c8a7455bf669592d696da95874227c4e734f90cc0ed1d276d944e0a2"
+    },
+    {
+      "file": "images/blender-hand-gray.png",
+      "source": "artifacts/character-paw-plane-source-c23/gray-inside.png",
+      "sha256": "bec586ed5a12bf51e88bf7869b9fc29a1ba60b475ba5a60355fe854419ed3d40"
+    },
+    {
+      "file": "images/blender-gray-three-quarter.png",
+      "source": "artifacts/character-paw-plane-source-c23/gray-three-quarter.png",
+      "sha256": "2cf23d67aea8ad4afb7080eb3693821b9cdddc26a19a4e23d06223f224fb761a"
+    }
+  ]
+}
