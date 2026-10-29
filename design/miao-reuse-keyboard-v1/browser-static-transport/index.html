@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Miao · 模型材质预览</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eeece6;color:#343b42;font:16px/1.55 system-ui,sans-serif}main{max-width:800px;margin:32px auto;padding:0 20px}header{display:flex;align-items:baseline;justify-content:space-between;gap:20px}h1{font-size:24px;letter-spacing:-.03em;margin:0}small{color:#697279}p{margin:12px 0}.stage{position:relative;aspect-ratio:1;background:#e5e4df;border-radius:24px;overflow:hidden;margin:20px 0}canvas{width:100%;height:100%;display:block;touch-action:none}.placeholder{position:absolute;inset:0;display:grid;place-content:center;text-align:center;padding:30px}.placeholder[hidden]{display:none}button{border:0;background:#253c50;color:white;border-radius:14px;padding:13px 20px;font:inherit;cursor:pointer}button:disabled{opacity:.55;cursor:wait}.tools{display:flex;gap:10px;align-items:center;justify-content:space-between}.tools button{background:#d9dedf;color:#283b48}#status{min-height:25px}footer{font-size:12px;color:#737a7f;padding:16px 0}a{color:inherit}@media(max-width:550px){main{margin:20px auto}header{display:block}h1{font-size:22px}.stage{border-radius:18px}}
+.stage{height:min(70vh,680px);aspect-ratio:auto}
+</style>
+<main>
+  <header><h1>Miao · 模型材质预览</h1><small>完整角色 / 原生场景导出</small></header>
+  <p>本页先检查网页里的形状、颜色和加载。尚未接入弹奏。</p>
+  <div class="stage"><canvas id="scene" aria-label="完整猫与键盘的3D材质预览"></canvas><div class="placeholder" id="placeholder"><button id="load">加载模型 · 15.6 MB</button><p>点击后下载，可轻拖查看。</p></div></div>
+  <div class="tools"><span id="status" role="status">模型尚未加载</span><button id="reset" disabled>回到正面</button></div>
+  <footer>Cat Rig (CC-BY) Blender Foundation | studio.blender.org · Innerscene 键盘/桌 CC0 · Three.js MIT。当前只是静态传输验证。</footer>
+</main>
+<script type="module" src="./preview.js"></script>
+</html>

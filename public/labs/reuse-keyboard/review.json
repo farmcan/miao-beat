@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "scope": "standalone-A-C4-experiment",
+  "productionCharacterReplacement": false,
+  "supportedKeys": [
+    "KeyA"
+  ],
+  "supportedMidi": [
+    60
+  ],
+  "modelFile": "model/miao-one-key-5c20616b.glb",
+  "metadataFile": "model/metadata-259b5dd0.json",
+  "assets": [
+    {
+      "file": "model/miao-one-key-5c20616b.glb",
+      "bytes": 17144124,
+      "sha256": "5c20616b3f7f1cbbdff257fb10729519c84eaf940bfee467803ba29fc5e0b69a"
+    },
+    {
+      "file": "model/metadata-259b5dd0.json",
+      "bytes": 1942,
+      "sha256": "259b5dd08dea0cea91aa1b03e84fe94d16d28c9ea048c94db3f8f1c4df44b2d7"
+    },
+    {
+      "file": "poster-e1907c3a.png",
+      "bytes": 1410367,
+      "sha256": "e1907c3aab4477f7e1ad5eace44449c15a1b921e8e0c1c75793a3c25f01932c8"
+    }
+  ],
+  "sourceNativeSha256": "ca5f9095d31badc8c4e0266ba969ec127bf3e2f4a90b7f7e7c532d8bf4f5abb6",
+  "sourcePoseSha256": "6a034f30f3f848c4cd7833da9e86834d895a636bfed170d5cd5fbd16d7b5049b",
+  "nativeStaticGate": "gray and same-pose color: three independent roles GO for one-note test",
+  "nativeMotionGate": "one press/contact/key/release/return GO for controlled web trial",
+  "webGate": "experimental-page-go",
+  "mobileSpeakerTested": false
+}

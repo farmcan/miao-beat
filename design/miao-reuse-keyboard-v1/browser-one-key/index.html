@@ -1,0 +1,12 @@
+<!doctype html><html lang="zh-CN">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Miao · 一键试弹</title>
+<link rel="stylesheet" href="./style.css">
+<main>
+<header><h1>Miao · 一键试弹</h1><a href="https://miao-beat.pages.dev/?instrument=piano&analytics=internal">回原版</a></header>
+<p class="hint">按 A，或点下方 A/C4 键。这个测试页先试 C4 一个音。</p>
+<div class="stage"><canvas id="scene" aria-label="完整猫与键盘，C4按下和回弹"></canvas><img class="poster" id="poster" src="../../../artifacts/miao-reuse-keyboard-v1/v2-keygroup-lift-color/front.png" alt="猫与键盘的准备姿势"><div class="gate" id="gate"><button id="prepare">开琴 · 模型约17 MB</button></div></div>
+<div class="controls"><button id="note" disabled aria-label="A，C4琴键"><kbd>A</kbd><small>C4</small></button><button id="hold" disabled aria-pressed="false">按住 C4</button><button id="stop" disabled>停止</button></div>
+<div class="status"><span id="status" role="status">先开琴，再弹一下。</span><span class="meter" aria-label="琴声电平"><i id="meter"></i></span></div>
+<footer>单音受控测试，完整曲谱请用原版。<br>Cat Rig (CC-BY) Blender Foundation | studio.blender.org · Innerscene 乐器/桌 CC0 · Three.js MIT · <a href="./credits.txt">模型署名与许可</a> · <a href="../../../public/UPSTREAM-LICENSE.txt">音色署名</a></footer>
+</main><script type="module" src="./play.js"></script></html>

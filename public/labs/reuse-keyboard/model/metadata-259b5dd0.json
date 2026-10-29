@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "keyNode": "MiaoKeyC4",
+  "morphNames": {
+    "contact": "Contact",
+    "down": "Down"
+  },
+  "q0": 0.3141592741012573,
+  "qContact": 0.3848828248486103,
+  "qDown": 0.4186165003145567,
+  "contactFraction": 0.6770575221185466,
+  "keyMaxRadians": -0.013393258920163595,
+  "pivotThree": [
+    0.0573125034570694,
+    0.32200002670288086,
+    0.4130000174045563
+  ],
+  "trajectory": [
+    {
+      "q": 0.3141592741012573,
+      "theta": 0.0
+    },
+    {
+      "q": 0.321514523378982,
+      "theta": 0.0
+    },
+    {
+      "q": 0.3390539639643256,
+      "theta": 0.0
+    },
+    {
+      "q": 0.3495210494749338,
+      "theta": 0.0
+    },
+    {
+      "q": 0.35998813498554205,
+      "theta": 0.0
+    },
+    {
+      "q": 0.3775275755708856,
+      "theta": 0.0
+    },
+    {
+      "q": 0.3848828248486103,
+      "theta": -0.0
+    },
+    {
+      "q": 0.38739168288219333,
+      "theta": -0.00099209325334545
+    },
+    {
+      "q": 0.3933699368782347,
+      "theta": -0.0034723263867090805
+    },
+    {
+      "q": 0.4016195132229647,
+      "theta": -0.006696629460081797
+    },
+    {
+      "q": 0.40980670920379847,
+      "theta": -0.009920932533454514
+    },
+    {
+      "q": 0.4160914957062143,
+      "theta": -0.012401165666818143
+    },
+    {
+      "q": 0.4186165003145567,
+      "theta": -0.013393258920163595
+    }
+  ],
+  "modelFile": "miao-one-key-5c20616b.glb",
+  "modelSha256": "5c20616b3f7f1cbbdff257fb10729519c84eaf940bfee467803ba29fc5e0b69a",
+  "modelBytes": 17144124,
+  "attribution": {
+    "cat": "Cat Rig (CC-BY) Blender Foundation | studio.blender.org",
+    "catLicense": "https://creativecommons.org/licenses/by/4.0/",
+    "keyboardAndTable": "Innerscene, complete-file CC0",
+    "codeAndRuntime": "Project and Three.js MIT"
+  },
+  "scope": "Only A/C4 controlled experiment. Native static gates passed; source hidden key-mount boundary unknowns remain. Not the completed Miao redesign or an eight-key instrument."
+}

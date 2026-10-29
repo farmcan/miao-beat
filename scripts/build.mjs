@@ -36,6 +36,28 @@ for(const image of compareEvidence.images){
  if(createHash('sha256').update(bytes).digest('hex')!==image.sha256)throw Error('Comparison image provenance differs');
 }
 allowed.push(...compareFiles.map(file=>'labs/character-compare/'+file));
+const reusePrefix='labs/reuse-keyboard/';
+const reuseReview=JSON.parse(await fs.readFile(path.join(root,'public',reusePrefix,'review.json')));
+if(reuseReview.version!==1||reuseReview.scope!=='standalone-A-C4-experiment'||reuseReview.productionCharacterReplacement!==false||reuseReview.supportedKeys?.join()!=='KeyA'||reuseReview.supportedMidi?.join()!=='60'||reuseReview.webGate!=='experimental-page-go')throw Error('Unreviewed reused-keyboard experiment');
+if(reuseReview.assets.length!==3)throw Error('Unexpected reused-keyboard assets');
+if(new Set(reuseReview.assets.map(asset=>asset.file)).size!==3||!reuseReview.assets.some(asset=>asset.file===reuseReview.modelFile)||!reuseReview.assets.some(asset=>asset.file===reuseReview.metadataFile))throw Error('Reused-keyboard manifest paths differ');
+for(const asset of reuseReview.assets){
+ if(!/^(?:model\/miao-one-key-[a-f0-9]{8}\.glb|model\/metadata-[a-f0-9]{8}\.json|poster-[a-f0-9]{8}\.png)$/.test(asset.file))throw Error('Unreviewed reused-keyboard file');
+ const bytes=await fs.readFile(path.join(root,'public',reusePrefix,asset.file));
+ if(bytes.length!==asset.bytes||createHash('sha256').update(bytes).digest('hex')!==asset.sha256)throw Error('Reused-keyboard provenance differs');
+ if(asset.file.match(/-([a-f0-9]{8})\.(?:glb|json|png)$/)?.[1]!==asset.sha256.slice(0,8))throw Error('Reused-keyboard fingerprint differs');
+ allowed.push(reusePrefix+asset.file);
+}
+const reuseMeta=JSON.parse(await fs.readFile(path.join(root,'public',reusePrefix,reuseReview.metadataFile)));
+if(reuseMeta.modelFile!==path.basename(reuseReview.modelFile)||reuseMeta.modelSha256!=='5c20616b3f7f1cbbdff257fb10729519c84eaf940bfee467803ba29fc5e0b69a'||reuseMeta.keyNode!=='MiaoKeyC4')throw Error('Unexpected reused-keyboard model');
+const reuseModel=await fs.readFile(path.join(root,'public',reusePrefix,reuseReview.modelFile));
+if(createHash('sha256').update(reuseModel).digest('hex')!==reuseMeta.modelSha256)throw Error('Reused-keyboard model is not the reviewed source');
+if(reuseModel.readUInt32LE(0)!==0x46546c67||reuseModel.readUInt32LE(4)!==2||reuseModel.readUInt32LE(8)!==reuseModel.length)throw Error('Invalid reused-keyboard GLB');
+const reuseGltf=JSON.parse(reuseModel.subarray(20,20+reuseModel.readUInt32LE(12)).toString());
+if(reuseGltf.skins?.length||reuseGltf.animations?.length||reuseGltf.buffers.some(buffer=>buffer.uri)||reuseGltf.images?.some(image=>image.uri)||reuseGltf.nodes.filter(node=>node.name==='MiaoKeyC4').length!==1)throw Error('Unexpected reused-keyboard payload');
+const reuseMorphs=reuseGltf.meshes.filter(mesh=>mesh.primitives.some(primitive=>primitive.targets?.length));
+if(reuseMorphs.length!==1||reuseMorphs[0].extras?.targetNames?.join()!=='Contact,Down'||reuseGltf.meshes.some(mesh=>mesh.primitives.some(primitive=>primitive.attributes.COLOR_0!==undefined)))throw Error('Unexpected reused-keyboard deformation');
+allowed.push(...['index.html','style.css','play.js','motion.js','model.js','credits.txt','review.json'].map(file=>reusePrefix+file));
 const wholeFrames=JSON.parse(await fs.readFile(path.join(root,'public/character/whole-piano-v3/manifest.json')));
 const {validateFrameManifest,validateInstrumentManifest}=await import('../public/full-frame-character.js');validateFrameManifest(wholeFrames);
 allowed.push('full-frame-character.js','character/whole-piano-v3/manifest.json',...Object.values(wholeFrames.frames).map(name=>'character/whole-piano-v3/'+name));
@@ -66,7 +88,7 @@ await fs.rm(path.join(root,'dist'),{recursive:true,force:true});await fs.mkdir(p
 const files={};for(const name of allowed){
  const content=await fs.readFile(path.join(root,'public',name));
  const text=/\.(mp3|png|jpg|mp4|webp|glb|pck|gz)$/.test(name)?'':content.toString();
- const maxBytes=/^labs\/character-compare\/(?:model\/miao-playable\.glb|godot\/index\.(?:pck|wasm\.gz))$/.test(name)?25*1024*1024:/^labs\/character-compare\/(?:vendor\/three-runtime\.mjs|godot\/index\.js)$/.test(name)?1000000:/^labs\/blender-guitar\/.*\.webp$/.test(name)?3000000:/^character\/.*\.mp4$/.test(name)?8000000:/^(?:character\/|labs\/(?:orange-guitar|character-compare)\/).*\.(png|jpg|webp)$/.test(name)?2000000:256000;
+ const maxBytes=/^(?:labs\/character-compare\/(?:model\/miao-playable\.glb|godot\/index\.(?:pck|wasm\.gz))|labs\/reuse-keyboard\/model\/miao-one-key-[a-f0-9]{8}\.glb)$/.test(name)?25*1024*1024:/^labs\/character-compare\/(?:vendor\/three-runtime\.mjs|godot\/index\.js)$/.test(name)?1000000:/^labs\/blender-guitar\/.*\.webp$/.test(name)?3000000:/^character\/.*\.mp4$/.test(name)?8000000:/^(?:character\/|labs\/(?:orange-guitar|character-compare|reuse-keyboard)\/).*\.(png|jpg|webp)$/.test(name)?2000000:256000;
  if(content.length>maxBytes||/\/Users\/|oauth_token|BEGIN PRIVATE KEY|farmcan(?:-seed)?\.pages\.dev/.test(text))throw Error('Invalid public file: '+name);
  await fs.mkdir(path.dirname(path.join(root,'dist',name)),{recursive:true});await fs.writeFile(path.join(root,'dist',name),content);files[name]=createHash('sha256').update(content).digest('hex');
 }

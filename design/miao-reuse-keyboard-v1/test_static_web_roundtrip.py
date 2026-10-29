@@ -4,14 +4,29 @@ This uses the documented render-matched VIEWPORT proxy, not a captured RENDER
 depsgraph. Exported pixels must pass a separate visual review before web use.
 """
 import bpy
+import argparse
 import hashlib
 import json
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 BASE = ROOT / 'artifacts/miao-reuse-keyboard-v1'
 SOURCE = BASE / 'default-color/keyboard-default-color-native36.blend'
 OUT = BASE / 'static-web-roundtrip'
+parser = argparse.ArgumentParser()
+parser.add_argument('--source', type=Path, default=SOURCE)
+parser.add_argument('--expected-source-sha')
+parser.add_argument('--expected-pose', default='4fb6d4c171f6aa36efa9f0e550048d037e91057225bd9856edf7670b8b1913be')
+parser.add_argument('--out', type=Path)
+parser.add_argument('--omit-unused-colors', action='store_true')
+options = parser.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
+SOURCE = options.source if options.source.is_absolute() else ROOT / options.source
+OMIT_UNUSED_COLORS = options.omit_unused_colors
+if OMIT_UNUSED_COLORS:
+    OUT = BASE / 'static-web-roundtrip-no-unused-colors'
+if options.out:
+    OUT = options.out if options.out.is_absolute() else ROOT / options.out
 
 
 def sha(path):
@@ -22,12 +37,26 @@ def main():
     assert bpy.app.version[:2] == (3, 6)
     OUT.mkdir(parents=True, exist_ok=True)
     source_sha = sha(SOURCE)
+    if options.expected_source_sha:
+        assert source_sha == options.expected_source_sha
     bpy.ops.wm.open_mainfile(filepath=str(SOURCE), load_ui=False, use_scripts=False)
     native = bpy.context.scene
+    if OMIT_UNUSED_COLORS:
+        # The received source shader does not read these stored Color layers.
+        # glTF COLOR_0 is always multiplied with the material, so emitting unused
+        # near-black authoring data changes the appearance (eye sample ~.011).
+        users = []
+        for material in bpy.data.materials:
+            if not material.use_nodes:
+                continue
+            for node in material.node_tree.nodes:
+                if node.bl_idname in {'ShaderNodeVertexColor', 'ShaderNodeAttribute'} and any(socket.is_linked for socket in node.outputs):
+                    users.append((material.name, node.name))
+        assert not users, ('Do not drop a source shader color input', users)
     rig = bpy.data.objects['RIG-Cat']
     pose = lambda: hashlib.sha256(json.dumps([(b.name, [list(v) for v in b.matrix_basis]) for b in rig.pose.bones]).encode()).hexdigest()
     pose_before = pose()
-    assert pose_before == '4fb6d4c171f6aa36efa9f0e550048d037e91057225bd9856edf7670b8b1913be'
+    assert pose_before == options.expected_pose
     for obj in native.objects:
         for curve in obj.animation_data.drivers if obj.animation_data else []:
             if 'modifiers[' in curve.data_path and curve.data_path.endswith('].levels'):
@@ -110,7 +139,7 @@ def main():
     glb = OUT / 'keyboard-static-test.glb'
     # glTF does not support AREA lights. Keep geometry/material transport distinct
     # from the display environment, which is reinstated for this controlled test.
-    bpy.ops.export_scene.gltf(filepath=str(glb), export_format='GLB', use_active_scene=True, export_animations=False, export_cameras=True, export_lights=False, export_extras=False)
+    bpy.ops.export_scene.gltf(filepath=str(glb), export_format='GLB', use_active_scene=True, export_animations=False, export_cameras=True, export_lights=False, export_colors=not OMIT_UNUSED_COLORS, export_extras=False)
     imported = bpy.data.scenes.new('WEB_GLTF_REIMPORT_TEST')
     imported.world = snapshot.world.copy() if snapshot.world else None
     bpy.context.window.scene = imported
@@ -134,7 +163,7 @@ def main():
     imported.render.filepath = str(OUT / 'gltf-reimport.png')
     bpy.ops.render.render(write_still=True)
     assert sha(SOURCE) == source_sha
-    result = {'status': 'STATIC_TRANSPORT_TEST_PENDING_VISUAL_REVIEW', 'source_sha256': source_sha, 'source_file_unchanged': True, 'original_pose_unchanged': True, 'method': 'render-matched VIEWPORT evaluated mesh snapshot; not direct RENDER depsgraph', 'objects': rows, 'triangles': sum(r['triangles'] for r in rows), 'glb_bytes': glb.stat().st_size, 'glb_sha256': sha(glb), 'new_animation': False, 'web_browser_verified': False}
+    result = {'status': 'STATIC_TRANSPORT_TEST_PENDING_VISUAL_REVIEW', 'source_sha256': source_sha, 'pose_sha256': pose_before, 'source_file_unchanged': True, 'original_pose_unchanged': True, 'method': 'render-matched VIEWPORT evaluated mesh snapshot; not direct RENDER depsgraph', 'objects': rows, 'triangles': sum(r['triangles'] for r in rows), 'glb_bytes': glb.stat().st_size, 'glb_sha256': sha(glb), 'unused_color_layers_omitted': OMIT_UNUSED_COLORS, 'source_shader_color_attribute_users': [] if OMIT_UNUSED_COLORS else 'not checked', 'source_color_management': {'view_transform': native.view_settings.view_transform, 'look': native.view_settings.look, 'exposure': native.view_settings.exposure, 'gamma': native.view_settings.gamma}, 'new_animation': False, 'web_browser_verified': False}
     (OUT / 'receipt.json').write_text(json.dumps(result, indent=2) + '\n')
     print('RESULT', json.dumps({k: v for k, v in result.items() if k != 'objects'}))
 

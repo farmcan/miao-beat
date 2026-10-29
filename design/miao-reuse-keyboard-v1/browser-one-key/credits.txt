@@ -1,0 +1,26 @@
+Miao Beat — licensed single-note model experiment
+
+Cat Rig (CC-BY) Blender Foundation | studio.blender.org
+Original: https://studio.blender.org/characters/cat/v1/
+License: https://creativecommons.org/licenses/by/4.0/
+Received optimized variant: https://github.com/move-ai/Move_API_and_retargeting_Blender_addon
+Fixed upstream commit: f449af53ccc71a7c66079b7a52e133a163a41fb7
+Modifications: original native IK/finger controls posed in Blender3.6.23;
+evaluated whole-scene geometry exported, Contact/Down hand morphs derived from
+the same complete connected source scene. Source base mesh retained. Unused
+authoring Color layers omitted because source shaders did not read them.
+No upstream Python is embedded in or executed by this browser model.
+
+Key Forty MIDI Keyboard and COMMON280 table: Innerscene, complete-file CC0.
+https://www.innerscene.com/tools/library/3d-parts/key-forty-midi-keyboard-0d9952a4
+https://www.innerscene.com/tools/library/3d-parts/common-280-communal-work-table-0e45ba93
+Adaptation: original key bank and wrist controls shifted 2mm for a fixed 1.5mm
+key stroke. No new character or instrument geometry.
+
+Three.js 0.186.1, MIT; vendor notice at ../character-compare/vendor/three-LICENSE.txt
+Project scripts: MIT. Piano samples retain the main product's original credits
+at ../../UPSTREAM-LICENSE.txt and ../../samples/LICENSES.txt.
+
+Scope: single-note controlled prototype, not the completed Miao appearance or
+an eight-key release. Original hidden black/white key-mount intersections retain
+boundary classification unknowns; no complete mechanical-simulation claim.
