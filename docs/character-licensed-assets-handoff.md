@@ -38,3 +38,11 @@
 除了上述声学琴，已实际复用Rexodus HH薄电吉他CC0几何、Innerscene KeyForty键盘和COMMON280桌（后两者完整文件CC0）。薄电吉他的原royalty-free材质不再分发，干净衍生物只含CC0几何与本项目新PBR；它的独立prop工艺通过，但猫持琴的.70/.55测试仍穿模，冻结不扩动画。
 
 独立键盘场景已通过灰模和彩色两轮、每轮三位非builder的identity/craft/contact静态评审，**只放行一指一键试验**。当前默认色保留作者飞行员猫身份，不声称原橘猫复刻、已自然演奏或网页已上线。[逐步计划](character-reuse-operation-plan-2026-10-30.md)记录验收和停止条件；后续键盘交接独立提供，不把旧失败吉他工程当成可直接演奏成品。
+
+两项跨电脑附件已发布到同一个Release，并核对GitHub服务端大小/SHA、匿名canonical回执一致：
+
+- [完整键盘静态review包](https://github.com/farmcan/miao-beat/releases/download/licensed-source-assets-2026-10-29/miao-keyboard-static-review-2026-10-30.zip)：28,178,410B，SHA `c2e63433bb37553583655f02012e5215cfead6e10e898d25010bfa7fb842d85e`。
+- [干净薄电琴prop包](https://github.com/farmcan/miao-beat/releases/download/licensed-source-assets-2026-10-29/miao-thin-electric-clean-prop-2026-10-30.zip)：74,312,197B，SHA `d73fd232cad23a9f1ccd8c04e268474b97e6f78d0e2c39eacc5d66821b2d477b`。
+- [操作文档](character-keyboard-review-handoff.md)：先校验，使用官方3.6.23重开已评审键盘native；琴addon内5.2 native与3.6兼容GLB分开说明。
+
+解压后跨路径重打包的SHA完全一致，键盘实际重开无缺依赖。两个包都不包含未通过的动作。单键v1后来触发键—底壳交叉STOP，按 `research/miao-keyboard-single-key-v1-failure-2026-10-30.md` 保留证据；静态包原字节不因此改写。
