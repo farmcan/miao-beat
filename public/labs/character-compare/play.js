@@ -5,7 +5,7 @@ import {createCompareMotion} from './motion-controller.js';
 import {createThreeCharacter} from './three-renderer.js';
 
 const $=id=>document.getElementById(id),notes=MELODY.filter(key=>!key.black),keys=[...notes,...CHORDS],byCode=new Map(keys.map(key=>[key.code,key]));
-const held=new Set(),audio=new SampledAudio(),motion=createCompareMotion();
+const held=new Set(),audio=new SampledAudio({loadTimeoutMs:45000}),motion=createCompareMotion();
 const originalScene=$('original'),original=mountCharacter(originalScene),three=createThreeCharacter($('threeScene'),text=>{$('threeStatus').textContent=text;}),godot=$('godotScene');
 let preparing=null,audioReady=false,hits=0,events=[],demoTimers=[],activeView='whole',godotReady=false,godotLastSend=0,lastPose=[0,0,0,0,0];
 function noteIndex(key){return key.kind==='note'?notes.findIndex(k=>k.code===key.code):[1,3,5,2][CHORDS.indexOf(key)];}

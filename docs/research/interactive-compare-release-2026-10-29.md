@@ -35,3 +35,5 @@ Viola the Bird最接近精致动物演奏目标；Three RobotExpressive可借鉴
 ## 线上策略修复
 
 原全站CSP会阻止同源iframe和WASM，本机普通静态服务器未覆盖此项。已仅对/labs/character-compare/*配置同源frame和wasm-unsafe-eval，保留主站原策略。Godot启动脚本和CSS全部外部化，去除JavaScriptBridge.eval；不启用普通unsafe-eval或内联脚本。root严格CSP本机实测ready=true、20个mesh、完整角色出画、零warn/error。Cloudflare头部合并/移除规则依据 https://developers.cloudflare.com/pages/configuration/headers/ ，生产仍须验实际响应头和浏览器。
+
+生产首轮同时下载Godot引擎时，音色15秒默认超时曾失败一次；重试后成功。实验页音色加载窗口已提高为45秒，保留显式失败与重试，不改变主站默认值。生产Godot/Three真实加载和CSP分路径响应头已验，主站策略保持原值。
