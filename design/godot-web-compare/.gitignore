@@ -1,0 +1,3 @@
+.godot/
+model/*.glb
+export_presets.cfg.bak

@@ -161,7 +161,7 @@ export function mountCharacter(scene){
     const r=await fetch(MANIFEST);if(!r.ok)throw new Error('Whole-frame manifest unavailable');config=validateFrameManifest(await r.json());
     await getBitmap('idle');if(destroyed)return false;loaded=true;scene.setAttribute('data-complete-character','');draw();prefetch(false);if(mode==='guitar')loadMotion();return true;
   })().catch(()=>{if(!destroyed){message.hidden=false;message.textContent='猫的图没加载出来，声音还能用。';scene.dataset.wholeFrameStatus='unavailable';}return false;});
-  return{ready,
+  return{ready,reset,
     setCaptureMode(enabled){motion?.setContactHold(enabled?24:0);},
     async prepareCapture(){if(!await ready)throw Error('角色图片没有准备好。');if(mode==='guitar'){await loadMotion();if(motionEnabled&&!motion)throw Error('拨弦动作未加载，请等动作准备好后再导出。');}await prefetch(false);request();for(let i=0;i<100;i++){if(!canvas.hidden&&canvas.width>0)return canvas;await new Promise(resolve=>win.setTimeout(resolve,25));}throw Error('角色画面仍在加载，请重试。');},
     setMotionEnabled(enabled){motionEnabled=!!enabled;motion?.reset(state.sample().id);wanted='';epoch++;request();},

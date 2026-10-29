@@ -17,7 +17,17 @@ if(blenderAtlas.length!==blenderLab.atlasBytes||createHash('sha256').update(blen
 if(createHash('sha256').update(await fs.readFile(path.join(root,'design/blender-guitar-v1/scene.py'))).digest('hex')!==blenderLab.sourceScriptSha256)throw Error('Blender authoring source differs');
 allowed.push(...['index.html','style.css','pilot.js','motion.js','manifest.json','atlas.webp','poster.webp'].map(file=>'labs/blender-guitar/'+file));
 allowed.push('media-export.js','site-counter.js','_worker.js','_routes.json','character/guitar-whole-still-v1.jpg','character/drums-whole-still-v1.jpg');
-const compareFiles=['index.html','evidence.json','images/original.jpg','images/blender-color.png','images/godot-static.png','images/blender-hand-gray.png','images/blender-gray-three-quarter.png'];
+const compareFiles=['index.html','stills.html','play.css','play.js','three-renderer.js','motion-controller.js','model/miao-playable.glb','model/manifest.json','vendor/three-runtime.mjs','vendor/three-LICENSE.txt','vendor/three-provenance.json','evidence.json','images/original.jpg','images/blender-color.png','images/godot-static.png','images/blender-hand-gray.png','images/blender-gray-three-quarter.png'];
+const godotFiles=['index.html','index.js','index.pck','index.png','index.wasm.gz','index.audio.worklet.js','index.audio.position.worklet.js','compressed-wasm.js','export-evidence.json','GODOT-LICENSE.txt','GODOT-COPYRIGHT.txt'];
+const godotEvidence=JSON.parse(await fs.readFile(path.join(root,'public/labs/character-compare/godot/export-evidence.json')));
+for(const file of godotEvidence.files){
+ if(!godotFiles.includes(file.name))throw Error('Unexpected Godot asset');
+ const bytes=await fs.readFile(path.join(root,'public/labs/character-compare/godot',file.name));
+ if(bytes.length!==file.bytes||createHash('sha256').update(bytes).digest('hex')!==file.sha256)throw Error('Godot export differs: '+file.name);
+}
+if(godotEvidence.files.length!==godotFiles.length-1)throw Error('Incomplete Godot provenance');
+compareFiles.push(...godotFiles.map(file=>'godot/'+file));
+if(createHash('sha256').update(await fs.readFile(path.join(root,'public/labs/character-compare/model/miao-playable.glb'))).digest('hex')!=='1a384c0a9a13ed60710469b7d9a4de646a8599fe3dcff5ef85d1f42c825cedf9')throw Error('Playable model differs');
 const compareEvidence=JSON.parse(await fs.readFile(path.join(root,'public/labs/character-compare/evidence.json')));
 if(compareEvidence.images.length!==5)throw Error('Incomplete three-version comparison');
 for(const image of compareEvidence.images){
@@ -55,8 +65,8 @@ if(actual.sort().join('|')!==[...allowed].sort().join('|'))throw Error('Unexpect
 await fs.rm(path.join(root,'dist'),{recursive:true,force:true});await fs.mkdir(path.join(root,'dist'));
 const files={};for(const name of allowed){
  const content=await fs.readFile(path.join(root,'public',name));
- const text=/\.(mp3|png|jpg|mp4|webp)$/.test(name)?'':content.toString();
- const maxBytes=/^labs\/blender-guitar\/.*\.webp$/.test(name)?3000000:/^character\/.*\.mp4$/.test(name)?8000000:/^(?:character\/|labs\/(?:orange-guitar|character-compare)\/).*\.(png|jpg|webp)$/.test(name)?2000000:256000;
+ const text=/\.(mp3|png|jpg|mp4|webp|glb|pck|gz)$/.test(name)?'':content.toString();
+ const maxBytes=/^labs\/character-compare\/(?:model\/miao-playable\.glb|godot\/index\.(?:pck|wasm\.gz))$/.test(name)?25*1024*1024:/^labs\/character-compare\/(?:vendor\/three-runtime\.mjs|godot\/index\.js)$/.test(name)?1000000:/^labs\/blender-guitar\/.*\.webp$/.test(name)?3000000:/^character\/.*\.mp4$/.test(name)?8000000:/^(?:character\/|labs\/(?:orange-guitar|character-compare)\/).*\.(png|jpg|webp)$/.test(name)?2000000:256000;
  if(content.length>maxBytes||/\/Users\/|oauth_token|BEGIN PRIVATE KEY|farmcan(?:-seed)?\.pages\.dev/.test(text))throw Error('Invalid public file: '+name);
  await fs.mkdir(path.dirname(path.join(root,'dist',name)),{recursive:true});await fs.writeFile(path.join(root,'dist',name),content);files[name]=createHash('sha256').update(content).digest('hex');
 }

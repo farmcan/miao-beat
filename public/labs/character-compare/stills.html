@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Miao · 原版 / 3D版 / Godot版</title>
+  <style>
+    :root{color-scheme:light;--paper:#f5f3ed;--ink:#262821;--muted:#73776d;--line:#dedfd5;--green:#244d39;--orange:#dd7742}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1360px;margin:auto;padding:38px 32px 64px}a{color:inherit;text-underline-offset:4px}header{display:flex;justify-content:space-between;gap:24px;align-items:start;margin-bottom:28px}.wordmark{font-size:12px;letter-spacing:.16em;color:var(--green);font-weight:750}h1{font-size:clamp(25px,3.2vw,42px);line-height:1.25;letter-spacing:-.04em;margin:12px 0}header p{margin:0;color:var(--muted);max-width:760px}.date{white-space:nowrap;color:var(--muted);font-size:12px;padding-top:6px}.toolbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;padding:16px 0;border-top:1px solid var(--line)}.views{display:flex;gap:6px}button{font:inherit;cursor:pointer;border:1px solid var(--line);border-radius:30px;background:transparent;padding:9px 20px;min-height:44px;color:var(--ink)}button[aria-pressed=true]{background:var(--green);color:#fff;border-color:var(--green)}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--orange);outline-offset:3px}.zoom{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:13px}.zoom input{accent-color:var(--green);width:150px}.zoom output{width:45px;font-variant-numeric:tabular-nums}.scroll{overflow-x:auto;padding-bottom:10px;scroll-snap-type:x mandatory}.versions{display:grid;grid-template-columns:repeat(3,minmax(270px,1fr));gap:18px}.version{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;scroll-snap-align:start}.card-head{padding:17px 19px 12px;display:flex;align-items:baseline;justify-content:space-between;gap:10px}.card-head h2{font-size:20px;margin:0;line-height:1.3}.tag{font-size:11px;white-space:nowrap;border-radius:20px;padding:3px 9px;background:#edf1e9;color:#476044}.tag.work{background:#fff0e1;color:#975b25}.picture{aspect-ratio:1;background:#f2f0e9;overflow:hidden;position:relative}.picture img{width:100%;height:100%;object-fit:contain;display:block;transform-origin:center;transition:transform .25s ease;will-change:transform}.caption{padding:16px 19px 20px;border-top:1px solid #eeeeE8;min-height:158px}.caption p{margin:0 0 10px;font-size:14px}.caption .small{color:var(--muted);font-size:12px}.caption a{font-size:12px}.note{color:var(--muted);font-size:13px;margin:8px 0 30px}.section{padding:27px 0;border-top:1px solid var(--line)}.section h2{font-size:22px;margin:0 0 7px}.section>p{margin:0 0 18px;color:var(--muted)}.studies{display:grid;grid-template-columns:1fr 1fr;gap:18px}.study{margin:0;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}.study img{display:block;width:100%;aspect-ratio:1;object-fit:contain;background:#f0efe9}.study figcaption{padding:13px 17px;color:var(--muted);font-size:13px}.criteria{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.criteria h3{font-size:15px;margin:0 0 6px}.criteria p{margin:0;color:var(--muted);font-size:13px}.motion{background:#ebece3;border-radius:12px;padding:19px 22px;display:flex;gap:24px;justify-content:space-between;align-items:center}.motion p{margin:0;font-size:14px}.motion a{flex-shrink:0}footer{margin-top:24px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:20px}details{margin-top:15px;font-size:12px;color:var(--muted)}summary{cursor:pointer}details p{max-width:920px}
+    @media(max-width:650px){main{padding:24px 16px 40px}header{display:block}.date{margin-top:12px}.versions{grid-template-columns:repeat(3,83vw);gap:12px}.card-head{padding:15px}.caption{padding:14px 15px;min-height:166px}.zoom input{width:110px}.studies{grid-template-columns:1fr}.criteria{grid-template-columns:1fr 1fr}.motion{display:block}.motion a{display:inline-block;margin-top:12px}footer{display:block}button{padding:8px 16px}}
+    @media(prefers-reduced-motion:reduce){.picture img{transition:none}}
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div><div class="wordmark">MIAO / CHARACTER STUDIES</div><h1>原版 / 3D版 / Godot版</h1><p>原版是外观基准。下面是两条3D路线的实际静帧，方便直接看差别；制作中的问题一并列出。</p></div>
+    <div class="date">更新于 2026.10.29</div>
+  </header>
+  <div class="toolbar" aria-label="对比视图">
+    <div class="views"><button type="button" data-view="whole" aria-pressed="true">全身</button><button type="button" data-view="face" aria-pressed="false">看脸</button><button type="button" data-view="hand" aria-pressed="false">看手</button></div>
+    <label class="zoom">同步放大 <input id="zoom" type="range" min="100" max="320" step="10" value="100"><output id="zoom-value" for="zoom">100%</output></label>
+  </div>
+  <div class="scroll"><div class="versions">
+    <article class="version"><div class="card-head"><h2>原版</h2><span class="tag">线上形象基准</span></div><div class="picture"><img src="images/original.jpg" alt="原版：短绒橘猫抱着吉他，向右看" width="1254" height="1254"></div><div class="caption"><p>短圆的手、圆方脸、侧着看的眼神。新版本以这张图的可爱程度和质感为标准。</p><p class="small">完整原图，不是3D重建。</p><a href="images/original.jpg" target="_blank" rel="noopener">查看原尺寸 ↗</a></div></article>
+    <article class="version"><div class="card-head"><h2>Blender 3D版</h2><span class="tag work">彩色静帧 · 制作中</span></div><div class="picture"><img src="images/blender-color.png" alt="Blender当前彩色完整猫和吉他静帧" width="1024" height="1024"></div><div class="caption"><p>眼睛已换成更接近原版的深蓝湿润质感。手爪和短绒仍需修，整体尚未达到交付标准。</p><p class="small">这张彩色图还未合并下方的手部修正。</p><a href="images/blender-color.png" target="_blank" rel="noopener">查看原尺寸 ↗</a></div></article>
+    <article class="version"><div class="card-head"><h2>Godot版</h2><span class="tag work">实时引擎导入验证</span></div><div class="picture"><img src="images/godot-static.png" alt="Godot原生引擎实际显示的完整橘猫和吉他" width="1024" height="1024"></div><div class="caption"><p>完整角色已在引擎里跑通。原生毛发缺失，眼睛、木纹和光照有损失，当前仍偏塑料。</p><p class="small">使用较早的模型，尚未接入新的眼睛和手部修正。</p><a href="images/godot-static.png" target="_blank" rel="noopener">查看原尺寸 ↗</a></div></article>
+  </div></div>
+  <p class="note">三个视窗同步放大，不改动原始图片。手机可左右滑动。各版本的模型和材质阶段不同，不能据此直接比较性能。</p>
+  <section class="section"><h2>3D版：最新手部灰模</h2><p>后圆垫和尖折指片已经改善，指根接口仍有硬折线，三方评审还未放行。以下是结构检查图，尚未替换上方彩色版本。</p><div class="studies"><figure class="study"><img src="images/blender-gray-three-quarter.png" alt="最新完整灰模三分之四视图，猫爪与身体和吉他同一场景" width="768" height="768" loading="lazy"><figcaption>当前手部结构灰模</figcaption></figure><figure class="study"><img src="images/blender-hand-gray.png" alt="按弦爪灰模内部近景，可见仍待修复的指根横折线" width="768" height="768" loading="lazy"><figcaption>手部结构近景 · 与原图并非相同机位</figcaption></figure></div></section>
+  <section class="section"><h2>动作对比</h2><div class="motion"><p>Blender、Godot目前还没有通过验收的新弹奏片段。手指是否清楚、连续按键是否自然、头部是否跟随，都还需要实际视频评审。</p><a href="/?instrument=guitar" target="_blank" rel="noopener">打开原版试玩 ↗</a></div></section>
+  <section class="section"><h2>放行标准</h2><div class="criteria"><div><h3>像原来的猫</h3><p>比例、圆脸和眼神接近原图，可爱，有自己的性格。</p></div><div><h3>细致的质感</h3><p>短绒细密，边缘柔和；塑料感、毛刺和粗糙接缝都要修。</p></div><div><h3>清楚的弹奏</h3><p>一次输入有一次清楚动作，快连按仍能看见右手弹奏。</p></div><div><h3>自然的微动作</h3><p>头、眼和耳朵有克制的响应，不机械点头，不打断弹奏。</p></div></div><details><summary>查看本页证据范围</summary><p>页面使用实际原图、Blender渲染和Godot原生GPU截图。C20仅眼部静态窄关通过；C23手部仍有接口P0；Godot仅静态迁移验证。本页不宣称整体角色、动作、手机性能或视频导出已完成。<a href="evidence.json">查看图片来源与校验值</a>。</p></details></section>
+  <footer><span>Miao · 制作对照，持续更新</span><span>本页不加载访问计数或外部服务</span></footer>
+</main>
+<script>
+  const images=[...document.querySelectorAll('.picture img')],slider=document.querySelector('#zoom'),output=document.querySelector('#zoom-value');
+  const presets={whole:{x:.5,y:.5,zoom:100},face:{x:.5,y:.22,zoom:280},hand:{x:.77,y:.46,zoom:270}};let focus=presets.whole;
+  function draw(){const z=Number(slider.value)/100;output.value=slider.value+'%';for(const image of images)image.style.transform=`translate(${(.5-focus.x)*z*100}%,${(.5-focus.y)*z*100}%) scale(${z})`;}
+  for(const button of document.querySelectorAll('[data-view]'))button.addEventListener('click',()=>{focus=presets[button.dataset.view];slider.value=focus.zoom;for(const peer of document.querySelectorAll('[data-view]'))peer.setAttribute('aria-pressed',String(peer===button));draw();});
+  slider.addEventListener('input',draw);draw();
+</script>
+</body>
+</html>

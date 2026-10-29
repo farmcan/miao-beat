@@ -1,0 +1,1660 @@
+{
+  "stage": "interactive-research-LOD-not-art-pass",
+  "source": "artifacts/character-eye-wet-iris-c20/miao-c20-wet-iris.blend",
+  "source_sha256": "5f66fb066a49dff3d856e70a70d374e58eb1b1cca76fc42404d2b9246c2116c2",
+  "source_unchanged": true,
+  "blender": "5.2.3 LTS",
+  "script_sha256": "51943e10c29b896a6a6206484b82929ff6cbc6c17a7be17fdda56f07bf610a3c",
+  "glb_sha256": "1a384c0a9a13ed60710469b7d9a4de646a8599fe3dcff5ef85d1f42c825cedf9",
+  "bytes": 7483568,
+  "targetNames": [
+    "Pluck",
+    "FretLow",
+    "FretHigh",
+    "HeadTilt",
+    "Lift"
+  ],
+  "geometry": [
+    {
+      "object": "Miao / continuous pear and rounded-square face",
+      "vertices_before": 609383,
+      "vertices_after": 73129,
+      "triangles": 146250
+    },
+    {
+      "object": "Face / thick curved brow",
+      "vertices_before": 90,
+      "vertices_after": 90,
+      "triangles": 152
+    },
+    {
+      "object": "Face / thick curved brow.001",
+      "vertices_before": 90,
+      "vertices_after": 90,
+      "triangles": 152
+    },
+    {
+      "object": "Face / smile stem",
+      "vertices_before": 594,
+      "vertices_after": 594,
+      "triangles": 1160
+    },
+    {
+      "object": "Face / smile",
+      "vertices_before": 2322,
+      "vertices_after": 2322,
+      "triangles": 4616
+    },
+    {
+      "object": "Guitar / rosewood body",
+      "vertices_before": 1120,
+      "vertices_after": 1120,
+      "triangles": 2236
+    },
+    {
+      "object": "Guitar / spruce soundboard",
+      "vertices_before": 1120,
+      "vertices_after": 1120,
+      "triangles": 2236
+    },
+    {
+      "object": "Guitar / continuous binding",
+      "vertices_before": 3378,
+      "vertices_after": 3378,
+      "triangles": 6728
+    },
+    {
+      "object": "Guitar / continuous binding.001",
+      "vertices_before": 3378,
+      "vertices_after": 3378,
+      "triangles": 6728
+    },
+    {
+      "object": "Guitar / rosette ring",
+      "vertices_before": 2322,
+      "vertices_after": 2322,
+      "triangles": 4616
+    },
+    {
+      "object": "Guitar / rosette ring.001",
+      "vertices_before": 2322,
+      "vertices_after": 2322,
+      "triangles": 4616
+    },
+    {
+      "object": "Guitar / rosette ring.002",
+      "vertices_before": 2322,
+      "vertices_after": 2322,
+      "triangles": 4616
+    },
+    {
+      "object": "Guitar / rosette ring.003",
+      "vertices_before": 2322,
+      "vertices_after": 2322,
+      "triangles": 4616
+    },
+    {
+      "object": "Guitar / tuner shaft",
+      "vertices_before": 42,
+      "vertices_after": 42,
+      "triangles": 56
+    },
+    {
+      "object": "Guitar / tuner shaft.001",
+      "vertices_before": 42,
+      "vertices_after": 42,
+      "triangles": 56
+    },
+    {
+      "object": "Guitar / tuner shaft.002",
+      "vertices_before": 42,
+      "vertices_after": 42,
+      "triangles": 56
+    },
+    {
+      "object": "Guitar / tuner shaft.003",
+      "vertices_before": 42,
+      "vertices_after": 42,
+      "triangles": 56
+    },
+    {
+      "object": "Guitar / tuner shaft.004",
+      "vertices_before": 42,
+      "vertices_after": 42,
+      "triangles": 56
+    },
+    {
+      "object": "Guitar / tuner shaft.005",
+      "vertices_before": 42,
+      "vertices_after": 42,
+      "triangles": 56
+    },
+    {
+      "object": "Guitar / silver fret",
+      "vertices_before": 42,
+      "vertices_after": 42,
+      "triangles": 56
+    },
+    {
+      "object": "Guitar / silver fret.001",
+      "vertices_before": 42,
+      "vertices_after": 42,
+      "triangles": 56
+    },
+    {
+      "object": "Guitar / silver fret.002",
+      "vertices_before": 42,
+      "vertices_after": 42,
+      "triangles": 56
+    },
+    {
+      "object": "Guitar / silver fret.003",
+      "vertices_before": 42,
+      "vertices_after": 42,
+      "triangles": 56
+    },
+    {
+      "object": "Guitar / silver fret.004",
+      "vertices_before": 42,
+      "vertices_after": 42,
+      "triangles": 56
+    },
+    {
+      "object": "Guitar / silver fret.005",
+      "vertices_before": 42,
+      "vertices_after": 42,
+      "triangles": 56
+    },
+    {
+      "object": "Guitar / silver fret.006",
+      "vertices_before": 42,
+      "vertices_after": 42,
+      "triangles": 56
+    },
+    {
+      "object": "Guitar / silver fret.007",
+      "vertices_before": 42,
+      "vertices_after": 42,
+      "triangles": 56
+    },
+    {
+      "object": "Guitar / silver fret.008",
+      "vertices_before": 42,
+      "vertices_after": 42,
+      "triangles": 56
+    },
+    {
+      "object": "Guitar / silver fret.009",
+      "vertices_before": 42,
+      "vertices_after": 42,
+      "triangles": 56
+    },
+    {
+      "object": "Guitar / silver fret.010",
+      "vertices_before": 42,
+      "vertices_after": 42,
+      "triangles": 56
+    },
+    {
+      "object": "Guitar / silver fret.011",
+      "vertices_before": 42,
+      "vertices_after": 42,
+      "triangles": 56
+    },
+    {
+      "object": "Guitar / silver fret.012",
+      "vertices_before": 42,
+      "vertices_after": 42,
+      "triangles": 56
+    },
+    {
+      "object": "Guitar / string 1",
+      "vertices_before": 90,
+      "vertices_after": 90,
+      "triangles": 152
+    },
+    {
+      "object": "Guitar / string 2",
+      "vertices_before": 90,
+      "vertices_after": 90,
+      "triangles": 152
+    },
+    {
+      "object": "Guitar / string 3",
+      "vertices_before": 90,
+      "vertices_after": 90,
+      "triangles": 152
+    },
+    {
+      "object": "Guitar / string 4",
+      "vertices_before": 90,
+      "vertices_after": 90,
+      "triangles": 152
+    },
+    {
+      "object": "Guitar / string 5",
+      "vertices_before": 90,
+      "vertices_after": 90,
+      "triangles": 152
+    },
+    {
+      "object": "Guitar / string 6",
+      "vertices_before": 90,
+      "vertices_after": 90,
+      "triangles": 152
+    },
+    {
+      "object": "Miao / fine whisker",
+      "vertices_before": 54,
+      "vertices_after": 54,
+      "triangles": 96
+    },
+    {
+      "object": "Miao / fine whisker.001",
+      "vertices_before": 54,
+      "vertices_after": 54,
+      "triangles": 96
+    },
+    {
+      "object": "Miao / fine whisker.002",
+      "vertices_before": 54,
+      "vertices_after": 54,
+      "triangles": 96
+    },
+    {
+      "object": "Miao / fine whisker.003",
+      "vertices_before": 54,
+      "vertices_after": 54,
+      "triangles": 96
+    },
+    {
+      "object": "C6 / sclera L",
+      "vertices_before": 4610,
+      "vertices_after": 4610,
+      "triangles": 9216
+    },
+    {
+      "object": "C6 / iris L",
+      "vertices_before": 2305,
+      "vertices_after": 2305,
+      "triangles": 4512
+    },
+    {
+      "object": "C6 / upper lid L",
+      "vertices_before": 585,
+      "vertices_after": 585,
+      "triangles": 1024
+    },
+    {
+      "object": "C6 / lower lid L",
+      "vertices_before": 585,
+      "vertices_after": 585,
+      "triangles": 1024
+    },
+    {
+      "object": "C6 / sclera R",
+      "vertices_before": 4610,
+      "vertices_after": 4610,
+      "triangles": 9216
+    },
+    {
+      "object": "C6 / iris R",
+      "vertices_before": 2305,
+      "vertices_after": 2305,
+      "triangles": 4512
+    },
+    {
+      "object": "C6 / upper lid R",
+      "vertices_before": 585,
+      "vertices_after": 585,
+      "triangles": 1024
+    },
+    {
+      "object": "C6 / lower lid R",
+      "vertices_before": 585,
+      "vertices_after": 585,
+      "triangles": 1024
+    },
+    {
+      "object": "C7 / clear cornea L",
+      "vertices_before": 4610,
+      "vertices_after": 4610,
+      "triangles": 9216
+    },
+    {
+      "object": "C7 / clear cornea R",
+      "vertices_before": 4610,
+      "vertices_after": 4610,
+      "triangles": 9216
+    },
+    {
+      "object": "Face / rounded triangular nose",
+      "vertices_before": 4226,
+      "vertices_after": 4226,
+      "triangles": 8448
+    },
+    {
+      "object": "Guitar / soundhole chamber",
+      "vertices_before": 192,
+      "vertices_after": 192,
+      "triangles": 380
+    },
+    {
+      "object": "Guitar / neck",
+      "vertices_before": 152,
+      "vertices_after": 152,
+      "triangles": 300
+    },
+    {
+      "object": "Guitar / ebony fretboard",
+      "vertices_before": 152,
+      "vertices_after": 152,
+      "triangles": 300
+    },
+    {
+      "object": "Guitar / bridge",
+      "vertices_before": 152,
+      "vertices_after": 152,
+      "triangles": 300
+    },
+    {
+      "object": "Guitar / bridge saddle",
+      "vertices_before": 152,
+      "vertices_after": 152,
+      "triangles": 300
+    },
+    {
+      "object": "Guitar / nut",
+      "vertices_before": 152,
+      "vertices_after": 152,
+      "triangles": 300
+    },
+    {
+      "object": "Guitar / headstock",
+      "vertices_before": 152,
+      "vertices_after": 152,
+      "triangles": 300
+    },
+    {
+      "object": "Guitar / headstock dark slot",
+      "vertices_before": 152,
+      "vertices_after": 152,
+      "triangles": 300
+    },
+    {
+      "object": "Guitar / ivory tuning peg",
+      "vertices_before": 362,
+      "vertices_after": 362,
+      "triangles": 720
+    },
+    {
+      "object": "Guitar / ivory tuning peg.001",
+      "vertices_before": 362,
+      "vertices_after": 362,
+      "triangles": 720
+    },
+    {
+      "object": "Guitar / ivory tuning peg.002",
+      "vertices_before": 362,
+      "vertices_after": 362,
+      "triangles": 720
+    },
+    {
+      "object": "Guitar / headstock dark slot.001",
+      "vertices_before": 152,
+      "vertices_after": 152,
+      "triangles": 300
+    },
+    {
+      "object": "Guitar / ivory tuning peg.003",
+      "vertices_before": 362,
+      "vertices_after": 362,
+      "triangles": 720
+    },
+    {
+      "object": "Guitar / ivory tuning peg.004",
+      "vertices_before": 362,
+      "vertices_after": 362,
+      "triangles": 720
+    },
+    {
+      "object": "Guitar / ivory tuning peg.005",
+      "vertices_before": 362,
+      "vertices_after": 362,
+      "triangles": 720
+    },
+    {
+      "object": "Guitar / bridge tie",
+      "vertices_before": 178,
+      "vertices_after": 178,
+      "triangles": 352
+    },
+    {
+      "object": "Guitar / bridge tie.001",
+      "vertices_before": 178,
+      "vertices_after": 178,
+      "triangles": 352
+    },
+    {
+      "object": "Guitar / bridge tie.002",
+      "vertices_before": 178,
+      "vertices_after": 178,
+      "triangles": 352
+    },
+    {
+      "object": "Guitar / bridge tie.003",
+      "vertices_before": 178,
+      "vertices_after": 178,
+      "triangles": 352
+    },
+    {
+      "object": "Guitar / bridge tie.004",
+      "vertices_before": 178,
+      "vertices_after": 178,
+      "triangles": 352
+    },
+    {
+      "object": "Guitar / bridge tie.005",
+      "vertices_before": 178,
+      "vertices_after": 178,
+      "triangles": 352
+    }
+  ],
+  "morphs": [
+    {
+      "object": "Miao / continuous pear and rounded-square face",
+      "vertices": 73129,
+      "targets": {
+        "Pluck": {
+          "nonzero_vertices": 9541,
+          "max_displacement": 0.14060168221628408
+        },
+        "FretLow": {
+          "nonzero_vertices": 6164,
+          "max_displacement": 0.105
+        },
+        "FretHigh": {
+          "nonzero_vertices": 6164,
+          "max_displacement": 0.105
+        },
+        "HeadTilt": {
+          "nonzero_vertices": 10595,
+          "max_displacement": 0.05283886746541597
+        },
+        "Lift": {
+          "nonzero_vertices": 9541,
+          "max_displacement": 0.05999999865889549
+        }
+      }
+    },
+    {
+      "object": "Face / thick curved brow",
+      "vertices": 90,
+      "targets": {
+        "Pluck": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretLow": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretHigh": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "HeadTilt": {
+          "nonzero_vertices": 90,
+          "max_displacement": 0.03254993018626091
+        },
+        "Lift": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        }
+      }
+    },
+    {
+      "object": "Face / thick curved brow.001",
+      "vertices": 90,
+      "targets": {
+        "Pluck": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretLow": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretHigh": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "HeadTilt": {
+          "nonzero_vertices": 90,
+          "max_displacement": 0.032673164799869946
+        },
+        "Lift": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        }
+      }
+    },
+    {
+      "object": "Face / smile stem",
+      "vertices": 594,
+      "targets": {
+        "Pluck": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretLow": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretHigh": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "HeadTilt": {
+          "nonzero_vertices": 594,
+          "max_displacement": 0.012074628904319758
+        },
+        "Lift": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        }
+      }
+    },
+    {
+      "object": "Face / smile",
+      "vertices": 2322,
+      "targets": {
+        "Pluck": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretLow": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretHigh": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "HeadTilt": {
+          "nonzero_vertices": 2322,
+          "max_displacement": 0.009775245185298494
+        },
+        "Lift": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        }
+      }
+    },
+    {
+      "object": "Miao / fine whisker",
+      "vertices": 54,
+      "targets": {
+        "Pluck": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretLow": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretHigh": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "HeadTilt": {
+          "nonzero_vertices": 54,
+          "max_displacement": 0.042471635444219384
+        },
+        "Lift": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        }
+      }
+    },
+    {
+      "object": "Miao / fine whisker.001",
+      "vertices": 54,
+      "targets": {
+        "Pluck": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretLow": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretHigh": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "HeadTilt": {
+          "nonzero_vertices": 54,
+          "max_displacement": 0.04181289479924592
+        },
+        "Lift": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        }
+      }
+    },
+    {
+      "object": "Miao / fine whisker.002",
+      "vertices": 54,
+      "targets": {
+        "Pluck": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretLow": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretHigh": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "HeadTilt": {
+          "nonzero_vertices": 54,
+          "max_displacement": 0.04416185977443854
+        },
+        "Lift": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        }
+      }
+    },
+    {
+      "object": "Miao / fine whisker.003",
+      "vertices": 54,
+      "targets": {
+        "Pluck": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretLow": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretHigh": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "HeadTilt": {
+          "nonzero_vertices": 54,
+          "max_displacement": 0.043698207915452224
+        },
+        "Lift": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        }
+      }
+    },
+    {
+      "object": "C6 / sclera L",
+      "vertices": 4610,
+      "targets": {
+        "Pluck": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretLow": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretHigh": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "HeadTilt": {
+          "nonzero_vertices": 4610,
+          "max_displacement": 0.02730325917374634
+        },
+        "Lift": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        }
+      }
+    },
+    {
+      "object": "C6 / iris L",
+      "vertices": 2305,
+      "targets": {
+        "Pluck": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretLow": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretHigh": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "HeadTilt": {
+          "nonzero_vertices": 2305,
+          "max_displacement": 0.023330571123084287
+        },
+        "Lift": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        }
+      }
+    },
+    {
+      "object": "C6 / upper lid L",
+      "vertices": 585,
+      "targets": {
+        "Pluck": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretLow": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretHigh": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "HeadTilt": {
+          "nonzero_vertices": 585,
+          "max_displacement": 0.029283925208075268
+        },
+        "Lift": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        }
+      }
+    },
+    {
+      "object": "C6 / lower lid L",
+      "vertices": 585,
+      "targets": {
+        "Pluck": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretLow": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretHigh": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "HeadTilt": {
+          "nonzero_vertices": 585,
+          "max_displacement": 0.02692361593811252
+        },
+        "Lift": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        }
+      }
+    },
+    {
+      "object": "C6 / sclera R",
+      "vertices": 4610,
+      "targets": {
+        "Pluck": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretLow": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretHigh": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "HeadTilt": {
+          "nonzero_vertices": 4610,
+          "max_displacement": 0.028083043522318784
+        },
+        "Lift": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        }
+      }
+    },
+    {
+      "object": "C6 / iris R",
+      "vertices": 2305,
+      "targets": {
+        "Pluck": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretLow": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretHigh": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "HeadTilt": {
+          "nonzero_vertices": 2305,
+          "max_displacement": 0.026864842230522212
+        },
+        "Lift": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        }
+      }
+    },
+    {
+      "object": "C6 / upper lid R",
+      "vertices": 585,
+      "targets": {
+        "Pluck": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretLow": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretHigh": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "HeadTilt": {
+          "nonzero_vertices": 585,
+          "max_displacement": 0.03003521017970042
+        },
+        "Lift": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        }
+      }
+    },
+    {
+      "object": "C6 / lower lid R",
+      "vertices": 585,
+      "targets": {
+        "Pluck": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretLow": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretHigh": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "HeadTilt": {
+          "nonzero_vertices": 585,
+          "max_displacement": 0.027685795835606118
+        },
+        "Lift": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        }
+      }
+    },
+    {
+      "object": "C7 / clear cornea L",
+      "vertices": 4610,
+      "targets": {
+        "Pluck": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretLow": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretHigh": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "HeadTilt": {
+          "nonzero_vertices": 4610,
+          "max_displacement": 0.02329744130774952
+        },
+        "Lift": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        }
+      }
+    },
+    {
+      "object": "C7 / clear cornea R",
+      "vertices": 4610,
+      "targets": {
+        "Pluck": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretLow": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretHigh": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "HeadTilt": {
+          "nonzero_vertices": 4610,
+          "max_displacement": 0.02683470509277937
+        },
+        "Lift": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        }
+      }
+    },
+    {
+      "object": "Face / rounded triangular nose",
+      "vertices": 4226,
+      "targets": {
+        "Pluck": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretLow": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "FretHigh": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        },
+        "HeadTilt": {
+          "nonzero_vertices": 4226,
+          "max_displacement": 0.014816461123255112
+        },
+        "Lift": {
+          "nonzero_vertices": 0,
+          "max_displacement": 0.0
+        }
+      }
+    }
+  ],
+  "exported_morphs": [
+    {
+      "name": "C6 / iris L.001",
+      "targetNames": [
+        "Pluck",
+        "FretLow",
+        "FretHigh",
+        "HeadTilt",
+        "Lift"
+      ],
+      "primitive_target_counts": [
+        5
+      ]
+    },
+    {
+      "name": "C6 / iris R.001",
+      "targetNames": [
+        "Pluck",
+        "FretLow",
+        "FretHigh",
+        "HeadTilt",
+        "Lift"
+      ],
+      "primitive_target_counts": [
+        5
+      ]
+    },
+    {
+      "name": "C6 / lower lid L.001",
+      "targetNames": [
+        "Pluck",
+        "FretLow",
+        "FretHigh",
+        "HeadTilt",
+        "Lift"
+      ],
+      "primitive_target_counts": [
+        5
+      ]
+    },
+    {
+      "name": "C6 / lower lid R.001",
+      "targetNames": [
+        "Pluck",
+        "FretLow",
+        "FretHigh",
+        "HeadTilt",
+        "Lift"
+      ],
+      "primitive_target_counts": [
+        5
+      ]
+    },
+    {
+      "name": "C6 / sclera L.001",
+      "targetNames": [
+        "Pluck",
+        "FretLow",
+        "FretHigh",
+        "HeadTilt",
+        "Lift"
+      ],
+      "primitive_target_counts": [
+        5
+      ]
+    },
+    {
+      "name": "C6 / sclera R.001",
+      "targetNames": [
+        "Pluck",
+        "FretLow",
+        "FretHigh",
+        "HeadTilt",
+        "Lift"
+      ],
+      "primitive_target_counts": [
+        5
+      ]
+    },
+    {
+      "name": "C6 / upper lid L.001",
+      "targetNames": [
+        "Pluck",
+        "FretLow",
+        "FretHigh",
+        "HeadTilt",
+        "Lift"
+      ],
+      "primitive_target_counts": [
+        5
+      ]
+    },
+    {
+      "name": "C6 / upper lid R.001",
+      "targetNames": [
+        "Pluck",
+        "FretLow",
+        "FretHigh",
+        "HeadTilt",
+        "Lift"
+      ],
+      "primitive_target_counts": [
+        5
+      ]
+    },
+    {
+      "name": "Cornea L.001",
+      "targetNames": [
+        "Pluck",
+        "FretLow",
+        "FretHigh",
+        "HeadTilt",
+        "Lift"
+      ],
+      "primitive_target_counts": [
+        5
+      ]
+    },
+    {
+      "name": "Cornea R.001",
+      "targetNames": [
+        "Pluck",
+        "FretLow",
+        "FretHigh",
+        "HeadTilt",
+        "Lift"
+      ],
+      "primitive_target_counts": [
+        5
+      ]
+    },
+    {
+      "name": "C14 rounded nose pillow.001",
+      "targetNames": [
+        "Pluck",
+        "FretLow",
+        "FretHigh",
+        "HeadTilt",
+        "Lift"
+      ],
+      "primitive_target_counts": [
+        5
+      ]
+    },
+    {
+      "name": "Face / smile stem / sampled inlay",
+      "targetNames": [
+        "Pluck",
+        "FretLow",
+        "FretHigh",
+        "HeadTilt",
+        "Lift"
+      ],
+      "primitive_target_counts": [
+        5
+      ]
+    },
+    {
+      "name": "Face / smile / sampled inlay",
+      "targetNames": [
+        "Pluck",
+        "FretLow",
+        "FretHigh",
+        "HeadTilt",
+        "Lift"
+      ],
+      "primitive_target_counts": [
+        5
+      ]
+    },
+    {
+      "name": "Face / thick curved brow",
+      "targetNames": [
+        "Pluck",
+        "FretLow",
+        "FretHigh",
+        "HeadTilt",
+        "Lift"
+      ],
+      "primitive_target_counts": [
+        5
+      ]
+    },
+    {
+      "name": "Face / thick curved brow.001",
+      "targetNames": [
+        "Pluck",
+        "FretLow",
+        "FretHigh",
+        "HeadTilt",
+        "Lift"
+      ],
+      "primitive_target_counts": [
+        5
+      ]
+    },
+    {
+      "name": "Miao / continuous pear and rounded-square face.002",
+      "targetNames": [
+        "Pluck",
+        "FretLow",
+        "FretHigh",
+        "HeadTilt",
+        "Lift"
+      ],
+      "primitive_target_counts": [
+        5
+      ]
+    },
+    {
+      "name": "Whisker",
+      "targetNames": [
+        "Pluck",
+        "FretLow",
+        "FretHigh",
+        "HeadTilt",
+        "Lift"
+      ],
+      "primitive_target_counts": [
+        5
+      ]
+    },
+    {
+      "name": "Whisker.001",
+      "targetNames": [
+        "Pluck",
+        "FretLow",
+        "FretHigh",
+        "HeadTilt",
+        "Lift"
+      ],
+      "primitive_target_counts": [
+        5
+      ]
+    },
+    {
+      "name": "Whisker.002",
+      "targetNames": [
+        "Pluck",
+        "FretLow",
+        "FretHigh",
+        "HeadTilt",
+        "Lift"
+      ],
+      "primitive_target_counts": [
+        5
+      ]
+    },
+    {
+      "name": "Whisker.003",
+      "targetNames": [
+        "Pluck",
+        "FretLow",
+        "FretHigh",
+        "HeadTilt",
+        "Lift"
+      ],
+      "primitive_target_counts": [
+        5
+      ]
+    }
+  ],
+  "bakes": [
+    {
+      "object": "Miao / continuous pear and rounded-square face",
+      "point_colors": 73129,
+      "rgb_min": [
+        0.6472939014434814,
+        0.06738034316471644,
+        0.0059169311015332335
+      ],
+      "rgb_max": [
+        0.9695309448242188,
+        0.701850414276123,
+        0.37549141475132536
+      ]
+    },
+    {
+      "object": "Guitar / rosewood body",
+      "point_colors": 1120,
+      "rgb_min": [
+        0.1607274611790975,
+        0.03696731477975845,
+        0.008036373804012934
+      ],
+      "rgb_max": [
+        0.20233741402626038,
+        0.046537600457668304,
+        0.01011686958372593
+      ]
+    },
+    {
+      "object": "Guitar / spruce soundboard",
+      "point_colors": 1120,
+      "rgb_min": [
+        0.5779141783714294,
+        0.33952459692955017,
+        0.13725462555885315
+      ],
+      "rgb_max": [
+        0.7937184969584147,
+        0.4663095871607463,
+        0.18850813309351602
+      ]
+    },
+    {
+      "object": "Guitar / rosette ring",
+      "point_colors": 2322,
+      "rgb_min": [
+        0.15738889575004578,
+        0.03619944304227829,
+        0.007869444787502289
+      ],
+      "rgb_max": [
+        0.2028781622648239,
+        0.046661972999572754,
+        0.010143907740712166
+      ]
+    },
+    {
+      "object": "Guitar / rosette ring.001",
+      "point_colors": 2322,
+      "rgb_min": [
+        0.1576855182647705,
+        0.03626767173409462,
+        0.00788427609950304
+      ],
+      "rgb_max": [
+        0.20070362091064453,
+        0.04616182669997215,
+        0.010035180486738682
+      ]
+    },
+    {
+      "object": "Guitar / rosette ring.002",
+      "point_colors": 2322,
+      "rgb_min": [
+        0.15958866477012634,
+        0.036705393344163895,
+        0.007979433983564377
+      ],
+      "rgb_max": [
+        0.20535242557525635,
+        0.04723105579614639,
+        0.010267619974911213
+      ]
+    },
+    {
+      "object": "Guitar / rosette ring.003",
+      "point_colors": 2322,
+      "rgb_min": [
+        0.16129684448242188,
+        0.037098273634910583,
+        0.008064841851592064
+      ],
+      "rgb_max": [
+        0.20482049882411957,
+        0.047108713537454605,
+        0.010241024196147919
+      ]
+    },
+    {
+      "object": "C6 / iris L",
+      "point_colors": 2305,
+      "rgb_min": [
+        0.0023484285920858383,
+        0.010567928664386272,
+        0.017026105895638466
+      ],
+      "rgb_max": [
+        0.009818432852625847,
+        0.046944379806518555,
+        0.07414962351322174
+      ]
+    },
+    {
+      "object": "C6 / upper lid L",
+      "point_colors": 585,
+      "rgb_min": [
+        0.9695307016372681,
+        0.19779683649539948,
+        0.020034991204738617
+      ],
+      "rgb_max": [
+        0.9695307016372681,
+        0.19779683649539948,
+        0.020034994930028915
+      ]
+    },
+    {
+      "object": "C6 / lower lid L",
+      "point_colors": 585,
+      "rgb_min": [
+        0.9695307016372681,
+        0.19779683649539948,
+        0.020034991204738617
+      ],
+      "rgb_max": [
+        0.9695307016372681,
+        0.701850414276123,
+        0.366658478975296
+      ]
+    },
+    {
+      "object": "C6 / iris R",
+      "point_colors": 2305,
+      "rgb_min": [
+        0.002348280046135187,
+        0.010567259974777699,
+        0.01702502742409706
+      ],
+      "rgb_max": [
+        0.009819809347391129,
+        0.046950966119766235,
+        0.07416001707315445
+      ]
+    },
+    {
+      "object": "C6 / upper lid R",
+      "point_colors": 585,
+      "rgb_min": [
+        0.9606626033782959,
+        0.1928587406873703,
+        0.019654124975204468
+      ],
+      "rgb_max": [
+        0.9695307016372681,
+        0.19779683649539948,
+        0.020034994930028915
+      ]
+    },
+    {
+      "object": "C6 / lower lid R",
+      "point_colors": 585,
+      "rgb_min": [
+        0.9695307016372681,
+        0.19779683649539948,
+        0.020034991204738617
+      ],
+      "rgb_max": [
+        0.9695307016372681,
+        0.701850414276123,
+        0.366658478975296
+      ]
+    },
+    {
+      "object": "C7 / clear cornea L",
+      "point_colors": 4610,
+      "rgb_min": [
+        0.0022298539988696575,
+        0.010034343227744102,
+        0.01616644114255905
+      ],
+      "rgb_max": [
+        0.00932583212852478,
+        0.04458913207054138,
+        0.07042945921421051
+      ]
+    },
+    {
+      "object": "C7 / clear cornea R",
+      "point_colors": 4610,
+      "rgb_min": [
+        0.0022297007963061333,
+        0.010033654049038887,
+        0.01616533100605011
+      ],
+      "rgb_max": [
+        0.009327597916126251,
+        0.044597577303647995,
+        0.070442795753479
+      ]
+    },
+    {
+      "object": "Guitar / neck",
+      "point_colors": 152,
+      "rgb_min": [
+        0.16454605758190155,
+        0.03784559667110443,
+        0.008227303624153137
+      ],
+      "rgb_max": [
+        0.1991633176803589,
+        0.04580756276845932,
+        0.009958166629076004
+      ]
+    },
+    {
+      "object": "Guitar / ebony fretboard",
+      "point_colors": 152,
+      "rgb_min": [
+        0.020367566496133804,
+        0.006789187900722027,
+        0.0025459458120167255
+      ],
+      "rgb_max": [
+        0.023330196738243103,
+        0.007776732090860605,
+        0.002916274592280388
+      ]
+    },
+    {
+      "object": "Guitar / bridge",
+      "point_colors": 152,
+      "rgb_min": [
+        0.16326557099819183,
+        0.03755108267068863,
+        0.008163277991116047
+      ],
+      "rgb_max": [
+        0.1969665139913559,
+        0.04530230164527893,
+        0.009848326444625854
+      ]
+    },
+    {
+      "object": "Guitar / headstock",
+      "point_colors": 152,
+      "rgb_min": [
+        0.16838747262954712,
+        0.038729116320610046,
+        0.008419373072683811
+      ],
+      "rgb_max": [
+        0.19546063244342804,
+        0.04495594650506973,
+        0.009773031808435917
+      ]
+    },
+    {
+      "object": "Guitar / bridge tie",
+      "point_colors": 178,
+      "rgb_min": [
+        0.16532906889915466,
+        0.03802568465471268,
+        0.008266453631222248
+      ],
+      "rgb_max": [
+        0.19797322154045105,
+        0.045533839613199234,
+        0.009898661635816097
+      ]
+    },
+    {
+      "object": "Guitar / bridge tie.001",
+      "point_colors": 178,
+      "rgb_min": [
+        0.16473616659641266,
+        0.03788931667804718,
+        0.008236808702349663
+      ],
+      "rgb_max": [
+        0.19566690921783447,
+        0.045003391802310944,
+        0.009783346205949783
+      ]
+    },
+    {
+      "object": "Guitar / bridge tie.002",
+      "point_colors": 178,
+      "rgb_min": [
+        0.1691523790359497,
+        0.03890504688024521,
+        0.008457619696855545
+      ],
+      "rgb_max": [
+        0.19926372170448303,
+        0.04583065211772919,
+        0.009963187389075756
+      ]
+    },
+    {
+      "object": "Guitar / bridge tie.003",
+      "point_colors": 178,
+      "rgb_min": [
+        0.16072358191013336,
+        0.03696642071008682,
+        0.008036179468035698
+      ],
+      "rgb_max": [
+        0.194351464509964,
+        0.04470083862543106,
+        0.00971757248044014
+      ]
+    },
+    {
+      "object": "Guitar / bridge tie.004",
+      "point_colors": 178,
+      "rgb_min": [
+        0.17328044772148132,
+        0.0398545041680336,
+        0.008664023131132126
+      ],
+      "rgb_max": [
+        0.1956612914800644,
+        0.04500209912657738,
+        0.00978306494653225
+      ]
+    },
+    {
+      "object": "Guitar / bridge tie.005",
+      "point_colors": 178,
+      "rgb_min": [
+        0.16175007820129395,
+        0.03720251843333244,
+        0.008087504655122757
+      ],
+      "rgb_max": [
+        0.1959972232580185,
+        0.04507935792207718,
+        0.009799860417842865
+      ]
+    }
+  ],
+  "triangles": 258726,
+  "license": {
+    "source_art": "Miao project original scene; no third-party stock model imported",
+    "exporter": "Project original conversion script, follows local vertex-color bake workflow",
+    "runtime_attribution": "Three/Godot runtime licenses must be maintained separately by renderer adapters"
+  },
+  "limits": [
+    "Research LOD 12 percent is an export budget conversion, not accepted model refinement.",
+    "Native hair excluded; procedural diffuse color baked to POINT COLOR_0, surface shader not fully equivalent.",
+    "Paws/head use localized continuous-skin morph deformations, no collision solver, finger rig or physical string validation.",
+    "Old silhouette/paw/fur P0 visual issues remain; not production character art acceptance.",
+    "GLB contains geometry and targets only, no audio or authored action clip. Browser/Godot runtime acceptance is separate."
+  ],
+  "seconds_before_renders": 39.03900194168091,
+  "render_evidence": [
+    {
+      "file": "artifacts/interactive-compare/start.png",
+      "weights": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "86f10dddc876a79f717ad0d9ee7ebc2728911035338d329f111f128b4f2a0e87"
+    },
+    {
+      "file": "artifacts/interactive-compare/contact.png",
+      "weights": [
+        1,
+        0.45,
+        0,
+        0.55,
+        0
+      ],
+      "sha256": "ba271364c4b218e22bd01f128f2a1cb6f0a2aa729fdc6bca055b58959c132c27"
+    },
+    {
+      "file": "artifacts/interactive-compare/end.png",
+      "weights": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "6bd1097f63006e036f02ff1feda4b9c6b04b6edc8aa2fa890a0d3037121aa361"
+    }
+  ],
+  "seconds": 49.75261402130127,
+  "body_geometry_audit": {
+    "tool": "scenario-blender-expert/scripts/bx_audit.py deliverable(game)",
+    "evidence": "artifacts/interactive-compare/body-deliverable-audit.json",
+    "pass": true,
+    "errors": [],
+    "warnings": [
+      "Miao / continuous pear and rounded-square face.001: 4 edges shared by 3 or more faces",
+      "Miao / continuous pear and rounded-square face.001: no UV map (fine for flat colors; textures and lightmaps need one)"
+    ],
+    "scope": "Connected body only; not full contact, original identity or animation art acceptance"
+  }
+}
