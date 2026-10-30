@@ -19,6 +19,12 @@
 - Run the independent reviews at both the gray-model and shaded-still gates, before animation expansion; a final review alone is too late. The motion reviewer at a still gate checks grip, joint structure and animatability, with unmade clips/web behavior explicitly unverified or not applicable.
 - Review matched-camera full-body and face/paw crops first. Any P0 visual regression blocks art delivery and further animation expansion; do not average it away with passing functionality tests or a composite score. Unpassed work remains a technical study, never a finished optimization.
 - Prefer suitable licensed models/rigs/material workflows and reference-driven reconstruction over repeated primitive scripting. Verify code, model, weight and output terms separately; do not quietly replace Miao with a different stock cat.
+
+### Appearance direction · explicit user update 2026-10-30
+
+- The user explicitly accepted: “可以换成 Mewchi 这类成熟 Q 版猫”. A mature chibi cat may replace the original pear-shaped orange-cat identity; silhouette, eye proportions and cel-shaded materials may differ. Do not continue rejecting this approved direction solely for differing from the old reference.
+- This approves a visual direction, not purchase, a particular asset's license, or a source-model quality gate. Keep the original as a craft/completeness reference; cuteness, refined modeling, clear fingers, connected limbs and natural instrument contact still apply.
+- Mewchi's author previews have received conditional procurement reviews only. Actual source geometry, rig/weights, Blender materials, gray/shaded stills and later motion still require the existing independent gates. Keep whole-character/paws/instrument output and source/code/texture licensing boundaries.
 - Head/eye/body response is in scope: small phrase-aware gaze/head follow, natural blinks and restrained breathing; avoid nodding or resetting the whole head on every fast note. Add these only after static character quality passes.
 - The production whole-frame constraint remains: each delivered frame shows the complete connected cat/paws/instrument. Do not return to a body plate plus separate arm images or detached limb geometry.
 

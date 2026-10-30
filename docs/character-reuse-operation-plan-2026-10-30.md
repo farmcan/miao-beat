@@ -8,6 +8,8 @@
 
 后续预览复查：新增精细四足胖猫sanbianzi及既有PKO/Juliette经三位独立预览评审，当前均不支持为Miao购买；[真实模型/GitHub链接与理由](research/cat-quality-links-and-purchase-decision-2026-10-30.md)。没有把预览复查当成原生文件gate；完整角色仍HOLD，未取得新合格猫、未扩动作。
 
+用户随后明确接受换成Mewchi这类成熟Q版猫。当前主选转为Mewchi：完整裸身／灰模及分指手势实看后，三个非builder均有条件采购GO，许可用途与合法原包待取得；[源文件交接与取源后的具体gate](mewchi-source-handoff.md)。旧原图轮廓差异不再单独构成该新方向的P0，但精致度、清晰手指、自然接触与whole-frame仍是硬门槛。没有购买或发信，也没有新模型／动作／应用上线。
+
 | 分支 | 已验证 | 仍未通过 |
 |---|---|---|
 | Classic Guitar声学琴 | CC0原生模型、兼容GLB、真实源渲染与独立prop craft | WingIt整合持琴接触 |
