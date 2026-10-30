@@ -6,6 +6,8 @@
 
 2026-10-30 补充：乐器直接复用已有成熟资产，木吉他主选 Classic Guitar，钢琴沿用 Key Forty 八键适配，电琴保留离线备选；[当前选型、实看结论与文件复核](research/reusable-instrument-selection-2026-10-30.md)。猫模板 Panya / Yuki 的新一轮作者预览核查未带来合格原生源，不能据乐器可用放行未通过的角色或扩展动作。
 
+后续预览复查：新增精细四足胖猫sanbianzi及既有PKO/Juliette经三位独立预览评审，当前均不支持为Miao购买；[真实模型/GitHub链接与理由](research/cat-quality-links-and-purchase-decision-2026-10-30.md)。没有把预览复查当成原生文件gate；完整角色仍HOLD，未取得新合格猫、未扩动作。
+
 | 分支 | 已验证 | 仍未通过 |
 |---|---|---|
 | Classic Guitar声学琴 | CC0原生模型、兼容GLB、真实源渲染与独立prop craft | WingIt整合持琴接触 |
