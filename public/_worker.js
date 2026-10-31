@@ -1,3 +1,4 @@
+import {recordFamilyReferral} from './family-referral-server.mjs';
 // Counter flow adapted from MiaoTI's functions/api/site-counter.js.
 // Fixed aggregate keys only; no individual visitor, referrer URL or recording records.
 const COUNTER_KEY = 'miao-beat:site-visits';
@@ -71,6 +72,7 @@ async function counter(request, env, url) {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    if(url.pathname==='/api/family-referral')return recordFamilyReferral(request,env.MIAOBEAT_DB,'miao-beat');
     if (url.pathname === '/api/site-counter') return counter(request, env, url);
     return env.ASSETS.fetch(request);
   },

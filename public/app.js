@@ -1,3 +1,4 @@
+import './family-referrals.js';
 import {KEYS,MELODY,DRUMS,CHORDS,LEGACY_KEYS} from './bindings.js';
 import {SampledAudio} from './sampled-audio.js';
 import {BeatClock,beatPattern} from './clock.js';
