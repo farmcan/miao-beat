@@ -112,3 +112,15 @@ test('three metronome timbres have different synthesis and the last beat can be 
  clock.setSound('bell','last');clock.start(120,4);for(let i=1;i<=3;i++){context.currentTime=i*.5;clock.schedule();}
  assert.deepEqual(clock.history.map(e=>e.accent),[false,false,false,true]);clock.stop();
 });
+
+
+test('every phrase keeps exact musical preparation and bar length at different tempos',async()=>{
+ const {SONGS,scoreWindow}=await import('../public/scores.js');
+ for(const song of SONGS)for(const bpm of [50,73,song.bpm,96,180])for(let phrase=-1;phrase<song.phrases.length;phrase++){
+  const before=phrase<0?[]:song.phrases.slice(0,phrase).flat(),selected=phrase<0?song.phrases.flat():song.phrases[phrase];
+  const phase=((song.pickupBeats?song.meter-song.pickupBeats:0)+before.reduce((s,e)=>s+e.beats,0))%song.meter;
+  const count=phase||song.meter,beats=selected.reduce((s,e)=>s+e.beats,0),expectedBars=Math.ceil((count+beats)/song.meter);
+  const w=scoreWindow(song,bpm,phrase);assert.equal(w.countInBeats,count);assert.equal(w.phaseBeats,phase);assert.ok(Math.abs(w.loopSeconds/(60/bpm)-expectedBars*song.meter)<1e-9,`${song.id}/${bpm}/${phrase}: no phantom bar`);
+  assert.equal(w.events[0].offset,0);assert.equal(w.events[0].index,before.length);assert.ok(Math.abs(w.duration-beats*60/bpm)<1e-9);
+ }
+});

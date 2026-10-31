@@ -56,3 +56,7 @@ A final independent fault-injection check reproduced a sticky capture-failure fl
 ## Design and distribution research
 
 After the implementation and production gate, independent judges compared Bongo Cat, Patatap and Song Maker in actual browsers and prepared four Xiaohongshu/Douyin content scripts. The consolidated [design and launch plan](design-and-launch-plan-2026-10-31.md) separates tested product value from audience/marketing hypotheses. No social post, ad spend, account change or new recurring job was performed.
+
+## Exact beat phase repair · 0.17.2
+
+A final cross-tempo audit found52 phrase/tempo combinations where converting elapsed seconds back into beats introduced tiny positive remainders at a bar boundary. For example, Twinkle phrase6 at50 BPM could get an almost-zero count-in instead of4 beats; other phrases could add an unintended whole-bar wait. The new shared `scoreWindow()` computes phrase phase, count-in and padding from original score beat values, then converts to seconds. It also retains original score indices and lyrics. An exhaustive regression covers every song, every phrase/whole score and50/73/recommended/96/180 BPM. Final full suite: **143/143 passed**. The previous production acceptance above is retained as history; this patch receives its own deployment and byte check.

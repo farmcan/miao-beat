@@ -79,3 +79,17 @@ export function scoreEvents(song,bpm){
     const out={...event,...(song.lyrics?{lyricIndex}:{}),index:index++,offset:time};time+=event.beats*60/bpm;return out;
   }));
 }
+
+// Preserve musical phase in beats. A seconds→beats round trip can turn zero
+// into a tiny positive number, losing a count-in or adding an entire bar.
+export function scoreWindow(song,bpm,phraseIndex=-1){
+  const before=phraseIndex<0?[]:song.phrases.slice(0,phraseIndex).flat();
+  const begin=before.length,end=phraseIndex<0?undefined:begin+song.phrases[phraseIndex].length;
+  let beats=0;const events=scoreEvents(song,bpm).slice(begin,end).map(event=>{
+    const item={...event,offset:beats*60/bpm};beats+=event.beats;return item;
+  });
+  const precedingBeats=before.reduce((sum,event)=>sum+event.beats,0);
+  const phaseBeats=((song.pickupBeats?song.meter-song.pickupBeats:0)+precedingBeats)%song.meter;
+  const countInBeats=phaseBeats||song.meter,paddingBeats=(song.meter-(countInBeats+beats)%song.meter)%song.meter;
+  return {events,duration:beats*60/bpm,phaseBeats,countInBeats,loopSeconds:(beats+countInBeats+paddingBeats)*60/bpm};
+}

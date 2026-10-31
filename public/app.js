@@ -6,7 +6,7 @@ import {mountCharacter} from './full-frame-character.js';
 import {mountPerformance} from './performance.js';
 import {mountKeyboardNavigation} from './keyboard-navigation.js';
 import {loadSiteCounter} from './site-counter.js';
-import {SONGS,scoreEvents} from './scores.js';
+import {SONGS,scoreEvents,scoreWindow} from './scores.js';
 import {createMediaExport,mediaSupported} from './media-export.js';
 import {CODES,MAX_MS,MAX_EVENTS,makeRecording,validateRecording} from './recording.js';
 const $=id=>document.getElementById(id),audio=new SampledAudio(),byCode=new Map(KEYS.map(k=>[k.code,k])),byNote=new Map(MELODY.map(k=>[k.sub,k]));
@@ -221,12 +221,8 @@ function selectedSong(){return SONGS.find(s=>$('songSelect').value===s.id)||SONG
 function updateTempoHint(){const song=selectedSong();$('tempoHint').textContent=`实际 ${$('bpm').value} BPM · 建议 ${song.bpm} BPM`;$('suggestedTempo').textContent=`用建议 ${song.bpm} BPM`;}
 function practiceSelection(){
   const song=selectedSong(),bpm=Number($('bpm').value),choice=$('phraseSelect').value,phrase=choice==='all'?-1:Number(choice);
-  const all=scoreEvents(song,bpm).map(e=>({...e,keys:scoreKeys(e)}));
-  const begin=phrase<0?0:song.phrases.slice(0,phrase).flat().length,end=phrase<0?all.length:begin+song.phrases[phrase].length;
-  const picked=all.slice(begin,end),offset=picked[0].offset,events=picked.map(e=>({...e,offset:e.offset-offset}));
-  const last=events.at(-1),duration=last.offset+last.beats*60/bpm,phaseBeats=((song.pickupBeats?song.meter-song.pickupBeats:0)+offset*bpm/60)%song.meter;
-  const countInBeats=phaseBeats||song.meter,paddingBeats=(song.meter-(countInBeats+duration*bpm/60)%song.meter)%song.meter;
-  return {song,bpm,events,duration,phaseBeats,countInBeats,loopSeconds:duration+(countInBeats+paddingBeats)*60/bpm,phrase};
+  const selection=scoreWindow(song,bpm,phrase);
+  return {...selection,song,bpm,phrase,events:selection.events.map(e=>({...e,keys:scoreKeys(e)}))};
 }
 function renderScore(){
   stopSession();const song=selectedSong();$('phraseSelect').replaceChildren();
