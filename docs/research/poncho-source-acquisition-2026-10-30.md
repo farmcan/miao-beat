@@ -23,3 +23,11 @@
 若用户选择先验证Poncho免费备选，需要用户明确提供并允许向**Ko-fi / Sap**提交本次取源的收件邮箱；显示名可用项目名称`Miao Beat`。没有此项输入时不擅自使用Git邮箱、邮箱账户信息、虚构地址或新建账户。
 
 本轮证据：`artifacts/poncho-source-acquisition-2026-10-30/guest-email-required.png`，实际画面含商品名、Free总额、必填邮箱提示。它是获取边界证据，不是成功订单、下载或模型成果。
+
+## 2026-10-31：零元领取已完成，文件传输尚未成功
+
+按用户明确授权使用Google邮箱，正常游客表单提交后，官方显示订单总额/实付均0美元，View content列出PC、Quest与配色三个ZIP。未注册、未购买付费项、未发送作者消息；邮箱与订单/下载标识只留私有会话，不进入此文档。领取与源文件下载分开判断。
+
+PC链接的正常downloadMedia及下载事件等待分别超时；打开同一UI明确提供的下载链接时，内嵌浏览器返回net::ERR_BLOCKED_BY_CLIENT。普通Chrome对同一来源亦返回该错误。没有取得ZIP或模型SHA，没有绕客户端限制、提取viewer或猜文件地址。因此不能宣称已导入、已检查包内许可、已看手指骨。领取内容证据位于本地artifacts/poncho-source-acquisition-2026-10-31/claimed-content.png；不进入public。
+
+另正常检查_polybit_官方Download入口；需要Sketchfab登录。通过现有Google会话开始普通登录，随后Google明确显示“验证身份／请使用您的通行密钥完成登录”。当前需要本人身份验证；未见原包格式，未接受新条款或创建新账号。已保留正常登录页等待本人处理，没有绕过验证。此状态不能解释为模型不合格或作者拒绝授权。
