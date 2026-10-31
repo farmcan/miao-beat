@@ -166,7 +166,7 @@ export function mountCharacter(scene){
     await getBitmap('idle');if(destroyed)return false;loaded=true;scene.setAttribute('data-complete-character','');draw();prefetch(false);if(mode==='guitar')loadMotion();return true;
   })().catch(()=>{if(!destroyed){message.hidden=false;message.textContent='猫的图没加载出来，声音还能用。';scene.dataset.wholeFrameStatus='unavailable';}return false;});
   return{ready,reset,
-    setCaptureMode(enabled){captureMode=!!enabled;if(enabled)captureFailure=false;motion?.setContactHold(enabled?24:0);},
+    setCaptureMode(enabled){captureMode=!!enabled;captureFailure=false;motion?.setContactHold(enabled?24:0);},
     captureHealthy(){return !captureFailure&&scene.dataset.wholeFrameStatus!=='unavailable'&&(!captureMode||!wanted||wanted===shownSignature||paintPendingSince!==null&&win.performance.now()-paintPendingSince<250);},
     async prepareCapture(events=[]){
       if(!await ready)throw Error('角色图片没有准备好。');

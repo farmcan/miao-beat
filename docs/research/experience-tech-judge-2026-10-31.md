@@ -31,3 +31,11 @@ Final repair check: `node --test scripts/core.test.mjs scripts/interaction.test.
 2. Use one real iPhone and one Android acceptance session for touch cancellation/multitouch, speaker latency and downloaded video playback/share. Desktop viewport checks and fake encoders cannot close these gaps.
 
 No 3D sourcing/modeling, scoring, upload, account system or new editor is recommended by this review.
+
+## Follow-up · failed capture retry ownership
+
+After the initial candidate review, parent requested an independent check of retry after a real source-paint error. **Confirmed P1 in the then-current implementation:** `setCaptureMode(false)` left `captureFailure` true, while `exportMedia` invokes `createMediaExport()` (whose first paint checks visual health) before `setCaptureMode(true)`. Therefore a prior paint failure could block the next exporter before the new capture had a chance to clear the flag, even after the source canvas had recovered.
+
+Added `scripts/full-frame-character.test.mjs:96` to make the renderer throw an actual temporary `drawImage` error during capture, then recover to a valid idle frame. The test first confirms health remains false while the failed capture is still active (required sticky behavior), then calls cleanup and requires the next startup health check to be true. Before the fix, that final assertion fails with `false !== true`; the earlier assertions pass. Product fix belongs to the parent: clear per-job capture failure when leaving capture mode, preserving sticky failure throughout the failed job. Production behavior is not claimed repaired by a test alone.
+
+Parent then changed `full-frame-character.js:169` to clear `captureFailure` on both capture-mode entry and exit. Independent post-fix execution of `node --test scripts/full-frame-character.test.mjs scripts/media-export.test.mjs scripts/interaction.test.mjs` passed **48/48**, including the same prior red regression, the existing continuous100ms target-stall test, cancellation and media startup ownership checks. The scoped retry defect is fixed at source/regression gate; the parent's patch deployment and production verification remain necessary.

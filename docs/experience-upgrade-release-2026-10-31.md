@@ -41,3 +41,7 @@ Useful tagged links:
 ## Production acceptance
 
 Pending deployment and canonical byte/API/browser verification. Public start event persisted through the existing Seed task-status mechanism; end event follows actual production acceptance. Physical iPhone/Android touch, speaker latency and platform-native sharing remain unverified.
+
+## Capture retry repair · 0.17.1
+
+A final independent fault-injection check reproduced a sticky capture-failure flag preventing the next export's initial paint, even after normal cleanup. Capture-mode cleanup now clears the failed session flag; failures remain sticky during that session. The regression first failed on the old implementation and passed after the one-line repair. This is a recovery fix, not a claim of new animation frames.

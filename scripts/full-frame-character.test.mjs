@@ -92,3 +92,24 @@ test('changing targets cannot reset capture stall detection while all contact de
  controller.update('piano',[]);await frame(1400);
  assert.equal(scene.dataset.contactPaintDelayMs,contactDelay,'idle recovery cannot overwrite contact latency');
 });
+
+test('capture cleanup clears a prior draw failure before the next exporter startup health check',async t=>{
+ const {JSDOM}=await import('jsdom');const {mountCharacter}=await import('../public/full-frame-character.js');
+ const dom=new JSDOM('<div id="scene" data-instrument="piano"><svg class="cat-scene"></svg><div class="stage-readout"></div></div>'),w=dom.window;
+ let now=0,serial=0,failPaint=false;const queue=new Map();
+ t.mock.method(w.performance,'now',()=>now);w.requestAnimationFrame=fn=>{queue.set(++serial,fn);return serial;};w.cancelAnimationFrame=id=>queue.delete(id);
+ w.HTMLCanvasElement.prototype.getContext=()=>({drawImage(){if(failPaint)throw Error('temporary canvas draw failure');}});
+ w.createImageBitmap=async()=>({width:1254,height:1254,close(){}});
+ t.mock.method(globalThis,'fetch',async input=>new URL(input).pathname.endsWith('manifest.json')?Response.json(config):new Response('frame'));
+ const scene=w.document.querySelector('#scene'),controller=mountCharacter(scene),tick=()=>new Promise(resolve=>setImmediate(resolve));
+ t.after(()=>{controller.destroy();w.close();});
+ const frame=async time=>{now=time;const callbacks=[...queue.values()];queue.clear();for(const fn of callbacks)fn(now);await tick();};
+ await controller.ready;await tick();controller.setCaptureMode(true);
+ failPaint=true;controller.update('piano',[key('KeyA')]);controller.strike(key('KeyA'));await frame(100);
+ assert.equal(scene.dataset.wholeFrameStatus,'unavailable');assert.equal(controller.captureHealthy(),false);
+ failPaint=false;controller.update('piano',[]);await frame(300);
+ assert.equal(scene.dataset.wholeFrameStatus,'ready');
+ assert.equal(controller.captureHealthy(),false,'recovery must not turn an already failed in-progress capture into a success');
+ controller.setCaptureMode(false);
+ assert.equal(controller.captureHealthy(),true,'the next exporter paints before enabling capture mode; a cleaned-up job must not poison that startup check');
+});
