@@ -16,7 +16,7 @@ function fixture(){
  const win={performance:{now:()=>0},MediaRecorder:Recorder,MediaStream:Stream,Blob,setTimeout,clearTimeout,requestAnimationFrame:fn=>{const id=next++;frames.set(id,fn);return id;},cancelAnimationFrame:id=>frames.delete(id)};doc.defaultView=win;
  const destination={stream:new Stream([audioTrack])};
  const audio={context:{createMediaStreamDestination:()=>destination},analyser:{connect:node=>links.push(['add',node]),disconnect:node=>{assert.ok(node,'never disconnect speaker output');links.push(['remove',node]);}}};
- return {doc,win,audio,source:{width:1254,height:1254,hidden:false,completeScene:true},nodes,links,stops,frames};
+ return {canvas,ctx,doc,win,audio,source:{width:1254,height:1254,hidden:false,completeScene:true},nodes,links,stops,frames};
 }
 test('video contains one complete-scene video track and app audio, with correct MIME and cleanup',async()=>{
  const h=fixture(),job=await createMediaExport({...h,kind:'video'});
@@ -38,4 +38,18 @@ test('size limit and backgrounding reject files and release capture tracks',asyn
 });
 test('unsupported browsers and actual extensions are reported without microphone access',()=>{
  assert.equal(mediaSupported('video',{}),false);assert.equal(mediaExtension('video/mp4;codecs=avc1.42E01E'),'mp4');assert.equal(mediaExtension('audio/mp4'),'m4a');assert.equal(mediaExtension('audio/ogg;codecs=opus'),'ogg');
+});
+
+
+test('square and portrait exports fit the entire scene and return actual dimensions',async()=>{
+ for(const [layout,width,height]of [['square',720,720],['portrait',720,1280]]){
+  const h=fixture();let fit;h.ctx.drawImage=(...args)=>{fit=args.slice(1);};
+  const job=await createMediaExport({...h,kind:'video',layout,title:'A short take'});assert.equal(h.canvas.width,width);assert.equal(h.canvas.height,height);
+  const [x,y,w,hgt]=fit;assert.equal(w,hgt);assert.ok(x>=0&&y>=0&&x+w<=width&&y+hgt<=height,'no character cropping');job.stop();const result=await job.done;assert.equal(result.height,height);
+ }
+});
+
+test('failed or stalled character output aborts capture instead of reporting success',async()=>{
+ const h=fixture();let healthy=true;const job=await createMediaExport({...h,kind:'video',visualHealth:()=>healthy});healthy=false;
+ for(const fn of [...h.frames.values()])fn();await assert.rejects(job.done,/画面录制中断/);assert.deepEqual(h.stops.sort(),['audio','video']);
 });

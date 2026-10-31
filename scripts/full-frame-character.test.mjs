@@ -65,3 +65,30 @@ test('a late image cannot repaint an older input, and each draw uses one whole s
  releaseGuitar();await tick();assert.equal(w.document.querySelector('#scene').dataset.wholeFrame,'drums:KeyX','old guitar cannot repaint the new instrument');
  assert.equal(w.document.querySelectorAll('canvas').length,1);
 });
+
+test('changing targets cannot reset capture stall detection while all contact decodes are blocked',async t=>{
+ const {JSDOM}=await import('jsdom');const {mountCharacter}=await import('../public/full-frame-character.js');
+ const dom=new JSDOM('<div id="scene" data-instrument="piano"><svg class="cat-scene"></svg><div class="stage-readout"></div></div>'),w=dom.window;
+ let now=0,serial=0,release;const queue=new Map(),draws=[],blocked=new Promise(resolve=>{release=resolve;});
+ t.mock.method(w.performance,'now',()=>now);w.requestAnimationFrame=fn=>{queue.set(++serial,fn);return serial;};w.cancelAnimationFrame=id=>queue.delete(id);
+ w.HTMLCanvasElement.prototype.getContext=()=>({drawImage(image){draws.push(image.id);}});
+ w.createImageBitmap=async blob=>{const id=await blob.text();if(id!=='idle')await blocked;return {width:1254,height:1254,id,close(){}};};
+ t.mock.method(globalThis,'fetch',async input=>{const name=new URL(input).pathname.split('/').at(-1);return name==='manifest.json'?Response.json(config):new Response(name.replace('.jpg',''));});
+ const scene=w.document.querySelector('#scene'),controller=mountCharacter(scene),tick=()=>new Promise(resolve=>setImmediate(resolve));
+ t.after(()=>{controller.destroy();release();w.close();});
+ const frame=async time=>{now=time;const callbacks=[...queue.values()];queue.clear();for(const fn of callbacks)fn(now);await tick();};
+ await controller.ready;await tick();controller.setCaptureMode(true);
+ for(let i=1;i<=12;i++){
+   now=i*100;const target=key(i%2?'KeyA':'KeyS');controller.update('piano',[target]);controller.strike(target);await frame(now);
+   if(i<=3)assert.equal(controller.captureHealthy(),true,'allow a bounded initial decode window');
+   if(i>=4)assert.equal(controller.captureHealthy(),false,'new targets must not extend the first unresolved paint deadline');
+ }
+ assert.deepEqual(draws,['idle'],'the stalled capture still contains only its original idle scene');
+ release();await tick();await tick();
+ assert.equal(scene.dataset.wholeFrame,'KeyS','only the latest target may recover after late decodes');
+ assert.equal(draws.includes('KeyA'),false,'an obsolete decoded target cannot paint');
+ assert.equal(controller.captureHealthy(),true,'actual current-frame paint restores health');
+ const contactDelay=scene.dataset.contactPaintDelayMs;
+ controller.update('piano',[]);await frame(1400);
+ assert.equal(scene.dataset.contactPaintDelayMs,contactDelay,'idle recovery cannot overwrite contact latency');
+});

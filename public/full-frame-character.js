@@ -64,7 +64,10 @@ export function mountCharacter(scene){
   const original={display:svg?.style.display??'',aspect:scene.style.aspectRatio};if(svg)svg.style.display='none';
   const bitmaps=new Map(),encoded=new Map(),pending=new Map(),warming=new Set(),complete=new Set();
   let config,bandConfig,bandRequest,mode=scene.dataset.instrument??'piano',destroyed=false,loaded=false,raf=0,wanted='',shown='',epoch=0,ctx;
-  let visualClock=0,lastMotionTick=win.performance.now();
+  let visualClock=0,lastMotionTick=win.performance.now(),requestedAt=0,struckAt=0,captureMode=false,paintPendingSince=null,shownSignature='',captureFailure=false,strikeSequence=0;
+  const decodedBudget=(win.matchMedia?.('(max-width: 760px), (pointer: coarse)').matches?40:80)*1024*1024;
+  function trimBitmaps(){let bytes=[...bitmaps.values()].reduce((sum,b)=>sum+b.width*b.height*4,0);for(const [key,b]of bitmaps){if(bytes<=decodedBudget)break;if(key===shown||key===wantedAsset)continue;bytes-=b.width*b.height*4;b.close?.();bitmaps.delete(key);}scene.dataset.decodedBytes=String(bytes);}
+
   let lastContactSerial=0,lastLiftSerial=0;scene.dataset.guitarStrikeCount='0';scene.dataset.guitarContactCount='0';scene.dataset.guitarLiftCount='0';
   let motion,motionConfig,motionRequest,motionEnabled=!win.matchMedia?.('(prefers-reduced-motion: reduce)').matches,wantedAsset='';
   let state=createFrameState(()=>win.performance.now(),mode);
@@ -114,7 +117,7 @@ export function mountCharacter(scene){
       if(destroyed){image.close?.();throw new Error('Character unmounted');}
       if(image.width!==(id.startsWith('pluck:')?1920:1254)||image.height!==(id.startsWith('pluck:')?1920:1254))throw new Error('Unexpected full-frame dimensions');
       bitmaps.set(id,image);
-      for(const key of bitmaps.keys())if(bitmaps.size>4&&key!==shown&&key!==wantedAsset){bitmaps.get(key).close?.();bitmaps.delete(key);}
+      trimBitmaps();
       return image;
     })().finally(()=>pending.delete(id));pending.set(id,task);return task;
   }
@@ -122,14 +125,15 @@ export function mountCharacter(scene){
     try{
       const image=await getBitmap(id);if(destroyed||ticket!==epoch||wanted!==signature)return;
       if(canvas.width!==1254||canvas.height!==1254){canvas.width=1254;canvas.height=1254;}ctx=canvas.getContext('2d');if(!ctx)throw new Error('Canvas unavailable');
-      if(cell===undefined)ctx.drawImage(image,0,0);else ctx.drawImage(image,(cell%3)*640,Math.floor(cell/3)*640,640,640,0,0,1254,1254);canvas.hidden=false;shown=id;scene.dataset.wholeFrame=id.startsWith('pluck:')?'guitar:transition':id.startsWith('up:')?'guitar-up:'+id.slice(3):id;scene.dataset.guitarTransition=cell===undefined?'':id+':'+cell;scene.dataset.character='complete-frame-scenes-v6';
+      if(cell===undefined)ctx.drawImage(image,0,0);else ctx.drawImage(image,(cell%3)*640,Math.floor(cell/3)*640,640,640,0,0,1254,1254);canvas.hidden=false;shown=id;shownSignature=signature;paintPendingSince=null;scene.dataset.wholeFrame=id.startsWith('pluck:')?'guitar:transition':id.startsWith('up:')?'guitar-up:'+id.slice(3):id;scene.dataset.guitarTransition=cell===undefined?'':id+':'+cell;scene.dataset.character='complete-frame-scenes-v6';
       scene.dataset.guitarPhase=stroke?.phase??'';scene.dataset.guitarStrokeSerial=String(stroke?.serial??0);
       if(stroke?.lift&&stroke.serial>lastLiftSerial){lastLiftSerial=stroke.serial;scene.dataset.guitarLiftCount=String(Number(scene.dataset.guitarLiftCount)+1);}
       if(stroke?.contact&&stroke.serial>lastContactSerial){lastContactSerial=stroke.serial;scene.dataset.guitarContactCount=String(Number(scene.dataset.guitarContactCount)+1);motion?.contactPainted(stroke.serial);}
       scene.style.aspectRatio='1';scene.dataset.wholeFrameStatus='ready';
+      const painted=win.performance.now();scene.dataset.lastPaintAt=String(painted);scene.dataset.paintDelayMs=String(Math.round(Math.max(0,painted-requestedAt)*10)/10);if(struckAt>0&&(stroke?.contact||!stroke&&id!=='idle'&&!id.endsWith(':idle'))){const delay=Math.round(Math.max(0,painted-struckAt)*10)/10;scene.dataset.contactStrikeSerial=String(strikeSequence);scene.dataset.contactPaintDelayMs=String(delay);scene.dataset.maxContactPaintDelayMs=String(Math.max(delay,Number(scene.dataset.maxContactPaintDelayMs||0)));}scene.dataset.paintCount=String(Number(scene.dataset.paintCount||0)+1);trimBitmaps();
       const label=mode==='marimba'?'马林巴暂用钢琴猫静图，动作还没补。':'';message.textContent=label;message.hidden=!label;
     }catch{
-      if(destroyed||ticket!==epoch)return;if(id.startsWith('pluck:')||id.startsWith('up:')){motion=null;motionStatus('unavailable');wanted='';epoch++;request();return;}scene.dataset.wholeFrameStatus='unavailable';message.hidden=false;message.textContent='猫的图没加载出来，声音还能用。';
+      if(destroyed||ticket!==epoch)return;if(captureMode)captureFailure=true;if(id.startsWith('pluck:')||id.startsWith('up:')){motion=null;motionStatus('unavailable');wanted='';epoch++;request();return;}scene.dataset.wholeFrameStatus='unavailable';message.hidden=false;message.textContent='猫的图没加载出来，声音还能用。';
     }
   }
   function draw(){
@@ -142,7 +146,7 @@ export function mountCharacter(scene){
     scene.dataset.confirmedKeys=pose.held.join(',');
     if(mode==='guitar'&&motion&&motionEnabled){const p=motion.sample();moving=p.needsFrame;stroke={serial:p.serial,phase:p.phase,contact:p.pose==='down',lift:p.pose==='up'||Number.isInteger(p.cell)&&p.cell<=5};if(p.pose==='idle')id='guitar:idle';else if(p.pose==='up'&&!p.needsFrame)id='up:'+p.code;else{id='pluck:'+p.code;cell=p.pose==='down'?8:p.pose==='up'?0:p.cell+1;}}
     const signature=id+(cell===undefined?'':':'+cell)+(stroke?':s'+stroke.serial+':'+stroke.phase:'');
-    if(signature!==wanted){wanted=signature;wantedAsset=id;show(id,++epoch,signature,cell,stroke);}
+    if(signature!==wanted){requestedAt=time;if(paintPendingSince===null)paintPendingSince=time;wanted=signature;wantedAsset=id;show(id,++epoch,signature,cell,stroke);}
     if(mode==='marimba'){message.textContent='马林巴暂用钢琴猫静图，动作还没补。';message.hidden=false;}
     if(pose.needsFrame||moving)raf=win.requestAnimationFrame(draw);
   }
@@ -154,7 +158,7 @@ export function mountCharacter(scene){
     if(complete.has(tag)||warming.has(tag)||!loaded||family==='marimba')return;
     warming.add(tag);
     const queue=(family==='piano'?expectedIds:INSTRUMENT_FRAME_IDS[family]).filter(id=>id.includes('-')===pairs).map(id=>family==='piano'?id:family+':'+id);let cursor=0,failed=false;
-    try{await Promise.all([0,1,2].map(async()=>{while(!destroyed&&mode===family&&cursor<queue.length){const id=queue[cursor++];try{await getBlob(id);}catch{failed=true;}}}));}
+    try{await Promise.all([0,1,2].map(async()=>{while(!destroyed&&mode===family&&cursor<queue.length){const id=queue[cursor++];try{await getBlob(id);if(!pairs&&family==='piano'&&['idle','KeyA','KeyS','KeyD','KeyF','KeyG'].includes(id))await getBitmap(id);}catch{failed=true;}}}));}
     finally{warming.delete(tag);if(cursor>=queue.length&&!failed)complete.add(tag);}
   }
   const ready=(async()=>{
@@ -162,11 +166,28 @@ export function mountCharacter(scene){
     await getBitmap('idle');if(destroyed)return false;loaded=true;scene.setAttribute('data-complete-character','');draw();prefetch(false);if(mode==='guitar')loadMotion();return true;
   })().catch(()=>{if(!destroyed){message.hidden=false;message.textContent='猫的图没加载出来，声音还能用。';scene.dataset.wholeFrameStatus='unavailable';}return false;});
   return{ready,reset,
-    setCaptureMode(enabled){motion?.setContactHold(enabled?24:0);},
-    async prepareCapture(){if(!await ready)throw Error('角色图片没有准备好。');if(mode==='guitar'){await loadMotion();if(motionEnabled&&!motion)throw Error('拨弦动作未加载，请等动作准备好后再导出。');}await prefetch(false);request();for(let i=0;i<100;i++){if(!canvas.hidden&&canvas.width>0)return canvas;await new Promise(resolve=>win.setTimeout(resolve,25));}throw Error('角色画面仍在加载，请重试。');},
+    setCaptureMode(enabled){captureMode=!!enabled;if(enabled)captureFailure=false;motion?.setContactHold(enabled?24:0);},
+    captureHealthy(){return !captureFailure&&scene.dataset.wholeFrameStatus!=='unavailable'&&(!captureMode||!wanted||wanted===shownSignature||paintPendingSince!==null&&win.performance.now()-paintPendingSince<250);},
+    async prepareCapture(events=[]){
+      if(!await ready)throw Error('角色图片没有准备好。');
+      if(mode==='guitar'){await loadMotion();if(motionEnabled&&!motion)throw Error('拨弦动作未加载，请等动作准备好后再导出。');}
+      const family=mode,needed=new Set([family==='piano'||family==='marimba'?'idle':family+':idle']);
+      for(let i=0;i<events.length;i++){
+        const e=events[i];if(family==='marimba')continue;
+        if(family==='guitar'){if(!GUITAR.includes(e.code))continue;if(motionEnabled&&motion){needed.add('pluck:'+e.code);needed.add('up:'+e.code);}else needed.add('guitar:'+e.code);continue;}
+        const left=family==='drums'?DRUM_LEFT:LEFT,right=family==='drums'?DRUM_RIGHT:RIGHT,all=[...left,...right];if(!all.includes(e.code))continue;
+        const prefix=family==='piano'?'':family+':';needed.add(prefix+e.code);
+        // Replay gestures overlap for 110ms (piano) / 180ms (drums), including simultaneous inputs.
+        for(let j=i-1;j>=0&&e.time-events[j].time<(family==='piano'?110:180);j--){const prior=events[j].code;if(left.includes(prior)&&right.includes(e.code))needed.add(prefix+prior+'-'+e.code);if(right.includes(prior)&&left.includes(e.code))needed.add(prefix+e.code+'-'+prior);}
+      }
+      const queue=[...needed];let cursor=0;
+      await Promise.all([0,1].map(async()=>{while(cursor<queue.length){const id=queue[cursor++];await getBitmap(id);}}));
+      request();for(let i=0;i<100;i++){if(!canvas.hidden&&canvas.width>0&&scene.dataset.wholeFrameStatus==='ready')return canvas;await new Promise(resolve=>win.setTimeout(resolve,25));}
+      throw Error('角色画面仍在加载，请重试。');
+    },
     setMotionEnabled(enabled){motionEnabled=!!enabled;motion?.reset(state.sample().id);wanted='';epoch++;request();},
     update(next=mode,keys=[]){const changed=next!==mode;mode=next;if(changed){state=createFrameState(()=>win.performance.now(),mode);wanted='';epoch++;canvas.hidden=true;message.hidden=false;message.textContent='猫的图还在加载…';}state.update(keys);request();if(changed){motion?.reset();prefetch(false);if(mode==='guitar')loadMotion();}},
-    strike(key,next=mode){if(next!==mode){mode=next;state=createFrameState(()=>win.performance.now(),mode);canvas.hidden=true;message.hidden=false;message.textContent='猫的图还在加载…';reset();}const accepted=state.strike(key);if(accepted&&mode==='guitar'&&motionEnabled&&motion){motion.strike(key.code);scene.dataset.guitarStrikeCount=String(Number(scene.dataset.guitarStrikeCount)+1);}request();if(accepted)prefetch(true);return accepted;},
+    strike(key,next=mode){if(next!==mode){mode=next;state=createFrameState(()=>win.performance.now(),mode);canvas.hidden=true;message.hidden=false;message.textContent='猫的图还在加载…';reset();}const accepted=state.strike(key);if(accepted){struckAt=win.performance.now();scene.dataset.strikeSerial=String(++strikeSequence);}if(accepted&&mode==='guitar'&&motionEnabled&&motion){motion.strike(key.code);scene.dataset.guitarStrikeCount=String(Number(scene.dataset.guitarStrikeCount)+1);}request();if(accepted)prefetch(true);return accepted;},
     destroy(){if(destroyed)return;destroyed=true;epoch++;if(raf)win.cancelAnimationFrame(raf);win.removeEventListener('blur',reset);doc.removeEventListener('visibilitychange',visibility);for(const image of bitmaps.values())image.close?.();bitmaps.clear();encoded.clear();canvas.remove();message.remove();if(svg)svg.style.display=original.display;scene.style.aspectRatio=original.aspect;scene.removeAttribute('data-complete-character');},
   };
 }

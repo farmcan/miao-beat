@@ -13,7 +13,7 @@
 <body>
   <header class="site-header">
     <a class="brand" href="./" aria-label="Miao Beat 首页"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 17 4 5l9 6h6l9-6-1 12c5 14-27 14-22 0Z" fill="currentColor"/><path d="M10 19h2m8 0h2" stroke="#f8f4eb" stroke-width="2.6" stroke-linecap="round"/></svg><span>MIAO<span class="brand-light"> / </span>BEAT</span></a>
-    <div class="header-actions"><a class="about-link" href="#instrumentSelect">开始演奏 <span aria-hidden="true">↓</span></a><button class="support-trigger" type="button" data-open-support>请猫猫吃罐罐 <span aria-hidden="true">♡</span></button></div>
+    <div class="header-actions"><a class="about-link" href="#playingSurface">开始演奏 <span aria-hidden="true">↓</span></a><button class="support-trigger" type="button" data-open-support>请猫猫吃罐罐 <span aria-hidden="true">♡</span></button></div>
   </header>
 
   <main>
@@ -33,9 +33,11 @@
       </div>
 
       <div class="play-area" aria-label="你的演奏区">
-      <div class="instrument-controls"><label class="instrument-select" for="instrumentSelect"><span>乐器</span><select id="instrumentSelect"><option value="piano" selected>钢琴</option><option value="marimba">马林巴</option><option value="guitar">尼龙弦吉他</option><option value="drums">架子鼓</option></select></label><label class="volume-control" for="volume"><span class="volume-icon" aria-hidden="true">◖))</span><span class="sr-only">音量</span><input id="volume" type="range" min="0" max="100" value="55"><output id="volumeValue" for="volume">55%</output></label><button id="performanceToggle" class="performance-toggle" type="button" aria-pressed="false" disabled>全屏演奏</button><span id="performanceStatus" class="performance-status" role="status"></span></div>
+      <div id="instrumentTabs" class="instrument-tabs" role="group" aria-label="选择乐器"><button type="button" data-instrument="piano" aria-pressed="true">钢琴</button><button type="button" data-instrument="marimba" aria-pressed="false">马林巴</button><button type="button" data-instrument="guitar" aria-pressed="false">吉他</button><button type="button" data-instrument="drums" aria-pressed="false">架子鼓</button></div>
+      <div class="instrument-controls"><label class="instrument-select sr-only" for="instrumentSelect"><span>乐器</span><select id="instrumentSelect"><option value="piano" selected>钢琴</option><option value="marimba">马林巴</option><option value="guitar">尼龙弦吉他</option><option value="drums">架子鼓</option></select></label><label class="volume-control" for="volume"><span class="volume-icon" aria-hidden="true">◖))</span><span class="sr-only">音量</span><input id="volume" type="range" min="0" max="100" value="55"><output id="volumeValue" for="volume">55%</output></label><button id="performanceToggle" class="performance-toggle" type="button" aria-pressed="false" disabled>全屏演奏</button><span id="performanceStatus" class="performance-status" role="status"></span></div>
 
-      <div class="sound-ready"><button id="enableAudio" type="button">打开声音</button><p id="soundStatus" class="sound-status" role="status">先打开声音，再点琴键。</p></div>
+      <div class="sound-ready" id="soundEntry"><button id="enableAudio" type="button">① 准备声音</button><p id="soundStatus" class="sound-status" role="status">先打开声音，再点琴键。</p></div>
+      <div id="activityBar" class="activity-bar" hidden><span id="activityText" role="status"></span><button id="stopActivity" type="button">停止</button></div>
       <div class="playing-surface" id="playingSurface" tabindex="-1">
         <div id="guitarChords" class="guitar-chords" hidden><div><h2>扫个和弦</h2><label class="guitar-motion-toggle"><input id="guitarMotionToggle" type="checkbox" checked disabled> <span id="guitarMotionLabel">拨弦动作</span></label><p><span class="desktop-copy">试试 C → Am → F → G，每个和弦弹四拍。</span><span class="touch-copy">点 C → Am → F → G 试试。</span></p></div><div id="chordPads" class="chord-pads" aria-label="吉他简化和弦"></div></div>
         <div id="drumGuide" class="drum-guide" hidden><strong>试试这个节奏</strong><p>先调到 80 BPM。闭镲点八下，第 1、3 拍加底鼓，第 2、4 拍加军鼓。</p></div>
@@ -46,7 +48,7 @@
           <div id="guideProgress" class="guide-progress" role="progressbar" aria-label="参考谱进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="guideProgressFill"></span></div>
           <p id="guideAnnounce" class="sr-only" role="status"></p>
         </div>
-        <div class="section-label" id="melodyHeading"><h2>琴键</h2><span class="desktop-hint">白键 A — K <i>·</i> 黑键 W E T Y U</span><span class="mobile-hint">点着弹，也可以一起按</span></div>
+        <div class="section-label" id="melodyHeading"><h2>琴键</h2><label class="label-choice"><span class="sr-only">琴键显示</span><select id="keyLabels" aria-label="琴键显示"><option value="auto">自动标识</option><option value="key">键位</option><option value="number">固定音级</option><option value="note">音名</option></select></label><span class="desktop-hint">白键 A — K <i>·</i> 黑键 W E T Y U</span><span class="mobile-hint">点着弹，也可以一起按</span></div>
         <div class="melody-scroll" tabindex="0" role="region" aria-label="旋律键盘，可左右滑动"><div id="melodyKeys" class="melody-keys" aria-label="钢琴排列的旋律键"></div></div>
         <div id="keyboardNavigation" class="keyboard-navigation" role="group" aria-label="切换琴键音域" hidden><button id="keyboardLower" type="button" aria-controls="melodyKeys" aria-label="显示更低的琴键" disabled>← 低音</button><span aria-hidden="true">↔</span><button id="keyboardHigher" type="button" aria-controls="melodyKeys" aria-label="显示更高的琴键" disabled>高音 →</button></div>
         <p class="keyboard-scroll-hint">左右滑动，或点“低音 / 高音”找琴键</p>
@@ -54,6 +56,7 @@
       </div>
       </div>
 
+      <div class="mode-nav" role="group" aria-label="选择玩法"><button type="button" data-mode="free" aria-pressed="true">随便弹</button><button type="button" data-mode="practice" aria-pressed="false">跟谱练</button><button type="button" data-mode="record" aria-pressed="false">录一段</button></div>
       <div class="session-tools" aria-label="节拍、练习与片段记录">
         <aside class="metronome" aria-label="节拍器">
           <div class="control-caption"><span>节拍器</span><span class="control-index" aria-hidden="true">TEMPO</span></div>
@@ -65,11 +68,12 @@
         </aside>
       <section class="practice-dock" aria-label="选谱与跟弹">
         <div class="practice-toolbar"><label for="songSelect"><span>曲谱</span><select id="songSelect" aria-label="选择曲谱"></select></label><div class="practice-actions"><button id="guideSong" type="button">跟着弹</button><button id="listenSong" type="button">听一遍</button><button id="stopSong" type="button" disabled>停止</button></div></div>
+        <div class="phrase-controls"><label for="phraseSelect">练习范围 <select id="phraseSelect"><option value="all">整首</option></select></label><label class="loop-choice"><input id="loopPhrase" type="checkbox"> 循环练习（每轮预备拍）</label><button id="suggestedTempo" type="button">用建议速度</button><button id="firstPhrase" type="button">先练第一句</button></div><p id="tempoHint" class="practice-hint"></p>
         <p id="practiceHint" class="practice-hint">选一首，先听一遍，再跟着亮起的键弹。</p>
 
       </section>
 
-      <div class="recording-strip" aria-label="按键片段记录"><div class="recording-actions"><button id="recordToggle" type="button" aria-pressed="false"><span class="record-dot" aria-hidden="true"></span>开始记录</button><button id="playRecording" type="button" disabled>▶ 回放</button><button id="exportRecording" type="button" disabled>保存片段</button><label class="media-source" for="exportSource"><span class="sr-only">导出内容</span><select id="exportSource" aria-label="导出内容"><option value="recording">我的片段</option><option value="score">当前曲谱</option></select></label><button id="exportVideo" type="button" disabled>导出视频</button><button id="exportAudio" type="button" disabled>导出音频</button><button id="cancelMediaExport" type="button" hidden>取消导出</button><label class="import-recording" for="importRecording">导入片段<input id="importRecording" type="file" accept=".json,application/json"><span aria-hidden="true">↗</span></label><span id="recordingInfo" class="recording-info">0:00 · 0 次按键</span></div><div class="recording-meta"><span>片段保存按键和时间；视频包含猫的动作和声音，音频可单独保存。文件不上传。</span><span id="recordingStatus" role="status"></span></div></div>
+      <div class="recording-strip" aria-label="按键片段记录"><div class="recording-actions"><button id="recordToggle" type="button" aria-pressed="false"><span class="record-dot" aria-hidden="true"></span>开始记录</button><button id="playRecording" type="button" disabled>▶ 回放</button><button id="exportRecording" type="button" disabled>保存片段</button><label class="media-source" for="exportSource"><span class="sr-only">导出内容</span><select id="exportSource" aria-label="导出内容"><option value="recording">我的片段</option><option value="score">当前曲谱</option></select></label><button id="exportVideo" type="button" disabled>导出视频</button><button id="exportAudio" type="button" disabled>导出音频</button><button id="cancelMediaExport" type="button" hidden>取消导出</button><label class="import-recording" for="importRecording">导入片段<input id="importRecording" type="file" accept=".json,application/json"><span aria-hidden="true">↗</span></label><span id="recordingInfo" class="recording-info">0:00 · 0 次按键</span></div><div class="draft-actions"><button id="restorePrevious" type="button" disabled>恢复上一遍</button><button id="clearDraft" type="button" disabled>清除本机草稿</button><span id="draftStatus" role="status"></span></div><div class="export-options" id="exportOptions" hidden><label>视频画幅 <select id="exportLayout"><option value="original">原版 720 × 880</option><option value="portrait">竖屏 9:16</option><option value="square">方形 1:1</option></select></label><label>标题 <input id="exportTitle" maxlength="32" placeholder="给这段演奏起个名字"></label><span id="exportDuration"></span></div><div class="recording-meta"><span>片段保留在本机，可恢复上一遍；视频有猫的动作和声音。文件不上传。</span><span id="recordingStatus" role="status"></span></div></div>
       </div>
     </section>
 
@@ -88,7 +92,7 @@
     </nav>
     <div class="support-note"><p>玩具免费。<span>想投喂的话，罐罐在这儿。</span></p><button type="button" data-open-support>请猫猫吃罐罐 ♡</button></div>
     <details class="credits"><summary>关于这个小玩具与素材来源</summary><p>Miao Beat 是独立的轻量音乐实验。当前采用真实钢琴、马林巴、尼龙弦吉他与架子鼓采样。原创橘猫的演奏动作由你的按键触发。吉他提供简化和弦与单音；架子鼓模式可以自由编节奏。</p><p>项目起点借鉴了 <a href="https://bongo.cat/" target="_blank" rel="noopener">Bongo Cat</a> 的按键演奏思路；原始映射代码的 MIT 许可保留在 <a href="./UPSTREAM-LICENSE.txt">许可说明</a>。本站没有使用该站角色插画和录音。采样来源与各自许可见 <a href="./samples/LICENSES.txt">音色说明</a>；播放引擎采用 <a href="./vendor/smplr-LICENSE.txt">smplr（MIT）</a>。吉他过渡帧用 <a href="https://github.com/nihui/rife-ncnn-vulkan" target="_blank" rel="noopener">RIFE</a> 离线补帧，<a href="./character/guitar-motion-v1/RIFE-LICENSE.txt">MIT 许可</a>。无需麦克风、登录或上传。</p><p><a href="https://github.com/farmcan/miao-beat" target="_blank" rel="noopener">源代码 ↗</a></p></details>
-    <aside class="site-visits" aria-label="站点累计访问"><p id="siteVisitCount" role="status">累计访问：暂时未知</p><small>从启用统计起累计 · 同一浏览器 24 小时内计 1 次 · 非独立人数</small></aside>
+    <aside class="site-visits" aria-label="站点累计访问"><p id="siteVisitCount" role="status">累计访问：暂时未知</p><small>从启用统计起累计 · 同一浏览器 24 小时内计 1 次 · 非独立人数。仅记录匿名来源汇总，不保存身份或演奏。</small></aside>
     <noscript><p class="noscript">这个声音玩具需要浏览器开启 JavaScript。</p></noscript>
   </main>
   <dialog id="supportDialog" class="support-dialog" aria-labelledby="supportTitle" aria-describedby="supportDescription">

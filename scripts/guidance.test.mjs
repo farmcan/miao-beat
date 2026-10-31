@@ -17,3 +17,12 @@ test('resuming a guided metronome catches the shared origin and keeps bar phase 
  context.currentTime=13.2;clock.schedule();assert.equal(clock.next,13.6);assert.equal(clock.history.at(-1).time,10.1); // outside lookahead, no event yet
  clock.stop();
 });
+
+
+test('fractional phrase pickup crosses beat and bar boundaries at the right time',()=>{
+ const events=[{offset:0},{offset:1}],bpm=120,meter=4;
+ assert.equal(guidePosition(events,0,2,bpm,meter,1.5).beat,1);
+ assert.equal(guidePosition(events,.25,2,bpm,meter,1.5).beat,2);
+ assert.equal(guidePosition(events,1.25,2,bpm,meter,1.5).beat,0);
+ assert.equal(guidePosition(events,1.25,2,bpm,meter,1.5).bar,2);
+});

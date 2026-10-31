@@ -4,6 +4,6 @@ export function guidePosition(events,elapsed,duration,bpm,meter,phaseBeats=0){
   if(elapsed<0)return {index:-1,next:0,progress:0,countIn:Math.ceil(-elapsed/beatSeconds),beat:0,bar:0};
   let low=0,high=events.length;
   while(low<high){const mid=(low+high)>>>1;if(events[mid].offset<=elapsed)low=mid+1;else high=mid;}
-  const index=low-1,beat=Math.floor(elapsed/beatSeconds)+phaseBeats;
+  const index=low-1,beat=Math.floor(elapsed/beatSeconds+phaseBeats);
   return {index,next:low<events.length?low:-1,progress:Math.min(1,elapsed/duration),countIn:0,beat:beat%meter,bar:Math.floor(beat/meter)+1};
 }

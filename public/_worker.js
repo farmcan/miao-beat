@@ -1,6 +1,7 @@
 // Counter flow adapted from MiaoTI's functions/api/site-counter.js.
-// Only this fixed aggregate key is read or written; no visitor records are stored.
+// Fixed aggregate keys only; no individual visitor, referrer URL or recording records.
 const COUNTER_KEY = 'miao-beat:site-visits';
+const SOURCES=new Set(['miaoti','miaotarot','xiaohongshu','douyin','other-project','other','direct-unknown']);
 const COOKIE_NAME = 'miao_beat_visit';
 const MAX_AGE = 24 * 60 * 60;
 const CANONICAL_HOST = 'miao-beat.pages.dev';
@@ -51,7 +52,13 @@ async function counter(request, env, url) {
       ? `INSERT INTO site_counters (counter_key, count, updated_at) VALUES (?, 1, CURRENT_TIMESTAMP)
          ON CONFLICT(counter_key) DO UPDATE SET count = count + 1, updated_at = CURRENT_TIMESTAMP RETURNING count`
       : 'SELECT count FROM site_counters WHERE counter_key = ?';
-    const row = await env.MIAOBEAT_DB.prepare(query).bind(COUNTER_KEY).first();
+    let row;
+    if(counted){
+      const source=SOURCES.has(url.searchParams.get('source'))?url.searchParams.get('source'):'direct-unknown';
+      // D1 batch is transactional: total and this visit's source increment together.
+      const results=await env.MIAOBEAT_DB.batch([env.MIAOBEAT_DB.prepare(query).bind(COUNTER_KEY),env.MIAOBEAT_DB.prepare(query).bind('miao-beat:source:v1:'+source)]);
+      row=results[0].results?.[0];
+    }else row=await env.MIAOBEAT_DB.prepare(query).bind(COUNTER_KEY).first();
     const count = validCount(row);
     return json({count, counted, period: 'since-enabled', dedupeWindowHours: 24}, 200, counted ? {
       'Set-Cookie': `${COOKIE_NAME}=1; Max-Age=${MAX_AGE}; Path=/; HttpOnly; Secure; SameSite=Lax`,

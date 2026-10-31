@@ -2,14 +2,14 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {JSDOM} from 'jsdom';
 import worker from '../public/_worker.js';
-import {loadSiteCounter} from '../public/site-counter.js';
+import {loadSiteCounter,visitSource} from '../public/site-counter.js';
 
 const KEY = 'miao-beat:site-visits';
 function database() {
   const counts = new Map([['site-visits', 1402]]);
-  return {counts, prepare(sql) {return {bind(key) {
-    assert.equal(key, KEY, 'Beat can only access its fixed counter key');
-    return {async first() {
+  return {counts, async batch(statements){return Promise.all(statements.map(async s=>({results:[await s.first()]})));}, prepare(sql) {return {bind(key) {
+    assert.ok(key===KEY||/^miao-beat:source:v1:(miaoti|miaotarot|xiaohongshu|douyin|other-project|other|direct-unknown)$/.test(key), 'Only fixed Beat aggregate keys');
+    return {key,async first() {
       if (sql.startsWith('INSERT')) counts.set(key, (counts.get(key) || 0) + 1);
       return counts.has(key) ? {count: counts.get(key)} : null;
     }};
@@ -64,7 +64,7 @@ test('rejects cross-site, payload and unsupported-method requests without a writ
 test('missing database and invalid data fail explicitly; static assets are forwarded', async () => {
   assert.equal((await worker.fetch(request(), {})).status, 503);
   for (const value of [null, -1, '12', Number.MAX_SAFE_INTEGER + 1]) {
-    const env = {MIAOBEAT_DB: {prepare() {return {bind() {return {async first() {return {count: value};}};}};}}};
+    const env = {MIAOBEAT_DB: {prepare() {return {bind() {return {key,async first() {return {count: value};}};}};}}};
     assert.equal((await worker.fetch(request(), env)).status, 503);
   }
   let forwarded;
@@ -85,7 +85,7 @@ test('frontend sends no payload and displays the validated cumulative total', as
   await loadSiteCounter(dom.window.document, async (url, options) => {
     sent = {url, options}; return Response.json(payload(1234));
   });
-  assert.equal(sent.url, '/api/site-counter');
+  assert.equal(sent.url, '/api/site-counter?source=direct-unknown');
   assert.equal(sent.options.method, 'POST');
   assert.equal(sent.options.body, undefined);
   assert.equal(sent.options.credentials, 'same-origin');
@@ -114,4 +114,28 @@ test('frontend shows unknown for failures and malformed data, never a fabricated
     assert.equal(dom.window.document.getElementById('siteVisitCount').textContent, '累计访问：暂时未知');
     dom.window.close();
   }
+});
+
+
+test('source classification is bounded and never returns raw URLs or arbitrary campaign text',()=>{
+ for(const [url,ref,want] of [
+  ['https://miao-beat.pages.dev/?utm_source=miaoti','','miaoti'],
+  ['https://miao-beat.pages.dev/','https://miaoti-dmv.pages.dev/v1/?private=value','miaoti'],
+  ['https://miao-beat.pages.dev/?utm_source=douyin','https://miaoti-dmv.pages.dev/','douyin'],
+  ['https://miao-beat.pages.dev/?utm_source=someone@example.com','','other'],
+  ['https://miao-beat.pages.dev/','','direct-unknown'],
+  ['https://miao-beat.pages.dev/','https://evilxiaohongshu.com/','other'],
+ ])assert.equal(visitSource(url,ref),want);
+});
+
+test('a new referral increments its fixed bucket once; the existing 24-hour cookie dedupes both',async()=>{
+ const db=database(),env={MIAOBEAT_DB:db};
+ const url='https://miao-beat.pages.dev/api/site-counter?source=miaoti';
+ const first=await worker.fetch(new Request(url,{method:'POST'}),env);assert.equal((await first.json()).counted,true);
+ assert.equal(db.counts.get('miao-beat:source:v1:miaoti'),1);
+ await worker.fetch(new Request(url,{method:'POST',headers:{cookie:'miao_beat_visit=1'}}),env);
+ assert.equal(db.counts.get('miao-beat:source:v1:miaoti'),1);
+ await worker.fetch(new Request('https://miao-beat.pages.dev/api/site-counter?source=arbitrary-private-text',{method:'POST'}),env);
+ assert.equal(db.counts.get('miao-beat:source:v1:direct-unknown'),1);
+ assert.equal([...db.counts.keys()].some(k=>k.includes('arbitrary')),false);
 });

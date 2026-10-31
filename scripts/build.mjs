@@ -82,7 +82,8 @@ for(const group of Object.values(manifest.groups))for(const url of Object.values
  if(!/^\.\/samples\/[a-z-]+\/[A-Za-z0-9-]+\.mp3$/.test(url))throw Error('Invalid sample path');allowed.push(url.slice(2));
 }
 async function list(dir,prefix=''){const names=[];for(const entry of await fs.readdir(dir,{withFileTypes:true})){const name=prefix+entry.name;if(entry.isSymbolicLink())throw Error('Symlink in public');if(entry.isDirectory())names.push(...await list(path.join(dir,entry.name),name+'/'));else names.push(name);}return names;}
-const actual=await list(path.join(root,'public'));
+// The unshipped continuity timing study is intentionally excluded from production.
+const actual=(await list(path.join(root,'public'))).filter(name=>!name.startsWith('labs/image-continuity/'));
 if(actual.sort().join('|')!==[...allowed].sort().join('|'))throw Error('Unexpected public artifact: '+actual.filter(n=>!allowed.includes(n)).join(','));
 await fs.rm(path.join(root,'dist'),{recursive:true,force:true});await fs.mkdir(path.join(root,'dist'));
 const files={};for(const name of allowed){
@@ -93,5 +94,5 @@ const files={};for(const name of allowed){
  await fs.mkdir(path.dirname(path.join(root,'dist',name)),{recursive:true});await fs.writeFile(path.join(root,'dist',name),content);files[name]=createHash('sha256').update(content).digest('hex');
 }
 let commit='local';try{commit=execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8',stdio:['ignore','pipe','ignore']}).trim();}catch{}
-await fs.writeFile(path.join(root,'dist/release.json'),JSON.stringify({project:'miao-beat',version:'0.16.0-blender-pilot',commit,files},null,2)+'\n');
+await fs.writeFile(path.join(root,'dist/release.json'),JSON.stringify({project:'miao-beat',version:'0.17.0-experience',commit,files},null,2)+'\n');
 console.log('Built '+allowed.length+' explicit public files; whole-scene piano, guitar and drum poses, four sampled sounds and a visit counter.');

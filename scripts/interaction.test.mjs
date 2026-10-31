@@ -51,6 +51,7 @@ function setup(t,overrides={}) {
   w.URL.createObjectURL=blob=>{exportedBlob=blob;return 'blob:local-test';};
   w.URL.revokeObjectURL=()=>{};
   w.HTMLAnchorElement.prototype.click=function(){};
+  if(overrides.initialDraft)w.localStorage.setItem('miao-beat:takes:v1',overrides.initialDraft);
   w.__deps={...bindings,...scores,...recording,guidePosition,beatPattern,createMediaExport,mediaSupported,SampledAudio:FakeAudio,mountPerformance(){},mountKeyboardNavigation(){},loadSiteCounter(){},mountCharacter:()=>({ready:Promise.resolve(),strike(){}}),BeatClock:FakeClock,...overrides};
   w.eval('const {KEYS,MELODY,DRUMS,CHORDS,LEGACY_KEYS,SampledAudio,mountCharacter,mountPerformance,mountKeyboardNavigation,loadSiteCounter,BeatClock,SONGS,scoreEvents,guidePosition,beatPattern,createMediaExport,mediaSupported,CODES,MAX_MS,MAX_EVENTS,makeRecording,validateRecording}=window.__deps;\n'+app);
   const $=id=>w.document.getElementById(id);
@@ -111,11 +112,11 @@ test('blur cancels pending audio activation for recording, metronome, and live n
 test('a cold first note explains loading without replaying stale taps; a fresh input plays once',async t=>{
   const h=setup(t),{$,audio,key}=h;
   const release=audio.defer();key('keydown','KeyA');await settle();key('keyup','KeyA');
-  assert.equal($('soundStatus').dataset.state,'loading');assert.match($('soundStatus').textContent,/加载.*再点/);
+  assert.equal($('soundStatus').dataset.state,'loading');assert.match($('soundStatus').textContent,/加载.*再按/);
   assert.equal($('enableAudio').disabled,true);
   key('keydown','KeyD');key('keyup','KeyD');release();await settle();
   assert.equal(audio.plays.length,0,'initial and loading-time taps must never be queued');
-  assert.match($('soundStatus').textContent,/再按一下/);assert.equal($('enableAudio').disabled,false);
+  assert.match($('soundStatus').textContent,/声音就绪/);assert.equal($('enableAudio').disabled,false);
   key('keydown','KeyS');await settle();key('keyup','KeyS');
   assert.deepEqual(audio.plays.map(p=>p.code),['KeyS']);
 });
@@ -387,4 +388,55 @@ test('current-score export includes the full score without inventing a saved use
  $('bpm').value='120';$('exportAudio').click();await settle();
  for(let i=0;i<=140;i++){audio.context.currentTime=i*.04;h.tick();h.frame(audio.context.currentTime);}
  await settle();assert.equal(audio.plays.length,4);assert.equal($('downloadAudio').hidden,false);assert.equal($('playRecording').disabled,true);assert.equal($('exportRecording').disabled,true);
+});
+
+
+test('local draft survives reload, empty takes preserve it, and previous take can be restored',async t=>{
+ const h=setup(t),{$,audio,key,w}=h;
+ $('recordToggle').click();await settle();key('keydown','KeyA');await settle();key('keyup','KeyA');audio.context.currentTime=.5;$('recordToggle').click();
+ const first=w.localStorage.getItem('miao-beat:takes:v1');assert.deepEqual(JSON.parse(first).current.events,[[0,0]]);
+ const reload=setup(t,{initialDraft:first});assert.equal(reload.$('playRecording').disabled,false);assert.match(reload.$('draftStatus').textContent,/恢复/);
+ $('recordToggle').click();await settle();audio.context.currentTime=.7;$('recordToggle').click();assert.deepEqual(JSON.parse(w.localStorage.getItem('miao-beat:takes:v1')).current.events,[[0,0]]);
+ $('recordToggle').click();await settle();key('keydown','KeyS');await settle();key('keyup','KeyS');audio.context.currentTime=1;$('recordToggle').click();
+ let saved=JSON.parse(w.localStorage.getItem('miao-beat:takes:v1'));assert.equal(saved.current.events[0][1],1);assert.equal(saved.previous.events[0][1],0);
+ $('restorePrevious').click();saved=JSON.parse(w.localStorage.getItem('miao-beat:takes:v1'));assert.equal(saved.current.events[0][1],0);assert.equal(saved.previous.events[0][1],1);
+ const before=w.localStorage.getItem('miao-beat:takes:v1');await h.importFile({bad:true});assert.equal(w.localStorage.getItem('miao-beat:takes:v1'),before);
+ $('clearDraft').click();assert.ok(w.localStorage.getItem('miao-beat:takes:v1'));$('clearDraft').click();assert.equal(w.localStorage.getItem('miao-beat:takes:v1'),null);
+});
+
+test('bad local data and storage quota failures preserve a usable downloaded take',async t=>{
+ const h=setup(t,{initialDraft:'{bad'}),{$,audio,key,w}=h;assert.match($('draftStatus').textContent,/未读取/);
+ w.Storage.prototype.setItem=()=>{throw Error('quota');};$('recordToggle').click();await settle();key('keydown','KeyA');await settle();key('keyup','KeyA');audio.context.currentTime=.4;$('recordToggle').click();
+ assert.match($('draftStatus').textContent,/保存不可用/);assert.equal($('exportRecording').disabled,false);$('exportRecording').click();assert.equal(JSON.parse(await h.blob().text()).events.length,1);
+});
+
+test('phrase loop follows the shared audio clock over several rounds and records only the player',async t=>{
+ const h=setup(t),{$,audio,key}=h;
+ $('songSelect').value='birthday';$('songSelect').dispatchEvent(new h.w.Event('change'));$('suggestedTempo').click();assert.equal($('bpm').value,'104');assert.match($('tempoHint').textContent,/实际 104 BPM/);
+ $('phraseSelect').value='1';$('loopPhrase').checked=true;$('guideSong').click();await settle();$('recordToggle').click();await settle();key('keydown','KeyA');await settle();key('keyup','KeyA');
+ const phrase=scores.SONGS.find(s=>s.id==='birthday').phrases[1],duration=phrase.reduce((s,e)=>s+e.beats,0)*60/104;
+ for(let time=.05;time<duration*3;time+=.025){h.frame(time);h.tick();}
+ assert.equal($('guidePanel').hidden,false);assert.equal(audio.plays.length,1,'guide never plays melody');
+ $('recordToggle').click();$('stopSong').click();const saved=JSON.parse(h.w.localStorage.getItem('miao-beat:takes:v1'));assert.equal(saved.current.events.length,1);
+ const demo=setup(t);demo.$('songSelect').value='birthday';demo.$('songSelect').dispatchEvent(new demo.w.Event('change'));demo.$('suggestedTempo').click();demo.$('phraseSelect').value='1';demo.$('loopPhrase').checked=true;demo.$('listenSong').click();await settle();
+ for(let time=.025;time<25;time+=.025){demo.frame(time);demo.tick();}
+ const starts=demo.audio.plays.filter((_,i)=>i%phrase.length===0).map(e=>e.time);assert.ok(starts.length>=3);const period=starts[1]-starts[0];assert.ok(Math.abs(period/(60/104)/3-Math.round(period/(60/104)/3))<1e-8,'loop period keeps the bar phase');
+ demo.$('stopSong').click();const count=demo.audio.plays.length;demo.frame(30);demo.tick();assert.equal(demo.audio.plays.length,count);
+});
+
+test('first-phrase entry and label preferences remain distinct from human recording',async t=>{
+ const h=setup(t);h.$('keyLabels').value='note';h.$('keyLabels').dispatchEvent(new h.w.Event('change'));assert.equal(h.w.document.body.dataset.labels,'note');
+ h.$('firstPhrase').click();await settle();assert.equal(h.$('phraseSelect').value,'0');assert.equal(h.w.document.body.dataset.mode,'practice');assert.match(h.$('guideTrack').textContent,/C4/);assert.equal(h.$('playRecording').disabled,true);
+});
+
+test('ordinary replay scheduling gaps are disclosed and do not rewrite the take',async t=>{
+ const h=setup(t);await h.importFile({format:'miao-beat',version:2,engine:'sample-v1',instrument:'piano',bpm:96,meter:4,duration:1000,events:[[0,0],[500,1]]});
+ h.$('playRecording').click();await settle();h.frame(.9);h.tick();assert.match(h.$('recordingStatus').textContent,/卡顿/);h.frame(1.5);assert.match(h.$('recordingStatus').textContent,/卡顿/);
+ assert.equal(JSON.parse(h.w.localStorage.getItem('miao-beat:takes:v1')).current.events.length,2);
+});
+
+
+test('active guide and recording retain a stop control after switching to free play',async t=>{
+ const h=setup(t);h.$('firstPhrase').click();await settle();h.w.document.querySelector('[data-mode=free]').click();assert.equal(h.$('activityBar').hidden,false);assert.match(h.$('activityText').textContent,/跟弹/);h.$('stopActivity').click();assert.equal(h.$('guidePanel').hidden,true);assert.equal(h.$('instrumentSelect').disabled,false);
+ h.w.document.querySelector('[data-mode=record]').click();h.$('recordToggle').click();await settle();h.key('keydown','KeyA');await settle();h.key('keyup','KeyA');h.w.document.querySelector('[data-mode=free]').click();assert.match(h.$('activityText').textContent,/录制/);h.$('stopActivity').click();assert.equal(h.$('activityBar').hidden,true);assert.equal(JSON.parse(h.w.localStorage.getItem('miao-beat:takes:v1')).current.events.length,1);
 });
