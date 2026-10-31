@@ -40,8 +40,19 @@ Useful tagged links:
 
 ## Production acceptance
 
-Pending deployment and canonical byte/API/browser verification. Public start event persisted through the existing Seed task-status mechanism; end event follows actual production acceptance. Physical iPhone/Android touch, speaker latency and platform-native sharing remain unverified.
+Final production source `d4ef57a4b7bd2269cb9d1eef41a9cd274d5b467f`, deployment `83fafb03-f455-47ca-9fcf-f9f03a2f64e2`. Canonical release and290 public-file SHA checks pass;3 deployment configuration files are not public routes and are accepted through actual deployment/API behavior. The first full transport check hit TLS errors; bounded same-version retries succeeded, then unchanged verified hashes were reused and both changed patch resources were re-fetched. No TLS verification was disabled.
+
+Formal browser accepted: actual A/S/D inputs and nonzero audio level;500 Miles phrase4 at80 BPM and1.5-beat preparation with correct bar ticks; guide→record human A/S→free-mode Stop→reload preserves exactly2 inputs; actual square720×720 H.264/AAC download2.1038 seconds (non-silent encoded audio);390px portrait performance has350px surface, visible range controls and reachable high notes. Desktop/mobile screenshots and native outputs are saved locally. Final full suite **142/142**, fault-retry affected checks **48/48**.
+
+Six local browser contact samples measured3.2–12.7ms from accepted strike to draw invocation. These are after-only small samples, not a measured latency improvement, compositor presentation time or speaker latency.
+
+Start, transport-exception and same-scope verified-completion events are persisted for the existing protected Seed status publication. Physical iPhone/Android touch, speaker latency and platform-native sharing remain unverified.
 
 ## Capture retry repair · 0.17.1
 
 A final independent fault-injection check reproduced a sticky capture-failure flag preventing the next export's initial paint, even after normal cleanup. Capture-mode cleanup now clears the failed session flag; failures remain sticky during that session. The regression first failed on the old implementation and passed after the one-line repair. This is a recovery fix, not a claim of new animation frames.
+
+
+## Design and distribution research
+
+After the implementation and production gate, independent judges compared Bongo Cat, Patatap and Song Maker in actual browsers and prepared four Xiaohongshu/Douyin content scripts. The consolidated [design and launch plan](design-and-launch-plan-2026-10-31.md) separates tested product value from audience/marketing hypotheses. No social post, ad spend, account change or new recurring job was performed.
