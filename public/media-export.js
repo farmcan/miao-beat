@@ -3,7 +3,7 @@
 const TYPES={video:['video/mp4;codecs=avc1.420028,mp4a.40.2','video/mp4','video/webm;codecs=vp9,opus','video/webm;codecs=vp8,opus','video/webm'],audio:['audio/mp4;codecs=mp4a.40.2','audio/mp4','audio/webm;codecs=opus','audio/webm','audio/ogg;codecs=opus']};
 export function mediaExtension(type){return type.includes('mp4')?(type.startsWith('audio/')?'m4a':'mp4'):type.includes('ogg')?'ogg':'webm';}
 export function mediaSupported(kind,win=globalThis){return !!TYPES[kind]&&typeof win.MediaRecorder==='function'&&typeof win.MediaStream==='function'&&TYPES[kind].some(t=>win.MediaRecorder.isTypeSupported(t));}
-export async function createMediaExport({audio,source,kind,doc=document,label='钢琴',caption=()=>'',layout='original',title='',visualHealth=()=>true,maxBytes=128*1024*1024}){
+export async function createMediaExport({audio,source,kind,doc=document,label='钢琴',caption=()=>'',layout='original',title='',description='我的演奏',visualHealth=()=>true,maxBytes=128*1024*1024}){
   const win=doc.defaultView??globalThis,Recorder=win.MediaRecorder;
   const [width,height]=({original:[720,880],portrait:[720,1280],square:[720,720]})[layout]||[720,880];
   if(!mediaSupported(kind,win)||!audio.context?.createMediaStreamDestination||!audio.analyser)throw Error('这个浏览器暂不支持此格式，请换 Chrome、Edge 或 Safari 试试。');
@@ -15,18 +15,29 @@ export async function createMediaExport({audio,source,kind,doc=document,label='�
   const cleanup=()=>{win.cancelAnimationFrame(raf);win.clearTimeout(guard);try{audio.analyser.disconnect(destination);}catch{}for(const t of new Set([...(stream?.getTracks()??[]),...(videoStream?.getTracks()??[])]))t.stop();doc.removeEventListener('visibilitychange',hidden);};
   function fail(reason){if(settled)return;settled=true;cancelled=true;try{if(recorder?.state!=='inactive')recorder?.stop();}catch{}cleanup();const error=reason instanceof Error?reason:new Error(reason);rejectReady(error);rejectDone(error);}
   function hidden(){if(doc.hidden)fail('导出已取消：请留在当前页面，重新点导出。');}
+  function textWidth(text,size){return ctx.measureText?.(text)?.width??Array.from(text).length*size*.65;}
+  function fitText(value,maxWidth,size){const chars=Array.from(String(value));if(textWidth(chars.join(''),size)<=maxWidth)return chars.join('');while(chars.length&&textWidth(chars.join('')+'…',size)>maxWidth)chars.pop();return chars.join('')+'…';}
   function paint(){
     if(cancelled||settled)return;
     try{
       const now=win.performance.now();if(!visualHealth()||lastCapturePaint!==null&&now-lastCapturePaint>500)throw Error('Character stalled');lastCapturePaint=now;
+      const ink='#61412e',muted='#99785d',padding=40,sceneSize=Math.min(width-80,height-270),sceneTop=Math.round(174+(height-270-sceneSize)/2);
       ctx.fillStyle='#f8f4eb';ctx.fillRect(0,0,width,height);
-      ctx.fillStyle='#61412e';ctx.font='600 21px system-ui';ctx.textAlign='left';ctx.fillText('MIAO / BEAT',30,43);
-      ctx.textAlign='right';ctx.font='17px system-ui';ctx.fillText(String(label).slice(0,24),width-30,43,300);
-      const size=Math.min(width-24,height-180),top=Math.round(72+(height-180-size)/2);
-      // Fit ONE complete cat/paws/instrument scene; never crop or assemble limbs.
-      ctx.drawImage(source,(width-size)/2,top,size,size);
-      if(title){ctx.textAlign='center';ctx.font='600 23px system-ui';ctx.fillText(String(title).slice(0,32),width/2,top-13,width-60);}
-      ctx.fillStyle='#eadfce';ctx.fillRect(30,height-83,width-60,56);ctx.textAlign='center';ctx.fillStyle='#61412e';ctx.font='19px system-ui';ctx.fillText(String(caption()).slice(0,140),width/2,height-48,width-80);
+      ctx.fillStyle='#d19b6a';ctx.fillRect(padding,30,26,3);
+      ctx.fillStyle=muted;ctx.font='600 16px system-ui';ctx.textAlign='left';ctx.fillText('MIAO / BEAT',padding+38,39);
+      ctx.textAlign='right';ctx.font='16px system-ui';ctx.fillText(fitText(String(label),150,16),width-padding,39);
+      ctx.textAlign='left';ctx.fillStyle=ink;ctx.font='600 30px system-ui';
+      const heading=String(title||'我的小小演奏').slice(0,64),chars=Array.from(heading);let line='',lines=[];
+      for(const char of chars){if(textWidth(line+char,30)>width-padding*2&&line){lines.push(line);line=char;}else line+=char;}if(line)lines.push(line);
+      if(lines.length>2)lines=[lines[0],fitText(lines.slice(1).join(''),width-padding*2,30)];
+      lines.forEach((line,i)=>ctx.fillText(line,padding,88+i*38));
+      ctx.font='15px system-ui';ctx.fillStyle=muted;ctx.fillText(fitText(description,width-padding*2,15),padding,lines.length>1?146:116);
+      // A deliberate white print frame contains ONE entire scene, without cropping.
+      ctx.fillStyle='#e1d3bf';ctx.fillRect((width-sceneSize)/2-7,sceneTop-7,sceneSize+14,sceneSize+14);
+      ctx.fillStyle='#fff';ctx.fillRect((width-sceneSize)/2-6,sceneTop-6,sceneSize+12,sceneSize+12);
+      ctx.drawImage(source,(width-sceneSize)/2,sceneTop,sceneSize,sceneSize);
+      ctx.textAlign='center';ctx.fillStyle=ink;ctx.font='18px system-ui';ctx.fillText(fitText(String(caption()),width-100,18),width/2,height-51);
+      ctx.fillStyle=muted;ctx.font='13px system-ui';ctx.fillText('和猫弹两下 · 留下一小段',width/2,height-24);
     }catch{fail('画面录制中断，请重新导出。');}
   }
   function draw(){paint();if(!settled)raf=win.requestAnimationFrame(draw);}

@@ -53,3 +53,15 @@ test('failed or stalled character output aborts capture instead of reporting suc
  const h=fixture();let healthy=true;const job=await createMediaExport({...h,kind:'video',visualHealth:()=>healthy});healthy=false;
  for(const fn of [...h.frames.values()])fn();await assert.rejects(job.done,/画面录制中断/);assert.deepEqual(h.stops.sort(),['audio','video']);
 });
+
+test('all performance cards contain a full scene with long-title space and a separate footer',async()=>{
+ for(const layout of ['original','square','portrait']){
+  const h=fixture(),text=[];let image;
+  h.ctx.measureText=value=>({width:Array.from(value).length*(parseInt(h.ctx.font.match(/\d+px/)[0])||18)});
+  h.ctx.fillText=(value,x,y)=>{text.push({value,x,y,font:h.ctx.font});};h.ctx.drawImage=(source,x,y,width,height)=>{image={x,y,width,height};};
+  const job=await createMediaExport({...h,kind:'video',layout,title:'这是很长的演奏标题🎵🎵🎵请完整保留猫猫和乐器不要压住标题',description:'曲谱示范 · 80 BPM',caption:()=> 'a caption that must not escape its frame'.repeat(5)});
+  assert.equal(image.width,image.height);assert.ok(image.x>=0&&image.y>150&&image.x+image.width<=h.canvas.width&&image.y+image.height<h.canvas.height-70);
+  const headings=text.filter(x=>x.font==='600 30px system-ui');assert.ok(headings.length>=1&&headings.length<=2);assert.ok(headings.every(x=>x.y<image.y-20));assert.ok(text.some(x=>x.value==='曲谱示范 · 80 BPM'));assert.ok(text.at(-1).y<h.canvas.height);
+  job.stop();await job.done;
+ }
+});

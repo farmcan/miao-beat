@@ -580,3 +580,59 @@ body.performance-mode .activity-bar { grid-column:2; grid-row:4; align-self:end;
  body.performance-mode .playing-surface, body.performance-mode .melody-scroll, body.performance-mode .instrument-tabs, body.performance-mode .instrument-controls, body.performance-mode .sound-ready, body.performance-mode .mode-nav { width:100%; max-width:100%; min-width:0; }
  body.performance-mode .performance-row { align-self:center; }
 }
+
+/* Second review pass: make intentions visible before the stage. */
+.mode-nav { margin:0 0 8px; padding:0; border:0; }
+.mode-nav button { min-height:44px; max-width:none; }
+.workbench > .activity-bar { grid-column:1/-1; }
+.activity-bar #activityText { flex:1; }
+.activity-bar #activityElapsed { font-variant-numeric:tabular-nums; }
+.activity-bar button { min-height:44px; }
+.phrase-preview { font-size:12px; color:var(--ink); line-height:1.6; margin:14px 0 8px; overflow-wrap:anywhere; }
+.phrase-overview { display:flex; gap:8px; overflow-x:auto; max-width:100%; min-width:0; padding:2px 2px 10px; scroll-snap-type:x proximity; }
+.phrase-overview button { flex:0 0 146px; min-width:0; min-height:70px; padding:10px; border:1px solid var(--line); border-radius:10px; background:#fffaf2; color:var(--muted); text-align:left; scroll-snap-align:start; }
+.phrase-overview strong,.phrase-overview span { display:block; font-size:11px; line-height:1.5; }
+.phrase-overview span { margin-top:5px; overflow-wrap:anywhere; }
+.phrase-overview [aria-pressed=true] { border-color:#ce9c73; background:var(--orange-soft); color:#704226; }
+.phrase-overview button.playing { box-shadow:inset 0 -3px #a96b40; }
+.phrase-controls > label:first-child { max-width:100%; min-width:0; }
+.phrase-controls select { min-width:0; max-width:min(240px,60vw); }
+.metronome-details { margin-top:12px; }
+.metronome-details summary { min-height:44px; display:list-item; padding:12px 0; color:var(--muted); cursor:pointer; font-size:12px; }
+.metronome-details .meter-controls { margin-top:8px; }
+.metronome .tempo-slider { margin-top:10px; }
+@media(max-width:760px){
+ .mode-nav { margin:0 0 12px; padding:0; }
+ .metronome { display:block; }
+ body.has-activity { padding-bottom:calc(84px + env(safe-area-inset-bottom,0px)); }
+ body.has-activity .workbench { padding-bottom:0; }
+ .workbench > .activity-bar,body.performance-mode .workbench > .activity-bar { position:fixed; z-index:45; inset:auto max(10px,env(safe-area-inset-right,0px)) calc(8px + env(safe-area-inset-bottom,0px)) max(10px,env(safe-area-inset-left,0px)); width:auto; margin:0; background:#f3e8d3; box-shadow:0 5px 24px #51341a1a; }
+ body.performance-mode.has-activity .workbench { padding-bottom:calc(98px + env(safe-area-inset-bottom,0px)); }
+ body.performance-mode .mode-nav { order:0; margin:8px 0 12px; }
+ .phrase-overview button { flex-basis:138px; }
+}
+body.performance-mode .mode-nav { grid-row:2; }
+body.performance-mode .performance-row { grid-row:3 / span 4; }
+@media(min-width:761px){ body.performance-mode .mode-nav { margin:4px 0 8px; } }
+@media(max-width:760px){
+ body.performance-mode[data-mode=practice] .practice-dock,body.performance-mode[data-mode=record] .recording-strip { order:0; }
+ body.performance-mode .metronome { order:1; }
+}
+/* In the two-column performance view, intentions live above the cat;
+   instrument choices keep their own right-hand column. */
+@media(min-width:761px){
+ body.performance-mode .mode-nav { grid-column:1; grid-row:2; }
+ body.performance-mode .performance-row { grid-column:1; grid-row:3 / span 5; }
+}
+body.performance-mode.has-activity .workbench { padding-bottom:calc(98px + env(safe-area-inset-bottom,0px)); }
+body.performance-mode .workbench > .activity-bar { position:fixed; z-index:45; inset:auto max(10px,env(safe-area-inset-right,0px)) calc(8px + env(safe-area-inset-bottom,0px)) max(10px,env(safe-area-inset-left,0px)); width:auto; margin:0; background:#f3e8d3; box-shadow:0 5px 24px #51341a1a; }
+@media(orientation:landscape) and (max-height:550px){
+ /* Once ready, the dedicated sound row duplicates the playable keyboard.
+    Loading/error states remain visible so recovery is always available. */
+ body.performance-mode .sound-ready:has(.sound-status[data-state=running]:not(.error)),body.performance-mode .sound-ready:has(.sound-status[data-state=ready]:not(.error)) { display:none; }
+}
+@media(orientation:landscape) and (max-height:550px){
+ body.performance-mode .workbench { row-gap:2px; }
+ body.performance-mode .section-label { margin-bottom:2px; }
+ body.performance-mode .melody-keys { height:112px; }
+}

@@ -1,4 +1,5 @@
 import './family-referrals.js';
+import {normalizePracticePreferences} from './practice-preferences.js';
 import {KEYS,MELODY,DRUMS,CHORDS,LEGACY_KEYS} from './bindings.js';
 import {SampledAudio} from './sampled-audio.js';
 import {BeatClock,beatPattern} from './clock.js';
@@ -27,8 +28,12 @@ touchInstructions?.addEventListener?.('change',()=>{
 let cueCodes=[],guideIndex=-2,guideBeat=-1,lyricIndex=-1;
 const reducedMotion=window.matchMedia?.('(prefers-reduced-motion: reduce)');
 audio.onProgress=()=>{if(!loading)return;const p=audio.getLoadProgress($('instrumentSelect').value);status.dataset.loaded=String(p.loaded);status.dataset.total=String(p.total);status.textContent=`声音加载中（${p.loaded} / ${p.total}）`;};
+const PREFERENCES_KEY='miao-beat:practice:v1';let savedPreferences=null;
+try{const raw=localStorage.getItem(PREFERENCES_KEY);if(raw&&raw.length<=4096)savedPreferences=normalizePracticePreferences(JSON.parse(raw),SONGS);}catch{}
+if(savedPreferences)$('instrumentSelect').value=savedPreferences.instrument;
 mountPerformance(document);
 if(new URLSearchParams(location.search).get('instrument')==='guitar'){$('instrumentSelect').value='guitar';scene.dataset.instrument='guitar';}
+scene.dataset.instrument=$('instrumentSelect').value;
 const character=mountCharacter(scene);
 const motionToggle=$('guitarMotionToggle');if(motionToggle){scene.addEventListener('guitar-motion-status',event=>{motionToggle.disabled=event.detail!=='ready';$('guitarMotionLabel').textContent=event.detail==='loading'?'动作准备中…':event.detail==='ready'?'拨弦动作':'动作暂未加载';});motionToggle.checked=!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;let pointerMotion=false;motionToggle.closest('label').addEventListener('pointerdown',()=>{pointerMotion=true;});motionToggle.addEventListener('keydown',()=>{pointerMotion=false;});motionToggle.addEventListener('change',()=>{character.setMotionEnabled(motionToggle.checked);if(pointerMotion){pointerMotion=false;$('playingSurface').focus({preventScroll:true});}});}character.ready.catch(()=>{scene.dataset.characterStatus='whole-image-unavailable';});
 let loading=0,presetEpoch=0,mediaPending=false,mediaJob=null,mediaSerial=0;const mediaURLs={};
@@ -48,7 +53,7 @@ function loadDraft(){
   }catch{$('draftStatus').textContent='未读取旧草稿，仍可导入已保存的片段。';}
 }
 function setMode(mode){
-  document.body.dataset.mode=mode;
+  document.body.dataset.mode=mode;if(mode==='practice')requestAnimationFrame(revealPhraseSelection);
   for(const b of document.querySelectorAll('[data-mode]'))if(b.tagName==='BUTTON')b.setAttribute('aria-pressed',String(b.dataset.mode===mode));
 }
 for(const b of document.querySelectorAll('button[data-mode]'))b.addEventListener('click',()=>setMode(b.dataset.mode));
@@ -59,8 +64,8 @@ function currentLabels(){const value=$('keyLabels').value;return value==='auto'?
 function cueLabel(key){return currentLabels()==='key'?key.key:currentLabels()==='note'?key.sub:key.kind==='note'?key.label:key.label;}
 function renderLabels(){document.body.dataset.labels=currentLabels();for(const n of document.querySelectorAll('.score-note[data-codes]')){const keys=n.dataset.codes.split(',').filter(Boolean).map(code=>byCode.get(code));n.querySelector('.score-primary').textContent=keys.length?keys.map(cueLabel).join('+'):'休止';}}
 try{const value=localStorage.getItem('miao-beat:key-labels');if(['auto','key','number','note'].includes(value))$('keyLabels').value=value;}catch{}
-$('keyLabels').addEventListener('change',()=>{renderLabels();try{localStorage.setItem('miao-beat:key-labels',$('keyLabels').value);}catch{}});
-touchInstructions?.addEventListener?.('change',renderLabels);
+$('keyLabels').addEventListener('change',()=>{renderLabels();renderPhraseOverview();try{localStorage.setItem('miao-beat:key-labels',$('keyLabels').value);}catch{}});
+touchInstructions?.addEventListener?.('change',()=>{renderLabels();renderPhraseOverview();});
 setMode('free');renderLabels();loadDraft();
 const clock=new BeatClock(audio,beat=>{
   for(const item of $('beatIndicator').children)item.classList.toggle('active',Number(item.dataset.beat)===beat);
@@ -105,7 +110,7 @@ function runFrame(){
   if(performance.now()>beatUntil)scene.classList.remove('beat-pulse');
   const rms=audio.level();$('signal').style.setProperty('--level',Math.min(1,rms*7));$('signal').setAttribute('aria-valuenow',String(Math.round(Math.min(1,rms*7)*100)));$('signal').dataset.peak=audio.peak.toFixed(5);
   if(recordStart!==null){
-    const duration=Math.min(MAX_MS,Math.round((now-recordStart)*1000));$('recordingInfo').textContent=`${(duration/1000).toFixed(1)} 秒 · ${recording.events.length} 次敲击`;
+    updateActivity();const duration=Math.min(MAX_MS,Math.round((now-recordStart)*1000));$('recordingInfo').textContent=`${(duration/1000).toFixed(1)} 秒 · ${recording.events.length} 次敲击`;
     if(duration>=MAX_MS)finishRecording();
   }
   if(clock.running||session||recordStart!==null||performance.now()<meterUntil)frame=requestAnimationFrame(runFrame);else{frame=0;$('signal').setAttribute('aria-valuenow','0');$('signal').style.setProperty('--level',0);}
@@ -170,7 +175,7 @@ function changeTempo(){
 $('bpm').addEventListener('input',changeTempo);$('meterSelect').addEventListener('change',changeTempo);
 for(const id of ['metronomeSound','metronomeAccent'])$(id).addEventListener('change',()=>{clock.setSound($('metronomeSound').value,$('metronomeAccent').value);if(clock.running)clock.start(Number($('bpm').value),Number($('meterSelect').value),session?.guide?session.origin:undefined);paintClock();});
 let taps=[];
-$('tapTempo').addEventListener('click',()=>{const now=performance.now();if(taps.length&&now-taps.at(-1)>2000)taps=[];taps.push(now);if(taps.length>5)taps.shift();if(taps.length>=2){$('bpm').value=String(Math.max(50,Math.min(180,Math.round(60000/((taps.at(-1)-taps[0])/(taps.length-1))))));changeTempo();}});
+$('tapTempo').addEventListener('click',()=>{const now=performance.now();if(taps.length&&now-taps.at(-1)>2000)taps=[];taps.push(now);if(taps.length>5)taps.shift();if(taps.length>=2){$('bpm').value=String(Math.max(50,Math.min(180,Math.round(60000/((taps.at(-1)-taps[0])/(taps.length-1))))));changeTempo();persistPreferences();}});
 $('volume').addEventListener('input',event=>{audio.setVolume(Number(event.target.value)/100);$('volumeValue').textContent=event.target.value+'%';});
 async function prepareSession(preset,engine='sample-v1'){
   if(sessionPending||recordPending||importPending||recordStart!==null)return false;const id=++sessionSerial,version=lifecycle;sessionPending=id;updateRecorder();
@@ -181,6 +186,7 @@ function clearGuidance(){
   for(const n of document.querySelectorAll('.score-note.playing'))n.classList.remove('playing');
   lyricIndex=-1;$('lyricPanel').hidden=true;$('lyricCurrent').textContent='';$('lyricNext').textContent='';$('lyricPosition').textContent='';delete $('lyricPanel').dataset.line;
   for(const line of document.querySelectorAll('.score-lyric[aria-current]'))line.removeAttribute('aria-current');
+  for(const b of $('phraseOverview').querySelectorAll('.playing'))b.classList.remove('playing');
   guideIndex=-2;guideBeat=-1;delete $('guidePanel').dataset.cue;$('guidePanel').hidden=true;$('guideTrack').replaceChildren();
   $('guideProgress').setAttribute('aria-valuenow','0');$('guideProgressFill').style.width='0%';$('guideAnnounce').textContent='';
 }
@@ -221,14 +227,42 @@ function populateSongs(){
 function selectedSong(){return SONGS.find(s=>$('songSelect').value===s.id)||SONGS[0];}
 function updateTempoHint(){const song=selectedSong();$('tempoHint').textContent=`实际 ${$('bpm').value} BPM · 建议 ${song.bpm} BPM`;$('suggestedTempo').textContent=`用建议 ${song.bpm} BPM`;}
 function practiceSelection(){
-  const song=selectedSong(),bpm=Number($('bpm').value),choice=$('phraseSelect').value,phrase=choice==='all'?-1:Number(choice);
+  const song=selectedSong(),bpm=Number($('bpm').value),choice=$('phraseSelect').value,index=Number(choice),phrase=choice!=='all'&&Number.isInteger(index)&&index>=0&&index<song.phrases.length?index:-1;
   const selection=scoreWindow(song,bpm,phrase);
   return {...selection,song,bpm,phrase,events:selection.events.map(e=>({...e,keys:scoreKeys(e)}))};
 }
-function renderScore(){
+function phraseExcerpt(song,index){
+  if(song.lyrics?.[index])return song.lyrics[index];
+  const events=song.phrases[index],head=events.slice(0,4).map(e=>e.rest?'休止':scoreKeys(e).map(cueLabel).join('+')).join(' · ');
+  return head+(events.length>4?' …':'');
+}
+function renderPhraseOverview(){
+  const song=selectedSong(),value=$('phraseSelect').value,root=$('phraseOverview');root.replaceChildren();
+  for(const [index]of song.phrases.entries()){
+    const b=document.createElement('button');b.type='button';b.dataset.phrase=String(index);b.setAttribute('aria-pressed',String(value===String(index)));
+    const title=document.createElement('strong'),excerpt=document.createElement('span');title.textContent=`第 ${index+1} 句`;excerpt.textContent=phraseExcerpt(song,index);b.append(title,excerpt);
+    b.addEventListener('click',()=>{if(b.disabled)return;$('phraseSelect').value=String(index);$('phraseSelect').dispatchEvent(new Event('change'));});root.append(b);
+  }
+  for(const [i,o]of [...$('phraseSelect').options].slice(1).entries())o.textContent=`第 ${i+1} 句 · ${phraseExcerpt(song,i)}`;
+  updatePhraseOverview();
+}
+function revealPhraseSelection(){
+  const root=$('phraseOverview'),button=root.querySelector('[aria-pressed=true]');if(!button||!root.clientWidth)return;const r=root.getBoundingClientRect(),b=button.getBoundingClientRect();root.scrollTo?.({left:root.scrollLeft+b.left-r.left-(r.width-b.width)/2,behavior:reducedMotion?.matches?'auto':'smooth'});
+}
+function updatePhraseOverview(playing=-1){
+  const song=selectedSong(),value=$('phraseSelect').value;
+  $('phrasePreview').textContent=value==='all'?`整首 · ${song.phrases.length} 句 · 点下面挑一句`:`第 ${Number(value)+1} 句 · ${phraseExcerpt(song,Number(value))}`;
+  for(const b of $('phraseOverview').querySelectorAll('button')){b.setAttribute('aria-pressed',String(b.dataset.phrase===value));b.classList.toggle('playing',Number(b.dataset.phrase)===playing);}
+}
+function persistPreferences(){
+  const preferences=normalizePracticePreferences({version:1,instrument:$('instrumentSelect').value,song:$('songSelect').value,bpm:Number($('bpm').value),meter:Number($('meterSelect').value),phrase:$('phraseSelect').value,loop:$('loopPhrase').checked,layout:$('exportLayout').value},SONGS);
+  try{localStorage.setItem(PREFERENCES_KEY,JSON.stringify(preferences));}catch{/* Playing and take downloads remain available. */}
+}
+function renderScore(restorePhrase='all'){
   stopSession();const song=selectedSong();$('phraseSelect').replaceChildren();
-  for(const [value,label]of [['all','整首'],...song.phrases.map((p,i)=>[String(i),`第 ${i+1} 句${song.lyrics?' · '+song.lyrics[i]:''}`])]){const o=document.createElement('option');o.value=value;o.textContent=label;$('phraseSelect').append(o);}
-  updateTempoHint();$('songInfo').textContent=`${song.key} · ${song.meter}/4 拍 · 建议 ${song.bpm} BPM。${song.description}`;$('scoreRows').replaceChildren();let index=0;
+  for(const [value,label]of [['all','整首'],...song.phrases.map((p,i)=>[String(i),`第 ${i+1} 句 · ${phraseExcerpt(song,i)}`])]){const o=document.createElement('option');o.value=value;o.textContent=label;$('phraseSelect').append(o);}
+  if([...$('phraseSelect').options].some(o=>o.value===restorePhrase))$('phraseSelect').value=restorePhrase;
+  renderPhraseOverview();updateTempoHint();$('songInfo').textContent=`${song.key} · ${song.meter}/4 拍 · 建议 ${song.bpm} BPM。${song.description}`;$('scoreRows').replaceChildren();let index=0;
   $('scoreSourceRow').hidden=!song.sourceLabel;if(song.sourceLabel){$('scoreSource').href=song.sourceUrl;$('scoreSource').textContent=song.sourceLabel;}
   for(const [lineIndex,phrase]of song.phrases.entries()){const row=document.createElement('div');row.className='score-phrase';for(const event of phrase){const keys=scoreKeys(event),n=document.createElement('div');n.className='score-note';n.dataset.scoreIndex=String(index++);n.dataset.codes=keys.map(k=>k.code).join(',');n.innerHTML=`<span class="score-primary">${event.rest?'休止':keys.map(cueLabel).join('+')}</span><kbd>${event.rest?'休止':keys.map(k=>k.key).join('+')}</kbd><small>${event.beats} 拍</small>`;row.append(n);}if(song.lyrics){const line=document.createElement('p'),block=document.createElement('section');line.className='score-lyric';line.dataset.lyricIndex=String(lineIndex);line.textContent=song.lyrics[lineIndex];block.className='score-line';block.append(line,row);$('scoreRows').append(block);}else $('scoreRows').append(row);}
   $('practiceHint').textContent=`${song.name} · ${song.key} · ${song.meter}/4 · 建议 ${song.bpm} BPM。点“听一遍”先听。`;
@@ -263,7 +297,9 @@ function renderGuidance(now){
     $('guideNow').textContent=current?.rest?`休止 · ${restHint(current)}`:current?`现在 ${current.keys.map(cueLabel).join(' + ')} · ${current.keys.map(k=>k.kind==='note'?k.sub:k.label).join('+')}`:'听预备拍';
     $('guideNext').textContent=next?.rest?`接着${restHint(next)}`:next?`下一音 ${next.keys.map(cueLabel).join(' + ')}`:current?.rest?'弹完啦': '最后一音';
     for(const n of document.querySelectorAll('.score-note.playing'))n.classList.remove('playing');
-    if(current)document.querySelector(`[data-score-index="${current.index}"]`)?.classList.add('playing');
+    if(current){document.querySelector(`[data-score-index="${current.index}"]`)?.classList.add('playing');
+      let begin=0,phrase=0;for(const [i,row]of selectedSong().phrases.entries()){if(current.index<begin+row.length){phrase=i;break;}begin+=row.length;}updatePhraseOverview(phrase);
+    }
     $('guidePanel').dataset.index=String(p.index);$('guidePanel').dataset.bar=String(p.bar);$('guidePanel').dataset.beat=String(p.beat);
   }
   const cue=p.index>=0?guide.events[p.index]:guide.events[0],upcoming=elapsed<0;
@@ -274,12 +310,12 @@ function renderGuidance(now){
   }
 }
 $('songSelect').addEventListener('change',renderScore);
-$('phraseSelect').addEventListener('change',()=>{stopSession();updateRecorder();});
-$('suggestedTempo').addEventListener('click',()=>{$('bpm').value=String(selectedSong().bpm);changeTempo();});
-$('firstPhrase').addEventListener('click',()=>{$('phraseSelect').value='0';$('bpm').value=String(selectedSong().bpm);changeTempo();startScore('guide');});
+$('phraseSelect').addEventListener('change',()=>{stopSession();updatePhraseOverview();revealPhraseSelection();updateRecorder();});
+$('suggestedTempo').addEventListener('click',()=>{$('bpm').value=String(selectedSong().bpm);changeTempo();persistPreferences();});
+$('firstPhrase').addEventListener('click',()=>{$('phraseSelect').value='0';$('bpm').value=String(selectedSong().bpm);changeTempo();updatePhraseOverview();revealPhraseSelection();persistPreferences();startScore('guide');});
 async function startScore(kind){
   if(!await prepareSession($('instrumentSelect').value))return;
-  const selection=practiceSelection(),{song,bpm,duration,phaseBeats,countInBeats,loopSeconds}=selection,guideEvents=selection.events;$('meterSelect').value=String(song.meter);paintClock();setMode('practice');
+  const selection=practiceSelection(),{song,bpm,duration,phaseBeats,countInBeats,loopSeconds}=selection,guideEvents=selection.events;$('meterSelect').value=String(song.meter);paintClock();setMode('practice');persistPreferences();
   const events=guideEvents.flatMap(e=>e.keys.map(k=>({...e,code:k.code})));
   $('scoreStatus').textContent=kind==='guide'?`跟弹 ${bpm} BPM。只放节拍，旋律你来弹。`:`示范 ${bpm} BPM。点琴键就能接着弹。`;
   $('practiceHint').textContent=$('scoreStatus').textContent;
@@ -291,11 +327,13 @@ $('guideSong').addEventListener('click',()=>startScore('guide'));
 $('stopSong').addEventListener('click',()=>{lifecycle++;sessionPending=0;stopSession();$('scoreStatus').textContent='已停止。';$('practiceHint').textContent=$('scoreStatus').textContent;});
 function updateActivity(){
   const text=mediaBusy()?'正在导出，请留在此页':recordStart!==null?'录制中 · 只记录你的按键':session?.kind==='guide'?(session.loopSeconds?'循环跟弹中 · 旋律你来弹':'跟弹中 · 旋律你来弹'):session?'正在播放':clock.running?'节拍器进行中':'';
-  $('activityBar').hidden=!text;if($('activityText').textContent!==text)$('activityText').textContent=text;
+  $('activityBar').hidden=!text;document.body.classList.toggle('has-activity',!!text);
+  const elapsed=recordStart===null?'':`${Math.max(0,Math.floor((audio.context.currentTime-recordStart)/60))}:${String(Math.max(0,Math.floor(audio.context.currentTime-recordStart))%60).padStart(2,'0')}`;if($('activityElapsed').textContent!==elapsed)$('activityElapsed').textContent=elapsed;
+  if($('activityText').textContent!==text)$('activityText').textContent=text;
 }
 $('stopActivity').addEventListener('click',()=>{
   if(mediaBusy()){$('cancelMediaExport').click();return;}
-  finishRecording();stopSession();stopClock();updateActivity();
+  lifecycle++;sessionPending=0;recordPending=false;finishRecording();stopSession();stopClock();updateActivity();
 });
 function updateRecorder(){
   updateActivity();const busy=mediaBusy(),active=recordStart!==null||recordPending;const playing=session?.kind==='recording';
@@ -312,6 +350,7 @@ function updateRecorder(){
   const locked=busy||active||!!session||!!sessionPending||importPending;
   for(const b of document.querySelectorAll('#instrumentTabs button'))b.disabled=$('instrumentSelect').disabled;
   for(const id of ['phraseSelect','loopPhrase','suggestedTempo','firstPhrase','keyLabels'])$(id).disabled=locked;
+  for(const b of $('phraseOverview').querySelectorAll('button'))b.disabled=locked;
   $('restorePrevious').disabled=locked||!previousTake?.events.length;$('clearDraft').disabled=locked||!recording?.events.length&&!previousTake?.events.length;
   $('exportOptions').hidden=!hasMediaSource;
   for(const id of ['exportLayout','exportTitle'])$(id).disabled=busy;
@@ -334,7 +373,7 @@ $('recordToggle').addEventListener('click',async()=>{
 });
 $('playRecording').addEventListener('click',async()=>{
   if(session?.kind==='recording'){stopSession();$('recordingStatus').textContent='回放已停止。';return;}
-  if(!recording?.events.length)return;if(recording.engine==='sample-v1'){$('instrumentSelect').value=recording.instrument;renderInstrument();populateSongs();renderScore();}if(!await prepareSession(recording.instrument,recording.engine))return;const events=recording.events.map(([time,code])=>({offset:time/1000,code:CODES[code]}));
+  if(!recording?.events.length)return;if(recording.engine==='sample-v1'){$('instrumentSelect').value=recording.instrument;const phrase=$('phraseSelect').value,song=$('songSelect').value;renderInstrument();populateSongs();renderScore(song===$('songSelect').value?phrase:'all');}if(!await prepareSession(recording.instrument,recording.engine))return;const events=recording.events.map(([time,code])=>({offset:time/1000,code:CODES[code]}));
   playEvents(events,recording.duration/1000,'recording',recording.instrument,recording.engine);$('recordingStatus').textContent='正在回放。点琴键就能接着弹。';
 });
 $('exportRecording').addEventListener('click',()=>{
@@ -372,12 +411,12 @@ async function exportMedia(kind){
       exportGuide={events:guideEvents,bpm,meter:song.meter,phaseBeats,countInBeats,songName:song.name,lyrics:song.lyrics};
     }else data=validateRecording(recording);
     $('mediaVideo').pause();$('mediaAudio').pause();
-    $('instrumentSelect').value=data.engine==='ui-synth-v1'?'piano':data.instrument;renderInstrument();populateSongs();renderScore();
+    const phrase=$('phraseSelect').value,song=$('songSelect').value;$('instrumentSelect').value=data.engine==='ui-synth-v1'?'piano':data.instrument;renderInstrument();populateSongs();renderScore(song===$('songSelect').value?phrase:'all');
     if(!await ready(data.instrument,data.engine))throw Error('声音还没准备好，请重试。');
     stopSession();stopClock();clearHeld();audio.stopVoices();
     if(kind==='video'){await character.ready;await character.prepareCapture?.(data.events.map(([time,code])=>({time,code:CODES[code]})));}
     if(serial!==mediaSerial||document.hidden)throw Error('导出已取消。');
-    job=await createMediaExport({audio,source:scene.querySelector('.full-frame-cat-canvas'),kind,doc:document,layout:$('exportLayout').value,title:$('exportTitle').value,visualHealth:()=>character.captureHealthy?.()!==false,label:data.engine==='ui-synth-v1'?(data.instrument==='sparkle'?'旧版晶亮音色':'旧版马林巴'):($('instrumentSelect').selectedOptions[0]?.textContent||'Miao Beat'),caption:()=>exportGuide?.lyrics?$('lyricCurrent').textContent:$('nowPlaying').textContent});
+    job=await createMediaExport({audio,source:scene.querySelector('.full-frame-cat-canvas'),kind,doc:document,layout:$('exportLayout').value,title:$('exportTitle').value||(exportGuide?.songName||'我的小小演奏'),description:`${exportGuide?'曲谱示范':'我的演奏'} · ${data.bpm} BPM`,visualHealth:()=>character.captureHealthy?.()!==false,label:data.engine==='ui-synth-v1'?(data.instrument==='sparkle'?'旧版晶亮音色':'旧版马林巴'):($('instrumentSelect').selectedOptions[0]?.textContent||'Miao Beat'),caption:()=>exportGuide?.lyrics?$('lyricCurrent').textContent:$('nowPlaying').textContent});
     if(serial!==mediaSerial||document.hidden){job.cancel();await job.done;return;}
     mediaJob=job;mediaPending=false;if(kind==='video')character.setCaptureMode?.(true);updateRecorder();
     const events=data.events.map(([time,code])=>({offset:time/1000,code:CODES[code]}));
@@ -398,7 +437,12 @@ $('cancelMediaExport').addEventListener('click',()=>{mediaSerial++;mediaPending=
 function pauseAll(){if(mediaBusy()){mediaSerial++;mediaPending=false;mediaJob?.cancel('导出已取消：页面已离开前台。请留在此页重新导出。');$('mediaStatus').textContent='导出已取消：页面已离开前台。请留在此页重新导出。';$('mediaProgress').hidden=true;}const guided=!!session?.guide||!!sessionPending;lifecycle++;recordPending=false;sessionPending=0;clearHeld();stopClock();stopSession();finishRecording();audio.stopVoices();if(guided){$('practiceHint').textContent='已暂停。点“跟着弹”重新开始。';$('scoreStatus').textContent=$('practiceHint').textContent;}}
 window.addEventListener('pagehide',()=>{finishRecording();});
 window.addEventListener('blur',pauseAll);document.addEventListener('visibilitychange',()=>{if(document.hidden)pauseAll();});
-renderInstrument();populateSongs();renderScore();paintClock();updateRecorder();
+renderInstrument();populateSongs();
+if(savedPreferences&&[...$('songSelect').options].some(o=>o.value===savedPreferences.song)){
+  $('songSelect').value=savedPreferences.song;$('bpm').value=String(savedPreferences.bpm);$('meterSelect').value=String(savedPreferences.meter);$('loopPhrase').checked=savedPreferences.loop;$('exportLayout').value=savedPreferences.layout;
+}
+renderScore(savedPreferences?.phrase);$('bpmValue').textContent=$('bpm').value;paintClock();updateRecorder();
+for(const [id,event]of [['instrumentSelect','change'],['songSelect','change'],['bpm','input'],['meterSelect','change'],['phraseSelect','change'],['loopPhrase','change'],['exportLayout','change']])$(id).addEventListener(event,persistPreferences);
 
 // Reuse the owner's existing voluntary support image; no payment API or account.
 const supportDialog=$('supportDialog');

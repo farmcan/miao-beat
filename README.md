@@ -9,6 +9,8 @@ A small browser instrument playground. Follow a metronome, play your own music, 
 - Generate the next motion video on another computer: [one-document handoff](docs/video-animation-handoff.md), with committed reference images and copyable prompts.
 - Public products never link back to the owner’s personal website or research hub.
 
+2026-10-31 · 0.18.0: Choose a mode before the stage, recognize phrases by lyrics/notes, resume local practice preferences, reach mobile/fullscreen Stop, and export a composed full-scene performance card. [Implementation, independent reviews and limits](docs/experience-polish-plan-2026-10-31.md).
+
 2026-10-31 · Family referrals: MiaoTI, Miao Beat and MiaoTarot now record anonymous daily click/arrival aggregates in all six directions, with separate internal QA traffic and an owner-only query command. [Production acceptance and usage](docs/family-referrals-2026-10-31.md).
 
 2026-10-31 · 0.17.0: Compact mobile stage, visible instrument choices, adaptive key labels and free/practice/record tools. Local current/previous takes survive refresh; practice supports individual phrases, audio-clock loops and explicit suggested tempo. Video adds square/9:16 layouts and titles. Complete-image capture detects stalled frames; anonymous inbound sources use fixed aggregate buckets. The orange-cat whole-image identity remains; this improves readiness/timing and does not claim newly generated continuous animation or physical-phone audio acceptance. [Plan and acceptance](docs/experience-upgrade-plan-2026-10-31.md), [release evidence](docs/experience-upgrade-release-2026-10-31.md).

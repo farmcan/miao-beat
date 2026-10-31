@@ -113,3 +113,15 @@ test('capture cleanup clears a prior draw failure before the next exporter start
  controller.setCaptureMode(false);
  assert.equal(controller.captureHealthy(),true,'the next exporter paints before enabling capture mode; a cleaned-up job must not poison that startup check');
 });
+
+test('contact timing captures the first contact of a strike, not later held-key redraws',async t=>{
+ const {JSDOM}=await import('jsdom'),{mountCharacter}=await import('../public/full-frame-character.js');
+ const dom=new JSDOM('<div id="scene" data-instrument="piano"><div class="stage-readout"></div></div>'),w=dom.window;let now=10,serial=0;const queue=new Map();
+ t.mock.method(w.performance,'now',()=>now);w.requestAnimationFrame=fn=>{queue.set(++serial,fn);return serial;};w.cancelAnimationFrame=id=>queue.delete(id);w.HTMLCanvasElement.prototype.getContext=()=>({drawImage(){}});w.createImageBitmap=async()=>({width:1254,height:1254,close(){}});
+ t.mock.method(globalThis,'fetch',async input=>new URL(input).pathname.endsWith('manifest.json')?Response.json(config):new Response('frame'));
+ const scene=w.document.querySelector('#scene'),controller=mountCharacter(scene),tick=()=>new Promise(setImmediate),frame=async time=>{now=time;const callbacks=[...queue.values()];queue.clear();for(const fn of callbacks)fn(now);await tick();};
+ t.after(()=>{controller.destroy();w.close();});await controller.ready;await tick();
+ controller.update('piano',[key('KeyA'),key('KeyD'),key('KeyG')]);controller.strike(key('KeyA'));controller.strike(key('KeyD'));controller.strike(key('KeyG'));await frame(20);assert.equal(scene.dataset.contactPaintDelayMs,'10');assert.equal(scene.dataset.contactStrikeSerial,'3');
+ // Releasing only the latest left key paints a different complete contact frame.
+ controller.update('piano',[key('KeyA'),key('KeyG')]);await frame(130);assert.equal(scene.dataset.wholeFrame,'KeyA-KeyG');assert.equal(scene.dataset.contactPaintDelayMs,'10','later held pose cannot inflate first-contact delay');
+});

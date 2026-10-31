@@ -8,6 +8,7 @@ import * as bindings from '../public/bindings.js';
 import * as scores from '../public/scores.js';
 import * as recording from '../public/recording.js';
 import {createMediaExport,mediaSupported} from '../public/media-export.js';
+import {normalizePracticePreferences} from '../public/practice-preferences.js';
 import {beatPattern} from '../public/clock.js';
 import {guidePosition} from '../public/guidance.js';
 
@@ -51,9 +52,10 @@ function setup(t,overrides={}) {
   w.URL.createObjectURL=blob=>{exportedBlob=blob;return 'blob:local-test';};
   w.URL.revokeObjectURL=()=>{};
   w.HTMLAnchorElement.prototype.click=function(){};
+  if(overrides.initialPreferences)w.localStorage.setItem('miao-beat:practice:v1',overrides.initialPreferences);
   if(overrides.initialDraft)w.localStorage.setItem('miao-beat:takes:v1',overrides.initialDraft);
-  w.__deps={...bindings,...scores,...recording,guidePosition,beatPattern,createMediaExport,mediaSupported,SampledAudio:FakeAudio,mountPerformance(){},mountKeyboardNavigation(){},loadSiteCounter(){},mountCharacter:()=>({ready:Promise.resolve(),strike(){}}),BeatClock:FakeClock,...overrides};
-  w.eval('const {KEYS,MELODY,DRUMS,CHORDS,LEGACY_KEYS,SampledAudio,mountCharacter,mountPerformance,mountKeyboardNavigation,loadSiteCounter,BeatClock,SONGS,scoreEvents,scoreWindow,guidePosition,beatPattern,createMediaExport,mediaSupported,CODES,MAX_MS,MAX_EVENTS,makeRecording,validateRecording}=window.__deps;\n'+app);
+  w.__deps={...bindings,...scores,...recording,normalizePracticePreferences,guidePosition,beatPattern,createMediaExport,mediaSupported,SampledAudio:FakeAudio,mountPerformance(){},mountKeyboardNavigation(){},loadSiteCounter(){},mountCharacter:()=>({ready:Promise.resolve(),strike(){}}),BeatClock:FakeClock,...overrides};
+  w.eval('const {normalizePracticePreferences,KEYS,MELODY,DRUMS,CHORDS,LEGACY_KEYS,SampledAudio,mountCharacter,mountPerformance,mountKeyboardNavigation,loadSiteCounter,BeatClock,SONGS,scoreEvents,scoreWindow,guidePosition,beatPattern,createMediaExport,mediaSupported,CODES,MAX_MS,MAX_EVENTS,makeRecording,validateRecording}=window.__deps;\n'+app);
   const $=id=>w.document.getElementById(id);
   const key=(type,code,target=w.document,options={})=>target.dispatchEvent(new w.KeyboardEvent(type,{code,bubbles:true,cancelable:true,...options}));
   const frame=time=>{audio.context.currentTime=time;const queued=[...frames.values()];frames.clear();for(const fn of queued)fn();};
@@ -439,4 +441,47 @@ test('ordinary replay scheduling gaps are disclosed and do not rewrite the take'
 test('active guide and recording retain a stop control after switching to free play',async t=>{
  const h=setup(t);h.$('firstPhrase').click();await settle();h.w.document.querySelector('[data-mode=free]').click();assert.equal(h.$('activityBar').hidden,false);assert.match(h.$('activityText').textContent,/跟弹/);h.$('stopActivity').click();assert.equal(h.$('guidePanel').hidden,true);assert.equal(h.$('instrumentSelect').disabled,false);
  h.w.document.querySelector('[data-mode=record]').click();h.$('recordToggle').click();await settle();h.key('keydown','KeyA');await settle();h.key('keyup','KeyA');h.w.document.querySelector('[data-mode=free]').click();assert.match(h.$('activityText').textContent,/录制/);h.$('stopActivity').click();assert.equal(h.$('activityBar').hidden,true);assert.equal(JSON.parse(h.w.localStorage.getItem('miao-beat:takes:v1')).current.events.length,1);
+});
+
+test('practice choices survive reload without starting audio, playback or recording; text stays private',async t=>{
+ const h=setup(t),{$,w}=h;
+ $('instrumentSelect').value='guitar';$('instrumentSelect').dispatchEvent(new w.Event('change'));
+ $('songSelect').value='five-hundred-miles';$('songSelect').dispatchEvent(new w.Event('change'));
+ $('phraseSelect').value='25';$('phraseSelect').dispatchEvent(new w.Event('change'));
+ $('bpm').value='73';$('bpm').dispatchEvent(new w.Event('input'));
+ $('loopPhrase').checked=true;$('loopPhrase').dispatchEvent(new w.Event('change'));
+ $('exportLayout').value='portrait';$('exportLayout').dispatchEvent(new w.Event('change'));
+ $('exportTitle').value='private free text';
+ const saved=w.localStorage.getItem('miao-beat:practice:v1');assert.ok(saved);assert.equal(saved.includes('private'),false);
+ const restored=setup(t,{initialPreferences:saved});
+ assert.equal(restored.$('instrumentSelect').value,'guitar');assert.equal(restored.$('songSelect').value,'five-hundred-miles');assert.equal(restored.$('phraseSelect').value,'25');assert.equal(restored.$('bpm').value,'73');assert.equal(restored.$('loopPhrase').checked,true);assert.equal(restored.$('exportLayout').value,'portrait');
+ assert.equal(restored.audio.plays.length,0);assert.equal(restored.clock.running,false);assert.equal(restored.$('recordToggle').getAttribute('aria-pressed'),'false');assert.equal(restored.w.document.body.dataset.mode,'free');
+ // A shorter new score cannot inherit an out-of-range old phrase.
+ restored.$('songSelect').value='twinkle';restored.$('songSelect').dispatchEvent(new restored.w.Event('change'));assert.equal(restored.$('phraseSelect').value,'all');
+});
+test('phrase overview and select agree, show note/lyric previews and never record generated input',async t=>{
+ const h=setup(t),{$,w}=h;
+ assert.match($('phraseSelect').options[1].textContent,/A · A · G · G/);
+ $('phraseOverview').querySelector('[data-phrase="1"]').click();assert.equal($('phraseSelect').value,'1');assert.match($('phrasePreview').textContent,/第 2 句/);
+ $('keyLabels').value='note';$('keyLabels').dispatchEvent(new w.Event('change'));assert.match($('phraseOverview').textContent,/F4 · F4 · E4/);
+ $('songSelect').value='five-hundred-miles';$('songSelect').dispatchEvent(new w.Event('change'));assert.match($('phraseOverview').textContent,/If you missed/);
+ $('guideSong').click();await settle();assert.ok([...$('phraseOverview').querySelectorAll('button')].every(b=>b.disabled));assert.equal($('recordingInfo').textContent,'0:00 · 0 次按键');
+ $('stopActivity').click();assert.ok([...$('phraseOverview').querySelectorAll('button')].every(b=>!b.disabled));
+});
+test('malformed or unavailable preference storage does not prevent free playing or take recovery',async t=>{
+ const h=setup(t,{initialPreferences:'{bad'});h.key('keydown','KeyA');await settle();assert.equal(h.audio.plays.length,1);
+ h.w.Storage.prototype.setItem=()=>{throw new Error('denied');};h.$('bpm').value='80';h.$('bpm').dispatchEvent(new h.w.Event('input'));h.key('keyup','KeyA');h.key('keydown','KeyS');await settle();assert.equal(h.audio.plays.length,2);
+});
+
+test('cross-mode stop cancels a loading guide or recording before readiness can restart it',async t=>{
+ for(const action of ['guideSong','recordToggle']){
+  const h=setup(t);h.$('metronomeToggle').click();await settle();assert.equal(h.clock.running,true);
+  const release=h.audio.defer();h.$(action).click();await settle();assert.equal(h.$('activityBar').hidden,false);
+  h.$('stopActivity').click();release();await settle();assert.equal(h.clock.running,false);assert.equal(h.$('guidePanel').hidden,true);assert.equal(h.$('recordToggle').getAttribute('aria-pressed'),'false');assert.equal(h.$('instrumentSelect').disabled,false);
+ }
+});
+test('restored instrument is the initial complete character mode, not a piano placeholder',t=>{
+ let initial;
+ setup(t,{initialPreferences:JSON.stringify({version:1,instrument:'guitar',song:'twinkle',phrase:'1',bpm:80,meter:4,layout:'square'}),mountCharacter:scene=>{initial=scene.dataset.instrument;return {ready:Promise.resolve(),strike(){}};}});
+ assert.equal(initial,'guitar');
 });

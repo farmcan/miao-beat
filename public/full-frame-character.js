@@ -64,7 +64,7 @@ export function mountCharacter(scene){
   const original={display:svg?.style.display??'',aspect:scene.style.aspectRatio};if(svg)svg.style.display='none';
   const bitmaps=new Map(),encoded=new Map(),pending=new Map(),warming=new Set(),complete=new Set();
   let config,bandConfig,bandRequest,mode=scene.dataset.instrument??'piano',destroyed=false,loaded=false,raf=0,wanted='',shown='',epoch=0,ctx;
-  let visualClock=0,lastMotionTick=win.performance.now(),requestedAt=0,struckAt=0,captureMode=false,paintPendingSince=null,shownSignature='',captureFailure=false,strikeSequence=0;
+  let visualClock=0,lastMotionTick=win.performance.now(),requestedAt=0,struckAt=0,captureMode=false,paintPendingSince=null,shownSignature='',captureFailure=false,strikeSequence=0,measuredStrike=0;
   const decodedBudget=(win.matchMedia?.('(max-width: 760px), (pointer: coarse)').matches?40:80)*1024*1024;
   function trimBitmaps(){let bytes=[...bitmaps.values()].reduce((sum,b)=>sum+b.width*b.height*4,0);for(const [key,b]of bitmaps){if(bytes<=decodedBudget)break;if(key===shown||key===wantedAsset)continue;bytes-=b.width*b.height*4;b.close?.();bitmaps.delete(key);}scene.dataset.decodedBytes=String(bytes);}
 
@@ -130,7 +130,7 @@ export function mountCharacter(scene){
       if(stroke?.lift&&stroke.serial>lastLiftSerial){lastLiftSerial=stroke.serial;scene.dataset.guitarLiftCount=String(Number(scene.dataset.guitarLiftCount)+1);}
       if(stroke?.contact&&stroke.serial>lastContactSerial){lastContactSerial=stroke.serial;scene.dataset.guitarContactCount=String(Number(scene.dataset.guitarContactCount)+1);motion?.contactPainted(stroke.serial);}
       scene.style.aspectRatio='1';scene.dataset.wholeFrameStatus='ready';
-      const painted=win.performance.now();scene.dataset.lastPaintAt=String(painted);scene.dataset.paintDelayMs=String(Math.round(Math.max(0,painted-requestedAt)*10)/10);if(struckAt>0&&(stroke?.contact||!stroke&&id!=='idle'&&!id.endsWith(':idle'))){const delay=Math.round(Math.max(0,painted-struckAt)*10)/10;scene.dataset.contactStrikeSerial=String(strikeSequence);scene.dataset.contactPaintDelayMs=String(delay);scene.dataset.maxContactPaintDelayMs=String(Math.max(delay,Number(scene.dataset.maxContactPaintDelayMs||0)));}scene.dataset.paintCount=String(Number(scene.dataset.paintCount||0)+1);trimBitmaps();
+      const painted=win.performance.now();scene.dataset.lastPaintAt=String(painted);scene.dataset.paintDelayMs=String(Math.round(Math.max(0,painted-requestedAt)*10)/10);if(struckAt>0&&strikeSequence>measuredStrike&&(stroke?.contact||!stroke&&id!=='idle'&&!id.endsWith(':idle'))){measuredStrike=strikeSequence;const delay=Math.round(Math.max(0,painted-struckAt)*10)/10;scene.dataset.contactStrikeSerial=String(strikeSequence);scene.dataset.contactPaintDelayMs=String(delay);scene.dataset.maxContactPaintDelayMs=String(Math.max(delay,Number(scene.dataset.maxContactPaintDelayMs||0)));}scene.dataset.paintCount=String(Number(scene.dataset.paintCount||0)+1);trimBitmaps();
       const label=mode==='marimba'?'马林巴暂用钢琴猫静图，动作还没补。':'';message.textContent=label;message.hidden=!label;
     }catch{
       if(destroyed||ticket!==epoch)return;if(captureMode)captureFailure=true;if(id.startsWith('pluck:')||id.startsWith('up:')){motion=null;motionStatus('unavailable');wanted='';epoch++;request();return;}scene.dataset.wholeFrameStatus='unavailable';message.hidden=false;message.textContent='猫的图没加载出来，声音还能用。';

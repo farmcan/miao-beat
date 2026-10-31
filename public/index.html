@@ -23,6 +23,8 @@
     <section class="workbench" aria-label="猫咪音乐工作台">
       <div class="bench-topline"><span class="room-label"><span class="status-dot" aria-hidden="true"></span>猫已就位</span><button id="performanceExit" class="performance-toggle" type="button" hidden>退出演奏</button></div>
 
+      <div class="mode-nav" role="group" aria-label="选择玩法"><button type="button" data-mode="free" aria-pressed="true">随便弹</button><button type="button" data-mode="practice" aria-pressed="false">跟谱练</button><button type="button" data-mode="record" aria-pressed="false">录一段</button></div>
+
       <div class="performance-row">
         <div id="scene" class="scene" aria-label="跟着你的按键演奏的小猫">
 
@@ -38,7 +40,7 @@
       <div class="instrument-controls"><label class="instrument-select sr-only" for="instrumentSelect"><span>乐器</span><select id="instrumentSelect"><option value="piano" selected>钢琴</option><option value="marimba">马林巴</option><option value="guitar">尼龙弦吉他</option><option value="drums">架子鼓</option></select></label><label class="volume-control" for="volume"><span class="volume-icon" aria-hidden="true">◖))</span><span class="sr-only">音量</span><input id="volume" type="range" min="0" max="100" value="55"><output id="volumeValue" for="volume">55%</output></label><button id="performanceToggle" class="performance-toggle" type="button" aria-pressed="false" disabled>全屏演奏</button><span id="performanceStatus" class="performance-status" role="status"></span></div>
 
       <div class="sound-ready" id="soundEntry"><button id="enableAudio" type="button">① 准备声音</button><p id="soundStatus" class="sound-status" role="status">先打开声音，再点琴键。</p></div>
-      <div id="activityBar" class="activity-bar" hidden><span id="activityText" role="status"></span><button id="stopActivity" type="button">停止</button></div>
+
       <div class="playing-surface" id="playingSurface" tabindex="-1">
         <div id="guitarChords" class="guitar-chords" hidden><div><h2>扫个和弦</h2><label class="guitar-motion-toggle"><input id="guitarMotionToggle" type="checkbox" checked disabled> <span id="guitarMotionLabel">拨弦动作</span></label><p><span class="desktop-copy">试试 C → Am → F → G，每个和弦弹四拍。</span><span class="touch-copy">点 C → Am → F → G 试试。</span></p></div><div id="chordPads" class="chord-pads" aria-label="吉他简化和弦"></div></div>
         <div id="drumGuide" class="drum-guide" hidden><strong>试试这个节奏</strong><p>先调到 80 BPM。闭镲点八下，第 1、3 拍加底鼓，第 2、4 拍加军鼓。</p></div>
@@ -57,19 +59,21 @@
       </div>
       </div>
 
-      <div class="mode-nav" role="group" aria-label="选择玩法"><button type="button" data-mode="free" aria-pressed="true">随便弹</button><button type="button" data-mode="practice" aria-pressed="false">跟谱练</button><button type="button" data-mode="record" aria-pressed="false">录一段</button></div>
+
+      <div id="activityBar" class="activity-bar" hidden><span id="activityText" role="status"></span><span id="activityElapsed" aria-live="off"></span><button id="stopActivity" type="button">停止</button></div>
       <div class="session-tools" aria-label="节拍、练习与片段记录">
         <aside class="metronome" aria-label="节拍器">
           <div class="control-caption"><span>节拍器</span><span class="control-index" aria-hidden="true">TEMPO</span></div>
           <div class="tempo-display"><output id="bpmValue" for="bpm">96</output><span>BPM</span><button id="metronomeToggle" type="button" aria-pressed="false"><span class="play-icon" aria-hidden="true">▶</span><span>开节拍</span></button></div>
           <div id="beatIndicator" class="beat-indicator" aria-label="四拍节奏"><span data-beat="0">1</span><span data-beat="1">2</span><span data-beat="2">3</span><span data-beat="3">4</span></div>
-          <div class="meter-controls"><label for="meterSelect"><span class="sr-only">拍号</span><select id="meterSelect"><option value="2">2/4 拍</option><option value="4" selected>4/4 拍</option><option value="3">3/4 拍</option></select></label><button id="tapTempo" type="button" title="连续点按，设定节奏速度">跟着点几下</button></div>
-          <div class="metronome-sounds"><label for="metronomeSound">音色<select id="metronomeSound"><option value="bell">钟声</option><option value="wood">木块</option><option value="electronic">电子</option></select></label><label for="metronomeAccent">提示拍<select id="metronomeAccent"><option value="last">最后一拍</option><option value="first">第一拍</option></select></label></div><p id="metronomePattern" class="metronome-pattern">当 · 当 · 当 · 叮</p>
           <label class="tempo-slider" for="bpm"><span class="sr-only">每分钟拍数</span><span aria-hidden="true">慢一点</span><input id="bpm" type="range" min="50" max="180" value="96"><span aria-hidden="true">快一点</span></label>
+          <details class="metronome-details"><summary>拍号与音色</summary><div class="meter-controls"><label for="meterSelect"><span class="sr-only">拍号</span><select id="meterSelect"><option value="2">2/4 拍</option><option value="4" selected>4/4 拍</option><option value="3">3/4 拍</option></select></label><button id="tapTempo" type="button" title="连续点按，设定节奏速度">跟着点几下</button></div>
+          <div class="metronome-sounds"><label for="metronomeSound">音色<select id="metronomeSound"><option value="bell">钟声</option><option value="wood">木块</option><option value="electronic">电子</option></select></label><label for="metronomeAccent">提示拍<select id="metronomeAccent"><option value="last">最后一拍</option><option value="first">第一拍</option></select></label></div><p id="metronomePattern" class="metronome-pattern">当 · 当 · 当 · 叮</p></details>
         </aside>
       <section class="practice-dock" aria-label="选谱与跟弹">
         <div class="practice-toolbar"><label for="songSelect"><span>曲谱</span><select id="songSelect" aria-label="选择曲谱"></select></label><div class="practice-actions"><button id="guideSong" type="button">跟着弹</button><button id="listenSong" type="button">听一遍</button><button id="stopSong" type="button" disabled>停止</button></div></div>
         <div class="phrase-controls"><label for="phraseSelect">练习范围 <select id="phraseSelect"><option value="all">整首</option></select></label><label class="loop-choice"><input id="loopPhrase" type="checkbox"> 循环练习（每轮预备拍）</label><button id="suggestedTempo" type="button">用建议速度</button><button id="firstPhrase" type="button">先练第一句</button></div><p id="tempoHint" class="practice-hint"></p>
+        <p id="phrasePreview" class="phrase-preview"></p><div id="phraseOverview" class="phrase-overview" role="group" aria-label="分句概览"></div>
         <p id="practiceHint" class="practice-hint">选一首，先听一遍，再跟着亮起的键弹。</p>
 
       </section>
