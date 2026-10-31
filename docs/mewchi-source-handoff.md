@@ -43,4 +43,4 @@
 
 ## 免费备选的有界排查
 
-后续正常检查了作者Poncho Cat的BOOTH／Ko-fi双渠道：BOOTH需登录，Ko-fi能进入0美元游客获取，但要求收件邮箱；未提交个人资料、未取得包，也未认定该角色质量通过。[实际流程与必要输入](research/poncho-source-acquisition-2026-10-30.md)。这条可选路径没有替代Mewchi优先级，没有以免费降低静态质量门槛。
+后续正常检查了作者Poncho Cat的BOOTH／Ko-fi双渠道：BOOTH需登录，Ko-fi能进入0美元游客获取，但要求收件邮箱；未提交个人资料、未取得包，也未认定该角色质量通过。[实际流程与必要输入](research/poncho-source-acquisition-2026-10-30.md)。2026-10-31用户最新选择：继续找许可清楚、无需付费的同类猫。Mewchi现仅作风格参考，不采购；免费候选仍须通过实际静态质量门槛。
