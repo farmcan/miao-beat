@@ -30,5 +30,5 @@ for source in projects:
    db='miaotarot-data' if owner=='miaotarot' else 'miaoti-stats'
    values[kind]=None if db in errors else sum(row['count'] for row in rows if row['source_project']==source and row['target_project']==target and row['event_kind']==kind)
   pairs.append({'source':source,'target':target,**values})
-print(json.dumps({'timezone':'Asia/Shanghai','days_including_today':a.days,'traffic':traffic,'status':'partial' if errors else 'complete','errors':errors,'directions':pairs,'daily_placement_rows':rows,'meaning':'Event counts, not unique people or matched conversion rates. Missing beacons/stripped tags may undercount. No history before rollout.'},ensure_ascii=False,indent=2))
+print(json.dumps({'timezone':'Asia/Shanghai','days_including_today':a.days,'traffic':traffic,'status':'partial' if errors else 'complete','errors':errors,'directions':pairs,'daily_placement_rows':rows,'meaning':'Event counts, not unique people or matched conversion rates. Missing event requests/stripped tags may undercount. No history before rollout.'},ensure_ascii=False,indent=2))
 sys.exit(1 if errors else 0)

@@ -27,3 +27,22 @@ python3 scripts/query-family-referrals.py --days 1 --internal
 证据保存在本机 `artifacts/family-referrals-20261031/`；发布完成后补充实际提交、生产资源对应关系、六方向记录、窄屏真实浏览器和状态页验收。Tarot 的互链端到端用例同步更新；实际浏览器由 Codex CUA 操作，避免另启不受控的浏览器驱动。共同客户端的 DOM 行为在 Beat 与 MiaoTI 的既有 JSDOM 环境测试；Tarot 无 JSDOM 依赖，采用相同客户端 + 服务端契约单测 + 真实移动宽度检查，不为重复测试增加依赖。
 
 独立技术 judge 未发现 P0/P1，并提出 beacon 无法指定 no-referrer 的非阻断建议；已据此统一改为 fetch keepalive，以减少统计传输中的页面来源泄露。
+
+## 生产验收结果
+
+2026-10-31 已完成三站发布与真实互链验收。运行源提交：Beat `a3e6bee`，MiaoTI `2127959`，Tarot `1f6096d`；对应部署 `a6ee929e` / `ae4063f0` / `22fd4b6d`。MiaoTI 使用主线隔离归档与临时索引提交，原有 `codex/meme-radar-lab` 的分支、索引、工作内容未切换或覆盖。
+
+| 来源 → 目标 | 内部点击 | 内部到达 |
+|---|---:|---:|
+| MiaoTI → Beat | 1 | 1 |
+| MiaoTI → Tarot | 1 | 1 |
+| Beat → MiaoTI | 1 | 1 |
+| Beat → Tarot | 1 | 1 |
+| Tarot → MiaoTI | 2 | 2 |
+| Tarot → Beat | 2 | 2 |
+
+验收前新表为零；真实浏览器八次点击产生八次到达，分布在六个方向、12 个聚合桶中。外部流量桶仍为零，没有把测试当作自然用户。Tarot 在 320×568、390×844 两个真实视口分别点击两条链接，点击区域均为 44px，水平溢出为 0；截图与 DOM 证据保留于本机 artifacts。
+
+Beat 全量 148 项回归通过，运输方式调整后五项相关单测再次通过；MiaoTI 站点、体验、计数、事件及五项新测试通过；Tarot 类型检查、计数与两项服务端契约测试通过，生产 smoke 通过。三端客户端一致，Tarot 移动端互链端到端用例已更新，真实执行使用 CUA，未另启 Playwright 驱动。
+
+独立技术 judge：无 P0/P1。其建议已落实为 `fetch + keepalive + no-referrer`，避免同源统计请求携带当前页面查询内容。截图只是入口体验证据；真正记录成功的依据是两库生产查询与浏览器动作对应。
