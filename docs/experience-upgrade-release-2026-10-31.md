@@ -17,7 +17,7 @@ All three judges inspected the candidate independently, including browser paths,
 - [Product judge](research/experience-product-judge-2026-10-31.md): actual recording, reload, empty-take protection, previous-take recovery, invalid import, recommended tempo, phrase loop and square/portrait native output. Found hidden running sessions after mode changes; cross-mode activity/stop repaired and rechecked.
 - [Technical judge](research/experience-tech-judge-2026-10-31.md): found a timeout renewed by repeated target changes and fractional-phase beat/barline errors. Both repaired; blocked-decode regression and fractional-pickup tests pass. No remaining material implementation blocker in the reviewed scope.
 
-Full automated suite: **141 passed**, including current and historical regressions. Targeted whole-frame checks after telemetry refinement: **8 passed**. Automated audio/encoder fixtures are not physical listening evidence.
+Initial automated suite: **141 passed**, including current and historical regressions. Targeted whole-frame checks after telemetry refinement: **8 passed**. Automated audio/encoder fixtures are not physical listening evidence.
 
 Parent browser: actual three piano inputs → stopped take → reload restored all three → portrait MP4 saved. `ffprobe` confirms H.264 video, AAC audio, 720×1280 and 2.005333 seconds. Independent product judge generated and played both 720×1280 and 720×720. Local files/screenshots are under ignored `artifacts/experience-20261031/`.
 
@@ -40,7 +40,7 @@ Useful tagged links:
 
 ## Production acceptance
 
-Final production source `d4ef57a4b7bd2269cb9d1eef41a9cd274d5b467f`, deployment `83fafb03-f455-47ca-9fcf-f9f03a2f64e2`. Canonical release and290 public-file SHA checks pass;3 deployment configuration files are not public routes and are accepted through actual deployment/API behavior. The first full transport check hit TLS errors; bounded same-version retries succeeded, then unchanged verified hashes were reused and both changed patch resources were re-fetched. No TLS verification was disabled.
+Earlier0.17.1 production source `d4ef57a4b7bd2269cb9d1eef41a9cd274d5b467f`, deployment `83fafb03-f455-47ca-9fcf-f9f03a2f64e2`. Canonical release and290 public-file SHA checks pass;3 deployment configuration files are not public routes and are accepted through actual deployment/API behavior. The first full transport check hit TLS errors; bounded same-version retries succeeded, then unchanged verified hashes were reused and both changed patch resources were re-fetched. No TLS verification was disabled.
 
 Formal browser accepted: actual A/S/D inputs and nonzero audio level;500 Miles phrase4 at80 BPM and1.5-beat preparation with correct bar ticks; guide→record human A/S→free-mode Stop→reload preserves exactly2 inputs; actual square720×720 H.264/AAC download2.1038 seconds (non-silent encoded audio);390px portrait performance has350px surface, visible range controls and reachable high notes. Desktop/mobile screenshots and native outputs are saved locally. Final full suite **142/142**, fault-retry affected checks **48/48**.
 
@@ -59,4 +59,7 @@ After the implementation and production gate, independent judges compared Bongo 
 
 ## Exact beat phase repair · 0.17.2
 
-A final cross-tempo audit found52 phrase/tempo combinations where converting elapsed seconds back into beats introduced tiny positive remainders at a bar boundary. For example, Twinkle phrase6 at50 BPM could get an almost-zero count-in instead of4 beats; other phrases could add an unintended whole-bar wait. The new shared `scoreWindow()` computes phrase phase, count-in and padding from original score beat values, then converts to seconds. It also retains original score indices and lyrics. An exhaustive regression covers every song, every phrase/whole score and50/73/recommended/96/180 BPM. Final full suite: **143/143 passed**. The previous production acceptance above is retained as history; this patch receives its own deployment and byte check.
+A final cross-tempo audit found multiple phrase/tempo and whole-score combinations where converting elapsed seconds back into beats introduced tiny positive remainders at a bar boundary. For example, Twinkle phrase6 at50 BPM could get an almost-zero count-in instead of4 beats; other phrases could add an unintended whole-bar wait. The new shared `scoreWindow()` computes phrase phase, count-in and padding from original score beat values, then converts to seconds. It also retains original score indices and lyrics. An exhaustive regression covers every song, every phrase/whole score and50/73/recommended/96/180 BPM. Final full suite: **143/143 passed**. The previous production acceptance above is retained as history; this patch receives its own deployment and byte check.
+
+
+Final0.17.2 source `45462cb37d29984a7e8962509b1f65ec14d47a5a`, production `60c976c3-9581-4853-b647-b605b5c5f036`; canonical release and290 public sources verified (unchanged hashes retained, changed sources fetched again). Independent math/wiring review passed47 relevant tests and checked345 whole/phrase/tempo iterations. Formal browser at50 BPM, Twinkle phrase6 now announces exactly4 preparation beats, runs9.6-second phrase and continues cycling with visible stop. This closes the beat-boundary repair; native video rendering and local-take paths are unchanged by this patch.

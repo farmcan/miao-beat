@@ -21,7 +21,7 @@ User authorized incremental implementation of the three independent judges' reco
 
 ## Progress
 
-- Items 1–6 completed within the stated implementation scope. Final source d4ef57a, production 83fafb03, canonical manifest and290 public files verified;142 full tests pass. Three independent reviews and scoped repairs are recorded in the release. Physical-phone/platform acceptance and newly generated continuous animation were not claimed.
+- Items 1–6 completed within the stated implementation scope. Final source45462cb, production60c976c3, canonical manifest and290 public files verified;143 full tests pass. Three independent reviews and scoped repairs are recorded in the release. Physical-phone/platform acceptance and newly generated continuous animation were not claimed.
 - Item7 complete as research and content preparation: see [design and launch plan](design-and-launch-plan-2026-10-31.md), independent design reference review and four platform scripts. No social posts or recurring monitoring were created.
 
 - Additional user request: bounded anonymous inbound-source aggregates (MiaoTI/MiaoTarot/Xiaohongshu/Douyin/other/unknown), respecting the existing 24-hour browser count. Explicit campaign tags override host-only referrer inference. No personal identities, raw referrers or playback contents. Begin counting on deployment; no invented historic attribution.
