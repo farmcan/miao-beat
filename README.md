@@ -1,6 +1,10 @@
 # Miao Beat
 
-A small browser instrument playground. Follow a metronome, play your own music, keep a tiny event file. No falling-note game, score, account, microphone, or upload.
+A small browser instrument playground. Follow a metronome, play your own music, keep a tiny event file. No falling-note game, scoring, account, microphone, or upload.
+
+![Miao Beat — real exported-video outro with product preview, QR and address](docs/media/2026-11-02/share-outro-square.png)
+
+[Screenshots and reusable publishing materials](docs/promo-assets.md) · [Similar music toys and content ideas](docs/research/music-toys-and-content-2026-11-02.md). The image above is a frame from an actual exported video; its QR was independently decoded. Original screenshots, a short MP4 sample and source/hash metadata are saved in the repository for later use.
 
 - Play: https://miao-beat.pages.dev/
 - Research & decisions: [research index](docs/README.md)

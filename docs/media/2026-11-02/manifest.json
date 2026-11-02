@@ -1,0 +1,55 @@
+{
+  "captured_at": "2026-11-02",
+  "product_version": "0.19.0-score",
+  "implementation_commit": "36d210e8d454d80519d31ede5dffa68a1767e6aa",
+  "canonical_url": "https://miao-beat.pages.dev/",
+  "decoded_actual_video_tail_qr": "https://miao-beat.pages.dev/",
+  "assets": [
+    {
+      "file": "share-outro-square.png",
+      "source": "artifacts/score-reader-20261102/square-tail.png",
+      "bytes": 148460,
+      "sha256": "ed226191a7c8be48fb31cc4519a04c686010237ee6a66590f4fed285efd4b393",
+      "note": "实际原生MP4末段提帧；Apple Vision已解码为公开产品网址",
+      "width": 720,
+      "height": 720
+    },
+    {
+      "file": "reader-portrait.jpg",
+      "source": "artifacts/score-reader-20261102/reader-390.jpg",
+      "bytes": 20659,
+      "sha256": "f46cace9ccee3b99fe7aa19a130aee6745e254c1c1fdbb9bdac725936a83dedf",
+      "note": "真实Chrome截图；DOM视口390×844，文件像素390×845",
+      "width": 390,
+      "height": 845
+    },
+    {
+      "file": "reader-landscape.jpg",
+      "source": "artifacts/score-reader-20261102/reader-844-active.jpg",
+      "bytes": 25419,
+      "sha256": "4ece353de01893838975bd0910ec3e8fc81df85dc200858c3438af2e3b1e8be9",
+      "note": "真实Chrome截图；DOM视口843×390，文件像素844×390；原artifact文件名含844",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "file": "homepage-portrait.jpg",
+      "source": "public/share/page-preview.jpg",
+      "bytes": 29317,
+      "sha256": "7b904892e2ce0b0e0dc73fd63fa6b8cd2d9d7e07b19eba958394da1fb9177175",
+      "note": "真实产品主页截图；390×844；同本次视频尾卡预览",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "file": "demo-square.mp4",
+      "source": "artifacts/score-reader-20261102/square-outro.mp4",
+      "bytes": 465707,
+      "sha256": "36fb4f230f581e19e9bc7146a3afc7f1c25e100dcb80f8b000e3d3b7ed95ee43",
+      "note": "实际两次真人输入的原生导出样片；不是已完成的平台宣传片",
+      "width": 720,
+      "height": 720,
+      "duration_seconds": 4.478933
+    }
+  ]
+}
