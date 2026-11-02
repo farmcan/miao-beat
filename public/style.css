@@ -636,3 +636,80 @@ body.performance-mode .workbench > .activity-bar { position:fixed; z-index:45; i
  body.performance-mode .section-label { margin-bottom:2px; }
  body.performance-mode .melody-keys { height:112px; }
 }
+
+/* Read a small page while retaining the actual cat and actual input surface. */
+#readScoreToggle,[data-open-score],#readerLabels { min-height:40px; border:1px solid var(--line); border-radius:8px; background:var(--cream); color:var(--ink); padding:7px 10px; font:inherit; }
+.bench-topline #readScoreToggle { margin-left:auto; }
+.score-reader { min-width:0; }
+body.score-reading.performance-mode .workbench { display:flex; flex-direction:column; gap:6px; padding:8px 16px 16px; overflow-y:auto; }
+body.score-reading.performance-mode.has-activity .workbench { padding-bottom:calc(82px + env(safe-area-inset-bottom,0px)); }
+body.score-reading .workbench > .mode-nav,body.score-reading .workbench > .play-area,body.score-reading .workbench > .session-tools { display:none !important; }
+body.score-reading .bench-topline { flex-shrink:0; min-height:42px; padding-right:112px; }
+body.score-reading .room-label { display:none; }
+body.score-reading #readScoreToggle { margin-left:0; white-space:nowrap; }
+body.score-reading #readerLabels { min-width:0; width:100px; }
+body.score-reading #scoreReader { display:grid; grid-template-columns:minmax(130px,.45fr) minmax(0,1.55fr); gap:10px 18px; align-items:start; width:100%; min-height:0; }
+.reader-side,.reader-main,#readerKeysSlot { min-width:0; }
+.reader-side { display:flex; flex-direction:column; gap:6px; }
+.reader-song-label select { width:100%; min-width:0; min-height:40px; border:1px solid var(--line); border-radius:8px; background:var(--cream); padding:6px; font:inherit; font-size:12px; }
+body.score-reading .performance-row { position:static; width:min(100%,200px); max-width:none; margin:0 auto; align-self:center; }
+body.score-reading .scene { aspect-ratio:1; min-height:0; }
+.reader-options { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:4px; font-size:11px; }
+.reader-options label { display:flex; align-items:center; gap:4px; min-height:40px; }
+.reader-options input { accent-color:var(--orange); }
+.reader-options button,.reader-navigation button { min-width:44px; min-height:44px; border:1px solid var(--line); border-radius:8px; background:var(--cream); color:var(--ink); padding:4px 8px; font-size:11px; }
+.reader-score-heading { display:flex; min-height:44px; align-items:center; justify-content:space-between; gap:6px; margin-bottom:4px; }
+.reader-caption { min-width:0; display:flex; flex-direction:column; gap:3px; }
+.reader-caption strong { font-size:12px; }
+.reader-caption span { font-size:10px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.reader-navigation { display:flex; align-items:center; gap:3px; flex-shrink:0; }
+#readerPageCount { min-width:40px; text-align:center; font-size:11px; font-variant-numeric:tabular-nums; }
+.reader-notes { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:4px; margin:0 0 6px; }
+.reader-note { min-width:0; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:2px; padding:4px 2px; min-height:58px; border:1px solid var(--line); border-radius:6px; background:#fffaf2; text-align:center; }
+.reader-note strong { font:600 18px var(--mono); }
+.reader-note span { font-size:10px; overflow-wrap:anywhere; }
+.reader-note small { font-size:9px; color:var(--muted); }
+.reader-note.playing { background:var(--orange-soft); border-color:#b97b4b; box-shadow:inset 0 -2px #b97b4b; }
+body.score-reading #melodyHeading,body.score-reading #guitarChords,body.score-reading #drumGuide,body.score-reading #guidePanel,body.score-reading .keyboard-scroll-hint { display:none; }
+body.score-reading #readerKeysSlot .playing-surface { width:100%; min-width:0; margin:0; }
+body.score-reading #readerKeysSlot .melody-scroll { width:100%; min-width:0; margin:0; }
+body.score-reading #readerKeysSlot .melody-scroll:has(#melodyKeys[hidden]) { display:none; }
+body.score-reading #readerKeysSlot .percussion-row { display:none; }
+body.score-reading #readerKeysSlot [data-instrument=drums] .percussion-row { display:block; margin:0; }
+body.score-reading #readerKeysSlot [data-instrument=drums] .drum-heading { display:none; }
+body.score-reading #readerKeysSlot [data-instrument=drums] .drum-pads { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:5px; }
+body.score-reading #readerKeysSlot [data-instrument=drums] .drum-pad { min-height:54px; }
+body.score-reading #readerSoundSlot .sound-ready { margin:0; min-width:0; flex-wrap:wrap; }
+body.score-reading #readerSoundSlot .sound-ready:has(.sound-status[data-state=ready]:not(.error)),body.score-reading #readerSoundSlot .sound-ready:has(.sound-status[data-state=running]:not(.error)) { display:none; }
+.reader-orientation { display:none; margin:0; color:var(--muted); font-size:10px; }
+@media(orientation:landscape) and (max-height:550px){
+ body.score-reading .performance-row { width:128px; }
+ body.score-reading #readerKeysSlot .melody-keys { height:96px; }
+ body.score-reading .reader-note { min-height:52px; }
+ body.score-reading .reader-note strong { font-size:16px; }
+ body.score-reading .reader-note span { font-size:9px; }
+ body.score-reading #readerKeysSlot .keyboard-navigation { margin-top:2px; }
+ body.score-reading .reader-options label { min-height:36px; }
+}
+@media(max-width:760px) and (orientation:portrait){
+ body.score-reading #scoreReader { grid-template-columns:minmax(0,1fr); gap:6px; }
+ .reader-side { display:grid; grid-template-columns:minmax(0,1fr) 132px; gap:4px 8px; }
+ .reader-song-label { grid-column:1; grid-row:1; }
+ #readerCatSlot { grid-column:2; grid-row:1/span 3; }
+ #readerSoundSlot { grid-column:1; grid-row:3; }
+ .reader-options { grid-column:1; grid-row:2; flex-wrap:nowrap; }
+ body.score-reading .performance-row { width:132px; }
+ .reader-notes { grid-template-columns:repeat(4,minmax(0,1fr)); }
+ body.score-reading #readerKeysSlot .melody-keys { height:128px; }
+ .reader-orientation { display:block; }
+ .reader-caption strong { font-size:11px; }
+ .reader-caption span { font-size:9px; }
+ .reader-navigation button { padding:4px; }
+ body.score-reading #readerLabels { width:82px; }
+}
+@media(max-width:760px) and (orientation:portrait) and (max-height:650px){
+ .reader-side { grid-template-columns:minmax(0,1fr) 108px; }
+ body.score-reading .performance-row { width:108px; }
+ body.score-reading #readerKeysSlot .melody-keys { height:112px; }
+ .reader-note { min-height:54px; }
+}

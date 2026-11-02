@@ -21,11 +21,11 @@
     <div class="page-heading"><div><h1>来都来了，<span>弹两下。</span></h1></div><p class="heading-note"><span class="desktop-copy">按键盘，或者点琴键。</span><span class="touch-copy">先打开声音，再点琴键。</span></p></div>
 
     <section class="workbench" aria-label="猫咪音乐工作台">
-      <div class="bench-topline"><span class="room-label"><span class="status-dot" aria-hidden="true"></span>猫已就位</span><button id="performanceExit" class="performance-toggle" type="button" hidden>退出演奏</button></div>
+      <div class="bench-topline"><span class="room-label"><span class="status-dot" aria-hidden="true"></span>猫已就位</span><button id="readScoreToggle" type="button" data-open-score aria-pressed="false" aria-controls="scoreReader">看谱演奏</button><select id="readerLabels" aria-label="谱子显示" hidden><option value="auto">自动标识</option><option value="key">键位</option><option value="number">固定音级（C为1）</option><option value="note">音名</option></select><button id="performanceExit" class="performance-toggle" type="button" hidden>退出演奏</button></div>
 
       <div class="mode-nav" role="group" aria-label="选择玩法"><button type="button" data-mode="free" aria-pressed="true">随便弹</button><button type="button" data-mode="practice" aria-pressed="false">跟谱练</button><button type="button" data-mode="record" aria-pressed="false">录一段</button></div>
 
-      <div class="performance-row">
+      <div id="catStage" class="performance-row">
         <div id="scene" class="scene" aria-label="跟着你的按键演奏的小猫">
 
 
@@ -60,6 +60,20 @@
       </div>
 
 
+      <section id="scoreReader" class="score-reader" aria-label="同屏演奏谱架" hidden>
+        <div class="reader-side">
+          <label class="reader-song-label"><span class="sr-only">谱架曲谱</span><select id="readerSong" aria-label="谱架曲谱"></select></label>
+          <div id="readerCatSlot"></div><div id="readerSoundSlot"></div>
+          <div class="reader-options"><label><input id="readerFollow" type="checkbox"> 跟随翻页</label><button id="readerGuide" type="button">跟这句</button></div>
+        </div>
+        <div class="reader-main">
+          <div class="reader-score-heading"><div class="reader-caption"><strong id="readerPart"></strong><span id="readerLyric"></span></div><div class="reader-navigation" role="group" aria-label="翻谱页"><button id="readerPrev" type="button" aria-label="上一页谱子">←</button><span id="readerPageCount" aria-live="polite"></span><button id="readerNext" type="button" aria-label="下一页谱子">→</button><button id="readerReturn" type="button">回练习句</button></div></div>
+          <div id="readerNotes" class="reader-notes" role="list" aria-label="当前页谱子"></div>
+          <div id="readerKeysSlot"></div>
+        </div>
+        <p class="reader-orientation">横屏能同时看到更多谱子和琴键 · 竖屏也能弹</p>
+      </section>
+
       <div id="activityBar" class="activity-bar" hidden><span id="activityText" role="status"></span><span id="activityElapsed" aria-live="off"></span><button id="stopActivity" type="button">停止</button></div>
       <div class="session-tools" aria-label="节拍、练习与片段记录">
         <aside class="metronome" aria-label="节拍器">
@@ -78,7 +92,7 @@
 
       </section>
 
-      <div class="recording-strip" aria-label="按键片段记录"><div class="recording-actions"><button id="recordToggle" type="button" aria-pressed="false"><span class="record-dot" aria-hidden="true"></span>开始记录</button><button id="playRecording" type="button" disabled>▶ 回放</button><button id="exportRecording" type="button" disabled>保存片段</button><label class="media-source" for="exportSource"><span class="sr-only">导出内容</span><select id="exportSource" aria-label="导出内容"><option value="recording">我的片段</option><option value="score">当前曲谱</option></select></label><button id="exportVideo" type="button" disabled>导出视频</button><button id="exportAudio" type="button" disabled>导出音频</button><button id="cancelMediaExport" type="button" hidden>取消导出</button><label class="import-recording" for="importRecording">导入片段<input id="importRecording" type="file" accept=".json,application/json"><span aria-hidden="true">↗</span></label><span id="recordingInfo" class="recording-info">0:00 · 0 次按键</span></div><div class="draft-actions"><button id="restorePrevious" type="button" disabled>恢复上一遍</button><button id="clearDraft" type="button" disabled>清除本机草稿</button><span id="draftStatus" role="status"></span></div><div class="export-options" id="exportOptions" hidden><label>视频画幅 <select id="exportLayout"><option value="original">原版 720 × 880</option><option value="portrait">竖屏 9:16</option><option value="square">方形 1:1</option></select></label><label>标题 <input id="exportTitle" maxlength="32" placeholder="给这段演奏起个名字"></label><span id="exportDuration"></span></div><div class="recording-meta"><span>片段保留在本机，可恢复上一遍；视频有猫的动作和声音。文件不上传。</span><span id="recordingStatus" role="status"></span></div></div>
+      <div class="recording-strip" aria-label="按键片段记录"><div class="recording-actions"><button id="recordToggle" type="button" aria-pressed="false"><span class="record-dot" aria-hidden="true"></span>开始记录</button><button id="playRecording" type="button" disabled>▶ 回放</button><button id="exportRecording" type="button" disabled>保存片段</button><label class="media-source" for="exportSource"><span class="sr-only">导出内容</span><select id="exportSource" aria-label="导出内容"><option value="recording">我的片段</option><option value="score">当前曲谱</option></select></label><button id="exportVideo" type="button" disabled>导出视频</button><button id="exportAudio" type="button" disabled>导出音频</button><button id="cancelMediaExport" type="button" hidden>取消导出</button><label class="import-recording" for="importRecording">导入片段<input id="importRecording" type="file" accept=".json,application/json"><span aria-hidden="true">↗</span></label><span id="recordingInfo" class="recording-info">0:00 · 0 次按键</span></div><div class="draft-actions"><button id="restorePrevious" type="button" disabled>恢复上一遍</button><button id="clearDraft" type="button" disabled>清除本机草稿</button><span id="draftStatus" role="status"></span></div><div class="export-options" id="exportOptions" hidden><label>视频画幅 <select id="exportLayout"><option value="original">原版 720 × 880</option><option value="portrait">竖屏 9:16</option><option value="square">方形 1:1</option></select></label><label>标题 <input id="exportTitle" maxlength="32" placeholder="给这段演奏起个名字"></label><label class="outro-choice"><input id="exportBrand" type="checkbox" checked> 片尾带网站与二维码（2秒）</label><span id="exportDuration"></span></div><div class="recording-meta"><span>片段保留在本机，可恢复上一遍；视频有猫的动作和声音。文件不上传。</span><span id="recordingStatus" role="status"></span></div></div>
       </div>
     </section>
 
@@ -87,7 +101,7 @@
 
     <details class="score-book" id="scoreBook">
       <summary><span class="score-book-icon" aria-hidden="true">♫</span><span><strong>看谱弹</strong><small>字母是电脑按键，数字是音符</small></span><span class="score-book-open">展开琴谱 <span aria-hidden="true">＋</span></span></summary>
-      <div class="score-content"><p id="songInfo" class="song-info"></p><p id="scoreSourceRow" hidden><a id="scoreSource" target="_blank" rel="noopener"></a></p><div id="scoreRows" class="score-rows"></div><p id="scoreStatus" class="score-status" role="status">字母是电脑按键，数字是音符。跟弹不计分。</p></div>
+      <div class="score-content"><button type="button" data-open-score aria-pressed="false" aria-controls="scoreReader">边看谱边弹 ↗</button><p id="songInfo" class="song-info"></p><p id="scoreSourceRow" hidden><a id="scoreSource" target="_blank" rel="noopener"></a></p><div id="scoreRows" class="score-rows"></div><p id="scoreStatus" class="score-status" role="status">字母是电脑按键，数字是音符。跟弹不计分。</p></div>
     </details>
 
     <nav class="miao-family" aria-label="再玩一个猫咪小项目">
@@ -96,7 +110,7 @@
       <a href="https://tarot-31o.pages.dev/?utm_source=miao-beat&amp;utm_medium=referral&amp;utm_campaign=play-next" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer"><span aria-hidden="true">✦</span><span><strong>MiaoTarot · 猫咪塔罗</strong><small>抽张猫牌看看。</small></span><span aria-hidden="true">↗</span></a>
     </nav>
     <div class="support-note"><p>玩具免费。<span>想投喂的话，罐罐在这儿。</span></p><button type="button" data-open-support>请猫猫吃罐罐 ♡</button></div>
-    <details class="credits"><summary>关于这个小玩具与素材来源</summary><p>Miao Beat 是独立的轻量音乐实验。当前采用真实钢琴、马林巴、尼龙弦吉他与架子鼓采样。原创橘猫的演奏动作由你的按键触发。吉他提供简化和弦与单音；架子鼓模式可以自由编节奏。</p><p>项目起点借鉴了 <a href="https://bongo.cat/" target="_blank" rel="noopener">Bongo Cat</a> 的按键演奏思路；原始映射代码的 MIT 许可保留在 <a href="./UPSTREAM-LICENSE.txt">许可说明</a>。本站没有使用该站角色插画和录音。采样来源与各自许可见 <a href="./samples/LICENSES.txt">音色说明</a>；播放引擎采用 <a href="./vendor/smplr-LICENSE.txt">smplr（MIT）</a>。吉他过渡帧用 <a href="https://github.com/nihui/rife-ncnn-vulkan" target="_blank" rel="noopener">RIFE</a> 离线补帧，<a href="./character/guitar-motion-v1/RIFE-LICENSE.txt">MIT 许可</a>。无需麦克风、登录或上传。</p><p><a href="https://github.com/farmcan/miao-beat" target="_blank" rel="noopener">源代码 ↗</a></p></details>
+    <details class="credits"><summary>关于这个小玩具与素材来源</summary><p>Miao Beat 是独立的轻量音乐实验。当前采用真实钢琴、马林巴、尼龙弦吉他与架子鼓采样。原创橘猫的演奏动作由你的按键触发。吉他提供简化和弦与单音；架子鼓模式可以自由编节奏。</p><p>项目起点借鉴了 <a href="https://bongo.cat/" target="_blank" rel="noopener">Bongo Cat</a> 的按键演奏思路；原始映射代码的 MIT 许可保留在 <a href="./UPSTREAM-LICENSE.txt">许可说明</a>。本站没有使用该站角色插画和录音。采样来源与各自许可见 <a href="./samples/LICENSES.txt">音色说明</a>；播放引擎采用 <a href="./vendor/smplr-LICENSE.txt">smplr（MIT）</a>。吉他过渡帧用 <a href="https://github.com/nihui/rife-ncnn-vulkan" target="_blank" rel="noopener">RIFE</a> 离线补帧，<a href="./character/guitar-motion-v1/RIFE-LICENSE.txt">MIT 许可</a>。视频片尾二维码由构建时的 <a href="./vendor/qrcode-LICENSE.txt">qrcode（MIT）</a> 生成。无需麦克风、登录或上传。</p><p><a href="https://github.com/farmcan/miao-beat" target="_blank" rel="noopener">源代码 ↗</a></p></details>
     <aside class="site-visits" aria-label="站点累计访问"><p id="siteVisitCount" role="status">累计访问：暂时未知</p><small>从启用统计起累计 · 同一浏览器 24 小时内计 1 次 · 非独立人数。仅记录匿名来源汇总，不保存身份或演奏。</small></aside>
     <noscript><p class="noscript">这个声音玩具需要浏览器开启 JavaScript。</p></noscript>
   </main>

@@ -11,6 +11,7 @@ export function mountPerformance(doc=document){
     button.textContent=active?'退出演奏':'全屏演奏';button.disabled=pending;
     if(exitButton){button.hidden=active;exitButton.hidden=!active;exitButton.disabled=pending;}
     body.dataset.performanceMode=active?(nativeSession?'native':'page'):'off';
+    doc.dispatchEvent(new win.CustomEvent('performance-mode-change',{detail:{active}}));
   };
   function close(){
     active=false;nativeSession=false;pending=false;revision++;paint();
@@ -58,5 +59,5 @@ export function mountPerformance(doc=document){
   const escape=event=>{if(event.key==='Escape'&&active&&!current()){event.preventDefault();close();}};
   button.addEventListener('click',toggle);exitButton?.addEventListener('click',toggle);doc.addEventListener('fullscreenchange',changed);doc.addEventListener('webkitfullscreenchange',changed);doc.addEventListener('keydown',escape);
   paint();
-  return {destroy(){destroyed=true;revision++;button.removeEventListener('click',toggle);exitButton?.removeEventListener('click',toggle);doc.removeEventListener('fullscreenchange',changed);doc.removeEventListener('webkitfullscreenchange',changed);doc.removeEventListener('keydown',escape);body.classList.remove('performance-mode');delete body.dataset.performanceMode;button.hidden=false;button.disabled=false;button.textContent='全屏演奏';button.setAttribute('aria-pressed','false');if(exitButton){exitButton.hidden=true;exitButton.disabled=false;}if(status)status.textContent='';}};
+  return {enter,exit,destroy(){destroyed=true;revision++;button.removeEventListener('click',toggle);exitButton?.removeEventListener('click',toggle);doc.removeEventListener('fullscreenchange',changed);doc.removeEventListener('webkitfullscreenchange',changed);doc.removeEventListener('keydown',escape);body.classList.remove('performance-mode');delete body.dataset.performanceMode;button.hidden=false;button.disabled=false;button.textContent='全屏演奏';button.setAttribute('aria-pressed','false');if(exitButton){exitButton.hidden=true;exitButton.disabled=false;}if(status)status.textContent='';}};
 }

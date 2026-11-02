@@ -8,6 +8,7 @@ import * as bindings from '../public/bindings.js';
 import * as scores from '../public/scores.js';
 import * as recording from '../public/recording.js';
 import {createMediaExport,mediaSupported} from '../public/media-export.js';
+import {mountScoreReader} from '../public/score-reader.js';
 import {normalizePracticePreferences} from '../public/practice-preferences.js';
 import {beatPattern} from '../public/clock.js';
 import {guidePosition} from '../public/guidance.js';
@@ -54,8 +55,8 @@ function setup(t,overrides={}) {
   w.HTMLAnchorElement.prototype.click=function(){};
   if(overrides.initialPreferences)w.localStorage.setItem('miao-beat:practice:v1',overrides.initialPreferences);
   if(overrides.initialDraft)w.localStorage.setItem('miao-beat:takes:v1',overrides.initialDraft);
-  w.__deps={...bindings,...scores,...recording,normalizePracticePreferences,guidePosition,beatPattern,createMediaExport,mediaSupported,SampledAudio:FakeAudio,mountPerformance(){},mountKeyboardNavigation(){},loadSiteCounter(){},mountCharacter:()=>({ready:Promise.resolve(),strike(){}}),BeatClock:FakeClock,...overrides};
-  w.eval('const {normalizePracticePreferences,KEYS,MELODY,DRUMS,CHORDS,LEGACY_KEYS,SampledAudio,mountCharacter,mountPerformance,mountKeyboardNavigation,loadSiteCounter,BeatClock,SONGS,scoreEvents,scoreWindow,guidePosition,beatPattern,createMediaExport,mediaSupported,CODES,MAX_MS,MAX_EVENTS,makeRecording,validateRecording}=window.__deps;\n'+app);
+  w.__deps={...bindings,...scores,...recording,mountScoreReader,normalizePracticePreferences,guidePosition,beatPattern,createMediaExport,mediaSupported,SampledAudio:FakeAudio,mountPerformance(){},mountKeyboardNavigation(){},loadSiteCounter(){},mountCharacter:()=>({ready:Promise.resolve(),strike(){}}),BeatClock:FakeClock,...overrides};
+  w.eval('const {mountScoreReader,normalizePracticePreferences,KEYS,MELODY,DRUMS,CHORDS,LEGACY_KEYS,SampledAudio,mountCharacter,mountPerformance,mountKeyboardNavigation,loadSiteCounter,BeatClock,SONGS,scoreEvents,scoreWindow,guidePosition,beatPattern,createMediaExport,mediaSupported,CODES,MAX_MS,MAX_EVENTS,makeRecording,validateRecording}=window.__deps;\n'+app);
   const $=id=>w.document.getElementById(id);
   const key=(type,code,target=w.document,options={})=>target.dispatchEvent(new w.KeyboardEvent(type,{code,bubbles:true,cancelable:true,...options}));
   const frame=time=>{audio.context.currentTime=time;const queued=[...frames.values()];frames.clear();for(const fn of queued)fn();};
@@ -484,4 +485,13 @@ test('restored instrument is the initial complete character mode, not a piano pl
  let initial;
  setup(t,{initialPreferences:JSON.stringify({version:1,instrument:'guitar',song:'twinkle',phrase:'1',bpm:80,meter:4,layout:'square'}),mountCharacter:scene=>{initial=scene.dataset.instrument;return {ready:Promise.resolve(),strike(){}};}});
  assert.equal(initial,'guitar');
+});
+
+test('paging while recording adds no generated notes and preserves actual keyboard listeners across view changes',async t=>{
+ const h=setup(t),{$,key,w}=h;$('recordToggle').click();await settle();
+ $('readScoreToggle').click();assert.equal($('playingSurface').parentNode.id,'readerKeysSlot');
+ key('keydown','KeyA');await settle();key('keyup','KeyA');$('readerNext').click();key('keydown','PageDown',w.document,{key:'PageDown'});await settle();
+ key('keydown','KeyS');await settle();key('keyup','KeyS');h.audio.context.currentTime=1;$('stopActivity').click();
+ $('readScoreToggle').click();assert.equal($('playingSurface').parentNode.className,'play-area');$('exportRecording').click();const take=JSON.parse(await h.blob().text());assert.equal(take.events.length,2);assert.deepEqual(take.events.map(e=>e[1]),[0,1]);
+ assert.equal($('phraseSelect').value,'all');assert.equal(h.audio.plays.length,2);
 });

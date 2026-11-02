@@ -1,4 +1,5 @@
 import './family-referrals.js';
+import {mountScoreReader} from './score-reader.js';
 import {normalizePracticePreferences} from './practice-preferences.js';
 import {KEYS,MELODY,DRUMS,CHORDS,LEGACY_KEYS} from './bindings.js';
 import {SampledAudio} from './sampled-audio.js';
@@ -31,7 +32,7 @@ audio.onProgress=()=>{if(!loading)return;const p=audio.getLoadProgress($('instru
 const PREFERENCES_KEY='miao-beat:practice:v1';let savedPreferences=null;
 try{const raw=localStorage.getItem(PREFERENCES_KEY);if(raw&&raw.length<=4096)savedPreferences=normalizePracticePreferences(JSON.parse(raw),SONGS);}catch{}
 if(savedPreferences)$('instrumentSelect').value=savedPreferences.instrument;
-mountPerformance(document);
+let scoreReader=null;const performanceView=mountPerformance(document);
 if(new URLSearchParams(location.search).get('instrument')==='guitar'){$('instrumentSelect').value='guitar';scene.dataset.instrument='guitar';}
 scene.dataset.instrument=$('instrumentSelect').value;
 const character=mountCharacter(scene);
@@ -64,8 +65,8 @@ function currentLabels(){const value=$('keyLabels').value;return value==='auto'?
 function cueLabel(key){return currentLabels()==='key'?key.key:currentLabels()==='note'?key.sub:key.kind==='note'?key.label:key.label;}
 function renderLabels(){document.body.dataset.labels=currentLabels();for(const n of document.querySelectorAll('.score-note[data-codes]')){const keys=n.dataset.codes.split(',').filter(Boolean).map(code=>byCode.get(code));n.querySelector('.score-primary').textContent=keys.length?keys.map(cueLabel).join('+'):'休止';}}
 try{const value=localStorage.getItem('miao-beat:key-labels');if(['auto','key','number','note'].includes(value))$('keyLabels').value=value;}catch{}
-$('keyLabels').addEventListener('change',()=>{renderLabels();renderPhraseOverview();try{localStorage.setItem('miao-beat:key-labels',$('keyLabels').value);}catch{}});
-touchInstructions?.addEventListener?.('change',()=>{renderLabels();renderPhraseOverview();});
+$('keyLabels').addEventListener('change',()=>{renderLabels();renderPhraseOverview();scoreReader?.refresh();try{localStorage.setItem('miao-beat:key-labels',$('keyLabels').value);}catch{}});
+touchInstructions?.addEventListener?.('change',()=>{renderLabels();renderPhraseOverview();scoreReader?.refresh();});
 setMode('free');renderLabels();loadDraft();
 const clock=new BeatClock(audio,beat=>{
   for(const item of $('beatIndicator').children)item.classList.toggle('active',Number(item.dataset.beat)===beat);
@@ -187,7 +188,7 @@ function clearGuidance(){
   lyricIndex=-1;$('lyricPanel').hidden=true;$('lyricCurrent').textContent='';$('lyricNext').textContent='';$('lyricPosition').textContent='';delete $('lyricPanel').dataset.line;
   for(const line of document.querySelectorAll('.score-lyric[aria-current]'))line.removeAttribute('aria-current');
   for(const b of $('phraseOverview').querySelectorAll('.playing'))b.classList.remove('playing');
-  guideIndex=-2;guideBeat=-1;delete $('guidePanel').dataset.cue;$('guidePanel').hidden=true;$('guideTrack').replaceChildren();
+  scoreReader?.updateCurrent(-1);guideIndex=-2;guideBeat=-1;delete $('guidePanel').dataset.cue;$('guidePanel').hidden=true;$('guideTrack').replaceChildren();
   $('guideProgress').setAttribute('aria-valuenow','0');$('guideProgressFill').style.width='0%';$('guideAnnounce').textContent='';
 }
 function stopSession(natural=false){
@@ -266,7 +267,7 @@ function renderScore(restorePhrase='all'){
   $('scoreSourceRow').hidden=!song.sourceLabel;if(song.sourceLabel){$('scoreSource').href=song.sourceUrl;$('scoreSource').textContent=song.sourceLabel;}
   for(const [lineIndex,phrase]of song.phrases.entries()){const row=document.createElement('div');row.className='score-phrase';for(const event of phrase){const keys=scoreKeys(event),n=document.createElement('div');n.className='score-note';n.dataset.scoreIndex=String(index++);n.dataset.codes=keys.map(k=>k.code).join(',');n.innerHTML=`<span class="score-primary">${event.rest?'休止':keys.map(cueLabel).join('+')}</span><kbd>${event.rest?'休止':keys.map(k=>k.key).join('+')}</kbd><small>${event.beats} 拍</small>`;row.append(n);}if(song.lyrics){const line=document.createElement('p'),block=document.createElement('section');line.className='score-lyric';line.dataset.lyricIndex=String(lineIndex);line.textContent=song.lyrics[lineIndex];block.className='score-line';block.append(line,row);$('scoreRows').append(block);}else $('scoreRows').append(row);}
   $('practiceHint').textContent=`${song.name} · ${song.key} · ${song.meter}/4 · 建议 ${song.bpm} BPM。点“听一遍”先听。`;
-  $('scoreStatus').textContent='数字是按 C 音固定排列的音级；F 大调等曲目请跟音名或键位，不能当首调简谱。跟弹不计分。';updateRecorder();
+  $('scoreStatus').textContent='数字是按 C 音固定排列的音级；F 大调等曲目请跟音名或键位，不能当首调简谱。跟弹不计分。';scoreReader?.setScore(song,$('phraseSelect').value==='all'?-1:Number($('phraseSelect').value));updateRecorder();
 }
 function mountGuidance(guide){
   $('guidePanel').hidden=false;guideIndex=-2;guideBeat=-1;
@@ -297,8 +298,9 @@ function renderGuidance(now){
     $('guideNow').textContent=current?.rest?`休止 · ${restHint(current)}`:current?`现在 ${current.keys.map(cueLabel).join(' + ')} · ${current.keys.map(k=>k.kind==='note'?k.sub:k.label).join('+')}`:'听预备拍';
     $('guideNext').textContent=next?.rest?`接着${restHint(next)}`:next?`下一音 ${next.keys.map(cueLabel).join(' + ')}`:current?.rest?'弹完啦': '最后一音';
     for(const n of document.querySelectorAll('.score-note.playing'))n.classList.remove('playing');
+    if(!current)scoreReader?.updateCurrent(-1);
     if(current){document.querySelector(`[data-score-index="${current.index}"]`)?.classList.add('playing');
-      let begin=0,phrase=0;for(const [i,row]of selectedSong().phrases.entries()){if(current.index<begin+row.length){phrase=i;break;}begin+=row.length;}updatePhraseOverview(phrase);
+      scoreReader?.updateCurrent(current.index);let begin=0,phrase=0;for(const [i,row]of selectedSong().phrases.entries()){if(current.index<begin+row.length){phrase=i;break;}begin+=row.length;}updatePhraseOverview(phrase);
     }
     $('guidePanel').dataset.index=String(p.index);$('guidePanel').dataset.bar=String(p.bar);$('guidePanel').dataset.beat=String(p.beat);
   }
@@ -310,7 +312,7 @@ function renderGuidance(now){
   }
 }
 $('songSelect').addEventListener('change',renderScore);
-$('phraseSelect').addEventListener('change',()=>{stopSession();updatePhraseOverview();revealPhraseSelection();updateRecorder();});
+$('phraseSelect').addEventListener('change',()=>{stopSession();updatePhraseOverview();revealPhraseSelection();scoreReader?.setScore(selectedSong(),$('phraseSelect').value==='all'?-1:Number($('phraseSelect').value));updateRecorder();});
 $('suggestedTempo').addEventListener('click',()=>{$('bpm').value=String(selectedSong().bpm);changeTempo();persistPreferences();});
 $('firstPhrase').addEventListener('click',()=>{$('phraseSelect').value='0';$('bpm').value=String(selectedSong().bpm);changeTempo();updatePhraseOverview();revealPhraseSelection();persistPreferences();startScore('guide');});
 async function startScore(kind){
@@ -320,7 +322,7 @@ async function startScore(kind){
   $('scoreStatus').textContent=kind==='guide'?`跟弹 ${bpm} BPM。只放节拍，旋律你来弹。`:`示范 ${bpm} BPM。点琴键就能接着弹。`;
   $('practiceHint').textContent=$('scoreStatus').textContent;
   playEvents(events,duration,kind,$('instrumentSelect').value,'sample-v1',{events:guideEvents,bpm,meter:song.meter,phaseBeats,countInBeats,loopSeconds,loop:$('loopPhrase').checked,songName:song.name,lyrics:song.lyrics});
-  if(kind==='guide'||song.lyrics)requestAnimationFrame(()=>$('guidePanel').scrollIntoView?.({block:'nearest',behavior:reducedMotion?.matches?'auto':'smooth'}));
+  if(!scoreReader?.open&&(kind==='guide'||song.lyrics))requestAnimationFrame(()=>$('guidePanel').scrollIntoView?.({block:'nearest',behavior:reducedMotion?.matches?'auto':'smooth'}));
 }
 $('listenSong').addEventListener('click',()=>startScore('score'));
 $('guideSong').addEventListener('click',()=>startScore('guide'));
@@ -353,11 +355,12 @@ function updateRecorder(){
   for(const b of $('phraseOverview').querySelectorAll('button'))b.disabled=locked;
   $('restorePrevious').disabled=locked||!previousTake?.events.length;$('clearDraft').disabled=locked||!recording?.events.length&&!previousTake?.events.length;
   $('exportOptions').hidden=!hasMediaSource;
-  for(const id of ['exportLayout','exportTitle'])$(id).disabled=busy;
+  for(const id of ['exportLayout','exportTitle','exportBrand'])$(id).disabled=busy;
   for(const id of ['exportRecording','playRecording'])$(id).hidden=!recording?.events.length&&!active;
   for(const id of ['exportVideo','exportAudio'])$(id).hidden=!hasMediaSource;
   const seconds=$('exportSource').value==='score'?practiceSelection().duration:recording?.duration/1000||0;
-  $('exportDuration').textContent=seconds?`约 ${Math.ceil(seconds+1.3)} 秒 · 按原速导出`:'';
+  scoreReader?.sync({locked:$('songSelect').disabled,labelsLocked:locked,active:!!session?.guide,pending:!!sessionPending||recordPending||active,media:busy});
+  $('exportDuration').textContent=seconds?`视频约 ${Math.ceil(seconds+1.3+($('exportBrand').checked?2:0))} 秒 · 音频约 ${Math.ceil(seconds+1.3)} 秒`:'';
   if(!busy&&!mediaSupported('video')&&!mediaSupported('audio')){$('mediaResults').hidden=false;$('mediaStatus').textContent='当前浏览器不支持媒体导出，仍可保存按键片段。';}
 }
 function finishRecording(){
@@ -416,7 +419,7 @@ async function exportMedia(kind){
     stopSession();stopClock();clearHeld();audio.stopVoices();
     if(kind==='video'){await character.ready;await character.prepareCapture?.(data.events.map(([time,code])=>({time,code:CODES[code]})));}
     if(serial!==mediaSerial||document.hidden)throw Error('导出已取消。');
-    job=await createMediaExport({audio,source:scene.querySelector('.full-frame-cat-canvas'),kind,doc:document,layout:$('exportLayout').value,title:$('exportTitle').value||(exportGuide?.songName||'我的小小演奏'),description:`${exportGuide?'曲谱示范':'我的演奏'} · ${data.bpm} BPM`,visualHealth:()=>character.captureHealthy?.()!==false,label:data.engine==='ui-synth-v1'?(data.instrument==='sparkle'?'旧版晶亮音色':'旧版马林巴'):($('instrumentSelect').selectedOptions[0]?.textContent||'Miao Beat'),caption:()=>exportGuide?.lyrics?$('lyricCurrent').textContent:$('nowPlaying').textContent});
+    job=await createMediaExport({audio,source:scene.querySelector('.full-frame-cat-canvas'),kind,doc:document,layout:$('exportLayout').value,outro:kind==='video'&&$('exportBrand').checked,onPhase:phase=>{if(phase==='outro')$('mediaStatus').textContent='正在添加网站与二维码片尾 · 2秒，请留在此页。';},title:$('exportTitle').value||(exportGuide?.songName||'我的小小演奏'),description:`${exportGuide?'曲谱示范':'我的演奏'} · ${data.bpm} BPM`,visualHealth:()=>character.captureHealthy?.()!==false,label:data.engine==='ui-synth-v1'?(data.instrument==='sparkle'?'旧版晶亮音色':'旧版马林巴'):($('instrumentSelect').selectedOptions[0]?.textContent||'Miao Beat'),caption:()=>exportGuide?.lyrics?$('lyricCurrent').textContent:$('nowPlaying').textContent});
     if(serial!==mediaSerial||document.hidden){job.cancel();await job.done;return;}
     mediaJob=job;mediaPending=false;if(kind==='video')character.setCaptureMode?.(true);updateRecorder();
     const events=data.events.map(([time,code])=>({offset:time/1000,code:CODES[code]}));
@@ -426,17 +429,24 @@ async function exportMedia(kind){
     const url=URL.createObjectURL(result.blob);if(mediaURLs[kind])URL.revokeObjectURL(mediaURLs[kind]);mediaURLs[kind]=url;
     const a=$(kind==='video'?'downloadVideo':'downloadAudio'),preview=$(kind==='video'?'mediaVideo':'mediaAudio');
     a.href=url;a.download=`miao-beat-${data.instrument}-${Date.now()}.${result.extension}`;a.textContent=`保存${kind==='video'?'视频':'音频'} .${result.extension} · ${(result.blob.size/1024).toFixed(0)} KB`;a.hidden=false;preview.src=url;preview.hidden=false;
-    $('mediaStatus').textContent=`${kind==='video'?'视频':'音频'}已生成${kind==='video'&&result.width?' · '+result.width+' × '+result.height:''}，可预览或保存。`;$('mediaResults').dataset.format=result.mimeType;
+    $('mediaStatus').textContent=`${kind==='video'?'视频':'音频'}已生成${kind==='video'&&result.width?' · '+result.width+' × '+result.height:''}，可预览或保存。`;if(result.outroSeconds&&!result.previewIncluded)$('mediaStatus').textContent+=' 片尾页面预览未载入，已保留猫猫、二维码和地址。';$('mediaResults').dataset.format=result.mimeType;
   }catch(error){job?.cancel();if(serial===mediaSerial||job&&mediaJob===job){stopSession();audio.stopVoices();$('mediaStatus').textContent=error.message||'导出失败，按键片段还在，可以重试。';}}
   finally{if(serial===mediaSerial||job&&mediaJob===job){character.setCaptureMode?.(false);mediaPending=false;mediaJob=null;$('mediaProgress').hidden=true;updateRecorder();}}
 }
-$('exportSource').addEventListener('change',updateRecorder);
+$('exportSource').addEventListener('change',updateRecorder);$('exportBrand').addEventListener('change',updateRecorder);
 $('exportVideo').addEventListener('click',()=>exportMedia('video'));
 $('exportAudio').addEventListener('click',()=>exportMedia('audio'));
 $('cancelMediaExport').addEventListener('click',()=>{mediaSerial++;mediaPending=false;mediaJob?.cancel();stopSession();$('mediaStatus').textContent='导出已取消，按键片段还在。';$('mediaProgress').hidden=true;updateRecorder();});
 function pauseAll(){if(mediaBusy()){mediaSerial++;mediaPending=false;mediaJob?.cancel('导出已取消：页面已离开前台。请留在此页重新导出。');$('mediaStatus').textContent='导出已取消：页面已离开前台。请留在此页重新导出。';$('mediaProgress').hidden=true;}const guided=!!session?.guide||!!sessionPending;lifecycle++;recordPending=false;sessionPending=0;clearHeld();stopClock();stopSession();finishRecording();audio.stopVoices();if(guided){$('practiceHint').textContent='已暂停。点“跟着弹”重新开始。';$('scoreStatus').textContent=$('practiceHint').textContent;}}
 window.addEventListener('pagehide',()=>{finishRecording();});
 window.addEventListener('blur',pauseAll);document.addEventListener('visibilitychange',()=>{if(document.hidden)pauseAll();});
+scoreReader=mountScoreReader(document,{
+  formatEvent:event=>{const keys=scoreKeys(event);return {primary:event.rest?'休止':keys.map(k=>k.kind==='note'?cueLabel(k):k.key).join('+'),secondary:event.rest?'空拍':keys.map(k=>k.kind==='note'?k.sub:k.label).join('+')};},
+  onOpen:()=>{clearHeld();$('readerLabels').value=$('keyLabels').value;void performanceView?.enter?.();},
+  onSong:id=>{if($('songSelect').disabled)return;$('songSelect').value=id;$('songSelect').dispatchEvent(new Event('change'));},
+  onLabels:value=>{if($('keyLabels').disabled)return;$('keyLabels').value=value;$('keyLabels').dispatchEvent(new Event('change'));},
+  onGuide:(phrase,active)=>{if(active){$('stopActivity').click();return;}$('phraseSelect').value=String(phrase);$('phraseSelect').dispatchEvent(new Event('change'));startScore('guide');}
+});
 renderInstrument();populateSongs();
 if(savedPreferences&&[...$('songSelect').options].some(o=>o.value===savedPreferences.song)){
   $('songSelect').value=savedPreferences.song;$('bpm').value=String(savedPreferences.bpm);$('meterSelect').value=String(savedPreferences.meter);$('loopPhrase').checked=savedPreferences.loop;$('exportLayout').value=savedPreferences.layout;

@@ -1,18 +1,19 @@
+import {SHARE_BRAND} from './share-brand.js';
 // Native, local replay capture: the complete scene canvas + the app audio output.
 // No microphone, screen capture, remote upload, encoder service or external runtime.
 const TYPES={video:['video/mp4;codecs=avc1.420028,mp4a.40.2','video/mp4','video/webm;codecs=vp9,opus','video/webm;codecs=vp8,opus','video/webm'],audio:['audio/mp4;codecs=mp4a.40.2','audio/mp4','audio/webm;codecs=opus','audio/webm','audio/ogg;codecs=opus']};
 export function mediaExtension(type){return type.includes('mp4')?(type.startsWith('audio/')?'m4a':'mp4'):type.includes('ogg')?'ogg':'webm';}
 export function mediaSupported(kind,win=globalThis){return !!TYPES[kind]&&typeof win.MediaRecorder==='function'&&typeof win.MediaStream==='function'&&TYPES[kind].some(t=>win.MediaRecorder.isTypeSupported(t));}
-export async function createMediaExport({audio,source,kind,doc=document,label='钢琴',caption=()=>'',layout='original',title='',description='我的演奏',visualHealth=()=>true,maxBytes=128*1024*1024}){
+export async function createMediaExport({audio,source,kind,doc=document,label='钢琴',caption=()=>'',layout='original',title='',description='我的演奏',outro=false,onPhase=()=>{},visualHealth=()=>true,maxBytes=128*1024*1024}){
   const win=doc.defaultView??globalThis,Recorder=win.MediaRecorder;
   const [width,height]=({original:[720,880],portrait:[720,1280],square:[720,720]})[layout]||[720,880];
   if(!mediaSupported(kind,win)||!audio.context?.createMediaStreamDestination||!audio.analyser)throw Error('这个浏览器暂不支持此格式，请换 Chrome、Edge 或 Safari 试试。');
   if(kind==='video'&&(!source?.width||source.hidden))throw Error('角色画面还没准备好，等图加载后再试。');
-  let destination,stream,videoStream,canvas,ctx,recorder,raf=0,guard,stopped=false,cancelled=false,size=0,settled=false,lastCapturePaint=null;
+  let destination,stream,videoStream,canvas,ctx,recorder,raf=0,guard,stopped=false,cancelled=false,size=0,settled=false,lastCapturePaint=null,outroStarted=false,outroTimer=0,previewImage=null;
   const chunks=[];let resolveDone,rejectDone,resolveReady,rejectReady;
   const done=new Promise((r,j)=>{resolveDone=r;rejectDone=j;});done.catch(()=>{});
   const ready=new Promise((r,j)=>{resolveReady=r;rejectReady=j;});
-  const cleanup=()=>{win.cancelAnimationFrame(raf);win.clearTimeout(guard);try{audio.analyser.disconnect(destination);}catch{}for(const t of new Set([...(stream?.getTracks()??[]),...(videoStream?.getTracks()??[])]))t.stop();doc.removeEventListener('visibilitychange',hidden);};
+  const cleanup=()=>{win.cancelAnimationFrame(raf);win.clearTimeout(guard);win.clearTimeout(outroTimer);try{if(destination)audio.analyser.disconnect(destination);}catch{}for(const t of new Set([...(stream?.getTracks()??[]),...(videoStream?.getTracks()??[])]))t.stop();doc.removeEventListener('visibilitychange',hidden);};
   function fail(reason){if(settled)return;settled=true;cancelled=true;try{if(recorder?.state!=='inactive')recorder?.stop();}catch{}cleanup();const error=reason instanceof Error?reason:new Error(reason);rejectReady(error);rejectDone(error);}
   function hidden(){if(doc.hidden)fail('导出已取消：请留在当前页面，重新点导出。');}
   function textWidth(text,size){return ctx.measureText?.(text)?.width??Array.from(text).length*size*.65;}
@@ -20,7 +21,7 @@ export async function createMediaExport({audio,source,kind,doc=document,label='�
   function paint(){
     if(cancelled||settled)return;
     try{
-      const now=win.performance.now();if(!visualHealth()||lastCapturePaint!==null&&now-lastCapturePaint>500)throw Error('Character stalled');lastCapturePaint=now;
+      const now=win.performance.now();if(!outroStarted&&!visualHealth()||lastCapturePaint!==null&&now-lastCapturePaint>500)throw Error('Character stalled');lastCapturePaint=now;if(outroStarted){paintOutro();return;}
       const ink='#61412e',muted='#99785d',padding=40,sceneSize=Math.min(width-80,height-270),sceneTop=Math.round(174+(height-270-sceneSize)/2);
       ctx.fillStyle='#f8f4eb';ctx.fillRect(0,0,width,height);
       ctx.fillStyle='#d19b6a';ctx.fillRect(padding,30,26,3);
@@ -40,8 +41,26 @@ export async function createMediaExport({audio,source,kind,doc=document,label='�
       ctx.fillStyle=muted;ctx.font='13px system-ui';ctx.fillText('和猫弹两下 · 留下一小段',width/2,height-24);
     }catch{fail('画面录制中断，请重新导出。');}
   }
+  function paintOutro(){
+    const brand=SHARE_BRAND,ink='#61412e',previewHeight=Math.min(height-230,720),previewWidth=previewHeight*390/844,top=140+(height-230-previewHeight)/2;
+    ctx.fillStyle='#f8f4eb';ctx.fillRect(0,0,width,height);ctx.fillStyle=ink;ctx.textAlign='left';ctx.font='600 32px system-ui';ctx.fillText('Miao Beat · 猫咪音乐玩具',40,62);
+    ctx.font='19px system-ui';ctx.fillText('和猫弹两下，留下你的一小段',40,103);
+    if(previewImage){const x=40+(310-previewWidth)/2;ctx.fillStyle='#e1d3bf';ctx.fillRect(x-2,top-2,previewWidth+4,previewHeight+4);ctx.drawImage(previewImage,x,top,previewWidth,previewHeight);}
+    else{const size=Math.min(310,height-250);ctx.drawImage(source,40,top+(previewHeight-size)/2,size,size);}
+    const module=7,quiet=4,qrSize=(brand.size+quiet*2)*module,x=width-40-qrSize,y=top+(previewHeight-qrSize)/2;
+    ctx.fillStyle='#fff';ctx.fillRect(x,y,qrSize,qrSize);ctx.fillStyle='#161412';
+    for(let row=0;row<brand.size;row++)for(let col=0;col<brand.size;col++)if(brand.data[row*brand.size+col])ctx.fillRect(x+(col+quiet)*module,y+(row+quiet)*module,module,module);
+    ctx.textAlign='center';ctx.font='600 20px system-ui';ctx.fillStyle=ink;ctx.fillText('扫码打开，和猫一起弹',x+qrSize/2,y-17);
+    ctx.font='17px system-ui';ctx.fillText('无需安装 · 点开就能玩',x+qrSize/2,y+qrSize+29);
+    ctx.font='600 28px system-ui';ctx.fillText(brand.address,width/2,height-46);ctx.font='14px system-ui';ctx.fillStyle='#99785d';ctx.fillText('同一部手机看视频，也可以直接输入这个地址',width/2,height-20);
+  }
+  function finish(){if(!settled){try{recorder.stop();}catch{fail('无法完成文件，请重试。');}}}
   function draw(){paint();if(!settled)raf=win.requestAnimationFrame(draw);}
   try{
+    if(kind==='video'&&outro&&typeof win.Image==='function'){
+      previewImage=await new Promise(resolve=>{const image=new win.Image();const timer=win.setTimeout(()=>resolve(null),3000);image.onload=()=>{win.clearTimeout(timer);resolve(image);};image.onerror=()=>{win.clearTimeout(timer);resolve(null);};image.src=new URL('./share/page-preview.jpg',import.meta.url).href;});
+      if(doc.hidden)throw Error('导出已取消：请留在当前页面。');
+    }
     destination=audio.context.createMediaStreamDestination();audio.analyser.connect(destination);
     const tracks=[...destination.stream.getAudioTracks()];if(!tracks.length)throw Error('音频流没有准备好。');
     if(kind==='video'){
@@ -59,13 +78,13 @@ export async function createMediaExport({audio,source,kind,doc=document,label='�
       if(settled)return;settled=true;cleanup();
       if(cancelled||!chunks.length){rejectDone(new Error('没有生成可保存的媒体文件。'));return;}
       const mimeType=recorder.mimeType||chunks[0].type;
-      const blob=new win.Blob(chunks,{type:mimeType});resolveDone({blob,mimeType,extension:mediaExtension(mimeType),kind,width,height});
+      const blob=new win.Blob(chunks,{type:mimeType});resolveDone({blob,mimeType,extension:mediaExtension(mimeType),kind,width,height,outroSeconds:kind==='video'&&outro?2:0,previewIncluded:!!previewImage});
     };
     doc.addEventListener('visibilitychange',hidden);
     guard=win.setTimeout(()=>fail('导出超时，按键片段仍保留。请重新尝试。'),306000);
     recorder.start(1000);
     const startup=win.setTimeout(()=>fail('编码器启动失败，请换个浏览器。'),5000);
     try{await ready;}finally{win.clearTimeout(startup);}
-    return {kind,done,stop(){if(!settled&&!stopped){stopped=true;try{recorder.stop();}catch{fail('无法完成文件，请重试。');}}},cancel(message='导出已取消，按键片段还在。'){fail(message);}};
+    return {kind,done,stop(){if(!settled&&!stopped){stopped=true;if(kind==='video'&&outro){outroStarted=true;paint();if(settled)return;try{onPhase('outro');}catch{}outroTimer=win.setTimeout(finish,2000);}else finish();}},cancel(message='导出已取消，按键片段还在。'){fail(message);}};
   }catch(error){fail(error);await ready.catch(()=>{});throw error;}
 }

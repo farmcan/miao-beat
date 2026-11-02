@@ -42,3 +42,8 @@ test('escape cancels a pending request even when native fullscreen enters late',
  current=h.doc.documentElement;h.doc.dispatchEvent(new h.win.Event('fullscreenchange'));resolve();await settle();
  assert.equal(exits,1);assert.equal(current,null);assert.equal(h.doc.body.dataset.performanceMode,'off');assert.equal(h.button.disabled,false);
 });
+
+test('score-reader can request the same performance controller and observe exit',async t=>{
+ const h=setup(t),events=[];h.doc.addEventListener('performance-mode-change',e=>events.push(e.detail.active));
+ assert.equal(typeof h.controller.enter,'function');await h.controller.enter();assert.equal(h.doc.body.classList.contains('performance-mode'),true);await h.controller.exit();assert.equal(h.doc.body.classList.contains('performance-mode'),false);assert.ok(events.includes(true));assert.equal(events.at(-1),false);
+});

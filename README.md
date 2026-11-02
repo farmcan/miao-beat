@@ -9,6 +9,8 @@ A small browser instrument playground. Follow a metronome, play your own music, 
 - Generate the next motion video on another computer: [one-document handoff](docs/video-animation-handoff.md), with committed reference images and copyable prompts.
 - Public products never link back to the owner’s personal website or research hub.
 
+2026-11-02 · 0.19.0: “看谱演奏” keeps the actual complete cat, paginated built-in score and playable keys together. Manual pages, optional following and portrait-friendly controls preserve human-only recordings. Video can add a 2-second real-page/QR/address outro; the QR was decoded from an actual native MP4 tail frame. Audio/JSON retain their original scope. [Plan, independent reviews and acceptance](docs/score-reader-and-video-plan-2026-11-02.md).
+
 2026-10-31 · 0.18.0: Choose a mode before the stage, recognize phrases by lyrics/notes, resume local practice preferences, reach mobile/fullscreen Stop, and export a composed full-scene performance card. [Implementation, independent reviews and limits](docs/experience-polish-plan-2026-10-31.md).
 
 2026-10-31 · Family referrals: MiaoTI, Miao Beat and MiaoTarot now record anonymous daily click/arrival aggregates in all six directions, with separate internal QA traffic and an owner-only query command. [Production acceptance and usage](docs/family-referrals-2026-10-31.md).
@@ -45,7 +47,7 @@ Mobile screens get larger scrollable piano keys and bigger chord/drum pads. **�
 
 ## Run & verify
 
-Node 22.13+ or 24 recommended; Python 3 for the local server. `npm ci` installs JSDOM for tests and pinned smplr 1.1.0. Build vendors the runtime; the deployed app loads code and samples only from its own origin. Run `npm run build` before the dev server to prepare vendor files.
+Node 22.13+ or 24 recommended; Python 3 for the local server. `npm ci` installs JSDOM for tests, pinned smplr 1.1.0 and build-only qrcode 1.5.4 (MIT). Build vendors the runtime; the deployed app loads code and samples only from its own origin. Run `npm run build` before the dev server to prepare vendor files.
 
 ```sh
 npm ci

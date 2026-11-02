@@ -1,6 +1,6 @@
 {
   "name": "miao-beat",
-  "version": "0.18.0-practice",
+  "version": "0.19.0-score",
   "private": true,
   "type": "module",
   "description": "A small browser instrument playground, with a metronome and a cat.",
@@ -11,7 +11,8 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "jsdom": "29.0.2"
+    "jsdom": "29.0.2",
+    "qrcode": "1.5.4"
   },
   "dependencies": {
     "smplr": "1.1.0"

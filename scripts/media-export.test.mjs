@@ -65,3 +65,22 @@ test('all performance cards contain a full scene with long-title space and a sep
   job.stop();await job.done;
  }
 });
+
+function timedFixture(){
+ const h=fixture(),timers=new Map();let id=1000;h.win.setTimeout=(fn,ms)=>{const key=++id;timers.set(key,{fn,ms});return key;};h.win.clearTimeout=key=>timers.delete(key);return {...h,timers};
+}
+test('video outro remains recording for two seconds, draws a QR, and completes only after that tail',async()=>{
+ const h=timedFixture(),rects=[],phases=[];h.ctx.fillRect=(...args)=>rects.push(args);const job=await createMediaExport({...h,kind:'video',outro:true,onPhase:p=>phases.push(p)});
+ const before=rects.length;job.stop();assert.equal(h.nodes[0].state,'recording');assert.deepEqual(phases,['outro']);assert.ok(rects.length-before>100,'QR modules are actually drawn');
+ const timer=[...h.timers.values()].find(x=>x.ms===2000);assert.ok(timer);timer.fn();const result=await job.done;assert.equal(result.kind,'video');assert.ok(result.blob.size);assert.equal(h.timers.size,0);assert.deepEqual(h.stops.sort(),['audio','video']);
+});
+test('cancel or background during the outro rejects the file and clears its timer; audio has no tail',async()=>{
+ for(const background of [false,true]){const h=timedFixture(),job=await createMediaExport({...h,kind:'video',outro:true});job.stop();if(background){h.doc.hidden=true;h.doc.dispatchEvent(new Event('visibilitychange'));}else job.cancel();await assert.rejects(job.done);assert.equal(h.timers.size,0);assert.equal(h.frames.size,0);}
+ const h=timedFixture(),job=await createMediaExport({...h,kind:'audio',outro:true});job.stop();await job.done;assert.equal([...h.timers.values()].some(x=>x.ms===2000),false);
+});
+
+test('leaving during preview preparation never disconnects an undefined destination or speaker output',async()=>{
+ const h=timedFixture(),disconnected=[];h.audio.analyser.disconnect=node=>disconnected.push(node);
+ h.win.Image=class {set src(value){queueMicrotask(()=>{h.doc.hidden=true;this.onload();});}};
+ await assert.rejects(createMediaExport({...h,kind:'video',outro:true}),/取消/);assert.deepEqual(disconnected,[]);assert.equal(h.timers.size,0);assert.equal(h.nodes.length,0);
+});
