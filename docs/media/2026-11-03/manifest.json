@@ -27,6 +27,14 @@
       "sha256": "6b19352843addee15eeeab0feb275d3a506823cefe0248e025415e530d922eaf",
       "width": 600,
       "height": 800
+    },
+    {
+      "file": "reader-count-in-320.jpg",
+      "bytes": 32910,
+      "sha256": "f0faaac7387f2bb3c80e7a8eb3c61c4364e05618c7369933ffcd2d4f05aeb078",
+      "width": 320,
+      "height": 568,
+      "source": "canonical website0.20.1, real Chrome320x568 render, audio-clock count-in; not a physical phone or Xiaohongshu screenshot"
     }
   ]
 }
