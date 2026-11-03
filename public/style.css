@@ -662,6 +662,7 @@ body.score-reading .scene { aspect-ratio:1; min-height:0; }
 .reader-caption { min-width:0; display:flex; flex-direction:column; gap:3px; }
 .reader-caption strong { font-size:12px; }
 .reader-caption span { font-size:10px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.reader-caption #readerTiming,.reader-caption #guideTime { color:var(--orange); font-weight:600; font-variant-numeric:tabular-nums; }
 .reader-navigation { display:flex; align-items:center; gap:3px; flex-shrink:0; }
 #readerPageCount { min-width:40px; text-align:center; font-size:11px; font-variant-numeric:tabular-nums; }
 .reader-notes { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:4px; margin:0 0 6px; }

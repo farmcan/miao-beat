@@ -40,7 +40,7 @@ export function mountScoreReader(doc,{formatEvent,onOpen,onClose,onSong,onGuide,
     for(const b of doc.querySelectorAll('[data-open-score]'))b.setAttribute('aria-pressed',String(value));
     $('readScoreToggle').textContent=value?'收起谱架':'看谱演奏';$('readerLabels').hidden=!value;
     if(value){
-      setSize(portrait?.matches?4:6);move('catStage','readerCatSlot');move('playingSurface','readerKeysSlot');move('soundEntry','readerSoundSlot');onOpen?.();applyPage();
+      setSize(portrait?.matches?4:6);move('catStage','readerCatSlot');move('playingSurface','readerKeysSlot');move('soundEntry','readerSoundSlot');move('guideTime','readerTiming');onOpen?.();applyPage();
     }else{for(const {node,placeholder}of moved.splice(0)){placeholder.replaceWith(node);}onClose?.();}
   }
   for(const b of doc.querySelectorAll('[data-open-score]'))b.addEventListener('click',()=>{if(!busy)setOpen(!open);});
@@ -63,7 +63,7 @@ export function mountScoreReader(doc,{formatEvent,onOpen,onClose,onSong,onGuide,
     refresh(){if(song)applyPage();$('readerLabels').value=$('keyLabels').value;},
     updateCurrent(index){if(index===current)return;current=index;if(open&&$('readerFollow').checked&&index>=0){const next=indexPage(index);if(next>=0&&next!==page){page=next;applyPage();return;}}highlight();},
     sync({locked=false,active=false,labelsLocked=false,media=false,pending=false}={}){
-      busy=media;playing=active;$('readerSong').disabled=locked||media;$('readerLabels').disabled=labelsLocked||media;$('readerFollow').disabled=media;
+      busy=media;playing=active;$('readerTiming').hidden=!active;$('readerSong').disabled=locked||media;$('readerLabels').disabled=labelsLocked||media;$('readerFollow').disabled=media;
       $('readerGuide').disabled=media||pending&&!active;$('readerReturn').disabled=media;$('readerGuide').textContent=active?'停止跟弹':'跟这句';$('readerReturn').textContent=active?'回当前':'回练习句';
       for(const b of doc.querySelectorAll('[data-open-score]'))b.disabled=media;if(song){$('readerPrev').disabled=media||page===0;$('readerNext').disabled=media||page===pages.length-1;}
     },

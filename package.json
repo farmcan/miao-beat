@@ -1,6 +1,6 @@
 {
   "name": "miao-beat",
-  "version": "0.20.0-mobile",
+  "version": "0.20.1",
   "private": true,
   "type": "module",
   "description": "A small browser instrument playground, with a metronome and a cat.",

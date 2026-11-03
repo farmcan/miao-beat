@@ -211,10 +211,14 @@ test('pending sample load for playback locks recording until playback readiness 
 
 test('guided practice advances from audio time, live hits continue it, and recording contains only real input',async t=>{
  const h=setup(t),{$,audio,key,clock,w}=h;
+ const originalTimeParent=$('guideTime').parentNode;$('readScoreToggle').click();assert.equal($('readerTiming').hidden,true);
  $('guideSong').click();await settle();
  assert.equal(clock.running,true);assert.equal(audio.plays.length,0,'guide must never play the melody');
+ assert.equal($('guideTime').parentNode,$('readerTiming'));assert.equal($('readerTiming').hidden,false);
  h.frame(.5);assert.match($('guideTime').textContent,/预备/);assert.equal($('guidePanel').dataset.index,'-1');
+ h.frame(1.5);assert.match($('guideTime').textContent,/预备 2 拍/);
  h.frame(2.6);assert.equal($('guidePanel').dataset.index,'0');assert.ok(w.document.querySelector('[data-code="KeyA"]').classList.contains('due'));
+ assert.doesNotMatch($('guideTime').textContent,/预备/);
  $('recordToggle').click();await settle();assert.equal($('guidePanel').hidden,false);
  for(const [time,code]of [[2.65,'KeyA'],[2.8,'KeyS'],[2.95,'KeyG']]){audio.context.currentTime=time;key('keydown',code);await settle();key('keyup',code);}
  assert.equal(audio.plays.length,3);assert.equal(clock.running,true);assert.equal($('guidePanel').hidden,false);
@@ -224,6 +228,7 @@ test('guided practice advances from audio time, live hits continue it, and recor
  assert.equal(audio.plays.length,3,'a stalled frame must not add pretend notes');
  $('stopSong').click();assert.equal(clock.running,false);assert.equal($('guidePanel').hidden,true);
  assert.equal(w.document.querySelectorAll('.due,.upcoming').length,0);
+ assert.equal($('readerTiming').hidden,true);$('readScoreToggle').click();assert.equal($('guideTime').parentNode,originalTimeParent);assert.equal(w.document.querySelectorAll('#guideTime').length,1);
 });
 
 test('tempo changes clear old guidance; restart restores its cue, and demo still yields to live input',async t=>{
