@@ -1,5 +1,6 @@
 import './family-referrals.js';
 import {mountScoreReader} from './score-reader.js';
+import {mountMediaSharing} from './media-sharing.js';
 import {normalizePracticePreferences} from './practice-preferences.js';
 import {KEYS,MELODY,DRUMS,CHORDS,LEGACY_KEYS} from './bindings.js';
 import {SampledAudio} from './sampled-audio.js';
@@ -39,6 +40,7 @@ const character=mountCharacter(scene);
 const motionToggle=$('guitarMotionToggle');if(motionToggle){scene.addEventListener('guitar-motion-status',event=>{motionToggle.disabled=event.detail!=='ready';$('guitarMotionLabel').textContent=event.detail==='loading'?'动作准备中…':event.detail==='ready'?'拨弦动作':'动作暂未加载';});motionToggle.checked=!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;let pointerMotion=false;motionToggle.closest('label').addEventListener('pointerdown',()=>{pointerMotion=true;});motionToggle.addEventListener('keydown',()=>{pointerMotion=false;});motionToggle.addEventListener('change',()=>{character.setMotionEnabled(motionToggle.checked);if(pointerMotion){pointerMotion=false;$('playingSurface').focus({preventScroll:true});}});}character.ready.catch(()=>{scene.dataset.characterStatus='whole-image-unavailable';});
 let loading=0,presetEpoch=0,mediaPending=false,mediaJob=null,mediaSerial=0;const mediaURLs={};
 const mediaBusy=()=>mediaPending||!!mediaJob;
+const mediaSharing=mountMediaSharing(document,{isBusy:mediaBusy});
 let previousTake=null,takeBackup=null,draftPromoted=false,draftSavedAt=-Infinity;
 let hits=0,frame=0,meterUntil=0,beatUntil=0,session=null,recording=null,recordStart=null,recordPending=false,importPending=false,sessionPending=0,sessionSerial=0,lifecycle=0;
 const DRAFT_KEY='miao-beat:takes:v1';
@@ -360,6 +362,7 @@ function updateRecorder(){
   for(const id of ['exportVideo','exportAudio'])$(id).hidden=!hasMediaSource;
   const seconds=$('exportSource').value==='score'?practiceSelection().duration:recording?.duration/1000||0;
   scoreReader?.sync({locked:$('songSelect').disabled,labelsLocked:locked,active:!!session?.guide,pending:!!sessionPending||recordPending||active,media:busy});
+  mediaSharing.refresh();
   $('exportDuration').textContent=seconds?`视频约 ${Math.ceil(seconds+1.3+($('exportBrand').checked?2:0))} 秒 · 音频约 ${Math.ceil(seconds+1.3)} 秒`:'';
   if(!busy&&!mediaSupported('video')&&!mediaSupported('audio')){$('mediaResults').hidden=false;$('mediaStatus').textContent='当前浏览器不支持媒体导出，仍可保存按键片段。';}
 }
@@ -429,6 +432,7 @@ async function exportMedia(kind){
     const url=URL.createObjectURL(result.blob);if(mediaURLs[kind])URL.revokeObjectURL(mediaURLs[kind]);mediaURLs[kind]=url;
     const a=$(kind==='video'?'downloadVideo':'downloadAudio'),preview=$(kind==='video'?'mediaVideo':'mediaAudio');
     a.href=url;a.download=`miao-beat-${data.instrument}-${Date.now()}.${result.extension}`;a.textContent=`保存${kind==='video'?'视频':'音频'} .${result.extension} · ${(result.blob.size/1024).toFixed(0)} KB`;a.hidden=false;preview.src=url;preview.hidden=false;
+    mediaSharing.setMedia(kind,{blob:result.blob,name:a.download});
     $('mediaStatus').textContent=`${kind==='video'?'视频':'音频'}已生成${kind==='video'&&result.width?' · '+result.width+' × '+result.height:''}，可预览或保存。`;if(result.outroSeconds&&!result.previewIncluded)$('mediaStatus').textContent+=' 片尾页面预览未载入，已保留猫猫、二维码和地址。';$('mediaResults').dataset.format=result.mimeType;
   }catch(error){job?.cancel();if(serial===mediaSerial||job&&mediaJob===job){stopSession();audio.stopVoices();$('mediaStatus').textContent=error.message||'导出失败，按键片段还在，可以重试。';}}
   finally{if(serial===mediaSerial||job&&mediaJob===job){character.setCaptureMode?.(false);mediaPending=false;mediaJob=null;$('mediaProgress').hidden=true;updateRecorder();}}

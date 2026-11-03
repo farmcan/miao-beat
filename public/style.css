@@ -273,8 +273,8 @@ footer { max-width: 1180px; margin: 8px auto 0; padding: 15px 32px 30px; display
 }
 @media(max-width: 760px), (pointer: coarse) {
   .melody-scroll { touch-action: pan-x; scroll-padding-inline: 4px; }
-  .melody-keys { min-width: 640px; touch-action: pan-x; }
-  .music-key { min-width: 52px; touch-action: pan-x; }
+  .melody-keys { min-width: 640px; touch-action: none; }
+  .music-key { min-width: 52px; touch-action: none; }
   .music-key.black, .music-key.black-key, .music-key[data-accidental=true] { min-width: 44px; }
   .keyboard-scroll-hint { display: block; }
   .desktop-hint { display: none; }
@@ -712,4 +712,34 @@ body.score-reading #readerSoundSlot .sound-ready:has(.sound-status[data-state=re
  body.score-reading .performance-row { width:108px; }
  body.score-reading #readerKeysSlot .melody-keys { height:112px; }
  .reader-note { min-height:54px; }
+}
+
+/* Keys respond at touch-down; a separate rail changes range without playing. */
+#keyboardRange { width:100%; min-width:0; height:44px; margin:0; flex:1; touch-action:pan-x; }
+.media-downloads { align-items:center; }
+.media-downloads > a,.media-downloads > button { display:inline-flex; align-items:center; min-height:44px; padding:8px 12px; border:1px solid var(--line); border-radius:9px; background:var(--cream); color:var(--ink); font:inherit; }
+.share-status { color:var(--muted); font-size:11px; line-height:1.6; }
+.share-status:empty { display:none; }
+@media(max-width:480px) and (max-height:700px) and (orientation:portrait){
+ body:not(.performance-mode) .site-header { min-height:44px; padding:2px 16px; }
+ body:not(.performance-mode) main { padding-left:16px; padding-right:16px; }
+ body:not(.performance-mode) .page-heading { margin:4px 0 6px; }
+ body:not(.performance-mode) .page-heading h1 { font-size:21px; }
+ body:not(.performance-mode) .heading-note { display:none; }
+ body:not(.performance-mode) .workbench { display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); gap:3px 10px; align-items:center; }
+ body:not(.performance-mode) .bench-topline { grid-column:1/-1; grid-row:1; }
+ body:not(.performance-mode) .mode-nav { grid-column:1/-1; grid-row:2; margin:0; }
+ body:not(.performance-mode) .performance-row { grid-column:1; grid-row:3/5; width:100%; max-width:128px; margin:0 auto; }
+ body:not(.performance-mode) .play-area { display:contents; }
+ body:not(.performance-mode) .instrument-tabs { grid-column:2; grid-row:3; display:grid; grid-template-columns:1fr 1fr; gap:4px; margin:0; }
+ body:not(.performance-mode) .instrument-tabs button { min-height:44px; padding:4px; }
+ body:not(.performance-mode) .instrument-controls { grid-column:2; grid-row:4; gap:4px; }
+ body:not(.performance-mode) .volume-control input { width:30px; }
+ body:not(.performance-mode) .volume-control output { min-width:24px; }
+ body:not(.performance-mode) .instrument-controls .performance-toggle { padding:4px; }
+ body:not(.performance-mode) .sound-ready { grid-column:1/-1; grid-row:5; margin:4px 0; }
+ body:not(.performance-mode) .playing-surface { grid-column:1/-1; grid-row:6; }
+ body:not(.performance-mode) .melody-keys { height:104px; }
+ body:not(.performance-mode) .section-label { margin-bottom:4px; }
+ body:not(.performance-mode) .session-tools { grid-column:1/-1; grid-row:7; }
 }

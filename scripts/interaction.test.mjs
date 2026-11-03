@@ -9,6 +9,8 @@ import * as scores from '../public/scores.js';
 import * as recording from '../public/recording.js';
 import {createMediaExport,mediaSupported} from '../public/media-export.js';
 import {mountScoreReader} from '../public/score-reader.js';
+import {mountMediaSharing} from '../public/media-sharing.js';
+import {mountKeyboardNavigation} from '../public/keyboard-navigation.js';
 import {normalizePracticePreferences} from '../public/practice-preferences.js';
 import {beatPattern} from '../public/clock.js';
 import {guidePosition} from '../public/guidance.js';
@@ -55,8 +57,8 @@ function setup(t,overrides={}) {
   w.HTMLAnchorElement.prototype.click=function(){};
   if(overrides.initialPreferences)w.localStorage.setItem('miao-beat:practice:v1',overrides.initialPreferences);
   if(overrides.initialDraft)w.localStorage.setItem('miao-beat:takes:v1',overrides.initialDraft);
-  w.__deps={...bindings,...scores,...recording,mountScoreReader,normalizePracticePreferences,guidePosition,beatPattern,createMediaExport,mediaSupported,SampledAudio:FakeAudio,mountPerformance(){},mountKeyboardNavigation(){},loadSiteCounter(){},mountCharacter:()=>({ready:Promise.resolve(),strike(){}}),BeatClock:FakeClock,...overrides};
-  w.eval('const {mountScoreReader,normalizePracticePreferences,KEYS,MELODY,DRUMS,CHORDS,LEGACY_KEYS,SampledAudio,mountCharacter,mountPerformance,mountKeyboardNavigation,loadSiteCounter,BeatClock,SONGS,scoreEvents,scoreWindow,guidePosition,beatPattern,createMediaExport,mediaSupported,CODES,MAX_MS,MAX_EVENTS,makeRecording,validateRecording}=window.__deps;\n'+app);
+  w.__deps={...bindings,...scores,...recording,mountScoreReader,mountMediaSharing,normalizePracticePreferences,guidePosition,beatPattern,createMediaExport,mediaSupported,SampledAudio:FakeAudio,mountPerformance(){},mountKeyboardNavigation(){},loadSiteCounter(){},mountCharacter:()=>({ready:Promise.resolve(),strike(){}}),BeatClock:FakeClock,...overrides};
+  w.eval('const {mountScoreReader,mountMediaSharing,normalizePracticePreferences,KEYS,MELODY,DRUMS,CHORDS,LEGACY_KEYS,SampledAudio,mountCharacter,mountPerformance,mountKeyboardNavigation,loadSiteCounter,BeatClock,SONGS,scoreEvents,scoreWindow,guidePosition,beatPattern,createMediaExport,mediaSupported,CODES,MAX_MS,MAX_EVENTS,makeRecording,validateRecording}=window.__deps;\n'+app);
   const $=id=>w.document.getElementById(id);
   const key=(type,code,target=w.document,options={})=>target.dispatchEvent(new w.KeyboardEvent(type,{code,bubbles:true,cancelable:true,...options}));
   const frame=time=>{audio.context.currentTime=time;const queued=[...frames.values()];frames.clear();for(const fn of queued)fn();};
@@ -494,4 +496,17 @@ test('paging while recording adds no generated notes and preserves actual keyboa
  key('keydown','KeyS');await settle();key('keyup','KeyS');h.audio.context.currentTime=1;$('stopActivity').click();
  $('readScoreToggle').click();assert.equal($('playingSurface').parentNode.className,'play-area');$('exportRecording').click();const take=JSON.parse(await h.blob().text());assert.equal(take.events.length,2);assert.deepEqual(take.events.map(e=>e[1]),[0,1]);
  assert.equal($('phraseSelect').value,'all');assert.equal(h.audio.plays.length,2);
+});
+
+
+test('separate range rail moves to both bounds without playing or recording notes',async t=>{
+ const h=setup(t),{$,w,audio}=h,scroller=w.document.querySelector('.melody-scroll');
+ Object.defineProperties(scroller,{clientWidth:{value:288},scrollWidth:{value:640}});
+ scroller.scrollTo=({left})=>{scroller.scrollLeft=left;scroller.dispatchEvent(new w.Event('scroll'));};
+ const navigation=mountKeyboardNavigation(w.document);
+ $('recordToggle').click();await settle();
+ $('keyboardRange').value='100';$('keyboardRange').dispatchEvent(new w.Event('input'));h.frame(0);assert.equal(scroller.scrollLeft,352);assert.equal($('keyboardHigher').disabled,true);
+ $('keyboardRange').value='0';$('keyboardRange').dispatchEvent(new w.Event('input'));h.frame(0);assert.equal(scroller.scrollLeft,0);assert.equal($('keyboardLower').disabled,true);assert.equal(audio.plays.length,0);
+ h.key('keydown','KeyA');h.key('keyup','KeyA');await settle();audio.context.currentTime=.2;$('recordToggle').click();$('exportRecording').click();
+ const take=JSON.parse(await h.blob().text());assert.deepEqual(take.events,[[0,0]]);navigation.destroy();
 });

@@ -52,9 +52,9 @@
           <p id="guideAnnounce" class="sr-only" role="status"></p>
         </div>
         <div class="section-label" id="melodyHeading"><h2>琴键</h2><label class="label-choice"><span class="sr-only">琴键显示</span><select id="keyLabels" aria-label="琴键显示"><option value="auto">自动标识</option><option value="key">键位</option><option value="number">固定音级</option><option value="note">音名</option></select></label><span class="desktop-hint">白键 A — K <i>·</i> 黑键 W E T Y U</span><span class="mobile-hint">点着弹，也可以一起按</span></div>
-        <div class="melody-scroll" tabindex="0" role="region" aria-label="旋律键盘，可左右滑动"><div id="melodyKeys" class="melody-keys" aria-label="钢琴排列的旋律键"></div></div>
-        <div id="keyboardNavigation" class="keyboard-navigation" role="group" aria-label="切换琴键音域" hidden><button id="keyboardLower" type="button" aria-controls="melodyKeys" aria-label="显示更低的琴键" disabled>← 低音</button><span aria-hidden="true">↔</span><button id="keyboardHigher" type="button" aria-controls="melodyKeys" aria-label="显示更高的琴键" disabled>高音 →</button></div>
-        <p class="keyboard-scroll-hint">左右滑动，或点“低音 / 高音”找琴键</p>
+        <div class="melody-scroll" tabindex="0" role="region" aria-label="旋律键盘，使用下方音域条或按钮换音域"><div id="melodyKeys" class="melody-keys" aria-label="钢琴排列的旋律键"></div></div>
+        <div id="keyboardNavigation" class="keyboard-navigation" role="group" aria-label="切换琴键音域" hidden><button id="keyboardLower" type="button" aria-controls="melodyKeys" aria-label="显示更低的琴键" disabled>← 低音</button><input id="keyboardRange" type="range" min="0" max="100" value="0" aria-label="切换琴键音域位置"><button id="keyboardHigher" type="button" aria-controls="melodyKeys" aria-label="显示更高的琴键" disabled>高音 →</button></div>
+        <p class="keyboard-scroll-hint">琴键按下即响 · 拖音域条或点“低音 / 高音”换音域</p>
         <div class="percussion-row"><div class="drum-heading"><h2>鼓垫</h2><span id="drumHint">Z X C V · B N M L</span></div><div id="drumPads" class="drum-pads" aria-label="打击乐垫"></div></div>
       </div>
       </div>
@@ -96,7 +96,7 @@
       </div>
     </section>
 
-    <section id="mediaResults" class="media-results" aria-label="导出的演奏" hidden><p id="mediaStatus" role="status"></p><progress id="mediaProgress" max="1" value="0" hidden aria-label="导出进度"></progress><div class="media-downloads"><a id="downloadVideo" hidden>保存视频</a><a id="downloadAudio" hidden>保存音频</a></div><video id="mediaVideo" controls playsinline preload="metadata" hidden aria-label="导出视频预览"></video><audio id="mediaAudio" controls preload="metadata" hidden aria-label="导出音频预览"></audio></section>
+    <section id="mediaResults" class="media-results" aria-label="导出的演奏" hidden><p id="mediaStatus" role="status"></p><progress id="mediaProgress" max="1" value="0" hidden aria-label="导出进度"></progress><div class="media-downloads"><a id="downloadVideo" hidden>保存视频</a><button id="shareVideo" type="button" hidden>分享视频</button><a id="downloadAudio" hidden>保存音频</a><button id="shareAudio" type="button" hidden>分享音频</button></div><p id="shareStatus" class="share-status" role="status"></p><video id="mediaVideo" controls playsinline preload="metadata" hidden aria-label="导出视频预览"></video><audio id="mediaAudio" controls preload="metadata" hidden aria-label="导出音频预览"></audio></section>
     <details id="exportPreview" class="export-preview" hidden><summary>复制演奏文件内容</summary><label for="exportData">下载不方便时，也可以复制这段 JSON，自行保存为 .json 文件。</label><textarea id="exportData" readonly rows="5" aria-label="演奏 JSON 数据"></textarea></details>
 
     <details class="score-book" id="scoreBook">

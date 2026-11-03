@@ -7,6 +7,7 @@ export function mountKeyboardNavigation(root = document) {
   const navigation = root.querySelector('#keyboardNavigation');
   const lower = root.querySelector('#keyboardLower');
   const higher = root.querySelector('#keyboardHigher');
+  const range = root.querySelector('#keyboardRange');
   if (!scroller || !keys || !navigation || !lower || !higher) return null;
   if (mounted.has(scroller)) return mounted.get(scroller);
 
@@ -21,6 +22,7 @@ export function mountKeyboardNavigation(root = document) {
     navigation.hidden = !overflowing;
     lower.disabled = !overflowing || scroller.scrollLeft <= 1;
     higher.disabled = !overflowing || scroller.scrollLeft >= max - 1;
+    if(range){range.disabled=!overflowing;range.value=String(max?Math.round(scroller.scrollLeft/max*100):0);}
   }
   function schedule() {
     if (!frame) frame = win.requestAnimationFrame(update);
@@ -32,8 +34,10 @@ export function mountKeyboardNavigation(root = document) {
   }
   const goLower = () => move(-1);
   const goHigher = () => move(1);
+  const setRange = () => {scroller.scrollTo({left:maximum()*Number(range.value)/100,behavior:'auto'});schedule();};
   lower.addEventListener('click', goLower);
   higher.addEventListener('click', goHigher);
+  range?.addEventListener('input',setRange);
   scroller.addEventListener('scroll', schedule, {passive: true});
   win.addEventListener('resize', schedule);
   const resizeObserver = win.ResizeObserver ? new win.ResizeObserver(schedule) : null;
@@ -48,6 +52,7 @@ export function mountKeyboardNavigation(root = document) {
     if (frame) win.cancelAnimationFrame(frame);
     lower.removeEventListener('click', goLower);
     higher.removeEventListener('click', goHigher);
+    range?.removeEventListener('input',setRange);
     scroller.removeEventListener('scroll', schedule);
     win.removeEventListener('resize', schedule);
     resizeObserver?.disconnect();
