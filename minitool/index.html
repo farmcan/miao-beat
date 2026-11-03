@@ -1,0 +1,12 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>喵Beat 猫咪弹琴</title><link rel="stylesheet" href="./style.css"></head><body><main>
+<header><h1>喵Beat <span>猫咪弹琴</span></h1><span class="tag">八个音，弹两下</span></header>
+<section class="stage-row"><div id="catStage" class="cat-stage" aria-label="完整橘猫和钢琴"></div><div class="welcome"><p>和橘猫<br><strong>留一小段旋律。</strong></p><button id="prepare">准备声音</button><label class="volume">音量 <input id="volume" type="range" min="0" max="100" value="55" aria-label="演奏音量"></label></div></section>
+<p id="soundStatus" class="status" role="status">先准备声音，再点音符；按下就响。</p>
+<section class="score"><div class="score-top"><label class="sr-only" for="song">选择内置曲谱</label><select id="song"></select><button id="prev" aria-label="上一页谱子">←</button><span id="pageCount" aria-live="polite"></span><button id="next" aria-label="下一页谱子">→</button></div><div id="notes" class="notes" role="list" aria-label="当前页谱子"></div><div class="score-caption"><span id="phrase"></span><button id="listen" disabled>听这一页</button></div></section>
+<div id="keys" class="keys" role="group" aria-label="八个白键，分两排演奏"></div>
+<div class="actions"><button id="record" disabled>录一段</button><button id="stop" disabled>停止</button><button id="replay" disabled>回放</button><button id="makeCard" disabled>演奏小卡</button></div>
+<p id="takeStatus" class="status" role="status">只记录你实际弹下的音；听谱不写入录音。</p><p id="storageStatus" class="storage-status" role="status"></p>
+<details><summary>草稿与玩法</summary><p>八个音符分两排，数字按C大调排列。谱页可以手动翻；听谱是示范，不计分。真人片段最长60秒／512次敲击。</p><button id="restore" disabled>恢复上一遍</button><p>当前与上一遍片段尽量保留在本机；清缓存或卸载可能丢失。小卡只含音符与时长，图片不带声音。小卡中的猫图由AI辅助制作。</p></details>
+<section id="cardPanel" class="card-panel" hidden><h2>我的演奏小卡</h2><p>图片不带声音 · 回到上面可听回放</p><img id="cardImage" alt="包含真人演奏音符和完整猫的演奏小卡"><div class="actions"><button id="saveCard" disabled>存到相册</button><button id="postCard" disabled>带入小红书笔记</button><button id="closeCard">收起小卡</button></div><p id="cardStatus" class="status" role="status"></p></section>
+<details><summary>关于与来源</summary><p>喵Beat钢琴轻量版。完整橘猫图与钢琴采样随包提供，无需输入个人信息。钢琴源：FreePats Upright Piano KW small（2019），CC0；代码与相邻喵塔罗桥接采用MIT。只借鉴Bongo Cat直接演奏机制，没有复制它的图或录音。完整许可随包保留。</p></details>
+</main><script src="./data.js"></script><script src="./audio-base.js"></script><script src="./piano-audio.js"></script><script src="./recording.js"></script><script src="./bridge.js"></script><script src="./app.js"></script></body></html>

@@ -107,3 +107,43 @@ CDN脚本响应提供跨源允许头。未发现“服务整体不可达／版�
 官方`getWindowInfo`条件再次核验为客户端9.49+（版本比较值9490），无业务参数；读同步启动版本，不存在再异步获取，检查方法并处理失败。返回坐标已经是容器逻辑像素，不能另加statusBarHeight。上方避让取有效safeArea.top及可见back/me/share的bottom最大值，下方取windowHeight-safeArea.bottom的非负值；按钮可为null，返回字段不合法时走CSS保守回退；窗口改变后再读最新值。相邻封装本身仅检查方法，移植时应补明确版本判断。
 
 本节只读抽取与判断，没有改产品代码或操作其他仓库。后续将对实际候选审查闭环与授权边界。
+
+## 八白键平台候选 · 独立技术终评
+
+范围为`minitool/{index.html,app.js,bridge.js,audio-base.js,piano-audio.js,style.css,NOTICES.json}`与`build-xhs.mjs`，不操作Creator。判断：**限定钢琴轻量版技术GO；已发现的两项P1均由主代理修复并独立复验关闭，没有剩余已识别P0/P1。允许继续对最终同一ZIP做官方容器与真机验收，不等于已发布或真机通过。**
+
+### P1发现与修复证据（保留历史）
+
+1. **前台卡顿后补播放过期音。** 初候选在音频时间0.1秒播放首音后，下帧跳到4秒，仍调度0.725／1.35／1.975秒的三个旧事件；真实adapter会把过期when全部夹到当前时刻，听感变成突发和弦，而界面称正常结束。修复后tick对落后150ms的事件明确停止、取消声音并提示重播，播放异常同样停止。独立相同fixture复验：初始1音，4秒后仍1音、无补交，提示卡顿停止；正式回归也覆盖该触发。
+2. **启动读草稿期间自由演奏会抹掉旧take。** 初候选以通用revision保护恢复；准备声音后，延迟Storage未返回时自由按A会增加revision，导致返回的合法旧KeyK take被跳过。随后录S并保存时previous=null，覆盖旧片段。修复把revision变化限于录制／take操作。独立复验：先free A，再让旧KeyK数据到达，回放恢复可用；录S后持久化的previous仍包含KeyK。正式第8条回归复现相同竞态。
+
+### 当前候选核查
+
+- 录音schema复用原`validateRecording`并限制钢琴、八个稳定code、60秒／512事件。只有真人路径写入events；听页、翻页、回放不写。空录音保留旧take，新录第一击提升备份；恢复上一遍会使旧卡失效，避免把旧图片当新take。
+- 换曲不再清除录制时钟；独立61秒推进时自动停止，保存duration=60000且真人事件数不变。离开前台会结束录制、停止voices、取消画面与播放计时，重新准备采用generation与audio loadToken，避免迟到准备恢复已取消工作。
+- Storage失败不写：独立让load拒绝后录一音再停止，put调用数为0，明确仅本次打开保留。原生响应要求Promise及明确`:ok`；9.46+不静默写浏览器替代缓存。写入串行，schema封闭；未将解析异常当空数据。
+- 安全区按9.49版本及方法检查；窗口返回值验证并不重复加状态栏。图片操作由点击触发、nativeBusy阻止重复，取消保留卡与take；成功文案区分相册响应和平台处理，不声称笔记审核通过。
+- 本地钢琴adapter没有网络或合成器退路；5个既有小MP3是明确音频字节。独立使用真实adapter代码＋可控AudioContext替身检查：取消准备不填充buffers，重试加载5项；8白键最近采样均只差≤1半音，未来when保留；每键3／总12 voice上限及stop断开自身节点通过。这不是原生MP3解码／扬声器证明。
+- 构建只纳入18项资源；9张既有完整图等比缩至480，无分离四肢或新美术；MIT/CC0与来源通知随包。独立曾对buildId`0df2d626ee7f`包内18项及ZIP核对哈希（该包早于第2项P1修复）；最终修复后须以新的build-audit／ZIP身份重新验收，不能把旧哈希沿用到新源。
+
+独立执行`node --test scripts/minitool.test.mjs`为**8/8通过**。额外fixtures分别检查了卡顿、延迟读＋先自由演奏、未知Storage不覆盖、61秒停止；受控audio adapter检查不依赖FakeAudio应用替身。本judge没有改产品或测试文件。
+
+非阻塞后续：目标contact图片未完成解码时，当前paintScene仍会隐藏idle；可以保持已加载完整idle直到目标就绪。此次包内资源与来源哈希完整，官方容器验收应至少遍历八键检查每张图。安全区快速连续resize可进一步用请求序号避免迟到响应覆盖新尺寸。
+
+后续验收仍须区分：最终ZIP静态审计、同ZIP官方模拟器完整流程、Android/iOS真实输入／声音／相册／笔记取消返回，以及Creator审核／普通用户笔记入口。技术GO只覆盖这里实际检查的候选，不把小卡称为带声音视频，也不把轻量八白键版称为网页四乐器全量移植。
+
+## 最后冻结包 · 兼容点击去重P1关闭
+
+主代理在旧`15eec`候选的官方模拟器实际发现：两次点键产生4个音，原因是pointerdown已经发声，容器随后又给出detail=0的兼容click，原`detail===0`判断把它误认作独立键盘激活。这是第三项P1，不能被此前受控测试或技术GO掩盖。
+
+当前修复沿用旧官方探针已用的每键pointerClicks队列：有效pointerdown即发声并入队，后续click先消费相应队列项；队列最多16项、1200ms过期；Enter／Space在本键清理旧pointer项，继续允许独立键盘激活。代码同时接受触摸pointerType，即使该触摸事件button不是0。它是针对已观察容器序列的有界兼容处理，不宣称所有未来容器事件顺序绝对正确。
+
+独立复验：
+
+- 正式`node --test scripts/minitool.test.mjs`：**9/9通过**，新回归重现pointerdown/up→detail0兼容click，每次只记一音，并保留Enter激活。
+- 额外app fixture：同键先出现两组pointerdown/up再出现detail0／detail1的两个click；另键touch且button=-1；pointercancel后的Enter，以及Space激活。合计6次真人激活产生6次声音调用和6个录音事件，跨键队列没有混用。前述卡顿、延迟草稿恢复和未知Storage不覆盖复验仍通过。
+- 独立读取当前build-audit并核对**18项runtimeHashes、源app与包app字节一致、ZIP哈希**。冻结buildId为`f0c64d7b13c8`，ZIP为`miao-beat-xhs-f0c64d7b13c8.zip`，484,962字节，SHA-256=`e5dc3f238226fc4e470bb8e30eb6749457331ef81edff7eb389160ace4d53f17`。本judge未重建或修改产物。
+
+主代理报告最终同标识包已在官方容器实测：两点恰两音；旧卡恢复像素一致；示范不改变真人take；回放自然结束；9张480px整图全部解码；postNote得到严格`:ok`后出现模拟器扫码提示。本judge没有亲自操作该表单，以上作为主代理执行证据追加，不冒称独立原生验收。图片未就绪时保留idle的非阻塞建议也已见当前源码实现。
+
+**第三项P1关闭，限定候选技术GO保持；没有剩余已识别P0/P1。** 官方模拟器扫码提示与`:ok`仍不等于手机编辑页、相册保存、笔记发布／审核或普通用户入口通过；Android/iOS与平台最终发布继续单列。

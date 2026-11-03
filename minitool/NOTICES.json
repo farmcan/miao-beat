@@ -1,0 +1,19 @@
+{
+  "code": {
+    "license": "MIT",
+    "licenseText": "MIT License\n\nCopyright (c) 2026 farmcan\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n\n"
+  },
+  "bridge": {
+    "source": "MiaoTarot site/src/platform/xiaohongshu.ts and minitoolStorage.ts; MiaoTI minitool/bridge.js",
+    "license": "MIT",
+    "modifications": "2026-11-03: ES2017 strict response checks, dedicated piano take storage, limited image actions, safe-area version checks"
+  },
+  "audioAdapter": {
+    "source": "Miao Beat historical 2026-11-02 local-piano-buffer probe; public/audio.js and public/sampled-audio.js",
+    "modifications": "2026-11-03: eight white keys, same calibration and bounded voices, scheduled playback; master-only base without synth fallback",
+    "velocityFormula": "smplr1.1.0 midiVelToGain only; full MIT notice included at build"
+  },
+  "artwork": "Existing approved complete orange-cat piano images scaled proportionally; every displayed frame includes complete cat, paws and instrument. AI-assisted images; no Bongo Cat artwork or detached limbs copied.",
+  "scores": "Existing independent short melody transcriptions of Twinkle Twinkle Little Star and Ode to Joy; no third-party recordings or commercial full scores bundled.",
+  "runtimeBoundary": "Native APIs and persistent storage vary by client. No direct network, external links, file download, microphone or system fullscreen. Picture cards contain no sound."
+}
