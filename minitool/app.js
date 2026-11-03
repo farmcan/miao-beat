@@ -12,7 +12,7 @@
  function controls(){
   keys.forEach(function(k){$(k.code).disabled=!ready||preparing;});$('prepare').disabled=preparing;$('prepare').textContent=preparing?'准备中…':ready?'声音已准备':'准备声音';
   $('record').disabled=!ready||preparing||storageLoading||!!session;$('record').textContent=recording?'结束记录':'录一段';$('record').setAttribute('aria-pressed',String(recording));
-  $('stop').disabled=!recording&&!session&&!preparing;$('replay').disabled=recording||preparing||!!session||!take||!take.events.length;
+  $('stop').disabled=!recording&&!session&&!preparing;$('replay').disabled=!ready||recording||preparing||!!session||!take||!take.events.length;
   $('makeCard').disabled=recording||!!session||!take||!take.events.length;$('listen').disabled=!ready||recording||preparing||!!session;
   $('restore').disabled=recording||!!session||storageLoading||!previous;var caps=bridge.capabilities();$('saveCard').disabled=nativeBusy||!cardData||!caps.save;$('postCard').disabled=nativeBusy||!cardData||!caps.post;
  }

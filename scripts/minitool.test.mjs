@@ -27,6 +27,15 @@ test('empty recording preserves the prior take; hiding finishes human input and 
 test('failed authoritative read does not overwrite unknown old drafts, native cancel preserves card',async t=>{
  const h=setup(t,{load:async()=>{throw Error('unknown');},save:async()=>{throw {errMsg:'save:fail cancel'};}});await prepare(h);await take(h,['KeyA'],.2);assert.equal(h.writes.length,0);h.$('makeCard').click();h.$('saveCard').click();await settle();assert.match(h.$('cardStatus').textContent,/已取消/);assert.equal(h.$('cardPanel').hidden,false);assert.equal(h.$('replay').disabled,false);
 });
+test('returning from a pending native action preserves the card and requires sound readiness before replay',async t=>{
+ for(const [method,button]of [['save','saveCard'],['post','postCard']]){
+  let reject,calls=0;const h=setup(t,{[method]:()=>{calls++;return new Promise((resolve,no)=>{reject=no;});}});await prepare(h);await take(h,['KeyA'],.2);h.$('makeCard').click();const image=h.$('cardImage').src;
+  h.$(button).click();h.$(button).click();assert.equal(calls,1);h.w.dispatchEvent(new h.w.Event('blur'));h.w.dispatchEvent(new h.w.Event('focus'));await settle();
+  assert.equal(h.$('saveCard').disabled,true);assert.equal(h.$('postCard').disabled,true);assert.equal(h.$('replay').disabled,true,'paused sound must not leave a silent enabled replay button');
+  reject({errMsg:method+':fail cancel'});await settle();assert.match(h.$('cardStatus').textContent,/已取消/);assert.equal(h.$('cardPanel').hidden,false);assert.equal(h.$('cardImage').src,image);assert.equal(h.$(button).disabled,false);assert.equal(h.$('replay').disabled,true);
+  const plays=h.audio.plays.length;h.$('replay').click();assert.equal(h.audio.plays.length,plays);await prepare(h);assert.equal(h.$('replay').disabled,false);h.$('replay').click();h.advance(h.audio.context.currentTime+.1);assert.equal(h.audio.plays.length,plays+1);assert.deepEqual(h.writes.at(-1).take.events,[[0,0]]);
+ }
+});
 test('strict native storage acknowledgement and version gating are applied without silent browser fallback',async t=>{
  const w=new JSDOM('<body>',{runScripts:'outside-only',url:'https://miniapp-sandbox.xiaohongshu.com/test'}).window;t.after(()=>w.close());let writes=0;w.xhs={launchOptions:{miniToolEnv:{buildVersion:9460000}},miniTool:{getStorage:async()=>({errMsg:'getStorage:ok',data:null}),setStorage:async()=>{writes++;return{};},saveImageToPhotosAlbum:async()=>({errMsg:'saveImageToPhotosAlbum:ok'})}};w.eval(bridge);await w.MiaoBeatBridge.init();assert.equal(await w.MiaoBeatBridge.load(),null);await assert.rejects(w.MiaoBeatBridge.put('x'));assert.equal(writes,1);assert.equal(w.localStorage.length,0);assert.equal(w.MiaoBeatBridge.capabilities().save,true);
 });
