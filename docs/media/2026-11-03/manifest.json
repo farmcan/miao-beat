@@ -3,23 +3,30 @@
   "notes": [
     "mobile-home-320 is actual canonical website UI at320x568",
     "xhs-cover-3x4 is original900x1200 layout with existing whole-cat image; not an app screenshot",
-    "xhs-two-note-card is actual600x800 canvas output from official simulator; image contains no sound"
+    "xhs-two-note-card is actual600x800 canvas output from official simulator; image contains no sound",
+    "Mobile screenshot uses actual Page.captureScreenshot render at320x568; IAB screenshot scaling artefact excluded."
   ],
   "files": [
     {
       "file": "mobile-home-320.jpg",
-      "bytes": 6232,
-      "sha256": "1cc3d10d1a36954a9d878f06aa854a998f513d96c44a47749e0fb6422a313904"
+      "bytes": 31186,
+      "sha256": "0ff7ea7d81d357dc1b87f3c867d11a0e21fb8116f88efe8cd20c0f0f057782ce",
+      "width": 320,
+      "height": 568
     },
     {
       "file": "xhs-cover-3x4.jpg",
       "bytes": 54655,
-      "sha256": "9b1606d2f55818b18a66e6e8dab70182332959b12eb278e18fb7ff2906a667a3"
+      "sha256": "9b1606d2f55818b18a66e6e8dab70182332959b12eb278e18fb7ff2906a667a3",
+      "width": 900,
+      "height": 1200
     },
     {
       "file": "xhs-two-note-card.png",
       "bytes": 213311,
-      "sha256": "6b19352843addee15eeeab0feb275d3a506823cefe0248e025415e530d922eaf"
+      "sha256": "6b19352843addee15eeeab0feb275d3a506823cefe0248e025415e530d922eaf",
+      "width": 600,
+      "height": 800
     }
   ]
 }
