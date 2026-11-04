@@ -1,0 +1,11 @@
+/* Chrome61 fallbacks for modern rules inherited from the shared workbench. */
+button:focus,select:focus,input:focus,textarea:focus{outline:2px solid #c76d35;outline-offset:2px}
+h1{font-size:32px}
+.workbench{grid-column-gap:26px;grid-row-gap:10px}
+.melody-keys{grid-gap:3px}.drum-pads{grid-gap:6px}.chord-pads{grid-gap:7px}.reader-notes{grid-gap:4px}
+.instrument-controls>*{margin-right:6px}.mode-nav>*+*{margin-left:6px}.reader-navigation>*+*{margin-left:3px}
+@supports not (aspect-ratio:1){.scene:before{content:"";display:block;padding-top:100%}.performance-row{width:100%;max-width:460px}body.score-reading .performance-row{width:100%;max-width:200px}}
+@supports not (width:min(100%,200px)){.performance-row{width:100%;max-width:460px}body.score-reading .performance-row{max-width:200px}.media-results progress{width:100%;max-width:400px}}
+@supports not (padding-top:env(safe-area-inset-top)){body.performance-mode .workbench{top:0;right:0;bottom:0;left:0;padding:12px 18px}.workbench>.activity-bar,body.performance-mode .workbench>.activity-bar{left:10px;right:10px;bottom:8px}.whole-frame-message{left:12px;right:12px;bottom:22px}}
+
+body.performance-mode .sound-ready.sound-help-open{display:flex!important}#heardSound{background:transparent;color:#85512f}

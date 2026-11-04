@@ -9,10 +9,13 @@
     "test": "node --test scripts/*.test.mjs",
     "dev": "python3 -m http.server 8894 --directory public",
     "build:xhs:probe": "python3 scripts/build-xhs-probe.py",
-    "build:xhs": "node scripts/build-xhs.mjs"
+    "build:xhs": "node scripts/build-xhs-web.mjs",
+    "build:xhs:legacy": "node scripts/build-xhs.mjs",
+    "test:xhs": "node scripts/test-xhs-web.mjs"
   },
   "license": "MIT",
   "devDependencies": {
+    "esbuild": "^0.25.12",
     "jsdom": "29.0.2",
     "qrcode": "1.5.4"
   },
