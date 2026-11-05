@@ -13,7 +13,9 @@ A small browser instrument playground. Follow a metronome, play your own music, 
 - Generate the next motion video on another computer: [one-document handoff](docs/video-animation-handoff.md), with committed reference images and copyable prompts.
 - Public products never link back to the owner’s personal website or research hub.
 
-2026-11-04 · Xiaohongshu 1.0.1 passed review and Creator shows “已发布”. Replay stays disabled while sound is paused and becomes available after preparing sound again. The promotional note remains a draft; see [platform release evidence](minitool/README.md).
+2026-11-05 · Xiaohongshu 1.0.2 and the updated original note are published. Layout update 1.0.3 fixes portrait key clipping, adds automatic/manual landscape layouts and wraps sound controls/status text. The new package is deployed to the update form; submission status and device-test limits are in [platform release evidence](minitool/README.md).
+
+2026-11-04 · Xiaohongshu 1.0.1 passed review and Creator showed “已发布”. Replay stays disabled while sound is paused and becomes available after preparing sound again. The promotional note was still a draft at that checkpoint.
 
 2026-11-03 · 0.20.1: The score stand keeps the existing audio-clock count-in and elapsed time visible beside the score; stopping hides it, and closing restores the original readout. Independent 320px portrait and short landscape checks passed. See the [implementation and remaining native checks](docs/mobile-and-xhs-plan-2026-11-03.md).
 

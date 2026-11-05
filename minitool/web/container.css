@@ -9,3 +9,70 @@ h1{font-size:32px}
 @supports not (padding-top:env(safe-area-inset-top)){body.performance-mode .workbench{top:0;right:0;bottom:0;left:0;padding:12px 18px}.workbench>.activity-bar,body.performance-mode .workbench>.activity-bar{left:10px;right:10px;bottom:8px}.whole-frame-message{left:12px;right:12px;bottom:22px}}
 
 body.performance-mode .sound-ready.sound-help-open{display:flex!important}#heardSound{background:transparent;color:#85512f}
+
+/* Small-tool layout owns its viewport; never inherit the web site's 640px scroll keyboard. */
+body.mini-app main{padding:0 12px 24px;min-width:0}
+body.mini-app .workbench,body.mini-app.performance-mode .workbench{display:flex;flex-direction:column;align-items:stretch;min-width:0;gap:8px}
+body.mini-app .workbench>.performance-row{width:148px;max-width:100%;margin:0 auto}
+body.mini-app .play-area{display:block;width:100%;min-width:0;padding:0}
+body.mini-app .bench-topline{flex-wrap:wrap;min-width:0;padding:0;gap:6px}
+body.mini-app .mode-nav{padding:0;margin:0;flex-wrap:wrap}
+body.mini-app .mode-nav button{flex:1;min-width:0}
+body.mini-app .instrument-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-gap:4px}
+body.mini-app .instrument-tabs button{min-width:0;margin:0;padding:6px 3px}
+body.mini-app #melodyKeys,body.mini-app #readerKeysSlot #melodyKeys{width:100%!important;min-width:0!important;max-width:100%;height:132px;grid-gap:2px}
+body.mini-app .melody-scroll{width:100%;min-width:0;overflow-x:hidden;padding:2px 0 5px}
+body.mini-app .music-key{min-width:0;padding-bottom:9px;gap:3px}
+body.mini-app .music-key kbd{font-size:12px}
+body.mini-app .music-key.black kbd{font-size:10px}
+body.mini-app .music-key .note-label{font-size:10px}
+body.mini-app .music-key.black{width:8%;left:calc(var(--key-position,1)*12.5% - 4%);padding-bottom:8px}
+body.mini-app #keyboardNavigation{display:none!important}
+body.mini-app #soundEntry,body.mini-app.score-reading #readerSoundSlot #soundEntry{display:flex!important;position:static;width:100%;min-width:0;max-width:100%;flex-wrap:wrap;align-items:center;overflow:visible;height:auto;margin:8px 0;gap:6px}
+body.mini-app #soundEntry button{min-width:0;max-width:100%;min-height:42px;white-space:normal;padding:8px 12px;line-height:1.4;flex:1 1 110px}
+body.mini-app #soundStatus,body.mini-app #soundHelp{flex:0 0 100%;width:100%;min-width:0;white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:break-word;line-height:1.6;margin:0}
+body.mini-app #soundHelp{padding:8px}
+body.mini-app .session-tools{display:block;width:100%;margin-top:8px;min-width:0}
+body.mini-app.performance-mode .workbench{top:var(--native-top,0px);height:calc(100vh - var(--native-top,0px));padding:10px 12px 28px;overflow-y:auto;overflow-x:hidden}
+body.mini-app.performance-mode #performanceExit{position:static;margin-left:auto}
+body.mini-app.score-reading #scoreReader{display:flex;flex-direction:column;gap:8px;width:100%;min-width:0}
+body.mini-app.score-reading .reader-side{display:grid;grid-template-columns:minmax(0,1fr) 110px;grid-gap:6px}
+body.mini-app.score-reading #readerCatSlot{grid-column:2;grid-row:1/span 2}
+body.mini-app.score-reading #readerSoundSlot{grid-column:1/-1;grid-row:3;min-width:0;width:100%}
+body.mini-app.score-reading #readerSoundSlot #soundEntry{display:flex!important}
+body.mini-app.score-reading .reader-main{width:100%;min-width:0}
+body.mini-app.score-reading .performance-row{width:110px}
+body.mini-app.score-reading .reader-options{flex-wrap:wrap;min-width:0}
+body.mini-app .mini-layout-guide{display:flex;flex-wrap:wrap;align-items:center;grid-column:1/-1;background:#f3e8d3;border-radius:8px;padding:7px 9px;gap:8px;font-size:11px;line-height:1.6}
+body.mini-app #orientationHint{flex:1 1 180px;min-width:0;margin:0;white-space:normal}
+body.mini-app #layoutToggle{min-height:40px;border:1px solid #cdb590;border-radius:7px;padding:6px 10px;background:#fffaf3;color:#61412e;font:inherit}
+body.mini-app.mini-wide .workbench>.performance-row{width:110px}
+body.mini-app.mini-wide .page-heading,body.mini-app.mini-wide .site-header{display:none}
+body.mini-app.mini-wide .play-area{width:100%}
+body.mini-app.mini-wide #scoreReader{display:grid;grid-template-columns:140px minmax(0,1fr);grid-gap:10px}
+body.mini-app.mini-wide.score-reading .reader-side{display:flex;flex-direction:column}
+body.mini-app.mini-wide.score-reading .reader-side #readerSoundSlot{width:100%}
+body.mini-app.mini-wide.score-reading #readerSoundSlot #soundEntry button{flex:1 1 100%;width:100%}
+body.mini-app.mini-rotated{overflow:hidden}
+body.mini-app.mini-rotated .workbench,body.mini-app.mini-rotated.performance-mode .workbench{position:fixed;z-index:60;top:var(--native-top,0px);left:0;right:auto;bottom:auto;width:var(--mini-height);height:var(--mini-width);max-width:none;margin:0;padding:8px 12px 24px;transform-origin:0 0;transform:rotate(90deg) translateY(-100%);background:var(--paper);overflow-x:hidden;overflow-y:auto}
+body.mini-app .keyboard-scroll-hint{display:none!important}
+body.mini-app #soundEntry #enableAudio,body.mini-app #soundEntry #testSound{order:0;width:auto;flex:1 1 110px}
+body.mini-app #soundStatus{order:1}body.mini-app #soundHelp{order:2}body.mini-app #soundEntry #heardSound{order:3;flex:0 0 auto}
+body.mini-app.mini-wide:not(.score-reading) .workbench{display:grid;grid-template-columns:110px minmax(0,1fr);grid-gap:6px 12px;align-content:start}
+body.mini-app.mini-wide:not(.score-reading) .bench-topline,body.mini-app.mini-wide:not(.score-reading) .mini-layout-guide,body.mini-app.mini-wide:not(.score-reading) .mode-nav,body.mini-app.mini-wide:not(.score-reading) .session-tools{grid-column:1/-1}
+body.mini-app.mini-wide:not(.score-reading) .workbench>.performance-row{grid-column:1;grid-row:4;align-self:start;margin-top:4px}
+body.mini-app.mini-wide:not(.score-reading) .play-area{grid-column:2;grid-row:4}
+body.mini-app.mini-wide #playingSurface:not([data-instrument=drums]) .percussion-row{display:none}
+body.mini-app #soundStatus,body.mini-app #soundHelp{font-size:12px}
+body.mini-app.mini-wide.score-reading .reader-side{display:contents}
+body.mini-app.mini-wide.score-reading #readerCatSlot{grid-column:1;grid-row:1/span 3}
+body.mini-app.mini-wide.score-reading .reader-song-label{grid-column:2;grid-row:1}
+body.mini-app.mini-wide.score-reading .reader-options{grid-column:2;grid-row:2}
+body.mini-app.mini-wide.score-reading .reader-main{grid-column:2;grid-row:3}
+body.mini-app.mini-wide.score-reading #readerSoundSlot{grid-column:1/-1;grid-row:4;width:100%}
+body.mini-app.mini-wide.score-reading #readerSoundSlot #soundEntry button{width:auto;flex:1 1 110px}
+body.mini-app.mini-wide:not(.mini-rotated) .mini-layout-guide{display:none}
+body.mini-app.mini-wide.score-reading #readerCatSlot{grid-row:1/span 2}
+body.mini-app.mini-wide.score-reading .reader-options{grid-column:1;grid-row:3;flex-direction:column;align-items:stretch;justify-content:flex-start}
+body.mini-app.mini-wide.score-reading .reader-main{grid-column:2;grid-row:2}
+body.mini-app.mini-wide.score-reading #readerSoundSlot{grid-column:2;grid-row:3;width:100%}
